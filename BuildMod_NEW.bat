@@ -40,8 +40,8 @@ IF NOT EXIST"%cd%\Mods\%modname%" (
 )
 
 ::SET macros
-SET compilation=%cd%\Compilation\Mods\%modname%
-SET wrathed=%cd%\Tools\WrathEd.exe
+SET "compilation=%cd%\Compilation\Mods\%modname%"
+SET "wrathed=%cd%\Tools\WrathEd.exe"
 
 IF EXIST "%compilation%" RD "%compilation%" /S /Q
 
