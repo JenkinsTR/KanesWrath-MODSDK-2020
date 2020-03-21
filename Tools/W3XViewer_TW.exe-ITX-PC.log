@@ -1,6 +1,0 @@
-!debug.io flat add
-> debug.errors -
-Extra error log: off
-> debug.add c - dxwrapper.cpp*
-> debug.add c - dxwrapper.cpp*
-> debug.add c - dxwrapper.cpp*

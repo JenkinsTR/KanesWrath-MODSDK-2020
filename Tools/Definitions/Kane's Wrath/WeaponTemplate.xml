@@ -490,12 +490,12 @@
 			id="SpawnedModelConditionFlags"
 			AssetType="ModelConditionBitFlags"
 			IsAttribute="true" />
-		<EntryReference
+		<Entry
 			id="SpawnTemplate"
-			AssetType="GameObjectWeak"
-			IsAttribute="true" />
+			AssetType="GameObjectWeakRef" />
 	</Asset>
-
+	
+	
 	<Asset
 		id="FireLogicNuggetType">
 		<EntryInheritance

@@ -29,8 +29,10 @@ namespace SAGE.Compiler
 			byte compression = 2;
 			bool isstreamed = false;
 			// wav
+			int wfmtsize = 0;
 			int wsamplerate = 0;
 			int wdatasize = 0;
+			short wfmt = 0;
 			short wchannelcount = 0;
 			short wsamplesize = 0;
 			
@@ -97,15 +99,20 @@ namespace SAGE.Compiler
 					{
 						case ".WAV":
 							compression = 2;
+							// fmt
+							audioReader.BaseStream.Position = 0x10;
+							wfmtsize = audioReader.ReadInt32();
+							wfmt = audioReader.ReadInt16();
 							audioReader.BaseStream.Position = 0x16;
 							wchannelcount = audioReader.ReadInt16();
 							wsamplerate = audioReader.ReadInt32();
 							audioReader.BaseStream.Position = 0x22;
 							wsamplesize = (short)(audioReader.ReadInt16() >> 3);
-							audioReader.BaseStream.Position = 0x28;
+							// data
+							audioReader.BaseStream.Position = 0x14 + wfmtsize + 0x04;
 							wdatasize = audioReader.ReadInt32();
 
-							if (wsamplesize > 2)
+							if (wfmt != 1 || wsamplesize > 2)
 							{
 								ErrorDescription = string.Format("Invalid file type for AudioFile:{0}. Unsigned 8 bit or signed 16 bit PCM Wave file is needed.", trace);
 								return false;

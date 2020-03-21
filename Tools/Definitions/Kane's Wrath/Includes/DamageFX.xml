@@ -48,7 +48,7 @@
 		<Entry>ALIEN_DISINTEGRATOR</Entry>
 		<Entry>REFLECTED</Entry>
 		<Entry>GENERIC_FIRE</Entry>
-		<Entry>POISON</Entry>
+		<Entry>POISON</Entry> <!-- Used as: CLUBBING_BLUE-->
 		<Entry>CLUBBING</Entry>
 		<Entry>UNDEFINED</Entry>
 		<Entry>NOD_ARTILLERY</Entry>
@@ -56,7 +56,8 @@
 		<Entry>NOD_TIBCOREMISSILE</Entry>
 		<Entry>GDI_ECHOCANNON</Entry>
 		<Entry>ALIEN_TIBSHARD</Entry>
-		<Entry>ALIEN_TIBSHARDBLUE</Entry>
+		<Entry>ALIEN_TIBSHARDBLUE</Entry> <!--
+		<Entry>CLUBBING_BLUE</Entry> -->
 	</EnumAsset>
 
 </AssetDefinition>
