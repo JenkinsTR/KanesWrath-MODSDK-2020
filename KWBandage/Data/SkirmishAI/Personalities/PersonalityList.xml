@@ -16,7 +16,7 @@
 	<!--Include type="all" source="Reaper17Offensive.xml"/>
 	<Include type="all" source="ZOCOMOffensive.xml"/-->
 	<Include type="all" source="MarkedOfKaneOffensive.xml"/>
-	<Include type="all" source="Traveler59Offensive.xml"/>
+	<!--Include type="all" source="Traveler59Offensive.xml"/-->
 
 	<!--Include type="all" source="GDIDefensive.xml"/-->
 	<!--Include type="all" source="NODDefensive.xml"/>

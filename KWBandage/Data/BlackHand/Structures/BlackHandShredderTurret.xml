@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 <!--Added Quad Turret Upgrade Display-->
+<!--Muzzle Flash will no longer appear when a build cursor-->
 	<GameObject
 		id="BlackHandShredderTurret"
 		SelectPortrait="Portrait_NODShredderTurret"
@@ -95,6 +96,14 @@
 						AnimationName="NBShredder_IDLA"
 						AnimationMode="ONCE" />
 				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Script>
+						CurDrawableHideSubObject("MUZZLEFLASH01")
+						CurDrawableHideSubObject("MUZZLEFLASH02")						
+					</Script>
+				</AnimationState>
 				<!-- REPAIR FROM RUBBLE ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -177,8 +186,7 @@
 				id="ModuleTag_CatalystDeathWeapon"
 				InitiallyActive="true"
 				DeathWeapon="CatalystBuildingDeathWeapon"
-				ContinueToBezierDestination="false"
-			>
+				ContinueToBezierDestination="false">
 				<DieMuxData DeathTypes="CATALYST" />
 			</FireWeaponWhenDead>
 			<TemporarilyDefectUpdate

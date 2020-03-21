@@ -3,10 +3,10 @@
 <!--Removed Charged Particle Beams Upgrade-->
 <!--Muzzle Flash will no longer appear when a build cursor-->
 	<GameObject
-		id="NODShredderTurret"
+		id="MarkedOfKaneShredderTurret"
 		SelectPortrait="Portrait_NODShredderTurret"
 		ButtonImage="Portrait_NODShredderTurret"
-		Side="NOD"
+		Side="MarkedOfKane"
 		EditorSorting="STRUCTURE"
 		BuildCost="400"
 		BuildTime="10.0"
@@ -16,15 +16,16 @@
 		PlacementViewAngle="225d"
 		ProductionQueueType="OTHER_STRUCTURE"
 		BuildPlacementTypeFlag="OTHER_STRUCTURE"
-		EditorName="NODShredderTurret"
+		EditorName="MarkedOfKaneShredderTurret"
 		WeaponCategory="GUN"
 		CampnessValue="2000"
 		CampnessValueRadius="300"
 		UnitCategory="STRUCTURE"
-		Description="Desc:NODShredderTurret"
-		TypeDescription="Type:NODShredderTurret">
+		Description="Desc:MarkedOfKaneShredderTurret"
+		TypeDescription="Type:MarkedOfKaneShredderTurret">
 		<DisplayName>Name:NODShredderTurret</DisplayName>
 		<DisplayUpgrade>Upgrade_NODQuadTurrets</DisplayUpgrade>
+		<DisplayUpgrade>Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam</DisplayUpgrade>		
 		<ArmorSet
 			Armor="NODBaseDefenceArmor"
 			DamageFX="FactionStructureDamageFX" />
@@ -184,7 +185,7 @@
 				id="ModuleTag_CatalystDeathWeapon"
 				InitiallyActive="true"
 				DeathWeapon="CatalystBuildingDeathWeapon"
-				ContinueToBezierDestination="false">
+				ContinueToBezierDestination="false" >
 				<DieMuxData DeathTypes="CATALYST" />
 			</FireWeaponWhenDead>
 			<TemporarilyDefectUpdate
@@ -204,7 +205,7 @@
 						Template="NODShredderTurretSpawnWeapon" />
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
-						Template="NODShredderTurretSpawnChargedParticleBeamWeapon"
+						Template="MarkedOfKaneShredderTurretSpawnSuperChargedParticleBeamWeapon"
 						ObjectStatus="WEAPON_UPGRADED_01" />
 					<TurretSettings
 						TurretTurnRate="200"
@@ -251,6 +252,11 @@
 				<DieMuxData
 					DeathTypes="SUICIDED" />
 			</SlowDeath>	
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeWeapon"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam</TriggeredBy>
+			</StatusBitsUpgrade>
 			<KeepObjectDie
 				id="ModuleTag_KeepObjectForRepair">
 				<DieMuxData
@@ -277,6 +283,9 @@
 				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
 				<SelfAudio></SelfAudio>
 			</RepairUpdate>
+			<AudioLoopUpgrade id="SuperChargedParticleBeamUpgrade" SoundToPlay="AudioEvent:NOD_Enlightened_SuperChargedParticleBeamUpgrade">
+				<TriggeredBy>Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam</TriggeredBy>
+			</AudioLoopUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate

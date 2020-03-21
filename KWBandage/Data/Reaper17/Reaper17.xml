@@ -3,6 +3,7 @@
 	<Includes>
 		<Include type="all" source="Structures/Reaper17ControlCenter.xml" />
 	
+		<Include type="all" source="Units/Reaper17AnnihilatorTripodHusk.xml" />
 		<Include type="all" source="Units/Reaper17Buzzers.xml" />
 		<Include type="all" source="Units/Reaper17CustomizableVehicle.xml" />	
 		<Include type="all" source="Units/Reaper17EradicatorHexapod.xml" />	

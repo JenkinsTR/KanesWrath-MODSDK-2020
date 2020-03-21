@@ -44,8 +44,8 @@
     <Order Build="Traveler59StatisChamber" /> <!--Time: 12 Power: -8-->
     <Order Build="Traveler59Reactor" /> <!--Time: 40 Power: -10-->
 
-    <Order Build="Traveler59CultistSquad" />
-    <Order Build="Traveler59CultistSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
     <Order Build="Traveler59StalkerSquad" />
     <Order Build="Traveler59StalkerSquad" />
     <Order Build="Traveler59StalkerSquad" />

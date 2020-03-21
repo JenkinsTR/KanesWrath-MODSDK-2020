@@ -1,93 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<!--Changed Weapon Category from CANNON to BLAST-->
-<!--Devastator Turret will now rotate when under Ion Storm effects-->
-<!--Added Traveler Engine Effects to Ion Storm Model-->
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<Tags></Tags>
 	<Includes>
 		<Include
 			type="all"
-			source="ART:AUDevWarIon.w3x" />
+			source="ART:AUPACarrierIon.W3X" />
 	</Includes>
 	<GameObject
-		id="AlienDevastatorWarship"
+		id="AlienPlanetaryAssaultCarrier"
 		inheritFrom="BaseVehicle"
-		SelectPortrait="Portrait_AlienDevastatorWarship"
-		ButtonImage="Portrait_AlienDevastatorWarship"
+		SelectPortrait="Portrait_ALIENPlanetaryAssaultCarrier"
+		ButtonImage="Portrait_ALIENPlanetaryAssaultCarrier"
 		Side="ALIEN"
 		EditorSorting="UNIT"
-		TransportSlotCount="1"
-		BuildCost="2400"
-		BuildTime="24"
-		CommandSet="AlienDevastatorWarshipCommandSet"
+		BuildCost="3000"
+		BuildTime="30"
+		CommandSet="AlienPlanetaryAssaultCarrierCommandSet"
 		CommandPoints="100" 
-		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_CAST_REFLECTIONS SCORE AIRCRAFT PRODUCED_AT_HELIPAD VEHICLE SIEGE_WEAPON NO_COLLIDE CAN_BE_FAVORITE_UNIT"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS SCORE AIRCRAFT PRODUCED_AT_HELIPAD HAS_HEALTH_BAR NO_COLLIDE ATTACK_NEEDS_LINE_OF_SIGHT LINE_OF_SIGHT_IGNORES_BUILDINGS CAN_BE_FAVORITE_UNIT SLAVE_OWNER"
 		RadarPriority="UNIT"
 		ProductionQueueType="AIRCRAFT"
 		UnitCategory="AIRCRAFT"
-		WeaponCategory="BLAST"
-		BuildCompletion="APPEARS_AT_RALLY_POINT"
-		VoicePriority="234"
-		EditorName="AlienDevastatorWarship"
-		Description="Desc:AlienDevastatorWarship"
+		WeaponCategory="CANNON"
+		VoicePriority="238"
+		EditorName="AlienPlanetaryAssaultCarrier"
+		Description="Desc:AlienPlanetaryAssaultCarrier"
 		WorldMapArmoryUpgradesAllowed="Upgrade_AlienReactorForcefieldGenerator"
-		TypeDescription="Type:AlienDevastatorWarship"
+		TypeDescription="Type:AlienPlanetaryAssaultCarrier"
 		ShockwaveResistance="100"
 		ReinvisibilityDelay="7s">
 		<DisplayName
-			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:ALIENDevastatorWarship</DisplayName>
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:ALIENPlanetaryAssaultCarrier</DisplayName>
 		<GameDependency>
-			<RequiredObject>AlienReactor</RequiredObject>
+			<RequiredObject>AlienSignalTransmitter</RequiredObject>
 		</GameDependency>
 		<DisplayUpgrade
 			id="Tag_DisplayUpgrade1">Upgrade_AlienReactorForcefieldGenerator</DisplayUpgrade>
 		<ArmorSet
-			Armor="AlienDevastatorWarshipArmor"
-			DamageFX="InfantryAlienDamageFX" />
+			Armor="AlienPlanetaryAssaultCarrierArmor"
+			DamageFX="VehicleDamageFX" />
 		<ArmorSet
-			Armor="AlienDevastatorWarshipArmorShieldBodyEnabled"
-			DamageFX="InfantryAlienDamageFX"
+			Armor="AlienPlanetaryAssaultCarrierArmorShieldBodyEnabled"
+			DamageFX="VehicleDamageFX"
 			Conditions="SHIELDBODY_ENABLED" />
 		<LocomotorSet
-			Locomotor="AlienDevastatorWarshipLocomotor"
+			Locomotor="AlienPlanetaryAssaultCarrierLocomotor"
 			Condition="NORMAL"
-			Speed="60.0" />
+			Speed="40.0" />
 		<SkirmishAIInformation
 			UnitBuilderStandardCombatUnit="true" />
 		<Draws>
-			<ScriptedModelDraw
+			<TruckDraw
 				id="ModuleTag_Draw"
-				OkToChangeModelColor="true">
+				OkToChangeModelColor="true"
+				ExtraPublicBone="FIGHTER_01 FIGHTER_02 FIGHTER_03 FIGHTER_04 FIGHTER_05 FIGHTER_06 FIGHTER_07 FIGHTER_08">
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Model
-						Name="AUDevWar_SKN" />
-					<WeaponFireFXBone
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_Weapon_" />
-					<WeaponLaunchBone
-						WeaponSlotType="PRIMARY_WEAPON"
-						BoneName="FX_Weapon_" />
+						Name="AUPACarrier_SKN" />
 					<Turret
-						TurretNameKey="Turret"
-						TurretPitch="Turret_Pitch"
 						TurretID="1" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW">
 					<Model
-						Name="AUDevWar_FP" />
-				</ModelConditionState>		
-						
+						Name="AUPACarrier_FP" />
+				</ModelConditionState>			
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 DAMAGED USER_6">
 					<Model
-						Name="AUDevWarIon" />
+						Name="AUPACarrierIon" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWar_K" />							
+						Original="AUPACarrier"
+						New="AUPACarrier_K" />							
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -116,15 +104,15 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFireGlow02"
 						FollowBone="true" />						
-				</ModelConditionState>
+				</ModelConditionState>	
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 REALLYDAMAGED USER_6">
 					<Model
-						Name="AUDevWarIon" />
+						Name="AUPACarrierIon" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWarD_K" />
+						Original="AUPACarrier"
+						New="AUPACarrierD_K" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -192,14 +180,14 @@
 					<ParticleSysBone
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
-						FollowBone="true" />						
-				</ModelConditionState>
-						
+						FollowBone="true" />					
+				</ModelConditionState>	
+									
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 DAMAGED">
 					<Model
-						Name="AUDevWarIon" />
+						Name="AUPACarrierIon" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -228,15 +216,15 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFireGlow02"
 						FollowBone="true" />						
-				</ModelConditionState>
+				</ModelConditionState>	
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 REALLYDAMAGED">
 					<Model
-						Name="AUDevWarIon" />
+						Name="AUPACarrierIon" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWarD" />
+						Original="AUPACarrier"
+						New="AUPACarrier_D" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -304,17 +292,17 @@
 					<ParticleSysBone
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
-						FollowBone="true" />						
-				</ModelConditionState>
+						FollowBone="true" />					
+				</ModelConditionState>	
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_6">
 					<Model
-						Name="AUDevWar_SKN" />
+						Name="AUPACarrier_SKN" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWar_K" />						
+						Original="AUPACarrier"
+						New="AUPACarrier_K" />							
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -343,15 +331,15 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFireGlow02"
 						FollowBone="true" />
-				</ModelConditionState>
+				</ModelConditionState>	
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_6">
 					<Model
-						Name="AUDevWar_SKN" />
+						Name="AUPACarrier_SKN" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWarD_K" />
+						Original="AUPACarrier"
+						New="AUPACarrierD_K" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -420,13 +408,13 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
 						FollowBone="true" />
-				</ModelConditionState>
-												
+				</ModelConditionState>	
+				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
-						Name="AUDevWar_SKN" />
+						Name="AUPACarrier_SKN" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -455,15 +443,15 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFireGlow02"
 						FollowBone="true" />
-				</ModelConditionState>
+				</ModelConditionState>	
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
 					<Model
-						Name="AUDevWar_SKN" />
+						Name="AUPACarrier_SKN" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWarD" />
+						Original="AUPACarrier"
+						New="AUPACarrier_D" />
 					<ParticleSysBone
 						BoneName="FXFire01"
 						FXParticleSystemTemplate="AlienDamageFire01"
@@ -532,58 +520,36 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
 						FollowBone="true" />
-				</ModelConditionState>
+				</ModelConditionState>	
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 USER_6">
 					<Model
-						Name="AUDevWarIon" />
+						Name="AUPACarrierIon" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWar_K" />							
-				</ModelConditionState>
+						Original="AUPACarrier"
+						New="AUPACarrier_K" />							
+				</ModelConditionState>	
+								
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5">
 					<Model
-						Name="AUDevWarIon" />
-				</ModelConditionState>
+						Name="AUPACarrierIon" />
+				</ModelConditionState>										
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
 					<Model
-						Name="AUDevWar_SKN" />
+						Name="AUPACarrier_SKN" />
 					<Texture
-						Original="AUDevWar"
-						New="AUDevWar_K" />						
-				</ModelConditionState>
+						Original="AUPACarrier"
+						New="AUPACarrier_K" />							
+				</ModelConditionState>				
 
-				<AnimationState
-					ParseCondStateType="PARSE_DEFAULT"
-					Flags="RESTART_ANIM_WHEN_COMPLETE">
-					<Animation
-						AnimationName="AUDevWar_IDLA"
-						AnimationMode="ONCE"
-						AnimationPriority="50"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="0.9"
-						AnimationSpeedFactorMax="1.1" />
-					<Animation
-						AnimationName="AUDevWar_IDLB"
-						AnimationMode="ONCE"
-						AnimationPriority="50"
-						AnimationBlendTime="15"
-						AnimationSpeedFactorMin="0.9"
-						AnimationSpeedFactorMax="1.1" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="FORMATION_PREVIEW">
-				</AnimationState>
-				<!-- no anim -->
-						
-			</ScriptedModelDraw>
+			</TruckDraw>
 			<!-- Forcefield Generator -->
 			<ScriptedModelDraw
 				id="ModuleTag_DrawForcefield"
@@ -595,17 +561,42 @@
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_1">
 					<Model
-						Name="FXShldWarship" />
+						Name="FXShldCarrier" />
 					<ShadowInfo
 						Type="ADDITIVE_DECAL"
-						SizeX="100"
-						SizeY="60"
+						SizeX="150"
+						SizeY="100"
 						OverrideLODVisibility="true"
 						MaxHeight="300"
 						UseHouseColor="true"
 						Texture="AUDronShipDecalIdle" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
+			<SpotlightDraw
+				id="ModuleTag_Spotlight"
+				AttachToBoneInAnotherModule="FX_Bone_03"
+				RefreshTime="2.0s"
+				SweepTime="1.0s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXAspotlight" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- Draw nothing when in Formation Preview -->
+					<Model
+						Name="" />
+				</ModelConditionState>	
+				<!-- Draw nothing when in Ion Storm -->		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5">
+					<Model
+						Name="FXInvisBone" />
+				</ModelConditionState>		
+			</SpotlightDraw>
 		</Draws>
 		<Behaviors>
 			<AttributeModifierPoolUpdate 
@@ -680,31 +671,6 @@
 			<TemporarilyDefectUpdate
 				id="ModuleTag_TemporarilyDefect"
 				DefectionFrameCount="300" />
-			<WeaponSetUpdate
-				id="ModuleTag_WeaponSetUpdate">
-				<WeaponSlotTurret
-					ID="1"
-					AllowInterleavedFiring="false"
-					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="AlienZeusPlasmaDiskBattery" />
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="40"
-						AllowsPitch="true"
-						MinimumPitch="-85d"
-						PitchHeight="50%"
-						MinIdleScanTime="1.0s"
-						MaxIdleScanTime="5.0s"
-						MinIdleScanAngle="0.0"
-						MaxIdleScanAngle="90.0">
-						<TurretAITargetChooserData
-							CanAcquireDynamicIfAssignedOutOfRange="true" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-			</WeaponSetUpdate>
 			<Physics
 				id="ModuleTag_Physics" />
 			<SlowDeath
@@ -714,14 +680,14 @@
 				DestructionDelay="0.01s">
 				<OCL
 					Type="INITIAL">
-					<OCL>OCL_ALIENDevastatorInitialDebris</OCL>
+					<OCL>OCL_ALIENPACInitialDebris</OCL>
 				</OCL>
 				<DieMuxData
 					DeathTypes="ALL"
 					DeathTypesForbidden="TOPPLED" />
 				<Sound
 					Type="INITIAL"
-					List="ALI_DevastatorWarship_SoundDie" />
+					List="ALI_PAC_SoundDie" />
 			</SlowDeath>
 			<FXListBehavior
 				id="ModuleTag_FXList">
@@ -735,8 +701,66 @@
 					FX="FX_AlienVehicleTransitionLarge" />
 				<Event
 					Index="onDeath"
-					FX="FX_ALI_DevastatorWarship_Die" />
+					FX="FX_AlienHarvesterExplode" />
 			</FXListBehavior>
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<!--				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienPlanetaryAssaultCarrierWeapon"/>
+				</WeaponSlotHardpoint> -->
+				<WeaponSlotTurret
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienPlanetaryAssaultCarrierWeapon" />
+					<TurretSettings
+						TurretTurnRate="360"
+						TurretPitchRate="360"
+						AllowsPitch="true">
+						<TurretAITargetChooserData
+							ActiveWhenPerformingSpecialAbility="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<CombinedInfoModule
+				DockingBone="FIGHTER_" />
+			<SpawnBehavior
+				id="ModuleTag_SpawnFighter"
+				SpawnNumberData="8"
+				InitialBurst="8"
+				SpawnReplaceDelayData="30s"
+				SpawnInsideBuilding="true"
+				FadeInTime="1s"
+				CombineOnCreate="true"
+				PassExperienceToSpawned="true">
+				<SpawnTemplate>AlienInvaderFighter</SpawnTemplate>
+			</SpawnBehavior>
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate" />
+			<!--Deploy Ion Storm Special Power-->
+			<SpecialPower
+				id="ModuleTag_DeployIonStormStart"
+				SpecialPowerTemplate="SpecialPower_DeployIonStormStart"
+				UpdateModuleStartsAttack="true" />
+			<SpecialAbilityUpdate
+				id="ModuleTag_OCLSpecialPowerDeployIonStormStart"
+				SpecialPowerTemplate="SpecialPower_DeployIonStormStart"
+				UnpackTime="0.1s"
+				ChainedButton="Command_AlienAssaultCarrierDeployIonStorm" />
+			<OCLSpecialPower
+				id="ModuleTag_OCLSpecialPowerDeployIonStorm"
+				SpecialPowerTemplate="SpecialPower_DeployIonStorm"
+				UpdateModuleStartsAttack="true"
+				OCL="OCLPlanetaryAssaultCarrierIonStorm"
+				CreateLocation="USE_OWNER_OBJECT" />
+			<OCLMonitorSpecialAbilityUpdate
+				id="ModuleTag_DeployIonStormUpdate"
+				SpecialPowerTemplate="SpecialPower_DeployIonStorm"
+				StartRechargeOnExit="true" />
+			<!--End Deploy Ion Storm Special Power-->
 			<!-- Forcefield Generator -->
 			<StatusBitsUpgrade
 				id="ModuleTag_StatusBitUpgrade"
@@ -745,81 +769,76 @@
 			</StatusBitsUpgrade>
 			<ShieldBodyUpdate
 				id="ModuleTag_ShieldBodyUpdate" />
-			<!-- End of Forcefield Generator -->
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="400" />
 			<ModelConditionUpgrade
 				id="ModuleTag_AllFactionUpgrade"
 				AddConditionFlags="USER_6">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<StatusBitsUpgrade
-				id="ModuleTag_VeterancyUpgrade"
-				StatusToSet="WEAPON_UPGRADED_03">
-				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</StatusBitsUpgrade>
-			<AudioLoopUpgrade 
+      <AudioLoopUpgrade 
 				id="ForceFieldUpgradeSound" 
-				SoundToPlay="AudioEvent:ALI_ForceField_Begin">
-				<TriggeredBy>Upgrade_AlienReactorForcefieldGenerator</TriggeredBy>
-			</AudioLoopUpgrade>
+				SoundToPlay="ALI_ForceField_Begin">
+        <TriggeredBy>Upgrade_AlienReactorForcefieldGenerator</TriggeredBy>
+      </AudioLoopUpgrade>
 		</Behaviors>
 		<AI>
 			<JetAIUpdate
-				id="ModuleTag_03"
+				id="ModuleTag_AI"
 				NeedsRunway="false"
-				KeepsParkingSpaceWhenAirborne="false"
-				AutoAcquireEnemiesWhenIdle="YES"
-				AILuaEventsList="AlienDevastatorFunctions">
+				KeepsParkingSpaceWhenAirborne="false"				
+				AutoAcquireEnemiesWhenIdle="NO"
+				MaxCombineChildren="8"
+				SpawnOffsetRadius="160.0"
+				AILuaEventsList="AlienPACFunctions">
 				<UnitAITargetChooserData
-					CanPickDynamicTargets="false"
-					SympathyRange="25.0" />
+					RotateToTargetWhenAiming="false" />
 				<LockonInfo />
-			</JetAIUpdate>
+			</JetAIUpdate>			
 		</AI>
 		<Body>
 			<ShieldBody
 				id="ModuleTag_Body"
-				MaxHealth="6250"
+				MaxHealth="10000"
 				ShieldAmount="2500"
 				ShieldArmor="ForcefieldFilterDamageArmor"
 				ShieldRechargeIdleTime="120s"
 				ShieldEnabledFX="FX_AlienShieldEnabled"
 				ShieldTakeDamageFX="FX_AlienShieldHit"
-				ShieldDepleteFX="FX_AlienShieldDeplete"
+				ShieldDepleteFX="FX_AlienShieldDeplete" 
 				ShieldActiveModelCondition="USER_1" />
 		</Body>
 		<Geometry
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				MajorRadius="35.0"
-				MinorRadius="18.0"
-				Height="8.0"
+				MajorRadius="50.0"
+				MinorRadius="10.0"
+				Height="10.0"
 				ContactPointGeneration="VEHICLE" />
 		</Geometry>
 		<AudioArrayVoice>
 			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundAttack"
-				AudioType="voiceAttack" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundCreate"
-				AudioType="voiceCreated" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundMove"
-				AudioType="voiceGuard" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundMove"
-				AudioType="voiceMove" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundSpecial"
-				AudioType="voiceAttackAfterMoving" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_DevastatorWarship_SoundSelect"
+				Sound="AudioEvent:ALI_PAC_SoundSelect"
 				AudioType="voiceSelect" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_PAC_SoundAttack"
+				AudioType="voiceAttack" />
 		</AudioArrayVoice>
 		<AudioArraySound>
-			<AudioEntry Sound="AudioEvent:ALI_DevastatorWarship_MoveStart" AudioType="soundMoveStart" />
-			<AudioEntry Sound="AudioEvent:ALI_DevastatorWarship_MoveLoop" AudioType="soundMoveLoop" />
-			<AudioEntry Sound="AudioEvent:ALI_DevastatorWarship_AmbientDelayedLoop" AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_PAC_SoundMoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_PAC_SoundCreate"
+				AudioType="soundCreated" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_PAC_IdleLoop"
+				AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="AudioEvent:ALI_PAC_MoveLoop"
+				AudioType="soundMoveLoop" />
 		</AudioArraySound>
 		<EvaEvents
 			EvaEventDieOwner="UnitLost"
@@ -839,8 +858,8 @@
 		<ShadowInfo
 			Type="VOLUME" />
 		<VisionInfo
-			VisionRange="630"
-			ShroudClearingRange="400" />
+			VisionRange="350"
+			ShroudClearingRange="500" />
 		<CrusherInfo
 			CrusherLevel="2"
 			CrushableLevel="2" />

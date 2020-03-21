@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <!--Refer to Scrin Devastator Warship-->
+<!--Added Traveler Engine Effects to Ion Storm Model-->
+<!--Traveler Engine Effects are added to Acceleration (This is to workaround the initial flash of the effects when starting to move)-->
 	<GameObject
 		id="Traveler59DevastatorWarship"
 		SelectPortrait="Portrait_AlienDevastatorWarship"
@@ -610,17 +612,19 @@
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DECELERATE">						
 				</AnimationState>
+				<!--
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="ACCELERATE">						
-				</AnimationState>					
+				</AnimationState>				
+				-->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_2 MOVING">
 					<ParticleSysBone
 						BoneName="INVISBONE01"
 						FXParticleSystemTemplate="AlienTravEngDist_DevWarship"
-						FollowBone="true" />						
+						FollowBone="true" />
 				</AnimationState>
 			</ScriptedModelDraw>	
 			<ScriptedModelDraw		
@@ -645,6 +649,7 @@
 						CurDrawableHideSubObject("TravEng02")						
 					</Script>						
 				</AnimationState>
+				<!--
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="ACCELERATE">
@@ -652,13 +657,30 @@
 						CurDrawableHideSubObject("TravEng01")
 						CurDrawableHideSubObject("TravEng02")						
 					</Script>						
-				</AnimationState>				
+				</AnimationState>
+				-->				
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_2 MOVING">
 					<Script>
 						CurDrawableShowSubObject("TravEng01")
 						CurDrawableShowSubObject("TravEng02")						
+					</Script>						
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5 USER_6">
+					<Script>
+						CurDrawableHideSubObject("TravEng01")
+						CurDrawableHideSubObject("TravEng02")						
+					</Script>						
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5">
+					<Script>
+						CurDrawableHideSubObject("TravEng01")
+						CurDrawableHideSubObject("TravEng02")						
 					</Script>						
 				</AnimationState>
 			</ScriptedModelDraw>	

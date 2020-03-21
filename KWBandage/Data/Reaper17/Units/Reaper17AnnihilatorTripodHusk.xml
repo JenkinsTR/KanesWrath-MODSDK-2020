@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!--Added new model for Reaper Tripod Husk to use instead of using the Annihilator Tripod husk model with a different texture-->
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:AURprTripodH_SKN.w3x" />
+	</Includes>
+	<GameObject
+		id="Reaper17AnnihilatorTripodHusk"
+		inheritFrom="AlienAnnihilatorTripodHusk"
+		SelectPortrait="Portrait_AlienAnnihilatorHusk"
+		ButtonImage="Portrait_AlienAnnihilatorHusk"
+		Side="Reaper17"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE HUSK VALID_TARGET_FOR_C4"
+		RadarPriority="UNIT"
+		EditorName="Reaper17AnnihilatorTripodHusk"
+		Description="Desc:Reaper17AnnihilatorTripodHusk"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:ReaperTripodHusk</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"
+			DamageFX="NormalDamageFX" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="NONE">
+					<Model
+						Name="AURprTripodH_SKN" />
+					<Texture
+						Original="AURprTripod"
+						New="AURprTripod_D" />							
+				</ModelConditionState>
+				<!--
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Model
+						Name="AUAnlTrpdH_SKN" />
+					<Texture
+						Original="AUAnhlTrpd"
+						New="AUAnhlTrpdD_K" />						
+					<Texture
+						Original="AUAnhlTrpd_D"
+						New="AUAnhlTrpdD_K" />												
+				</ModelConditionState>	
+				<ModelConditionState					
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_1">
+					<Model
+						Name="AURprTripod_R" />
+					<Texture
+						Original="AURprTripod"
+						New="AURprTripod_KD" />						
+					<Texture
+						Original="AURprTripod_D"
+						New="AURprTripod_KD" />	
+				</ModelConditionState>
+				-->
+
+				<ModelConditionState					
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="AURprTripod_R" />
+					<Texture
+						Original="AURprTripod"
+						New="AURprTripod_D" />	
+				</ModelConditionState>
+				
+				<ModelConditionState					
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AURprTripodH_SKN" />
+					<Texture
+						Original="AURprTripod"
+						New="AURprTripod_D" />	
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="AURprTripodH_SKN" />
+					<Texture
+						Original="AURprTripod"
+						New="AURprTripod_D" />	
+				</ModelConditionState>				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="AUAnlTrpd_DIEA"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />					
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INVULNERABLE">
+					<Animation
+						AnimationName="AUAnlTrpd_DIEA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<Physics
+				id="ModuleTag_07" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_ALIENTripodHuskDebris</OCL>
+				</OCL>						
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_AVehicleExplodeScorch_AnnihilatorHusk" />
+			</FXListBehavior>				
+			<EngineerContain
+				id="ModuleTag_EngineerContain"
+				NameOfVoiceToUseForFriendlyEnter="VoiceCaptureHusk"				
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureHusk"
+				EvaEventForReplace="HuskRepaired"
+				EvaEventForCaptureAndReplace="HuskRepaired"
+				FXForReplace="FX_Husk_Repaired" 
+				FXForCapture="FX_Husk_Captured"
+				FXForCaptureAndReplace="FX_Husk_Captured" 
+				ReplaceWith="Reaper17AnnihilatorTripodHuskReplace">
+				<CanEnterFilter
+					Rule="NONE">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>					
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanEnterFilter>
+			</EngineerContain>
+			<LifetimeUpdate xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_HuskLifetime"
+				MinLifetime="300s"
+				MaxLifetime="300s" />
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowConversionReserveTanks"
+				ShowSubObjects="AU_RPRTRIPOD_UPGR01">
+				<TriggeredBy>Upgrade_Reaper17ConversionReserves</TriggeredBy>
+			</SubObjectsUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_AllFactionUpgrade"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AILuaEventsList="ReaperTripodFunctions">
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_03"
+				MaxHealth="2000" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "30.0561"
+				MinorRadius = "11.8139"
+				Height = "15.935" >
+				<Offset
+					x = "30.8415"
+					y = "-2.55092"
+					z = "0.0" />
+			</Shape>
+		</Geometry>
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<VisionInfo
+			VisionRange="25"
+			ShroudClearingRange="25" />
+		<CrusherInfo
+			CrusherLevel="0" 
+			CrushEqualLevelProps="true"
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

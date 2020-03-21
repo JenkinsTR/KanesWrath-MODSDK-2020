@@ -110,7 +110,6 @@ function OnSteelTalonsJuggernaughtCreated(self)
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_01", true )
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_02", true )
 	ObjectHideSubObjectPermanently( self, "MuzzleFlash_03", true )
-	ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_17", "4", "100")
 end
 
 function OnGDIWatchTowerCreated(self)
@@ -154,7 +153,8 @@ function OnGDIV35Ox_SummonedForVehicleCreated(self)
 end
 
 function OnNODShredderCreated(self)
-
+	ObjectHideSubObjectPermanently( self, "MUZZLEFLASH_01", true )
+	ObjectHideSubObjectPermanently( self, "MUZZLEFLASH_02", true )
 end
 
 function OnNODRaiderTankCreated(self)

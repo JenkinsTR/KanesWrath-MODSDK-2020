@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!--Added Traveler Engine Effects to Ion Storm Model-->
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:AUPACarrierIon.W3X" />
+	</Includes>
+</AssetDeclaration>
