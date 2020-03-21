@@ -1,6 +1,6 @@
 ================================
 
-WRATHED
+WrathEd
 
 Version: 1.08
 Author: Thundermods.net
