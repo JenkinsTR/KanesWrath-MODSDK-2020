@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<PackedTextureImage
+		id="Button_MirageTank"
+		Texture="Portrait_MirageTank"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<PackedTextureImage
+		id="Portrait_MirageTank"
+		Texture="Portrait_MirageTank"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+</AssetDeclaration>

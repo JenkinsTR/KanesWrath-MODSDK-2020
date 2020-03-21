@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+	<AIStrategicStateDefinition
+		id="NODMacsShadowKillWarFactory"
+		UnitUpgradeMultiplier="0.0">
+		<Heuristic>			
+			<PathToTargetHeuristic PathExists="true"/>
+		</Heuristic>
+		<TargetHeuristic TargetHeuristic="SafestToGroundWarFactory" TargetType="Structure"/>
+		<Tactic Tactic="SimpleAttack" TargetType="Structure">
+			<TeamTemplate MinUnits="5" MaxUnits="5" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+				<CreateUnits UnitName="NODShadowSquad"/>
+				<CreateUnits UnitName="NODShadowSquad"/>
+				<CreateUnits UnitName="NODShadowSquad"/>
+				<CreateUnits UnitName="NODShadowSquad"/>
+				<CreateUnits UnitName="NODShadowSquad"/>
+			</TeamTemplate>
+		</Tactic>
+	</AIStrategicStateDefinition>
+  
+</AssetDeclaration>

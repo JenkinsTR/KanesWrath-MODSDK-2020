@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommand
+		id="Command_ConstructMirageTank"
+		Type="UNIT_BUILD">
+		<Object>MirageTank</Object>
+	</LogicCommand>
+</AssetDeclaration>

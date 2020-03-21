@@ -1,0 +1,15 @@
+APT:Quit
+"BEISPIEL MOD\nBEENDEN"
+END
+
+NAME:MirageTank
+	"Mirage-Panzer"
+END
+
+DESC:MirageTank
+	"Fähigkeiten:\n     » Getarnt wenn nicht angreifend"
+END
+
+TYPE:MirageTank
+	"Hightech-Panzer. Stärken: Infanterie, Fahrzeuge, Gebäude."
+END

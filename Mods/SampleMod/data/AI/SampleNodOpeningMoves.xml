@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="NOD_EASY"
+    Side="NOD">
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODCrane" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODPowerPlant" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODSampleOpeningMove"
+    Side="NOD">
+	  <Order Build="NODPowerPlant" />
+	  <Order Build="NODHandOfNOD" />
+	  <Order Build="NODSecretShrine" />
+	  <Order Build="NODShadowSquad" />
+	  <Order Build="NODShadowSquad" />
+	  <Order Build="NODShadowSquad" />
+	  <Order Build="NODShadowSquad" />
+	  <Order Build="NODShadowSquad" />
+	  <Order Build="NODRefinery" />
+	  <Order Build="NODRefinery" />		
+	  <Order Time="90s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODStandard"
+    Side="NOD">
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODDropZone" />
+    <Order Time="70s" Account="PRODUCTION" Deposit="4500" />
+    <Order Build="NODRefinery" />
+    <Order Time="90s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODStandard2"
+    Side="NOD">
+    <Order Build="NODRefinery" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODDropZone" />
+    <Order Time="30s" Account="PRODUCTION" Deposit="2500" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODRefinery" />
+    <Order Time="90s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODStandardCrane"
+    Side="NOD">
+    <Order Build="NODCrane" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODHandOfNOD" />
+    <Order Time="37s" Account="PRODUCTION" Deposit="1100" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <!--15 second pause-->
+    <Order Time="72s" Build="NODDropZone" />
+    <Order Time="92s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODRefineryCrane"
+    Side="NOD">
+    <Order Build="NODRefinery" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODCrane" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODHandOfNOD" />
+    <Order Time="42s" Account="PRODUCTION" Deposit="1000" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODDropZone" />
+    <Order Time="77s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODBrutalCrane"
+    Side="NOD">
+
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODHarvester" />
+    <Order Build="NODRefinery" />
+    <Order Time="60s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODCrane" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Time="157s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

@@ -1,0 +1,17 @@
+// String file for Command & Conquer 3
+
+// comment: DO NOT TRANSLATE
+Personality:Mac
+"Sample Modded AI"
+END
+
+NAME:GDIElfWarrior
+"Elven Warrior"
+END
+
+TYPE:GDIElfWarrior
+"Super Advanced Infantry. Strong vs. Everything"
+END
+DESC:GDIElfWarrior
+"Abilities: \n     »None"
+END

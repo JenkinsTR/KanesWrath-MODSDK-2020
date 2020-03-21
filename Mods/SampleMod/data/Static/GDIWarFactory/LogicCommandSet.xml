@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="GDIWarFactoryCommandSet">
+		<Cmd>Command_ConstructGDIPitbull</Cmd>
+		<Cmd>Command_ConstructGDIPredator</Cmd>
+		<Cmd>Command_ConstructGDIAPC</Cmd>
+		<Cmd>Command_ConstructGDIHarvester</Cmd>
+		<Cmd>Command_ConstructGDIMCV</Cmd>
+		<Cmd>Command_ConstructGDISonicTank</Cmd>
+		<Cmd>Command_ConstructGDIAAScout</Cmd>
+		<Cmd>Command_ConstructGDIRig</Cmd>
+		<Cmd>Command_ConstructMirageTank</Cmd>
+		<Cmd>Command_ConstructGDIMammoth</Cmd>
+		<Cmd>Command_ConstructGDIJuggernaught</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

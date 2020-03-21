@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="MirageTank/AudioEvent.xml" />
+		<Include type="all" source="MirageTank/AudioFile.xml" />
+		<Include type="all" source="MirageTank/Multisound.xml" />
+	</Includes>
+</AssetDeclaration>

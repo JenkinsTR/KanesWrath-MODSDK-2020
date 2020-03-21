@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<WeaponTemplate
+		id="AlliedAntiVehicleVehicleTech3PrismCannon"
+		AttackRange="250.0"
+		CanFireWhileMoving="true"
+		WeaponSpeed="999999.0"
+		FireSound="Multisound:ALL_Mirage_WeaponFireMS"
+		RadiusDamageAffects="ALLIES NEUTRALS ENEMIES"
+		AcceptableAimDelta="10d"
+		ClipSize="1"
+		FireFX="FX_AlliedPrismTowerFire"
+		FireVeteranFX="FX_AlliedPrismTowerFire"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		AutoReloadsClip="AUTO"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_CLIP">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1.0s"
+				LaserId="1"
+				HitGroundFX="FX_MirageLaserHit" />
+			<DamageNugget
+				Damage="800.0"
+				Radius="10.0"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="LASERED"/>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="3s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedAntiVehicleVehicleTech3PrismCannon_Veteran"
+		AttackRange="250.0"
+		CanFireWhileMoving="false"
+		WeaponSpeed="999999.0"
+		FireSound="Multisound:ALL_Mirage_WeaponFireMS"
+		RadiusDamageAffects="ALLIES NEUTRALS ENEMIES"
+		AcceptableAimDelta="10d"
+		ClipSize="1"
+		FireFX="FX_AlliedPrismTowerFire_Vet"
+		FireVeteranFX="FX_AlliedPrismTowerFire_Vet"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		AutoReloadsClip="AUTO"
+		PreAttackType="PER_SHOT"
+		ReAcquireDetailType="PER_CLIP">
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1.0s"
+				LaserId="2"
+				HitGroundFX="FX_MirageLaserHit_Vet" />
+			<DamageNugget
+				Damage="900.0"
+				Radius="10.0"
+				DamageType="CANNON"
+				DamageFXType="GDI_RAILGUN"
+				DeathType="LASERED"/>
+			<SuppressionNugget
+				Radius="20.0"
+				Suppression="10"
+				DurationSeconds="3s" />	
+		</Nuggets>
+	</WeaponTemplate>
+</AssetDeclaration>

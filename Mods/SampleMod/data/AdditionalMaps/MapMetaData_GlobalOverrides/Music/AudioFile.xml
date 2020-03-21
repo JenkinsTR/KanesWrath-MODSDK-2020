@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AudioFile
+		id="JC_CNC3EP1_ShellRemix"
+		PCCompression="EALayer3"
+		File="AUDIO:Music/Command and Conquer - Tiberian Dawn - GDI Map Theme.mp3"
+		GUIPreset="Default" />
+</AssetDeclaration>

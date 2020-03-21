@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="GDIBarracksCommandSet">
+		<Cmd>Command_ConstructGDIRifleSoldierSquad</Cmd>
+		<Cmd>Command_ConstructGDIMissileSoldierSquad</Cmd>
+		<Cmd>Command_ConstructGDIEngineer</Cmd>
+		<Cmd>Command_ConstructGDIGrenadeSoldierSquad</Cmd>
+		<Cmd>Command_ConstructGDISniperSquad</Cmd>
+		<Cmd>Command_ConstructGDICommando</Cmd>
+		<Cmd>Command_ConstructGDIZoneTrooperSquad</Cmd>
+		<Cmd>Command_ConstructGDIElfWarrior</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+		<Cmd>Command_SetDefaultBuilding</Cmd>
+		<Cmd>Command_SetRallyPoint_Infantry</Cmd>
+	</LogicCommandSet>
+
+</AssetDeclaration>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<ArmorTemplate
+		id="MirageTankArmor"
+		SideDamageScalar="105"
+		RearDamageScalar="110">
+		<Armor
+			Damage="SNIPER"
+			Percent="0" />
+		<Armor
+			Damage="GUN"
+			Percent="50" />			
+		<Armor
+			Damage="ROCKET"
+			Percent="100" />
+		<Armor
+			Damage="CANNON"
+			Percent="100" />
+	</ArmorTemplate>
+</AssetDeclaration>

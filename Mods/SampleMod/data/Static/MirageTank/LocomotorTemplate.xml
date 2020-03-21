@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LocomotorTemplate
+		id="MirageTankLocomotor"
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
+		TurnTimeSeconds="1.0s" 
+		TurnTimeDamagedSeconds="1.0s" 
+		MaxSpeedDamaged="75%"
+		AccelerationSeconds="0.01s"
+		BrakingSeconds="0.01s"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="20.0"
+		BehaviorZ="NO_MOTIVE_FORCE"	
+		Appearance="FOUR_WHEELS"
+		UseTerrainSmoothing="true"
+		AccelPitchLimit="4d"
+		BounceKick="0.5d"
+		PitchStiffness="0.2"
+		RollStiffness="0.75"
+		PitchDamping="0.15"
+		RollDamping="0.75"
+		ForwardAccelerationPitchFactor="0.01"
+		LateralAccelerationRollFactor="0.0"
+		HasSuspension="true"
+		ClampOrientationToPathTangent="true"
+		MaximumWheelExtension="-2.3"
+		MaximumWheelCompression="1.4"
+		WheelTurnAngle="0d"		
+		ReorientIfTurnTooSharp="true"
+		TurnThresholdHS="90d" />
+</AssetDeclaration>
