@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MiscEvaEventsAIBeaconTypeSettings">
+		<Entry
+			id="BeaconType"
+			AssetType="AIBeaconType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="PlacedEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="MiscEvaEvents"
+		TypeHash="3038881679">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="LowPower"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SilosNeeded"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BuildingStolen"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="IncomingRadarTransmission"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="AllyDefeated"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="EnemyDefeated"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="LocalPlayerDefeated"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="LocalPlayerVictorious"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CannotBuildDueToCPLimit"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BuildQueuePausedDueToCPLimit"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BuildQueuePausedDueToFunds"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CannotBuildDueToFunds"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CannotRepairDueToFunds"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CannotUsePowerDueToFunds"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="TiberiumFieldDepleted"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="NewMissionObjective"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CompletedMissionObjective"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="NewBonusObjective"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CompletedBonusMissionObjective"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="IntelDatabaseEntryReceived"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="UpgradeComplete"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BuildingBeingStolen"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BeaconPlacedPlayer"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="BeaconPlacedAlly"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="ObservedPlayerDefeated"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="WallsBeingClimbed"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="StructureInfiltrated"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="ControlPointCaptured"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="ControlPointLost"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="ControlPointHasBeenCaptured"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFFlagCaptured"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFEnemyCapturedFlag"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFFlagDropped"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFEnemyDroppedFlag"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFYouHaveFlag"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CTFEnemyHasFlag"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SiegeBarrierDisengaged"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SiegeBarrierEngaged"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="AIBeaconTypeSettings"
+			AssetType="MiscEvaEventsAIBeaconTypeSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

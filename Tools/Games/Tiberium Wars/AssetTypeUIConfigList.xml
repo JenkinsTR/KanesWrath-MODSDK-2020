@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIBaseComponentTypes">
+		<EntryChoice
+			id="UIBaseComponentTypes"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="UIComponentAptJoypad"
+				AssetType="UIComponentAptJoypad" />
+			<Entry
+				id="UIComponentAptMediator"
+				AssetType="UIComponentAptMediator" />
+			<Entry
+				id="UIComponentSound"
+				AssetType="UIComponentSound" />
+			<Entry
+				id="UIComponentMovie"
+				AssetType="UIComponentMovie" />
+			<Entry
+				id="UIComponentSaveLoad"
+				AssetType="UIComponentSaveLoad" />
+			<Entry
+				id="UIComponentOptions"
+				AssetType="UIComponentOptions" />
+			<Entry
+				id="UIComponentMessage"
+				AssetType="UIComponentMessage" />
+			<Entry
+				id="UIComponentGameInfo"
+				AssetType="UIComponentGameInfo" />
+			<Entry
+				id="UIComponentStats"
+				AssetType="UIComponentStats" />
+			<Entry
+				id="UIComponentPlasmaInterface"
+				AssetType="UIComponentPlasmaInterface" />
+			<Entry
+				id="UIComponentCheats"
+				AssetType="UIComponentCheats" />
+			<Entry
+				id="UIComponentGameViewJoypad"
+				AssetType="UIComponentGameViewJoypad" />
+			<Entry
+				id="UIComponentObjectSelector"
+				AssetType="UIComponentObjectSelector" />
+			<Entry
+				id="UIComponentCursor"
+				AssetType="UIComponentCursor" />
+			<Entry
+				id="UIComponentObjectAction"
+				AssetType="UIComponentObjectAction" />
+			<Entry
+				id="UIComponentCommandBar"
+				AssetType="UIComponentCommandBar" />
+			<Entry
+				id="UIComponentInGameShowHide"
+				AssetType="UIComponentInGameShowHide" />
+			<Entry
+				id="UIComponentMinimap"
+				AssetType="UIComponentMinimap" />
+			<Entry
+				id="UIComponentPause"
+				AssetType="UIComponentPause" />
+			<Entry
+				id="UIComponentObjectives"
+				AssetType="UIComponentObjectives" />
+			<Entry
+				id="UIComponentVictoryDefeat"
+				AssetType="UIComponentVictoryDefeat" />
+			<Entry
+				id="UIComponentInGameText"
+				AssetType="UIComponentInGameText" />
+			<Entry
+				id="UIComponentFormation"
+				AssetType="UIComponentFormation" />
+			<Entry
+				id="UIComponentInputBridge"
+				AssetType="UIComponentInputBridge" />
+			<Entry
+				id="UIComponentSpecialPowers"
+				AssetType="UIComponentSpecialPowers" />
+			<Entry
+				id="UIComponentShell"
+				AssetType="UIComponentShell" />
+			<Entry
+				id="UIComponentShellMultiplayer"
+				AssetType="UIComponentShellMultiplayer" />
+			<Entry
+				id="UIComponentLobby"
+				AssetType="UIComponentLobby" />
+			<Entry
+				id="UIComponentCampaign"
+				AssetType="UIComponentCampaign" />
+			<Entry
+				id="UIComponentBootup"
+				AssetType="UIComponentBootup" />
+			<Entry
+				id="UIComponentTicker"
+				AssetType="UIComponentTicker" />
+			<Entry
+				id="UIComponentMovieArchive"
+				AssetType="UIComponentMovieArchive" />
+		</EntryChoice>
+	</Asset>
+
+	<EnumAsset
+		id="UIConfigType">
+		<Entry>INGAME</Entry>
+		<Entry>SHELL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="UIDynamicConfig">
+		<Entry
+			id="Name"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<Entry
+			id="Type"
+			AssetType="UIConfigType"
+			IsAttribute="true" />
+		<Entry
+			id="ComponentList"
+			AssetType="UIBaseComponentTypes" />
+	</Asset>
+
+	<Asset
+		id="UIConfigList">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="GDIBackground"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="NodBackground"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AlienBackground"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="UIDynamicConfig"
+			AssetType="UIDynamicConfig"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

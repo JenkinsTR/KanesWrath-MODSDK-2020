@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIBuildHeuristics">
+		<Entry>CONSTANT</Entry>
+		<Entry>BEST_UNIT_EXPECTED</Entry>
+		<Entry>BEST_UNIT_ACTUAL</Entry>
+		<Entry>BEST_UNIT_WEIGHTED</Entry>
+		<Entry>FEWEST_UNIT</Entry>
+		<Entry>RANDOM_UNIT</Entry>
+		<Entry>WORST_UNIT</Entry>
+		<Entry>NEEDED_UNIT</Entry>
+		<Entry>FACTORY</Entry>
+		<Entry>TECH</Entry>
+		<Entry>POWER</Entry>
+		<Entry>REFINERY</Entry>
+		<Entry>HARVESTER</Entry>
+		<Entry>UNIQUE</Entry>
+		<Entry>UPGRADE</Entry>
+		<Entry>UPGRADE_TECH</Entry>
+		<Entry>BUILD_TEST</Entry>
+		<Entry>UPGRADE_TEST</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIBuildEntry">
+		<EntryWeakReference
+			id="Build"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="Heuristic"
+			AssetType="AIBuildHeuristics"
+			IsAttribute="true" />
+		<Entry
+			id="PercentLow"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="PercentHigh"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="ExpectedEfficiencyWeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.4" />
+		<Entry
+			id="ActualEfficiencyWeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.6" />
+		<Entry
+			id="SampleSizeForFullWeight"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10000" />
+		<Entry
+			id="MinTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ForceTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="99999s" />
+		<Entry
+			id="BlockIfThingNearFactoryDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="150.0" />
+		<Entry
+			id="CountModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Score"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryRelocation
+			id="BlockIfThingNearFactory"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

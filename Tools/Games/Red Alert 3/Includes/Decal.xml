@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ShadowType">
+		<Entry>NONE</Entry>
+		<Entry>DECAL</Entry>
+		<Entry>ALPHA_DECAL</Entry>
+		<Entry>ADDITIVE_DECAL</Entry>
+		<Entry>ALPHA_DECAL_DYNAMIC</Entry>
+		<Entry>ADDITIVE_DECAL_DYNAMIC</Entry>
+		<Entry>MERGE_DECAL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ShadowInfo">
+		<Entry
+			id="Type"
+			AssetType="ShadowType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="AdditionalTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="SizeX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SizeY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OffsetX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OffsetY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OpacityStart"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="OpacityFadeInTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="OpacityPeak"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="OpacityFadeOutTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="OpacityEnd"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="SunAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OverrideLODVisibility"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseHouseColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsRotatingWithObject"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="LocalPlayerOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="RadiusDecalComponent">
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="Texture2"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="Style"
+			AssetType="ShadowType"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityMin"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0%" />
+		<Entry
+			id="OpacityMax"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0%" />
+		<Entry
+			id="OpacityPulsesPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RotationMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RotationMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RotationDegreesPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MaxRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="RadiusPulsesPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PositionOffsetMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PositionOffsetMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PositionOffsetPulsesPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Color"
+			AssetType="Color4" />
+	</Asset>
+
+	<Asset
+		id="RadiusDecalTemplate">
+		<EntryList
+			id="Component"
+			AssetType="RadiusDecalComponent"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

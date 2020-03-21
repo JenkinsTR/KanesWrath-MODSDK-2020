@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="GameplayConditionType">
+		<Entry>KILL</Entry>
+		<Entry>CAPTURE</Entry>
+		<Entry>UPGRADE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="GameplayConditionBitFlags"
+		BaseEnum="GameplayConditionType" />
+
+	<EnumAsset
+		id="GameplayModeType">
+		<Entry>CAMPAIGN</Entry>
+		<Entry>SKIRMISH</Entry>
+		<Entry>ONLINE</Entry>
+		<Entry>RANKED_ONLINE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="GameplayModeBitFlags"
+		BaseEnum="GameplayModeType" />
+
+	<Asset
+		id="BaseConditionData">
+		<Entry
+			id="Count"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="Unique"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ObjectConditionData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseConditionData" />
+		<EntryRelocation
+			id="DieMuxData"
+			AssetType="DieMuxDataType" />
+	</Asset>
+
+	<Asset
+		id="UpgradeConditionData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseConditionData" />
+		<EntryList
+			id="UpgradeRequired"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="GameplayConditionData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="GameplayConditionBitFlags"
+			AssetType="GameplayConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="TimeReq"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="AllowedGameTypeBitFlags"
+			AssetType="GameplayModeBitFlags"
+			IsAttribute="true"
+			Default="SKIRMIS" />
+		<Entry
+			id="GameDifficultyBitFlags"
+			AssetType="GameDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EAS" />
+		<Entry
+			id="PrimaryObject"
+			AssetType="ObjectConditionData" />
+		<EntryRelocation
+			id="RequiredObjectCondition"
+			AssetType="ObjectConditionData" />
+		<EntryRelocation
+			id="RequiredUpgradeCondition"
+			AssetType="UpgradeConditionData" />
+	</Asset>
+
+</AssetDefinition>

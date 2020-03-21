@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ProcessorType">
+		<Entry>UNKNOWN</Entry>
+		<Entry>PENTIUM_4</Entry>
+		<Entry>CORE_DUO</Entry>
+		<Entry>ATHLON</Entry>
+		<Entry>ATHLON_64</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="GraphicsCardType">
+		<Entry>UNKNOWN</Entry>
+		<Entry>GENERIC_PIXEL_SHADER_1</Entry>
+		<Entry>GEFORCE_5_LOW</Entry>
+		<Entry>GEFORCE_3</Entry>
+		<Entry>RADEON_8_AND_9_LOW</Entry>
+		<Entry>GEFORCE_4</Entry>
+		<Entry>GEFORCE_5_MEDIUM</Entry>
+		<Entry>GEFORCE_6_LOW</Entry>
+		<Entry>_MINIMUM_FOR_LOW_LOD</Entry>
+		<Entry>GENERIC_PIXEL_SHADER_2</Entry>
+		<Entry>GEFORCE_5_HIGH</Entry>
+		<Entry>RADEON_9_MEDIUM</Entry>
+		<Entry>RADEON_X_LOW</Entry>
+		<Entry>_MINIMUM_FOR_MEDIUM_LOD</Entry>
+		<Entry>GEFORCE_6_MEDIUM</Entry>
+		<Entry>RADEON_X1_LOW</Entry>
+		<Entry>RADEON_9_HIGH</Entry>
+		<Entry>RADEON_X_MEDIUM</Entry>
+		<Entry>GEFORCE_7_LOW</Entry>
+		<Entry>RADEON_X1_MEDIUM</Entry>
+		<Entry>_MINIMUM_FOR_HIGH_LOD</Entry>
+		<Entry>RADEON_X_HIGH</Entry>
+		<Entry>GENERIC_PIXEL_SHADER_3</Entry>
+		<Entry>GEFORCE_6_HIGH</Entry>
+		<Entry>GEFORCE_7_MEDIUM</Entry>
+		<Entry>_MINIMUM_FOR_ULTRA_HIGH_LOD</Entry>
+		<Entry>RADEON_X1_HIGH</Entry>
+		<Entry>GEFORCE_7_HIGH</Entry>
+		<Entry>GEFORCE_8_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="GameLODType">
+		<Entry>UNKNOWN</Entry>
+		<Entry>VERY_LOW</Entry>
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+		<Entry>CUSTOM</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ShaderLODType">
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AudioLODType">
+		<Entry>UNKNOWN</Entry>
+		<Entry>LOW</Entry>
+		<Entry>HIGH</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ProcessorRequirement">
+		<Entry
+			id="Type"
+			AssetType="ProcessorType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MinMHz"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="GameLODPreset"
+		TypeHash="433766989">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Level"
+			AssetType="GameLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="SystemMemory"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="500" />
+		<Entry
+			id="GraphicsCard"
+			AssetType="GraphicsCardType"
+			IsAttribute="true"
+			Default="_MINIMUM_FOR_MEDIUM_LOD" />
+		<Entry
+			id="Xres"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1024" />
+		<Entry
+			id="YRes"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="768" />
+		<EntryList
+			id="Processor"
+			AssetType="ProcessorRequirement"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<GameAsset
+		id="StaticGameLOD"
+		TypeHash="3199147209">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Level"
+			AssetType="GameLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="ModelLOD"
+			AssetType="ModelLODType"
+			IsAttribute="true"
+			Default="HIGH" />
+		<Entry
+			id="EffectsLOD"
+			AssetType="EffectsLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="MaxParticleCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1500" />
+		<Entry
+			id="ShadowLOD"
+			AssetType="ShadowLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="TerrainLOD"
+			AssetType="TerrainLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="WaterLOD"
+			AssetType="WaterLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="MaxTankTrackEdges"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="MaxTankTrackOpaqueEdges"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MaxTankTrackFadeDelay"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="30000" />
+		<Entry
+			id="TextureReductionFactor"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AnimationLOD"
+			AssetType="AnimationLODType"
+			IsAttribute="true"
+			Default="HIGH" />
+		<Entry
+			id="ShaderLOD"
+			AssetType="ShaderLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="DecalLOD"
+			AssetType="DecalLODType"
+			IsAttribute="true"
+			Default="HIGH" />
+		<Entry
+			id="MinParticlePriority"
+			AssetType="FXParticleSystem_Priority"
+			IsAttribute="true"
+			Default="MEDIUM_OR_ABOVE" />
+		<Entry
+			id="MinParticleSkipPriority"
+			AssetType="FXParticleSystem_Priority"
+			IsAttribute="true"
+			Default="ALWAYS_RENDER" />
+		<Entry
+			id="AntiAliasingQuality"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="UseShadowDecals"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseShadowMapping"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseTerrainNormalMap"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseDistanceDependantTerrainTextures"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ShowProps"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseHeatEffects"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+	<GameAsset
+		id="DynamicGameLOD"
+		TypeHash="1908070290">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Level"
+			AssetType="GameLODType"
+			IsAttribute="true"
+			Default="MEDIUM" />
+		<Entry
+			id="MinimumFPS"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="ParticleSkipMask"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="DebrisSkipMask"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SlowDeathScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+	</GameAsset>
+
+	<GameAsset
+		id="AudioLOD"
+		TypeHash="985395215">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Level"
+			AssetType="AudioLODType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaximumAmbientStreams"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="CPULimiterLevel"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="CPULimiterLevelDebug"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxVoices"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="OutputBitRate"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MinimumLogicalProcessors"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Processor"
+			AssetType="ProcessorRequirement"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="AllowReverb"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AllowCPULimiter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AllowVolumeCompressor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Structures/Reaper17ControlCenter.xml" />
+	
+		<Include type="all" source="Units/Reaper17Buzzers.xml" />
+		<Include type="all" source="Units/Reaper17CustomizableVehicle.xml" />	
+		<Include type="all" source="Units/Reaper17EradicatorHexapod.xml" />	
+		<Include type="all" source="Units/Reaper17MillipedeBody.xml" />	
+		<Include type="all" source="Units/Reaper17MillipedeHead.xml" />	
+		<Include type="all" source="Units/Reaper17RazorDrones.xml" />
+		<Include type="all" source="Units/Reaper17RazorDroneSquad.xml" />
+		<Include type="all" source="Units/Reaper17SeekerTank.xml" />
+		<Include type="all" source="Units/Reaper17ShardWalker.xml" />
+		<Include type="all" source="Units/Reaper17ShockTrooperSquad_Veteran.xml" />
+		<Include type="all" source="Units/Reaper17Stalker.xml" />
+		<Include type="all" source="Units/Reaper17StalkerSquad.xml" />
+	</Includes>
+</AssetDeclaration>

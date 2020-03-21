@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="OnlineChatColors"
+		TypeHash="4083440295">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Default"
+			AssetType="Color4" />
+		<Entry
+			id="CurrentRoom"
+			AssetType="Color4" />
+		<Entry
+			id="ChatRoom"
+			AssetType="Color4" />
+		<Entry
+			id="Game"
+			AssetType="Color4" />
+		<Entry
+			id="GameFull"
+			AssetType="Color4" />
+		<Entry
+			id="GameCRCMismatch"
+			AssetType="Color4" />
+		<Entry
+			id="PlayerNormal"
+			AssetType="Color4" />
+		<Entry
+			id="PlayerBuddy"
+			AssetType="Color4" />
+		<Entry
+			id="PlayerOwner"
+			AssetType="Color4" />
+		<Entry
+			id="OfflinePlayerBuddy"
+			AssetType="Color4" />
+		<Entry
+			id="PlayerSelf"
+			AssetType="Color4" />
+		<Entry
+			id="PlayerIgnored"
+			AssetType="Color4" />
+		<Entry
+			id="OfflinePlayerIgnored"
+			AssetType="Color4" />
+		<Entry
+			id="ChatNormal"
+			AssetType="Color4" />
+		<Entry
+			id="ChatEmote"
+			AssetType="Color4" />
+		<Entry
+			id="ChatOwner"
+			AssetType="Color4" />
+		<Entry
+			id="ChatOwnerEmote"
+			AssetType="Color4" />
+		<Entry
+			id="ChatPrivate"
+			AssetType="Color4" />
+		<Entry
+			id="ChatPrivateEmote"
+			AssetType="Color4" />
+		<Entry
+			id="ChatPrivateOwner"
+			AssetType="Color4" />
+		<Entry
+			id="ChatPrivateOwnerEmote"
+			AssetType="Color4" />
+		<Entry
+			id="ChatBuddy"
+			AssetType="Color4" />
+		<Entry
+			id="ChatSelf"
+			AssetType="Color4" />
+		<Entry
+			id="AcceptTrue"
+			AssetType="Color4" />
+		<Entry
+			id="AcceptFalse"
+			AssetType="Color4" />
+		<Entry
+			id="MapSelected"
+			AssetType="Color4" />
+		<Entry
+			id="MapUnselected"
+			AssetType="Color4" />
+		<Entry
+			id="MessageOfTheDay"
+			AssetType="Color4" />
+		<Entry
+			id="MessageOfTheDayHeading"
+			AssetType="Color4" />
+	</GameAsset>
+
+</AssetDefinition>

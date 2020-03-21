@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpawnUnitBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryWeakReference
+			id="UnitTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnitCommandName"
+			AssetType="LogicCommand"
+			IsAttribute="true" />
+		<Entry
+			id="CommandPointCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SpawnOffset"
+			AssetType="Coord2D" />
+		<Entry
+			id="SpawnOnce"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

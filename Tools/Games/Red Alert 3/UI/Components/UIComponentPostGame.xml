@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="PostGameGraphMode">
+		<Entry>Units</Entry>
+		<Entry>Structures</Entry>
+		<Entry>Resources</Entry>
+		<Entry>None</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="PostGameStatType">
+		<Entry>SessionLength</Entry>
+		<Entry>StructuresCreated</Entry>
+		<Entry>StructuresLost</Entry>
+		<Entry>StructuresDestroyed</Entry>
+		<Entry>StructuresCaptured</Entry>
+		<Entry>StructuresSold</Entry>
+		<Entry>UnitsCreated</Entry>
+		<Entry>UnitsLost</Entry>
+		<Entry>UnitsKilled</Entry>
+		<Entry>UnitKillDeathRatio</Entry>
+		<Entry>AvgIncomePerMinute</Entry>
+		<Entry>AvgIncomePerSecond</Entry>
+		<Entry>ResourcesGathered</Entry>
+		<Entry>EfficiencyRatio</Entry>
+		<Entry>EnemyStructuresInfiltrated</Entry>
+		<Entry>UnitAbilitiesUsed</Entry>
+		<Entry>CommanderPowersUsed</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="PostGameStatData">
+		<Entry
+			id="StatType"
+			AssetType="PostGameStatType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatLabel"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="UIComponentPostGame">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<EntryReference
+			id="AlliesFactionImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="SovietFactionImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="JapanFactionImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="DefaultImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryList
+			id="PostGameStat"
+			AssetType="PostGameStatData"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

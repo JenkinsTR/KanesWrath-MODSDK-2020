@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ToggleMountedSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="OpacityTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="MountedTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="SynchronizeTimerOnSpecialPower"
+			AssetType="SpecialPowerTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="TriggerInstantlyOnCreate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="CancelDisguiseWhenDismounting"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

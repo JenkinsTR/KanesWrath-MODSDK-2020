@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="StructureCollapsePhaseType">
+		<Entry>INITIAL</Entry>
+		<Entry>DELAY</Entry>
+		<Entry>BURST</Entry>
+		<Entry>ALMOST_FINAL</Entry>
+		<Entry>FINAL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SCBaseType">
+		<Entry
+			id="Type"
+			AssetType="StructureCollapsePhaseType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SCFXListType">
+		<EntryInheritance
+			id="base"
+			AssetType="SCBaseType" />
+		<EntryList
+			id="FX"
+			AssetType="FXListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SCOCLListType">
+		<EntryInheritance
+			id="base"
+			AssetType="SCBaseType" />
+		<EntryList
+			id="OCL"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="StructureCollapseUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MinCollapseDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxCollapseDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinBurstDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="9999" />
+		<Entry
+			id="MaxBurstDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BigBurstFrequency"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CollapseDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxShudder"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CollapseHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="CrushingWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryList
+			id="OCL"
+			AssetType="SCOCLListType"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryList
+			id="FX"
+			AssetType="SCFXListType"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryRelocation
+			id="Die"
+			AssetType="DieMuxDataType" />
+		<Entry
+			id="DestroyObjectWhenDone"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

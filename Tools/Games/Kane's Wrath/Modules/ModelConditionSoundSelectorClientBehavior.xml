@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ModelConditionSoundSelectorOverrideBlock">
+		<Entry
+			id="RequiredFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludedFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="VoicePriorityOverride"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AudioArrayVoice"
+			AssetType="AudioArrayVoice" />
+		<EntryRelocation
+			id="AudioArraySound"
+			AssetType="AudioArraySound" />
+	</Asset>
+
+	<Asset
+		id="ModelConditionSoundSelectorClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientBehaviorModuleData" />
+		<EntryList
+			id="Override"
+			AssetType="ModelConditionSoundSelectorOverrideBlock"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

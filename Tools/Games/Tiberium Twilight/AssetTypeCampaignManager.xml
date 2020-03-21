@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="CampaignFlagType">
+		<Entry>Use_Alternate_Campaign_Finale</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="CampaignFlagBitFlags"
+		BaseEnum="CampaignFlagType" />
+
+	<Asset
+		id="CampaignAICommander">
+		<EntryReference
+			id="Portrait"
+			AssetType="OnDemandImageRef"
+			IsAttribute="true" />
+		<Entry
+			id="Personality"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="CampaignMovie">
+		<EntryReference
+			id="ImageRef"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<Entry
+			id="FileName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ScreenName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="MissionTemplate"
+		TypeHash="3533302842">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ShortDisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="OverviewTalkingHead"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="OverviewBackground"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Title"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MapName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BriefingFLA"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BriefingSummary"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryAchEvent"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryAchEventMedium"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryAchEventHard"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryAchEventCoop"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryAchEventBonusObj"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryList
+			id="Prerequisite"
+			AssetType="SageInt"
+			Default="-1"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Objective"
+			AssetType="String"
+			Default="-1"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryList
+			id="BonusObjective"
+			AssetType="String"
+			Default="-1"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryList
+			id="AICommander"
+			AssetType="CampaignAICommander"
+			MinLength="1"
+			MaxLength="3" />
+		<Entry
+			id="IntroMovie"
+			AssetType="CampaignMovie" />
+	</GameAsset>
+
+	<GameAsset
+		id="CampaignTemplate"
+		TypeHash="3502529123">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ConsoleAutosaveFilename"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Mission"
+			AssetType="MissionTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+		<Entry
+			id="FinalMovie"
+			AssetType="CampaignMovie" />
+		<Entry
+			id="AlternateFinalMovie"
+			AssetType="CampaignMovie" />
+	</GameAsset>
+	
+	<Asset
+		id="CampaignTemplateRef">
+		<EntryReference
+			id="CampaignTemplate"
+			AssetType="CampaignTemplate" />
+	</Asset>
+
+	<GameAsset
+		id="CampaignEnumerator"
+		TypeHash="118801026">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Campaign"
+			AssetType="CampaignTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

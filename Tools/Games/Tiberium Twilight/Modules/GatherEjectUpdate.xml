@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GatherEjectUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="Slots"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="ScanTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.2s" />
+		<Entry
+			id="HeightOffGround"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="EffectDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="125.0" />
+		<Entry
+			id="LiftOffGroundDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="75.0" />
+		<Entry
+			id="GatherAcceleration"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.01" />
+		<Entry
+			id="RotationSpeed"
+			AssetType="Vector3" />
+		<Entry
+			id="UnitSpacing"
+			AssetType="Vector3" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalMiscHotKeysStanceSettings">
+		<Entry
+			id="Stance"
+			AssetType="Stance"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Slot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="UIMouseTacticalMiscHotKeys">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="AllCheer"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttackMove"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="CameraReset"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ChatWithAllies"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ChatWithBuddies"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ChatWithEveryone"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="CommunicateWithAlliesMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="CreateFormation"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="CycleHarvesters"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="DeleteBeacon"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ForceAttack"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ForceAttackMove"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ForceMove"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="GoToNextBuildQueue"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="GoToPriorBuildQueue"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="GoToNextSubGroup"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="GoToPriorSubGroup"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenAdvancedCommands"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenLoadGameScreen"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenMessenger"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenPauseScreen"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenPlayerTechStore"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenSaveGameScreen"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="OpenStatusScreen"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="PlaceRallyPoint"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="PlanningMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="PreferSelection"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="QuickChatMenu"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ReverseMove"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="Scatter"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="SelectAll"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="SelectMatchingUnits"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="SellMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ShowAllHealthBars"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="Stop"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TelestratorErase"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TelestratorNextColor"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TelestratorNextLineWidth"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TelestratorPriorColor"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TelestratorToggle"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToggleFastForwardMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToggleHUD"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="TogglePowerMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToggleRepairMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ViewHomeBase"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ViewLastEvaEvent"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="WaypointMode"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryList
+			id="StanceSettings"
+			AssetType="UIMouseTacticalMiscHotKeysStanceSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

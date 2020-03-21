@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="GDIFastRush"
+    Side="GDI"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+
+    <Order Build="GDIPredator" />
+    <Order Build="GDIPredator" />
+    <Order Build="GDIPredator" />
+    <Order Build="GDIPredator" />
+    <Order Build="GDIPredator" />
+    <Order Build="GDIAPC" />
+    <Order Time="130s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="GDIDualFactoryRush"
+    Side="GDI"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Time="230s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="GDITriFactoryRush"
+    Side="GDI"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Time="300s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="GDIBrutalTankRush"
+    Side="GDI"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIBarracks" /> <!--Time: 5 Power: -5-->
+    <Order Time="260s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="GDIMammothRush"
+    Side="GDI"> <!--Power: +10-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="GDIRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIHarvester" />
+    <Order Build="GDIHarvester" />
+    <Order Build="GDICommandPost" /> <!--Time: 15 Power: -9-->
+	<Order Build="GDIPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="GDIWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="GDIArmory" /> <!--Time: 40 Power: -12-->
+
+    <Order Build="GDIMammoth" />
+    <Order Build="GDIMammoth" />
+    <Order Build="GDIMammoth" />
+    <Order Build="GDIMammoth" />
+    <Order Build="GDIMammoth" />
+    <Order Build="GDIMammoth" />
+    <Order Time="235s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

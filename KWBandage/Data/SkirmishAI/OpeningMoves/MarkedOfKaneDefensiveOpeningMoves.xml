@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="MarkedOfKaneSuperweaponRush"
+    Side="MarkedOfKane"> <!--Power: +10-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKaneHandOfMarkedOfKane" /> <!--Time: 5 Power: -5-->
+    <Order Time="75s" Account="PRODUCTION" Deposit="4000" />
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneOperationsCenter" /> <!--Time: 15 Power: -10-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneTechAssemblyPlant" /> <!--Time: 40 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneTempleOfMarkedOfKane" /> <!--Time: 50 Power: -20-->
+    <Order Time="195s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+     id="MarkedOfKaneDualBarracks"
+     Side="MarkedOfKane">
+    <Order Time="0s" Account="PRODUCTION" Deposit="2000" />
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneHandOfMarkedOfKane" /> <!--Time: 5 Power: -5-->
+    <Order Build="MarkedOfKaneRefinery" />  <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKaneHandOfMarkedOfKane" /> <!--Time: 5 Power: -5-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Time="115s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

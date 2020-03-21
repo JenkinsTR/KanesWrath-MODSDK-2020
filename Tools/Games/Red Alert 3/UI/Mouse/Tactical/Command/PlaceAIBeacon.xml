@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalCommandPlaceAIBeaconTypeSettings">
+		<Entry
+			id="Type"
+			AssetType="AIBeaconType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="PlaceUnattachedCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="PlaceAttachedCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AttachableObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="CanTargetObjects"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanTargetPosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalCommandPlaceAIBeacon"
+		TypeHash="4187711090">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="BeaconTypeSettings"
+			AssetType="UIMouseTacticalCommandPlaceAIBeaconTypeSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

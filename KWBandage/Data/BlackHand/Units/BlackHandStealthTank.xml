@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+<!--Improved Turret Settings to match Slingshot. Now more effective against air, reducing missfires when aircraft flies overhead-->
+<!--Restored ability to be cloaked from cloaking field, removed certain Stealth Tank parameters-->
+<!--Changed so it uses only one model between no upgrades and upgrade-->
+<!--Added Damaged TibCore Texture-->
+	<Includes>
+		<Include type="all" source="ART:NUWodTnk_SKN.w3x" />
+	</Includes>
+	<GameObject
+		id="BlackHandStealthTank"
+		SelectPortrait="Portrait_NODWodTank"
+		ButtonImage="Portrait_NODWodTank"
+		Side="BlackHand"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="1200"
+		BuildTime="12"
+		CommandSet="NODStealthTankCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE TRANSPORT VEHICLE CAN_REVERSE_MOVE CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="MISSILE"
+		VoicePriority="200"
+		EditorName="BlackHandStealthTank"
+		WorldMapArmoryUpgradesAllowed="Upgrade_NODTechCenterTibCoreMissiles"
+		Description="Desc:BlackHandStealthTank"
+		TypeDescription="Type:BlackHandStealthTank"
+		ReinvisibilityDelay="7s"
+		ShockwaveResistance="100">
+		<DisplayName>NAME:BlackHandStealthTank</DisplayName>
+		<DisplayUpgrade>Upgrade_NODTechCenterTibCoreMissiles</DisplayUpgrade>
+		<GameDependency>
+			<RequiredObject>BlackHandOperationsCenter</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="BlackHandStealthTankArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="NODRaiderTankLocomotor"
+			Condition="NORMAL"
+			Speed="100.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				ExtraPublicBone="FXTracksL FXTracksR FXTracksB FXWeaponL FXWeaponR FXMUZZLEFLASH"
+				TrackMarks="EXTnkTrack"
+				TrackMarksLeftBone="FXTracksL"
+				TrackMarksRightBone="FXTracksR"				
+				TreadAnimationRate="0.15"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
+						Name="NUWodTnk_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponL" />
+					<WeaponFireFXBone
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponR" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeaponL" />
+					<WeaponLaunchBone
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="FXWeaponR" />
+					<!--
+					<WeaponRecoilBone WeaponSlotType="PRIMARY_WEAPON" BoneName="Barrel" />
+					<WeaponMuzzleFlash WeaponSlotType="PRIMARY_WEAPON" BoneName="TurretFX" />
+					-->
+					<Turret
+						TurretNameKey="Turret"
+						TurretPitch="Bone_Pitch"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="NUWodTnk_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="NUWodTnk_SKN" />
+					<ParticleSysBone
+						BoneName="BONE_REAR"
+						FXParticleSystemTemplate="NODDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="NUWodTnk_SKN" />
+					<Texture
+						Original="NUWoDTnk"
+						New="NUWoDTnkD" />
+					<Texture
+						Original="NUTibCoreMissles"
+						New="NUTibCoreMissles_D" />
+					<ParticleSysBone
+						BoneName="BONE_REAR"
+						FXParticleSystemTemplate="NODDamagedFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BONE_REAR"
+						FXParticleSystemTemplate="NODDamagedFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BONE_REAR"
+						FXParticleSystemTemplate="NODDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="NUWodTnkR_SKN" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableShowSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
+					<Animation
+						AnimationName="NUWodTnk_HSTL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableShowSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
+					<Animation
+						AnimationName="NUWodTnk_HSTR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableShowSubObject("TreadsTurnRight")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimationName="NUWodTnk_TRNL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableShowSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimationName="NUWodTnk_TRNR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableHideSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableShowSubObject("TreadsTurnRight")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<Script>
+						CurDrawableHideSubObject("TreadsStop")
+						CurDrawableShowSubObject("TreadsMove")
+						CurDrawableHideSubObject("TreadsTurnLeft")
+						CurDrawableHideSubObject("TreadsTurnRight")
+					</Script>
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="GDIMammothHulkFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="GDIMammothHulkFireGlow"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="GDIMammothHulkFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="GDIMammothHulkSmoke"
+						FollowBone="true" />
+				</AnimationState>
+				<LeftTread>"TreadsL"</LeftTread>
+				<RightTread>"TreadsR"</RightTread>
+				<ArticulationBone
+					ArticulationBoneName="Bone_ArmR"
+					ArticulationHelperBoneName="FXTracksL" />
+				<ArticulationBone
+					ArticulationBoneName="Bone_ArmL"
+					ArticulationHelperBoneName="FXTracksR" />
+
+			</TankDraw>
+<!--			
+			<TankDraw
+				id="ModuleTag_Stealth"
+				OkToChangeModelColor="true"
+				InvertStealthOpacity="true"
+				ExtraPublicBone="FXTracksL FXTracksR FXTracksB FXWeaponL FXWeaponR"
+				TreadAnimationRate="0.15"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NUStlthTnkStlth" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
+					<Animation
+						AnimationName="NUWodTnk_HSTL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
+					<Animation
+						AnimationName="NUWodTnk_HSTR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimationName="NUWodTnk_TRNL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimationName="NUWodTnk_TRNR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NUWodTnk_IDLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<LeftTread>"TreadsL"</LeftTread>
+				<RightTread>"TreadsR"</RightTread>
+				<ArticulationBone
+					ArticulationBoneName="Bone_ArmR"
+					ArticulationHelperBoneName="FXTracksL" />
+				<ArticulationBone
+					ArticulationBoneName="Bone_ArmL"
+					ArticulationHelperBoneName="FXTracksR" />
+				<ArticulationBone
+					ArticulationBoneName="Bone_Rear"
+					ArticulationHelperBoneName="FXTracksB" />
+			</TankDraw>
+-->			
+		<SpotlightDraw
+			id="ModuleTag_Spotlight"
+			AttachToBoneInAnotherModule="B_SPOTLIGHT"
+			RefreshTime="2.0s"
+			SweepTime="1.0s">
+			<ModelConditionState
+				ParseCondStateType="PARSE_DEFAULT">
+				<Model
+					Name="FXspotlight" />
+				<WeaponFireFXBone
+					WeaponSlotType="PRIMARY_WEAPON"
+					BoneName="FXWEAPONL" />
+				<WeaponLaunchBone
+					WeaponSlotType="PRIMARY_WEAPON"
+					BoneName="FXWEAPONL" />
+				</ModelConditionState>
+			<ModelConditionState
+				ParseCondStateType="PARSE_NORMAL"
+				ConditionsYes="FORMATION_PREVIEW">
+				<!-- Draw nothing when in Formation Preview -->
+				<Model
+					Name="" />
+			</ModelConditionState>
+		</SpotlightDraw>
+    </Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<Physics
+				id="ModuleTag_04" />
+			<ProductionUpdate
+				id="ModuleTag_08" />
+			<WeaponSetUpdate>
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BlackHandTankTankRocket" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BlackHandTankTankRocketTibCore"
+						ObjectStatus="WEAPON_UPGRADED_01" />
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="BlackHandTankTankRocket" />
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="BlackHandTankTankRocketTibCore"
+						ObjectStatus="WEAPON_UPGRADED_01" />						
+					<TurretSettings
+						TurretTurnRate="500"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="5d"
+						PitchHeight="75%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData
+							CanPickDynamicTargets="true"
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="1.0"
+				DestructionDelay="7s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_NODBlackHandStealthTankDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound Type="INITIAL" List="NOD_Mantis_VoiceDie" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIMammothExplode" />
+			</FXListBehavior>
+			<StatusBitsUpgrade
+				id="ModuleTag_UpgradeWeapon"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_NODTechCenterTibCoreMissiles</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_TibCoreSubObject"
+				ShowSubObjects="TIBCOREMISSILE">
+				<TriggeredBy>Upgrade_NODTechCenterTibCoreMissiles</TriggeredBy>
+			</SubObjectsUpgrade>
+			<AudioLoopUpgrade 
+				id="NOD_TiberiumCoreMissile_Upgrade" 
+				SoundToPlay="AudioEvent:NOD_TiberiumCoreMissile_Upgrade">
+       		<TriggeredBy>Upgrade_NODTechCenterTibCoreMissiles</TriggeredBy>
+      		</AudioLoopUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_03">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="250" />	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_03"
+				AILuaEventsList="BlackHandStealthTankFunctions">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="100.0"
+					RotateToTargetWhenAiming="false" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_02"
+				MaxHealth="1875" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="11.0"
+				MinorRadius="11.0"
+				Height="13"
+				ContactPointGeneration="VEHICLE" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceAttackMS" AudioType="voiceAttack" />
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceCreateMS" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:NOD_Mantis_VoiceHelp" AudioType="voiceFear" />
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceMoveMS" AudioType="voiceGuard" />
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceMoveMS" AudioType="voiceMove" />
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceMoveMS" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:NOD_Mantis_VoiceSelectMS" AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:NOD_StealthTank_IdleLoop" AudioType="soundAmbient" />
+			<AudioEntry Sound="AudioEvent:NOD_Mantis_MoveByLoop" AudioType="soundMoveLoop" />
+			<AudioEntry Sound="AudioEvent:NOD_Mantis_MoveStart" AudioType="soundMoveStart" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrusherLevel="1"
+			CrushableLevel="2" />
+	</GameObject>
+</AssetDeclaration>

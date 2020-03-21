@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaCityBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="MetaBodyModuleData" />
+		<Entry
+			id="SlightlyLowPopulationPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="LowPopulationPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ReallyLowPopulationPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+		<Entry
+			id="MaxUnrest"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="SlightlyLowUnrestPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="LowUnrestPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ReallyLowUnrestPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+		<Entry
+			id="InitialUnrest"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1.0" />
+		<Entry
+			id="MinHumanCityTiberiumBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxHumanCityTiberiumBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="ALIENCityTiberiumBonusPop"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ALIENCityTiberiumBonusPopTHRESHOLD"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+	</Asset>
+
+</AssetDefinition>

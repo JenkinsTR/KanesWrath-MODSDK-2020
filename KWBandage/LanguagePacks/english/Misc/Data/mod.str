@@ -1,0 +1,23 @@
+DESC:UpgradeMinorForcefieldGenerator
+	"Adds a minor Forcefield to Seekers and Gun Walkers \n \n Left-click to begin researching"
+END
+
+DESC:UpgradeReaper17MinorForcefieldGenerator
+	"Adds a minor Forcefield to Seekers and Shard Walkers \n \n Left-click to begin researching"
+END
+
+DESC:Traveler59RazorDrones
+	"Abilities:\n      » Explodes when crushed \n Upgrades: \n      » Advanced Articulators (Stasis Chamber)"
+End
+
+DESC:SteelTalonsGuardianCannon
+	"Detects Stealth \n Upgrades: \n      » Rail Guns (Tech Center)"
+End
+
+DESC:GDIRig
+	"Abilities: \n     » Unpacks into Battle Base \n     » Battle Base can defend a target area and repair nearby vehicles \n Upgrades: \n      » Rail Guns (Tech Center)"
+End
+
+DESC:GDIForwardBattleBase
+	"Detects Stealth \n Abilities: \n     » Heals nearby vehicles \n     » Can Pack up into a Rig \n Upgrades: \n      » Rail Guns (Tech Center)"
+End

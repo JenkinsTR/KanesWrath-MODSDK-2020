@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UnitAISettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="SupplyBoxesPerTree"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="90" />
+		<Entry
+			id="ValuePerSupplyBox"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="400" />
+		<Entry
+			id="MinDistFromEdgeOfMapForBuild"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+		<Entry
+			id="SupplyBuildBorder"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="MaxLineBuildObjects"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MaxTunnelCapacity"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="MinLowEnergyProductionSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MaxLowEnergyProductionSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.8" />
+		<Entry
+			id="LowEnergyPenaltyModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="DamageRadiusMinimumForSplash"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SellPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="UnlookPersistDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="DefaultStructureRubbleHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="8.0" />
+		<Entry
+			id="TimeAfterDamageUntilRepairAllowed"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SelectionFlashSaturationFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="GarrisonedRangeMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="GroupMoveClickToGatherAreaFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="FormationMoveClusterRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="InvisibilityOpacityCycleFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="60" />
+		<Entry
+			id="BuilderFadeOutTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="BuilderFadeInTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="BuilderMoveFromNewStructureDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="PartitionCellSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="40.0" />
+		<Entry
+			id="TerrainResourceCellSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="DefaultStartingCash"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1500" />
+		<Entry
+			id="MovementPenaltyDamageState"
+			AssetType="BodyDamageType"
+			IsAttribute="true"
+			Default="REALLY_DAMAGED" />
+		<Entry
+			id="ParachuteDriftSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="ParachuteLandTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.5s" />
+		<Entry
+			id="LinearDragSubmerged"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.85" />
+		<Entry
+			id="AutomaticReverseAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="10d" />
+		<Entry
+			id="AutomaticReverseDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="40" />
+		<Entry
+			id="SkipMoveMinDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<EntryReference
+			id="CompleteTargetingCompareList"
+			AssetType="TargetingCompareListRef"
+			IsAttribute="true" />
+		<Entry
+			id="ScatterDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="AIIgnoreDuplicateMoveCommandDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="HumanIgnoreDuplicateMoveCommandDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="ConsiderHumanDuplicateMoveCommandDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="CaptureWaitDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="CaptureWaitTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="CaptureWaitModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryConditionUnitObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="VictoryConditionStructureObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="SelectionFlashHouseColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EnableHouseColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

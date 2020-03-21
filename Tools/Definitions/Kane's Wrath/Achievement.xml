@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AchievementTriggerType">
+		<Entry>SINGLEPLAYER</Entry>
+		<Entry>MULTIPLAYER</Entry>
+		<Entry>SKIRMISH</Entry>
+	</EnumAsset>
+
+	<GameAsset
+		id="Achievement"
+		TypeHash="2486643226">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="XlastID"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="TriggerType"
+			AssetType="AchievementTriggerType"
+			IsAttribute="true" />
+		<Entry
+			id="AchievementValueString"
+			AssetType="String"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+<Entry
+	id="fill"
+	AssetType="Byte"
+	IsVoid="true" />
+
+	<Asset
+		id="DLLicenseGroup">
+		<Entry
+			id="LicenseMask"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Asset"
+			AssetType="WeakReference"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="DLPatch">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="PatchNumber"
+			AssetType="Byte"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="DLContent">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="License"
+			AssetType="DLLicenseGroup"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Patch"
+			AssetType="DLPatch"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="PackageNumber"
+			AssetType="Byte"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

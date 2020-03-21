@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SkirmishStartCash">
+		<Entry
+			id="LoCash"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="HiCash"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="ChoiceStepAmount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultChoiceIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<Asset
+		id="MpGameRules">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="NumMinutesBeforePlayersCanTransferMoney"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="SkirmishStartCash"
+			AssetType="SkirmishStartCash" />
+	</Asset>
+
+</AssetDefinition>

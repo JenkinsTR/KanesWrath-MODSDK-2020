@@ -1,0 +1,396 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>MODding the AI</title>
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+ p.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body>
+
+<div class="Section1">
+	<p align="center"><b><font face="Arial" color="black" size="4">
+<span style="FONT-WEIGHT: bold; COLOR: black; FONT-FAMILY: Arial">
+	MODding the AI</span></font><font face="Arial" color="black" size="2"><span style="font-weight: bold; font-size: 11pt; color: black; font-family: Arial">&nbsp;</span></font></b></p>
+	<blockquote>
+		<font face="Arial" color="black">
+		<span style="COLOR: black; FONT-FAMILY: Arial">The Sample MOD 
+include a new NOD personality called Sample MODded AI.&nbsp; This personality changes 
+takes the existing NOD Balanced personality and updates its build order and adds 
+a new targeting heuristic.&nbsp; The first thing done was to copy the current 
+NODOptimal.xml file from the CnC3XML\SkirmishAI\Personalities folder, this is 
+the balanced personality file.&nbsp; I renamed this file in the SampleMOD to 
+SampleNodPersonality.xml and included it in the MODs main mod.xml file.&nbsp; Then 
+inside this file replace the id, PersonalityType, and then the PersonalityUIName 
+fields as so:</span></font></blockquote>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;AIPersonalityDefinition</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>
+	<span style="font-weight: bold">id=&quot;1NODMac&quot;</span></b></span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in"><b>
+	<font face="Consolas" color="black" size="3">
+	<span style="font-weight: bold; color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	PersonalityType=&quot;1NODMac&quot;</span></font></b></p>
+	<p class="MsoNormal" style="margin-left: 0.5in"><b>
+	<font face="Consolas" color="black" size="3">
+	<span style="font-weight: bold; color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	PersonalityUIName=&quot;Personality:Mac&quot;</span></font></b></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	SkirmishPersonality=&quot;true&quot; </span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	SecondsTillTargetsCanExpire=&quot;15.0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ChanceForTargetToExpire=&quot;100&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	MaxBuildingsToBeDefensiveTarget_Small=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	MaxBuildingsToBeDefensiveTarget_Med=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ChanceForUnitsToUpgrade=&quot;100&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ChanceToUseAllUnitsForDefenseTarget_Small=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ChanceToUseAllUnitsForDefenseTarget_Med=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	ChanceToUseAllUnitsForDefenseTarget_Large=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	DesiredExcessPowerBuffer=&quot;20&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BaseCompactness=&quot;0.75&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	DefaultThreatFindRadius=&quot;0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	UnitBuilderCostEffectivenessWeight=&quot;1.0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	UnitBuilderMoneyVersusTimePreference=&quot;0.5&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	UnitBuilderOverallOffensivePreference=&quot;100%&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	UnitBuilderOverallDefensivePreference=&quot;100%&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Expansion_TiberiumSearchRadius=&quot;1000&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Expansion_MaxTiberiumRemaining=&quot;22000&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+	ReactiveDefenseRadius=&quot;1000&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	RepairBuildingsAtDifficulty=&quot;MEDIUM HARD BRUTAL&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	EmergencyManagerHandleNoPowerAtDifficulty=&quot;MEDIUM HARD BRUTAL&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	EmergencyManagerHandleNoIncomeAtDifficulty=&quot;EASY MEDIUM HARD BRUTAL&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	EmergencyManagerHandleNoConyardAtDifficulty=&quot;EASY MEDIUM HARD BRUTAL&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	StructureSaveChanceEasy=&quot;0.0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	StructureSaveChanceMedium=&quot;0.01&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 0.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	StructureSaveChanceHard=&quot;1.0&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;</span></font></p>
+	<blockquote>
+		<font face="Arial"><span style="FONT-FAMILY: Arial">Note this is just the first step, we’ll now go into adding a new target 
+heuristic and opening move which will be defined in the file above, but first 
+lets look at setting up a new opening move.</span></font></blockquote>
+	<blockquote>
+		<b><font face="Arial">
+		<span style="FONT-WEIGHT: bold; FONT-FAMILY: Arial">Setting Up 
+an Opening Move:</span></font></b></blockquote>
+	<blockquote>
+		<font face="Arial"><span style="FONT-FAMILY: Arial">The Sample MOD copies an existing opening move and modifies it.&nbsp; In the CnC3XML\SkirmishAI\OpeningMoves 
+file the Sample MOD copies the NODOptimalOpeningMoves.xml file and renamed it to 
+SampleNodOpeningMoves.xml.&nbsp; Then in here we added the new opening move as so:</span></font></blockquote>
+</div>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&lt;SkirmishOpeningMove</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp; id=&quot;NODSampleOpeningMove&quot;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp; Side=&quot;NOD&quot;&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODPowerPlant&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODHandOfNOD&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODSecretShrine&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODShadowSquad&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODShadowSquad&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODShadowSquad&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODShadowSquad&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODShadowSquad&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODRefinery&quot; 
+/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Build=&quot;NODRefinery&quot; 
+/&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-left: 1.5in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&nbsp; &nbsp;&nbsp;&lt;Order Time=&quot;90s&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: 0.5in; margin-left: 1in">
+<font face="Consolas" color="black" size="3">
+<span style="color: black; font-family: Consolas">&lt;/SkirmishOpeningMove&gt;</span></font></p>
+<div class="Section1">
+	<p class="MsoNormal" style="text-indent: 0.5in; margin-left: 1in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;</span></font></p>
+	<blockquote>
+		<font face="Arial" color="black">
+		<span style="COLOR: black; FONT-FAMILY: Arial">Make sure you 
+give it a unique id.&nbsp; This id is then referenced in the SampleNodPersonality.xml 
+file:</span></font></blockquote>
+	<p class="MsoNormal" style="margin-left: 1in">
+	<font face="Arial" color="black" size="3">
+	<span style="color: black; font-family: Arial">&nbsp;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;OpeningMove Name=&quot;NODSampleOpeningMove&quot; 
+	Weight=&quot;100%&quot; Difficulty=&quot;HARD&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;</span></font></p>
+	<blockquote>
+		<font face="Arial" color="black">
+		<span style="COLOR: black; FONT-FAMILY: Arial">This opening 
+move is as you can see only setup for HARD difficulty, and will run everytime 
+due to the Weight being 100%.&nbsp; You can setup multiple opening moves with 
+different weights to give some variety to your AI personality.</span></font></blockquote>
+	<blockquote>
+		<b><font face="Arial" color="black">
+		<span style="FONT-WEIGHT: bold; COLOR: black; FONT-FAMILY: Arial">Setting Up A New Targeting Heuristic:</span></font></b><p>
+		<font face="Arial" color="black">
+		<span style="COLOR: black; FONT-FAMILY: Arial">The Sample MOD 
+creates a new targetting heuristic to specifically target an enemies War 
+Factory.&nbsp; To accomplish this the Sample MOD has a new file called 
+SampleAITargetHeuristics.xml, and in this file it has a new AITargetingHeuristic 
+type copied and then modified from CnC3XML\SkirmishAI\Targets\AITargetHeuristics.xml.&nbsp; 
+Here is the xml from the SampleMOD:</span></font></p>
+	</blockquote>
+	<p class="MsoNormal" style="margin-left: 1in">
+	<font face="Arial" color="black" size="3">
+	<span style="color: black; font-family: Arial">&nbsp;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;AITargetingHeuristic</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; id=&quot;SafestToGroundWarFactory&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; HeuristicType=&quot;EnemyStructure&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; SortType=&quot;ThreatToGround&quot;
+	</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; ReturnTargetType=&quot;Structure&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; VitalKindOf=&quot;FS_WAR_FACTORY&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp; ForbiddenKindOf=&quot;&quot;</span></font></p>
+	<p class="MsoNormal"><font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	/&gt;</span></font></p>
+	<p class="MsoNormal"><font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;</span></font></p>
+	<blockquote>
+		<font face="Arial" color="black" size="3">
+		<span style="color: black; font-family: Arial">This will be referenced in 
+another new file created for the Sample MOD which is SampleNodStates.xml.&nbsp; This 
+file defines a new AIStrategicStateDefinition.&nbsp; This was copied and modified 
+from CnC3XML\SkirmishAI\States\AIStates.xml.&nbsp; Here is the XML for that:</span></font></blockquote>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;AIStrategicStateDefinition</span></font></p>
+	<p class="MsoNormal" style="text-indent: 0.5in; margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">id=&quot;NODMacsShadowKillWarFactory&quot;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	UnitUpgradeMultiplier=&quot;0.0&quot;&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	&lt;Heuristic&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;PathToTargetHeuristic 
+	PathExists=&quot;true&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Heuristic&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 2in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;TargetHeuristic 
+	TargetHeuristic=&quot;SafestToGroundWarFactory&quot; TargetType=&quot;Structure&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 2in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;Tactic Tactic=&quot;SimpleAttack&quot; 
+	TargetType=&quot;Structure&quot;&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 2in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;TeamTemplate MinUnits=&quot;5&quot; 
+	MaxUnits=&quot;5&quot; IncludeKindOf=&quot;CAN_ATTACK&quot; ExcludeKindOf=&quot;AIRCRAFT&quot; 
+	AlwaysRelease=&quot;false&quot; AlwaysRecruit=&quot;false&quot;&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CreateUnits 
+	UnitName=&quot;NODShadowSquad&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CreateUnits 
+	UnitName=&quot;NODShadowSquad&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CreateUnits 
+	UnitName=&quot;NODShadowSquad&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CreateUnits 
+	UnitName=&quot;NODShadowSquad&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;CreateUnits 
+	UnitName=&quot;NODShadowSquad&quot;/&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/TeamTemplate&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/Tactic&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;/AIStrategicStateDefinition&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1in"><font face="Arial" size="3">
+	<span style="font-family: Arial">&nbsp;</span></font></p>
+	<blockquote>
+		<font face="Arial" size="3"><span style="font-family: Arial">The new target 
+heuristic is used in the TargetHeuristc tag here.&nbsp; This state will essentially 
+execute if the enemy has a War Factory and the AI has a team of 5 Nod Shadow 
+Squads.&nbsp; This state is then referenced in the main personality as so:</span></font></blockquote>
+	<p class="MsoNormal" style="margin-left: 1in"><font face="Arial" size="3">
+	<span style="font-family: Arial">&nbsp;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&lt;States State=&quot;NODMacsShadowKillWarFactory&quot; 
+	Difficulty=&quot;HARD&quot; /&gt;</span></font></p>
+	<p class="MsoNormal" style="margin-left: 1.5in">
+	<font face="Consolas" color="black" size="3">
+	<span style="color: black; font-family: Consolas">&nbsp;</span></font></p>
+	<blockquote>
+		<font face="Arial" color="black" size="3">
+		<span style="color: black; font-family: Arial">You can have many different 
+states defined from which the AI will choose one dependent on conditions in the 
+game.&nbsp; In this case the new opening moves defined by the Sample AI ensures that 
+the AI will have enough Shadow Squads to execute this state as soon as either 
+the enemy builds a War Factory or as soon as the AI has enough Shadow Squads 
+built.</span></font></blockquote>
+	<blockquote>
+		<font face="Arial" color="black" size="3">
+		<span style="color: black; font-family: Arial">For additonal AI documentation 
+the MOD SDK has included to very well commented XML files for your perusal.&nbsp; 
+These can be found in the Documenatation\AI folder of the MOD SDK directory.&nbsp; 
+The files are: <a href="AI/ExampleAI.xml">ExampleAI.xml</a>, and 
+		<a href="AI/ExampleAIStates.xml">ExampleAIStates.xml</a>.</span></font></blockquote>
+</div>
+
+</body>
+
+</html>

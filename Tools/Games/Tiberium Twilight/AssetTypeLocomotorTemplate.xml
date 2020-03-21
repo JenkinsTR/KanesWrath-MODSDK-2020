@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="Appearance">
+		<Entry>TWO_LEGS</Entry>
+		<Entry>FOUR_WHEELS</Entry>
+		<Entry>HOVER</Entry>
+		<Entry>HOVER_TANK</Entry>
+		<Entry>WINGS</Entry>
+		<Entry>HORDE</Entry>
+		<Entry>HUGE_TWO_LEGS</Entry>
+		<Entry>TREADS</Entry>
+		<Entry>SHIP</Entry>
+		<Entry>OTHER</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="JetLocomotorDataOption">
+		<Entry>NO_CIRCLE_WHILE_USING_SPECIALPOWER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="JetLocomotorDataOptionFlags"
+		BaseEnum="JetLocomotorDataOption" />
+
+	<EnumAsset
+		id="Surface">
+		<Entry>GROUND</Entry>
+		<Entry>WATER</Entry>
+		<Entry>CLIFF</Entry>
+		<Entry>AIR</Entry>
+		<Entry>RUBBLE</Entry>
+		<Entry>OBSTACLE</Entry>
+		<Entry>IMPASSABLE</Entry>
+		<Entry>DEEP_WATER</Entry>
+		<Entry>WALL_RAILING</Entry>
+		<Entry>CRUSHABLE_OBSTACLE</Entry>
+		<Entry>CRUSHABLE_WALL</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="LocomotorSurfaceBitFlags"
+		BaseEnum="Surface" />
+
+	<EnumAsset
+		id="LocoZ">
+		<Entry>NO_MOTIVE_FORCE</Entry>
+		<Entry>SEA_LEVEL</Entry>
+		<Entry>SURFACE_RELATIVE_HEIGHT_ALLOW_ZERO_HEIGHT</Entry>
+		<Entry>SURFACE_RELATIVE_HEIGHT</Entry>
+		<Entry>ABSOLUTE_HEIGHT</Entry>
+		<Entry>FIXED_SURFACE_RELATIVE_HEIGHT</Entry>
+		<Entry>FIXED_ABSOLUTE_HEIGHT</Entry>
+		<Entry>RELATIVE_TO_GROUND_AND_BUILDINGS</Entry>
+		<Entry>SMOOTH_RELATIVE_TO_HIGHEST_LAYER</Entry>
+		<Entry>FLOATING_Z</Entry>
+		<Entry>SCALING_WALLS</Entry>
+		<Entry>DO_NOT_MODIFY_HEIGHT</Entry>
+		<Entry>SEA_LEVEL_SMOOTH_Z</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="LocoF">
+		<Entry>NO_FORMATION</Entry>
+		<Entry>CAVALRY_1</Entry>
+		<Entry>CAVALRY_2</Entry>
+		<Entry>CAVALRY_3</Entry>
+		<Entry>MELEE_1</Entry>
+		<Entry>MELEE_2</Entry>
+		<Entry>MELEE_3</Entry>
+		<Entry>RANGED_1</Entry>
+		<Entry>RANGED_2</Entry>
+		<Entry>RANGED_3</Entry>
+		<Entry>ARTILLERY_1</Entry>
+		<Entry>ARTILLERY_2</Entry>
+		<Entry>ARTILLERY_3</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="JetLocomotorData">
+		<Entry
+			id="Options"
+			AssetType="JetLocomotorDataOptionFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AttackPathStartRunDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="AttackPathClimbDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="AttackPathDiveDistanceStart"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="AttackPathDiveDistanceEnd"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="BounceKickTerrainData">
+		<Entry
+			id="TerrainClass"
+			AssetType="TerrainClassType"
+			IsAttribute="true" />
+		<Entry
+			id="BounceMultiplier"
+			AssetType="Percentage"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="BounceKickTerrainMapping">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryList
+			id="Mapping"
+			AssetType="BounceKickTerrainData"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="LocomotorTemplate"
+		TypeHash="3571281771">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Surfaces"
+			AssetType="LocomotorSurfaceBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="fill1"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="LookAheadMult"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" /><!--
+		<Entry
+			id="MaxSpeedDamaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MinSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="TurnTimeSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.0s" />
+		<Entry
+			id="TurnTimeDamagedSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SlowTurnRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="FastTurnRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinRandomTurnRadiusScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MaxRandomTurnRadiusScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TurnThreshold"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="15d" />
+		<Entry
+			id="TurnThresholdHS"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="180d" />
+		<Entry
+			id="AccelerationSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.0s" />
+		<Entry
+			id="Lift"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0.0%" />
+		<Entry
+			id="LiftDamaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="-1.0%" />
+		<Entry
+			id="BrakingSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.0s" />
+		<Entry
+			id="MinTurnSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0%" />
+		<Entry
+			id="PreferredHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PreferredAttackHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PreferredHeightDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="PreferredHeightPitchingEpsilon"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="CirclingRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="CirclingSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="BehaviorZ"
+			AssetType="LocoZ"
+			IsAttribute="true"
+			Default="NO_MOTIVE_FORCE" />
+		<Entry
+			id="Appearance"
+			AssetType="Appearance"
+			IsAttribute="true"
+			Default="FOUR_WHEELS" />
+		<Entry
+			id="FormationPriority"
+			AssetType="LocoF"
+			IsAttribute="true"
+			Default="MELEE_1" />
+		<EntryRelocation
+			id="ActiveModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ActiveObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EnteringModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="EnteringModelConditionsTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="AccDecTrigger"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="WalkDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxTurnWithoutReform"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="AccelPitchLimit"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="BounceKick"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="PitchStiffness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<Entry
+			id="RollStiffness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<Entry
+			id="PitchDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.9" />
+		<Entry
+			id="RollDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.9" />
+		<Entry
+			id="PitchByZVelCoef"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="YawStiffness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="YawDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxOverlappedHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1e+37" />
+		<Entry
+			id="ForwardVelocityPitchFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="LateralVelocityRollFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ForwardAccelerationPitchFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="LateralAccelerationRollFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="UniformAxialDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TurnPivotOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AirborneTargetingHeight"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="30" />
+		<Entry
+			id="CloseEnoughDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="ReverseMoveSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="MaximumWheelExtension"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaximumWheelCompression"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="WheelTurnAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0.0d" />
+		<Entry
+			id="WanderWidthFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="WanderLengthFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="WanderAboutPointRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="BurniningDeathRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ChargeMaxSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="RudderCorrectionDegree"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RudderCorrectionRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ElevatorCorrectionDegree"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ElevatorCorrectionRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AeleronCorrectionDegree"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AeleronCorrectionRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SwoopStandoffRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="SwoopStandoffHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="SwoopTerminalVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.07" />
+		<Entry
+			id="SwoopAccelerationRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.003" />
+		<Entry
+			id="SwoopSpeedTuningFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="BackingUpSpeed"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="BackingUpDistanceMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="BackingUpDistanceMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="BackingUpAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="RiverModifier"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="TakeOffAndLandingSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TakeOffAndLandingSlowDownDelta"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="TakeOffAndLandingSlowDownTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="EasingPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="AttackPathTrailDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AttackPathTrailDistanceMinScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="AttackPathTrailDistanceMaxScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="AbsoluteMinHeightWorldSpace"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1000.0" />
+		<Entry
+			id="SpeedBasedHeightOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ResubmergeDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="3.0s" />
+		<EntryReference
+			id="WaterToAirTransitionFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="WaterSurfaceHeightOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryRelocation
+			id="ForbiddenObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="BounceKickTerrainMap"
+			AssetType="BounceKickTerrainMappingRef" />
+		<EntryRelocation
+			id="JetLocomotorData"
+			AssetType="JetLocomotorData" />
+		<Entry
+			id="MakeTransformNonDirty"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsCloseEnoughDist3D"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DontNegateDeceleratePitchFactor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="LocomotorWorksWhenDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowMotiveForceWhileAirborne"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="Apply2DFrictionWhenAirborne"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DownhillOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StickToGround"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanMoveBackward"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanReverseMove"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UpdateWaterWadingConditions"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HasSuspension"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseTerrainSmoothing"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BurniningDeathIsCavalry"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ChargeAvailable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ChargeIgnoresCondition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EnableHighSpeedTurnFlags"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="WaitForFormation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BackingUpStopWhenTurning"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ScalesWalls"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="TurnWhileMoving"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ClampOrientationToPathTangent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ReorientIfTurnTooSharp"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BrakeBeforeReorienting"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EasingTakeOffAndLanding"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" /> -->
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RankedOptionSetting">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="UIComponentShellMultiplayer">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="MatchOptionsRankedLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="MatchOptionsMatchTypeLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="MatchOptionsPlayersLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="AnyOptionLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="TACLineLabelSpec"
+			AssetType="String" />
+		<EntryList
+			id="GameType"
+			AssetType="GameplayTypeSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RankedOption"
+			AssetType="RankedOptionSetting"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

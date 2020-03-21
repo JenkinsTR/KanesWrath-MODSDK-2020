@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="Stance">
+		<Entry>GUARD</Entry>
+		<Entry>AGGRESSIVE</Entry>
+		<Entry>HOLD_POSITION</Entry>
+		<Entry>HOLD_FIRE</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

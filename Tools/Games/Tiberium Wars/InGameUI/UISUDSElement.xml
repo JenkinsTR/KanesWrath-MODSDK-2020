@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UISUDSElement">
+		<Entry>MINIMAP</Entry>
+		<Entry>RESOURCE_BAR</Entry>
+		<Entry>POWER_METER</Entry>
+		<Entry>PORTRAIT_UI</Entry>
+		<Entry>TAB_BAR</Entry>
+		<Entry>TAB_BUTTON_GROUPS</Entry>
+		<Entry>TAB_BUTTON_POWER</Entry>
+		<Entry>TAB_BUTTON_INFANTRY</Entry>
+		<Entry>TAB_BUTTON_VEHICLE</Entry>
+		<Entry>TAB_BUTTON_AIRCRAFT</Entry>
+		<Entry>TAB_BUTTON_STRUCTURE</Entry>
+		<Entry>TAB_BUTTON_SUPPORT</Entry>
+		<Entry>UNITCAP</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="UISUDSElementStatus">
+		<Entry>ENABLED</Entry>
+		<Entry>FLASH</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

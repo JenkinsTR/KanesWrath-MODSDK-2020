@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CommandButton">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Index"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="InitialDelay"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="CommandSet">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="InitialVisible"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="32" />
+		<EntryList
+			id="CommandButton"
+			AssetType="CommandButton"
+			MinLength="0"
+			MaxLength="32" />
+	</Asset>
+
+</AssetDefinition>

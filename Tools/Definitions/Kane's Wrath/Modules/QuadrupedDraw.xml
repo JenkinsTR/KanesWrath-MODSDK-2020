@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DQuadrupedDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="W3DScriptedModelDrawModuleData" />
+		<Entry
+			id="LeftFrontFootBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightFrontFootBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LeftRearFootBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightRearFootBone"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

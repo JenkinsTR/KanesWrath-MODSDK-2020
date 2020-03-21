@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- aka Technology Assembler -->
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- TechnologyPlant -->
+	<GameObject
+		id="Traveler59Reactor"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_ALIENTechnologyAssembler"
+		ButtonImage="Portrait_ALIENTechnologyAssembler"
+		Side="Traveler59"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="1"
+		BuildCost="4000"
+		BuildTime="40"
+		PlacementViewAngle="225d"
+		CommandSet="Traveler59ReactorCommandSet"
+		KindOf="STRUCTURE SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS AUTO_ACQUIRABLE_BY_AI NOT_AUTOACQUIRABLE COVER POWERED FS_TECH_CENTER"
+		RadarPriority="STRUCTURE"
+		ProductionQueueType="MAIN_STRUCTURE"
+		BuildPlacementTypeFlag="MAIN_STRUCTURE"
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		UnitCategory="STRUCTURE"
+		EditorName="Traveler59TechnologyStructure"
+		Description="Desc:Traveler59TechnologyAssembler"
+		TypeDescription="Type:Traveler59TechnologyAssembler"
+		EnergyProduction="-10">
+		<DisplayName>NAME:ALIENTechnologyAssembler</DisplayName>
+		<GameDependency>
+			<RequiredObject>Traveler59ControlCenter</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlienReactorArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SPREAD" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABReactor" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="ABReactorBld_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABReactor_D3SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABReactor_D2SN" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABReactor" />
+					<Texture
+						Original="ABReactor"
+						New="ABReactor_D" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABReactorBld_AAN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABReactor_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABReactor_D2AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="ABReactor_D2AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABReactor_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystBuildingDeathWeapon"
+				ContinueToBezierDestination="false"
+			>
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_AlienBuildingDamagedL" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedL" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleL" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="5.0s"
+				SinkRate="4.0"
+				DestructionDelay="11.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<RepairUpdate
+				id="ModuleTag_RepairUpdate">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</RepairUpdate>
+			<EngineerContain
+				id="ModuleTag_EngineerContain"
+				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				EvaEventForRepair="BuildingRepaired"
+				FXForRepair="FX_Building_Repaired" 
+				FXForCapture="FX_Building_Captured"
+				FXForCaptureAndReplace="FX_Building_Captured"
+				ImmediatelyEnabled="true">
+				<CanEnterFilter 
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+				</CanEnterFilter>
+			</EngineerContain>
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				Type="UPGRADE" 
+				GiveNoXP="true" />
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedDie"
+				CreationList="OCL_AdvancedTraveler59BuildingDestruction" >
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="DETONATED SUICIDED" />
+				<UpgradeForbidden>Upgrade_NoSpawnUponDestruction</UpgradeForbidden>
+			</CreateObjectDie>
+			<CreateObjectDie 
+				id="ModuleTag_CreateOccupiedSuicide"
+				CreationList="OCL_AdvancedTraveler59BuildingSuicide" >
+				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
+			<StructureUnpackUpdate
+				id="StructureUnpackUpdate"
+				UnpackTime="1.5s" />
+			<SpecialPower
+				id="ModuleTag_PhaseFieldPower"
+				SpecialPowerTemplate="SpecialPower_PhaseField"
+				UpdateModuleStartsAttack="true"
+				TriggerFX="FX_AlienShieldPower"
+			/>
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_PhaseFieldPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_PhaseField"
+				SpecialWeapon="AlienPhaseFieldWeaponTrigger"
+			/>
+			<OCLSpecialPower
+				id="ModuleTag_TemporalWormholePower"
+				SpecialPowerTemplate="SpecialPower_TemporalWormhole"
+				OCL="OCL_TemporalWormhole"
+				CreateLocation="CREATE_AT_LOCATION"
+			/>
+			
+		</Behaviors>
+		<AI>
+			<!-- needed for special powers -->
+			<AIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="NO" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="10000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="9.18358"
+				MinorRadius="44.0272"
+				Height="15.6661">
+				<Offset
+					x="0.00120163"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="70.1626"
+				MinorRadius="9.49226"
+				Height="8.4597">
+				<Offset
+					x="0.00120544"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="23.4992"
+				MinorRadius="23.7693"
+				Height="15.6661">
+				<Offset
+					x="49.4305"
+					y="-0.985332"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="23.4992"
+				MinorRadius="23.7693"
+				Height="15.6661">
+				<Offset
+					x="-45.7104"
+					y="-0.985332"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-68.0463"
+					y="-22.6245"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="66.9641"
+					y="-22.6245"
+					z="14.1038" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="66.9641"
+					y="22.6905"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-68.0463"
+					y="22.6905"
+					z="14.1038" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-68.0463"
+					y="-22.6245"
+					z="14.1038" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="66.9641"
+					y="-22.6245"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="66.9641"
+					y="22.6905"
+					z="14.1038" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-68.0463"
+					y="22.6905"
+					z="0.0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:ALI_TechnologyAssembler_Select"
+				AudioType="voiceSelect" />
+			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
+			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_Placed" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventProductionStarted="BuildingConstructionStarted" 
+			EvaEventProductionComplete="BuildingConstructionComplete" 
+			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventSoldOwner="StructureSold"
+			EvaEventRepairingOwner="StructureRepairing"
+			EvaEnemyObjectSightedEvent="EnemyCampSighted"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventPlacementFailed="StructurePlacementFailed" 
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
+			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="200"
+			ShroudClearingRange="400" />
+		<ProjectedBuildabilityInfo
+			Radius="250"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+</AssetDeclaration>

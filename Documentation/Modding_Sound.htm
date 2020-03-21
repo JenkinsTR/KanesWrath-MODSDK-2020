@@ -1,0 +1,547 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Modding Sound</title>
+<style>
+<!--
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0in; margin-right:0in; margin-top:0in}
+-->
+</style>
+</head>
+
+<body>
+
+<p class="MsoNormal" style="margin-left: .5in" align="center"><b>
+<span style="font-family: Arial; color: black"><font size="4">MODding</font><font size="4"> 
+Sound</font></span></b></p>
+<p class="MsoNormal" style="margin-left: .5in"><b>
+<span style="font-family: Arial; color: black"><font size="3">&nbsp;</font></span></b></p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">To add sounds to your MOD, you should first author the sounds as 
+uncompressed, 16-bit, 48K wav files. Mono, stereo, and 6-channel wavs are 
+supported, but only mono sounds can be positioned in the world. The wavs should 
+be placed in a subdirectory under the MOD SDK root folder\audio.&nbsp; (which 
+corresponds to the “AUDIO:” label in the XML files.) Then create an &lt;AudioFile&gt; 
+XML entry referencing that .wav file.</font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">The name of the directory containing the wavs is VERY important! 
+If the directory is named “Sounds”, the Audio Compiler will, by default, set the 
+sound file to be XAS-compressed and unstreamed (that is, the entire sound will 
+be loaded into memory first, and then played). This is an appropriate default 
+for most sound effects, unit responses, and EVA announcements. If the directory 
+containing the wavs is named anything else, the Audio Compiler will default to 
+leaving the sound uncompressed and will stream the sound from disk when played. 
+All of these defaults can be overridden using attributes of the &lt;AudioFile&gt; 
+entry. Due to disk bandwidth limitations, care should be taken that only a small 
+number of streaming sounds are played at one time; most sounds should be 
+unstreamed.</font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">A note on compression types: The Audio Compiler supplied with the 
+C&amp;C3 MODKit supports two compression types – uncompressed and XAS-compressed. 
+Uncompressed sounds are large and take a lot of bandwidth to stream, but the 
+quality is excellent and they take little CPU to play. XAS compression is 
+similar to ADPCM compression. It gets a decent compression ratio (better than 
+3:1), and takes little CPU to play, but the compression can cause sound 
+distortion, especially of sounds with large dynamic ranges (sounds with both 
+high and low frequencies). You may notice a third type of compression listed in 
+the XSD and XML files named “EALayer3”; unfortunately, due to licensing 
+restrictions, we are unable to include the EALayer3 compressor with the C&amp;C3 
+MODKit. </font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">In its place, we have provided you with the ability to play MP3 
+files directly. To use this, place the MP3 file somewhere under data\rts_sourceart_audio\0.0-dev, 
+and then create an &lt;AudioFileMP3Passthrough&gt; entry, such as </font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;AudioFileMP3Passthrough id=&quot;example&quot; File=&quot;AUDIO:tracks\example.mp3&quot; /&gt;. </font>
+</span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">The Audio Compiler will copy the MP3 file into the built data. 
+You can play such MP3 files using the &lt;MP3MusicTrack&gt;, &lt;MP3DialogEvent&gt;, or 
+&lt;MP3AmbientStream&gt; XML entries. Note that it is not possible to use MP3 files in 
+an &lt;AudioEvent&gt;. </font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">There are several special considerations when using the MP3 
+Passthrough feature. First, MP3 files must be mono or stereo files. When 
+looping, there will be a small gap between each playthrough, so be sure that any 
+looping MP3s begin and end in silence. Also, be aware that on low-end machines, 
+it will require 1% of the CPU to play each MP3 channel, and there is a hard 
+limit of 13 MP3 files playing at once, so you should generally use the MP3 
+Passthrough system only when you have a large file which needs it. Music, long 
+speeches (especially long speeches in scripted missions), and long ambient 
+streams are the main intended applications. </font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">Finally, special notes on load screen music: In order to minimize 
+level-load times, music used on level load screens should be unstreamed. This is 
+done by adding the attribute IsStreamed=&quot;false&quot; to an &lt;AudioFileMP3Passthrough&gt; 
+or the attribute IsStreamedOnPC=&quot;false&quot; to an &lt;AudioFile&gt;. Since this is not 
+appropriate for music used during a level, you may have to create two 
+&lt;AudioFileMP3Passthrough&gt; entries referencing the same base MP3 file, and two 
+&lt;MP3MusicTrack&gt; entries, if you wish to use a piece of music on both the load 
+screen and the in-game. Also, note that MP3 files used as level load music must 
+be long enough to cover the entire level load in a single playthrough; they will
+<i>not</i> loop while the level is loading. “Level load music” includes the 
+music referenced by the SaveFileLoadMusic attribute in MiscAudio.xml, the 
+LoadScreenMusic entry in PlayerTemplate.ini, and the LoadScreenMusic attribute 
+in CampaignTemplates.xml.</font></span></p>
+<p class="MsoNormal" style="margin-left: .5in">&nbsp;</p>
+<p class="MsoNormal" style="margin-left: .5in"><span style="font-family: Arial">
+<font size="3">Please note when MODding sound you cannot simply override 
+existing sounds.&nbsp; They need to be replaced.&nbsp; In order to accomplish this you 
+will need to create new entries that are referenced instead of the old ones.&nbsp; 
+For example if you wished to replace all the Predator Tank sounds, you would 
+need to create a completely new Predator Tank referencing the newly created 
+sounds instead of just overriding the existing sound entries.</font></span></p>
+<p class="MsoNormal" style="text-indent: .5in; margin-left: .5in">
+<font face="Arial">&nbsp;</font></p>
+<p class="MsoNormal" style="text-indent: .5in; margin-left: .5in"><b>
+<span style="font-family: Arial"><font size="3">MODding Main Menu Music:</font></span></b></p>
+<p class="MsoNormal" style="text-indent: .5in; margin-left: .5in">
+<span style="font-family: Arial"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial"><font size="3">In order to MOD the Main Menu 
+music you will need to create a reference to your new music file in this example 
+we will use an mp3 file as a reference.&nbsp; Then you will need to create a music 
+track entry that references that file.&nbsp; Finally you will update the MiscAudio 
+block to use your new music reference.&nbsp; The following is an example showing the 
+file reference and the music track reference:</font></span></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;!—File reference</span></font><span style="font-family: Arial; color: black"><font size="3">à</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;AudioFileMP3Passthrough id=&quot;<b>MODMainScreen</b>&quot; File=&quot;AUDIO:TestMusic.mp3&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;MP3MusicTrack id=&quot;<b>ShellLowLODMP3</b>&quot; inheritFrom=&quot;MP3MusicTrack:BaseMP3MusicTrack&quot; 
+Volume=&quot;60&quot;&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;VolumeSliderMultiplier 
+Slider=&quot;NONE&quot; Multiplier=&quot;1.0&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;!-- This is a fake to prevent the volume sample from being quieted by the movie 
+playing on the main menu --&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;Filename&gt; <b>MODMainScreen</b> 
+&lt;/Filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; margin-left: .5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;/MP3MusicTrack&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; margin-left: .5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial; color: black"><font size="3">The first entry is 
+the file reference, which is used by the MP3MusicTrack type.&nbsp; The id of the 
+MP3MusicTrack is what we will reference in the updated MiscAudio type.</font></span></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial"><font size="3">Now locate the MiscAudio.xml 
+file located in the CnC3Xml\Sounds folder.&nbsp; In there copy the entire MiscAudio 
+block and paste it in the file you are using to MOD the game sound.&nbsp; In the 
+Sample MOD this is in SoundMOD.xml.&nbsp; In that block you will need to change the 
+LowLODShellMusc, and the HighLODShellMusic entries to match the new type you’ve 
+created (ShellLowLODMP3):</font></span></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: .5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;MiscAudio</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id=&quot;TheMiscAudio&quot; </span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RadarNotifyHarvesterUnderAttackSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RadarNotifyStructureUnderAttackSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RadarNotifyInfiltrationSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RadarNotifyOnlineSound=&quot;RadarOn&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RadarNotifyOfflineSound=&quot;RadarOff&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GenericRadarEvent=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BeaconPlacedSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BeaconPlacementFailed=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DefectorTimerTickSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DefectorTimerDingSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AllCheerSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NoCanDoSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StealthDiscoveredSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StealthNeutralizedSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MoneyDepositSound=&quot;CashGaining&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MoneyWithdrawSound=&quot;CashLosing&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LowPower=&quot;PlayerBasePowerOff&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SufficientPower=&quot;PlayerBasePowerOn&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BuildingDisabled=&quot;BuildingGenericPowerOff&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BuildingReenabled=&quot;BuildingGenericPowerOn&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleDisabled=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VehicleReenabled=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SplatterVehiclePilotsBrain=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CrateHeal=&quot;CratePickup&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CrateShroud=&quot;CratePickup&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CrateFreeUnit=&quot;CratePickup&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CrateMoney=&quot;CratePickup&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UnitPromoted=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RepairSparks=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EnterCloseCombat=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExitCloseCombat=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IncomingChatNotification=&quot;ChatInGameNotification&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PrivateMessageNotification=&quot;ChatPrivateMesssageNotification&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BuddyMessageNotification=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GameSpyCommunicatorOpen=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EnabledHotKeyPressed=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DisabledHotKeyPressed=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DisabledButtonClicked=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<b><span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LowLODShellMusic=&quot;ShellLowLODMP3&quot;</span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<b><span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HighLODShellMusic=&quot;ShellLowLODMP3&quot;</span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScoreScreenMusic=&quot;ScoreScreenMusic&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ShellMapLoadMusic=&quot;Music_BaseBuilding_Unknown&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FullScreenSubMenuMusic=&quot;Music_BaseBuilding_Unknown&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SaveFileLoadMusic=&quot;TEMP_RAM_Music360_LoadScreen&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreditsMusic=&quot;Music_BaseBuilding_Unknown&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VolumeSampleMusic=&quot;VolumeSampleMusic&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VolumeSampleSoundFX=&quot;VolumeSampleSoundFX&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VolumeSampleVoice=&quot;VolumeSampleVoice&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VolumeSampleAmbient=&quot;VolumeSampleAmbient&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VolumeSampleMovie=&quot;VolumeSampleMovie&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MissionBriefingCharacterClick=&quot;MissionBriefingCharacter&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ComboBoxClick=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MPSecondsCountdownBeep=&quot;Gui_MPCountdown&quot; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RIFThingTemplateReloadedSound=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RIFObjectsRefreshedSound=&quot;&quot;&nbsp;&nbsp;&nbsp; </span></font>
+</p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FastForwardModeOn=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FastForwardModeOff=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RallyPointSet=&quot;RallyPointSet&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UnableToSetRallyPoint=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PlanningModeOrderGiven=&quot;GuiCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BuildingPlacementSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BadBuildingPlacementSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WallPlacementSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AircraftWheelScreech=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LockonTickSound=&quot;&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TargetObjectWithSpecialPowerSound=&quot;&quot; </span>
+</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ObjectiveCompletedSound=&quot;&quot; </span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiFixedButtonClickedSound=&quot;GuiFixedButtonClick&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiBuildQueueButtonClickedSound=&quot;GuiBuildQueueButtonClick&quot;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiSelectionRefinementButtonClickedSound=&quot;GuiSelectionRefinementButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiFactorySelectionButtonClickedSound=&quot;GuiFactorySelectionButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiTogglePowerObjectClickedSound=&quot;GuiCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiToggleRepairObjectClickedSound=&quot;GuiCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiSellObjectClickedSound=&quot;GuiCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiCommandButtonClickedSound=&quot;GuiCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiCommandButtonRightClickedSound=&quot;GuiCommandButtonRightClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiDisabledCommandButtonClickedSound=&quot;GuiDisabledCommandButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiDisabledCommandButtonRightClickedSound=&quot;GuiDisabledCommandButtonRightClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiPlayerPowerButtonClickedSound=&quot;GuiPlayerPowerButtonClick&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiPauseDialogButtonClickedSound=&quot;Gui_ShellMapSelect&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiPauseDialogButtonMouseOverSound=&quot;Gui_ShellMapMouseOver&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiPauseDialogButtonMouseOutSound=&quot;Gui_ShellMapMouseOut&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiYesNoDialogButtonClickedSound=&quot;Gui_ShellMapSelect&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiYesNoDialogButtonMouseOverSound=&quot;Gui_ShellMapMouseOver&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GuiYesNoDialogButtonMouseOutSound=&quot;Gui_ShellMapMouseOut&quot;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.0in"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">/&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: 1.0in">
+<span style="font-family: Arial; color: black"><font size="3">&nbsp;</font></span></p>
+<span style="font-family: Arial; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Now when you run the game with your MOD you should hear your new music playing 
+on the main screen.</span><p><span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span style="font-family: Arial; color: black"><font size="3">Ambient 
+Sounds:&nbsp;</font></span></b></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">There are two ways 
+to add a new ambient sound to a map.&nbsp; The first is to use the GenericSound type 
+and associate your sound to it.&nbsp; First you need to create the ambient sound.&nbsp; 
+Here is an example:</font></span></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;AudioFileMP3Passthrough id=&quot;MODAmbientTest&quot; File=&quot;AUDIO:MOHAmbientTest.mp3&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;MP3AmbientStream id=&quot;AmbStream_MODAmbientTest&quot;<br/> 
+&nbsp;&nbsp;&nbsp;&nbsp;inheritFrom=&quot;MP3AmbientStream:BaseAmbientStream_MOD&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; Volume = &quot;45&quot; &gt;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Filename&gt;MODAmbientTest&lt;/Filename&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left:1.0in"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp; &lt;/MP3AmbientStream&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left:1.0in"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">The 
+AudioFileMP3Passthrough points to the file which is then associated with the 
+MP3AmbientStream.&nbsp; Now to use the GenericSound type you will need to open up 
+World Builder and then your map.&nbsp; Open the Place Object tool (hotkey for that is 
+P), and then select ByNativeType\Neutral\Audio then pick AGenericSound.&nbsp; Place 
+this object where you want the ambient sound to play from.&nbsp; Once you’ve placed 
+the Object select the Select and Move tool (the arrow), and select the newly 
+placed AGenericSound object.&nbsp; In the Object Properties Window select the Sound 
+Tab.&nbsp; From there select you’re newly created ambient sound id in the Attached 
+Sound drop down list.</font></span></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">The second way to 
+to add an ambient sound is very similar to the first except you also create an 
+object which associates the sound to it.&nbsp; Then you just place that object in the 
+world and you are done.&nbsp; Here is an example object:</font></span></p>
+<p class="MsoNormal" style="margin-left:1.0in">
+<span style="font-family: Arial; color: black"><font size="3">&nbsp;</font></span></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;GameObject</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+id=&quot;AmbStream_MODAmbientTest&quot;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+Side=&quot;Neutral&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 2.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+EditorSorting=&quot;AUDIO&quot;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+KindOf=&quot;=$AMBIENTSOUND_KINDOF&quot;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+EditorName=&quot;AmbStream_MODAmbientTest&quot;&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;ArmorSet 
+Armor=&quot;NoArmor&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;Body&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 2.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;ImmortalBody</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 2.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+id=&quot;ModuleTag_DummyBody&quot;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 2.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+MaxHealth=&quot;1.0&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 2.0in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">
+&lt;/Body&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;AudioArraySound&gt;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-left: 2.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;AudioEntry 
+Sound=&quot;AmbStream_MODAmbientTest&quot; AudioType=&quot;soundAmbient&quot; /&gt;</span></font></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: 1.5in">
+<font face="Arial" size="3"><span style="font-family: Consolas; color: black">&lt;/AudioArraySound&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left:1.5in"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">&lt;/GameObject&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left:1.5in"><font face="Arial" size="3">
+<span style="font-family: Consolas; color: black">&nbsp;</span></font></p>
+<span style="font-family: Arial; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Then when you use the Place 
+Object tool instead of placing AGenericSound you will place the MODAmibentTest 
+object.</span><p>&nbsp;</p>
+
+</body>
+
+</html>

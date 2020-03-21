@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="JoypadCommandBarButtonTemplateDataPlayerMultipleTargetsTargetedPower">
+		<EntryInheritance
+			id="base"
+			AssetType="JoypadCommandBarButtonTemplateDataPlayerTargetedPower" />
+		<EntryWeakReference
+			id="TargetMarkerTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="TargetMarkerFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="TargetCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MinTargetDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryList
+			id="AdditionalRadiusCursor"
+			AssetType="RadiusCursorRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

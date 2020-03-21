@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="RegisteredObjectSetType">
+		<Entry>GLOBAL</Entry>
+		<Entry>PLAYER</Entry>
+	</EnumAsset>
+
+	<GameAsset
+		id="RegisteredObjectSet"
+		TypeHash="235028480">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="SetId"
+			AssetType="RegisteredObjectSetId"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Type"
+			AssetType="RegisteredObjectSetType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+</AssetDefinition>

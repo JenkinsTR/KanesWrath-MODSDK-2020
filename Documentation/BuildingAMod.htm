@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="thundermods.net" />
+	<meta name="copyright" content="thundermods.net" />
+	<meta name="description" content="Documentation - WrathEd" />
+
+	<link rel="stylesheet" href="Documentation.css" />
+	<title>Documentation - WrathEd - Building a Mod</title>
+</head>
+<body>
+<div align="center">
+	<div class="content">
+		<div class="navigation">
+			<div class="navigationhead">WrathEd</div>
+			<div class="navigationlink">• <a href="index.htm" class="navigation">Index</a></div>
+			<div class="navigationhead">Mod Creation</div>
+			<div class="navigationlink">• <a href="DirectoryStructure.htm" class="navigation">Directory Structure</a></div>
+			<div class="navigationlink">• <a href="XMLAssets.htm" class="navigation">XML Assets</a></div>
+			<div class="navigationlink">• <a href="CustomMaps.htm" class="navigation">Custom Maps</a></div>
+			<div class="navigationlink">• Building a Mod</div>
+			<div class="navigationlink">• <a href="LaunchingAMod.htm" class="navigation">Launching a Mod</a></div>
+		</div>
+		<div class="main">
+The final step in completing a mod is to build the data for the game. Before you can use a mod, you will need to build the data. Your tool for doing this is BuildMod.bat. BuildMod.bat is a batch file that will gather all of the proper files, run WrathEd, create the .big and .SkuDef files of your mod, and move it to the proper locations.<br />
+<br />
+<span class="title">Using BuildMod.bat</span><br />
+To use BuildMod.bat you will either need to double-click it and enter the map name, open a command prompt window and navigate to the WrathEd directory, or create a shortcut to it.<br />
+<br />
+• Command Prompt:<br />
+To open the command prompt the most easy way is to press WinKey + R, type in cmd and hit enter. There type in something like the following example command:
+<pre>"BuildMod.bat" "SampleMod" "1.00"</pre>
+(If you leave name and version blank you are asked to type the name and version.)<br />
+<img src="Images/buildmodcp.png" alt="buildmodcp.png" /><br />
+<br />
+• Shortcut:<br />
+To create a shortcut right click on the "BuildMod.bat" and then click on "Create shortcut". Best to name it something like "Build SampleMod". Then right click on it and click Properties. In the new window add something like the following example:
+<pre> "SampleMod" "1.00"</pre>
+(after the path, outside of the quotation marks)<br />
+<img src="Images/buildmodsc.png" alt="buildmodsc.png" />
+		</div>
+	</div>
+</div>
+</body>
+</html>

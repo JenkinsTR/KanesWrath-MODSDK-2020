@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIJoypadCommandBarSingleUnit"
+		TypeHash="1804668011">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="UnitTemplate"
+			AssetType="JoypadCommandBarTemplateRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ProductionStructureTemplate"
+			AssetType="JoypadCommandBarTemplateRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="NonProductionStructureTemplate"
+			AssetType="JoypadCommandBarTemplateRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="HotSpotTemplate"
+			AssetType="JoypadCommandBarTemplateRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

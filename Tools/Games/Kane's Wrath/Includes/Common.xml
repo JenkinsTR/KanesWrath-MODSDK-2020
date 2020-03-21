@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="VeterancyLevel"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>REGULAR</Entry>
+		<Entry>VETERAN</Entry>
+		<Entry>ELITE</Entry>
+		<Entry>HEROIC</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="CommandSourceType">
+		<Entry>FROM_PLAYER</Entry>
+		<Entry>FROM_SCRIPT</Entry>
+		<Entry>FROM_AI</Entry>
+		<Entry>FROM_DOZER</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

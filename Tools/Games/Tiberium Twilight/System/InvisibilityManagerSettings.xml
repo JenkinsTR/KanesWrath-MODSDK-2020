@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="InvisibilityManagerSettings"
+		TypeHash="1688533139">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="CamouflageDetectorObjectFilter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StartPositionObject">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Position"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="MetaDataObject">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="NumPlayers"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="CRC"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="FileName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Width"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Height"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="BorderSize"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryList
+			id="StartPosition"
+			AssetType="StartPositionObject"
+			MinLength="2"
+			MaxLength="0" />
+		<Entry
+			id="IsMultiplayer"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="IsOfficial"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

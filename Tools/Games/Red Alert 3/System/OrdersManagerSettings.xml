@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LineSetting">
+		<Entry
+			id="Width"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="VOffsetRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="TextureTileSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+	</Asset>
+
+	<GameAsset
+		id="OrdersManagerSettings"
+		TypeHash="2164060776">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="LineFadeTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.25s" />
+		<EntryRelocation
+			id="FormationPreviewShader"
+			AssetType="ShaderOverrideRefRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="BuildPlacementShader"
+			AssetType="ShaderOverrideRefRef"
+			IsAttribute="true" />
+		<Entry
+			id="ExecutingLine"
+			AssetType="LineSetting" />
+		<Entry
+			id="PendingLine"
+			AssetType="LineSetting" />
+		<Entry
+			id="PatrolLine"
+			AssetType="LineSetting" />
+		<Entry
+			id="PatrolPendingLine"
+			AssetType="LineSetting" />
+		<Entry
+			id="TargetMoveLine"
+			AssetType="LineSetting" />
+		<Entry
+			id="TargetAttackLine"
+			AssetType="LineSetting" />
+		<EntryRelocation
+			id="PatrolNode"
+			AssetType="ShadowInfo" />
+		<EntryRelocation
+			id="PatrolStart"
+			AssetType="ShadowInfo" />
+		<EntryRelocation
+			id="PendingNode"
+			AssetType="ShadowInfo" />
+		<EntryRelocation
+			id="PendingStart"
+			AssetType="ShadowInfo" />
+	</GameAsset>
+
+</AssetDefinition>

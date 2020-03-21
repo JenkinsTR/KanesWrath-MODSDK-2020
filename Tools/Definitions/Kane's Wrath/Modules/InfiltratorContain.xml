@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="InfiltratorEffectType">
+		<Entry>RADAR_FREEZE</Entry>
+		<Entry>DISABLE</Entry>
+		<Entry>STEAL_MONEY</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="InfiltratorContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ContainModuleData" />
+		<EntryReference
+			id="ReplaceWith"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Effect"
+			AssetType="InfiltratorEffectType"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="CanEnterFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="ImmediatelyEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

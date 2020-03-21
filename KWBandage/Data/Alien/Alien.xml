@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Units/AlienDevastatorWarship.xml" />
+		<Include type="all" source="Units/AlienEradicatorHexapod.xml" />	
+		<Include type="all" source="Units/AlienMillipedeBody.xml" />	
+		<Include type="all" source="Units/AlienMillipedeHead.xml" />	
+		<Include type="all" source="Units/AlienSeekerTank.xml" />
+		<Include type="all" source="Units/AlienStalker.xml" />	
+		<Include type="all" source="Units/AlienStalkerSquad.xml" />	
+	</Includes>
+</AssetDeclaration>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="Traveler59CustomizableVehicle"
+		inheritFrom="AlienCustomizableVehicle"
+		SelectPortrait="Portrait_Millipede"
+		ButtonImage="Portrait_Millipede"
+		Side="Traveler59"
+		EditorSorting="UNIT"
+		VoicePriority="215"
+		TransportSlotCount="1"
+		BuildCost="1400"
+		BuildTime="14"
+		CommandSet="AlienMechapedeCommandSet"
+		CommandPoints="100" 
+		KindOf="SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT VEHICLE HORDE ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND SKIRMISH_AI_DONT_GARRISON CAN_CAPTURE CAN_BE_FAVORITE_UNIT SCORE META_HORDE USE_STRICT_PATHING"
+		IsTrainable="true"
+		FormationWidth="2"
+		FormationDepth="1"
+		ThreatLevel="0"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="GUN"
+		EditorName="Traveler59CustomizableVehicle"
+		Description="Desc:AlienCustomizableVehicle"
+		TypeDescription="Type:AlienCustomizableVehicle"
+		RadarPriority="NOT_ON_RADAR"
+		UnitTypeIcon="">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:AlienCustomizableVehicle</DisplayName>
+		<GameDependency>
+			<RequiredObject>Traveler59Reactor</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="MillipedeLocomotor"
+			Condition="NORMAL"
+			Speed="100.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				DependencySharedModelFlags="EMOTION_TAUNTING EMOTION_ALERT EMOTION_MORALE_HIGH EMOTION_MORALE_LOW EMOTION_AFRAID EMOTION_COWER SELECTED  EMOTION_TERROR EMOTION_LOOK_TO_SKY">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXShockTrpr_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WORLD_BUILDER">
+					<Model
+						Name="SquadMarkGUMis" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+=
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+				<AddEmotion>CheerIdle_Base</AddEmotion>
+				<AddEmotion>CheerBusy_Base</AddEmotion>
+			</EmotionTrackerUpdate>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MechapedeRangefinder" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100" />
+			<Physics
+				id="ModuleTag_Physics"></Physics>
+				
+			<HordeContain
+				id="ModuleTag_HordeContain"
+				FrontAngle="4.7123"
+				FlankedDelaySeconds="2.0"
+				ShowPips="false"
+				Formation="MAIN"
+				MeleeAttackLeashDistance="1"
+				Slots="8"
+				ObjectStatusOfContained=""
+				ConditionForEntry="INVALID"
+				DestroyHordeOnBannerDeath="true"
+				ExitBannerCarrierWithHorde="true"
+				FollowTheLeader="true">
+				<PassengerFilter
+					Rule="NONE"
+					Include="VEHICLE" />
+				<DieMuxData />
+				<InitialPayload
+					Name="Traveler59MillipedeBody"
+					Count="0" />
+				<MeleeBehavior
+					Type="AMOEBA" />
+				<RankInfo
+					RankID="1"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-18"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="2"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-36"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="3"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-54"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="4"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-72"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="5"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-90"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="6"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-108"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="7"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-126"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="8"
+					UnitType="Traveler59MillipedeBody">
+					<Position
+						X="-144"
+						Y="0" />
+				</RankInfo>
+				<!--				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
+				<RankToReleaseWhenAttacking>2</RankToReleaseWhenAttacking>
+				<RankToReleaseWhenAttacking>3</RankToReleaseWhenAttacking>
+        <RankToReleaseWhenAttacking>4</RankToReleaseWhenAttacking>
+        <RankToReleaseWhenAttacking>5</RankToReleaseWhenAttacking>
+        <RankToReleaseWhenAttacking>6</RankToReleaseWhenAttacking>
+        <RankToReleaseWhenAttacking>7</RankToReleaseWhenAttacking>
+				<RankToReleaseWhenAttacking>8</RankToReleaseWhenAttacking>-->
+<!--<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>-->
+				<BannerCarrierPosition>
+					<UnitType>Traveler59MillipedeHead</UnitType>
+					<Pos
+						x="0"
+						y="0" />
+				</BannerCarrierPosition>
+				<BannerCarriersAllowed>Traveler59MillipedeHead</BannerCarriersAllowed>
+				<WiggleBehavior
+						WiggleAmplitude="0.30"
+						WiggleFrequency="0.3"
+						WiggleIdleAmplitude="7"
+						WiggleIdleFrequency="0.4" />
+			</HordeContain>
+			<SpawnHordeMemberSpecialPower
+				id="ModuleTag_SpecialAddShardModule"
+				SpecialPowerTemplate="SpecialPower_MechapedeAddShardModule"
+				AllowBackwardsReformMovement="true" >
+				<SpawnMemberEntry
+					Object="Traveler59MillipedeBody"
+					Count="1"
+					SpawnFX="FX_AlienMechapedeSpawnLink"
+					GrantUpgradeOnSpawn="Upgrade_MechapedeShardWeapon"
+					SpawnAtNextAvailableSpot="true"/>
+			</SpawnHordeMemberSpecialPower>
+			<SpawnHordeMemberSpecialPower
+				id="ModuleTag_SpecialAddTioxinModule"
+				SpecialPowerTemplate="SpecialPower_MechapedeAddTioxinModule"
+				AllowBackwardsReformMovement="true" >
+				<SpawnMemberEntry
+					Object="Traveler59MillipedeBody"
+					Count="1"
+					SpawnFX="FX_AlienMechapedeSpawnLink"
+					GrantUpgradeOnSpawn="Upgrade_MechapedeTioxinWeapon"
+					SpawnAtNextAvailableSpot="true"/>
+			</SpawnHordeMemberSpecialPower>
+			<SpawnHordeMemberSpecialPower
+				id="ModuleTag_SpecialAddDiskModule"
+				SpecialPowerTemplate="SpecialPower_MechapedeAddDiskModule"
+				AllowBackwardsReformMovement="true" >
+				<SpawnMemberEntry
+					Object="Traveler59MillipedeBody"
+					Count="1"
+					SpawnFX="FX_AlienMechapedeSpawnLink" 
+					GrantUpgradeOnSpawn="Upgrade_MechapedeDiskWeapon"
+					SpawnAtNextAvailableSpot="true"/>
+			</SpawnHordeMemberSpecialPower>
+			<SpawnHordeMemberSpecialPower
+				id="ModuleTag_SpecialAddRazorModule"
+				SpecialPowerTemplate="SpecialPower_MechapedeAddRazorModule"
+				AllowBackwardsReformMovement="true">
+				<SpawnMemberEntry
+					Object="Traveler59MillipedeBody"
+					Count="1"
+					SpawnFX="FX_AlienMechapedeSpawnLink" 
+					GrantUpgradeOnSpawn="Upgrade_MechapedeRazorWeapon"
+					SpawnAtNextAvailableSpot="true"/>
+			</SpawnHordeMemberSpecialPower>
+			<AISpecialPowerUpdate
+				id="ModuleTag_PurchaseMechapedeAddRazorModule"
+				CommandButtonName="SpecialPower_MechapedeAddRazorModule"
+				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_PurchaseMechapedeShardWeapon"
+				CommandButtonName="Command_AlienMechapedeAddShardModule"
+				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_PurchaseMechapedeAddDiskModule"
+				CommandButtonName="Command_AlienMechapedeAddDiskModule"
+				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_PurchaseMechapedeTioxinWeapon"
+				CommandButtonName="Command_AlienMechapedeAddTioxinModule"
+				SpecialPowerAIType="SPECIAL_POWER_BASIC_SELF_BUFF" />
+
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				GiveNoXP="true" />
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+		</Behaviors>
+		<AI>
+			<HordeAIUpdate
+				id="ModuleTag_HordeAIUpdate"
+				AutoAcquireEnemiesWhenIdle="YES ATTACK_BUILDINGS"
+				MaxCowerTime="5.0s"
+				MinCowerTime="3.0s"
+				CanAttackWhileContained="true">
+				<UnitAITargetChooserData
+					SympathyRange="25.0" />
+			</HordeAIUpdate>
+		</AI>
+		<Body>
+			<ImmortalBody
+				id="ModuleTag_ImmortalBody"
+				MaxHealth="1.0" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_MoveSounds">
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_LEFT" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_RIGHT" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_LEFT_HIGH_SPEED" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_RIGHT_HIGH_SPEED" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="ACCELERATE" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="90.0"
+				MinorRadius="20.0"
+				Height="10.0" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundCreate" AudioType="voiceCreated" /> <!-- no worky -->
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundCreate" AudioType="voiceFullyCreated" /> <!-- no worky -->
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundMove" AudioType="voiceMove" />
+			<AudioEntry Sound="Multisound:ALI_Mechapede_SoundSelectMS" AudioType="voiceSelect" />
+			<NamedEntry Sound="AudioEvent:ALI_Buzzers_SoundSplit" Name="UncombineWithUnit" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="Multisound:ALI_Mechapede_BodySpawnedMS" AudioType="soundAmbient" /> 
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_MoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_MoveLoop" AudioType="soundMoveLoop" />
+			<!-- <AudioEntry Sound="ALI_Mechapede_SoundCreate" AudioType="soundCreated" /> no worky -->
+<!--
+			<AudioEntry Sound="ALI_Mechapede_IdleLoop" AudioType="soundAmbient" />
+-->
+		</AudioArraySound>
+		<!-- Yes, we need these. Catapults & such actually do damage to the horde brain not the units
+		     And the build queue builds horde brains not units for squads -->
+		<EvaEvents
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack" 
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" /> <!-- But not sighting events!! -->
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+		<CrusherInfo
+			UseCrushAttack="false"
+			CrushableLevel="2"
+			CrusherLevel="0"
+			CrushEqualLevelProps="false"
+			/>
+	</GameObject>
+</AssetDeclaration>

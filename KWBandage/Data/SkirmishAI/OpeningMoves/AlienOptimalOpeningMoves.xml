@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="Alien_EASY"
+    Side="Alien"> <!--Power: +10-->
+    <Order Build="AlienPowerProjector" />
+    <Order Build="AlienFoundry" />
+    <Order Build="AlienPortal" />
+    <Order Build="AlienPortal" />
+    <Order Build="AlienPowerProjector" />
+    <Order Build="AlienTiberiumTower" />
+    <Order Build="AlienGateway" />
+    <Order Build="AlienPowerProjector" />
+
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="AlienStandard"
+    Side="Alien"> <!--Power: +10-->
+    <Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienPortal" /> <!--Time: 6 Power: -5-->
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienBuzzers" />
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="AlienGateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="104s" Account="PRODUCTION" Deposit="1000" />
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="AlienStandard2"
+    Side="Alien"> <!--Power: +10-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="AlienGateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="62s" Account="PRODUCTION" Deposit="4500" />
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPortal" /> <!--Time: 6 Power: -5-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="AlienStandardCrane"
+    Side="Alien"> <!--Power: +10-->
+    <Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienPortal" /> <!--Time: 6 Power: -5-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="AlienFoundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienGateway" /> <!--Time: 20 Power: -6-->
+    <!--Order Time="149s" Account="PRODUCTION" Deposit="1000" /-->
+    <Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="185s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="AlienBrutalCrane"
+    Side="Alien"> <!--Power: +10-->
+    <Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienPortal" /> <!--Time: 6 Power: -5-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienFoundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienGateway" /> <!--Time: 20 Power: -6-->
+    <Order Time="119s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="AlienGateway" /> <!--Time: 20 Power: -6-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="AlienPowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="AlienPortal" /> <!--Time: 6 Power: -5-->
+    <Order Build="AlienTiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="247s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

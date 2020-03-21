@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SkirmishStartCash">
+		<Entry
+			id="LoCash"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="HiCash"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="ChoiceStepAmount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultChoiceIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<Asset
+		id="valueAndDifficulty">
+		<Entry
+			id="value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="difficulty"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="listDefaultValueDifficulty">
+		<Entry
+			id="DefaultChoiceIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryList
+			id="entry"
+			AssetType="valueAndDifficulty"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="MpGameRules"
+		TypeHash="2043946370">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="SkirmishStartCash"
+			AssetType="SkirmishStartCash" />
+		<Entry
+			id="MetaGameTiberiumSupply"
+			AssetType="listDefaultValueDifficulty" />
+		<Entry
+			id="MetaGameTiberiumInfestation"
+			AssetType="listDefaultValueDifficulty" />
+		<Entry
+			id="MetaGameOPsPoints"
+			AssetType="listDefaultValueDifficulty" />
+		<Entry
+			id="MetaGameCoreObjectives"
+			AssetType="listDefaultValueDifficulty" />
+	</GameAsset>
+
+</AssetDefinition>

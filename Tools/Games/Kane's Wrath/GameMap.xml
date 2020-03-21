@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MapObjectFlagType">
+		<Entry>DRAWS_IN_MIRROR</Entry>
+		<Entry>ROAD_POINT1</Entry>
+		<Entry>ROAD_POINT2</Entry>
+		<Entry>OBSOLETE_BRIDGE_POINT1</Entry>
+		<Entry>OBSOLETE_BRIDGE_POINT2</Entry>
+		<Entry>ROAD_CORNER_TIGHT</Entry>
+		<Entry>ROAD_JOIN</Entry>
+		<Entry>DONT_RENDER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MapObjectBitFlags"
+		BaseEnum="MapObjectFlagType" />
+
+	<Asset
+		id="StringPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="BoolPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="IntPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="RealPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AssetIdPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="Value"
+			AssetType="BaseAssetType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AssetIdListPropertyPair">
+		<Entry
+			id="Key"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Value"
+			AssetType="AssetId"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="Dictionary">
+		<EntryList
+			id="BoolProperty"
+			AssetType="BoolPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="IntProperty"
+			AssetType="IntPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RealProperty"
+			AssetType="RealPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="StringProperty"
+			AssetType="StringPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UnicodeStringProperty"
+			AssetType="StringPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AssetIdProperty"
+			AssetType="AssetIdPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AssetIdListProperty"
+			AssetType="AssetIdListPropertyPair"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="MapObject">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+		<EntryReference
+			id="ThingTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Flags"
+			AssetType="MapObjectBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Angle"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Position"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="MapObjectUSP">
+		<EntryInheritance
+			id="base"
+			AssetType="MapObject" />
+		<Entry
+			id="Faction"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Team"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Health"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Unrest"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1.0" />
+		<Entry
+			id="EventList"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="StrikeForceTemplate"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="EnvironmentObject">
+		<EntryReference
+			id="Cloud"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="Macro"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="Environment"
+			AssetType="Texture"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="RoadObject">
+		<EntryReference
+			id="id"
+			AssetType="Road"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="PostEffectObject">
+		<EntryReference
+			id="Effect"
+			AssetType="Texture"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="GameMap"
+		TypeHash="435226481">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Waypoint"
+			AssetType="MapObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Structure"
+			AssetType="MapObjectUSP"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Unit"
+			AssetType="MapObjectUSP"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Prop"
+			AssetType="MapObjectUSP"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Audio"
+			AssetType="MapObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Unknown"
+			AssetType="MapObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Road"
+			AssetType="RoadObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="MapMetaData"
+			AssetType="MetaDataObject" />
+		<EntryRelocation
+			id="EnvironmentData"
+			AssetType="EnvironmentObject" />
+		<EntryRelocation
+			id="WorldDict"
+			AssetType="Dictionary" />
+		<EntryList
+			id="PostEffect"
+			AssetType="PostEffectObject"
+			MinLength="0"
+			MaxLength="0" />
+		<Runtime>
+			<EntryList
+				id="Waypoint"
+				AssetType="MapObject"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Structure"
+				AssetType="MapObjectUSP"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Unit"
+				AssetType="MapObjectUSP"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Prop"
+				AssetType="MapObjectUSP"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Audio"
+				AssetType="MapObject"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Unknown"
+				AssetType="MapObject"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryList
+				id="Road"
+				AssetType="RoadObject"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryRelocation
+				id="EnvironmentData"
+				AssetType="EnvironmentObject" />
+			<EntryRelocation
+				id="WorldDict"
+				AssetType="Dictionary" />
+			<EntryList
+				id="PostEffect"
+				AssetType="PostEffectObject"
+				MinLength="0"
+				MaxLength="0" />
+		</Runtime>
+	</GameAsset>
+
+</AssetDefinition>

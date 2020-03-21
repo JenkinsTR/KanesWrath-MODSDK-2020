@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaPowerDataType">
+		<Entry
+			id="Image"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="Title"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="TypeDescription"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="MetaGameOp"
+			AssetType="MetagameOperationsEnums"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="MetaGameStratButtonInfoModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="MetaGameDescription"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MetaGameTypeDescription"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Powers"
+			AssetType="MetaPowerDataType"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

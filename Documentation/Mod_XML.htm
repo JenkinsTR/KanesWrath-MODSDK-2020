@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>MOD.XML:</h3>
+<h4>Basic Explanation</h4>
+This file is the main file that will be 
+compiled by the BinaryAssetBuilderApplication. This file should include all 
+files that you are MODding/editing.&nbsp; If it is not included in this file it will 
+not be built.&nbsp; 
+<h4>Required Includes</h4>
+There are two files that should always be included as a reference 
+when creating a MOD.&nbsp; These are static.xml and global.xml to represent the two 
+main data streams the game loads, here is an example from the Sample MOD:</p>
+<span class="code">&lt;Include 
+type=&quot;reference&quot; source=&quot;DATA:static.xml&quot; /&gt;<br>
+&lt;Include 
+type=&quot;reference&quot; source=&quot;DATA:global.xml&quot; /&gt;</span>
+<p>See the section on the BinaryAssetBuilder.exe.config for an explanation of the DATA: value.</p>
+<h4>Your Mod Includes</h4>
+<p>To build the XML assets for your mod, you must include them after the required includes.  The includes
+	for your own XML assets follows a pattern similar to those of the required includes.  However, it includes the full path to your file, starting at the Mods directory.
+An example from the Sample mod will be the easiest way to explain this:</p>
+	<p class="code">&lt;Include 
+type=&quot;all&quot; source=&quot;DATA:SampleMod/Data/GDIElfWarrior.xml&quot; /&gt;</p>
+<p>As you can see, the path to the included file is the full path, starting at the Mods folder.  There is no limit on how many subdirectories you can use to organize
+	your XML files.  For a complex mod you may create a folder in the Data folder for each of your faction, and then folders for each type of unit.  For example, if you
+	were adding a unit to the GDI faction, you might create the following directory structure to house the files:<br />
+	MyMod\Data\GDI\Unit\GDIPwnageUnit.xml<br />
+To include your Pwnage unit, you would add the following include:</p>
+<p class="code">
+	&lt;Include type=&quot;all&quot; source=&quot;DATA:MyMod/Data/GDI/Unit/GDIPwnageUnit.xml&quot; /&gt;
+</p>
+<h4>Art Includes</h4>
+<p>It may also be necessary to include files located in the art folder. This is done to include new command buttons.  There is an example of this in the SampleMod, copied below:</p>
+	<p class="code">&lt;Include type=&quot;all&quot; source=&quot;ART:Images/SampleUpdatedPackedImages.xml&quot; /&gt;</p>
+<p>In this case, the file can be found in the Art\Images folder of your Mod SDK root directory.  This is the only time you should need to use the ART: type of include
+tag in your Mod.XML file.  When modifying units, you will use the ART: Include tag, but its behavior is slightly different in that case, and will be covered in the <a href="XML_Assets.htm">XML Assets Section</a>.</p>
+
+</body>
+</html>

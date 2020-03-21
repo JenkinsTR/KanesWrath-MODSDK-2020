@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AudioEventInfoRef">
+		<Entry
+			id="BaseAudioEventInfo"
+			AssetType="BaseAudioEventInfo" />
+	</Asset>
+
+	<Asset
+		id="BaseAssetRef">
+		<EntryReference
+			id="BaseAssetType"
+			AssetType="BaseAssetType" />
+	</Asset>
+
+	<Asset
+		id="BaseAssetWeakRef">
+		<EntryWeakReference
+			id="BaseAssetType"
+			AssetType="BaseAssetType" />
+	</Asset>
+
+	<Asset
+		id="GameObjectWeakRef">
+		<EntryWeakReference
+			id="GameObject"
+			AssetType="GameObject" />
+	</Asset>
+
+	<Asset
+		id="LogicCommandRef">
+		<EntryReference
+			id="LogicCommand"
+			AssetType="LogicCommand" />
+	</Asset>
+
+	<Asset
+		id="PathMusicEventRef">
+		<EntryReference
+			id="PathMusicEvent"
+			AssetType="PathMusicEvent" />
+	</Asset>
+
+	<Asset
+		id="PlayerParticipationTrackerTemplateRef">
+		<EntryReference
+			id="PlayerParticipationTrackerTemplate"
+			AssetType="PlayerParticipationTrackerTemplate" />
+	</Asset>
+
+	<Asset
+		id="PlayerTechDependencyGroupWeakRef">
+		<EntryWeakReference
+			id="PlayerTechDependencyGroup"
+			AssetType="PlayerTechDependencyGroup" />
+	</Asset>
+
+	<Asset
+		id="PlayerThreatTrackerTemplateRef">
+		<EntryReference
+			id="PlayerThreatTrackerTemplate"
+			AssetType="PlayerThreatTrackerTemplate" />
+	</Asset>
+
+	<Asset
+		id="SpecialPowerTemplateWeakRef">
+		<EntryWeakReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate" />
+	</Asset>
+
+	<Asset
+		id="PlayerTechRef">
+		<EntryReference
+			id="PlayerTech"
+			AssetType="PlayerTech" />
+	</Asset>
+
+	<Asset
+		id="PlayerTechRankRef">
+		<EntryReference
+			id="PlayerTechRank"
+			AssetType="PlayerTechRank" />
+	</Asset>
+
+	<Asset
+		id="UpgradeTemplateRef">
+		<EntryReference
+			id="UpgradeTemplate"
+			AssetType="UpgradeTemplate" />
+	</Asset>
+
+	<Asset
+		id="UpgradeTemplateWeakRef">
+		<EntryWeakReference
+			id="UpgradeTemplate"
+			AssetType="UpgradeTemplate" />
+	</Asset>
+
+</AssetDefinition>

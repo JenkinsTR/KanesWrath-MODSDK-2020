@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="BlackHandVenomRush"
+    Side="BlackHand"> <!--Power: +10-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandOperationsCenter" /> <!--Time: 15 Power: -10-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandHangar" /> <!--Time: 10 Power: -5-->
+    <Order Build="BlackHandHangar" /> <!--Time: 10 Power: -5-->
+
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Build="BlackHandVenom" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+  <!--SkirmishOpeningMove
+    id="BlackHandReckonerRush"
+    Side="BlackHand">
+
+    <Order Build="BlackHandRefinery" />
+    <Order Build="BlackHandPowerPlant" />
+    <Order Build="BlackHandRefinery" />
+    <Order Build="BlackHandRefinery" />
+    <Order Build="BlackHandPowerPlant" />
+    <Order Build="BlackHandDropZone" />
+    <Order Build="BlackHandDropZone" />
+    <Order Build="BlackHandPowerPlant" />
+    <Order Build="BlackHandOperationsCenter" />
+    <Order Build="BlackHandHandOfNOD" /> 
+
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Build="BlackHandCarryallVehicle" />
+    <Order Build="BlackHandBlackHandSquad" />
+    <Order Time="175s" />
+  </SkirmishOpeningMove-->
+
+  <SkirmishOpeningMove
+    id="BlackHandSpecterRush"
+    Side="BlackHand"> <!--Power: +10-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandOperationsCenter" /> <!--Time: 15 Power: -10-->
+
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Build="BlackHandMobileArtillery" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

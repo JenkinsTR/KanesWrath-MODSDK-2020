@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Faction Buildings</h3>
+<p>
+There are 5 states for a faction building:
+</p>
+<ol>
+<li>Build Up</li>
+<li>Pristine</li> 
+<li>Damaged</li>
+<li>Really Damaged</li>
+<li>Rubble Collapsing</li>
+</ol>
+<p>There are also a few 
+extra objects for some of the factions buildings (these are explained in detail 
+below)</p>
+<ol>
+<li>Upgrade Pieces</li>
+<li>(3) types of Windows (night, fire, glow). these are used very rarely.</li>
+<li>Gags (characters with animations that interact with the buildings)</li>
+</ol>
+<h4>General 
+					Rules When Creating Buildings&nbsp;</h4>
+		<ol>
+		<li>Use Alpha Test or Add, Do NOT use Alpha Blend
+		<ol>
+		<li>If a transparent texture is being applied to a 2 sided quad then check the 
+				“Static Sorting Level” in the Material Surface Type rollout in the W3D 
+				Material.
+		</li>
+		</ol>
+		<li>Keep # of meshes as low as possible.
+		<ol>
+			<li>The build up state should have 5 meshes</li>
+			<li>The Prisine state should have 1 mesh ( not including characters or windows )</li>
+			<li>The D1 damage state should have 1 mesh ( not including the fire )</li>
+			<li>The D2 damage state should have 5 meshes ( not including the fire )</li>
+		</ol>
+		<li>Planes should be 2 triangles</li>
+		<li>Keep the vert counts as low as possible</li>
+		<li>Try to Keep # of textures to &lt;= 2</li>
+		<li>Minimize the # of bones, drop bones in medium and low models</li>
+		<li>Minimize overdraw. Geometry that’s never seen should be eliminated. 
+				However, Be careful not to delete geometry that may bee seen if the user rotates the 
+				camera.</li>
+		</ol>
+		
+				<h4>Faction Structure Budget</h4>
+		<p>Verts 2000 / 1250 / 750 &nbsp;(High / Medium / Low&nbsp; LOD's)</P>
+		<p>Texture size 2x512</P>
+		<p>Max # meshes 2</P>
+		<h4>Build Up Animation</h4>
+		<p>For the build up animation the building will need to be separated into 
+				pieces that are individually animated.&nbsp; Then a 1000 frame long animation of the 
+				pieces coming&nbsp;up out of the ground will need to be created.&nbsp;&nbsp;The 
+				building should be cut into about 10 different&nbsp;pieces, each animated so 
+				that the animation only lasts for about 20% of the whole 1000 frames.&nbsp; 
+				Then the animation for the pieces should be staggered to take place over the 
+				whole 1000 frame.</P>
+		<p>
+		The geometry&nbsp;should be exported as &lt;building name&gt;_A.w3x 
+		</P>
+		<p>
+			The skeleton should be exported as &lt;building name&gt;_ASKL.w3x 
+		</P>
+			<p>
+			The animation should be exported as &lt;building name&gt;_ABLD.w3x 
+			</P>
+		
+			<p>
+		<h4>Pristine</h4>
+		<p>
+				The pristine version of the building.
+		<p>
+				This should be exported as &lt;building name&gt;.w3x
+		</p>
+		<h4>Damaged</h4>
+		<p>
+				The damaged state is the pristine version of the building with the 
+				damaged texture on it.
+		<p>
+				This should be exported as &lt;building name&gt;_D1.w3x
+		</P>
+		<h4>Really Damaged</h4>
+		<p>
+				The really damaged state is made up of 5 pieces: The main building, the 
+				front, left, back, right.
+		</p>
+				
+		<p>
+				The 4 a,b,c,d pieces need to have their pivot points placed in the 
+				center of each piece, while the main building needs to have it’s pivot point 
+				placed at the origin.<SPAN style="mso-spacerun: yes">&nbsp; Note the 
+				pivot points in the picture below.
+				</P>
+		<IMG src="images/Faction_Building_damage.jpg"><br />
+		<p>This should be exported as &lt;building name&gt;_D2.w3x</p>
+		<h4>Rubble Collapsing </h4>
+		<p>This state is a crumbling animation of the left over main building 
+		from the Really Damaged state. Simply subdivide the main building into 
+		smaller pieces, closing off open sides, ensuring each piece has it's own 
+		pivot point, and then animate the pieces.
+		</P>
+		<p>
+		This should be exported as &lt;building name&gt;_D3.w3x
+		</P>
+		<h4>Upgrade Pieces</h4>
+				
+		<p>
+Faction Buildings will have extra objects that start out hidden and are faded on 
+as the building upgrades are purchased in the game, these pieces are called 
+"Upgrade Pieces". They should be separate geometry and have very specific 
+names: V1, V2, V3.
+</p>
+		<IMG src="images/Faction_Building_vet.jpg"><br />
+<h4>Windows</h4>
+<p>
+There 
+are 3 different types of windows that a Faction building can have: Night time, 
+Fire, and Glowing. The windows are extra geometry that overlay the normal 
+windows of the building. This extra 
+geometry will allow for some rendering effects to be added to the 
+buildings.
+</P>
+<IMG src="images/Faction_Building_Windows.jpg" width="60%" height="70%"> <br />
+<p>
+The names for the windows follow this convention: 
+</p>
+<ul>
+<li>WINDOW_G01 = Glow Window for a night time glow effect. </li>
+<li>WINDOW_N01 = Night time window . </li>
+<li>WINDOW_F01 = Fire Window for damaged states. </li>
+<p>
+You should use a Default W3D shader and the blend mode needs to be Additive. By using Additive 
+the black pixels of the texture will be transparent and the lighter/whiter 
+pixels in the texture will brighten the geometry behind it. 
+</p>
+<IMG src="images/Faction_Building_add.jpg"><br />
+
+<h4>Gags</h4>
+<p>
+Gags are&nbsp;characters with animations that interact with the buildings. These 
+are only in&nbsp;Pristine version of the High LOD version of the 
+building.</p>
+<p><SPAN 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 12.0pt">
+<STRONG></STRONG></o:p></o:p>&nbsp;</P>
+		<h4>All the Final Files</h4>
+		<ul>
+		<li>Max Files</li>
+		<ul><li>&lt;building name&gt;.max</li>
+		<li>&lt;building name&gt;_D1.max</li>
+		<li> &lt;building name&gt;_D2.max</li>
+		<li>&lt;building name&gt;_D3.max</li>
+		</ul>
+		<li>Texture Files</li>
+			<ul>
+			<li>&lt;building name&gt;.tga</li>
+			<li>&lt;building name&gt;_D1.tga</li>
+			<li> &lt;building name&gt;_D2.tga</li>
+			</ul>
+		<li>Exported W3X files</li>
+			<ul>
+			<li>&lt;building name&gt;.w3x</li>
+			<li>&lt;building name&gt;_A.w3x</li>
+			<li>&lt;building name&gt;_ASKL.w3x</li>
+			<li>&lt;building name&gt;_ABLD.w3x</li>
+			<li>&lt;building name&gt;_D1.w3x</li>
+			<li>&lt;building name&gt;_D2.w3x </li>
+			<li>&lt;building name&gt;_D3.w3x</P>
+			</ul>
+		</ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Props/NODBlackHandFlamerProjectile.xml" />	
+	
+		<Include type="all" source="Structures/NODAirSupport.xml" />
+		<Include type="all" source="Structures/NODHangar.xml" />
+		<Include type="all" source="Structures/NODLaserCannon.xml" />
+		<Include type="all" source="Structures/NODRocketBunker.xml" />
+		<Include type="all" source="Structures/NODShredderTurret.xml" />
+		<Include type="all" source="Structures/NODShredderTurretHub.xml" />
+		<Include type="all" source="Structures/NODShredderTurretSpawnHole.xml" />
+		<Include type="all" source="Structures/NODTechAssemblyPlant.xml" />
+	
+		<Include type="all" source="Units/NODAttackBike.xml" />		
+		<Include type="all" source="Units/NODAvatar.xml" />	
+		<Include type="all" source="Units/NODConfessor.xml" />	
+		<Include type="all" source="Units/NODCyborgInfantry.xml" />	
+		<Include type="all" source="Units/NODCyborgInfantrySquad.xml" />
+		<Include type="all" source="Units/NODMCV.xml" />	
+		<Include type="all" source="Units/NODMetaUnit.xml" />	
+		<Include type="all" source="Units/NODMilitantRocket.xml" />	
+		<Include type="all" source="Units/NODShadow.xml" />	
+		<Include type="all" source="Units/NODStealthTank.xml" />	
+	</Includes>
+</AssetDeclaration>

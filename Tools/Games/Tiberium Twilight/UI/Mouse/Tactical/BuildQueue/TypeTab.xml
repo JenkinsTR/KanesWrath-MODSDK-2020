@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalBuildQueueTypeTabQueueTypeSettings">
+		<Entry
+			id="QueueType"
+			AssetType="ProductionQueueType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MouseOverHelp"
+			AssetType="InGameUISimpleHelpTemplate" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalBuildQueueTypeTab"
+		TypeHash="4253066583">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="QueueTypeSettings"
+			AssetType="UIMouseTacticalBuildQueueTypeTabQueueTypeSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

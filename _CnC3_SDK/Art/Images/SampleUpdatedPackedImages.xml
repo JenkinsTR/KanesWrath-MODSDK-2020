@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- XML: Data\Art\Images\PackedImages.xml
+ Directories:
+    D:\cnc\patch\Data\Images\Packed\SidebarButtons\
+    D:\cnc\patch\Data\Images\Packed\portraits\
+    D:\cnc\patch\Data\Images\Packed\InGameUnitOverlay\
+    D:\cnc\patch\Data\Images\Packed\HandCreatedMappedImages\
+    D:\cnc\patch\Data\Images\Packed\AptComponents\AptComponents_007\
+    D:\cnc\patch\Data\Images\Packed\AptComponents\AptComponents_006\
+    D:\cnc\patch\Data\Images\Packed\AptComponents\aptcomponents_002\
+    D:\cnc\patch\Data\Images\Packed\AptComponents\AptComponents_001\
+    D:\cnc\patch\Data\Images\Packed\AptComponents\
+    D:\cnc\patch\Data\Images\Packed\
+ Extend RGB   : Yes
+ Gutter (1)   : No
+ Alpha Channel: Yes
+ Compressed   : No
+ Image Size   : 256 x 256
+ Keep Dirs Seperate: Yes
+-->
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- Packed Texture: PackedImages_220.tga -->
+	<Texture id="PackedImages_220" File="PackedImages_220.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	
+	<PackedTextureImage id="Portrait_GDIElfWarrior" Texture="PackedImages_220" Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+</AssetDeclaration>

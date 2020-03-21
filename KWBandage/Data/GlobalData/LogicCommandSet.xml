@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<LogicCommandSet
+		id="GDIArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgun</Cmd>
+		<Cmd>Command_CommandPostCallHunterKiller</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="GDICommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneTrooperScannerPack</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MarkedOfKaneHangarCommandSet">
+		<Cmd>Command_ConstructMarkedOfKaneVenom</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneVertigo</Cmd>
+		<Cmd>Command_NODRecallAllAircraft</Cmd>
+		<Cmd>Command_UpgradeNODSignatureGenerator</Cmd>
+		<Cmd>Command_PurchaseUpgradeVertigoDisruptionPod</Cmd>
+		<Cmd>Command_MarkedOfKaneMagneticMines</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MarkedOfKaneSecretShrineCommandSet">
+		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
+		<Cmd>Command_PurchaseUpgradeTiberiumInfusion</Cmd>
+		<Cmd>Command_MarkedOfKaneRedShadowStrikeTeam</Cmd>
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="SteelTalonsCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="SteelTalonsReclamatorHubCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPitbull</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTitan</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRepairAPC</Cmd>
+		<Cmd>Command_ConstructSteelTalonsHeavyHarvester</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMCV</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWolverine</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAAScout</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRig</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMammoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBehemoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMARV</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="SteelTalonsRepairAPCCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_APCMinefield</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+		<Cmd>Command_Stop</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="SteelTalonsTechCenterCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgunST</Cmd>
+		<Cmd>Command_PurchaseUpgradeAdaptiveArmor</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="Traveler59ReactorCommandSet">
+		<Cmd>Command_PurchaseUpgradeTravelerEngines</Cmd>
+		<Cmd>Command_PurchaseUpgradeAlienShardLaunchers</Cmd>
+		<Cmd>Command_SpecialPowerPhaseField</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="ZOCOMArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMHunterKiller</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="ZOCOMCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneRaiderScannerPack</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Traveler59PortalCommandSet">
+		<Cmd>Command_ConstructTraveler59Buzzers</Cmd>
+		<Cmd>Command_ConstructTraveler59RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59Assimilator</Cmd>
+		<Cmd>Command_ConstructTraveler59ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59CultistSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59StalkerSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59BlinkMastermind</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Traveler59ControlCenterCommandSet">
+		<Cmd>Command_TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Traveler59SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Reaper17PortalCommandSet">
+		<Cmd>Command_ConstructReaper17Buzzers</Cmd>
+		<Cmd>Command_ConstructReaper17RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructAlienAssimilator</Cmd>
+		<Cmd>Command_ConstructReaper17ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructReaper17StalkerSquad</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Reaper17ControlCenterCommandSet">
+		<Cmd>Command_Reaper17TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Reaper17SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+		<Cmd>Command_PurchaseUpgradeReaper17MinorForcefieldGenerator</Cmd>
+	</LogicCommandSet>
+	
+	
+</AssetDeclaration>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DamageState">
+		<Entry
+			id="MinHealth"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxHealth"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DamageStateListModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageModuleData" />
+		<EntryList
+			id="Data"
+			AssetType="DamageState"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

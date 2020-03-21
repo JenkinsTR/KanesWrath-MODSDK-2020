@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ObjectEffectTuple">
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="UpgradeSelf"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<EnumAsset
+		id="SecondaryObjectListenerOption">
+		<Entry>NOTIFY_WEAPON_SET_UPDATE</Entry>
+		<Entry>NOTIFY_SUBOBJECT_UPGRADE_MUX</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="SecondaryObjectListenerBitFlags"
+		BaseEnum="SecondaryObjectListenerOption" />
+
+	<Asset
+		id="SecondaryObjectListenerModule">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="Flags"
+			AssetType="SecondaryObjectListenerBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SelfValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<EntryList
+			id="ObjectEffectTuple"
+			AssetType="ObjectEffectTuple"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

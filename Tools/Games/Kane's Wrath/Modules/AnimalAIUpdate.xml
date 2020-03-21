@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AnimalAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AIUpdateModuleData" />
+		<Entry
+			id="FleeRadius"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="FleeDistance"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="WanderPercentage"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="35" />
+		<Entry
+			id="MinDistance"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="15" />
+		<Entry
+			id="MaxDistance"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Radius"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="FleeUpdateTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.8s" />
+		<Entry
+			id="WanderUpdateTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2.0s" />
+		<Entry
+			id="InitialFleeBlindlyRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="AfraidOfCastles"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

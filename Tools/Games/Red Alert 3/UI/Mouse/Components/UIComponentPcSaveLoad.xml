@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentPcSaveLoad">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="MapPrefix"
+			AssetType="String" />
+		<Entry
+			id="DescriptionPrefix"
+			AssetType="String" />
+		<Entry
+			id="TimePrefix"
+			AssetType="String" />
+		<Entry
+			id="DatePrefix"
+			AssetType="String" />
+	</Asset>
+
+</AssetDefinition>

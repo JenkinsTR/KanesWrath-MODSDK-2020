@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SlowDeathPhaseType">
+		<Entry>INITIAL</Entry>
+		<Entry>MIDPOINT</Entry>
+		<Entry>FINAL</Entry>
+		<Entry>HIT_GROUND</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SlowDeathBaseType">
+		<Entry
+			id="Type"
+			AssetType="SlowDeathPhaseType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SlowDeathFXListType">
+		<EntryInheritance
+			id="base"
+			AssetType="SlowDeathBaseType" />
+		<EntryList
+			id="FX"
+			AssetType="FXListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SlowDeathOCLType">
+		<EntryInheritance
+			id="base"
+			AssetType="SlowDeathBaseType" />
+		<EntryList
+			id="OCL"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SlowDeathWeaponType">
+		<EntryInheritance
+			id="base"
+			AssetType="SlowDeathBaseType" />
+		<EntryList
+			id="Weapon"
+			AssetType="WeaponTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SlowDeathSoundType">
+		<EntryInheritance
+			id="base"
+			AssetType="SlowDeathBaseType" />
+		<EntryList
+			id="List"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SlowDeathBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="SinkRate"
+			AssetType="Velocity"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ProbabilityModifier"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="ModifierBonusPerOverkillPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SinkDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SinkDelayVariance"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DestructionDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DestructionDelayVariance"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DecayBeginTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="FlingForce"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FlingForceVariance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FlingPitch"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="FlingPitchVariance"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="DeathFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="FadeTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="FadeDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DeathTypes"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DeathObjectStatusBits"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="FX"
+			AssetType="SlowDeathFXListType"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryList
+			id="OCL"
+			AssetType="SlowDeathOCLType"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryList
+			id="Weapon"
+			AssetType="SlowDeathWeaponType"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryList
+			id="Sound"
+			AssetType="SlowDeathSoundType"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryRelocation
+			id="DieMuxData"
+			AssetType="DieMuxDataType" />
+		<Entry
+			id="ShadowWhenDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="Fade"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

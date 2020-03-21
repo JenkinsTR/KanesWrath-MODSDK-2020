@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MissionHotSpotSettings"
+		TypeHash="4275530952">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<EntryReference
+			id="WaypointMarker"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="DecalTemplate"
+			AssetType="RadiusDecalTemplate" />
+	</GameAsset>
+
+</AssetDefinition>

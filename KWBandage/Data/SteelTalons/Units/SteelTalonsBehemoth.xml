@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Fixing Getting up Animation-->
+<!--Allow veteran and ZOCOM snipers to spot for bombard-->
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GUBehemoth_SKN.W3X" />
+		<Include
+			type="all"
+			source="ART:GUBehemoth_BLDA.W3X" />
+	</Includes>
+	<GameObject
+		id="SteelTalonsBehemoth"
+		SelectPortrait="Portrait_SF1WalkerArtillery"
+		ButtonImage="Portrait_SF1WalkerArtillery"
+		Side="SteelTalons"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="2200"
+		BuildTime="22"
+		BuildFadeInOnCreateTimeSeconds="0.25s"
+		CommandSet="SteelTalonsBehemothCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS SCORE TRANSPORT VEHICLE VALID_TARGET_FOR_C4 SIEGE_WEAPON CAN_BE_FAVORITE_UNIT CAN_FIRE_EVEN_IF_CONTAINED_ARE_NOT_IN_RANGE"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="CANNON"
+		VoicePriority="214"
+		EditorName="SteelTalonsBehemoth"
+		Description="Desc:SteelTalonsBehemoth"
+		TypeDescription="Type:SteelTalonsBehemoth"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName>Name:SteelTalonsBehemoth</DisplayName>
+		<GameDependency>
+			<RequiredObject>SteelTalonsTechCenter</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDIJuggernaughtArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="JuggernaughtLocomotor"
+			Condition="NORMAL"
+			Speed="40.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				ExtraPublicBone="B_SHELL01 B_PISTONLA B_FOOTL B_FOOTR FXMUZZLE01 FXMUZZLE02 FXMUZZLE03 MuzzleFlash_01 MuzzleFlash_02 MuzzleFlash_03 BoneGarrison01 BoneGarrison02 BoneGarrison03 BoneGarrison04 BoneGarrison05 BoneGarrison06 BoneGarrison07 BoneGarrison08 BoneGarrison09 BoneGarrison10"
+				UseYAxisForTurretRotation="true"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="16.0"
+				MaxRecoilDistance="10.0"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUBehemoth_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXMUZZLE" />
+					<WeaponRecoilBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXMuzzle" />
+					<WeaponMuzzleFlash
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFlash_" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXMUZZLE" />
+					<Turret
+						TurretNameKey="Chassis"
+						TurretPitch="Turret"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GUBehemoth_SKND" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="GUBehemoth_SKNR" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_PISTONLA"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_SHELL01"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_SHELL01"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_SHELL01"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUBehemoth_FP" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					StateName="STATE_bored"
+					AllowRepeatInRandomPick="true"
+					Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="GUBehemoth_BIDA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15"
+						AnimationPriority="90"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUBehemoth_BIFA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15"
+						AnimationPriority="1"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUBehemoth_BIFB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10"
+						AnimationPriority="25"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUBehemoth_BIFC"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10"
+						AnimationPriority="1"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="GUBehemoth_BIFD"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15"
+						AnimationPriority="35"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>	
+				</AnimationState>		
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
+					StateName="STATE_built">
+					<Animation
+						AnimationName="GUBehemoth_BLDA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE" />
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GUBehemoth_DIEB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUBehemoth_DIEC"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="GUBehemoth_DIED"
+						AnimationMode="ONCE" />
+          <!--		<Animation
+						AnimationName="GUBehemoth_DIEA"
+						AnimationMode="ONCE" />		DIEA is reserved for the commando death.	-->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AFFECTED_BY_EMP">
+					<Animation
+						AnimationName="GUBehemoth_BIDA"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="15"/>
+				</AnimationState>
+
+				<!-- being fixed by engineer from being a husk -->
+		        <AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5">
+					<Animation
+						AnimationName="GUBehemoth_GTPA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING SPECIAL_WEAPON_ONE">
+					<Animation
+						AnimationName="GUBehemoth_ATKB1"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SPECIAL_WEAPON_ONE"
+					Flags="START_FRAME_FIRST">
+					<Animation
+						AnimationName="GUBehemoth_ATKB2"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING">
+					<Animation
+						AnimationName="GUBehemoth_ATKA1"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PACKING">
+					<Animation
+						AnimationName="GUBehemoth_ATKA3"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DEPLOYED"
+					Flags="START_FRAME_FIRST">
+					<Animation
+						AnimationName="GUBehemoth_ATKA2"
+						AnimationMode="MANUAL" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="GUBehemoth_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="GUBehemoth_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT">
+					<Animation
+						AnimationName="GUBehemoth_TRNL"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="15"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT">
+					<Animation
+						AnimationName="GUBehemoth_TRNR"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="15"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTR" />
+					<FXEvent
+						Frame="30"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTL" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="GUBehemoth_ACCL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="GUBehemoth_DECL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="GUBehemoth_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<Animation
+						AnimationName="GUBehemoth_WLKB"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_GDIJuggernaughtFootprint"
+						Bone="B_FOOTR" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_built" then
+						CurDrawableSetTransitionAnimState("TRANS_built")
+						end
+					</Script>
+				</AnimationState>
+
+				<!-- SELECTED -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Selected">
+					<Animation
+						AnimationName="GUBehemoth_AIDA"
+						AnimationMode="ONCE"
+						AnimationPriority="85"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="GUBehemoth_AIFB"
+						AnimationMode="ONCE"
+						AnimationPriority="55"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="GUBehemoth_AIFC"
+						AnimationMode="ONCE"
+						AnimationPriority="50"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="GUBehemoth_AIFD"
+						AnimationMode="ONCE"
+						AnimationPriority="50"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="GUBehemoth_AIFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_bored" then
+						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected") end
+					</Script>
+				</AnimationState>
+				
+				<!-- TRANSITIONS--> 
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_built">
+					<Animation
+						AnimationName="GUBehemoth_BLDA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE"></Animation>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="GUBehemoth_BATA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="GUBehemoth_BATB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="GUBehemoth_ABTA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="SteelTalonsBehemothArtillery" />
+					<TurretSettings
+						TurretTurnRate="50"
+						TurretPitchRate="20"
+						AllowsPitch="true"
+						MinimumPitch="-15d">
+						<!--
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="45.0">
+						
+						MaxDeflectionClockwise="45d"
+						MaxDeflectionAntiClockwise="45d"
+						RecenterWhenOutOfTurnRange="false"
+-->
+						<TurretAITargetChooserData />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				GiveNoXP="true" />
+			<HordeTransportContain
+				id="ModuleTag_Contain"
+				ObjectStatusOfContained="UNSELECTABLE ENCLOSED CAN_ATTACK"
+				ContainMax="1"
+				Slots="1"
+				AllowEnemiesInside="false"
+				AllowAlliesInside="true"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="VehicleEnter"
+				ExitSound="VehicleExit"
+				KillPassengersOnDeath="true">
+				<PassengerFilter
+					Rule="ANY"
+					Include="INFANTRY" />
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="BoneGarrison">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</PassengerData>
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+			</HordeTransportContain>
+			<MoveToPositionAndEvacuateSpecialPower
+				id="ModuleTag_MoveToPositionAndEvacuate"
+				SpecialPowerTemplate="SpecialPowerMoveToPositionAndEvacuate" />			
+			<Physics
+				id="ModuleTag_Physics" />
+			<!-- dying, spawn a husk -->
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="SteelTalonsBehemothDieOCL">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<DestroyDie
+				id="ModuleTag_DestroyDie">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIMammothExplodeWithVoice" />
+			</FXListBehavior>
+			<ModelConditionUpgrade
+				id="ModuleTag_AllFactionUpgrade"
+				AddConditionFlags="USER_6">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+		</Behaviors>
+		<AI>
+			<DeployStyleAIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="SteelTalonsJuggernaughtFunctions"
+				UnpackTime="1s"
+				PackTime="1s"
+				MustDeployToAttack="true">
+				<UnitAITargetChooserData
+					CheckVisionRange="false"
+					CanPickDynamicTargets="false"
+					RotateToTargetWhenAiming="false" />
+			</DeployStyleAIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="5500" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="ModuleTag_ASCB">
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_ABTA"
+					Frame="27 65" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_AIFA"
+					Frame="112" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_ATKA1"
+					Frame="12" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_ATKA3"
+					Frame="14" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_ATKB1"
+					Frame="13" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_ATKB3"
+					Frame="11" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BATA"
+					Frame="28 44" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BATB"
+					Frame="37 51" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BIFA"
+					Frame="118" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BIFB"
+					Frame="30 88 294" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BIFC"
+					Frame="41 90" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_BIFD"
+					Frame="234" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehmBlda_BLDA"
+					Frame="75 94 112" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehmBlda_BLDA"
+					Frame="75 94 112" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_DECL"
+					Frame="16" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_DIEA"
+					Frame="60 79" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_DIEB"
+					Frame="5 63" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_DIEC"
+					Frame="7 23 43 78 105 130" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_DIED"
+					Frame="22 43 89 94 101" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_GTPA"
+					Frame="101 119" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_TRNL"
+					Frame="14 30" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_TRNR"
+					Frame="14 30" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_WLKA"
+					Frame="0 25" />
+				<Sound
+					Sound="AudioEvent:GDI_Juggernaught_Footstep"
+					Animation="GUBehemoth_WLKB"
+					Frame="0 25" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="20.0"
+				Height="40.0"
+				ContactPointGeneration="INFANTRY" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:GDI_Behemoth_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:GDI_Behemoth_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:GDI_Behemoth_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:GDI_Behemoth_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="AudioEvent:GDI_Behemoth_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:GDI_Behemoth_VoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="Multisound:GDI_Behemoth_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+			<NamedEntry Sound="AudioEvent:GDI_Behemoth_VoiceAttackBombard" Name="InitiateSpotTargetBombard" />
+			<NamedEntry Sound="AudioEvent:GDI_Behemoth_VoiceMove" Name="InitiateMoveToPositionAndEvacuate" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="Multisound:GDI_Juggernaught_MoveStartMS" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:PredatorIdleLoop" AudioType="soundAmbient" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventDamagedOwner="UnitUnderAttack"
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="155"
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled"
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="600"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrusherLevel="3"
+			CrushableLevel="3"
+			CrushDecelerationPercent="0%" />
+	</GameObject>
+</AssetDeclaration>

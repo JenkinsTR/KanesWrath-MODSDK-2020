@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+  <AIStrategicStateDefinition
+		id="BlackHandOptimalArtillery"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <LateGameHeuristic/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundUnitHeuristic" TargetType="SiegeTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SiegeTarget">
+      <TeamTemplate MinUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+</AssetDeclaration>

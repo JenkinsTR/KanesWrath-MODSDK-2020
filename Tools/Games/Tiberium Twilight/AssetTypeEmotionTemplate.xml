@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="EmotionTemplateThreatComparisonType">
+		<Entry>NONE</Entry>
+		<Entry>VALID_IF_BELOW</Entry>
+		<Entry>VALID_IF_ABOVE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="EmotionTemplateOptions">
+		<Entry>IGNORE_IF_IDLE</Entry>
+		<Entry>IGNORE_IF_BUSY</Entry>
+		<Entry>IGNORE_IF_AI</Entry>
+		<Entry>IGNORE_IF_HUMAN</Entry>
+		<Entry>ATTRIBUTEMODIFIER_WHILE_EMOTION_ACTIVE</Entry>
+		<Entry>PREVENT_PLAYER_COMMANDS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="EmotionTemplateOptionsBitFlags"
+		BaseEnum="EmotionTemplateOptions" />
+
+	<GameAsset
+		id="EmotionTemplate"
+		TypeHash="1088041681">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Type"
+			AssetType="EmotionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Options"
+			AssetType="EmotionTemplateOptionsBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DurationActive"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="DurationInactive"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="DurationInactiveObject"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="DurationInactiveType"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyThreatComparison"
+			AssetType="EmotionTemplateThreatComparisonType"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyThreat"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="FriendlyThreatComparison"
+			AssetType="EmotionTemplateThreatComparisonType"
+			IsAttribute="true" />
+		<Entry
+			id="FriendlyThreat"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="StartFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="UpdateFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="EndFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="AttributeModifierStartDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="AttributeModifierDuration"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="AIStateLockDuration"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="AIState"
+			AssetType="EmotionAIType"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsSetOnStart"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsSetOnEnd"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsClearOnStart"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsClearOnEnd"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AILuaEventsList"
+			AssetType="String"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

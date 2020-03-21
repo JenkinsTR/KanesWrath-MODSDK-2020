@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+<!-- KC_02 - ZOCOM - Basics -->
+  
+  <AIStrategicStateDefinition
+	id="KC_02_ZCM_UntPref"
+	UnitUpgradeMultiplier="0.0">
+   <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <UnitModifierByName UnitName="ZOCOMZoneRaiderSquad" UnitPreferenceOffensiveModifier="350%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="ZOCOMPitbull" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMAAScout" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="500%"/>
+    <UnitModifierByName UnitName="ZOCOMAPC" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMPredator" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMImprovedSonicTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMMammoth" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMJuggernaught" UnitPreferenceOffensiveModifier="250%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMMARV" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="ZOCOMGolumCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMAABattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="ZOCOMTerraformingStation" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+
+  </AIStrategicStateDefinition>
+  
+  
+ </AssetDeclaration>

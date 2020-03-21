@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	id="Asset"
+	targetNamespace="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition"
+	elementFormDefault="qualified"
+	xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="AssetId">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9a-zA-Z_.-]+:)?[0-9a-zA-Z_.-]+" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="BaseAssetType">
+		<xs:attribute name="id" type="AssetId" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="EnumAssetType">
+		<xs:complexContent>
+			<xs:extension base="BaseAssetType">
+				<xs:sequence>
+					<xs:element name="Entry" type="AssetId" minOccurs="1" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="IsUsingAll" type="xs:boolean" default="false" />
+				<xs:attribute name="IsStartingNegative" type="xs:boolean" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="FlagsAssetType">
+		<xs:complexContent>
+			<xs:extension base="BaseAssetType">
+				<xs:attribute name="BaseEnum" type="AssetId" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="BaseEntryType">
+		<xs:attribute name="id" type="AssetId" use="required" />
+		<xs:attribute name="IsAttribute" type="xs:boolean" default="false" />
+		<xs:attribute name="IsRequired" type="xs:boolean" default="false" />
+		<xs:attribute name="IsVoid" type="xs:boolean" default="false" />
+	</xs:complexType>
+
+	<xs:complexType name="EntryPoidType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+				<xs:attribute name="IsUpperCase" type="xs:boolean" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryFileType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryReferenceType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Default" type="xs:string" use="optional" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryWeakReferenceType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Default" type="xs:string" use="optional" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Default" type="xs:string" use="optional" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryRelocationType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryListType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+				<xs:attribute name="Description" type="xs:string" use="optional" />
+				<xs:attribute name="MinLength" type="xs:int" use="required" />
+				<xs:attribute name="MaxLength" type="xs:int" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryChoiceType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:sequence>
+					<xs:element name="Entry" type="EntryType" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="MinLength" type="xs:int" use="required" />
+				<xs:attribute name="MaxLength" type="xs:int" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="EntryInheritanceType">
+		<xs:complexContent>
+			<xs:extension base="BaseEntryType">
+				<xs:attribute name="AssetType" type="AssetId" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="AssetType">
+		<xs:complexContent>
+			<xs:extension base="BaseAssetType">
+				<xs:sequence>
+					<xs:element name="EntryInheritance" type="EntryInheritanceType" minOccurs="0" />
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="EntryPoid" type="EntryPoidType" />
+						<xs:element name="EntryFile" type="EntryFileType" />
+						<xs:element name="EntryReference" type="EntryReferenceType" />
+						<xs:element name="EntryWeakReference" type="EntryReferenceType" />
+						<xs:element name="Entry" type="EntryType" />
+						<xs:element name="EntryRelocation" type="EntryRelocationType" />
+						<xs:element name="EntryChoice" type="EntryChoiceType" />
+						<xs:element name="EntryList" type="EntryListType" />
+					</xs:choice>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CDataType">
+		<xs:sequence>
+			<xs:element name="EntryInheritance" type="EntryInheritanceType" minOccurs="0" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="EntryPoid" type="EntryPoidType" />
+				<xs:element name="EntryFile" type="EntryFileType" />
+				<xs:element name="EntryReference" type="EntryReferenceType" />
+				<xs:element name="EntryWeakReference" type="EntryWeakReferenceType" />
+				<xs:element name="Entry" type="EntryType" />
+				<xs:element name="EntryRelocation" type="EntryRelocationType" />
+				<xs:element name="EntryChoice" type="EntryChoiceType" />
+				<xs:element name="EntryList" type="EntryListType" />
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RuntimeType">
+		<xs:sequence>
+			<xs:element name="EntryInheritance" type="EntryInheritanceType" minOccurs="0" />
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="EntryPoid" type="EntryPoidType" />
+				<xs:element name="EntryFile" type="EntryFileType" />
+				<xs:element name="EntryReference" type="EntryReferenceType" />
+				<xs:element name="EntryWeakReference" type="EntryWeakReferenceType" />
+				<xs:element name="Entry" type="EntryType" />
+				<xs:element name="EntryRelocation" type="EntryRelocationType" />
+				<xs:element name="EntryChoice" type="EntryChoiceType" />
+				<xs:element name="EntryList" type="EntryListType" />
+			</xs:choice>
+			<xs:element name="CData" type="CDataType" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="GameAssetType">
+		<xs:complexContent>
+			<xs:extension base="BaseAssetType">
+				<xs:sequence>
+					<xs:element name="EntryInheritance" type="EntryInheritanceType" minOccurs="0" />
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="EntryPoid" type="EntryPoidType" />
+						<xs:element name="EntryFile" type="EntryFileType" />
+						<xs:element name="EntryReference" type="EntryReferenceType" />
+						<xs:element name="EntryWeakReference" type="EntryWeakReferenceType" />
+						<xs:element name="Entry" type="EntryType" />
+						<xs:element name="EntryRelocation" type="EntryRelocationType" />
+						<xs:element name="EntryChoice" type="EntryChoiceType" />
+						<xs:element name="EntryList" type="EntryListType" />
+					</xs:choice>
+					<xs:element name="Runtime" type="RuntimeType" minOccurs="0" />
+				</xs:sequence>
+				<xs:attribute name="TypeHash" type="xs:unsignedInt" use="required" />
+				<xs:attribute name="IsTokenized" type="xs:boolean" default="false" />
+				<xs:attribute name="HasSpecialCompileHandling" type="xs:boolean" default="false" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:element name="AssetDefinition">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Asset" type="AssetType" />
+				<xs:element name="EnumAsset" type="EnumAssetType" />
+				<xs:element name="FlagsAsset" type="FlagsAssetType" />
+				<xs:element name="GameAsset" type="GameAssetType" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

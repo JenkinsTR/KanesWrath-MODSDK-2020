@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BuildSpeed">
+		<Entry
+			id="Speed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SkirmishSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSubsystemSettings" />
+		<EntryWeakReference
+			id="RandomCrateSpawner"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="HandicapBuildSpeed"
+			AssetType="BuildSpeed"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

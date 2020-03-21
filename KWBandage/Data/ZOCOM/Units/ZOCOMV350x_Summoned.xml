@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Normalised Heath to GDI Ox Transports-->
+	<GameObject
+		id="ZOCOMV35Ox_Summoned"
+		SelectPortrait="Portrait_GDIOx"
+		ButtonImage="Portrait_GDIOx"
+		Side="ZOCOM"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		BuildCost="10"
+		BuildTime="1.0"
+		CommandSet="GDIV35OxCommandSet"
+		KindOf="CAN_CAST_REFLECTIONS SELECTABLE AIRCRAFT VEHICLE TRANSPORT SUMMONED NO_COLLIDE IGNORES_SELECT_ALL"
+		RadarPriority="UNIT"
+		ProductionQueueType="AIRCRAFT"
+		VoicePriority="52"
+		EditorName="ZOCOMV35Ox_Summoned"
+		Description="Desc:GDIOx"
+		TypeDescription="Type:GDIOx"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName>Name:GDIOx</DisplayName>
+		<ArmorSet
+			Armor="GDIOxArmor"
+			DamageFX="VehicleDamageFX"
+			id="Armor" />
+		<LocomotorSet
+			Locomotor="GDIDropshipLocomotor"
+			Condition="NORMAL"
+			Speed="160.0"
+			id="Locomotor_Normal" />
+		<LocomotorSet
+			Locomotor="BasicHelicopterTaxiLocomotor"
+			Condition="TAXIING"
+			Speed="160.0"
+			id="Locomotor_Taxi" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				ExtraPublicBone="BONEGARRISON"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUDropShip_SKN" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GUDropShip_SKN" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagesmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GUDropShip_SKN" />
+					<Texture
+						Original="GuDropShip"
+						New="GuDropShipD" />
+					<ParticleSysBone
+						BoneName="FX_Lfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcaexhaust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagefire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="oxdamagesmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="GUDropShipR_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUDropShip_FP" />
+				</ModelConditionState>					
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="GUDropShip_IDLA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT_HIGH_SPEED">
+					<Animation
+						AnimationName="GUDropShip_HSTL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT_HIGH_SPEED">
+					<Animation
+						AnimationName="GUDropShip_HSTR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT">
+					<Animation
+						AnimationName="GUDropShip_TRNL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT">
+					<Animation
+						AnimationName="GUDropShip_TRNR"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="GUDropShip_ACCL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="GUDropShip_DECL"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimationName="GUDropShip_FLYA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DOOR_1_OPENING">
+					<Animation
+						AnimationName="GUDropShip_OPNA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DOOR_1_CLOSING">
+					<Animation
+						AnimationName="GUDropShip_CLSA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_Particles"
+				OkToChangeModelColor="true"
+				ExtraPublicBone="FX_Lfan FX_Rfan">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					Skeleton="">
+					<Model
+						Name="" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AirborneTransportRangefinder" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlating"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlatingSteelTalons"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlatingZOCOM"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<Physics
+				id="ModuleTag_07" />
+			<ProductionUpdate
+				id="ModuleTag_10"
+				MaxQueueEntries="1" />
+			<FlammableUpdate
+				id="ModuleTag_21"
+				AflameDuration="5s"
+				AflameDamageAmount="3"
+				AflameDamageDelay=".5s" />
+			<HordeTransportContain
+				id="ModuleTag_Contain"
+				ObjectStatusOfContained="UNSELECTABLE ENCLOSED"
+				ContainMax="1"
+				Slots="1"
+				AllowEnemiesInside="false"
+				AllowAlliesInside="false"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="VehicleEnter"
+				ExitSound="VehicleExit"
+				KillPassengersOnDeath="true"
+				FlyOffMapOnEmpty="true"
+				ExtendedExitContainerChecks="true">
+				<PassengerFilter
+					Rule="ANY"
+					Include="INFANTRY" />
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="BONEGARRISON">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</PassengerData>
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+			</HordeTransportContain>
+			<MoveToPositionAndEvacuateSpecialPower
+				id="ModuleTag_MoveToPositionAndEvacuate"
+				SpecialPowerTemplate="SpecialPowerMoveToPositionAndEvacuate" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="0s"
+				SinkRate="0.5"
+				DestructionDelay="0s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIDropShipDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<FX Type="INITIAL">
+					<FX>FX_GDI_Ox_VoiceDie</FX>
+				</FX>
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIAirVehicleExplode" />
+			</FXListBehavior>
+		</Behaviors>
+		<AI>
+			<TransportHelicopterAIUpdate
+				id="ModuleTag_06"				
+				FlyOffMapOnUnload="true"
+				DelayAFterLoadingOrUnloading="2s">
+			</TransportHelicopterAIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_04"
+				MaxHealth="2500.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="ModuleTag_ASCB">
+				<!-- frames may need to be tuned -->
+				<Sound
+					Sound="AudioEvent:V35DropShipCloseDoors"
+					Animation="GUDropShip_CLSA"
+					Frame="1" />
+				<Sound
+					Sound="AudioEvent:V35DropShipOpenDoors"
+					Animation="GUDropShip_OPNA"
+					Frame="1" />
+			</AnimationSoundClientBehavior>
+			<ModelConditionAudioLoopClientBehavior
+				id="ModuleTag_TakeoffLanding">
+				<ModelConditionSound
+					Sound="AudioEvent:V35DropShipLand"
+					RequiredFlags="LANDING" />
+				<ModelConditionSound
+					Sound="AudioEvent:V35DropShipTakeOff"
+					RequiredFlags="TAKING_OFF" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="37.0"
+				MinorRadius="3.0"
+				Height="25.0"></Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="8.0"
+				MinorRadius="30.0"
+				Height="25.0">
+				<Offset
+					x="-7.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:GDI_Ox_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Ox_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_Ox_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:GDI_Ox_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<NamedEntry
+				Sound="AudioEvent:GDI_Ox_VoiceDropoff"
+				Name="InitiateMoveToPositionAndEvacuate" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:V35DropShipMoveLoop"
+				AudioType="soundMoveLoop" />
+			<AudioEntry
+				Sound="AudioEvent:V35DropShipIdleLoop"
+				AudioType="soundAmbient" />
+			<AudioEntry
+				Sound="AudioEvent:V35DropShipMoveStart"
+				AudioType="soundMoveStart" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="180"
+			ShroudClearingRange="600" />
+		<CrusherInfo
+			CrusherLevel="0"
+			CrushEqualLevelProps="true"
+			/>
+	</GameObject>
+</AssetDeclaration>

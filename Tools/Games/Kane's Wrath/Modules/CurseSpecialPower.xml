@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CurseSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryReference
+			id="TriggerFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="CurseFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="CurseFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="AffectObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="CurseAllPlayerPowers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

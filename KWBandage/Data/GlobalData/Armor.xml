@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--Increased Armor Upgrade Gun Damage for missile soldier, for consistency to the default armor-->
+	<ArmorTemplate
+		id="GDIMissileSoldierArmorComposite"
+		SideDamageScalar="100"
+		RearDamageScalar="100">
+		<Armor
+			Damage="CANNON"
+			Percent="12" />
+		<Armor
+			Damage="ROCKET"
+			Percent="12" />
+		<Armor
+			Damage="GRENADE"
+			Percent="40" />
+		<Armor
+			Damage="GUN"
+			Percent="75" />
+		<Armor
+			Damage="SNIPER"
+			Percent="100" />
+	</ArmorTemplate>
+	<ArmorTemplate
+		id="ZOCOMMissileSoldierFieldSuits"
+		SideDamageScalar="100"
+		RearDamageScalar="100">
+		<Armor
+			Damage="CANNON"
+			Percent="12" />
+		<Armor
+			Damage="ROCKET"
+			Percent="12" />
+		<Armor
+			Damage="GRENADE"
+			Percent="40" />
+		<Armor
+			Damage="GUN"
+			Percent="75" />
+		<Armor
+			Damage="SNIPER"
+			Percent="100" />
+		<Armor
+			Damage="TIBERIUM"
+			Percent="0" />
+	</ArmorTemplate>
+	<!--Normalised Tiberium Infused Armor Gun Damage for Fanatic to unupgraded armor-->
+	<ArmorTemplate
+		id="NODFanaticArmor_TiberiumInfused">
+		<Armor
+			Damage="CANNON"
+			Percent="25" />
+		<Armor
+			Damage="ROCKET"
+			Percent="25" />
+		<Armor
+			Damage="GRENADE"
+			Percent="75" />
+		<Armor
+			Damage="GUN"
+			Percent="200" />
+		<Armor
+			Damage="SNIPER"
+			Percent="100"/>
+		<Armor
+			Damage="TIBERIUM"
+			Percent="0" />
+	</ArmorTemplate>
+	<!--New Tiberium Infused Armor for Rocket Soldier, This is to normalise armor values to unupgraded values-->
+	<ArmorTemplate
+		id="NODRocketMilitantArmor_TiberiumInfused">
+		<Armor
+			Damage="TIBERIUM"
+			Percent="0" />
+		<Armor
+			Damage="CANNON"
+			Percent="25" />
+		<Armor
+			Damage="ROCKET"
+			Percent="50" />
+		<Armor
+			Damage="GRENADE"
+			Percent="75" />
+		<Armor
+			Damage="GUN"
+			Percent="150" />
+		<Armor
+			Damage="SNIPER"
+			Percent="100"/>	
+	</ArmorTemplate>
+</AssetDeclaration>

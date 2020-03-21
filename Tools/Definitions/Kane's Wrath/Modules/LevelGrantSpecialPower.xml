@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LevelGrantSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="Experience"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RadiusEffect"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="LevelFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AcceptanceFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

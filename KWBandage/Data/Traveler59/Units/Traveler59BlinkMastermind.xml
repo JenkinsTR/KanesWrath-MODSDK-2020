@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!--Fixed AI Usage of Area Mind Control-->
+	<GameObject
+		id="Traveler59BlinkMastermind"
+		inheritFrom="BaseInfantry"
+		SelectPortrait="Portrait_AlienBlinkMastermind"
+		ButtonImage="Portrait_AlienBlinkMastermind"
+		Side="Traveler59"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="2500"
+		BuildTime="25"
+		CommandSet="Traveler59BlinkMastermindCommandSet"
+		IsTrainable="true"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY SCORE UNIQUE_UNIT PATH_THROUGH_INFANTRY HEALED_BY_TIBERIUM SKIRMISH_AI_DONT_GARRISON CAN_PLACE_MANIPULATOR CAN_CAPTURE SNIPER CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		UnitCategory="INFANTRY"
+		WeaponCategory="GUN"
+		BuildCompletion="APPEARS_AT_RALLY_POINT"
+		ProductionQueueType="INFANTRY"
+		VoicePriority="114"
+		EditorName="Traveler59BlinkMastermind"
+		Description="Desc:Traveler59BlinkMastermind"
+		TypeDescription="Type:Traveler59BlinkMastermind"
+		UnitTypeIcon="CommandoIcon"
+		MaxSimultaneousOfType="1">
+		<DisplayName>NAME:Traveler59BlinkMastermind</DisplayName>
+		<GameDependency>
+			<RequiredObject>Traveler59StatisChamber</RequiredObject>
+			<RequiredObject>Traveler59Reactor</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlienMastermindArmor"
+			DamageFX="InfantryAlienDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="90" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUProdigy_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_Gun" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_Gun" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXCommando_FP" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<Model
+						Name="GUGarGun" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE01" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- no anim -->
+				</AnimationState>				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					StateName="STATE_bored"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="AUMstrmind_BIDA"
+						AnimationMode="LOOP" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED">
+					<Animation
+						AnimationName="AUMstrmind_CDTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED">
+					<Animation
+						AnimationName="AUMstrmind_CDTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="AUMstrmind_DIEA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING FIRING_OR_PREATTACK_A"
+					StateName="STATE_Run"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="AUMstrmind_RUNA"
+						AnimationMode="LOOP"
+						Distance="40" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_OR_PREATTACK_A AIM_HIGH"
+					FrameForPristineBonePositions="5">
+					<Animation
+						AnimationName="AUMstrmind_ATKB"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_OR_PREATTACK_A"
+					FrameForPristineBonePositions="5">
+					<Animation
+						AnimationName="AUMstrmind_ATKA"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					StateName="STATE_Run"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="AUMstrmind_RUNA"
+						AnimationMode="LOOP"
+						Distance="40" />
+					<Animation
+						AnimationName="AUMstrmind_RUNB"
+						AnimationMode="LOOP"
+						Distance="40" />
+				</AnimationState>
+				<!-- SELECTED -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					StateName="STATE_Selected">
+					<Animation
+						AnimNickName="ATNB"
+						AnimationName="AUMstrmind_AIDA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+							if Prev == "STATE_bored" then CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end;
+					</Script>
+				</AnimationState>
+				<!-- TRANSITIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_boredToAttention">
+					<Animation
+						AnimationName="AUMstrmind_BATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_attentionToBored">
+					<Animation
+						AnimationName="AUMstrmind_ABTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="AUMstrmind_BATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="AUMstrmind_ABTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<CrushDie
+				id="ModuleTAg_CrushDie">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			<FXListBehavior
+				id="SquishedFXPlayer">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="10"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienPlaceManipulatorDeviceWeaponTrigger" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100" />
+			<SpecialPower
+				id="ModuleTag_TeleportSpecialPower"
+				SpecialPowerTemplate="SpecialPower_UseTraveler59BlinkPack"
+				UpdateModuleStartsAttack="true"
+				StartsPaused="false"
+				AttributeModifierFX="FX_AlienInfantryHitFX" />
+			<TeleportSpecialAbilityUpdate
+				id="ModuleTag_TeleportSpecialAbility"
+				SpecialPowerTemplate="SpecialPower_UseTraveler59BlinkPack"
+				DestinationWeapon="AlienShockTrooperBlinkWeapon2"
+				SourceWeapon="AlienShockTrooperBlinkWeapon"
+				FadeInTime="2s"
+				UnpackTime="1s"
+				PackTime="1s"
+				BusyDuration="1.5s"
+				MaxDistance="750"
+				StartAbilityRange="750"
+				UnpackingVariation="1" />
+			<!-- Manipulator control -->
+			<SpecialPower
+				id="ModuleTag_ManipulatorDevice"
+				SpecialPowerTemplate="SpecialPower_ManipulateObject"
+				AvailableAtStart="false"
+				UpdateModuleStartsAttack="true" />
+			<ActivateModuleSpecialPower
+				id="ModuleTag_ManipulatorDeviceUpdate"
+				SpecialPowerTemplate="SpecialPower_ManipulateObject"
+				StartAbilityRange="200"
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE">
+				<SpecialPowerModules
+					ModuleId="ModuleTag_ManipulatorDeviceWorker"
+					TriggerType="TARGET_OBJECT" />
+			</ActivateModuleSpecialPower>
+			<TemporaryOwnerSpecialPower
+				id="ModuleTag_ManipulatorDeviceWorker"
+				SpecialPowerTemplate="SpecialPowerDummyTriggered3"
+				UpdateModuleStartsAttack="false" />
+			<!-- AOE mind control power -->
+			<SpecialPower
+				id="ModuleTag_AOEMindControl"
+				SpecialPowerTemplate="SpecialPower_AOEMindControl"
+				AvailableAtStart="true" 
+				UpdateModuleStartsAttack="true" />
+			<DominateEnemySpecialPower
+				id="ModuleTag_AOEMindControlUpdate"
+				SpecialPowerTemplate="SpecialPower_AOEMindControl"
+				DominateRadius="50"
+				TriggerFX="FX_AlienAOEMindControlHit"
+				DominatedFX="FX_AlienAOEMindControlDominatedHit"
+				FiringFX="FX_AlienAOEMindControlFire" 
+				PermanentlyConvert="false">
+				<AttributeModifierAffects
+					Rule="ALL"
+					Relationship="ENEMIES NEUTRAL"
+					Exclude="CIVILIAN_BUILDING STRUCTURE METAUNIT SUPER_WEAPON BRIDGE BRIDGE_SEGMENT BRIDGE_ENDCAP BRIDGE_GATEHOUSE CRATE TIBERIUM TIBERIUM_FIELD CAN_TOPPLE SIMPLE_OBJECT_PROP OPTIMIZED_PROP WALL_HUB WALL_SEGMENT">
+					<ExcludeThing>SubwayNode</ExcludeThing>
+					<ExcludeThing>AlienMastermind</ExcludeThing>
+					<ExcludeThing>Traveler59BlinkMastermind</ExcludeThing>
+					<ExcludeThing>GDICommando</ExcludeThing>
+					<ExcludeThing>NODCommando</ExcludeThing>
+					<ExcludeThing>BlackHandCommando</ExcludeThing>
+					<ExcludeThing>ZOCOMCommando</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneCommando</ExcludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>AlienWormHole</ExcludeThing>
+					<ExcludeThing>GDIJuggernaughtHusk</ExcludeThing>
+					<ExcludeThing>NODAvatarHusk</ExcludeThing>
+					<ExcludeThing>BlackHandCustomWarmechHusk</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneAvatarHusk</ExcludeThing>
+					<ExcludeThing>AlienAnnihilatorTripodHusk</ExcludeThing>
+					<ExcludeThing>Reaper17AnnihilatorTripodHusk</ExcludeThing>
+					<ExcludeThing>Traveler59AnnihilatorTripodHusk</ExcludeThing>
+					<ExcludeThing>AlienMothership</ExcludeThing>
+					<!-- defense structures. Couldn't use FS_BASE_DEFENSE because it would've included GDI forward battle base-->
+					<ExcludeThing>AlienBuzzerHive</ExcludeThing>
+					<ExcludeThing>AlienLightningSpike</ExcludeThing>
+					<ExcludeThing>AlienPhotonCannon</ExcludeThing>
+					<ExcludeThing>AlienPlasmaMissileBattery</ExcludeThing>
+					<ExcludeThing>AlienStormColumn</ExcludeThing>
+					<ExcludeThing>Reaper17BuzzerHive</ExcludeThing>
+					<ExcludeThing>Reaper17LightningSpike</ExcludeThing>
+					<ExcludeThing>Reaper17PhotonCannon</ExcludeThing>
+					<ExcludeThing>Reaper17PlasmaMissileBattery</ExcludeThing>
+					<ExcludeThing>Reaper17StormColumn</ExcludeThing>
+					<ExcludeThing>Traveler59BuzzerHive</ExcludeThing>
+					<ExcludeThing>Traveler59LightningSpike</ExcludeThing>
+					<ExcludeThing>Traveler59PhotonCannon</ExcludeThing>
+					<ExcludeThing>Traveler59PlasmaMissileBattery</ExcludeThing>
+					<ExcludeThing>Traveler59StormColumn</ExcludeThing>
+					<ExcludeThing>GDIAABattery</ExcludeThing>
+					<ExcludeThing>GDIGolumCannon</ExcludeThing>
+					<ExcludeThing>GDITerraformingStation</ExcludeThing>
+					<ExcludeThing>GDIWatchTower</ExcludeThing>
+					<ExcludeThing>GDIPillBox</ExcludeThing>
+					<ExcludeThing>SteelTalonsAABattery</ExcludeThing>
+					<ExcludeThing>SteelTalonsGolumCannon</ExcludeThing>
+					<ExcludeThing>SteelTalonsWatchTower</ExcludeThing>
+					<ExcludeThing>ZOCOMAABattery</ExcludeThing>
+					<ExcludeThing>ZOCOMGolumCannon</ExcludeThing>
+					<ExcludeThing>ZOCOMTerraformingStation</ExcludeThing>
+					<ExcludeThing>ZOCOMWatchTower</ExcludeThing>
+					<ExcludeThing>NODObelisk</ExcludeThing>
+					<ExcludeThing>NODDisruptionTower</ExcludeThing>
+					<ExcludeThing>NODLaserCannon</ExcludeThing>
+					<ExcludeThing>NODLaserCannonSpawn</ExcludeThing>
+					<ExcludeThing>NODRocketBunker</ExcludeThing>
+					<ExcludeThing>NODRocketBunkerSpawn</ExcludeThing>
+					<ExcludeThing>NODShredderTurretHub</ExcludeThing>
+					<ExcludeThing>NODShredderTurret</ExcludeThing>
+					<ExcludeThing>BlackHandObelisk</ExcludeThing>
+					<ExcludeThing>BlackHandLaserCannon</ExcludeThing>
+					<ExcludeThing>BlackHandLaserCannonSpawn</ExcludeThing>
+					<ExcludeThing>BlackHandRocketBunker</ExcludeThing>
+					<ExcludeThing>BlackHandRocketBunkerSpawn</ExcludeThing>
+					<ExcludeThing>BlackHandShredderTurretHub</ExcludeThing>
+					<ExcludeThing>BlackHandShredderTurret</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneObelisk</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneDisruptionTower</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneLaserCannon</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneLaserCannonSpawn</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneRocketBunker</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneRocketBunkerSpawn</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneShredderTurretHub</ExcludeThing>
+					<ExcludeThing>MarkedOfKaneShredderTurret</ExcludeThing>
+					<ExcludeThing>Traveler59Cultist</ExcludeThing>
+					<ExcludeThing>Traveler59CultistSquad</ExcludeThing>
+					<!-- SP missions -->
+					<ExcludeThing>ABTower</ExcludeThing>
+				</AttributeModifierAffects>
+			</DominateEnemySpecialPower>
+			<!-- Teleport units power -->
+			<SpecialPower
+				id="ModuleTag_StoreObjectsSpecialPower"
+				SpecialPowerTemplate="SpecialPowerProdigyTeleportObjectSelect" />
+			<StoreObjectsSpecialPowerUpdate
+				id="ModuleTag_StoreObjectsSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerProdigyTeleportObjectSelect"
+				Radius="50" />
+			<SpecialPower
+				id="ModuleTag_TeleportStoredObjectsSpecialPower"
+				SpecialPowerTemplate="SpecialPowerProdigyTeleportObject"
+				UpdateModuleStartsAttack="true" />
+			<TeleportToCasterSpecialPower
+				id="ModuleTag_TeleportStoredObjectsSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerProdigyTeleportObject"
+				RequireStoredObjects="false"
+				TriggerFX="FX_AlienMMTP"
+				KillObjectsIfPlacedInBadSpot="true"
+				MinDestinationRadius="0"
+				MaxDestinationRadius="50" />
+			<Physics
+				id="ModuleTag_Physics" />
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+			</EmotionTrackerUpdate>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="5s"
+				SinkRate="2.4"
+				DestructionDelay="6.5s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Sound
+					Type="INITIAL"
+					List="ALI_Prodigy_DieMS" />
+			</SlowDeath>
+			<AISpecialPowerUpdate
+				id="ModuleTag_AlienMastermindTeleportAI"
+				CommandButtonName="Command_Traveler59ProdigySelectObjectsForTeleport"
+				SpecialPowerAIType="SPECIAL_POWER_AOE_BUFF"
+				MinimumCutoff="10" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_ProdigyAOEControl"
+				CommandButtonName="Command_AlienBlinkMastermindAOEMindControl"
+				SpecialPowerRadius="400"
+				UnitKindOf="VEHICLE INFANTRY"
+				EnemyUnitExclude="STRUCTURE AIRCRAFT"
+				SpecialPowerAIType="SPECIAL_POWER_RANGED_AOE_ATTACK" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_AlienProdigyManipulator"
+				CommandButtonName="Command_AlienProdigyManipulatorDevice"
+				UnitKindOf="FS_FACTORY"
+				SpecialPowerAIType="SPECIAL_POWER_CAPTURE_BUILDING" />
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onBecomingTemporaryOwner"
+					FX="FX_MasterMindLinkFX" />
+			</FXListBehavior>
+			<AimWeapon
+				id="ModuleTag_AimWeapon"
+				AimHighThreshold="0.5"/>
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO">
+				<UnitAITargetChooserData
+					SympathyRange="25.0"
+					CanPickDynamicTargets="false"/>
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1250" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"/>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundMindControl" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundGarrison" AudioType="voiceGarrison" />
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundMove" AudioType="voiceGuard" />
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_SoundSelect" AudioType="voiceSelect" />
+			<NamedEntry Sound="AudioEvent:ALI_Prodigy_SoundAreaMindControl" Name="InitiateAreaMindControl" />
+			<NamedEntry Sound="AudioEvent:ALI_Prodigy_SoundBlink" Name="BlinkPack" />
+			<NamedEntry Sound="AudioEvent:ALI_Prodigy_SoundMindControl" Name="InitiateManipulateObject" />
+			<NamedEntry Sound="AudioEvent:ALI_Prodigy_SoundTeleportUnit" Name="TeleportObject" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:ALI_Prodigy_MoveStart" AudioType="soundMoveStart" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="250"
+			ShroudClearingRange="200" />
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted"
+			EvaEnemyObjectSightedEvent="EnemyCommandoDetected" />
+		<CrusherInfo
+			CrushableLevel="3" />		
+	</GameObject>
+</AssetDeclaration>

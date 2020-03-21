@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ModelConditionUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="AddConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RemoveConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AddTempConditionFlag"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="TempConditionTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+	</Asset>
+
+</AssetDefinition>

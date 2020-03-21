@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UIMouseTacticalQuickChatDisplayChatDestination">
+		<Entry>Allies</Entry>
+		<Entry>Everyone</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="UIMouseTacticalQuickChatDisplayCloseItem">
+		<Entry
+			id="Title"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="UIMouseTacticalQuickChatDisplayMenuItemChatMessage">
+		<EntryWeakReference
+			id="MessageRef"
+			AssetType="QuickChatMessageWeakRef"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="UIMouseTacticalQuickChatDisplayMenuItemChatMessageGroup">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			Default="Neutral" />
+		<EntryList
+			id="ChatMessage"
+			AssetType="UIMouseTacticalQuickChatDisplayMenuItemChatMessage"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="UIMouseTacticalQuickChatDisplayMenuItem">
+		<Entry
+			id="Title"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="ChatDestination"
+			AssetType="UIMouseTacticalQuickChatDisplayChatDestination"
+			IsAttribute="true" />
+		<EntryList
+			id="ChatMessageGroup"
+			AssetType="UIMouseTacticalQuickChatDisplayMenuItemChatMessageGroup"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="MenuItem"
+			AssetType="UIMouseTacticalQuickChatDisplayMenuItem"
+			MinLength="0"
+			MaxLength="9" />
+		<EntryRelocation
+			id="CloseMenuItem"
+			AssetType="UIMouseTacticalQuickChatDisplayCloseItem" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalQuickChatDisplay"
+		TypeHash="884927254">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="CloseKey"
+			AssetType="HotKeySlot"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="DelayDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="MenuItem"
+			AssetType="UIMouseTacticalQuickChatDisplayMenuItem"
+			MinLength="1"
+			MaxLength="9" />
+		<Entry
+			id="CloseMenuItem"
+			AssetType="UIMouseTacticalQuickChatDisplayCloseItem" />
+	</GameAsset>
+
+</AssetDefinition>

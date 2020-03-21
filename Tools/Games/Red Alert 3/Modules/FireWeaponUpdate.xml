@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FireWeaponUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="FireInterval"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="ActiveWhenDisabled"
+			AssetType="DisabledBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="FireWeaponNugget"
+			MinLength="0"
+			MaxLength="0"
+			AssetType="FireWeaponNuggetType" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<Entry
+			id="AliveOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FireWeaponNuggetType">
+		<EntryReference
+			id="WeaponName"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="FireDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Vector3" />
+		<Entry
+			id="OneShot"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

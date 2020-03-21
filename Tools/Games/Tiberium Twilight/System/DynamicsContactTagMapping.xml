@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ContactTagMapping">
+		<Entry
+			id="ContactA"
+			AssetType="DynamicsContactTag"
+			IsAttribute="true" />
+		<Entry
+			id="ContactB"
+			AssetType="DynamicsContactTag"
+			IsAttribute="true" />
+		<Entry
+			id="MinForce"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.2" />
+		<EntryReference
+			id="FX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="DynamicsContactTagMapping"
+		TypeHash="898281629">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<EntryList
+			id="Mapping"
+			AssetType="ContactTagMapping"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TunnelContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="HordeGarrisonContainModuleData" />
+		<EntryWeakReference
+			id="TunnelMasterObject"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="DeleteRemoved"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

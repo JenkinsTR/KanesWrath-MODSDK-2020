@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UpgradeSoundSelectorOverrideBlock">
+		<Entry
+			id="RequiredModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ConflictingModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="VoicePriorityOverride"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AudioArrayVoice"
+			AssetType="AudioArrayVoice" />
+		<EntryRelocation
+			id="AudioArraySound"
+			AssetType="AudioArraySound" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ConflictingUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="UpgradeSoundSelectorClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientBehaviorModuleData" />
+		<EntryList
+			id="Override"
+			AssetType="UpgradeSoundSelectorOverrideBlock"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

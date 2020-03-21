@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--Spawns Marked Of Kane Husk instead Nod Husk-->
+	<ObjectCreationList
+		id="MarkedOfKaneAvatarDieOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES PRESERVE_LAYER"
+			Disposition="LIKE_EXISTING"
+			TempModelCondition="USER_2"
+			TempModelConditionTime="4.0s"
+			InvulnerableTime="4s" 
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>MarkedOfKaneAvatarHusk</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Spawns Reaper17 or Traveller59 Buzzers-->
+	<ObjectCreationList
+		id="OCL_Reaper17Buzzers">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="5" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="51d"
+			DispositionIntensity="80">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_Traveler59Buzzers">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="5" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="51d"
+			DispositionIntensity="80">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Reaper17Buzzer-->
+	<ObjectCreationList
+		id="OCL_ConyardReaper17BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>AlienAssimilator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	
+	<!--Replace AlienBuzzer with Traveler59Buzzer-->
+	<ObjectCreationList
+		id="OCL_ConyardTraveler59BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Assimilator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--MinHealth Normalised to other factions-->
+	<ObjectCreationList
+		id="OCL_GenericMarkedOfKaneBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="34%"
+			MaxHordeDensity="35%">
+			<CreateObject>MOKCyborgInfantrySquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Reaper17Buzzer-->
+	<ObjectCreationList
+		id="OCL_GenericReaper17BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericReaper17BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Traveler59Buzzer-->
+	<ObjectCreationList
+		id="OCL_GenericTraveler59BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericTraveler59BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Spawns Marked Of Kane Shadow Teams-->
+	<ObjectCreationList
+		id="OCL_SpecialPowerMarkedOfKaneRedShadowStrikeTeam">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="LIKE_EXISTING"
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="0"
+				y="0"
+				z="100"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="LIKE_EXISTING"
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="-20"
+				y="50"
+				z="100"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!--Behemoth Animation Quick Fix-->
+	<!--ObjectCreationList
+		id="SteelTalonsBehemothHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="LIKE_EXISTING"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="4s"
+			StartingBusyTime="3.0s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>SteelTalonsBehemoth</CreateObject>
+		</CreateObject>
+	</ObjectCreationList-->
+	
+	<!--Create New Reaper17 ShockTrooper instead of Alien-->
+	<ObjectCreationList
+		id="OCL_AlienShockPods">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="3" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="120d"
+			DispositionIntensity="80">
+			<CreateObject>Reaper17ShockTrooperSquad_Veteran</CreateObject>
+		</CreateObject>	
+	</ObjectCreationList>
+
+</AssetDeclaration>

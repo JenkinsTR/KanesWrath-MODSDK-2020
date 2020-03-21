@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="BezierProjectileType">
+		<Entry>MISSILE</Entry>
+		<Entry>TORPEDO</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="BezierProjectileFlag">
+		<Entry>TUMBLE_RANDOMLY</Entry>
+		<Entry>DETONATE_CALLS_KILL</Entry>
+		<Entry>ORIENT_TO_FLIGHT_PATH</Entry>
+		<Entry>CRUSH_STYLE</Entry>
+		<Entry>NO_DETONATE</Entry>
+		<Entry>DIE_ON_IMPACT</Entry>
+		<Entry>IGNORE_TERRAIN_HEIGHT</Entry>
+		<Entry>PING_PONG_SIDEWAYS_DRIFT</Entry>
+		<Entry>ADJUST_STRAIGHT_ONLY</Entry>
+		<Entry>DONT_DIE_ON_DETONATE</Entry>
+		<Entry>DONT_SET_NO_ATTACK_STATUS</Entry>
+		<Entry>DONT_TRACK_TARGET</Entry>
+		<Entry>DETONATE_ON_APEX</Entry>
+		<Entry>USE_ATTACHPOS_ON_VICTIM</Entry>
+		<Entry>IGNORE_CONTACT_POINTS</Entry>
+		<Entry>TARGET_OFFSET_ALONG_TARGET_VECTOR</Entry>
+		<Entry>FIRE_STRAIGHT_THEN_CURVE</Entry>
+		<Entry>DONT_DETONATE_WITHOUT_COLLISION</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="BezierProjectileBitFlag"
+		BaseEnum="BezierProjectileFlag" />
+
+	<Asset
+		id="BezierProjectileBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Flags"
+			AssetType="BezierProjectileBitFlag"
+			IsAttribute="true"
+			Default="PING_PONG_SIDEWAYS_DRIFT" />
+		<Entry
+			id="Type"
+			AssetType="BezierProjectileType"
+			IsAttribute="true"
+			Default="MISSILE" />
+		<Entry
+			id="FireStraightDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstHeightMin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstHeightMax"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeightMin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeightMax"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="SecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="FinalStuckTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingStateTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="BounceCount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="BounceDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceFirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceSecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceFirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="BounceSecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillRequiredKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillForbiddenKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="GarrisonHitKillFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundHitFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="MaxDistanceReachedFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundBounceFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundHitWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundBounceWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="FlightPathAdjustDistPerSecond"
+			AssetType="Velocity"
+			IsAttribute="true" />
+		<Entry
+			id="FirstPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="SecondPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="CurveFlattenMinDist"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingEmotion"
+			AssetType="EmotionType"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingEmotionRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="InvisibleTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="FadeInTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingStateTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingEmotion"
+			AssetType="EmotionType"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingEmotionRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SidewaysDrift"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDistanceToTravel"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000000" />
+		<Entry
+			id="TargetVectorOffset"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Acceleration"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+</AssetDefinition>

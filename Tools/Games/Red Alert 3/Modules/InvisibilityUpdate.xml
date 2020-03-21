@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InvisibilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="InvisibilityTemplate"
+			AssetType="InvisibilityTemplateTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UpdatePeriod"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="RequiredNearbyObjectRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="NamedVoiceNameToUseAsVoiceMoveToStealthyArea"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NamedVoiceNameToUseAsVoiceEnterStateMoveToStealthyArea"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<Entry
+			id="RequiresNearbyObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

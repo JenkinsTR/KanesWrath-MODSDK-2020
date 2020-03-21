@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TargetedPlayerPowerButtonTemplateData">
+		<EntryInheritance
+			id="base"
+			AssetType="PlayerPowerButtonTemplateData" />
+		<Entry
+			id="ValidTargetCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="InvalidTargetCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusCursor"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

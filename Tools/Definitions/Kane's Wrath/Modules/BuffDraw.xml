@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DBuffDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DrawModuleData" />
+		<EntryReference
+			id="Model"
+			AssetType="BaseRenderAssetType"
+			IsAttribute="true" />
+		<Entry
+			id="PreDraw"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

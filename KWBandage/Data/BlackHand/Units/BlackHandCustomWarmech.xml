@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Removed Avatar Voice-->
+<!--Removed Avatar Special Abilities (For Convenience to the Coder)-->
+<!--Flame Tank will now display upgrade-->
+	<GameObject
+		id="BlackHandCustomWarmech"
+		SelectPortrait="Portrait_CustomWarmech"
+		ButtonImage="Portrait_CustomWarmech"
+		Side="BlackHand"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="3000"
+		BuildTime="30"
+		BuildFadeInOnCreateTimeSeconds="0.25s"
+		CommandSet="BlackHandCustomWarmechCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE VALID_TARGET_FOR_C4 VEHICLE CAN_SHOOT_OVER_WALLS CAN_BE_FAVORITE_UNIT ANTI_GARRISON"
+		RadarPriority="UNIT"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="CANNON"
+		VoicePriority="224"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s"
+		EditorName="BlackHandCustomWarmech"
+		Description="Desc:BlackHandCustomWarmech"
+		WorldMapArmoryUpgradesAllowed="Upgrade_BlackHandSecretShrinePurifyingFlame"
+		TypeDescription="Type:BlackHandCustomWarmech">
+		<DisplayName>Name:BlackHandCustomWarmech</DisplayName>
+		<DisplayUpgrade>Upgrade_BlackHandSecretShrinePurifyingFlame</DisplayUpgrade>
+		<GameDependency>
+			<RequiredObject>BlackHandTechAssemblyPlant</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NODAvatarArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="NODAvatarLocomotor"
+			Condition="NORMAL"
+			Speed="50.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				ExtraPublicBone="FT_Turret FT_Pitch NUBEAM B_CLAWHANDR">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NUMech_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_CLAWHANDR" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_CLAWHANDR" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="NUBEAM" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="SECONDARY_WEAPON"
+						BoneName="NUBEAM" />
+					<WeaponLaunchBone
+						WeaponSlotID="2"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FT_Turret" />
+					<Turret
+						TurretNameKey="FT_Turret"
+						TurretPitch="FT_Pitch"
+						TurretID="2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="NUPurifier_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_9">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier" />
+					<Texture
+						Original="NUFlameTank"
+						New="NUFlameTank_UG" />	
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_9">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier_D" />
+					<Texture
+						Original="NUFlameTank"
+						New="NUFlameTank_UGD" />	
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueFlashes"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueSpark"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_9">
+					<Model
+            			Name="NUMechR_SKN" />
+					<Texture
+						Original="NUMechD"
+						New="NUPurifier_D" />
+					<Texture
+						Original="NUFlameTank"
+						New="NUFlameTank_UGD" />	
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_9">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier" />	
+					<Texture
+						Original="NUFlameTank"
+						New="NUFlameTank_UG" />							
+				</ModelConditionState>
+				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_8">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						FollowBone="true" />						
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_8">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier_D" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectric"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedElectricFlash"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_ThighR"
+						FXParticleSystemTemplate="RedeemerDamagedSpurt"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueFlashes"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueSpark"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="Bone02"
+						FXParticleSystemTemplate="RedeemerDamageBlueZap"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_8">
+					<Model
+						Name="NUMechR_SKN" />
+					<Texture
+						Original="NUMechD"
+						New="NUPurifier_D" />						
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_UArmL"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FArmR"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="B_FlameTank"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_8">
+					<Model
+						Name="NUMech_SKN" />
+					<Texture
+						Original="NUMech"
+						New="NUPurifier" />							
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RANDOMSTART"
+					StateName="STATE_bored">
+					<Animation
+						AnimationName="NUMECH_BIDA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_SelectedPose" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
+					StateName="STATE_built">
+					<Animation
+						AnimationName="NUMECH_BLDA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NUMech_DIEB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15"/>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AFFECTED_BY_EMP">
+					<Animation
+						AnimationName="NUMECH_BIDA"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<!-- being fixed by engineer from being a husk -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_5"
+					StateName="STATE_Getup">
+					<Animation
+						AnimationName="NUMECH_GTPA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<!-- UPGRADE TRANSITIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1"
+					StateName="STATE_UpgradeAnimation">
+					<Animation
+						AnimationName="NUMECH_GRBD"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Getup" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_2"
+					StateName="STATE_UpgradeAnimation">
+					<Animation
+						AnimationName="NUMECH_GRBA"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Getup" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3"
+					StateName="STATE_UpgradeAnimation">
+					<Animation
+						AnimationName="NUMECH_GRBB"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Getup" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_4"
+					StateName="STATE_UpgradeAnimation">
+					<Animation
+						AnimationName="NUMECH_GRBC"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Getup" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="NUMECH_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT_HIGH_SPEED"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="NUMECH_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT">
+					<Animation
+						AnimationName="NUMECH_TRNL"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="0"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="20"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTR" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT">
+					<Animation
+						AnimationName="NUMECH_TRNR"
+						AnimationMode="LOOP" />
+					<FXEvent
+						Frame="0"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTR" />
+					<FXEvent
+						Frame="20"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTL" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="NUMECH_ACCL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="NUMECH_DECL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="MAINTAIN_FRAME_ACROSS_STATES">
+					<Animation
+						AnimationName="NUMECH_WLKA"
+						AnimationMode="LOOP"
+						Distance="45" 
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.0"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="NUMECH_WLKB"
+						AnimationMode="LOOP"
+						Distance="45" 
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.0"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="NUMECH_WLKC"
+						AnimationMode="LOOP"
+						Distance="45" 
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.0"
+						AnimationBlendTime="15" />
+					<FXEvent
+						Frame="1"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTL" />
+					<FXEvent
+						Frame="25"
+						FireWhenSkipped="true"
+						Effect="FX_NODAvatarFootprint"
+						Bone="B_FOOTR" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_built" then
+						CurDrawableSetTransitionAnimState("TRANS_built")
+						end
+					</Script>						
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A USER_10 WEAPONSLOTID_01">
+					<Animation
+						AnimationName="NUMECH_ATKB"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_B WEAPONSLOTID_01">
+					<Animation
+						AnimationName="NUMECH_ATKB"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A WEAPONSLOTID_01">
+					<Animation
+						AnimationName="NUMECH_ATKA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING USER_10">
+					<Animation
+						AnimationName="NUMECH_ATKB"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ATTACKING">
+					<Animation
+						AnimationName="NUMECH_ATKA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<!-- SELECTED -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					StateName="STATE_SelectedPose">
+					<Animation
+						AnimationName="NUMECH_AIDA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_bored" then
+						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected")
+						end
+					</Script>
+				</AnimationState>
+				<!-- TRANSITIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="NUMECH_BATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="NUMECH_ABTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<!--   Transitions -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_built">
+					<Animation
+						AnimationName="NUMECH_BLDA"
+						AnimationBlendTime="0"
+						AnimationMode="ONCE"></Animation>
+				</AnimationState>
+			</ScriptedModelDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_DrawFX"
+				AttachToBoneInAnotherModule="FT_Pitch">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXInvisBone" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_8">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankGround"
+						FollowBone="true" />
+				</AnimationState>
+			</ScriptedModelDraw>
+
+			<!-- default laser -->
+			<LaserDraw
+				id="ModuleTag_LaserDraw1"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".03"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="1">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03" />					
+			</LaserDraw>
+			<LaserDraw
+				id="ModuleTag_LaserDistort1"
+				UseDistortionShader="true"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".01"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="1"
+				LaserWidth="50"
+				WeaponSlotID="1"
+				LaserStateID="1">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<!-- commandeer'd beam -->
+			<LaserDraw
+				id="ModuleTag_LaserDraw2"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".03"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="2">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					ForbiddenStatus="WEAPON_UPGRADED_03" />					
+			</LaserDraw>
+			<LaserDraw
+				id="ModuleTag_LaserDistort2"
+				UseDistortionShader="true"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".01"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="1"
+				LaserWidth="50"
+				WeaponSlotID="1"
+				LaserStateID="2">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXRailGunCoreDistortion</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXRailGunCoreMask</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+
+<!-- Veterancy -->
+			
+			<LaserDraw
+				id="ModuleTag_LaserDraw1_Veterancy"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".03"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="1">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaserHeroic</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03" />					
+			</LaserDraw>			
+			<LaserDraw
+				id="ModuleTag_LaserDraw2_Veterancy"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".03"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate="1"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="20"
+				WeaponSlotID="1"
+				LaserStateID="2">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXObeliskLaserHeroic</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXLaserOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_03" />					
+			</LaserDraw>			
+
+			<SpotlightDraw
+				id="ModuleTag_Spotlight"
+				AttachToBoneInAnotherModule="s_generator"
+				RefreshTime="2.0s"
+				SweepTime="1.0s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXspotlight" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- Draw nothing when in Formation Preview -->
+					<Model
+						Name="" />
+				</ModelConditionState>
+			</SpotlightDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_DrawUpgradedFlameFX"
+				AttachToBoneInAnotherModule="FT_Pitch">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXInvisBone" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A WEAPONSLOTID_02 USER_9">
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingAdd02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingStart"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingDistort"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="INVISBONE01"
+						FXParticleSystemTemplate="FlameTankPurifyingGround"
+						FollowBone="true" />
+				</AnimationState>
+			</ScriptedModelDraw>		
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Selected_Repair_Decal"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED">
+					<Model Name="FXInvisBone" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL"
+						SizeX="300"
+						SizeY="300"
+						OverrideLODVisibility="true"
+						MaxHeight="200"
+						UseHouseColor="true"
+						Texture="Decal_LeadershipBuff" 
+						LocalPlayerOnly="true"
+					/>
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="true"
+					InterleavedStyle="INTERLEAVE_RANDOM">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODAvatarLaser" />
+					<Weapon
+						Ordering="SECONDARY_WEAPON"
+						Template="NODAvatarBeamCannonLaser"
+						ObjectStatus="WEAPON_UPGRADED_02" />
+				</WeaponSlotHardpoint>
+				<WeaponSlotTurret
+					ID="2">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BlackHandCustomWarmechFlamer" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="BlackHandCustomWarmechUpgradedFlamer"
+						ObjectStatus="WEAPON_UPGRADED_01" />
+					<TurretSettings
+						TurretTurnRate="180"
+						TurretPitchRate="60"
+						AllowsPitch="true"
+						MinimumPitch="-45d"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="2.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<ModelConditionUpgrade
+				id="ModuleTag_BlackHandNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_GDINormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_NODNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_NODFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_AlienNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_AlienFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_SteelTalonsNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_Reaper17NormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_Reaper17Faction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ZOCOMNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_MarkedOfKaneNormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_MarkedOfKaneFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_Traveler59NormalFlameUpgrade"
+				AddConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_Traveler59Faction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_PurifyingFlameUpgrade"
+				AddConditionFlags="USER_9"
+				RemoveConditionFlags="USER_8">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</ModelConditionUpgrade>
+			<LaserState
+				id="ModuleTag_DefaultLaserState"
+				LaserId="1" />
+			<LaserState
+				id="ModuleTag_BeamLaserState"
+				LaserId="2" />
+			<Physics
+				id="ModuleTag_Physics" />
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_NOD_AvatarExplodeWithVoice" />
+			</FXListBehavior>
+			<StatusBitsUpgrade
+				id="ModuleTag_StatusBitUpgradeFor01"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</StatusBitsUpgrade>
+			<!-- dying, spawn a husk -->
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="BlackHandCustomWarmechDieOCL">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<DestroyDie
+				id="ModuleTag_DestroyDie">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_03">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<AudioLoopUpgrade id="NOD_PurifyingFlame_Upgrade" SoundToPlay="Multisound:NOD_PurifyingFlame_UpgradeMS">
+				<TriggeredBy>Upgrade_BlackHandSecretShrinePurifyingFlame</TriggeredBy>
+			</AudioLoopUpgrade>
+			<AttributeModifierAuraUpdate
+				id="ModuleTag_AttributeModifierAuraUpdate"
+				AttributeModifierName="Confessor_Militant_AttributeModifier"
+			   	RefreshDelay="1.0s"
+			 	Range="150"
+				InitiallyActive="true">
+				<ObjectFilter
+       				Rule="ANY"
+       				Relationship="ALLIES"
+					Include="INFANTRY">                                     
+				</ObjectFilter>
+			</AttributeModifierAuraUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="BlackHandCustomWarmechFunctions">
+				<UnitAITargetChooserData />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="11000.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior
+				id="ModuleTag_ASCB">
+				<!-- <Sound Sound="NOD_Avatar_Bodyfall" Animation="NUMech_DIEB" Frame="79" /> why won't this work!!!? Dang it! -->
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Commandeer" Animation="NUMECH_GRBA" Frame="50" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Commandeer" Animation="NUMECH_GRBB" Frame="53" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Commandeer" Animation="NUMECH_GRBC" Frame="48" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Commandeer" Animation="NUMECH_GRBD" Frame="54" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_ABTA" Frame="22 44" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_AIDA" Frame="139 168" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_ACCL" Frame="14" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_BATA" Frame="16 31" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_DECL" Frame="15" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_GRBA" Frame="18 59" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_GRBB" Frame="17 60" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_GRBC" Frame="17 60" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_GRBD" Frame="18 59" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_GTPA" Frame="45 53 76" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_TRNL" Frame="22 45" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_TRNR" Frame="22 45" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_WLKA" Frame="1 25" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Footstep" Animation="NUMECH_WLKB" Frame="23 46" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short" Animation="NUMECH_GRBA" Frame="7 51" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long" Animation="NUMECH_GRBA" Frame="14 34 66" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short" Animation="NUMECH_GRBB" Frame="10 51" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long" Animation="NUMECH_GRBB" Frame="11 37" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short" Animation="NUMECH_GRBC" Frame="10 53" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long" Animation="NUMECH_GRBC" Frame="12 35" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short" Animation="NUMECH_GRBD" Frame="10 54" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long" Animation="NUMECH_GRBD" Frame="24 42" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Recovered2" Animation="NUMECH_GTPA" Frame="25" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_Recovered1" Animation="NUMECH_GTPA" Frame="50" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Short" Animation="NUMECH_AIDA" Frame="47 76 88" />
+				<Sound Sound="AudioEvent:NOD_AvatarWarMech_GearMovement_Long" Animation="NUMECH_AIDA" Frame="47 103" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="20.0"
+				Height="50.0"
+				ContactPointGeneration="INFANTRY" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:NOD_Purifier_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:NOD_Purifier_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:NOD_Purifier_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:NOD_Purifier_VoiceMove" AudioType="voiceGuard" />
+			<AudioEntry Sound="AudioEvent:NOD_Purifier_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:NOD_Purifier_VoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="Multisound:NOD_Purifier_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+			<NamedEntry Sound="AudioEvent:NOD_Purifier_VoiceTakeTechnology" Name="InitiateTakeTechnology" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:NOD_AvatarWarMech_MoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:NOD_AvatarWarMech_IdleLoop" AudioType="soundAmbient" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="450"
+			ShroudClearingRange="500" />
+		<CrusherInfo
+			CrusherLevel="3"
+			CrushableLevel="3" />
+	</GameObject>
+</AssetDeclaration>

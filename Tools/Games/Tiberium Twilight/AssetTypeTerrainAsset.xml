@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TerrainClassType">
+		<Entry>UNSPECIFIED</Entry>
+		<Entry>Misc</Entry>
+		<Entry>Dirt</Entry>
+		<Entry>Cliff</Entry>
+		<Entry>Grass</Entry>
+		<Entry>Rock</Entry>
+		<Entry>Road</Entry>
+		<Entry>Mud</Entry>
+		<Entry>Sand</Entry>
+		<Entry>Shrub</Entry>
+		<Entry>Snow</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TerrainAsset">
+		<Entry
+			id="id"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Texture"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="BumpTexture"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Class"
+			AssetType="TerrainClassType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="WBFolder"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TerrainAssetCollection">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="TerrainAsset"
+			AssetType="TerrainAsset"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

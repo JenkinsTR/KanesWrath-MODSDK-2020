@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SqueezeFlingParticleDataType">
+		<Entry
+			id="SourceBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DestinationBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="ParticleSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SqueezeFlingUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ScanTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.2s" />
+		<Entry
+			id="DelayBetweenVictimsTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.3s" />
+		<Entry
+			id="EffectDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="125.0" />
+		<Entry
+			id="GatherAcceleration"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.01" />
+		<Entry
+			id="ModelLength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<EntryRelocation
+			id="ArmTemplate"
+			AssetType="GameObjectRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="VictimShader"
+			AssetType="ShaderOverrideRefRef"
+			IsAttribute="true" />
+		<Entry
+			id="HeightOffGround"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="KillFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="ParticleData"
+			AssetType="SqueezeFlingParticleDataType"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

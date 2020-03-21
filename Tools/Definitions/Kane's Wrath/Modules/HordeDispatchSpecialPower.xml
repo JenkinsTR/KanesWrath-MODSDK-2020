@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HordeDispatchSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="MaxMembersToDispatchTo"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="99" />
+	</Asset>
+
+</AssetDefinition>

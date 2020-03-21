@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ModelConditionAudioLoopClientBehaviorModuleDataModelConditionSound">
+		<EntryRelocation
+			id="Sound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludedFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ModelConditionAudioLoopClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientBehaviorModuleData" />
+		<EntryList
+			id="ModelConditionSound"
+			AssetType="ModelConditionAudioLoopClientBehaviorModuleDataModelConditionSound"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

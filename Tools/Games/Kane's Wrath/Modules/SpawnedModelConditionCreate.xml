@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpawnedModelConditionCreateSpawnerTriggerInfo">
+		<EntryWeakReference
+			id="SpawnerId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryReference
+			id="FXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnedModelFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnerModelFlagsRequired"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SpawnedModelConditionCreateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CreateModuleData" />
+		<EntryList
+			id="SpawnerTriggers"
+			AssetType="SpawnedModelConditionCreateSpawnerTriggerInfo"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

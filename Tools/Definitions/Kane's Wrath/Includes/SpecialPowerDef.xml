@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AISpecialPowerInstanceType">
+		<Entry>SPECIAL_POWER_BASIC_SELF_BUFF</Entry>
+		<Entry>SPECIAL_POWER_AOE_BUFF</Entry>
+		<Entry>SPECIAL_POWER_CAPTURE_BUILDING</Entry>
+		<Entry>SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES</Entry>
+		<Entry>SPECIAL_POWER_RANGED_AOE_ATTACK</Entry>
+		<Entry>SPECIAL_POWER_MOVEMENT</Entry>
+		<Entry>SPECIAL_POWER_BUILD_CONYARD</Entry>
+		<Entry>SPECIAL_POWER_BUFF_ALLY</Entry>
+		<Entry>SPECIAL_POWER_SUPERWEAPON</Entry>
+		<Entry>SPECIAL_POWER_REINFORCEMENT</Entry>
+		<Entry>SPECIAL_POWER_HEAL_AOE</Entry>
+		<Entry>SPECIAL_POWER_TARGET_STEALTH</Entry>
+		<Entry>SPECIAL_POWER_SPECIFIC_UNIT</Entry>
+		<Entry>SPECIAL_POWER_SEED_TIBERIUM</Entry>
+		<Entry>SPECIAL_POWER_EMP_COUNTER</Entry>
+		<Entry>SPECIAL_POWER_DECOY_ARMY</Entry>
+		<Entry>SPECIAL_POWER_STANCEBATTLE</Entry>
+		<Entry>SPECIAL_POWER_STANCEAGGRESSIVE</Entry>
+		<Entry>SPECIAL_POWER_STANCEHOLDGROUND</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

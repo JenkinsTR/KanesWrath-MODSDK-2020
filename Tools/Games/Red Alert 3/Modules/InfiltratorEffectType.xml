@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="InfiltratorEffectType"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>RADAR_FREEZE</Entry>
+		<Entry>DISABLE</Entry>
+		<Entry>STEAL_MONEY</Entry>
+		<Entry>VISION</Entry>
+		<Entry>ENERGY</Entry>
+		<Entry>RESET</Entry>
+		<Entry>VISION_UNITS</Entry>
+		<Entry>PARALYZE</Entry>
+		<Entry>KILL</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

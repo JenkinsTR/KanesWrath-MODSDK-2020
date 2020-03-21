@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SpecialAbilityUpdateOptionsType">
+		<Entry>CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE</Entry>
+		<Entry>SKIP_PACKING_WITH_NO_TARGET</Entry>
+		<Entry>SPECIAL_OBJECTS_PERSISTENT</Entry>
+		<Entry>UNIQUE_SPECIAL_OBJECT_TARGETS</Entry>
+		<Entry>SPECIAL_OBJECTS_PERSIST_WHEN_OWNER_DIES</Entry>
+		<Entry>ALWAYS_VALIDATE_SPECIAL_OBJECTS</Entry>
+		<Entry>FLIP_OWNER_AFTER_PACKING</Entry>
+		<Entry>FLIP_OWNER_AFTER_UNPACKING</Entry>
+		<Entry>DO_CAPTURE_FX</Entry>
+		<Entry>LOSE_STEALTH_ON_TRIGGER</Entry>
+		<Entry>APPROACH_REQUIRES_LINE_OF_SIGHT</Entry>
+		<Entry>CHARGE_ATTACK_SPEED_BOOST</Entry>
+		<Entry>MUST_FINISH_ABILITY</Entry>
+		<Entry>KILL_ATTRIBUTE_MODIFIER_ON_EXIT</Entry>
+		<Entry>KILL_ATTRIBUTE_MODIFIER_ON_REJECTED</Entry>
+		<Entry>INSTANT</Entry>
+		<Entry>NEED_COLLISION_BEFORE_TRIGGER</Entry>
+		<Entry>SUPPRESS_FOR_HORDES</Entry>
+		<Entry>APPROACH_UNTIL_MEMBERS_IN_RANGE</Entry>
+		<Entry>IGNORE_FACING_CHECK</Entry>
+		<Entry>USE_OBJECT_GEOMETRY_FOR_WITHIN_RANGE_CHECK</Entry>
+		<Entry>CHECK_CHAINED_COMMAND</Entry>
+		<Entry>SHOW_PREPARATION_PROGRESS</Entry>
+		<Entry>DESTROY_OCL_REGISTERED_OBJECTS_ON_EXIT</Entry>
+		<Entry>UPDATE_REQUIRES_LINE_OF_SIGHT</Entry>
+		<Entry>CHECK_PREVENT_CONDITIONS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="SpecialAbilityUpdateOptionsTypeBitFlags"
+		BaseEnum="SpecialAbilityUpdateOptionsType" />
+
+	<EnumAsset
+		id="ConditionsType">
+		<Entry>MOUNTED</Entry>
+		<Entry>WEAPON_TOGGLE</Entry>
+		<Entry>MOVING</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ConditionsBitFlags"
+		BaseEnum="ConditionsType" />
+
+	<Asset
+		id="SpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="GrabPassengerHealGain"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="StartAbilityRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10000000.0" />
+		<Entry
+			id="AbilityAbortRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10000000.0" />
+		<Entry
+			id="PreparationTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="PersistentPrepTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="PersistentCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="PackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="UnpackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="PreTriggerUnstealthTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Options"
+			AssetType="SpecialAbilityUpdateOptionsTypeBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="PackUnpackVariationFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ParalyzeDurationWhenCompleted"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ParalyzeDurationWhenAborted"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryWeakReference
+			id="SpecialObject"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="SpecialObjectAttachToBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MaxSpecialObjects"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="EffectDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="EffectValue"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="EffectRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FleeRangeAfterCompletion"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="DisableFXParticleSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="PackSound"
+			AssetType="BaseAudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnpackSound"
+			AssetType="BaseAudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="PrepSoundLoop"
+			AssetType="BaseAudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="TriggerSound"
+			AssetType="BaseAudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="ActiveLoopSound"
+			AssetType="BaseAudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="AwardXPForTriggering"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SkillPointsForTriggering"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="UnpackingVariation"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FreezeAfterTriggerDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="RequiredConditions"
+			AssetType="ConditionsBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RejectedConditions"
+			AssetType="ConditionsBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="SetObjectStatusOnTrigger"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ClearObjectStatusOnExit"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ContactPointOverride"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="TriggerAttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="AttributeModifierDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="ChainedButton"
+			AssetType="LogicCommand"
+			IsAttribute="true" />
+		<Entry
+			id="RequireAndSpendTiberiumOnCaster"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DisabledTypesToProcess"
+			AssetType="DisabledBitFlags"
+			IsAttribute="true"
+			Default="HELD" />
+		<Entry
+			id="DisabledTypesToContinueSoundsFor"
+			AssetType="DisabledBitFlags"
+			IsAttribute="true"
+			Default="HELD" />
+		<EntryRelocation
+			id="CustomAnimAndDuration"
+			AssetType="AnimAndDuration" />
+		<EntryRelocation
+			id="GrabPassengerAnimAndDuration"
+			AssetType="AnimAndDuration" />
+		<Entry
+			id="StartRechargeOnExit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="GoIdleInStartPreparation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="FaceTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

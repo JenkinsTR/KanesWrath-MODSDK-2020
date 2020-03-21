@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DamageFXGroup">
+		<Entry
+			id="Type"
+			AssetType="DamageFXType"
+			IsAttribute="true"
+			Default="DEFAULT" />
+		<Entry
+			id="Amount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ThrottleTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="MajorFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="MinorFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="RearFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="SideFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="TopFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranMajorFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranMinorFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranRearFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranSideFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranTopFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="DamageFX"
+		TypeHash="187609259">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="FXGroup"
+			AssetType="DamageFXGroup"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

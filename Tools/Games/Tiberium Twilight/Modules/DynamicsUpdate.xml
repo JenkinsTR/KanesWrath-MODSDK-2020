@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DynamicsUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Motion"
+			AssetType="DynamicsMotionType"
+			IsAttribute="true" />
+		<Entry
+			id="Collision"
+			AssetType="DynamicsCollisionType"
+			IsAttribute="true" />
+		<Entry
+			id="IntuitiveCollision"
+			AssetType="IntuitiveCollisionType"
+			IsAttribute="true"
+			Default="COLLIDES_WITH_GROUND_ONLY" />
+		<Entry
+			id="ContactTag"
+			AssetType="DynamicsContactTag"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="DrawPriority"
+			AssetType="DynamicsDrawPriority"
+			IsAttribute="true"
+			Default="REMOVABLE" />
+		<EntryRelocation
+			id="Volume"
+			AssetType="DynamicsVolumeType" />
+	</Asset>
+
+</AssetDefinition>

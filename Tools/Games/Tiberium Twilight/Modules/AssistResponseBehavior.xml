@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpecialPowerAssistResponseBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+	</Asset>
+
+	<Asset
+		id="AttackAssistResponseBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponSlotType"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

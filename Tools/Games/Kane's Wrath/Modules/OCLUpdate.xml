@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OCLUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="OCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="MinDelay"
+			AssetType="DurationUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxDelay"
+			AssetType="DurationUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Amount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="CreateAtEdge"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

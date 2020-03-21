@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AptAptData id="HUDReplayControlPanel_apt" File="HUDReplayControlPanel.apt" />
+	<AptConstData id="HUDReplayControlPanel_const" File="HUDReplayControlPanel.const" />
+	<AptDatData id="HUDReplayControlPanel_dat" File="HUDReplayControlPanel.dat" />
+	<AptGeometryData id="HUDReplayControlPanel_2" File="HUDReplayControlPanel_geometry\2.ru" AptID="2"/>
+	<AptGeometryData id="HUDReplayControlPanel_4" File="HUDReplayControlPanel_geometry\4.ru" AptID="4"/>
+	<AptGeometryData id="HUDReplayControlPanel_7" File="HUDReplayControlPanel_geometry\7.ru" AptID="7"/>
+	<AptGeometryData id="HUDReplayControlPanel_9" File="HUDReplayControlPanel_geometry\9.ru" AptID="9"/>
+	<Texture id="apt_HUDReplayControlPanel_1" File="art\Textures\apt_HUDReplayControlPanel_1.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+</AssetDeclaration>

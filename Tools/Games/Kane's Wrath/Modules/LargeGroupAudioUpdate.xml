@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LargeGroupAudioUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="FramesBetweenUpdatesMin"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="FramesBetweenUpdatesVariation"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="2" />
+		<EntryList
+			id="Key"
+			AssetType="StringHash"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="UnitWeight"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,24 @@
+NFSU
+****
+To extract music: use eaconv.exe on <CD2>\SNDSTREAMS\STRM_Music_UG0_MB.ast file
+to get the tracks.
+
+NFSU2
+*****
+To extract music: use eabigunp.exe to unpack sdat.viv file, then use eaconv.exe
+to decode pfdata\MusicSFx.mus file.
+
+To convert movies: use eaconv.exe on each .vp6 file. To view produced .avi
+files, go to http://www.on2.com , download and install VP6 codec package.
+Use VirtualDub or similar tool to recompress movies with your favorite (DivX?)
+codec.
+
+LotR: BfME
+**********
+Use same way as described above to convert the movies. Note that they comes
+with separate soundtrack. Don't ask me where to get it.
+
+
+Other supported games:
+NFSHP2
+Games, released after 2000' should work too, however, i didn't tested them.

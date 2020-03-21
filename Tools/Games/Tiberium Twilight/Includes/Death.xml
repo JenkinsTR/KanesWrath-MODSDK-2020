@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="DeathType"
+		IsUsingAll="true">
+		<Entry>NONE</Entry>
+		<Entry>NORMAL</Entry>
+		<Entry>CRUSHED</Entry>
+		<Entry>BURNED</Entry>
+		<Entry>EXPLODED</Entry>
+		<Entry>POISONED</Entry>
+		<Entry>TOPPLED</Entry>
+		<Entry>FLOODED</Entry>
+		<Entry>SUICIDED</Entry>
+		<Entry>LASERED</Entry>
+		<Entry>DETONATED</Entry>
+		<Entry>ELECTROCUTED</Entry>
+		<Entry>STABBED</Entry>
+		<Entry>SPLATTED</Entry>
+		<Entry>POISONED_BETA</Entry>
+		<Entry>KNOCKBACK</Entry>
+		<Entry>SUPERNATURAL</Entry>
+		<Entry>FADED</Entry>
+		<Entry>SLAUGHTERED</Entry>
+		<Entry>CATALYST</Entry>
+		<Entry>SHATTERED</Entry>
+		<Entry>INTERNAL_DESTRUCTION</Entry>
+		<Entry>IRRADIATED</Entry>
+		<Entry>MAULED</Entry>
+		<Entry>BITTEN</Entry>
+		<Entry>PRODUCTION_CANCELLED</Entry>
+		<Entry>EXTRA_1</Entry>
+		<Entry>EXTRA_2</Entry>
+		<Entry>EXTRA_3</Entry>
+		<Entry>EXTRA_4</Entry>
+		<Entry>EXTRA_5</Entry>
+		<Entry>EXTRA_6</Entry>
+		<Entry>EXTRA_7</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="DeathBitFlags"
+		BaseEnum="DeathType" />
+
+</AssetDefinition>

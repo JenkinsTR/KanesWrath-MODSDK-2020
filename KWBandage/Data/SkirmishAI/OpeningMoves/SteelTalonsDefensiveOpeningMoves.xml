@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="SteelTalonsSuperweaponRush"
+    Side="SteelTalons">
+
+    <Order Build="SteelTalonsPowerPlant" />	
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />
+	<Order Build="SteelTalonsBarracks" />
+    <Order Time="79s" Account="PRODUCTION" Deposit="4000" />
+    <Order Build="SteelTalonsCommandPost" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsArmory" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsIonCannonControl" />
+    <Order Time="198s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+     id="SteelTalonsDualBarracks"
+     Side="SteelTalons">
+
+    <Order Time="0s" Account="PRODUCTION" Deposit="2000" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsBarracks" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Time="121s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

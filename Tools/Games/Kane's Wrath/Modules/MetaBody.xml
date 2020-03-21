@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ActiveBodyModuleData" />
+		<Entry
+			id="InfluenceRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TiberiumInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PopulationInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="UnrestInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="InfluenceDecayWithRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="DollarsPerTiberiumDamage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DollarsPerPopulationDamage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DamageCreationList">
+		<EntryReference
+			id="ObjectCreationList"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="TriggerFX"
+			AssetType="FXTriggerType"
+			IsAttribute="true" />
+		<Entry
+			id="DestroyedSide"
+			AssetType="BodySideDestroyedType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DamageTriggerType">
+		<Entry
+			id="HealthLevelBelowPercent"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="RemoveUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="RemoveStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ActiveBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BodyModuleData" />
+		<Entry
+			id="MaxHealth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxHealthDamaged"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxHealthReallyDamaged"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="InitialHealth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1.0" />
+		<Entry
+			id="RecoveryTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DodgePercent"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="EnteringDamagedTransitionTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="EnteringReallyDamagedTransitionTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="GrabObject"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="GrabFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="GrabDamage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<EntryReference
+			id="HealingBuffFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DamagedAttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<EntryReference
+			id="ReallyDamagedAttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="CheerRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<EntryReference
+			id="BurningDeathFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SecondChanceUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="SecondChanceHeal"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="GrabOffset"
+			AssetType="Coord2D" />
+		<EntryList
+			id="DamageCreation"
+			AssetType="DamageCreationList"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="DamageTrigger"
+			AssetType="DamageTriggerType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="UseDefaultDamageSettings"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="RemoveUpgradesOnDeath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BurningDeathBehavior"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

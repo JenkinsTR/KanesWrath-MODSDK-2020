@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ProjectileStateMachineType">
+		<Entry>BombProjectile</Entry>
+		<Entry>StraightLineProjectile</Entry>
+		<Entry>BalloonProjectile</Entry>
+		<Entry>BezierSplineProjectile</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ProjectileMoveBase">
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ProjectileMoveToGroundData">
+		<EntryInheritance
+			id="base"
+			AssetType="ProjectileMoveBase" />
+		<Entry
+			id="InitialSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Acceleration"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TerminalVelocity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RotationSpeedPerSecond"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="TerminalRotation"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="90d" />
+		<Entry
+			id="ForwardVelocityDamping"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+	</Asset>
+
+	<Asset
+		id="ProjectileMoveInStraightLineData">
+		<EntryInheritance
+			id="base"
+			AssetType="ProjectileMoveBase" />
+		<Entry
+			id="MuzzleVelocity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Acceleration"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TerminalVelocity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="BalloonProjectileMoveToGroundData">
+		<EntryInheritance
+			id="base"
+			AssetType="ProjectileMoveBase" />
+	</Asset>
+
+	<Asset
+		id="BezierSplineProjectileData">
+		<EntryInheritance
+			id="base"
+			AssetType="ProjectileMoveBase" />
+		<Entry
+			id="Velocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Range"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Gravity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryList
+			id="Path"
+			AssetType="ProjectilePathRef"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ProjectileMoveData">
+		<EntryChoice
+			id="ProjectileMoveData"
+			MinLength="1"
+			MaxLength="1">
+			<Entry
+				id="MoveToGround"
+				AssetType="ProjectileMoveToGroundData" />
+			<Entry
+				id="MoveInStraightLine"
+				AssetType="ProjectileMoveInStraightLineData" />
+			<Entry
+				id="BalloonMoveToGround"
+				AssetType="BalloonProjectileMoveToGroundData" />
+			<Entry
+				id="BezierSpline"
+				AssetType="BezierSplineProjectileData" />
+		</EntryChoice>
+	</Asset>
+
+	<EnumAsset
+		id="ProjectileUpdateOptions">
+		<Entry>LAUNCH_AT_TARGET_POS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ProjectileUpdateOptionsBitFlags"
+		BaseEnum="ProjectileUpdateOptions" />
+
+	<Asset
+		id="ProjectileUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="StateMachine"
+			AssetType="ProjectileStateMachineType"
+			IsAttribute="true" />
+		<Entry
+			id="MinDetonationHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinTargetDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Flags"
+			AssetType="ProjectileUpdateOptionsBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Movement"
+			AssetType="ProjectileMoveData" />
+	</Asset>
+
+</AssetDefinition>

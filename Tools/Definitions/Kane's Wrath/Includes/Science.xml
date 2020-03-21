@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ScienceType">
+		<Entry>INVALID</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

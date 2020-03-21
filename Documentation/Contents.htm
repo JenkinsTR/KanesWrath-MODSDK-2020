@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script type="text/javascript">
+			function showHideElem(id)
+			{
+				hideAll();
+				document.getElementById(id).style.display="block";
+				/*if(document.getElementById(id).style.display=="none")
+					document.getElementById(id).style.display="block";
+				else
+					document.getElementById(id).style.display="none"*/
+			}
+			function showSubElem(id)
+			{
+				document.getElementById(id).style.display="block";
+			}
+			function hideAll()
+			{
+				document.getElementById('sdkSetup').style.display="none";
+				document.getElementById('modCreation').style.display="none";
+				document.getElementById('artAssets').style.display="none";
+				document.getElementById('sampleMod').style.display="none";
+				document.getElementById('artPipeline').style.display="none";
+				document.getElementById('maxLinks').style.display="none";
+			}
+		</script>
+		<style type="text/css">
+			body {
+				font-family: Arial;
+			}
+			a {
+				font-weight: bold;
+				text-decoration: none;
+			}
+			a:link {
+				color: rgb(58, 172, 25);
+			}
+			
+			a:visited {
+				color: rgb(16, 39, 13);
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			.sub-headings {
+				font-size: 12px;
+				margin-left: 10px;
+			}
+			.sub-headings.a {
+				font-weight: normal;
+			}
+		</style>
+	</head>
+<body onLoad="hideAll()">
+	<P><a href="MainPage.htm" target="main">Index</a></P>
+	<P><a href="SDK_Setup.htm" target="main" onClick="showHideElem('sdkSetup')">SDK Setup</a></P>
+	<div id="sdkSetup" class="sub-headings">
+		<p><a href="3DSMax_Setup.htm" target="main">3DS Max Setup</a></p>
+		<p><a href="Required_Apps.htm" target="main">Required Applications</a></p>
+	</div>
+	<P><a href="Mod_Creation.htm" target="main" onClick="showHideElem('modCreation')">Mod Creation</a></P>
+	<div id="modCreation" class="sub-headings">
+		<p><a href="Mod_DirStruct.htm" target="main">Directory Structure</a></p>
+		<p><a href="Mod_XML.htm" target="main">Mod.XML</a></p>
+		<p><a href="XML_Assets.htm" target="main">XML Assets</a></p>
+		<p><a href="Defines.htm" target="main">Defines</a></p>
+		<p><a href="Audio_Assets.htm" target="main">Audio Assets</a></p>
+		<p><a href="Art_Assets.htm" target="main" onClick="showSubElem('artAssets')">Art Assets</a></p>
+		<div class="sub-headings" id="artAssets">
+			<p><a href="Art_Organization.htm" target="main">Organization</a></p>
+			<p><a href="W3X_Meshes.htm" target="main">W3X Meshes</a></p>
+			<p><a href="Art_Textures.htm" target="main">Textures</a></p>
+		</div>
+		<p><a href="Art_Shaders.htm" target="main">Shaders</a></p>
+		<P><a href="UI_Modification.htm" target="main">UI Modification</a></P>
+		<p><a href="custommaps.htm" target="main">Custom Maps</a></p>
+		<p><a href="buildmod.htm" target="main">Building a Mod</a></p>
+	</div>
+	<P><a href="Sample_Mod_Links.htm" target="main" onClick="showHideElem('sampleMod')">Sample Mod</a></P>
+	<div id="sampleMod" class="sub-headings">
+		<P><a href="Data_Structure.htm" target="main">Data Structure</a></P>
+		<P><a href="adding_a_new_unit.htm" target="main">Unit Creation</a></P>
+		<P><a href="creating_a_new_unit_portrait.htm" target="main">Creating a New Unit Portrait</a></P>
+		<P><a href="modding_the_shell.htm" target="main">MODding the Shell and In-Game HUD</a></P>
+		<P><a href="Modding_Sound.htm" target="main">MODding Sound</a></P>
+		<P><a href="MODding%20the%20AI.htm" target="main">MODding AI</a></P>
+		<p><a href="completing_the_mod.htm" target="main">Completing the MOD</a></p>
+	</div>
+	<P><a href="Art_Pipeline_Links.htm" target="main" onClick="showHideElem('artPipeline')">Art Pipeline</a></P>
+	<div id="artPipeline" class="sub-headings">
+		<P><a href="Art_Pipeline.htm" target="main">Pipeline Overview</a></P>
+		<P><a href="3dsMax_Links.htm" target="main" onClick="showSubElem('maxLinks')">3DSMax Plugins</a></P>
+		<div id="maxLinks" class="sub-headings">
+			<P><A href="Exporting_Models.htm" target="main">Export Model Options</a></P>
+			<P><A href="3DSMAX_Exporting_Utilites.htm" target="main">3DSMax Exporting Utilites</a></P>
+			<P><A href="3DSMAX_Shader_Materials.htm" target="main">3DSMax Shader Materials</a></P>
+			<P><A href="3DSMAX_Skin_Modifier.htm" target="main">3DSMax Skin Modifier</a></P>
+			<P><A href="MaxScriptsAccess.htm" target="main">3DSMax Scripts</a></P>
+			<P><A href="tutorial_w3d_exporting.htm" target="main">W3X Exporting Tutorial</A></p>
+		</div>
+		<P><A href="tutorial_w3d_viewer.htm" target="main">W3X Viewer Tutorial</A></P>
+	</div>
+	<P><a href="Common_Issues.htm" target="main">Common Issues</a></P>
+	<!--<P><a href="3DSMax_Plugins.htm" target="main">3DSMax Plugins</a></P>
+	<P><a href="W3D_Viewer.htm" target="main">W3X Viewer</a></P>
+	<P><a href="Art_Creation_Rules.htm" target="main">Art Creation Rules</a></P>-->
+</body>
+</html>

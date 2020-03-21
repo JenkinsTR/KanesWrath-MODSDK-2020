@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MicroManagerState">
+		<Entry>ALPHA_STRIKE</Entry>
+		<Entry>RETREAT</Entry>
+		<Entry>COMBAT</Entry>
+		<Entry>CLEANUP</Entry>
+		<Entry>SIEGE</Entry>
+		<Entry>GATHER</Entry>
+		<Entry>OPEN_TARGET</Entry>
+		<Entry>HARVESTING</Entry>
+		<Entry>IDLE</Entry>
+		<Entry>DEMOLISH_WALL_OBSTACLE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MicroManagerStateList"
+		BaseEnum="MicroManagerState" />
+
+	<EnumAsset
+		id="MicroManagerUnitTask">
+		<Entry>AVAILABLE</Entry>
+		<Entry>CRUSHING</Entry>
+		<Entry>GARRISONING</Entry>
+		<Entry>CLEARING_GARRISON</Entry>
+		<Entry>REPAIRING</Entry>
+		<Entry>REVERSING</Entry>
+		<Entry>CONTROLLED_BY_SPECIAL_POWER</Entry>
+		<Entry>ACTIVATING_SPECIAL_POWER</Entry>
+		<Entry>DEPLOYING</Entry>
+		<Entry>DODGING</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MicroManagerUnitTaskList"
+		BaseEnum="MicroManagerUnitTask" />
+
+</AssetDefinition>

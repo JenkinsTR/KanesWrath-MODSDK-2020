@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MonitorConditionUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ModelConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ModelConditionCommandSetString"
+			AssetType="LogicCommandSet"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponFlags"
+			AssetType="WeaponSetBitFlags"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="WeaponToggleCommandSetString"
+			AssetType="LogicCommandSet"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

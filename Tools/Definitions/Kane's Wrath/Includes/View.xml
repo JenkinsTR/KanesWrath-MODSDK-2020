@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ViewShakeType">
+		<Entry>SUBTLE</Entry>
+		<Entry>NORMAL</Entry>
+		<Entry>STRONG</Entry>
+		<Entry>SEVERE</Entry>
+		<Entry>CINE_EXTREME</Entry>
+		<Entry>CINE_INSANE</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--ZOCOM and Veteran Snipers can now spot for bombard when Garrisoned-->
+<!--Repair Decal Size Changed-->
+<!--Removed Move to Evacuate Ability in favour of evacuate infantry-->
+<!--Increased speed to match APC (TW1.05)-->
+	<GameObject
+		id="SteelTalonsRepairAPC"
+		SelectPortrait="Portrait_RepairAPC"
+		ButtonImage="Portrait_RepairAPC"
+		Side="SteelTalons"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="700"
+		BuildTime="7"
+		CommandSet="SteelTalonsRepairAPCCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE TRANSPORT VEHICLE CAN_REVERSE_MOVE CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		VoicePriority="62"
+		EditorName="SteelTalonsRepairAPC"
+		Description="Desc:SteelTalonsRepairAPC"
+		TypeDescription="Type:SteelTalonsRepairAPC"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName>Name:SteelTalonsRepairAPC</DisplayName>
+		<ArmorSet
+			Armor="ZOCOMRepairAPCArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="GDIAPCLocomotor"
+			Condition="NORMAL"
+			Speed="72.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<TruckDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				TrackMarks="EXTireTrack2"
+				TrackMarksOnlyWhenCorneringQuickly="true"
+				TrackMarksLeftBone="Bone_TireLR"
+				TrackMarksRightBone="Bone_TireRR"				
+				LeftFrontTireBone="Bone_TireLF"
+				RightFrontTireBone="Bone_TireRF"
+				MidLeftRearTireBone="Bone_TireLR"
+				MidRightRearTireBone="Bone_TireRR"
+				LeftRearTireBone="Bone_TireLR1"
+				RightRearTireBone="Bone_TireRR1"
+				TireRotationMultiplier="0.2"
+				PowerslideRotationAddition="1.25"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0"
+				ExtraPublicBone="FXWeapon BoneGarrison01 BoneGarrison02 BoneGarrison03 BoneGarrison04 BoneGarrison05 BoneGarrison06 BoneGarrison07 BoneGarrison08 BoneGarrison09 BoneGarrison10">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUMRT_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeapon" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeapon" />
+					<WeaponMuzzleFlash
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeapon" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FXWeapon" />
+					<Turret
+						TurretNameKey="Turret"
+						TurretPitch="Turret_Pitch"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="GUMRTR" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GUMRTD_SKN" />
+					<Texture
+						Original="GUMRT"
+						New="GUMRT_D" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIPredDamagedFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIPredDamagedFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="BoneGarrison01"
+						FXParticleSystemTemplate="GDIPredDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUMRT_FP" />
+				</ModelConditionState>
+			</TruckDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Selected_Repair_Decal"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED">
+					<Model Name="FXInvisBone" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL_DYNAMIC"
+						SizeX="215"
+						SizeY="215"
+						OverrideLODVisibility="true"
+						MaxHeight="200"
+						UseHouseColor="true"
+						Texture="Decal_Rig_CO" 
+					/>
+				</ModelConditionState>
+			</ScriptedModelDraw>		
+			
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<ProductionUpdate
+				id="ProductionUpdateModuleTag"
+				GiveNoXP="true" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODBunkerTruckFakeWeapon" />
+					<TurretSettings
+						TurretTurnRate="180"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<AssignSlavesTargetObjectSpecialPower
+				id="ModuleTag_SpecialPowerRepairVehicle"
+				SpecialPowerTemplate="SpecialPower_TargetedRepairVehicle" />
+			<SpawnBehavior
+				id="ModuleTag_SpawnRepairDrones"
+				SpawnNumberData="1"
+				InitialBurst="1"
+				SpawnReplaceDelayData="10s"
+				SpawnedRequireSpawner="true"
+				KillSpawnsOnCaptured="true"
+				SpawnInsideBuilding="true"
+				KillSpawnsOnDisabled="true">
+				<Die
+					DeathTypes="ALL" />
+				<SpawnTemplate>ZOCOMAPCRepairDrone</SpawnTemplate>
+			</SpawnBehavior>				
+			<Physics
+				id="ModuleTag_Physics" />
+			<ProductionUpdate
+				id="ModuleTag_PU" />
+			<HordeTransportContain
+				id="ModuleTag_Contain"
+				ObjectStatusOfContained="UNSELECTABLE ENCLOSED CAN_ATTACK"
+				ContainMax="1"
+				Slots="1"
+				AllowEnemiesInside="false"
+				AllowAlliesInside="true"
+				AllowNeutralInside="false"
+				AllowOwnPlayerInsideOverride="true"
+				ShowPips="true"
+				EnterSound="AudioEvent:VehicleEnter"
+				ExitSound="AudioEvent:VehicleExit"
+				KillPassengersOnDeath="true">
+				<PassengerFilter
+					Rule="ANY"
+					Include="INFANTRY" />
+				<DieMuxData
+					DeathTypes="ALL" />
+				<PassengerData
+					BonePrefix="BONEGARRISON">
+					<Filter
+						Rule="NONE"
+						Include="INFANTRY" />
+				</PassengerData>
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="GDISniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSniperSquad_Veteran"
+					ObjectStatus="CAN_SPOT_FOR_BOMBARD" />
+			</HordeTransportContain>
+			<!--MoveToPositionAndEvacuateSpecialPower
+				id="ModuleTag_MoveToPositionAndEvacuate"
+				SpecialPowerTemplate="SpecialPowerMoveToPositionAndEvacuate" /-->
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.0"
+				DestructionDelay="5s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIMRTDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplodeNoScorch" />
+			</FXListBehavior>
+			<!--			
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="NONE CRUSHED SPLATTED" />
+			</DestroyDie>
+-->
+			<SpecialPower
+				id="ModuleTag_FireMinefield"
+				SpecialPowerTemplate="SpecialPowerGDI_APCMinefield"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_FireMinefieldUpdate"
+				SpecialPowerTemplate="SpecialPowerGDI_APCMinefield"
+				SpecialWeapon="GDIAPCMinefield"
+				StartAbilityRange="10.0" 
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"/>
+			<AISpecialPowerUpdate
+				id="ModuleTag_APCMineLayer"
+				CommandButtonName="Command_APCMinefield"
+				SpecialPowerRadius="100.0"
+				SpecialPowerAIType="SPECIAL_POWER_RANGED_AOE_ATTACK" />
+			<CreateAndEnterObjectSpecialPower
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportSteelTalons"
+				OCL="OCL_SteelTalonsCallForTransportForVehicle"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_GDICallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<AttributeModifierAuraUpdate
+				id="ModuleTag_AttributeModifier_PhaseShield_Propagate" 
+				InitiallyActive="true"
+				AttributeModifierName="AttributeModifier_AlienPhaseField_Propagated"
+				RefreshDelay="1s"
+				AllowSelf="false"
+				AffectContainedOnly="true"
+				RequiredObjectStatusFlags="OUT_OF_PHASE">
+			</AttributeModifierAuraUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="100.0"
+					RotateToTargetWhenAiming="false" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="2800" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="BOX"
+				MajorRadius="20.0"
+				MinorRadius="10.0"
+				Height="11.5"
+				ContactPointGeneration="VEHICLE" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_VoiceCreate" AudioType="voiceFullyCreated" />
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:GDI_RepairAPC_VoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="Multisound:GDI_RepairAPC_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+			<NamedEntry Sound="AudioEvent:GDI_RepairAPC_VoiceMineDrop" Name="InitiateAPCMinefield" />
+			<NamedEntry Sound="AudioEvent:GDI_RepairAPC_VoiceMove" Name="InitiateMoveToPositionAndEvacuate" />
+			<NamedEntry Sound="AudioEvent:GDI_RepairAPC_VoiceMove" Name="InitiateRepair" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_MoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_IdleLoop" AudioType="soundAmbient" />
+			<AudioEntry Sound="AudioEvent:GDI_RepairAPC_MoveByLoop" AudioType="soundMoveLoop" />
+			<!--	TruckLandingSound="RocketBuggyLand" TruckPowerslideSound="RocketBuggyPowerslide"-->
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrusherLevel="0"
+			CrushEqualLevelProps="true"
+			CrushableLevel="2" />
+	</GameObject>
+</AssetDeclaration>

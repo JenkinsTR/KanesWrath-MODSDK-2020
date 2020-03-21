@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Model name changes-->
+<!--Removed Railgun Upgrade Sound-->
+	<GameObject
+		id="ZOCOMGolumCannon"
+		inheritFrom="GDIGolumCannon"
+		SelectPortrait="Portrait_GDIGuardianCannon"
+		ButtonImage="Portrait_GDIGuardianCannon"
+		Side="ZOCOM"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="1"
+		BuildCost="1200"
+		BuildTime="12"
+		EnergyProduction="-8"
+		CommandSet="GDIGolumCannonCommandSet"
+		KindOf="STRUCTURE SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT IMMOBILE CAN_CAST_REFLECTIONS FS_BASE_DEFENSE POWERED AUTO_ACQUIRABLE_BY_AI COVER CAN_SEE_THROUGH_STRUCTURE CAN_SHOOT_OVER_WALLS"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		UnitCategory="STRUCTURE"
+		WeaponCategory="CANNON"
+		EditorName="ZOCOMGolumCannon"
+		TypeDescription="Type:GDIGolumCannon"
+		Description="Desc:SteelTalonsGuardianCannon">
+		<DisplayName>Name:GDIGolumCannon</DisplayName> 
+		<DisplayUpgrade>Upgrade_GDIArmoryRailgunTech</DisplayUpgrade> 
+		<GameDependency>
+			<RequiredObject>ZOCOMBarracks</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDIGolumCannonArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SPREAD" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				InitialRecoilSpeed="10.0"
+				MaxRecoilDistance="4"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="0.7">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBGolumCan_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_Weapon" />
+					<WeaponRecoilBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE_GUN" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_Weapon" />
+					<Turret
+						TurretNameKey="Bone_Turret"
+						TurretPitch="Turret_Pitch"
+						TurretID="1" />
+				</ModelConditionState>
+				<!-- BUILDING -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBGolumCan_ASN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBGolumCan_D3SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBGolumCan_D2SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBGolumCan_SKN" />
+					<Texture
+						Original="GBGolumCannon"
+						New="GBGolumCannon_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"/>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Script>
+						CurDrawableHideSubObject("UGRAIL_BARREL")
+						CurDrawableHideSubObject("UGRAIL_01")
+						CurDrawableHideSubObject("UGRAILACCELERATOR_BARREL")
+						CurDrawableHideSubObject("UGRAILACCELERATOR_01")
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBGolumCan_AAN"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBGolumCan_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBGolumCan_D2AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<!--Animation
+						AnimationName="ABGatewayD1"
+						AnimationMode="MANUAL" /-->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBGolumCan_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="GBGolumCan_D2AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			<SpotlightDraw
+				id="ModuleTag_Spotlight"
+				AttachToBoneInAnotherModule="Bone_Spotlite"
+				RefreshTime="2.0s"
+				SweepTime="1.0s">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXspotlight" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Script>
+						CurDrawableHideSubObject("Plane01")
+					</Script>	
+				</AnimationState>		
+			</SpotlightDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystBuildingDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Small" />
+			</FXListBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="200.0" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIGolemCannon" />
+
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIGolemCannonRailgun"
+						ObjectStatus="WEAPON_UPGRADED_01" />
+					<TurretSettings
+						TurretTurnRate="290"
+						TurretPitchRate="100"
+						AllowsPitch="true"
+						MinimumPitch="-10d"
+						PitchHeight="90%"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>
+			<RepairUpdate
+				id="ModuleTag_RepairUpdate">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</RepairUpdate>
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedSuicide"
+				CreationList="OCL_GenericZOCOMBuildingSuicide" >
+				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
+			<EngineerContain
+				id="ModuleTag_EngineerContain"
+				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				EvaEventForRepair="BuildingRepaired"
+				FXForRepair="FX_Building_Repaired" 
+				FXForCapture="FX_Building_Captured"
+				FXForCaptureAndReplace="FX_Building_Captured"
+				ImmediatelyEnabled="true">
+				<CanEnterFilter 
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>
+				</CanEnterFilter>
+			</EngineerContain>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="GDIGuardianCannonFunctions">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="5000" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_RailgunAccelerator">
+				<ModelConditionSound Sound="AudioEvent:GDI_RailgunAccelerator_EnergyStripeLoop" RequiredFlags="USING_WEAPON_C" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="18.0"
+				Height="20.0">
+				<Offset
+					x="-4.5"
+					y="0.0"
+					z="0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-13.0"
+					y="13.0"
+					z="20" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="13.0"
+					y="13.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="13.0"
+					y="-13.0"
+					z="20" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="13.0"
+					y="13.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-13.0"
+					y="-13.0"
+					z="20" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="13.0"
+					y="13.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-13.0"
+					y="-13.0"
+					z="20" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-13.0"
+					y="13.0"
+					z="0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:GDI_GolumCannonSelect"
+				AudioType="voiceSelect" />
+			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
+			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="Multisound:HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="Multisound:HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="AudioEvent:GDI_BuildingPlaced" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventProductionStarted="BuildingConstructionStarted" 
+			EvaEventProductionComplete="BuildingConstructionComplete" 
+			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventSoldOwner="StructureSold"
+			EvaEventRepairingOwner="StructureRepairing"
+			EvaEnemyObjectSightedEvent="EnemyCampSighted"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventPlacementFailed="StructurePlacementFailed" 
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
+			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="500" />
+	</GameObject>
+</AssetDeclaration>

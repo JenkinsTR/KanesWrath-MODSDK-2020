@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RebuildHoleExposeDieModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<EntryWeakReference
+			id="HoleId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="HoleMaxHealth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FadeInSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="TransferAttackers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

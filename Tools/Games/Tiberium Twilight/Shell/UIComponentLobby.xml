@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SlotStateType">
+		<Entry>OPEN</Entry>
+		<Entry>CLOSED</Entry>
+		<Entry>PRIVATE</Entry>
+		<Entry>AI</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SlotState">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SlotStateType"
+			IsAttribute="true" />
+		<Entry
+			id="AvailableInRanked"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AvailableInModerated"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<EnumAsset
+		id="AIDifficultyValue">
+		<Entry>EASY</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HARD</Entry>
+		<Entry>BRUTAL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIDifficultySetting">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="AIDifficultyValue"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TeamSetting">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="GameTimeSetting">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinGameTimeValue"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Default"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="GameResourcesSetting">
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Default"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="GamePointsSetting">
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Default"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="GameFlagsSetting">
+		<Entry
+			id="Value"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Default"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="MultiplayerLobbyData">
+		<Entry
+			id="LobbyTitleLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="UnmoderatedLobbyTitleTemplateSpec"
+			AssetType="String" />
+		<Entry
+			id="ModeratedLobbyTitleTemplateSpec"
+			AssetType="String" />
+		<Entry
+			id="PlayerNameLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="SlotLabelSpec"
+			AssetType="String" />
+		<EntryList
+			id="SlotState"
+			AssetType="SlotState"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SkirmishLobbyData">
+		<Entry
+			id="LoadMusic"
+			AssetType="String" />
+		<Entry
+			id="SlotLabelSpec"
+			AssetType="String" />
+		<EntryList
+			id="SlotState"
+			AssetType="SlotState"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="UIComponentLobby">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="RandomStringLabel"
+			AssetType="String" />
+		<Entry
+			id="FactionLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="AIPersonalityLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="AIDifficultyLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="TeamLabelSpec"
+			AssetType="String" />
+		<Entry
+			id="MapListSpec"
+			AssetType="String" />
+		<Entry
+			id="GameplayTypeSpec"
+			AssetType="String" />
+		<Entry
+			id="GameTimeLimitSpec"
+			AssetType="String" />
+		<Entry
+			id="GameResourcesSpec"
+			AssetType="String" />
+		<Entry
+			id="HillTimeSpec"
+			AssetType="String" />
+		<Entry
+			id="CapturePointsSpec"
+			AssetType="String" />
+		<Entry
+			id="BarrierTimeSpec"
+			AssetType="String" />
+		<Entry
+			id="CaptureFlagsSpec"
+			AssetType="String" />
+		<EntryList
+			id="Faction"
+			AssetType="FactionType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AIDifficulty"
+			AssetType="AIDifficultySetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Team"
+			AssetType="TeamSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="GameType"
+			AssetType="GameplayTypeSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="GameTime"
+			AssetType="GameTimeSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="GameResources"
+			AssetType="GameResourcesSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="HillTime"
+			AssetType="GameTimeSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BarrierTime"
+			AssetType="GameTimeSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="CapturePoints"
+			AssetType="GamePointsSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="CaptureFlags"
+			AssetType="GameFlagsSetting"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="MultiplayerLobbySettings"
+			AssetType="MultiplayerLobbyData" />
+		<Entry
+			id="SkirmishLobbySettings"
+			AssetType="SkirmishLobbyData" />
+	</Asset>
+
+</AssetDefinition>

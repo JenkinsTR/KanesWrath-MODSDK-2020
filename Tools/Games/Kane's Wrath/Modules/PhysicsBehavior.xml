@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PhysicsBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MaxXRotationVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="360.0" />
+		<Entry
+			id="MaxYRotationVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="360.0" />
+		<Entry
+			id="MaxZRotationVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="360.0" />
+		<Entry
+			id="GravityMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="ShockStunnedTimeLow"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="ShockStunnedTimeHigh"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="ShockStandingTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="FirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.3" />
+		<Entry
+			id="SecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.3" />
+		<Entry
+			id="FirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="33" />
+		<Entry
+			id="SecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="66" />
+		<Entry
+			id="BounceCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="BounceDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="BounceFirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.3" />
+		<Entry
+			id="BounceSecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.3" />
+		<Entry
+			id="BounceFirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="33" />
+		<Entry
+			id="BounceSecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="66" />
+		<EntryReference
+			id="GroundHitFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundBounceFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="FirstPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="33" />
+		<Entry
+			id="SecondPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="66" />
+		<Entry
+			id="CurveFlattenMinDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TumbleRandomly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowBouncing"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="KillWhenRestingOnGround"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OrientToFlightPath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreTerrainHeight"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

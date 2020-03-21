@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TiberiumThiefSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="TiberiumStolenPerUpdate"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DelayBetweenThefts"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="TiberiumCapacity"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="ObjectStatusWhenNotEmpty"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ModelConditionWhenNotEmpty"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PlayWeaponPreFireFX"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

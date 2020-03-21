@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SeparatorList">
+		<EntryRelocation
+			id="Thousand"
+			AssetType="String"
+			IsAttribute="true"
+			Default="," />
+		<EntryRelocation
+			id="Decimal"
+			AssetType="String"
+			IsAttribute="true"
+			Default="." />
+		<EntryRelocation
+			id="TimeMinuteToSecond"
+			AssetType="String"
+			IsAttribute="true"
+			Default=":" />
+	</Asset>
+
+	<EnumAsset
+		id="FontUse">
+		<Entry>DrawableCaptionFont</Entry>
+		<Entry>DefaultWindowFont</Entry>
+		<Entry>DefaultDisplayStringFont</Entry>
+		<Entry>TooltipFontName</Entry>
+		<Entry>NativeDebugDisplay</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="FontDefine">
+		<Entry
+			id="FontTitle"
+			AssetType="FontUse" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+	</Asset>
+
+	<Asset
+		id="Language">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Separators"
+			AssetType="SeparatorList" />
+		<Entry
+			id="UnicodeFontName"
+			AssetType="String" />
+		<EntryList
+			id="FontInfo"
+			AssetType="FontDefine"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

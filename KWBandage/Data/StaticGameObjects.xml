@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+	<Include type="all" source="Alien/Alien.xml" />
+	<Include type="all" source="GDI/GDI.xml" />
+	<Include type="all" source="NOD/NOD.xml" />
+	<Include type="all" source="SteelTalons/SteelTalons.xml" />
+	<Include type="all" source="MarkedOfKane/MarkedOfKane.xml" />
+	<Include type="all" source="BlackHand/BlackHand.xml" />
+	<Include type="all" source="ZOCOM/ZOCOM.xml" />
+	<Include type="all" source="Reaper17/Reaper17.xml" />
+	<Include type="all" source="Traveler59/Traveler59.xml" />
+	<!--Include type="all" source="DATA:Neutral/NeutralStatic.xml" />
+	<Include type="all" source="DATA:Tiberium/Tiberium.xml" />
+	<Include type="all" source="DATA:System/RallyPointMarker.xml" /-->
+	<Include type="all" source="System/PlayerSpellBook.xml" />
+	<!--Include type="all" source="DATA:Misc.xml" /-->
+  </Includes>
+
+</AssetDeclaration>

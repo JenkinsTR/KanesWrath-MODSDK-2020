@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EvacuateDamageModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageModuleData" />
+		<EntryReference
+			id="WeaponThatCausesEvacuation"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+		<Entry
+			id="DamageTypeToTrack"
+			AssetType="DamageType"
+			IsAttribute="true" />
+		<Entry
+			id="DamageToPanicThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TrackingTimeSpanInFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

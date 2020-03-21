@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="JoyPadButtonType">
+		<Entry>LEFT_STICK</Entry>
+		<Entry>LEFT_TRIGGER</Entry>
+		<Entry>LEFT_BUMPER</Entry>
+		<Entry>RIGHT_STICK</Entry>
+		<Entry>RIGHT_TRIGGER</Entry>
+		<Entry>RIGHT_BUMPER</Entry>
+		<Entry>A</Entry>
+		<Entry>B</Entry>
+		<Entry>X</Entry>
+		<Entry>Y</Entry>
+		<Entry>D_PAD</Entry>
+		<Entry>BACK</Entry>
+		<Entry>START</Entry>
+		<Entry>GUIDE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="JoyPadActionType">
+		<Entry>PRESS</Entry>
+		<Entry>HOLD</Entry>
+		<Entry>CLICK</Entry>
+		<Entry>DOUBLE_CLICK</Entry>
+		<Entry>ON_GROUND</Entry>
+		<Entry>ON_TARGET</Entry>
+		<Entry>ON_UNIT_TYPE</Entry>
+		<Entry>MOVE</Entry>
+		<Entry>LEFT</Entry>
+		<Entry>RIGHT</Entry>
+		<Entry>UP</Entry>
+		<Entry>DOWN</Entry>
+		<Entry>LEFT_OR_RIGHT</Entry>
+		<Entry>UP_OR_DOWN</Entry>
+		<Entry>LINK_WITH_NEXT</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="InputButton">
+		<Entry
+			id="ButtonName"
+			AssetType="JoyPadButtonType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ButtonAction"
+			AssetType="JoyPadActionType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SingleCommandLine">
+		<Entry
+			id="Purpose"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Input"
+			AssetType="InputButton"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SingleCommandList">
+		<Entry
+			id="CategoryName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="CommandLine"
+			AssetType="SingleCommandLine"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="DefaultValues">
+		<Entry
+			id="Difficulty"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Gamma"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.30" />
+		<Entry
+			id="Brightness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.50" />
+		<Entry
+			id="Contrast"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.30" />
+		<Entry
+			id="VolumeMusic"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.45" />
+		<Entry
+			id="VolumeFX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="VolumeVoice"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="VolumeAmbient"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.50" />
+		<Entry
+			id="VolumeMovie"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="ScrollSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.00" />
+		<Entry
+			id="ScrollMagnetism"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="DefaultFaction"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="VisionCamZoom"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="ScrollSpeedMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="ScrollSpeedMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="ButtonIcon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ShowCommandList"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="HealthBars"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="HighlightPads"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ToolTips"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="Subtitles"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="InvertRotate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="Telemetry"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="VisionCamVisible"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="UIComponentOptions">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="ControlsToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SaveFileName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="ControlsText"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="DefaultValues"
+			AssetType="DefaultValues" />
+		<EntryList
+			id="CommandList"
+			AssetType="SingleCommandList"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

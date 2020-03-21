@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="DispositionType">
+		<Entry>DISPOSITION_NONE</Entry>
+		<Entry>LIKE_EXISTING</Entry>
+		<Entry>ON_GROUND_ALIGNED</Entry>
+		<Entry>SEND_IT_FLYING</Entry>
+		<Entry>SEND_IT_UP</Entry>
+		<Entry>SEND_IT_OUT</Entry>
+		<Entry>RANDOM_FORCE</Entry>
+		<Entry>FLOATING</Entry>
+		<Entry>INHERIT_VELOCITY</Entry>
+		<Entry>FORWARD_IMPACT</Entry>
+		<Entry>REVERSE_IMPACT</Entry>
+		<Entry>BUILDING_CHUNKS</Entry>
+		<Entry>ANIMATED</Entry>
+		<Entry>ABSOLUTE_ANGLE</Entry>
+		<Entry>SPAWN_AROUND</Entry>
+		<Entry>RELATIVE_ANGLE</Entry>
+		<Entry>USE_WATER_SURFACE</Entry>
+		<Entry>USE_CLIFF</Entry>
+		<Entry>CLAMP_TO_GROUND</Entry>
+		<Entry>FALL_TO_GROUND</Entry>
+		<Entry>USE_DYNAMICS_FOR_FLING</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="DispositionTypeFlag"
+		BaseEnum="DispositionType" />
+
+	<EnumAsset
+		id="OCNuggetOption">
+		<Entry>OCCOMMONNUGGETOPTION_NONE</Entry>
+		<Entry>ORIENT_IN_FORCE_DIRECTION</Entry>
+		<Entry>ISSUE_MOVE_AFTER_CREATION</Entry>
+		<Entry>ISSUE_ATTACK_AFTER_CREATION</Entry>
+		<Entry>ORIENT_IN_PRIMARY_DIRECTION</Entry>
+		<Entry>ORIENT_IN_SECONDARY_DIRECTION</Entry>
+		<Entry>CLEAR_REMOVEABLES</Entry>
+		<Entry>MOVE_USES_STRAFE_UPDATE</Entry>
+		<Entry>MOVE_TARGET_USES_DISPOSITION_OFFSET</Entry>
+		<Entry>MOVE_USES_EVACUATE_AND_EXIT</Entry>
+		<Entry>OFFSET_IN_LOCAL_SPACE</Entry>
+		<Entry>SPREAD_FORMATION</Entry>
+		<Entry>FADE_IN</Entry>
+		<Entry>FADE_OUT</Entry>
+		<Entry>PRESERVE_LAYER</Entry>
+		<Entry>IGNORE_ALL_OBJECTS</Entry>
+		<Entry>IGNORE_ENEMY_UNITS</Entry>
+		<Entry>IGNORE_ALLY_UNITS</Entry>
+		<Entry>CONTAIN_INSIDE_SOURCE_OBJECT</Entry>
+		<Entry>SKIP_IF_SIGNIFICANTLY_AIRBORNE</Entry>
+		<Entry>REQUIRES_LIVE_PLAYER</Entry>
+		<Entry>IGNORE_COMMANDPOINT_LIMIT</Entry>
+		<Entry>INHERIT_ATTRIBUTES_FROM_SOURCE</Entry>
+		<Entry>INHERIT_SCRIPTING_NAME</Entry>
+		<Entry>INHERIT_PRICE_PURCHASED</Entry>
+		<Entry>OK_TO_CHANGE_MODEL_COLOR</Entry>
+		<Entry>DONT_SET_PRODUCER</Entry>
+		<Entry>SCALE_TIBERIUM_FIELD</Entry>
+		<Entry>SCALE_ION_STORM</Entry>
+		<Entry>DO_NOT_TREAT_AS_STRUCTURE</Entry>
+		<Entry>USE_CREATORS_HEALTH_AS_BASE</Entry>
+		<Entry>USE_CREATORS_HEALTH_PERCENTAGE</Entry>
+		<Entry>COPY_CREATORS_UPGRADES</Entry>
+		<Entry>MOVE_TARGET_USES_OFFSET</Entry>
+		<Entry>TRANSFER_TEMPORARY_SLAVE</Entry>
+		<Entry>COPY_PRODUCTION_QUEUE_INDEX</Entry>
+		<Entry>CREATE_AT_TARGET</Entry>
+		<Entry>RETURN_TO_SOURCE</Entry>
+		<Entry>ATTACH_TO_SOURCE</Entry>
+		<Entry>ORIENT_TOWARD_MOVE_DESTINATION</Entry>
+		<Entry>OWNED_BY_SECONDARY_OBJECT</Entry>
+		<Entry>FIRE_SPECIAL_POWER</Entry>
+		<Entry>DO_NOT_COPY_SHADERS</Entry>
+		<Entry>DO_NOT_COPY_SCALE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="OCNuggetOptionFlag"
+		BaseEnum="OCNuggetOption" />
+
+	<EnumAsset
+		id="ParabolicOption">
+		<Entry>TRACK_TARGET_OBJECT</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ParabolicOptionFlag"
+		BaseEnum="ParabolicOption" />
+
+	<Asset
+		id="OCNugget">
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="CreateObjectNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<EntryWeakReference
+			id="PutInContainer"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryReference
+			id="CreateFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Options"
+			AssetType="OCNuggetOptionFlag"
+			IsAttribute="true" />
+		<Entry
+			id="Disposition"
+			AssetType="DispositionTypeFlag"
+			IsAttribute="true" />
+		<Entry
+			id="VelocityScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MinForceMagnitude"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxForceMagnitude"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinLifetime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MaxLifetime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MinDistanceAFormation"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinDistanceBFormation"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDistanceFormation"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FadeTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="StartingModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="TempModelCondition"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="TempModelConditionTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DispositionIntensity"
+			AssetType="Velocity"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="DestinationPlayer"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="WaypointSpawn"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DispositionAngle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="MinForcePitch"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="MaxForcePitch"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="MinForceYaw"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="MaxForceYaw"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="359d" />
+		<Entry
+			id="OrientationOffset"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<EntryReference
+			id="FadeSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="MinHordeDensity"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MaxHordeDensity"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MinHealth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MaxHealth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="InvulnerableTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="StartingBusyTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="JustBuiltFrames"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="VeterancyLevel"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="FireSpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="StatusToCopyFromParent"
+			AssetType="ObjectStatusType"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Vector3" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ForbiddenUpgrade"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="CreateObject"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="UseUpgradedLocomotor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DisabledWhileBusy"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FireWeaponNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<EntryReference
+			id="Weapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AttackNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<Entry
+			id="NumberOfShots"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="WeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+		<Entry
+			id="DeliveryDecalRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FlingObjectNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<EntryWeakReference
+			id="CreateObject"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Speed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Height"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="InitialDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Vector3" />
+		<Entry
+			id="DistanceFromTarget"
+			AssetType="RealRange" />
+		<Entry
+			id="AngleAroundTarget"
+			AssetType="RealRange" />
+		<EntryRelocation
+			id="DistanceAtTarget"
+			AssetType="RealRange" />
+		<Entry
+			id="UsePrimaryObjectForOffsets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ParabolicCurveNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<Entry
+			id="Options"
+			AssetType="ParabolicOptionFlag"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="CreateObject"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="InitialDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ApproachTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="StartDistanceFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="EndDistanceFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="CruiseHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AttackHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ApproachRoll"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="LeaveRoll"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="StrafeAreaNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="OCNugget" />
+		<EntryWeakReference
+			id="CreateObject"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Height"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DistanceFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryRelocation
+			id="InterOffset"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="IntraOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="MaintainOffestToTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<EnumAsset
+		id="OCLType">
+		<Entry>NONE</Entry>
+		<Entry>CHOOSE_ONE_CREATE_NUGGET_FROM_LIST</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="OCLBitFlags"
+		BaseEnum="OCLType" />
+
+	<GameAsset
+		id="ObjectCreationList"
+		TypeHash="578005457">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Flags"
+			AssetType="OCLBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<EntryList
+			id="CreateObject"
+			AssetType="CreateObjectNugget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Attack"
+			AssetType="AttackNugget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="FireWeapon"
+			AssetType="FireWeaponNugget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="FlingObject"
+			AssetType="FlingObjectNugget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="StrafeAreaSquad"
+			AssetType="StrafeAreaNugget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ParabolicCurve"
+			AssetType="ParabolicCurveNugget"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

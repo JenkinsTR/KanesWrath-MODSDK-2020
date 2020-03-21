@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  <AIPersonalityDefinition
+		id="CM_1_2_Steel_Talons_AIP_SteelTalons_Main"
+		PersonalityType="CM_1_2_Steel_Talons_AIP_SteelTalons_Main"
+    PersonalityUIName="CM_1_2_Steel_Talons_AIP_SteelTalons_Main"
+    SkirmishPersonality="false" 
+		SecondsTillTargetsCanExpire="15.0"
+		ChanceForTargetToExpire="100"
+		MaxBuildingsToBeDefensiveTarget_Small="0"
+		MaxBuildingsToBeDefensiveTarget_Med="0"
+		ChanceForUnitsToUpgrade="15"
+		ChanceToUseAllUnitsForDefenseTarget_Small="0"
+		ChanceToUseAllUnitsForDefenseTarget_Med="0"
+		ChanceToUseAllUnitsForDefenseTarget_Large="0"
+		DesiredExcessPowerBuffer="20"
+		BaseCompactness="0.75"
+    DefaultThreatFindRadius="0"
+    UnitBuilderCostEffectivenessWeight="0.5"
+    UnitBuilderMoneyVersusTimePreference="0.5"
+    UnitBuilderOverallOffensivePreference="100%"
+    UnitBuilderOverallDefensivePreference="50%"
+    Expansion_TiberiumSearchRadius="1000"
+    Expansion_MaxTiberiumRemaining="22000"
+    ReactiveDefenseRadius="1000"
+    RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoPowerAtDifficulty=""
+    EmergencyManagerHandleNoIncomeAtDifficulty=""
+    EmergencyManagerHandleNoConyardAtDifficulty=""
+    StructureSaveChanceEasy="0.0"
+    StructureSaveChanceMedium="0.01"
+    StructureSaveChanceHard="1.0"
+		>
+
+    <Side>SteelTalons</Side>
+
+    <BuildDelayRange id="BuildDelayEasy" MinDelay="50s" MaxDelay="90s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="EASY" />
+    <BuildDelayRange id="BuildDelayMedium" MinDelay="40s" MaxDelay="90s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="MEDIUM" />
+	<BuildDelayRange id="BuildDelayHard" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="HARD" />
+	<BuildDelayRange id="BuildDelayBrutal" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="BRUTAL" />
+	
+	<UnitBuilderUnitChoiceStrategy Shape="WORST" StandardDeviation="0.25" Difficulty="EASY" />
+	<UnitBuilderUnitChoiceStrategy Shape="MIDDLE" StandardDeviation="2" Difficulty="MEDIUM" />
+    <UnitBuilderUnitChoiceStrategy Shape="BEST" StandardDeviation="0.25" Difficulty="HARD BRUTAL" />
+
+	<ResourceMultiplierCheat Percentage="100%" Difficulty="EASY"/>
+	<ResourceMultiplierCheat Percentage="150%" Difficulty="MEDIUM"/>
+	<ResourceMultiplierCheat Percentage="200%" Difficulty="HARD"/>
+    <ResourceMultiplierCheat Percentage="200%" Difficulty="BRUTAL"/>
+
+    <TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="ExtraTarget" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="AssaultAirstrike" MaxTeamsPerTarget="1"/>
+
+	<SpecificUnitCap Unit="SteelTalonsTitan" Cap="4"/>
+	<SpecificUnitCap Unit="SteelTalonsWolverine" Cap="4"/>
+	
+	<States State="CM_1_2_SteelTalonsUnitCap_Easy" Difficulty="EASY"/>
+	<States State="CM_1_2_SteelTalonsUnitCap_Medium" Difficulty="MEDIUM"/>
+	<States State="CM_1_2_SteelTalonsUnitCap_Hard" Difficulty="HARD BRUTAL"/>
+	
+    <States State="CM_1_2_SteelTalonsOptimal_EASY" Difficulty="EASY"/>
+    <States State="CM_1_2_SteelTalonsOptimalDirectAttack" Difficulty="MEDIUM HARD BRUTAL"/> 
+    <States State="CM_1_2_SteelTalonsOptimalAirHarassment" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="CM_1_2_SteelTalonsCaptureTech" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="CM_1_2_SteelTalons_Special_Lab_Attack" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="CM_1_2_SteelTalonsReactiveDefense" Difficulty="EASY MEDIUM HARD BRUTAL"/> 
+    <!--States State="1_2_SteelTalonsUnitPreferences" Difficulty="MEDIUM HARD BRUTAL"/-->
+	
+    <BudgetStates State="CM_1_2_FullProductionBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    
+    <!-- Vehicle Overrides -->
+	<UnitOverride UnitName="SteelTalonsPitbull" Percentage="10%"/>
+	<UnitOverride UnitName="SteelTalonsWolverine" Percentage="20%"/>
+	<UnitOverride UnitName="SteelTalonsRepairAPC" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsTitan" Percentage="20%"/>
+	<UnitOverride UnitName="SteelTalonsAAScout" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsMammoth" Percentage="-1%"/>
+	<UnitOverride UnitName="SteelTalonsBehemoth" Percentage="-1%"/>
+	<UnitOverride UnitName="SteelTalonsMARV" Percentage="-1%"/>
+
+    <!-- Infantry Overrides -->  
+	<UnitOverride UnitName="SteelTalonsRifleSoldierSquad" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsMissileSoldierSquad" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsGrenadeSoldierSquad" Percentage="0%"/>
+	
+    <!-- Aircraft Overrides -->
+	<UnitOverride UnitName="SteelTalonsOrca" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsHammerhead" Percentage="0%"/>
+	<UnitOverride UnitName="SteelTalonsFirehawk" Percentage="0%"/>
+	
+  </AIPersonalityDefinition>
+</AssetDeclaration>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+  <!--Direct assault with small team sizes-->
+  <AIStrategicStateDefinition
+		id="Reaper17OverrunEarly"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <OverrunEarlyHeuristic>
+        <MiddleGameHeuristic/>
+        <LateGameHeuristic/>
+      </OverrunEarlyHeuristic>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="PrimaryTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="PrimaryTarget">
+      <TeamTemplate MinUnits="12" MaxUnits="12" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+    <UnitModifierByName UnitName="Reaper17SeekerTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17Buzzers" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>
+
+  <!--Direct assault with medium team sizes-->
+  <AIStrategicStateDefinition
+		id="Reaper17OverrunMiddle"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <OverrunMiddleHeuristic>
+        <MiddleGameHeuristic/>
+        <LateGameHeuristic/>
+      </OverrunMiddleHeuristic>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="PrimaryTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="PrimaryTarget">
+      <TeamTemplate MinUnits="20" MaxUnits="20" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+    <UnitModifierByName UnitName="Reaper17DevourerTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17RazorDroneSquad" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>
+
+</AssetDeclaration>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentOptionsSettingsGraphics">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="LoadVarQueryReturnToken"
+			AssetType="String" />
+		<Entry
+			id="DefaultBrightness"
+			AssetType="SageReal" />
+		<Entry
+			id="PresetsAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="PresetsStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="ResolutionAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="AntialiasingAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="AntialiasingOffStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="AntialiasingOnStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="TerrainDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="TerrainDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="WaterDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="WaterDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="ModelDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="ModelDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="TextureQualityAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="TextureQualityStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="ShaderDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="ShaderDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="VFXDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="VFXDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="ShadowDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="ShadowDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="AnimationDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="AnimationDetailStrLookupSpec"
+			AssetType="String" />
+		<Entry
+			id="DecalDetailAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="DecalDetailStrLookupSpec"
+			AssetType="String" />
+	</Asset>
+
+</AssetDefinition>

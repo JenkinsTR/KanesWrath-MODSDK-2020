@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentAptMediator">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AptGlobalLoadVarName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptEventHandlerName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptFSCommandHandlerName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenDelimiters"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="NewSkoolIndicator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="FunctionSeparator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ValueSeparator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="InputParameterSeparator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ParameterNameSeparator"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ParameterStartIndicator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubObjectSeparator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="OutputParameterSeparator"
+			AssetType="Character"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

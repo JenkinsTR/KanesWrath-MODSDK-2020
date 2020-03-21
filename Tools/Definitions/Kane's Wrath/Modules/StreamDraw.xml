@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ParticleSystemList">
+		<EntryList
+			id="ParticleSys"
+			AssetType="FXParticleSystemRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="W3DStreamDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DrawModuleData" />
+		<Entry
+			id="Velocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="ArcHeightFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="UVWorldSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="NumTubeSides"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="8" />
+		<Entry
+			id="TubeRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryReference
+			id="HitFx"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="StreamStateID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FXShader"
+			AssetType="FXShaderMaterial" />
+		<EntryRelocation
+			id="ParticleSystems"
+			AssetType="ParticleSystemList" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<Entry
+			id="UseDistortionShader"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

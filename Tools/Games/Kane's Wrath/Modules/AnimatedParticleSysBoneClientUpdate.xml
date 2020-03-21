@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AnimatedParticleSysBoneClientUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientUpdateModuleData" />
+	</Asset>
+
+</AssetDefinition>

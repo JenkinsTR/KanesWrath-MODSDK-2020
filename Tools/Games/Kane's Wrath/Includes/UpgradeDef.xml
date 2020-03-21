@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UpgradeType">
+		<Entry>PLAYER</Entry>
+		<Entry>OBJECT</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="UpgradeOptions">
+		<Entry>DO_NOT_TRANSFER</Entry>
+		<Entry>PERSISTS_IN_CAMPAIGN</Entry>
+		<Entry>NO_UPGRADE_DISCOUNT</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

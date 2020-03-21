@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FormationAssistantUnitDefinition">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryList
+			id="IncludeObjectFilter"
+			AssetType="ObjectFilter"
+			MinLength="1"
+			MaxLength="0" />
+		<EntryList
+			id="ExcludeObjectFilter"
+			AssetType="ObjectFilter"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="PreviewObject"
+			AssetType="WeakReference" />
+	</Asset>
+
+	<Asset
+		id="FormationAssistantCellContainer">
+		<EntryList
+			id="Definition"
+			AssetType="DefinitionTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="FormationAssistantRowDefinition">
+		<EntryList
+			id="Cell"
+			AssetType="FormationAssistantCellContainer"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="FormationAssistantTemplate">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryList
+			id="Row"
+			AssetType="FormationAssistantRowDefinition"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="FormationSelectionTemplate">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="FormationAssistantTemplate"
+			AssetType="FormationAssistantTemplateTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxDragLength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxUnitsSelected"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="FormationAssistant">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="DefaultPreviewObject"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+		<EntryReference
+			id="FacingArrowTemplateHead"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+		<EntryReference
+			id="FacingArrowTemplateBody"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+		<EntryReference
+			id="FacingArrowTemplateBase"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+		<Entry
+			id="RowPadding"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ColumnPadding"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ActivateDragDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ActivateTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

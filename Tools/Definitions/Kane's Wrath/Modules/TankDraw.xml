@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ArticulationBone">
+		<Entry
+			id="ArticulationBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ArticulationHelperBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="W3DTankDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="W3DScriptedModelDrawModuleData" />
+		<Entry
+			id="TreadAnimationRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TreadPivotSpeedFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.6" />
+		<Entry
+			id="TreadDriveSpeedFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.3" />
+		<EntryReference
+			id="TreadDebrisRight"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="TreadDebrisLeft"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryList
+			id="LeftTread"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="2" />
+		<EntryList
+			id="RightTread"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="2" />
+		<EntryList
+			id="ArticulationBone"
+			AssetType="ArticulationBone"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="FXListBehaviorType">
+		<Entry>onDeath</Entry>
+		<Entry>onDamaged</Entry>
+		<Entry>onCreate</Entry>
+		<Entry>onTransitionToDamaged</Entry>
+		<Entry>onTransitionToReallyDamaged</Entry>
+		<Entry>onTransitionToRubble</Entry>
+		<Entry>onBecomingTemporarySlave</Entry>
+		<Entry>onBecomingTemporaryOwner</Entry>
+		<Entry>onEndingTemporarySlave</Entry>
+		<Entry>onEndingTemporaryOwner</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXListBehaviorDirection">
+		<Entry>Front</Entry>
+		<Entry>Rear</Entry>
+		<Entry>Side</Entry>
+		<Entry>Top</Entry>
+		<Entry>Default</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="FXListBehaviorEvent">
+		<Entry
+			id="Index"
+			AssetType="FXListBehaviorType"
+			IsAttribute="true" />
+		<EntryReference
+			id="FX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="MinThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Direction"
+			AssetType="FXListBehaviorDirection"
+			IsAttribute="true"
+			Default="Default" />
+		<Entry
+			id="OrientToObject"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ForceUseDoFXObj"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXListBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<EntryList
+			id="Event"
+			AssetType="FXListBehaviorEvent"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

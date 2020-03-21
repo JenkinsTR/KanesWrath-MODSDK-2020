@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaBaseBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="MetaBodyModuleData" />
+		<Entry
+			id="Tier1TiberiumProduction"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="Tier2TiberiumProduction"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="2000" />
+		<Entry
+			id="Tier2TiberiumInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Tier2PopulationInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Tier2UnrestInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Tier3TiberiumProduction"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="3000" />
+		<Entry
+			id="Tier3TiberiumInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Tier3PopulationInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Tier3UnrestInfluence"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="StartingTier"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="StartWithStratBuilding"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="InfluenceRadiusTier2"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="InfluenceRadiusTier3"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryWeakReference
+			id="BaseStrat1Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="BaseStrat2Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="BaseStrat3Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="BaseStrat4Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="BaseStrat5Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Tier1Base"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tier2Base"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tier3Base"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UpgradeBasePower"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tier1BaseDefense"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tier2BaseDefense"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tier3BaseDefense"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="UpgradeBaseStrat1"
+			AssetType="GameObjectWeakRef" />
+		<EntryRelocation
+			id="UpgradeBaseStrat2"
+			AssetType="GameObjectWeakRef" />
+		<EntryRelocation
+			id="UpgradeBaseStrat3"
+			AssetType="GameObjectWeakRef" />
+		<EntryRelocation
+			id="UpgradeBaseStrat4"
+			AssetType="GameObjectWeakRef" />
+		<EntryRelocation
+			id="UpgradeBaseStrat5"
+			AssetType="GameObjectWeakRef" />
+		<EntryList
+			id="StartingBase"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="StartWithDefenses"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartWithPowerPlants"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartDamaged"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SpecialTiberiumInfluence"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

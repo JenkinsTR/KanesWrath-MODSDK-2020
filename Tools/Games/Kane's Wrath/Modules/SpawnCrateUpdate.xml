@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SpawnCrateUpdateFlagsType">
+		<Entry>NONE</Entry>
+		<Entry>DELETE_EXPIRED_CRATES</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="SpawnCrateUpdateFlagsBitFlags"
+		BaseEnum="SpawnCrateUpdateFlagsType" />
+
+	<Asset
+		id="SpawnCrateUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MaxCrates"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="CreateFrequency"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="30s" />
+		<Entry
+			id="CrateLifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="120s" />
+		<Entry
+			id="MapExclusionMargin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="BlockingUnitRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+		<Entry
+			id="BlockingStartPositionRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="300.0" />
+		<Entry
+			id="Flags"
+			AssetType="SpawnCrateUpdateFlagsBitFlags"
+			IsAttribute="true"
+			Default="DELETE_EXPIRED_CRATES" />
+		<EntryList
+			id="CrateList"
+			AssetType="GameObjectRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="BlockingUnits"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

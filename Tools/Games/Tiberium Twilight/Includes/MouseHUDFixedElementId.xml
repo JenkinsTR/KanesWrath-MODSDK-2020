@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MouseHUDFixedElementId">
+		<Entry>Invalid</Entry>
+		<Entry>EnergyMeter</Entry>
+		<Entry>Resources</Entry>
+		<Entry>SellButton</Entry>
+		<Entry>RepairButton</Entry>
+		<Entry>PauseButton</Entry>
+		<Entry>Radar</Entry>
+		<Entry>SelectionRefinementTab</Entry>
+		<Entry>MainStructuresTab</Entry>
+		<Entry>OtherStructuresTab</Entry>
+		<Entry>InfantryTab</Entry>
+		<Entry>VehicleTab</Entry>
+		<Entry>AircraftTab</Entry>
+		<Entry>WatercraftTab</Entry>
+		<Entry>AttackMoveButton</Entry>
+		<Entry>ForceAttackButton</Entry>
+		<Entry>ForceMoveButton</Entry>
+		<Entry>ReverseMoveButton</Entry>
+		<Entry>ForceAttackMoveButton</Entry>
+		<Entry>StopButton</Entry>
+		<Entry>PlanningModeButton</Entry>
+		<Entry>WaypointModeButton</Entry>
+		<Entry>AggressiveStanceButton</Entry>
+		<Entry>GuardStanceButton</Entry>
+		<Entry>HoldFireStanceButton</Entry>
+		<Entry>HoldGroundStanceButton</Entry>
+		<Entry>OpenAdvancedCommandsButton</Entry>
+		<Entry>ThreatMeter</Entry>
+		<Entry>OpenPlayerTechStoreButton</Entry>
+		<Entry>CoOpAINormalOrderButton</Entry>
+		<Entry>CoOpAIAssaultOrderButton</Entry>
+		<Entry>CoOpAIHoldObjectOrderButton</Entry>
+		<Entry>CoOpAIHoldPositionOrderButton</Entry>
+		<Entry>DeactivateHotSpotButton</Entry>
+		<Entry>UnitIntroButton</Entry>
+		<Entry>CoOpAIOrderPanel</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

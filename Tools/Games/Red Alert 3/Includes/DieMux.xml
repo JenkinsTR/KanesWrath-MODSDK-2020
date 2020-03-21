@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DieMuxDataType">
+		<EntryList
+			id="VeterancyLevels"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="ExemptStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DamageAmountRequired"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="MinKillerAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="1d" />
+		<Entry
+			id="MaxKillerAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="-1d" />
+		<Entry
+			id="DeathTypes"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DeathTypesForbidden"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

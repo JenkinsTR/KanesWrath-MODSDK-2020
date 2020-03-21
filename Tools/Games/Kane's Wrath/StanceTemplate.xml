@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="Stance">
+		<Entry>GUARD</Entry>
+		<Entry>AGGRESSIVE</Entry>
+		<Entry>HOLD_POSITION</Entry>
+		<Entry>HOLD_FIRE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="StanceDefinition">
+		<Entry
+			id="Type"
+			AssetType="Stance"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="StanceTemplate"
+		TypeHash="1550716481">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="StanceDefinition"
+			AssetType="StanceDefinition"
+			MinLength="0"
+			MaxLength="32" />
+	</GameAsset>
+
+</AssetDefinition>

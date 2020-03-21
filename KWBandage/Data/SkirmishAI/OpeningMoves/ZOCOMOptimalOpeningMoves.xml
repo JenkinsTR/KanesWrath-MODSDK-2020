@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="ZOCOM_EASY"
+    Side="ZOCOM"> <!--Power: +10-->
+    <Order Build="ZOCOMCrane" /> <!--Time: 15 Power: -10-->
+	<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+    <Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+    <Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="ZOCOMStandard"
+    Side="ZOCOM"> <!--Power: +10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMRifleSoldierSquad" />
+		<Order Build="ZOCOMRifleSoldierSquad" />
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<Order Time="99s" Account="PRODUCTION" Deposit="1000" />
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="173s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="ZOCOMStandard2"
+    Side="ZOCOM"> <!--Power: +10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Time="64s" Account="PRODUCTION" Deposit="4500" />
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="173s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="ZOCOMStandardCrane"
+    Side="ZOCOM"> <!--Power: +10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<!--Order Time="151s" Account="PRODUCTION" Deposit="2000" /-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="188s" />
+	</SkirmishOpeningMove>
+
+<!--Now will build Zone Shatterer rather than attempt to build ZOCOM Shatterer-->
+	<SkirmishOpeningMove
+	id="ZOCOMTurtle"
+	Side="ZOCOM"> <!--Power: +10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMCommandPost" /> <!--Time: 15 Power: -9-->
+		<Order Build="ZOCOMAirTower" /> <!--Time: 10 Power: -8-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMArmory" /> <!--Time: 40 Power: -12-->
+
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMOrca" />
+		<Order Build="ZOCOMOrca" />
+		<Order Build="ZOCOMOrca" />
+		<Order Build="ZOCOMOrca" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMZoneRaiderSquad" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Build="ZOCOMImprovedSonicTank" />
+		<Order Time="230s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="ZOCOMBrutalCrane"
+    Side="ZOCOM"> <!--Power: +10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<Order Time="121s" Account="PRODUCTION" Deposit="999999" />
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMWarfactory" /> <!--Time: 20 Power: -7-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="ZOCOMPowerPlant" /> <!--Time: 7 Power: +20-->
+		<Order Build="ZOCOMBarracks" /> <!--Time: 5 Power: -5-->
+		<Order Build="ZOCOMRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="250s" />
+	</SkirmishOpeningMove>
+
+</AssetDeclaration>

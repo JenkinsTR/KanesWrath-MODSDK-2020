@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Removed Rate of Fire bonus due to removal in TW Patch 1.09-->
+	<AttributeModifier
+		id="AttributeModifier_BlackHandLeadership"
+		Category="NONE"
+		StackingLimit="1"
+		Duration="1.5s">
+		<Modifier Type="RATE_OF_FIRE" Value="100%" />
+		<Modifier Type="ARMOR" Value="75%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+	</AttributeModifier>
+<!--Fixed Radio Tower Armor Bug in First Mission, Now increases armor rather than reduce-->
+	<AttributeModifier
+		id="AttributeModifier_CM11RadioTowerBuff"
+		Category="BUFF"
+		StackingLimit="1"
+		Duration="1.5s"
+		StartFX="FX_NOD_BlkHndLeadershipBuff"
+		EndFX="">
+		<Modifier Type="RATE_OF_FIRE" Value="100%" />
+		<Modifier Type="ARMOR" Value="75%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+	</AttributeModifier>
+	<AttributeModifier
+		id="Confessor_Militant_AttributeModifier"
+		Category="BUFF"
+		StackingLimit="1"
+		Duration="1.5s"
+		ReplaceInCategoryIfLongest="true"
+		StartFX="FX_NOD_BlkHndLeadershipBuff"
+		EndFX="">
+		<Modifier Type="RATE_OF_FIRE" Value="100"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+		<Modifier Type="ARMOR" Value="75%" />
+	</AttributeModifier>
+</AssetDeclaration>

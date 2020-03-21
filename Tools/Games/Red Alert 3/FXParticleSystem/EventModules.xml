@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleEventBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule" />
+		<EntryReference
+			id="EventFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="PerParticle"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="KillAfterEvent"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEventLife">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEventBase" />
+		<Entry
+			id="EventTime"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEventCollision">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEventBase" />
+		<Entry
+			id="HeightOffset"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="OrientFXToTerrain"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEventModule">
+		<EntryChoice
+			id="FXParticleEventModule"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="Life"
+				AssetType="FXParticleEventLife" />
+			<Entry
+				id="Collision"
+				AssetType="FXParticleEventCollision" />
+		</EntryChoice>
+	</Asset>
+
+</AssetDefinition>

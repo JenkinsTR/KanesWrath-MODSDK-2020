@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AttributeModifierCategoryType">
+		<Entry>NONE</Entry>
+		<Entry>LEADERSHIP</Entry>
+		<Entry>FORMATION</Entry>
+		<Entry>SPELL</Entry>
+		<Entry>WEAPON</Entry>
+		<Entry>STRUCTURE</Entry>
+		<Entry>LEVEL</Entry>
+		<Entry>BUFF</Entry>
+		<Entry>DEBUFF</Entry>
+		<Entry>STUN</Entry>
+		<Entry>INNATE_ARMOR</Entry>
+		<Entry>INNATE_DAMAGEMULT</Entry>
+		<Entry>INNATE_VISION</Entry>
+		<Entry>INNATE_AUTOHEAL</Entry>
+		<Entry>INNATE_HEALTH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AttributeType">
+		<Entry>NONE</Entry>
+		<Entry>ARMOR</Entry>
+		<Entry>DAMAGE_ADD</Entry>
+		<Entry>DAMAGE_MULT</Entry>
+		<Entry>RESIST_FEAR</Entry>
+		<Entry>RESIST_TERROR</Entry>
+		<Entry>EXPERIENCE</Entry>
+		<Entry>RANGE</Entry>
+		<Entry>SPEED</Entry>
+		<Entry>CRUSH_DECELERATE</Entry>
+		<Entry>RESIST_KNOCKBACK</Entry>
+		<Entry>SPELL_DAMAGE</Entry>
+		<Entry>RECHARGE_TIME</Entry>
+		<Entry>PRODUCTION</Entry>
+		<Entry>HEALTH</Entry>
+		<Entry>HEALTH_MULT</Entry>
+		<Entry>VISION</Entry>
+		<Entry>BOUNTY_PERCENTAGE</Entry>
+		<Entry>MIN_CRUSH_VELOCITY_PERCENTAGE</Entry>
+		<Entry>AUTO_HEAL</Entry>
+		<Entry>SHROUD_CLEARING</Entry>
+		<Entry>RATE_OF_FIRE</Entry>
+		<Entry>DAMAGE_STRUCTURE_BOUNTY_ADD</Entry>
+		<Entry>CRUSHER_LEVEL</Entry>
+		<Entry>COMMAND_POINT_BONUS</Entry>
+		<Entry>CRUSHABLE_LEVEL</Entry>
+		<Entry>CRUSHED_DECELERATE</Entry>
+		<Entry>INVULNERABLE</Entry>
+		<Entry>SUPPRESSABILITY</Entry>
+		<Entry>RESIST_EMP</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AttributeModifierCategoryBitFlags"
+		BaseEnum="AttributeModifierCategoryType" />
+
+	<Asset
+		id="AttributeModifierListType">
+		<Entry
+			id="Type"
+			AssetType="AttributeType"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="Percentage"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="AttributeModifier"
+		TypeHash="2358400865">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Category"
+			AssetType="AttributeModifierCategoryType"
+			IsAttribute="true" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MetaDuration"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="StartFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="EndFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsSet"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsClear"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectStatusToSet"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StackingLimit"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryList
+			id="Modifier"
+			AssetType="AttributeModifierListType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ReplaceInCategoryIfLongest"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreIfAnticategoryActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

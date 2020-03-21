@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MapBorder">
+		<Entry>Invalid</Entry>
+		<Entry>Orange</Entry>
+		<Entry>Green</Entry>
+		<Entry>Blue</Entry>
+		<Entry>Cyan</Entry>
+		<Entry>Magenta</Entry>
+		<Entry>Yellow</Entry>
+		<Entry>Purple</Entry>
+		<Entry>Pink</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

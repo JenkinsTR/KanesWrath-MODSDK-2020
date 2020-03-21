@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="Reaper17_EASY"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Build="Reaper17PowerProjector" />
+    <Order Build="Reaper17Foundry" />
+    <Order Build="Reaper17Portal" />
+    <Order Build="Reaper17Portal" />
+    <Order Build="Reaper17PowerProjector" />
+    <Order Build="Reaper17TiberiumTower" />
+    <Order Build="Reaper17Gateway" />
+    <Order Build="Reaper17PowerProjector" />
+
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17Standard"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17Buzzers" />
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="104s" Account="PRODUCTION" Deposit="1000" />
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17Standard2"
+    Side="Reaper17"> <!--Power: +10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="62s" Account="PRODUCTION" Deposit="4500" />
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17StandardCrane"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+    <!--Order Time="149s" Account="PRODUCTION" Deposit="1000" /-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="185s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17Opening"
+    Side="Reaper17"> <!--Power: +10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17ControlCenter" />  <!--Time: 15 Power: -8-->
+    <Order Build="Reaper17Reactor" />  <!--Time: 40 Power: -10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Build="Reaper17Harvester" /> 
+    <Order Build="Reaper17Harvester" /> 
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17ShardWalker" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+    <Order Build="Reaper17AnnihilatorTripod" /> 
+
+    <Order Time="398s" /> 
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17BrutalCrane"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Time="119s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="247s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="ConnectionLineManager"
+		TypeHash="1802638191">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="FXShader"
+			AssetType="FXShaderMaterial" />
+	</GameAsset>
+
+</AssetDefinition>

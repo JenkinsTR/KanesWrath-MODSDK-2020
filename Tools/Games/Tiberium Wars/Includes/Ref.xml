@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AssetId">
+		<EntryReference
+			id="AssetId"
+			AssetType="BaseAssetType" />
+	</Asset>
+
+	<Asset
+		id="MusicScriptConditionRef">
+		<EntryReference
+			id="MusicScriptConditionNuggetBase"
+			AssetType="MusicScriptConditionNuggetBase" />
+	</Asset>
+
+	<Asset
+		id="MusicScriptTrackRef">
+		<EntryReference
+			id="MusicScriptTrack"
+			AssetType="MusicScriptTrack" />
+	</Asset>
+
+	<Asset
+		id="AudioEventInfoRef">
+		<EntryReference
+			id="AudioEventInfo"
+			AssetType="AudioEventInfo" />
+	</Asset>
+
+	<Asset
+		id="RenderObjectRef">
+		<EntryReference
+			id="BaseRenderAssetType"
+			AssetType="BaseRenderAssetType" />
+	</Asset>
+
+	<Asset
+		id="ArmorTemplateRef">
+		<EntryReference
+			id="ArmorTemplate"
+			AssetType="ArmorTemplate" />
+	</Asset>
+
+	<Asset
+		id="MissionTemplateRef">
+		<EntryReference
+			id="MissionTemplate"
+			AssetType="MissionTemplate" />
+	</Asset>
+
+	<Asset
+		id="TheaterOfWarTemplateRef">
+		<EntryReference
+			id="TheaterOfWarTemplate"
+			AssetType="TheaterOfWarTemplate" />
+	</Asset>
+
+	<Asset
+		id="ObjectCreationListRef">
+		<EntryReference
+			id="ObjectCreationList"
+			AssetType="ObjectCreationList" />
+	</Asset>
+
+	<Asset
+		id="ExperienceLevelTemplateRef">
+		<EntryReference
+			id="ExperienceLevelTemplate"
+			AssetType="ExperienceLevelTemplate" />
+	</Asset>
+
+	<Asset
+		id="FXListRef">
+		<EntryReference
+			id="FXList"
+			AssetType="FXList" />
+	</Asset>
+
+	<Asset
+		id="GameObjectRef">
+		<EntryReference
+			id="GameObject"
+			AssetType="GameObject" />
+	</Asset>
+
+	<Asset
+		id="GameObjectWeakRef">
+		<EntryWeakReference
+			id="GameObject"
+			AssetType="GameObject" />
+	</Asset>
+
+	<Asset
+		id="UpgradeTemplateRef">
+		<EntryReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate" />
+	</Asset>
+
+	<Asset
+		id="UpgradeTemplateWeakRef">
+		<EntryWeakReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate" />
+	</Asset>
+
+	<Asset
+		id="SpecialPowerTemplateRef">
+		<EntryReference
+			id="SpecialPower"
+			AssetType="SpecialPowerTemplate" />
+	</Asset>
+
+	<Asset
+		id="AttributeModifierRef">
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier" />
+	</Asset>
+
+	<Asset
+		id="ImageRef">
+		<EntryReference
+			id="PackedTextureImage"
+			AssetType="PackedTextureImage" />
+	</Asset>
+
+	<Asset
+		id="TextureRef">
+		<EntryReference
+			id="Texture"
+			AssetType="Texture" />
+	</Asset>
+
+	<Asset
+		id="LogicCommandRef">
+		<EntryReference
+			id="LogicCommand"
+			AssetType="LogicCommand" />
+	</Asset>
+
+	<Asset
+		id="FXParticleSystemRef">
+		<EntryReference
+			id="FXParticleSystemTemplate"
+			AssetType="FXParticleSystemTemplate" />
+	</Asset>
+
+	<Asset
+		id="WeaponTemplateRef">
+		<EntryReference
+			id="WeaponTemplate"
+			AssetType="WeaponTemplate" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+  <AIPersonalityDefinition
+	id="CM_1_1_Rio_Insurrection_AIP_SplinterNod_Main"
+	PersonalityType="CM_1_1_Rio_Insurrection_AIP_SplinterNod_Main"
+	PersonalityUIName="CM_1_1_Rio_Insurrection_AIP_SplinterNod_Main"
+	SkirmishPersonality="false" 
+	SecondsTillTargetsCanExpire="15.0"
+	ChanceForTargetToExpire="100"
+	MaxBuildingsToBeDefensiveTarget_Small="0"
+	MaxBuildingsToBeDefensiveTarget_Med="0"
+	ChanceForUnitsToUpgrade="15"
+	ChanceToUseAllUnitsForDefenseTarget_Small="0"
+	ChanceToUseAllUnitsForDefenseTarget_Med="0"
+	ChanceToUseAllUnitsForDefenseTarget_Large="0"
+	DesiredExcessPowerBuffer="20"
+	BaseCompactness="0.75"
+	DefaultThreatFindRadius="0"
+    UnitBuilderCostEffectivenessWeight="0.5"
+    UnitBuilderMoneyVersusTimePreference="0.5"
+    UnitBuilderOverallOffensivePreference="100%"
+    UnitBuilderOverallDefensivePreference="50%"
+    Expansion_TiberiumSearchRadius="1000"
+    Expansion_MaxTiberiumRemaining="22000"
+    ReactiveDefenseRadius="1000"
+    RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoPowerAtDifficulty=""
+    EmergencyManagerHandleNoIncomeAtDifficulty=""
+    EmergencyManagerHandleNoConyardAtDifficulty=""
+    StructureSaveChanceEasy="0.0"
+    StructureSaveChanceMedium="0.01"
+    StructureSaveChanceHard="1.0"
+		>
+
+    <Side>NOD</Side>
+
+    <BuildDelayRange id="BuildDelayEasy" MinDelay="50s" MaxDelay="90s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="EASY" />
+    <BuildDelayRange id="BuildDelayMedium" MinDelay="40s" MaxDelay="90s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="MEDIUM" />
+	<BuildDelayRange id="BuildDelayHard" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="HARD" />
+	<BuildDelayRange id="BuildDelayBrutal" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="BRUTAL" />
+	
+	<UnitBuilderUnitChoiceStrategy Shape="WORST" StandardDeviation="1.5" Difficulty="EASY" />
+	<UnitBuilderUnitChoiceStrategy Shape="MIDDLE" StandardDeviation="2" Difficulty="MEDIUM" />
+    <UnitBuilderUnitChoiceStrategy Shape="BEST" StandardDeviation="0.25" Difficulty="HARD BRUTAL" />
+
+	<ResourceMultiplierCheat Percentage= "60%" Difficulty="EASY"/>
+	<ResourceMultiplierCheat Percentage= "90%" Difficulty="MEDIUM"/>
+	<ResourceMultiplierCheat Percentage="150%" Difficulty="HARD"/>
+	<ResourceMultiplierCheat Percentage="200%" Difficulty="BRUTAL"/>
+	
+	<TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+	<TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+	
+	<SpecificUnitCap Unit="NodRocketMilitantSquad" Cap="8"/>
+	<SpecificUnitCap Unit="NodMilitantSquad" Cap="8"/>
+	<SpecificUnitCap Unit="NodScorpionBuggy" Cap="8"/>
+	<SpecificUnitCap Unit="NodAttackBike" Cap="8"/>
+	<SpecificUnitCap Unit="NodBunkerTruck" Cap="2"/>
+		
+	<States State="CM_1_1_NODSplinterNod_Attack_1" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+	<States State="CM_1_1_NODSplinterNod_Attack_2" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+	<States State="CM_1_1_NODReactiveDefense" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+	<States State="CM_1_1_NODUnitCap_Easy" Difficulty="EASY"/>
+	<States State="CM_1_1_NODUnitCap_Medium" Difficulty="MEDIUM"/>
+	<States State="CM_1_1_NODUnitCap_Hard" Difficulty="HARD BRUTAL"/>
+
+	<BudgetStates State="CM_1_1_FullProductionBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    
+	</AIPersonalityDefinition>
+</AssetDeclaration>
+
+

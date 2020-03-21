@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="RadarPriorityType">
+		<Entry>INVALID</Entry>
+		<Entry>NOT_ON_RADAR</Entry>
+		<Entry>STRUCTURE</Entry>
+		<Entry>UNIT</Entry>
+		<Entry>LOCAL_UNIT_ONLY</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

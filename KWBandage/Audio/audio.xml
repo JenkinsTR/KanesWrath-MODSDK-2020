@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<AudioFile id="Test" PCCompression="XAS" File="AUDIO:AUMirag_movStartA.wav" GUIPreset="Default"></AudioFile>
+</AssetDeclaration>

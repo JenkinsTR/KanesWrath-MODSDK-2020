@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentMinimap">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="RadarWidth"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="128" />
+		<Entry
+			id="RadarHeight"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="128" />
+		<Entry
+			id="AptImageNameTerrain"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="AptImageNameObjects"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="AptImageNameShroud"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="AptImageNameOrientation"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="OrientationArrowSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="OrientationArrowImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatusTextInfiltration"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

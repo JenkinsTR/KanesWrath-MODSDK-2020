@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="CommandMode">
+		<Entry>Sell</Entry>
+		<Entry>TogglePower</Entry>
+		<Entry>ToggleRepair</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

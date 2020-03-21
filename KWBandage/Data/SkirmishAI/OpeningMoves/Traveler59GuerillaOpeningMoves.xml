@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+   id="Traveler59StormriderRush"
+   Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59ControlCenter" /> <!--Time: 15 Power: -8-->
+    <Order Build="Traveler59WarpBeacon" /> <!--Time: 10 Power: -7-->
+    <Order Build="Traveler59WarpBeacon" /> <!--Time: 10 Power: -7-->
+
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Build="Traveler59Stormrider" />
+    <Order Time="203s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+   id="Traveler59RavagerRush"
+   Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59ControlCenter" /> <!--Time: 15 Power: -8-->
+    <Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59StatisChamber" /> <!--Time: 12 Power: -8-->
+    <Order Build="Traveler59Reactor" /> <!--Time: 40 Power: -10-->
+
+    <Order Build="Traveler59CultistSquad" />
+    <Order Build="Traveler59CultistSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Build="Traveler59StalkerSquad" />
+    <Order Time="213s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+   id="Traveler59MechapedeRush"
+   Side="Traveler59"> <!--Power: +10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59ControlCenter" /> <!--Time: 15 Power: -8-->
+    <Order Build="Traveler59Reactor" /> <!--Time: 40 Power: -10-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Build="Traveler59CustomizableVehicle" />
+    <Order Time="251s" />
+
+  </SkirmishOpeningMove>
+
+
+</AssetDeclaration>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="BaseAssetType"
+		TypeHash="0" />
+
+	<GameAsset
+		id="BaseInheritableAsset"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+	</GameAsset>
+
+</AssetDefinition>

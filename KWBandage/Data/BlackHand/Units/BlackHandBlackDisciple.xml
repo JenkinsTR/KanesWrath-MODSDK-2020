@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Removed Purifying Flame. This is to ensure the max tech upgrade of confessors (Maximum is 2)-->
+	<GameObject
+		id="BlackHandBlackDisciple"
+		SelectPortrait="Portrait_NODBlackHand"
+		ButtonImage="Portrait_NODBlackHand"
+		Side="BlackHand"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="150"
+		BuildTime="1.5"
+		CommandSet="NODBlackHandCommandSet"
+		IsTrainable="true"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY "
+		RadarPriority="UNIT"
+		BuildCompletion="APPEARS_AT_RALLY_POINT"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="BLAST"
+		VoicePriority="10"
+		EditorName="BlackHandBlackDisciple"
+		Description="Desc:NODBlackHand"
+		TypeDescription="Type:BlackHandBlackHand">
+		<DisplayName>Name:NODBlackHand</DisplayName>
+		<ArmorSet
+			Armor="NODBlackHandArmor"
+			DamageFX="InfantryDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="55" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NU_BlkHnd_SKN" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="B_WEAPONA_FX" />
+					<ParticleSysBone
+						BoneName="B_WEAPONA_FX"
+						FXParticleSystemTemplate="NUBlkHndPilotDistortion"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXInfantry_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<Model
+						Name="GUGarGun" />
+					<WeaponFireFXBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE01" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE01" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					AllowRepeatInRandomPick="true"
+					StateName="STATE_Idle">
+					<Animation
+						AnimationName="NU_BlkHnd_BIDA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="30"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIDB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIDC"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIFA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="30"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIFB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIFC"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="10"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_BIFD"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="30"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_stunned_flailing" then
+						CurDrawableSetTransitionAnimState("STATE_stunned_landing")
+						end
+						if Prev == "STATE_Selected" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_FLAILING"
+					StateName="STATE_stunned_flailing">
+					<Animation
+						AnimationName="NU_BlkHnd_FLYA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					StateName="STATE_stunned_landing">
+					<Animation
+						AnimationName="NU_BlkHnd_LNDA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED">
+					<Animation
+						AnimationName="NU_BlkHnd_CDTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED">
+					<Animation
+						AnimationName="NU_BlkHnd_CDTB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED DYING"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="NU_BlkHnd_SDIA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER DYING"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NU_BlkHnd_KDIA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="NU_BlkHnd_KDIB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimNickName="DTA"
+						AnimationName="NU_BlkHnd_DIEA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimNickName="DTA"
+						AnimationName="NU_BlkHnd_DIEB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimNickName="DTA"
+						AnimationName="NU_BlkHnd_DIEC"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED MOVING"
+					StateName="STATE_Suppressed"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NU_BlkHnd_SMVA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED USING_WEAPON_A"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="NU_BlkHnd_SATA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="NU_BlkHnd_SIDA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="NU_BlkHnd_SIFA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="NU_BlkHnd_SIFB"
+						AnimationMode="ONCE" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev ~= "STATE_Suppressed" and Prev ~= "TRANS_toSuppressed" then
+						CurDrawableSetTransitionAnimState("TRANS_toSuppressed")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_COVER_UNSELECT_TO_SELECT">
+					<Animation
+						AnimationName="NU_BlkHnd_KBTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_COVER_SELECT_TO_UNSELECT">
+					<Animation
+						AnimationName="NU_BlkHnd_KATA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_toSuppressed">
+					<Animation
+						AnimationName="NU_BlkHnd_SDVA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_fromSuppressed"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="NU_BlkHnd_SDVA"
+						AnimationMode="ONCE_BACKWARDS"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED MOVING"
+					StateName="STATE_Suppressed"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NU_BlkHnd_SMVA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER USING_WEAPON_A"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NU_BlkHnd_KAKA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Cover_Selected">
+					<Animation
+						AnimationName="NU_BlkHnd_KAIA"
+						AnimationMode="ONCE"
+						AnimationPriority="10" />
+					<Animation
+						AnimationName="NU_BlkHnd_KAFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Animation
+						AnimationName="NU_BlkHnd_KAFC"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Cover_Unselected" then
+						CurDrawableSetTransitionAnimState("TRANS_COVER_UNSELECT_TO_SELECT")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Cover_Unselected">
+					<Animation
+						AnimationName="NU_BlkHnd_KBIA"
+						AnimationMode="ONCE"
+						AnimationPriority="10" />
+					<Animation
+						AnimationName="NU_BlkHnd_KBFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Animation
+						AnimationName="NU_BlkHnd_KBFC"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Cover_Selected" then
+						CurDrawableSetTransitionAnimState("TRANS_COVER_SELECT_TO_UNSELECT")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING USING_WEAPON_A"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NU_BlkHnd_ATRA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USING_WEAPON_A">
+					<Animation
+						AnimationName="NU_BlkHnd_ATKA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NU_BlkHnd_RUNA"
+						AnimationMode="LOOP" />
+					<Animation
+						AnimationName="NU_BlkHnd_RUNB"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="EMOTION_CELEBRATING">
+					<Animation
+						AnimationName="NU_BlkHnd_CHRA"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_CHRB"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="NU_BlkHnd_CHRC"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					AllowRepeatInRandomPick="true"
+					StateName="STATE_Selected">
+					<Animation
+						AnimationName="NU_BlkHnd_AIDA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="5" />
+					<Animation
+						AnimationName="NU_BlkHnd_AIDB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="1" />
+					<Animation
+						AnimationName="NU_BlkHnd_AIFA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="1" />
+					<Animation
+						AnimationName="NU_BlkHnd_AIFB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="1" />
+					<Animation
+						AnimationName="NU_BlkHnd_AIFC"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30"
+						AnimationPriority="1" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Idle" then
+						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IdleToSelected">
+					<Animation
+						AnimationName="NU_BlkHnd_BATA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="NU_BlkHnd_BATB"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_SelectedToIdle">
+					<Animation
+						AnimationName="NU_BlkHnd_ABTA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+					<Animation
+						AnimationName="NU_BlkHnd_ABTB"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			<StreamDraw
+				id="ModuleTag_StreamDraw"
+				UseDistortionShader="false"
+				Velocity="200.0"
+				ArcHeightFactor="0.0625"
+				UVWorldSize="100.0"
+				NumTubeSides="8"
+				TubeRadius="0.5"
+				HitFx="FX_NOD_BlackHandFlameWeaponHit">
+				<FXShader
+					ShaderName="Stream.fx"
+					TechniqueIndex="1">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXFireStream</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXFireStream</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ParticleSystems>
+					<ParticleSys>NUBlkHndStreamFlame</ParticleSys>
+					<ParticleSys>NUBlkHndStreamGlow</ParticleSys>
+					<ParticleSys>NUBlkHndStreamDistort</ParticleSys>
+				</ParticleSystems>
+			</StreamDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<CrushDie
+				id="ModuleTAg_CrushDie">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			<FXListBehavior
+				id="SquishedFXPlayer">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="10"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate>
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODBlackHandFlamethrower" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StreamState
+				id="ModuleTag_StreamState"
+				StreamId="0"></StreamState>
+			<Physics
+				id="ModuleTag_Physics" />
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="4.5s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Sound
+					Type="INITIAL"
+					List="NOD_BlackHand_VoiceDie" />
+			</SlowDeath>
+			<SuppressionUpdate
+				id="ModuleTag_SuppressionUpdate"
+				UpdateDelay="1s"
+				Suppressability="500"
+				SuppressionDuration="5s"
+				AttributeModifierSuppressed="Modifier_Test_Suppression"
+				AttributeModifierForceMove="Modifier_Test_Suppression_ForceMove" />
+			<FindCoverBehavior
+				id="ModuleTag_FCB"
+				CoverScanRange="10.0"
+				AttributeModifierInCover="Modifier_Cover" />
+			<LargeGroupAudioUpdate
+				id="LGAU">
+				<Key>GDI_ZoneTrooper</Key>
+			</LargeGroupAudioUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_06"
+				AutoAcquireEnemiesWhenIdle="YES">
+				<UnitAITargetChooserData
+					SympathyRange="100.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_03"
+				MaxHealth="500" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="AudioEvent:Bodyfall" Animation="NU_BlkHnd_LNDA" Frame="5" />
+			</AnimationSoundClientBehavior>
+			<ModelConditionAudioLoopClientBehavior
+				id="ModuleTag_NOD_BlackHand_FlameWeaponLoopMS">
+				<ModelConditionSound
+					Sound="Multisound:NOD_BlackHand_FlameWeaponLoopMS"
+					RequiredFlags="USING_WEAPON_A"
+					ExcludedFlags="DYING" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"
+				ContactPointGeneration="SQUAD_MEMBER" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceAttackBuildingClear" AudioType="voiceAttackGarrisonedStructure" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceCreate" AudioType="voiceFullyCreated" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceGarrison" AudioType="voiceGarrison" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceMove" AudioType="voiceGuard" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="AudioEvent:NOD_BlackHand_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:NOD_BlackHand_VoiceSelectMS" AudioType="voiceSelect" />
+			<AudioEntry Sound="Multisound:NOD_BlackHand_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+		</AudioArrayVoice>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

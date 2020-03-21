@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="LocalBuildListMonitor"
+		TypeHash="606823165">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="TimeBetweenUpdates"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.25s" />
+		<Entry
+			id="UpdatesToSkipAfterStart"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="UpdatesToSkipAfterSaveFileLoad"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="UpdatesToSkipAfterTargetPlayerChanges"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="2" />
+		<EntryRelocation
+			id="ProducerObjectFilter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+</AssetDefinition>

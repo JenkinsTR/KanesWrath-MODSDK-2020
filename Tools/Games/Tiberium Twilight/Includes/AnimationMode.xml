@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AnimationMode">
+		<Entry>MANUAL</Entry>
+		<Entry>LOOP</Entry>
+		<Entry>ONCE</Entry>
+		<Entry>LOOP_BACKWARDS</Entry>
+		<Entry>ONCE_BACKWARDS</Entry>
+		<Entry>LOOP_PINGPONG</Entry>
+		<Entry>PLAY_TO_FRAME</Entry>
+		<Entry>MATCH_UNPACKING</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

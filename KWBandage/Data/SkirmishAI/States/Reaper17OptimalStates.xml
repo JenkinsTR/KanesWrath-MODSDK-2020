@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  <AIStrategicStateDefinition
+		id="Reaper17OptimalSiege"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <LateGameHeuristic/>
+      <SiegeThresholdHeuristic SiegeMode="true" Threshold="4.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="SiegeTarget"/>
+    <Tactic Tactic="SimpleSiege" TargetType="SiegeTarget">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17AnnihilatorTripod"/>
+        <CreateUnits UnitName="Reaper17AnnihilatorTripod"/>
+      </TeamTemplate>
+      <TeamTemplate MinUnits="7" MaxUnits="11" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+</AssetDeclaration>

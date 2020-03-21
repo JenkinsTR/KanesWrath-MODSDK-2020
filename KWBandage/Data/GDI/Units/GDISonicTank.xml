@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--Removed RailGun Upgrade Sounds-->
+	<GameObject
+		id="GDISonicTank"
+		SelectPortrait="Portrait_SonicTank"
+		ButtonImage="Portrait_SonicTank"
+		Side="GDI"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="1500"
+		BuildTime="15"
+		CommandSet="GDISonicTankCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE VEHICLE CAN_REVERSE_MOVE CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="CANNON"
+		VoicePriority="209"
+		EditorName="GDISonicTank"
+		Description="Desc:GDISonicTank"
+		TypeDescription="Type:GDISonicTank"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName>Name:GDISonicTank</DisplayName>
+		<GameDependency>
+			<RequiredObject>GDICommandPost</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="GDISonicTankArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="GDISonicTankLocomotor"
+			Condition="NORMAL"
+			Speed="60.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUShatterer_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFX" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="MuzzleFX" />
+					<Turret
+						TurretNameKey="Shatterer_cannon"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUShatterer_FP" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GUShatterer_SKN" />
+					<Texture
+						Original="GUShatterer" 
+						New="GUShatterer_D" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIPredDamagedFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIPredDamagedFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIPredDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					Flags="START_FRAME_FIRST">
+					<Animation
+						AnimationName="GUShatterer_DIEA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+	
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PASSENGER">
+					<Animation
+						AnimationName="GUSHATTERER_LOWA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />					
+				</AnimationState>				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="AFFECTED_BY_EMP">
+					<Animation
+						AnimationName="GUSHATTERER_LOWA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />			
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Animation
+						AnimNickName="IDLA"
+						AnimationName="GUSHATTERER_IDLA"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.9"
+						AnimationSpeedFactorMax="1.1" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_LEFT">
+					<Animation
+						AnimationName="GUSHATTERER_TRLA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="TURN_RIGHT">
+					<Animation
+						AnimationName="GUSHATTERER_TRRA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="GUSHATTERER_ACCA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="GUSHATTERER_DECA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Animation
+						AnimationName="GUSHATTERER_MOVA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_A">
+					<Animation
+						AnimationName="GUSHATTERER_ATKA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="5" />
+				</AnimationState>				
+			</TankDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_Particles"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					Skeleton="">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="GUShatterer_R" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Fire02"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="PASSENGER">
+					<Model
+						Name="" />						
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1 AFFECTED_BY_EMP">
+					<Model
+						Name="" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate=""
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate=""
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Model
+						Name="" />
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="GDIShattererHoverDust"
+						FollowBone="true" />
+
+					<ParticleSysBone
+						BoneName="none"
+						FXParticleSystemTemplate="GDIShattererDustRocksDesert"
+						FollowBone="true" />
+					</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<ProductionUpdate
+				id="ProductionUpdateModuleTag"
+				GiveNoXP="true" />
+			<WeaponSetUpdate
+				id="ModuleTag_Weapon01SetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIShattererShockWaveCannon" />
+          				<TurretSettings
+							TurretTurnRate="80"
+            				MaxDeflectionClockwise="180d"
+            				MaxDeflectionAntiClockwise="180d"
+							TurretPitchRate="80"
+							AllowsPitch="true"
+							MinimumPitch="-60d"
+							PitchHeight="90%"
+							MinIdleScanTime="1.0s"
+							MaxIdleScanTime="5.0s"
+							MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+          				</TurretSettings>
+        			</WeaponSlotTurret>
+      			</WeaponSetUpdate>
+			<LinearDamageUpdate
+				id="ModuleData_LinearDamageUpdate"
+				StartDistanceOffset="50"
+				Radius="10"
+				Length="350"
+				SweepFXList="FX_TeraSweep_Md"
+				SweepWeapon="ShattererSweepWeapon"
+				Speed="125" />
+			<LaserState
+				id="ModuleTag_LaserState"
+				LaserId="0"></LaserState>
+			<Physics
+				id="ModuleTag_Physics" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="0.5s"
+				SinkRate="2.5"
+				DestructionDelay="5s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIShattererDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIMammothExplode" />
+			</FXListBehavior>
+			<CreateAndEnterObjectSpecialPower
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportGDI"
+				OCL="OCL_GDICallForTransportForVehicle"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_GDICallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_03">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_AllFactionUpgrade"
+				AddConditionFlags="USER_5">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlating"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlatingSteelTalons"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ShowThePlatingZOCOM"
+				Permanent="true"
+				AddConditionFlags="USER_1">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</ModelConditionUpgrade>      
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="GDIPredatorFunctions">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="100.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="3400" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="15.0"
+				MinorRadius="15.0"
+				Height="5.0"
+				ContactPointGeneration="VEHICLE" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceCreate" AudioType="voiceFullyCreated" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceMove" AudioType="voiceGuard" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="Multisound:GDI_Shatterer_VoiceSelectBattleMS" AudioType="voiceSelectBattle" />
+			<AudioEntry Sound="Multisound:GDI_Shatterer_VoiceSelectMS" AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_IdleLoop" AudioType="soundAmbient" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_MoveByLoop" AudioType="soundMoveLoop" />
+			<AudioEntry Sound="AudioEvent:GDI_Shatterer_MoveStart" AudioType="soundMoveStart" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrusherLevel="1" 
+			CrushableLevel="2" />
+	</GameObject>
+</AssetDeclaration>

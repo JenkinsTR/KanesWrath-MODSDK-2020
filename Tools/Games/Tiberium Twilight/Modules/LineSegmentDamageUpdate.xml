@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LineSegmentDamageUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="NodeLifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="DamageInterval"
+			AssetType="Time"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Damage"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DamageType"
+			AssetType="DamageType"
+			IsAttribute="true"
+			Default="UNDEFINED" />
+		<Entry
+			id="DeathType"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<Entry
+			id="DamageFXType"
+			AssetType="DamageFXType"
+			IsAttribute="true"
+			Default="UNDEFINED" />
+		<Entry
+			id="ObjectStatusForbiddenForDamage"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="MinDistanceTolerance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="MaxValidHeightOffGround"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="FXParticleSystemTemplate"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="NodeFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="RadiusCursor"
+		TypeHash="2695845168">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DecalTemplate"
+			AssetType="RadiusDecalTemplate" />
+	</GameAsset>
+
+</AssetDefinition>

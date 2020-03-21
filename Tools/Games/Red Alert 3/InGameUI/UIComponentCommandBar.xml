@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentCommandBar">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="HomeButtonImageName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="CbarHome" />
+		<Entry
+			id="ButtonSlotImageBaseName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="CbarSlot" />
+		<Entry
+			id="GeneralButtonImageBaseName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="CbarGeneral" />
+		<Entry
+			id="RenderClockName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ClockScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="ClockImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapFlashSeconds"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapFinalWarningAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapInitialWarningAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapNoMoreCP"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapAlmostNoMoreCP"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ScrollPowersSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="OpenUISoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="CloseUISoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="HighlightButtonSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="HighlightButtonForceFeedback"
+			AssetType="ForceFeedbackEventWeakRefRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="TransitionForceFeedback"
+			AssetType="ForceFeedbackEventWeakRefRef"
+			IsAttribute="true" />
+		<Entry
+			id="SelectButtonSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ZoomInSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ZoomOutSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="CycleSoundName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenTitle"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenCost"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenTime"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenEnergy"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ClockColor"
+			AssetType="Color4" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+  <!--
+  AIPersonalityDefinition declares several important attributes of your AI.
+		id - the name that will appear in the WorldBuilder Player List drop-down menu
+		PersonalityType - this value must match the id field
+		PersonalityUIName - references an entry in the cnc3.str file to provide the Skirmish Select Menu string
+		SkirmishPersonality - set this to "false" to have the AI appear in WorldBuilder
+		SecondsTillTargetsCanExpire - this is the amount of time before the AI will choose another candidate for an TacticalAITarget.
+			It is used to make sure the AI does not continue to select old targets.
+		ChanceForTargetToExpire - the chance the target will expire after the designated amount of time from SecondsTillTargetsCanExpire
+		MaxBuildingsToBeDefensiveTarget_Small - this is unused
+		MaxBuildingsToBeDefensiveTarget_Med - this is unused
+		ChanceForUnitsToUpgrade - this is unused
+		ChanceToUseAllUnitsForDefenseTarget_Small - this is unused
+		ChanceToUseAllUnitsForDefenseTarget_Med - this is unused
+		ChanceToUseAllUnitsForDefenseTarget_Large - this is unused
+		DesiredExcessPowerBuffer - determines how much extra power the AI attempts to maintain
+		BaseCompactness - a value between 0 and 1 that determines how compact an AI builds its base.  Only values between 0.5 and 1 will actually work.
+			A value of 1 is the furthest out on the build radius circle; a lower value is closer in from the build radius circle.
+		DefaultThreatFindRadius - deprecated or unused value
+		UnitBuilderCostEffectivenessWeight - determines how heavily the AI relies on cost effectiveness (power / cost) in deciding what unit to build.  
+			Lowering this will make the AI pick the best unit without concern for cost.
+		UnitBuilderMoneyVersusTimePreference - determines if the AI wants to build units with low build times relative to cost or high build times relative to cost.  
+			Since all units in C&C3 were normalized to have build time and costs proportional this is effectively unused.
+		UnitBuilderOverallOffensivePreference - weighs a unit's damage more heavily than its health and armor when the AI decides what unit to build.
+		UnitBuilderOverallDefensivePreference - weighs a unit's health and armor more heavily than its damage when the AI decides what unit to build.
+		Expansion_TiberiumSearchRadius - the radius around a player’s base to consider a Tiberium field as accessible from that base  
+			The AI only picks Tiberium fields more than this distance away from any base to expand to.
+		Expansion_MaxTiberiumRemaining - the amount of tiberium around all the AI's bases must drop below this value before it tries to expand.
+		ReactiveDefenseRadius - determines how far out an AI will defend its base using the ReactiveDefense tactic (units are WorldBuilder feet)
+		RepairBuildingsAtDifficulty - determines at what difficulties the AI will repair their buildings. 
+			EASY MEDIUM HARD and BRUTAL are the legal values for all difficulty fields.
+		EmergencyManagerHandleNoPowerAtDifficulty - determines at what difficulties the AI emergency manager will manage being low-power
+			None of the Emergency Managers work for a SkirmishAI loaded through WorldBuilder.
+		EmergencyManagerHandleNoIncomeAtDifficulty - determines at what difficulties the AI emergency manager will manage having no income
+		EmergencyManagerHandleNoConyardAtDifficulty - determines at what difficulties the AI emergecny manager will manage having no conyard
+		StructureSaveChanceEasy - determines percentage chance that the AI will sell a building before an engineer captures it on Easy
+		StructureSaveChanceMedium - determines percentage chance that the AI will sell a building before an engineer captures it on Medium
+	    StructureSaveChanceHard - determines percentage chance that the AI will sell a building before an engineer captures it on Hard
+  -->
+  <AIPersonalityDefinition
+	id="AlienExampleAI"
+	PersonalityType="AlienExampleAI"
+    PersonalityUIName="Personality:Offensive"
+    SkirmishPersonality="false"	
+	SecondsTillTargetsCanExpire="15.0" 
+	ChanceForTargetToExpire="100"
+	MaxBuildingsToBeDefensiveTarget_Small="0"
+	MaxBuildingsToBeDefensiveTarget_Med="0"
+	ChanceForUnitsToUpgrade="100"
+	ChanceToUseAllUnitsForDefenseTarget_Small="0"
+	ChanceToUseAllUnitsForDefenseTarget_Med="0"
+	ChanceToUseAllUnitsForDefenseTarget_Large="0"
+	DesiredExcessPowerBuffer="20"
+	BaseCompactness="0.85"
+    DefaultThreatFindRadius="0"
+    UnitBuilderCostEffectivenessWeight="1.0"
+    UnitBuilderMoneyVersusTimePreference="0.5"
+    UnitBuilderOverallOffensivePreference="110%"
+    UnitBuilderOverallDefensivePreference="100%"
+    Expansion_TiberiumSearchRadius="1000"
+    Expansion_MaxTiberiumRemaining="22000"
+    ReactiveDefenseRadius="1000"
+    RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoPowerAtDifficulty="MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoIncomeAtDifficulty="EASY MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoConyardAtDifficulty="EASY MEDIUM HARD BRUTAL"
+    StructureSaveChanceEasy="0.0"
+    StructureSaveChanceMedium="0.01"
+    StructureSaveChanceHard="1.0"
+	>
+
+	<!-- 
+	The side field defines which faction this AI applies to.
+	The three possible values are: Alien, GDI, NOD
+	-->
+    <Side>Alien</Side>
+
+	<!-- 
+	BuildDelayRange specified how long the AI will delay between using a queue after producing a unit from it.
+	This is useful for slowing down an AI at easier difficulty levels.  The values are as follows:
+		MinDelay - the minimum delay the AI will use for a queue when it is significantly outmatched
+		MaxDelay - the maximum delay the AI will use for a queue when it is significantly better than the player
+		MinTTKRatio - 
+		MaxTTKRatio - 
+		Difficulty - the difficulty which this build delay applies to
+	-->
+    <BuildDelayRange MinDelay="5s" MaxDelay="60s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="EASY" />
+    <BuildDelayRange MinDelay="0s" MaxDelay="30s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="MEDIUM" />
+    <BuildDelayRange MinDelay="0s" MaxDelay="5s"  MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="HARD" />
+    <BuildDelayRange MinDelay="0s" MaxDelay="0s"  MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="BRUTAL" />
+     
+    <!-- 
+    The UnitBuilderUnitChoiceStrategy defines which units the AI will build by analyzing the opponents units.
+		Shape - the Unit Builder analyzes every units' effectiveness vs. the opponents army and looks at a graph of the effectiveness.
+				In the case below, on Easy, the UnitBuilder is looking at the worst counters the opponents units and picking them.
+				In brutal, it is looking for the best counters for the opponents units and picking those.
+		StandardDeviation - determines the range of units an AI will pick based on the shape defined.
+							For example, if an AI is looking for units with a shape of "Middle" with a StandardDeviation of 2, it will
+							pick from units that are the most middle-of-the-road counter to the player and units that are two positions worse
+							and two positions better (for a total of 5 units).  
+		Difficulty - determines on what difficulty the UnitBuilderUnitChoiceStrategy functions.  The possible choices are Easy, Medium
+					 Hard and Brutal.
+	-->
+	<UnitBuilderUnitChoiceStrategy Shape="WORST" StandardDeviation="0.25" Difficulty="EASY" />
+    <UnitBuilderUnitChoiceStrategy Shape="MIDDLE" StandardDeviation="2" Difficulty="MEDIUM" />
+    <UnitBuilderUnitChoiceStrategy Shape="BEST" StandardDeviation="0.25" Difficulty="BRUTAL" />
+
+	<!-- 
+	UnitBuilderUnitChoiceStrategyAdaptive is an alternative to the UnitBuilderUnitChoiceStrategy.  The adaptive version analyzes how effective 
+	the AI's choices have been and attempts to modify future unit choices based on this analysis.  You should not use an Adaptive unit builder 
+	in the same difficulty that you are using an non-Adaptive strategy. 
+	
+	The Adaptive unit builder uses "Effectiveness" and "Efficiency" in its evaluation (whereas the normal unit builder above uses only
+	effectiveness).  Effectiveness is the value that predicts how the two armies are stacked up.  Efficiency is a measure of how much 
+	stuff the AI has managed to kill (based on unit costs) and how much of its own units have been killed in the process (also based 
+	on unit costs).
+		MinEffectiveness - This value determines 
+	-->
+    <UnitBuilderUnitChoiceStrategyAdaptive 
+     MinEffectiveness="0.5" MaxEffectiveness="1.0"
+     MinStandardDeviation="2.0" MaxStandardDeviation="0.5"
+     MinEfficiency="1.0" MaxEfficiency="2.0"
+     Difficulty="EASY" 
+      />
+
+    <UnitBuilderUnitChoiceStrategyAdaptive
+      MinEffectiveness="0.0" MaxEffectiveness="0.5"
+      MinStandardDeviation="0.25" MaxStandardDeviation="2.0"
+      MinEfficiency="0.75" MaxEfficiency="1.0"
+      Difficulty="MEDIUM" 
+      />
+
+	<!--
+	UnitBuilderEvaluationDelayRange determines how often the AI chooses a different type of unit to build based on its efficiency against
+	the player.  It is primarily used on lower difficulties to stop the AI from producing a mixed group of units on lower difficulties.  
+		UseAllAvailableQueues - true or false; by default this is 'true' and the AI uses all its available queues to build
+		MinDelay - the minimum amount of time before the AI decides to build a different unit from a production structure
+		MaxDelay - the maxmimum amount of time before the AI decides to build a different unit from a production structure
+		MinEfficiency - determines when the min delay is used; if value is 0.75, then the AI will evaluate a new unit to build
+			out of a production structure at the minimum delay when it is 75% as efficient as the player
+		MaxEfficiency - determines when the max delay is used; if the value is 1.0, then the AI will evaluate a new unit to build
+			out of a production structure at the the maximum delay when it is just as efficient as the player (i.e when they have destroyed
+			units and base defenses of equal value to what the player has destroyed, with equal losses to the player)
+	-->
+    <UnitBuilderEvaluationDelayRange
+      UseAllAvailableQueues="false"
+      MinDelay="180s" MaxDelay="180s"
+      MinEfficiency="1.0" MaxEfficiency="1.0"
+      Difficulty="EASY"
+      />
+
+    <UnitBuilderEvaluationDelayRange
+      UseAllAvailableQueues="true"
+      MinDelay="10s" MaxDelay="60s"
+      MinEfficiency="0.75" MaxEfficiency="1.0"
+      Difficulty="MEDIUM"
+      />
+      
+	<!--
+	ResourceMultiplierCheat defines how much extra money an AI gets from harvested Tiberium (so this does not apply to money given
+	through script or any other way).
+		Percentage - defines how much more or less money the AI gets from harvested Tiberium; the value defaults to 100% which is the 
+			rate that a player would harvest tiberium
+		Difficulty - defines on what difficulty the ResourceMultiplierCheat applies; values are Easy, Medium, Hard and Brutal
+	-->
+    <ResourceMultiplierCheat Percentage="75%%" Difficulty="EASY"/>
+    <ResourceMultiplierCheat Percentage="200%" Difficulty="BRUTAL"/>
+
+	<!--
+	TacticalAITargets determine how many different targets an AI tries to pursue simultaneously.  The TacticalAITargets reference
+	targets in the States files and attempts to run tactics in those states on the specified targets.  Having multiple of the same
+	TacticalAITarget will mean that the AI will attempt to find more than one target of that type and run tactics on them.
+	
+	-->
+	
+	<!-- Ground Assault Targets -->
+    <TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Unit" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Unit" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="FocusedTarget" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="FocusedTarget" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="SiegeTarget" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="SiegeTarget" MaxTeamsPerTarget="1"/>
+    
+	<!-- Air Targets-->
+    <TacticalTarget TacticalAITarget="AssaultAirstrike" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="BombingAirstrike" MaxTeamsPerTarget="1"/>
+    
+    <!-- Defensive Targets -->
+    <TacticalTarget TacticalAITarget="EngineerDefense" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="EngineerDefense" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="CommandoDefense" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="ExpansionDefense" MaxTeamsPerTarget="1"/>
+    
+    <!-- Special Operations Targets -->
+    <TacticalTarget TacticalAITarget="Engineer" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="ExtraTarget" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="AntiGarrison" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="CaptureTech" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Bridge" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Husk" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Beacon" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Crate" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Expansion" MaxTeamsPerTarget="1" UpdateTime="5s"/>
+    <TacticalTarget TacticalAITarget="Superweapon" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Isolation" MaxTeamsPerTarget="1"/>
+    
+	<!-- 
+	Opening Moves are only used in Skirmish personalities that are loaded from the Skirmish menu (i.e. personalities that are only
+	used in Skirmish games and not selected as an AI in WorldBuilder).  They will not be used by an AI that has been loaded into a player in
+	WorldBuilder.
+	-->
+    <OpeningMove Name="Alien_EASY" Weight="100%" Difficulty="EASY"/>
+    <OpeningMove Name="AlienFastRush" Weight="30%" Difficulty="MEDIUM HARD"/>
+    <OpeningMove Name="AlienDualFactoryRush" Weight="60%" Difficulty="MEDIUM HARD"/>
+    <OpeningMove Name="AlienTripodRush" Weight="10%" Difficulty="MEDIUM HARD"/>
+    <OpeningMove Name="AlienBrutalTankRush" Weight="90%" Difficulty="BRUTAL"/>
+    <OpeningMove Name="AlienTripodRush" Weight="10%" Difficulty="BRUTAL"/>
+
+	<!--
+	Specific Unit Caps are used to cap the number of units an AI builds of a particular type.
+		Unit - specifies unit to be capped
+		Cap - specifies number to be capped; a 0 indicates no cap.	
+	
+	Capping units beyond whatever faction is specified in the <Side> field can be done to restrict what an AI builds if it captures an
+	enemy production structure.
+	-->
+
+    <!-- Alien -->
+    <SpecificUnitCap Unit="AlienAnnihilatorTripod" Cap="0"/>
+    <SpecificUnitCap Unit="AlienCorrupter" Cap="0"/>
+    <SpecificUnitCap Unit="AlienDevourerTank" Cap="0"/>   
+    <SpecificUnitCap Unit="AlienGunWalker" Cap="0"/>
+    <SpecificUnitCap Unit="AlienSeekerTank" Cap="0"/>  
+
+    <SpecificUnitCap Unit="AlienBuzzers" Cap="0"/>     
+    <SpecificUnitCap Unit="AlienRazorDroneSquad" Cap="0"/>
+    <SpecificUnitCap Unit="AlienShockTrooperSquad" Cap="0"/>
+    <SpecificUnitCap Unit="AlienMastermind" Cap="0"/> 
+
+    <SpecificUnitCap Unit="AlienDevastatorWarship" Cap="0"/>
+    <SpecificUnitCap Unit="AlienStormrider" Cap="0"/>
+    <SpecificUnitCap Unit="AlienPlanetaryAssaultCarrier" Cap="0"/>              
+
+    <!-- NOD -->
+    <SpecificUnitCap Unit="NODAttackBike" Cap="0"/>
+    <SpecificUnitCap Unit="NODAvatar" Cap="0"/>
+    <SpecificUnitCap Unit="NODBeamCannon" Cap="0"/>   
+    <SpecificUnitCap Unit="NODFlameTank" Cap="0"/>
+    <SpecificUnitCap Unit="NODRaiderTank" Cap="0"/>
+    <SpecificUnitCap Unit="NODScorpionBuggy" Cap="0"/>
+    <SpecificUnitCap Unit="NODStealthTank" Cap="0"/>     
+
+    <SpecificUnitCap Unit="NODBlackHandSquad" Cap="2"/>     
+    <SpecificUnitCap Unit="NODMilitantRocketSquad" Cap="2"/>
+    <SpecificUnitCap Unit="NODMilitantSquad" Cap="2"/>
+    <SpecificUnitCap Unit="NODShadowSquad" Cap="2"/> 
+    <SpecificUnitCap Unit="NODCommando" Cap="0"/>    
+    <SpecificUnitCap Unit="NODMilitantSquad" Cap="2"/>     
+
+    <SpecificUnitCap Unit="NODVertigo" Cap="0"/>
+    <SpecificUnitCap Unit="NODVenom" Cap="0"/>
+
+    <!-- GDI -->
+    <SpecificUnitCap Unit="GDIAPC" Cap="0"/>
+    <SpecificUnitCap Unit="GDIJuggernaught" Cap="0"/>
+    <SpecificUnitCap Unit="GDIMammoth" Cap="0"/>   
+    <SpecificUnitCap Unit="GDIPredator" Cap="0"/>
+    <SpecificUnitCap Unit="GDIPitbull" Cap="0"/>
+    <SpecificUnitCap Unit="GDIRig" Cap="0"/>       
+
+    <SpecificUnitCap Unit="GDICommando" Cap="0"/>     
+    <SpecificUnitCap Unit="GDIGrenadeSoldierSquad" Cap="2"/>
+    <SpecificUnitCap Unit="GDIMissileSoldierSquad" Cap="2"/>
+    <SpecificUnitCap Unit="GDIRifleSoldierSquad" Cap="2"/> 
+    <SpecificUnitCap Unit="GDISniperSquad" Cap="2"/>    
+    <SpecificUnitCap Unit="GDIZoneTrooperSquad" Cap="2"/> 
+
+    <SpecificUnitCap Unit="GDIOrca" Cap="0"/>
+    <SpecificUnitCap Unit="GDIFirehawk" Cap="0"/>
+
+
+	<!--
+	States define which states in the AI states file an AI will try to use.
+		State - references an AI state in an AI states file
+		Difficulty - specifies on which difficulty the state will run
+	-->
+	
+	<!-- Unit Cap States -->
+	<States	State="AlienUnitCap_Easy"	Difficulty="EASY" />
+    <States	State="AlienUnitCap_Medium"	Difficulty="MEDIUM" />
+    <States	State="AlienUnitCap_Hard"   Difficulty="HARD" />
+	
+	<!-- Ground Assault States -->
+    <States State="AlienOffensiveDirectAttack1" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienOffensiveDirectAttack2" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="AlienOffensiveEconomyAttack" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+
+	<!-- Air Assault States -->
+    <States State="AlienStormriderHarassment" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienAirArmada" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+	
+	<!-- Defensive States -->
+    <States State="AlienReactiveDefense" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="AlienEngineerDefense" Difficulty="HARD BRUTAL"/>
+    <States State="AlienCommandoDefense" Difficulty="HARD BRUTAL"/>
+    <States State="AlienExpansionDefense" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    
+	<!-- Special Operations States -->
+    <States State="AlienOffensiveEngineer" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienAntiGarrison" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienAntiGarrison_EASY" Difficulty="EASY"/>
+    <States State="AlienCaptureTech" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienSuperweapon" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienExpansion" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="ExpansionEscort" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="AlienBridgeRepair" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="AlienIsolation" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="AlienHuskCapture" Difficulty="MEDIUM HARD BRUTAL"/>
+    <States State="BeaconHelp" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="CratePickup" Difficulty="HARD BRUTAL"/>
+	
+	<!-- Unit Preferences States -->
+    <States State="AlienUnitPreferences" Difficulty="MEDIUM HARD BRUTAL"/>
+
+    <!-- 
+    Budget States determine how the AI spends its money.
+		State - references an AI state in an AI states files
+		Difficulty - specifies on which difficulty the state will run
+    -->	
+    <BudgetStates State="AlienEarlyGameBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <BudgetStates State="AlienMidGameBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <BudgetStates State="AlienLateGameBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+
+	<!-- 
+	Unit Overrides are another way to control how the AI builds.  If your unit overrides for a particular queue (warfactory, barracks, or hangar)
+	adds up to 100% then the AI will not use any of the Unit Builder standard or adaptive choices that you have setup.  Overrides are not at all
+	reactive to the player's unit choices; they force the unit builder to produce particular units regardless of what the player has built.  
+		UnitName - picks the unit to override
+		Percentage - determines the override percentage chance.  If the percentage does not add up to 100% for a queue, the Unit Builder strategies defined 
+			above will be used for those remaining percentage points.  For example if you have a Buzzer override of 25% and no other infantry overrides, the AI 
+			will build Buzzers 25% of the time and use the Unit Builder strategy to determine what unit to build the other 75% of the time.  An override 
+			percantage of 0% just means that there is no override.  A value of -1% will completey block a unit from being built.
+	
+	As with specific unit caps, you may override units of a faction different from that specified in the <Side> field to account for your AI
+	capturing enemy production structures.
+	-->
+		
+    <!--Vehicle Overrides -->
+    <UnitOverride UnitName="AlienAnnihilatorTripod" Percentage="0%"/>
+	<UnitOverride UnitName="AlienCorrupter" Percentage="0%"/>
+	<UnitOverride UnitName="AlienDevourerTank" Percentage="0%"/>
+	<UnitOverride UnitName="AlienGunWalker" Percentage="0%"/>
+	<UnitOverride UnitName="AlienSeekerTank" Percentage="0%"/>	 
+	
+	<UnitOverride UnitName="NODAttackBike" Percentage="0%"/>
+	<UnitOverride UnitName="NODAvatar" Percentage="0%"/>
+    <UnitOverride UnitName="NODBeamCannon" Percentage="0%"/>
+    <UnitOverride UnitName="NODFlameTank" Percentage="0%"/>
+	<UnitOverride UnitName="NODRaiderTank" Percentage="0%"/>
+	<UnitOverride UnitName="NODScorpionBuggy" Percentage="0%"/>
+ 	<UnitOverride UnitName="NODStealthTank" Percentage="0%"/> 
+ 	
+	<UnitOverride UnitName="GDIAPC" Percentage="0%"/>
+	<UnitOverride UnitName="GDIJuggernaught" Percentage="0%"/>
+	<UnitOverride UnitName="GDIMammoth" Percentage="0%"/>
+	<UnitOverride UnitName="GDIPredator" Percentage="0%"/>
+	<UnitOverride UnitName="GDIPitbull" Percentage="0%"/>
+	
+	<!--Infantry Overrides -->
+	<UnitOverride UnitName="AlienBuzzers" Percentage="0%"/>
+	<UnitOverride UnitName="AlienRazorDroneSquad" Percentage="0%"/>	
+	<UnitOverride UnitName="AlienShockTrooperSquad" Percentage="0%"/>	
+	<UnitOverride UnitName="AlienMastermind" Percentage="0%"/>
+	
+	<UnitOverride UnitName="NODBlackHandSquad" Percentage="0%"/>
+	<UnitOverride UnitName="NODCommando" Percentage="0%"/>
+	<UnitOverride UnitName="NODMilitantRocketSquad" Percentage="0%"/>
+	<UnitOverride UnitName="NODMilitantSquad" Percentage="0%"/>
+	<UnitOverride UnitName="NODShadowSquad" Percentage="0%"/>	
+	
+	<UnitOverride UnitName="GDICommando" Percentage="0%"/>
+	<UnitOverride UnitName="GDIGrenadeSoldierSquad" Percentage="0%"/>
+	<UnitOverride UnitName="GDIMissileSoldierSquad" Percentage="0%"/>
+	<UnitOverride UnitName="GDIRifleSoldierSquad" Percentage="0%"/>
+	<UnitOverride UnitName="GDISniperSquad" Percentage="0%"/>
+	<UnitOverride UnitName="GDIZoneTrooperSquad" Percentage="0%"/>
+
+	<!--Aircraft Overrides -->
+	<UnitOverride UnitName="AlienDevastatorWarship" Percentage="0%"/>	
+	<UnitOverride UnitName="AlienPlanetaryAssaultCarrier" Percentage="0%"/>	
+	<UnitOverride UnitName="AlienStormrider" Percentage="0%"/>	
+	
+	<UnitOverride UnitName="NODVertigo" Percentage="0%"/>
+	<UnitOverride UnitName="NODVenom" Percentage="0%"/>
+	
+	<UnitOverride UnitName="GDIOrca" Percentage="0%"/>
+	<UnitOverride UnitName="GDIFirehawk" Percentage="0%"/>
+	
+  </AIPersonalityDefinition>
+</AssetDeclaration>

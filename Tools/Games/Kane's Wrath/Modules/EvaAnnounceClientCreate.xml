@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EvaAnnounceClientCreateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientUpdateModuleData" />
+		<EntryRelocation
+			id="AnnouncementEventEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AnnouncementEventAlly"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AnnouncementEventOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DelayBeforeAnnouncementLogicFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="OnlyIfVisible"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="CountAsFirstSightedAnnouncement"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="UseObjectsPosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="CreateFakeRadarEvent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+	</Asset>
+
+</AssetDefinition>

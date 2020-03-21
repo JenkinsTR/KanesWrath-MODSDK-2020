@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LessonData">
+		<Entry
+			id="Map"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Summary"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ImageName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TutorialMapData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Lesson"
+			AssetType="LessonData"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

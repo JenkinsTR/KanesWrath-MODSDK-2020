@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AISpecialPowerUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryWeakReference
+			id="CommandButtonName"
+			AssetType="LogicCommand"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SecondaryCommandButtonName"
+			AssetType="LogicCommand"
+			IsAttribute="true" />
+		<Entry
+			id="SpecialPowerAIType"
+			AssetType="AISpecialPowerInstanceType"
+			IsAttribute="true"
+			Default="SPECIAL_POWER_BASIC_SELF_BUFF" />
+		<Entry
+			id="SpecialPowerRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1.0" />
+		<Entry
+			id="ReinforceDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryWeakReference
+			id="SpellMakesAStructure"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SpecificUnit"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="UnitKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AllyUnitInclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AllyUnitExclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyUnitInclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyUnitExclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="MinimumCutoff"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="UpdateTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.0s" />
+		<Entry
+			id="MaxFrequency"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RandomizeTargetLocation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

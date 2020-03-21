@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" >
+	<Includes>
+
+	<!--Include type="all" source="GDIOffensiveStates.xml"/>
+	<Include type="all" source="NODOffensiveStates.xml"/>
+	<Include type="all" source="AlienOffensiveStates.xml"/>
+	<Include type="all" source="SteelTalonsOffensiveStates.xml"/-->
+
+	<Include type="all" source="BlackHandOffensiveStates.xml"/>
+
+	<!--Include type="all" source="Reaper17OffensiveStates.xml"/>
+	<Include type="all" source="ZOCOMOffensiveStates.xml"/>
+	<Include type="all" source="MarkedOfKaneOffensiveStates.xml"/-->
+
+	<Include type="all" source="Traveler59OffensiveStates.xml"/>
+
+
+	<!--Include type="all" source="GDIDefensiveStates.xml"/>
+	<Include type="all" source="NODDefensiveStates.xml"/>
+	<Include type="all" source="AlienDefensiveStates.xml"/>
+	<Include type="all" source="SteelTalonsDefensiveStates.xml"/-->
+
+	<Include type="all" source="BlackHandDefensiveStates.xml"/>
+
+	<!--Include type="all" source="Reaper17DefensiveStates.xml"/>
+	<Include type="all" source="ZOCOMDefensiveStates.xml"/>
+	<Include type="all" source="MarkedOfKaneDefensiveStates.xml"/>
+	<Include type="all" source="Traveler59DefensiveStates.xml"/-->
+
+	<!--Include type="all" source="GDIOverlordStates.xml"/>
+	<Include type="all" source="NODOverlordStates.xml"/>
+	<Include type="all" source="AlienOverlordStates.xml"/>
+	<Include type="all" source="SteelTalonsOverlordStates.xml"/>-->
+	<Include type="all" source="BlackHandOverlordStates.xml"/>
+	<!--Include type="all" source="Reaper17OverlordStates.xml"/>
+	<Include type="all" source="ZOCOMOverlordStates.xml"/>
+	<Include type="all" source="MarkedOfKaneOverlordStates.xml"/>
+	<Include type="all" source="Traveler59OverlordStates.xml"/-->
+
+	<!--Include type="all" source="GDIGuerillaStates.xml"/>
+	<Include type="all" source="NODGuerillaStates.xml"/>
+	<Include type="all" source="AlienGuerillaStates.xml"/-->
+
+	<Include type="all" source="SteelTalonsGuerillaStates.xml"/>
+	<Include type="all" source="BlackHandGuerillaStates.xml"/>
+
+	<!--Include type="all" source="Reaper17GuerillaStates.xml"/>
+	<Include type="all" source="ZOCOMGuerillaStates.xml"/>
+	<Include type="all" source="MarkedOfKaneGuerillaStates.xml"/-->
+
+	<Include type="all" source="Traveler59GuerillaStates.xml"/>
+
+
+	<!--Include type="all" source="GDIOptimalStates.xml"/>
+	<Include type="all" source="NODOptimalStates.xml"/>
+	<Include type="all" source="AlienOptimalStates.xml"/>
+	<Include type="all" source="SteelTalonsOptimalStates.xml"/-->
+
+	<Include type="all" source="BlackHandOptimalStates.xml"/>
+
+	<Include type="all" source="Reaper17OptimalStates.xml"/>
+
+	<!--Include type="all" source="ZOCOMOptimalStates.xml"/>
+	<Include type="all" source="MarkedOfKaneOptimalStates.xml"/-->
+
+	<Include type="all" source="Traveler59OptimalStates.xml"/>
+	
+	<!-- AI States for Act I - Reunification -->
+
+	<Include type="all" source="DATA:maps\official\CM_1_1_Rio_Insurrection\CM_1_1_AIStates.xml"/>
+
+	<Include type="all" source="DATA:maps\official\CM_1_2_Steel_Talons\CM_1_2_AIStates.xml"/>
+
+	<Include type="all" source="DATA:maps\official\CM_1_3_Brother_Marcion\CM_1_3_AIStates.xml"/>
+
+	<Include type="all" source="DATA:maps\official\CM_1_4_Tib_Research\CM_1_4_AIStates.xml"/>
+
+	<!-- AI States for Act II - Kane Rising -->
+
+	<Include type="all" source="DATA:maps\official\CM_2_1_Capture_Tech\CM_2_1_AIStates.xml"/>
+
+	<Include type="all" source="DATA:maps\official\CM_2_3_Capture_Giraud\CM_2_3_AIStates.xml"/> <!-- CM 2-3: Capture Giraud - PlyrGDI_A, PlyrGDI_B AI States -->
+
+	<Include type="all" source="DATA:maps\official\CM_2_4_MARV\CM_2_4_AIStates.xml"/>
+
+	<Include type="all" source="DATA:maps\official\CM_2_5_Temple_Prime\CM_2_5_AIStates.xml"/> <!-- CM 2-5: Temple Prime - PlyrGDI_A, PlyrNOD_B, PlyrNOD_D and PlyrNOD_E AI States -->
+
+	<Include type="all" source="DATA:maps\official\CM_2_6_Traveler59\CM_2_6_AIStates.xml"/> <!-- CM 2-6: Traveler59 - PlyrSCRIN_TVL_Skirmish AI States -->
+
+	<Include type="all" source="DATA:maps\official\CM_2_7_Tacitus_A\CM_2_7_AIStates.xml"/> <!-- CM 2-7: Tacitus - PlyrZOCOM, PlyrZOCOMEast, PlyrZOCOMWest AI States -->
+
+	<!-- AI States for Act III - Resurrection -->
+	
+	<Include type="all" source="DATA:maps\official\CM_3_1_Marked_Of_Kane\CM_3_1_AIStates.xml"/> <!-- CM 3-1: PlyrGDI_1 AI States -->
+
+	<Include type="all" source="DATA:maps\official\CM_3_2_Tacitus_B\CM_3_2_AIStates.xml"/> <!-- CM 3-2: TacitusB - GDI Player AI States -->
+
+	<!-- AI States for Kanes Challenge 360 -->
+
+	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_01_BH.xml"/>
+	<!--	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_02_ZCM.xml"/>
+  	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_03_T59.xml"/>
+	-->
+	<!--Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_04_MOK.xml"/-->
+	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_05_ST.xml"/>	
+	<!--Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_06_R17.xml"/>
+	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_07_GDI.xml"/>
+  	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_08_NOD.xml"/>
+	<Include type="all" source="DATA:SkirmishAI\KC_AIS\KC_AIS_09_SCN.xml"/-->
+	</Includes>
+
+  <AIStrategicStateDefinition
+		id="BlackHandBridgeRepair"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="BridgeHeuristic" TargetType="Bridge"/>
+    <Tactic Tactic="Engineer" TargetType="Bridge">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandSaboteur"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="Traveler59BridgeRepair"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="BridgeHeuristic" TargetType="Bridge"/>
+    <Tactic Tactic="Engineer" TargetType="Bridge">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Assimilator"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="BlackHandHuskCapture"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="FriendlyHuskHeuristic" TargetType="Husk"/>
+    <TargetHeuristic TargetHeuristic="EnemyHuskHeuristic" TargetType="Husk"/>
+    <Tactic Tactic="Engineer" TargetType="Husk">
+      <TeamTemplate MinUnits="1" MaxUnits ="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandSaboteur"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="Traveler59HuskCapture"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="FriendlyHuskHeuristic" TargetType="Husk"/>
+    <TargetHeuristic TargetHeuristic="EnemyHuskHeuristic" TargetType="Husk"/>
+    <Tactic Tactic="Engineer" TargetType="Husk">
+      <TeamTemplate MinUnits="1" MaxUnits ="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Assimilator"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+     id="SteelTalonsIsolation"
+     UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="SteelTalonsOrca"/>
+        <CreateUnits UnitName="SteelTalonsOrca"/>
+        <CreateUnits UnitName="SteelTalonsOrca"/>
+        <CreateUnits UnitName="SteelTalonsOrca"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="SteelTalonsOrca" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="SteelTalonsFireHawk" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="SteelTalonsHammerhead" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="SteelTalonsRifleSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsMissileSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsGrenadeSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsRepairAPC" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsPitbull" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsTitan" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsAAScout" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsWolverine" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsMammoth" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="SteelTalonsBehemoth" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="BlackHandIsolation"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+        <CreateUnits UnitName="BlackHandMobileArtillery"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="BlackHandMilitantRocketSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandBlackHandSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandConfessorSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandRaiderTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandScorpionBuggy" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandAttackBike" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandFlameTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandMobileArtillery" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandBeamCannon" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="BlackHandCustomWarmech" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+
+ <AIStrategicStateDefinition
+		id="ZOCOMIsolation"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="ZOCOMOrca"/>
+        <CreateUnits UnitName="ZOCOMOrca"/>
+        <CreateUnits UnitName="ZOCOMOrca"/>
+        <CreateUnits UnitName="ZOCOMOrca"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="ZOCOMOrca" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="ZOCOMFireHawk" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="ZOCOMHammerhead" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="ZOCOMRifleSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMMissileSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMGrenadeSoldierSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMZoneRaiderSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMAPC" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMPitbull" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMPredator" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMAAScout" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMImprovedSonicTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="ZOCOMMammoth" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="MarkedOfKaneIsolation"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="MarkedOfKaneVertigo"/>
+        <CreateUnits UnitName="MarkedOfKaneVertigo"/>
+        <CreateUnits UnitName="MarkedOfKaneVertigo"/>
+        <CreateUnits UnitName="MarkedOfKaneVertigo"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="MarkedOfKaneVenom" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneVertigo" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneShadowSquad" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="MOKCyborgInfantrySquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneTiberiumTrooperSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneImprovedCyborgInfantrySquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneRaiderTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneScorpionBuggy" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneAttackBike" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneStealthTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneBeamCannon" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneMobileArtillery" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="MarkedOfKaneAvatar" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="Reaper17Isolation"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17Stormrider"/>
+        <CreateUnits UnitName="Reaper17Stormrider"/>
+        <CreateUnits UnitName="Reaper17Stormrider"/>
+        <CreateUnits UnitName="Reaper17Stormrider"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="Reaper17Stormrider" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="Reaper17Buzzers" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17RazorDroneSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17ShockTrooperSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17StalkerSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17CustomizableVehicle" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17SeekerTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17ShardWalker" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17DevourerTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17Corrupter" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Reaper17AnnihilatorTripod" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="Traveler59Isolation"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="false"/>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Isolation"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Isolation">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Stormrider"/>
+        <CreateUnits UnitName="Traveler59Stormrider"/>
+        <CreateUnits UnitName="Traveler59Stormrider"/>
+        <CreateUnits UnitName="Traveler59Stormrider"/>
+      </TeamTemplate>
+    </Tactic>
+    <UnitModifierByName UnitName="Traveler59Stormrider" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="Traveler59DevastatorWarship" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="Traveler59PlanetaryAssaultCarrier" UnitPreferenceOffensiveModifier="999%" UnitPreferenceDefensiveModifier="999%"/>
+    <UnitModifierByName UnitName="Traveler59Buzzers" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59RazorDroneSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59StalkerSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59CultistSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59ShockTrooperSquad" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59SeekerTank" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59GunWalker" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59CustomizableVehicle" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59Corrupter" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+    <UnitModifierByName UnitName="Traveler59AnnihilatorTripod" UnitPreferenceOffensiveModifier="0%" UnitPreferenceDefensiveModifier="0%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="BlackHandCaptureTech"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <EnemyNearbyHeuristic Distance="600.0" EnemyNearby="false"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestNeutralTechHeuristic" TargetType="CaptureTech"/>
+    <Tactic Tactic="Engineer" TargetType="CaptureTech">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandSaboteur"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>  
+
+  <AIStrategicStateDefinition
+		id="Traveler59CaptureTech"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <EnemyNearbyHeuristic Distance="600.0" EnemyNearby="false"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestNeutralTechHeuristic" TargetType="CaptureTech"/>
+    <Tactic Tactic="Engineer" TargetType="CaptureTech">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Assimilator"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+<!--Start: AI changes TW(1.05)-->
+  <AIStrategicStateDefinition
+		id="Reaper17AntiGarrison"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="AntiGarrisonHeuristic" TargetType="AntiGarrison"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AntiGarrison">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="INFANTRY ANTI_GARRISON" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+		<CreateUnits UnitName="Reaper17Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+    id="Reaper17AntiGarrison_EASY"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <LateGameHeuristic/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="AntiGarrisonHeuristic" TargetType="AntiGarrison"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AntiGarrison">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="INFANTRY ANTI_GARRISON" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+		<CreateUnits UnitName="Reaper17Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="Traveler59AntiGarrison"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="AntiGarrisonHeuristic" TargetType="AntiGarrison"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AntiGarrison">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="INFANTRY ANTI_GARRISON" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+		<CreateUnits UnitName="Traveler59Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+    id="Traveler59AntiGarrison_EASY"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <LateGameHeuristic/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="AntiGarrisonHeuristic" TargetType="AntiGarrison"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AntiGarrison">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="INFANTRY ANTI_GARRISON" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+		<CreateUnits UnitName="Traveler59Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+<!--End: AI changes TW(1.05)-->
+
+  <AIStrategicStateDefinition
+		id="SteelTalonsEngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="SteelTalonsWolverine"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="BlackHandEngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandScorpionBuggy"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="Reaper17EngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="EngineerDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="EngineerDefense">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+        <CreateUnits UnitName="Reaper17Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="ZOCOMEngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="ZOCOMAPC"/>       
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="MarkedOfKaneEngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="MarkedOfKaneScorpionBuggy"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="Traveler59EngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="EngineerDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="EngineerDefense">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+        <CreateUnits UnitName="Traveler59Buzzers"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="SteelTalonsCommandoDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="CommandoUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="SteelTalonsWolverine"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="BlackHandCommandoDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="CommandoUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="BlackHandScorpionBuggy"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="ZOCOMCommandoDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="CommandoUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="ZOCOMAPC"/>        
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+		id="MarkedOfKaneCommandoDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="CommandoUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="MarkedOfKaneScorpionBuggy"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>  
+
+  <AIStrategicStateDefinition
+  id="SteelTalonsUnitPreferences"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+
+    <UnitModifierByName UnitName="SteelTalonsPitbull" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsRepairAPC" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsWolverine" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsTitan" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsAAScout" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="500%"/>
+    <UnitModifierByName UnitName="SteelTalonsMammoth" UnitPreferenceOffensiveModifier="350%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsBehemoth" UnitPreferenceOffensiveModifier="350%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsMARV" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="SteelTalonsGolumCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="SteelTalonsAABattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+  id="ZOCOMUnitPreferences"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <UnitModifierByName UnitName="ZOCOMZoneRaiderSquad" UnitPreferenceOffensiveModifier="350%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="ZOCOMPitbull" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMAAScout" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="500%"/>
+    <UnitModifierByName UnitName="ZOCOMAPC" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMPredator" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMImprovedSonicTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMMammoth" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMMARV" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="ZOCOMGolumCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="ZOCOMAABattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="ZOCOMTerraformingStation" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+  id="BlackHandUnitPreferences"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <UnitModifierByName UnitName="BlackHandBlackHandSquad" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="BlackHandConfessorSquad" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>    
+
+    <UnitModifierByName UnitName="BlackHandScorpionBuggy" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandAttackBike" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandRaiderTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandFlameTank" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="75%"/>
+    <UnitModifierByName UnitName="BlackHandBeamCannon" UnitPreferenceOffensiveModifier="250%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandMobileArtillery" UnitPreferenceOffensiveModifier="250%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandStealthTank" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="400%"/>
+    <UnitModifierByName UnitName="BlackHandCustomWarmech" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandMetaUnit" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="BlackHandShredderTurretHub" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="BlackHandLaserCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="BlackHandRocketBunker" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="BlackHandObelisk" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+  id="Reaper17UnitPreferences"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <UnitModifierByName UnitName="Reaper17RazorDroneSquad" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17ShockTrooperSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17StalkerSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="Reaper17ShardWalker" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17Corrupter" UnitPreferenceOffensiveModifier="125%" UnitPreferenceDefensiveModifier="75%"/>
+    <UnitModifierByName UnitName="Reaper17SeekerTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17DevourerTank" UnitPreferenceOffensiveModifier="250%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17AnnihilatorTripod" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17CustomizableVehicle" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17EradicatorHexapod" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="Reaper17BuzzerHive" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Reaper17PhotonCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Reaper17PlasmaMissileBattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Reaper17StormColumn" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>  
+  
+  <AIStrategicStateDefinition
+  id="Traveler59UnitPreferences"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    <UnitModifierByName UnitName="Traveler59RazorDroneSquad" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59ShockTrooperSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59StalkerSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59CultistSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="Traveler59GunWalker" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59Corrupter" UnitPreferenceOffensiveModifier="125%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59SeekerTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59AnnihilatorTripod" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59CustomizableVehicle" UnitPreferenceOffensiveModifier="500%" UnitPreferenceDefensiveModifier="500%"/>
+
+    <UnitModifierByName UnitName="Traveler59BuzzerHive" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59PhotonCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59PlasmaMissileBattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59StormColumn" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+  </AIStrategicStateDefinition>
+  
+</AssetDeclaration>

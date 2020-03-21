@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AutoAcquireEnemiesType">
+		<Entry>YES</Entry>
+		<Entry>STEALTHED</Entry>
+		<Entry>NO</Entry>
+		<Entry>NOTWHILEATTACKING</Entry>
+		<Entry>ATTACK_BUILDINGS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AutoAcquireEnemiesBitFlags"
+		BaseEnum="AutoAcquireEnemiesType" />
+
+	<Asset
+		id="AIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="AttackPriority"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AutoAcquireEnemiesWhenIdle"
+			AssetType="AutoAcquireEnemiesBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StopChaseDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="500.0" />
+		<Entry
+			id="HoldGroundCloseRangeDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AILuaEventsList"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MinCowerTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxCowerTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="RampageTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="BurningDeathTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="TimeToEjectPassengersOnRampage"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ComboLocomotorSet"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+		<Entry
+			id="ComboLocoAttackDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="80" />
+		<EntryList
+			id="SpecialContactPoints"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="IdleTargetTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxCombineChildren"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="SpawnOffsetRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryRelocation
+			id="UnitAITargetChooserData"
+			AssetType="UnitAITargetChooserData" />
+		<Entry
+			id="StandGround"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanAttackWhileContained"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RampageRequiresAflame"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FadeOnPortals"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

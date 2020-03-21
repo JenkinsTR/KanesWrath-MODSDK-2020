@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="NODFanaticRush"
+    Side="NOD"> <!--Power: +10--> 
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODOperationsCenter" /> <!--Time: 15 Power: -10-->
+
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />
+    <Order Build="NodFanaticSquad" />    
+    <Order Time="225s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODMegaUnitRush"
+    Side="NOD"> <!--Power: +10-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODCrane" /> <!--Time: 15 Power: -10-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODOperationsCenter" /> <!--Time: 15 Power: -10-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODTechAssemblyPlant" /> <!--Time: 40 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MG_NOD_WarmechFacility" /> <!--Time: 30 Power: -10-->
+    <Order Build="NODMetaUnit" />
+    <Order Time="275s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+     id="NODBrutalInfantryRush"
+     Side="NOD"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Time="200s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="NODBrutalMixedRush"
+    Side="NOD"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="NODHarvester" />
+    <Order Build="NODHarvester" />
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Time="215s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

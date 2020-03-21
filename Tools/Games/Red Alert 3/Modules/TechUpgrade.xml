@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="DistanceCheckType">
+		<Entry>CIRCULAR</Entry>
+		<Entry>RECTANGULAR</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TechUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusY"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DistanceType"
+			AssetType="DistanceCheckType"
+			IsAttribute="true"
+			Default="CIRCULAR" />
+		<Entry
+			id="FXLineBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

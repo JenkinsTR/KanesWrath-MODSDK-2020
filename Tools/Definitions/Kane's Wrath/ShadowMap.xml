@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="ShadowMap"
+		TypeHash="3317988934">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="MapSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1024" />
+		<Entry
+			id="MaxViewDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<Entry
+			id="MinShadowedTerrainHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</GameAsset>
+
+</AssetDefinition>

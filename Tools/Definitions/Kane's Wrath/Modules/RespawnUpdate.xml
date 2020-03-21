@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RespawnRuleType">
+		<Entry
+			id="Time"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="Health"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="Cost"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="Level"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="AutoSpawn"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="RespawnUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="DeathMC"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="DeathFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="DeathAnimationTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnMC"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpawnFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnAnimationTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="RespawnMC"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="RespawnFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="RespawnAnimationTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="ButtonImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="RespawnAsTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="Rule"
+			AssetType="RespawnRuleType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="AutoRespawnAtObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

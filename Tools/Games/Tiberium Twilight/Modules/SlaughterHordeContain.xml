@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SlaughterHordeContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="HordeGarrisonContainModuleData" />
+		<Entry
+			id="CashBackPercent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="CanAlwaysEnterStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="SlaughterFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="CanAlwaysEnterObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DTruckDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="W3DScriptedModelDrawModuleData" />
+		<EntryReference
+			id="Dust"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="DirtSpray"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="PowerslideSpray"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="LeftFrontTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightFrontTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LeftRearTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightRearTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidLeftFrontTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidRightFrontTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidLeftRearTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidRightRearTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidLeftMidTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidRightMidTireBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LeftFrontTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightFrontTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LeftRearTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightRearTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidLeftMidTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MidRightMidTireBone2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TireRotationMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TireRotationMultiplierFront"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="PowerslideRotationAddition"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CabBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TrailerBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="CabRotationMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TrailerRotationMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="RotationDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+	</Asset>
+
+</AssetDefinition>

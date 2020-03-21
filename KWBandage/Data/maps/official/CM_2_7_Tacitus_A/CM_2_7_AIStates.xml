@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+
+<!-- CM 2-7: ZOCOM --> 
+
+   <AIStrategicStateDefinition
+		id="2_7_ZOCOMUnitCap_Easy"
+		UnitBuilderSimpleUnitCap="8">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+    
+  </AIStrategicStateDefinition>
+     <AIStrategicStateDefinition
+		id="2_7_ZOCOMUnitCap_Medium"
+		UnitBuilderSimpleUnitCap="12">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+  
+ <AIStrategicStateDefinition
+		id="2_7_ZOCOMUnitCap_Hard"
+		UnitBuilderSimpleUnitCap="13">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+    id="CM_2_7_ZOCOMOptimalAttack"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="Structure"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Structure">
+      <TeamTemplate MinUnits="6" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+ 
+   <AIStrategicStateDefinition
+		id="CM_2_7_ZOCOMReactiveDefend"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Tactic Tactic="ReactiveDefense" TargetType="Targetless">
+		<TeamTemplate MinUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="METAUNIT" AlwaysRelease="true" AlwaysRecruit="true"/>
+	</Tactic>
+  </AIStrategicStateDefinition>
+   
+   <AIStrategicStateDefinition
+		id="CM_2_7_ZOCOMAirStrike"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <IntervalHeuristic IntervalTime="200s" ActiveTime="30s"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="PowerKillHeuristic" TargetType="BombingAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="BombingAirstrike">
+		<TeamTemplate MinUnits="4" MaxUnits ="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="ASSAULT_AIRCRAFT METAUNIT" AlwaysRelease="false" AlwaysRecruit="false">
+		</TeamTemplate>
+	</Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="CM_2_7_ZOCOMAirHarassment"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <SiegeThresholdHeuristic SiegeMode="false" Threshold="2.0"/>
+      <FocusedThresholdHeuristic/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToAirUnitHeuristic" TargetType="AssaultAirstrike"/>
+    <TargetHeuristic TargetHeuristic="SafestToAirPowerPlantHeuristic" TargetType="AssaultAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AssaultAirstrike">
+      <TeamTemplate MinUnits="1" IncludeKindOf="CAN_ATTACK AIRCRAFT ASSAULT_AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+    id="CM_2_7_ZOCOMAirHarassmentAntiTurtle"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToAirUnitHeuristic" TargetType="AssaultAirstrike"/>
+    <TargetHeuristic TargetHeuristic="SafestToAirStructureHeuristic" TargetType="AssaultAirstrike"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="AssaultAirstrike">
+      <TeamTemplate MinUnits="2" MaxUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT ASSAULT_AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIBudgetStateDefinition
+    id="CM_2_7_FullProductionBudget">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="0%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="10%"/>
+      <AccountShare Account="PRODUCTION" Percent="90%"/>
+      <AccountShare Account="DEFENSE" Percent="0%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="0%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="0%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+  
+</AssetDeclaration>

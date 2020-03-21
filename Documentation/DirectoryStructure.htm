@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="thundermods.net" />
+	<meta name="copyright" content="thundermods.net" />
+	<meta name="description" content="Documentation - WrathEd" />
+
+	<link rel="stylesheet" href="Documentation.css" />
+	<title>Documentation - WrathEd - Directory Structure</title>
+</head>
+<body>
+<div align="center">
+	<div class="content">
+		<div class="navigation">
+			<div class="navigationhead">WrathEd</div>
+			<div class="navigationlink">• <a href="index.htm" class="navigation">Index</a></div>
+			<div class="navigationhead">Mod Creation</div>
+			<div class="navigationlink">• Directory Structure</div>
+			<div class="navigationlink">• <a href="XMLAssets.htm" class="navigation">XML Assets</a></div>
+			<div class="navigationlink">• <a href="CustomMaps.htm" class="navigation">Custom Maps</a></div>
+			<div class="navigationlink">• <a href="BuildingAMod.htm" class="navigation">Building a Mod</a></div>
+			<div class="navigationlink">• <a href="LaunchingAMod.htm" class="navigation">Launching a Mod</a></div>
+		</div>
+		<div class="main">
+If you are creating a Mod <span class="important">for Tiberium Wars, Red Alert 3, or Tiberium Twilight the name can be no more than 15 characters long</span>. The length of mod names for Kane's Wrath doesn't matter.<br />
+<br />
+The main folder for the source of your mod has to be <span class="important">Mods\[Mod Name]</span>.<br />
+<br />
+<span class="title">Required Files:</span><br />
+If you are building a Mod for Tiberium Wars, Red Alert 3, or Tiberium Twilight you have to have a file called mod.xml in your Data folder.<br />
+<span class="important">For Kane's Wrath</span> your main file for static data would be called <span class="important">Static.xml</span>. For global data you have to use <span class="important">AdditionalMaps\MapMetaData_Global.xml</span> and <span class="important">AdditionalMaps\MapMetaData_GlobalOverrides.xml</span>. These are also the files that are referenced by the default batch files supplied with WrathEd. These names are hard coded and renaming will cause your Mod not to work.<br />
+<br />
+<span class="title">String Table:</span><br />
+Tiberium Wars, Red Alert 3, and Tiberium Twilight support a file called mod.str to store strings. This is a simple text file and only needed if you add or modify text in the game.<br />
+An example of an entry in the mod.str file:
+<pre>NAME:Orca
+"Orca Fighter"
+END</pre>
+<span class="important">Kane's Wrath doesn't directly support a mod.str file.</span> However, the WrathEd Mod Launcher supports either mod.csf or data\mod.str and combines them with the string table of Kane's Wrath.
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GameObjectEvaEvents">
+		<EntryRelocation
+			id="EvaEventDieOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDieAlly"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDieEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventSoldOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDamagedOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDamagedFromShroudedSourceOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDamagedByFireOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventSecondDamageFarFromFirstOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventSecondDamageFarFromFirstScanRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200" />
+		<Entry
+			id="EvaEventSecondDamageFarFromFirstTimeoutMS"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="31000" />
+		<EntryRelocation
+			id="EvaEventAmbushed"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventRepairingOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEnemyObjectSightedEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEnemyObjectSightedAfterRespawnEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaOnFirstSightingEventEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaOnFirstSightingEventNonEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDetectedEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDetectedAlly"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventDetectedOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventAvailableForProduction"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventProductionStarted"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventProductionComplete"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventPlacementFailed"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventCannotBuildDueToFullBuildQueue"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventBuildOnHold"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventBuildCancelled"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventPromotedOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventManuallyPoweredOff"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEventManuallyPoweredOn"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

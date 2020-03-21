@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Game
+	xmlns="uri:thundermods.net:SAGE:WrathEdXML:GameDefinition"
+	id="Tiberium Wars"
+	ManifestVersion="5"
+	AllTypesHash="3944339829"
+	WorldBuilderVersion="_9"
+	ThemeColor="GREEN">
+	<RegistryEntry
+		Key="Software\Electronic Arts\Electronic Arts\Command and Conquer 3"
+		Value="UserDataLeafName" />
+	<Stream
+		Name="data/aptui/*"
+		Description="AptUI"
+		IsNameRequired="true" />
+	<Stream
+		Name="data/global"
+		Description="Global" />
+	<Stream
+		Name="data/static"
+		Description="Static" />
+	<Stream
+		Name="data/worldbuilder"
+		Description="WorldBuilder" />
+	<Stream
+		Name="data/metagame"
+		Description="MetaGame" />
+	<Stream
+		Name="data/mapmetadata"
+		Description="MapMetaData" />
+	<Stream
+		Name="data/maps/official/*/map"
+		Description="Map"
+		IsNameRequired="true" />
+	<Stream
+		Name="data/additionalmaps/mapmetadata_*"
+		Description="AdditionalMapMetaData" />
+	<Stream
+		Name="data/stringhashes"
+		Description="Stringhashes" />
+	<Stream
+		Name="data/mod"
+		Description="Mod" />
+</Game>

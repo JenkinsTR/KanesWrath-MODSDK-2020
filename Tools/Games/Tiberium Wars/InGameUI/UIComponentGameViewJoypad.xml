@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentGameViewJoypad">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="LeftStickMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="RightStickMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.25" />
+		<Entry
+			id="ObjectAttractivityForce"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="MinAttractDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="40.0" />
+		<Entry
+			id="MinAttractDistanceZoomed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="40.0" />
+		<Entry
+			id="MaxAttractiveForce"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.6" />
+		<Entry
+			id="KindOfExemptFromAttraction"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollSpeedMin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollSpeedMax"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollSpeedMaxCutoff"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollSpeedMinCutoff"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="InternalZoomInValue"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="InternalZoomOutValue"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MagnetismTuning_LOW_Strength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.1" />
+		<Entry
+			id="MagnetismTuning_LOW_Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.6" />
+		<Entry
+			id="MagnetismTuning_HIGH_Strength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="MagnetismTuning_HIGH_Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.25" />
+		<EntryRelocation
+			id="MagnetismObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

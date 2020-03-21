@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OCLUpgradePair">
+		<Entry
+			id="Science"
+			AssetType="ScienceType"
+			IsAttribute="true" />
+		<EntryReference
+			id="OCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="OCLCreateLocType">
+		<Entry>CREATE_AT_EDGE_NEAR_SOURCE</Entry>
+		<Entry>CREATE_AT_EDGE_NEAR_TARGET</Entry>
+		<Entry>CREATE_AT_EDGE_NEAR_TARGET_AND_MOVE_TO_LOCATION</Entry>
+		<Entry>CREATE_AT_LOCATION</Entry>
+		<Entry>USE_OWNER_OBJECT</Entry>
+		<Entry>CREATE_ABOVE_LOCATION</Entry>
+		<Entry>CREATE_AT_EDGE_FARTHEST_FROM_TARGET</Entry>
+		<Entry>CREATE_CLOSEST_TO_SPAWN_POINT</Entry>
+		<Entry>USE_SECONDARY_OBJECT_LOCATION</Entry>
+		<Entry>USE_MULTIPLE_SECONDARY_OBJECT_LOCATIONS</Entry>
+		<Entry>CREATE_AT_EDGE_NEAR_SECONDARY_TARGET</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="OCLSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<EntryReference
+			id="OCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="CreateLocation"
+			AssetType="OCLCreateLocType"
+			IsAttribute="true" />
+		<Entry
+			id="MaxCreateCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="NumberToSpawn"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryReference
+			id="DestinationOCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryList
+			id="UpgradeOCL"
+			AssetType="OCLUpgradePair"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="NearestSecondaryObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="Upgrade"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="RegisterObjectsWithSpecialAbilityUpdate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

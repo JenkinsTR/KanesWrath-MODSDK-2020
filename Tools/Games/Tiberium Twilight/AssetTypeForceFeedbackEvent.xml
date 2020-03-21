@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="ForceFeedbackEvent"
+		TypeHash="3791548904">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="LeftMotorUse"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="RightMotorUse"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="PlayCount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+	</GameAsset>
+
+</AssetDefinition>

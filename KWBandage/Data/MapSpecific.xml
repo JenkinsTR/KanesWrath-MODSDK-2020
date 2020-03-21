@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Neutral/Neutral.xml" />
+
+		<Include type="all" source="Alien/AlienMapSpecific.xml" />
+		<Include type="all" source="GDI/GDIMapSpecific.xml" />
+		<Include type="all" source="NOD/NODMapSpecific.xml" />
+		
+		<Include type="all" source="ART:NUGarArmor_SPM.xml" />
+	</Includes>
+</AssetDeclaration>

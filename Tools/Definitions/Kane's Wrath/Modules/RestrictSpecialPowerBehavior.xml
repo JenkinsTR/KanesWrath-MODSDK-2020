@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RestrictSpecialPowerBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="RestrictionType"
+			AssetType="SpecialPowerRestrictionType"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="DependentObject"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="DependentObjectRadius"
+			AssetType="SageReal"
+			MinLength="1"
+			MaxLength="0" />
+		<Entry
+			id="ConsiderSpecialPowerRadius"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

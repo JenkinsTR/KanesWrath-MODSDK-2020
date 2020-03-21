@@ -1,0 +1,64 @@
+﻿body
+{
+	background-color: #555;
+	font-size: 13px;
+	line-height: 13px;
+	font-family: Tahoma, Arial;
+	color: #000;
+}
+
+div.content
+{
+	position: relative;
+	width: 1024px;
+	text-align: left;
+	line-height: 20px;
+	background-color: #EEE;
+}
+
+div.navigation
+{
+	float: left;
+	width: 200px;
+	background-color: #AAA;
+	color: #511;
+	text-indent: 5px;
+}
+
+div.navigationhead
+{
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+div.navigationlink
+{
+	text-indent: 10px;
+}
+
+a.navigation
+{
+	color: #511;
+}
+
+div.main
+{
+	float: right;
+	width: 800px;
+	background: #EEE url(Images/WrathEdIcon.png) no-repeat scroll right top;
+	padding-top: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+span.title
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+span.important
+{
+	color: #F00;
+}

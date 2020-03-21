@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Structures/ZOCOMAirSupport.xml" />
+		<Include type="all" source="Structures/ZOCOMAirTower.xml" />
+		<Include type="all" source="Structures/ZOCOMArmory.xml" />
+		<Include type="all" source="Structures/ZOCOMBattleBase.xml" />
+		<Include type="all" source="Structures/ZOCOMConstructionYard.xml" />
+		<Include type="all" source="Structures/ZOCOMGolumCannon.xml" />
+		<Include type="all" source="Structures/ZOCOMMedicalBay.xml" />
+
+		<Include type="all" source="Units/ZOCOMAAScout.xml" />	
+		<Include type="all" source="Units/ZOCOMAPC.xml" />	
+		<Include type="all" source="Units/ZOCOMAPC_Veteran.xml" />	
+		<Include type="all" source="Units/ZOCOMFirehawk.xml" />	
+		<Include type="all" source="Units/ZOCOMGrenadeSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMGrenadeSoldierSquad.xml" />
+		<Include type="all" source="Units/ZOCOMImprovedSonicTank.xml" />	
+		<Include type="all" source="Units/ZOCOMHammerhead.xml" />
+		<Include type="all" source="Units/ZOCOMHarvester.xml" />
+		<Include type="all" source="Units/ZOCOMMARV.xml" />
+		<Include type="all" source="Units/ZOCOMMissileSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMOrca.xml" />
+		<Include type="all" source="Units/ZOCOMRifleSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMRig.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_CallSupportHunterKillerTeam.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_CallSupportZOCOMAirport.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_CallSupportZOCOMAirportRockets.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_CallSupportZOCOMBloodhound.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_CallSupportZOCOMBloodhound_APC.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_Summoned.xml" />
+		<Include type="all" source="Units/ZOCOMV350x_SummonedForVehicle.xml" />
+		<Include type="all" source="Units/ZOCOMZoneRaider.xml" />
+	</Includes>
+</AssetDeclaration>

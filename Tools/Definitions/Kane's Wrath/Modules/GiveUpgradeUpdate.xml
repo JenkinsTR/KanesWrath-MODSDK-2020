@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GiveUpgradeUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryReference
+			id="GiveUpgradeEffect"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpawnOutFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="FadeOutSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.025"/>
+		<Entry
+			id="DeliverUpgrade"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

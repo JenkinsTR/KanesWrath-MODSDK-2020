@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="4">Data Structure</font></b></p>
+<p><span style="font-family: Arial">When creating a MOD it is recommended you 
+follow the data structure laid out in this section of the document, the 
+structure can be changed but for the sake of this document we are going to 
+assume you follow these guidelines.</span></p>
+<span style="font-family: Arial">In the install directory there is a MODs 
+folder.&nbsp; It is recommended you create a folder directly under this folder that 
+corresponds with the name of whatever MOD you are creating, then in that folder 
+create a data folder.&nbsp; You can see an example of this in the SampleMOD folder.&nbsp; 
+This is important so the structure of your built MOD is correct and able to be 
+read properly by the game after you have built the MOD.&nbsp; After this is done the 
+directories created under data are up to the user wants to organize your data.</span><p><b><span style="font-family: Arial">Required Files:</span></b></p>
+<span style="font-family: Arial">There is only one required file for MOD 
+building and that is MOD.xml.&nbsp; This file is the file that should include 
+any other files you are adding/editing for your MOD.&nbsp; This is the file that 
+the batch file will try to build and directly corresponds to the name of the 
+manifest file that will be created by the build process.&nbsp; This manifest is 
+also hard coded in the game code so renaming it will cause your MOD not to work.</span><p>
+<span style="font-family: Arial">The only other file that is hard coded as such 
+is the MOD.str file.&nbsp; This file is optional and only needed if you are trying to 
+add or modify text in the game.</span></p>
+<b><span style="font-family: Arial">MOD.XML:</span></b><p>
+<span style="font-family: Arial">This file is the main file that will be 
+compiled by the BinaryAssetBuilderApplication. This file should include all 
+files that you are MODding/editing.&nbsp; If it is not included in this file it will 
+not be built.&nbsp; There are two files that should always be included as a reference 
+when creating a MOD.&nbsp; These are static.xml and global.xml to represent the two 
+main data streams the game loads, here is an example from the Sample MOD:</span></p>
+<font face="Arial"><span style="font-family: Consolas; color: black">&lt;Include 
+type=&quot;reference&quot; source=&quot;DATA:static.xml&quot; /&gt;<br>
+&lt;Include 
+type=&quot;reference&quot; source=&quot;DATA:global.xml&quot; /&gt;</span></font><p><span style="font-family: Arial; color: black">See the section on the 
+BinaryAssetBuilder.exe.config for an explanation of the DATA: value.</span><font face="Arial"><span style="font-family: Consolas; color: black">&nbsp;</span></font></p>
+<p><b><span style="font-family: Arial; color: black">Art 
+Files:</span></b></p>
+<span style="font-family: Arial; color: black">The Sample MOD includes artwork 
+used for the Elven Warrior.&nbsp; These assets can be found in the EU, and HC sub 
+folders of the main Art folder.&nbsp; Please note that the use of ART: in an include 
+statement will automatically create a sub folder&nbsp; consisting of the first two 
+letters in the art file you are including.&nbsp; For example:</span><p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: .5in">
+<font face="Arial"><span style="font-family: Consolas; color: black">&lt;Include<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type=&quot;all&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; source=&quot;ART:EULorWar_SKN.w3x&quot; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&gt;</span></font></p>
+<span style="font-family: Arial; color: black">This file will be searched for in 
+the Art\EU folder.&nbsp; Changing the location that ART: looks in will be covered in 
+the next section.&nbsp; Also any art files you work on will need to be located in 
+this Art folder not as a sub folder of your MOD directory, unless you 
+specifically change the location of the ART: folder.</span><p><b>
+<span style="font-family: Arial; color: black">BinaryAssetBuilder.exe.config</span></b></p>
+<span style="font-family: Arial; color: black">This file allows you to modify 
+the behavior of the BinaryAssetBuilder program.&nbsp; What this section will cover 
+however is only the search paths for the program.&nbsp; In the file you will find the 
+section:</span><p class="MsoNormal" style="text-indent: .5in; text-autospace: none">
+<font face="Arial"><span style="font-family: Consolas; color: black">&lt;assetbuilder<br>
+</span>&nbsp;&nbsp;&nbsp; <span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+serializedType=&quot;BinaryAssetBuilder.Settings,BinaryAssetBuilder.Core&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; schema=&quot;..\schemas\xsd\CnC3Types.xsd&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dataRoot=&quot;..&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defaultArtPaths=&quot;.\Art&quot; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defaultAudioPaths=&quot;.\Audio;&quot; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defaultDataPaths=&quot;.;.\Cnc3Xml;.\Mods&quot; 
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp;</span></font></p>
+<b><span style="font-family: Arial; color: black">dataRoot</span></b><span style="font-family: Arial; color: black"> 
+– Is the root folder for all data.&nbsp; This location is currently the main install 
+directory of the MOD SDK.</span><b><span style="font-family: Arial; color: black"><br>
+defaulArtPaths</span></b><span style="font-family: Arial; color: black"> 
+– Default search path(s) prefixed with ART:.&nbsp; Please 
+note that using this value will append a 2 letter subfolder consisting of the 
+first two letters of your art asset. </span><b>
+<span style="font-family: Arial; color: black"><br>
+defaultAudioPaths</span></b><span style="font-family: Arial; color: black">- 
+Search path(s) for paths prefixed with AUDIO:.</span><b><span style="font-family: Arial; color: black"><br>
+defaultDataPaths</span></b><span style="font-family: Arial; color: black">- 
+Default search path(s) for all data files included using the DATA: value.&nbsp; As 
+currently setup it will search the current directory first, then the MODs 
+folder, then the CnC3Xml folder.</span><p align="left">&nbsp;</p>
+
+</body>
+
+</html>

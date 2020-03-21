@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="InitiateRepairDieOptions">
+		<Entry>REPAIR_INSTANT</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="InitiateRepairDieOptionsFlag"
+		BaseEnum="InitiateRepairDieOptions" />
+
+	<Asset
+		id="InitiateRepairDieModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="DelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="MasterDeadDieFX"
+			AssetType="FXListRef"
+			IsAttribute="true" />
+		<Entry
+			id="Options"
+			AssetType="InitiateRepairDieOptionsFlag"
+			IsAttribute="true" />
+		<Entry
+			id="InstantRepairModelCondition"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="InstantRepairAnimDuration"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Die"
+			AssetType="DieMuxDataType" />
+	</Asset>
+
+</AssetDefinition>

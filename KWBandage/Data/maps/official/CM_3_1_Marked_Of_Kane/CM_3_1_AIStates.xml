@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+ <AIStrategicStateDefinition
+		id="CM_3_1_GDIUnitCap_Easy"
+		UnitBuilderSimpleUnitCap="14">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+    
+  </AIStrategicStateDefinition>
+     <AIStrategicStateDefinition
+		id="CM_3_1_GDIUnitCap_Medium"
+		UnitBuilderSimpleUnitCap="20">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+  
+ <AIStrategicStateDefinition
+		id="CM_3_1_GDIUnitCap_Hard"
+		UnitBuilderSimpleUnitCap="24">
+    <Heuristic>
+      <ConstantHeuristic Weight="3.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+
+  <!--AIStrategicStateDefinition
+		id="CM_3_1_GDIStaticDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestFriendlyStructureHeuristic" TargetType="Guard"/>
+    <Tactic Tactic="StaticDefense" TargetType="Guard">
+      <TeamTemplate MinUnits="3" MaxUnits="3" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition-->
+
+  <!--AIStrategicStateDefinition
+		id="CM_3_1_GDIHarvesterEscort"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestFriendlyHarvesterHeuristic" TargetType="Guard"/>
+    <Tactic Tactic="StaticDefense" TargetType="Guard">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK VEHICLE" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition-->
+
+  <!--AIStrategicStateDefinition
+		id="CM_3_1_GDIConyardDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestFriendlyConyardHeuristic" TargetType="Guard"/>
+    <Tactic Tactic="StaticDefense" TargetType="Guard">
+      <TeamTemplate MinUnits="3" MaxUnits="5" IncludeKindOf="CAN_ATTACK VEHICLE" ExcludeKindOf="AIRCRAFT " AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition-->
+
+  <!--AIStrategicStateDefinition
+		id="GDISuperweaponDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestFriendlySuperweaponHeuristic" TargetType="Guard"/>
+    <Tactic Tactic="StaticDefense" TargetType="Guard">
+      <TeamTemplate MinUnits="3" MaxUnits="3" IncludeKindOf="CAN_ATTACK VEHICLE" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition-->
+
+  <AIStrategicStateDefinition
+		id="CM_3_1_GDICounterattack"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <TimerHeuristic StartTime="600s" EndTime="-1s"/>
+      <CounterattackHeuristic Threshold="3.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="Counterattack"/>
+    <Tactic Tactic="SimpleAttack" TargetType="Counterattack">
+      <TeamTemplate MinUnits="6" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+    id="CM_3_1_GDIFinalAttack"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="Counterattack"/>
+    <Tactic Tactic="SimpleAttack" TargetType="Counterattack">
+      <TeamTemplate MinUnits="20" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="BOMBER_AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIStrategicStateDefinition
+  id="CM_3_1_GDIDefensiveBombingRuns"
+  UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <LateGameHeuristic/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToAirStructureHeuristic" TargetType="BombingAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="BombingAirstrike">
+      <TeamTemplate MinUnits="4" IncludeKindOf="CAN_ATTACK AIRCRAFT BOMBER_AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="GDIFirehawk"/>
+        <CreateUnits UnitName="GDIFirehawk"/>
+        <CreateUnits UnitName="GDIFirehawk"/>
+        <CreateUnits UnitName="GDIFirehawk"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+    id="CM_3_1_GDIDefensiveSpotters"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <LateGameHeuristic/>
+      <SiegeThresholdHeuristic SiegeMode="true" Threshold="8.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="SiegeTarget"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="SiegeTarget">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="GDISniperSquad"/>
+        <CreateUnits UnitName="GDISniperSquad"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="CM_3_1_GDICaptureTech"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <EnemyNearbyHeuristic Distance="600.0" EnemyNearby="false"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestNeutralTechHeuristic" TargetType="CaptureTech"/>
+    <Tactic Tactic="Engineer" TargetType="CaptureTech">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="GDIEngineer"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  <AIStrategicStateDefinition
+		id="CM_3_1_GDIEngineerDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerUnitHeuristic" TargetType="SpecialDefense"/>
+    <Tactic Tactic="SimpleAttack" TargetType="SpecialDefense">
+      <TeamTemplate MinUnits="1" MaxUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="GDIAPC"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+    
+    <AIStrategicStateDefinition
+		id="CM_3_1_Go_After_Node_Attack_1"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ScriptedFlagHeuristic FlagName="'Flag-OKToAttackNodes"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureSpecialHeuristic_3_1" TargetType="ExtraTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="ExtraTarget">
+      <TeamTemplate MinUnits="4" MaxUnits="6" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+ 
+     <AIStrategicStateDefinition
+		id="CM_3_1_Go_After_Node_Attack_2"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ScriptedFlagHeuristic FlagName="'Flag-OKToAttackNodes"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureSpecialHeuristic_3_1" TargetType="ExtraTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="ExtraTarget">
+      <TeamTemplate MinUnits="2" MaxUnits="4" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition> 
+  
+  <AIStrategicStateDefinition
+		id="CM_3_1_GDIReactiveDefense"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Tactic Tactic="ReactiveDefense" TargetType="Targetless">
+      <TeamTemplate MinUnits="2" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="true" AlwaysRecruit="true"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+
+  <AIBudgetStateDefinition
+		id="CM_3_1_FullProductionBudget">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="0%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="10%"/>
+      <AccountShare Account="PRODUCTION" Percent="90%"/>
+      <AccountShare Account="DEFENSE" Percent="0%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="0%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="0%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+
+  <AIBudgetStateDefinition
+		id="CM_3_1_NodeAssault_BudgetState">
+    <Heuristic>
+      <ConstantHeuristic Weight="2.0"/>
+	  <ScriptedFlagHeuristic FlagName="'Flag-OKToAttackNodes"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="0%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="0%"/>
+      <AccountShare Account="PRODUCTION" Percent="100%"/>
+      <AccountShare Account="DEFENSE" Percent="0%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="0%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="0%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+
+
+</AssetDeclaration>

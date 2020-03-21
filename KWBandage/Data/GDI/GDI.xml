@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+
+		<Include type="all" source="Structures/GDIAirSupport.xml" />
+		<Include type="all" source="Structures/GDIAirTower.xml" />
+		<Include type="all" source="Structures/GDIArmory.xml" />
+		<Include type="all" source="Structures/GDIBattleBase.xml" />
+		<Include type="all" source="Structures/GDIDigInBuilding.xml" />
+		<Include type="all" source="Structures/GDIGolumCannon.xml" />
+	
+		<Include type="all" source="Units/GDIAAScout.xml" />
+		<Include type="all" source="Units/GDIAPC.xml" />
+		<Include type="all" source="Units/GDIAPC_Veteran.xml" />
+		<Include type="all" source="Units/GDIGrenadeSoldierSquad.xml" />
+		<Include type="all" source="Units/GDIHammerhead.xml" />
+		<Include type="all" source="Units/GDIMARV.xml" />
+		<Include type="all" source="Units/GDIMammoth.xml" />
+		<Include type="all" source="Units/GDIPredator.xml" />
+		<Include type="all" source="Units/GDIRig.xml" />	
+		<Include type="all" source="Units/GDISonicTank.xml" />	
+		<Include type="all" source="Units/GDIZoneTrooper.xml" />
+		<Include type="all" source="Units/ZOCOMAPCRepairDrone.xml" />
+	</Includes>
+</AssetDeclaration>

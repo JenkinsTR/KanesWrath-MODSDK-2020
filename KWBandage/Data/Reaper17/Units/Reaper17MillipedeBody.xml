@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--Refer to Scrin Version-->
+	<GameObject
+		id="Reaper17MillipedeBody"
+		inheritFrom="AlienMillipedeBody"
+		SelectPortrait="Portrait_Millipede"
+		ButtonImage="Portrait_Millipede"
+		Side="Reaper17"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="100"
+		BuildTime="1"
+		CommandSet="AlienMechapedeMemberCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE VEHICLE ANTI_GARRISON CAN_REVERSE_MOVE TIBERIUM_BASED CAN_BE_FAVORITE_UNIT CAN_HEAL_ALLIES AI_BUZZERS_CANT_ATTACH_TO_ME"
+		RadarPriority="UNIT"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="BLAST"
+		VoicePriority="215"
+		EditorName="Reaper17MillipedeBody"
+		Description="Desc:AlienMillipedeBody"
+		TypeDescription="Type:AlienMillipedeBody"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:AlienMillipedeBody</DisplayName>
+		<ArmorSet
+			Armor="AlienMillipedeBodyArmor"
+			DamageFX="InfantryAlienDamageFX" />		
+		<LocomotorSet
+			Locomotor="MillipedeSegmentLocomotor"
+			Condition="NORMAL"
+			Speed="110.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUMillipedeBody_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE_MUZZLEFX01" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="BONE_MUZZLEFX01" />
+					<Turret
+						TurretNameKey="BONE_TURRET"
+						TurretID="1" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="AUMillipedeBody_FP" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AUMillipedeBody_SKNR" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="AUMillipedeBody_SKN" />
+					<Texture
+						Original="AUMillipedeBody"
+						New="AUMillipedeBody_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="AUMillipedeBody_SKNR" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FX_Bone"
+						FXParticleSystemTemplate="AlienDamageLrgFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="AUMillipedeBody_IDLA"
+						AnimationMode="ONCE"
+						AnimationPriority="90"
+						AnimationBlendTime="15" />
+					<Animation
+						AnimationName="AUMillipedeBody_IDLB"
+						AnimationMode="ONCE"
+						AnimationPriority="10"
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					Flags="START_FRAME_FIRST">
+					<Animation
+						AnimationName="AUMillipedeBody_DIEA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="AUMillipedeBody_DIEB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="AUMillipedeBody_DIEC"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					>
+					<Animation
+						AnimationName="AUMillipedeBody_MOVA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_LEFT"
+					>
+					<Animation
+						AnimationName="AUMillipedeBody_TRNL"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING TURN_RIGHT"
+					>
+					<Animation
+						AnimationName="AUMillipedeBody_TRNR"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="ACCELERATE">
+					<Animation
+						AnimationName="AUMillipedeBody_ACCL"
+						AnimationMode="ONCE"
+						/>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DECELERATE">
+					<Animation
+						AnimationName="AUMillipedeBody_DECL"
+						AnimationMode="ONCE"
+						/>
+				</AnimationState>
+			</TankDraw>
+			<StreamDraw
+				id="ModuleTag_StreamDraw"
+				UseDistortionShader="false"
+				Velocity="200.0"
+				ArcHeightFactor="0.0625"
+				UVWorldSize="100.0"
+				NumTubeSides="8"
+				TubeRadius="1.25"
+				HitFx="FX_BulletHitGDI"
+				WeaponSlotID="1">
+				<FXShader
+					ShaderName="Stream.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXCorrupterStream</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXCorrupterStream</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ParticleSystems>
+					<ParticleSys>AlienCorrupterStreamDrip</ParticleSys>
+					<ParticleSys>AlienCorrupterStreamDistort</ParticleSys>
+				</ParticleSystems>
+				<ObjectStatusValidation
+					RequiredStatus="WEAPON_UPGRADED_01" />				
+			</StreamDraw>			
+			<LaserDraw
+				id="ModuleTag_LaserDraw"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile=".3"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate=".7"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="8">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXAlienLaser</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXAlienLaser</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					RequiredStatus="RIDER_IS_PILOT" />
+			</LaserDraw>
+			<LaserDraw
+				id="ModuleTag_LaserDistort"
+				UseDistortionShader="true"
+				Texture1_UTile="1"
+				Texture1_VTile=".5"
+				Texture1_UScrollRate="0"
+				Texture1_VScrollRate=".2"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="30"
+				Texture2_UTile="1"
+				Texture2_VTile="2"
+				Texture2_UScrollRate="0"
+				Texture2_VScrollRate=".7"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="30"
+				LaserWidth="12">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXAlienOverlay</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXAlienOverlay</Value>
+						</Texture>
+					</Constants>
+				</FXShader>
+				<ObjectStatusValidation
+					RequiredStatus="RIDER_IS_PILOT" />				
+			</LaserDraw>
+			
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotTurret
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienMechapedeTioxinBlastCannon"
+						ObjectStatus="WEAPON_UPGRADED_01"/>
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienMechapedeShardWeapon"
+						ObjectStatus="WEAPON_UPGRADED_02"/>
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienMechapedeProtonCannon"
+						ObjectStatus="WEAPON_UPGRADED_03"/>
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlienMechapedeRazorDroneWeapon"
+						ObjectStatus="RIDER_IS_PILOT"/>	
+					<TurretSettings
+						TurretTurnRate="540"
+						TurretPitchRate="40"
+						AllowsPitch="true"
+						MinIdleScanTime="1.0s"
+						MaxIdleScanTime="5.0s"
+						MinIdleScanAngle="0.0"
+						MaxIdleScanAngle="90.0">
+						<TurretAITargetChooserData
+							CanAcquireDynamicIfAssignedOutOfRange="true" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate>	
+			<SweepingLaserState
+				id="ModuleTag_LaserState"
+				Radius="15.0"
+				SweepFXList="FX_AlienBuzzerHit"
+				VeteranSweepFXList="FX_AlienBuzzerHitHeroic"
+				SweepFXTimeout="0.25s"
+				LaserId="0" />		
+			<StreamState
+				id="ModuleTag_StreamState"
+				StreamId="0"></StreamState>				
+			<Physics
+				id="ModuleTag_Physics" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="5s"
+				SinkRate="1.0"
+				DestructionDelay="15s">
+				<Sound Type="INITIAL" List="ALI_Mechapede_SoundDie" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlienMechapedeExplodeScorch" />
+			</FXListBehavior>
+			<StatusBitsUpgrade
+				id="ModuleTag_TioxinUpgrade"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_MechapedeTioxinWeapon</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowTioxinWeapon" 
+				ShowSubObjects="TIBERIUM_SPRAY_MODULE">
+				<TriggeredBy>Upgrade_MechapedeTioxinWeapon</TriggeredBy>
+			</SubObjectsUpgrade>
+		
+			<StatusBitsUpgrade
+				id="ModuleTag_ShardUpgrade"
+				StatusToSet="WEAPON_UPGRADED_02">
+				<TriggeredBy>Upgrade_MechapedeShardWeapon</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowShardWeapon" 
+				ShowSubObjects="SHARD_MODULE">
+				<TriggeredBy>Upgrade_MechapedeShardWeapon</TriggeredBy>
+			</SubObjectsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_ProtonUpgrade"
+				StatusToSet="WEAPON_UPGRADED_03">
+				<TriggeredBy>Upgrade_MechapedeDiskWeapon</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowPlasmaDiscWeapon" 
+				ShowSubObjects="PLASMA_DISC_MODULE">
+				<TriggeredBy>Upgrade_MechapedeDiskWeapon</TriggeredBy>
+			</SubObjectsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_RazorUpgrade"
+				StatusToSet="RIDER_IS_PILOT">
+				<TriggeredBy>Upgrade_MechapedeRazorWeapon</TriggeredBy>
+			</StatusBitsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_ShowLaserWeapon" 
+				ShowSubObjects="DISINTEGRATOR_MODULE">
+				<TriggeredBy>Upgrade_MechapedeRazorWeapon</TriggeredBy>
+			</SubObjectsUpgrade>				
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				AILuaEventsList="AlienMechapedeFunctions" >
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="25.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ShieldBody
+				id="ModuleTag_Body"
+				MaxHealth="1000"
+				/>				
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior id="ModuleTag_MoveSounds">
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_LEFT" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_RIGHT" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_LEFT_HIGH_SPEED" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="TURN_RIGHT_HIGH_SPEED" />
+				<ModelConditionSound Sound="Multisound:ALI_Mechapede_MoveSweetenerMS" RequiredFlags="ACCELERATE" />
+			</ModelConditionAudioLoopClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="BOX"
+				MajorRadius="15.0"
+				MinorRadius="10.0"
+				Height="10.0"
+				ContactPointGeneration="SQUAD_MEMBER" />
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundCreate" AudioType="voiceCreated" /> <!-- no worky -->
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundCreate" AudioType="voiceFullyCreated" /> <!-- no worky -->
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_SoundMove" AudioType="voiceMove" />
+			<AudioEntry Sound="Multisound:ALI_Mechapede_SoundSelectMS" AudioType="voiceSelect" />
+			<NamedEntry Sound="AudioEvent:ALI_Buzzers_SoundSplit" Name="UncombineWithUnit" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="Multisound:ALI_Mechapede_BodySpawnedMS" AudioType="soundAmbient" /> 
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_MoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:ALI_Mechapede_MoveLoop" AudioType="soundMoveLoop" />
+			<!-- <AudioEntry Sound="ALI_Mechapede_SoundCreate" AudioType="soundCreated" /> no worky -->
+<!--
+			<AudioEntry Sound="ALI_Mechapede_IdleLoop" AudioType="soundAmbient" />
+-->
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="500" />
+		<CrusherInfo
+			CrusherLevel="1"
+			CrushableLevel="2"
+			CrushEqualLevelProps="true"
+			CrushDecelerationPercent="40%" />
+	</GameObject>
+</AssetDeclaration>

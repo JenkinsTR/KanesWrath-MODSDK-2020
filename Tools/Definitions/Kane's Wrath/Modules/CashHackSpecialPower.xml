@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CashHackSpecialPowerUpgrades">
+		<Entry
+			id="Science"
+			AssetType="ScienceType"
+			IsAttribute="true" />
+		<Entry
+			id="AmountToSteal"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="CashHackSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="DefaultAmountToSteal"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="Upgrades"
+			AssetType="CashHackSpecialPowerUpgrades"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,80 @@
+<H2 align="center"><font face="Trebuchet MS">Command &amp; Conquer 3 Tiberium 
+Wars(TM)</font></H2>
+<H3 align="center"><FONT face="Trebuchet MS">MOD SDK 1.00</FONT></H3>
+<P align="left"><FONT face="Trebuchet MS">The Installer for the MOD SDK currently consists of&nbsp;these 
+		pieces:</FONT></P>
+<ul>
+	<li>
+	<DIV align="left"><font face="Trebuchet MS">3DS Max plugins</font></DIV>
+	</li>
+	<li>
+	<DIV align="left"><FONT face="Trebuchet MS">W3XViewer</FONT></DIV></li>
+	<li>
+	<DIV align="left"><font face="Trebuchet MS">BuildMOD.bat</font></DIV></li>
+	<li>
+	<DIV align="left"><font face="Trebuchet MS">Sample MOD</font></DIV></li>
+	<li>
+	<DIV align="left"><FONT face="Trebuchet MS">Support documentation</FONT></DIV>
+	</li>
+</ul>
+<H4 align="left"><FONT face="Trebuchet MS">3DS Max plugin</FONT></H4>
+<P align="left"><FONT face="Trebuchet MS">There are 2 sets of 3DS Max plugins 
+included in this package. One requires that you have 3DS Max 9 and the other, 3DS Max 7 with 
+		service pack 1 or 3DS Max 8 installed.</FONT></P>
+<P align="left"><FONT face="Trebuchet MS">To install, copy the contents of "3dsmax7_plugin" 
+found in your MOD SDK folder into their respective folders in the "3dsmax7" install directory. 
+Similarly, copy the contents of &quot;3dsmax9_plugin&quot; into the respective folders for 
+3dsmax9.</FONT></P>
+<P align="left"><FONT face="Trebuchet MS">This will copy the actual plugin, several 
+		useful MaxScripts and shaders that can be used in Max to configure materials. 
+		See the 3DSMax section in the </FONT><A href="Documentation/Index.htm"><FONT face="Trebuchet MS">
+			documentation</FONT></A><FONT face="Trebuchet MS"> for more info.</FONT></P>
+<H4 align="left"><FONT face="Trebuchet MS">W3XViewer</FONT></H4>
+<P align="left"><FONT face="Trebuchet MS">The W3XViewer can be launched from anywhere, 
+		and does not need to be copied. If you have all your art files (W3X files and 
+		textures) in one directory W3XView can find them all together; however, 
+the game 
+		file structure layout is different:</FONT></P>
+<UL>
+	<LI>
+		<DIV align="left"><FONT face="Trebuchet MS">W3X files, by default, need 
+			to be in a directory 
+				"Art\XX\" where XX is the first two letters of the file name. That 
+				directory needs to be below your installed MOD SDK directory. So a full path might be 
+				"C:\MOD SDK\Art\GB\GB_Conyard01.w3x&quot;</FONT></DIV>
+	<LI>
+		<DIV align="left"><FONT face="Trebuchet MS">Further Details on how art 
+			works can be found in the section detailing how the Sample MOD was 
+			created in the <A href="Documentation/Index.htm">documentation</A>.</FONT></DIV>
+	</LI>
+</UL>
+<P align="left"><FONT face="Trebuchet MS">Typically our artists create W3X files and 
+		textures for one unit or&nbsp;structure in a single directory, and then copy 
+		over the final files into the W3X and texture directories that the game needs.</FONT></P>
+<h4 align="left"><font face="Trebuchet MS">BuildMOD.bat</font></h4>
+<p class="MsoNormal"><span style="font-family: Trebuchet MS; color: black">The 
+MOD SDK installer creates a .bat file in the root of your install directory.&nbsp; To 
+build your MOD simply run this from a command prompt and pass it one parameter 
+which is the name of your MOD.&nbsp; You can test this on the Sample MOD by running BuildMOD.bat SampleMOD from the command line.&nbsp; This will create and generate a 
+.big file for you.&nbsp; Once you’ve successfully built your MOD, the big file for 
+your MOD will be located in the BuiltMODs\MODs folder.&nbsp; In the case of the 
+Sample MOD this will be samplemod.big.&nbsp; The .bat file will also automatically 
+copy this file to the My Documents\Command &amp; Conquer 3 Tiberium Wars\mods\&lt;mod 
+name&gt; folder.&nbsp; This is where your completed MODs should be placed to be run in 
+the game.&nbsp; The only step left to getting your MOD to appear in the game is the 
+creation of a Skudef file</span><span style="font-family: Trebuchet MS"> and 
+will be covered in the section labeled &quot;Completing the MOD&quot; under <b>Sample MOD</b> in the </span><FONT face="Trebuchet MS"><A href="Documentation/Index.htm">documentation</A>.</FONT></p>
+<H3 align="left"><FONT face="Trebuchet MS">Further documentation</FONT></H3>
+<P align="left"><FONT face="Trebuchet MS">Additional&nbsp;</FONT><A href="Documentation/Index.htm"><FONT face="Trebuchet MS">documentation</FONT></A><FONT face="Trebuchet MS">
+		in HTML format can be found in the Documentation directory. This includes 
+		documents about the various parts of the 3DS Max plug-in, the W3DViewer and 
+		further art creation rules (eg&nbsp;how to set up house coloring). There 
+is also the sections detailing how the Sample MOD was created. </FONT></P>
+<P align="left"><FONT face="Trebuchet MS">
+		<font color="#FF0000">IMPORTANT <br>
+&nbsp;&nbsp;&nbsp; </font>*Keep in mind that the MOD SDK 
+has some <a href="Documentation/Required_Apps.htm">required applications</a>.<br>
+&nbsp;&nbsp;&nbsp; *The newest WorldBuilder needs to be downloaded to work with 
+the MOD SDK.</FONT></P>
+<P align="left"><font face="Trebuchet MS">MOD to your hearts content,<BR>
+		&nbsp;&nbsp; EALA Command &amp; Conquer Team</font></P>

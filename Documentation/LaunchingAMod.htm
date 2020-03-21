@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="thundermods.net" />
+	<meta name="copyright" content="thundermods.net" />
+	<meta name="description" content="Documentation - WrathEd" />
+
+	<link rel="stylesheet" href="Documentation.css" />
+	<title>Documentation - WrathEd - Launching a Mod</title>
+</head>
+<body>
+<div align="center">
+	<div class="content">
+		<div class="navigation">
+			<div class="navigationhead">WrathEd</div>
+			<div class="navigationlink">• <a href="index.htm" class="navigation">Index</a></div>
+			<div class="navigationhead">Mod Creation</div>
+			<div class="navigationlink">• <a href="DirectoryStructure.htm" class="navigation">Directory Structure</a></div>
+			<div class="navigationlink">• <a href="XMLAssets.htm" class="navigation">XML Assets</a></div>
+			<div class="navigationlink">• <a href="CustomMaps.htm" class="navigation">Custom Maps</a></div>
+			<div class="navigationlink">• <a href="BuildingAMod.htm" class="navigation">Building a Mod</a></div>
+			<div class="navigationlink">• Launching a Mod</div>
+		</div>
+		<div class="main">
+To launch the mod in Kane's Wrath you have to use the WrathEd Mod Launcher.<br />
+<br />
+<img src="Images/launchmodml.png" alt="launchmodml.png" /><br />
+<br />
+You can download the the tool either on <a href="http://thundermods.net/index.php?page=downloads&action=view&id=94" target="_blank" class="navigation">Thundermods.net</a> or on <a href="http://www.moddb.com/mods/kanes-wrath-mod-sdk/downloads" target="_blank" class="navigation">ModDB</a>.<br />
+<br />
+The parameters used to run the Mod Launcher will be passed to the game. For example, if you run
+<pre>"WrathEd Mod Launcher.exe" -win</pre>
+then the game will start in windowed mode when you launch a mod.<br />
+<br />
+• Shortcut:<br />
+To create a shortcut for launching a mod directly right click on the "WrathEd Mod Launcher.exe" and then click on "Create shortcut". Best to name it something like "Run SampleMod". Then right click on it and click Properties. In the new window add something like the following example:
+<pre> -runmod "SampleMod" "1.00"</pre>
+(after the path, outside of the quotation marks)<br />
+<br />
+If you don't want to run a mod but just the game (e.g. for using compiled maps) then just add:
+<pre> -nomod</pre>
+		</div>
+	</div>
+</div>
+</body>
+</html>

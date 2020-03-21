@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ShieldBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ActiveBodyModuleData" />
+		<EntryReference
+			id="ShieldEnabledFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ShieldDepleteFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ShieldRechargeEndFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ShieldTakeDamageFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ShieldAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ShieldArmor"
+			AssetType="ArmorTemplateRef"
+			IsAttribute="true" />
+		<Entry
+			id="ShieldRechargeIdleTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ShieldActiveModelCondition"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true"
+			Default="INVALID" />
+	</Asset>
+
+</AssetDefinition>

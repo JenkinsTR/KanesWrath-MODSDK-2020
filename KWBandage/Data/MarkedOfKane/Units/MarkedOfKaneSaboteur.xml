@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!--Created HouseColor Texture for Cybernetic Legs Upgrade-->
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:HC_NUSabtr_UGCL.xml" />
+	</Includes>
+	<GameObject
+		id="MarkedOfKaneSaboteur"
+		inheritFrom="NODSaboteur"
+		SelectPortrait="Portrait_NODSaboteur"
+		ButtonImage="Portrait_NODSaboteur"
+		Side="MarkedOfKane"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="500"
+		BuildTime="5"
+		CommandSet="NODSaboteurCommandSet"
+		IsTrainable="true"
+		KindOf="PRELOAD SELECTABLE ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY SCORE CAN_CAPTURE PATH_THROUGH_INFANTRY SKIRMISH_AI_DONT_GARRISON ENGINEER CAN_CAPTURE CAN_BE_FAVORITE_UNIT IGNORES_SELECT_ALL"
+		RadarPriority="UNIT"
+		BuildCompletion="APPEARS_AT_RALLY_POINT"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		VoicePriority="64"
+		EditorName="MarkedOfKaneSaboteur"
+		Description="Desc:MarkedOfKaneSaboteur"
+		TypeDescription="Type:MarkedOfKaneSaboteur"
+		UnitTypeIcon="EngineerIcon"
+		CaptureTime="3s"
+		WorldMapArmoryUpgradesAllowed="Upgrade_MarkedOfKaneCyberneticLegs">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:NODSaboteur</DisplayName>
+		<ArmorSet
+			Armor="NODSaboteurArmor"
+			DamageFX="InfantryDamageFX" />
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="36" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NUSabtr_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXEngineer_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="NUSabtr_SKN" />
+					<Texture
+						Original="NUSabtr"
+						New="NUSabtr_UGCL" />
+					<Texture
+						Original="HC_NUSabtr"
+						New="HC_NUSabtr_UGCL" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Bored">
+					<Animation
+						AnimationName="NUSabtr_BIDA"
+						AnimationMode="ONCE"
+						AnimationPriority="10" />
+					<Animation
+						AnimationName="NUSabtr_BIFA"
+						AnimationMode="ONCE"
+						AnimationPriority="3" />
+					<Animation
+						AnimationName="NUSabtr_BIFB"
+						AnimationMode="ONCE"
+						AnimationPriority="3" />
+					<Animation
+						AnimationName="NUSabtr_BIFC"
+						AnimationMode="ONCE"
+						AnimationPriority="3" />
+					<Animation
+						AnimationName="NUSabtr_BIFD"
+						AnimationMode="ONCE"
+						AnimationPriority="3" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Suppressed" then
+						CurDrawableSetTransitionAnimState("TRANS_fromSuppressed")
+						end
+						if Prev == "STATE_Selected" then
+						CurDrawableSetTransitionAnimState("TRANS_attentionToBored")
+						end
+						if Prev == "STATE_stunned_flailing" then
+						CurDrawableSetTransitionAnimState("STATE_stunned_landing")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_FLAILING"
+					StateName="STATE_stunned_flailing">
+					<Animation
+						AnimationName="NUSabtr_FLYA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					StateName="STATE_stunned_landing">
+					<Animation
+						AnimationName="NUSabtr_LNDA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FRONTCRUSHED">
+					<Animation
+						AnimationName="NUSabtr_CDTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BACKCRUSHED">
+					<Animation
+						AnimationName="NUSabtr_CDTB"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER DYING"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NUSabtr_KDIA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NUSabtr_DIEA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SPECIAL_WEAPON_ONE">
+					<Animation
+						AnimationName="NUSabtr_KBFC"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<!--Capturing-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="CAPTURING"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NUSabtr_KBIA"
+						AnimationMode="ONCE"
+						AnimationPriority="15"
+						AnimationBlendTime="10" />
+				</AnimationState>
+				<!--Supressed-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED MOVING"
+					StateName="STATE_Suppressed"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NUSabtr_SMVA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SUPPRESSED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Suppressed">
+					<Animation
+						AnimationName="NUSabtr_SIDA"
+						AnimationMode="ONCE"
+						AnimationPriority="15" />
+					<Animation
+						AnimationName="NUSabtr_SIFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Animation
+						AnimationName="NUSabtr_SIFB"
+						AnimationMode="ONCE"
+						AnimationPriority="5" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev ~= "STATE_Suppressed" and Prev ~= "TRANS_toSuppressed" then
+						CurDrawableSetTransitionAnimState("TRANS_toSuppressed")
+						end
+					</Script>
+				</AnimationState>
+				<!--Cover-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER MOVING"
+					Flags="RANDOMSTART"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NUSabtr_CRNA"
+						AnimationMode="LOOP"
+						Distance="75" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED COVER"
+					StateName="STATE_Cover_Selected">
+					<Animation
+						AnimationName="NUSabtr_KAIA"
+						AnimationMode="LOOP"
+						AnimationBlendTime="10" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Cover" then
+						CurDrawableSetTransitionAnimState("TRANS_CoverToCoverAttention")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COVER"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Cover">
+					<Animation
+						AnimationName="NUSabtr_KBIA"
+						AnimationMode="ONCE"
+						AnimationPriority="15"
+						AnimationBlendTime="10" />
+					<Animation
+						AnimationName="NUSabtr_KBFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="10" />
+					<Animation
+						AnimationName="NUSabtr_KBFB"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="10" />
+					<Animation
+						AnimationName="NUSabtr_KBFC"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="10" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_Cover_Selected" then
+						CurDrawableSetTransitionAnimState("TRANS_CoverAttentionToCover")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="NUSabtr_RUNA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<!-- EMOTIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="EMOTION_CELEBRATING"
+					Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="NUSabtr_CHRA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<!--Selected-->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_Selected">
+					<Animation
+						AnimationName="NUSabtr_AIDA"
+						AnimationMode="ONCE"
+						AnimationPriority="15"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimationName="NUSabtr_AIFA"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimationName="NUSabtr_AIFB"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Animation
+						AnimationName="NUSabtr_AIFC"
+						AnimationMode="ONCE"
+						AnimationPriority="5"
+						AnimationBlendTime="5"
+						AnimationMustCompleteBlend="true" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev == "STATE_Bored" then CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end;
+					</Script>
+				</AnimationState>
+				<!-- TRANSITIONS -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_boredToAttention">
+					<Animation
+						AnimationName="NUSabtr_BATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_attentionToBored">
+					<Animation
+						AnimationName="NUSabtr_ABTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_toSuppressed">
+					<Animation
+						AnimationName="NUSabtr_SDVA"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_fromSuppressed">
+					<Animation
+						AnimationName="NUSabtr_SGTB"
+						AnimationMode="ONCE"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_CoverToCoverAttention">
+					<Animation
+						AnimationName="NUSabtr_KBTA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_CoverAttentionToCover">
+					<Animation
+						AnimationName="NUSabtr_KATA"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<CrushDie
+				id="ModuleTAg_CrushDie">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			<FXListBehavior
+				id="SquishedFXPlayer">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="10"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100" />
+			<Physics
+				id="ModuleTag_07" />
+			<ProductionUpdate
+				id="ModuleTag_08" />
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+				<AddEmotion>CheerIdle_Base</AddEmotion>
+				<AddEmotion>CheerBusy_Base</AddEmotion>
+			</EmotionTrackerUpdate>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="4.5s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Sound
+					Type="INITIAL"
+					List="NOD_Saboteur_VoiceDie" />
+			</SlowDeath>
+			<SuppressionUpdate
+				id="ModuleTag_SuppressionUpdate"
+				UpdateDelay="1s"
+				Suppressability="500"
+				SuppressionDuration="5s"
+				AttributeModifierSuppressed="Modifier_Test_Suppression"
+				AttributeModifierForceMove="Modifier_Test_Suppression_ForceMove" />
+			<FindCoverBehavior
+				id="ModuleTag_FCB"
+				CoverScanRange="10.0"
+				AttributeModifierInCover="Modifier_Cover" />
+			<SpecialPowerDispatchSpecialPower
+				id="ModuleTag_BoobyTrapDispatch"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapDispatch">
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtTechBuilding" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBuilding" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBridge" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtHusk" />
+			</SpecialPowerDispatchSpecialPower>
+			<!-- Place booby trap on a tech building -->
+			<SpecialPower
+				id="ModuleTag_BoobyTrapTechBuilding"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtTechBuilding"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_BoobyTrapTechBuildingUpdate"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtTechBuilding"
+				SpecialWeapon="NODSaboteurPlaceBoobyTrapAtTechBuildingWeapon"
+				UnpackTime="1s"
+				PackTime="1s"
+				TriggerSound="Multisound:NOD_Saboteur_BoobyTrapMS"
+				StartAbilityRange="5.0"
+				BusyForDuration="2s"
+				WhichSpecialWeapon="1"
+				FleeRangeAfterCompletion="75.0"
+				Options="USE_OBJECT_GEOMETRY_FOR_WITHIN_RANGE_CHECK FLIP_OWNER_AFTER_PACKING" />
+			<!-- Place booby trap on a garrisonable building -->
+			<SpecialPower
+				id="ModuleTag_BoobyTrapBuilding"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBuilding"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_BoobyTrapBuildingUpdate"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBuilding"
+				SpecialWeapon="NODSaboteurPlaceBoobyTrapAtBuildingWeapon"
+				UnpackTime="1s"
+				PackTime="1s"
+				TriggerSound="Multisound:NOD_Saboteur_BoobyTrapMS"
+				StartAbilityRange="5.0"
+				BusyForDuration="2s"
+				WhichSpecialWeapon="1"
+				FleeRangeAfterCompletion="75.0"
+				Options="USE_OBJECT_GEOMETRY_FOR_WITHIN_RANGE_CHECK FLIP_OWNER_AFTER_PACKING CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE" />
+			<!-- Place booby trap on a bridge -->
+			<SpecialPower
+				id="ModuleTag_BoobyTrapBridge"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBridge"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_BoobyTrapBridgeUpdate"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtBridge"
+				SpecialWeapon="NODSaboteurPlaceBoobyTrapAtBridgeWeapon"
+				UnpackTime="1s"
+				PackTime="1s"
+				TriggerSound="Multisound:NOD_Saboteur_BoobyTrapMS"
+				StartAbilityRange="2.0"
+				ContactPointOverride="CENTER"
+				BusyForDuration="2s"
+				WhichSpecialWeapon="1"
+				FleeRangeAfterCompletion="15.0"
+				Options="USE_OBJECT_GEOMETRY_FOR_WITHIN_RANGE_CHECK FLIP_OWNER_AFTER_PACKING" />
+			<!-- Place booby trap on a husk -->
+			<SpecialPower
+				id="ModuleTag_BoobyTrapHusk"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtHusk"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_BoobyTrapHuskUpdate"
+				SpecialPowerTemplate="SpecialPower_PlaceBoobyTrapAtHusk"
+				SpecialWeapon="NODSaboteurPlaceBoobyTrapAtHuskWeapon"
+				UnpackTime="1s"
+				PackTime="1s"
+				TriggerSound="Multisound:NOD_Saboteur_BoobyTrapMS"
+				StartAbilityRange="5.0"
+				BusyForDuration="2s"
+				WhichSpecialWeapon="1"
+				FleeRangeAfterCompletion="75.0"
+				Options="USE_OBJECT_GEOMETRY_FOR_WITHIN_RANGE_CHECK FLIP_OWNER_AFTER_PACKING" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_NODSaboteurBoobyTrap"
+				CommandButtonName="Command_NODSaboteurPlaceBoobyTrap"
+				SpecialPowerAIType="SPECIAL_POWER_CAPTURE_BUILDING" />
+			<AISpecialPowerUpdate
+				id="ModuleTag_NODSaboteurCaptureBuildingAI"
+				CommandButtonName="Command_CaptureBuilding"
+				SpecialPowerAIType="SPECIAL_POWER_CAPTURE_BUILDING" />
+			<CreateAndEnterObjectSpecialPower xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportNOD"
+				OCL="OCL_NodCallForTransportInfantry"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_NodCallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+			<!-- Cybernetic Legs -->
+			<ModelConditionUpgrade
+				id="ModuleTag_ModelConditionCyberneticLegs"
+				AddConditionFlags="USER_3">
+				<TriggeredBy>Upgrade_MarkedOfKaneCyberneticLegs</TriggeredBy>
+			</ModelConditionUpgrade>	
+			<AttributeModifierUpgrade
+				id="Upgrade_MarkedOfKaneCyberneticLegs"
+				AttributeModifier="AttributeModifier_CyberneticLegs">
+				<TriggeredBy>Upgrade_MarkedOfKaneCyberneticLegs</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AudioLoopUpgrade id="NOD_CyberneticLegs_Upgrade" SoundToPlay="AudioEvent:NOD_CyberneticLegs_Upgrade">
+				<TriggeredBy>Upgrade_MarkedOfKaneCyberneticLegs</TriggeredBy>
+			</AudioLoopUpgrade> 	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES">
+				<UnitAITargetChooserData
+					SympathyRange="100.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_03"
+				MaxHealth="75.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="AudioEvent:Bodyfall" Animation="NUSabtr_LNDA" Frame="5" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"></Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceGarrison"
+				AudioType="voiceGarrison" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceMove"
+				AudioType="voiceGuard" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="Multisound:NOD_Saboteur_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<NamedEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceBoobyTrap"
+				Name="VoiceBoobyTrap" />
+			<NamedEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceRepair"
+				Name="VoiceEngineerRepair" />
+			<NamedEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceCapture"
+				Name="VoiceCaptureBuilding" />
+			<NamedEntry
+				Sound="AudioEvent:NOD_Saboteur_VoiceCapture"
+				Name="VoiceCaptureHusk" />
+		</AudioArrayVoice>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<!--
+NOD_Saboteur_VoiceSuppress
+-->
+		<!--
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:TEMP_PredatorMoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:PredatorAmbientLoop" AudioType="soundAmbient" />
+		</AudioArraySound>
+-->
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>
