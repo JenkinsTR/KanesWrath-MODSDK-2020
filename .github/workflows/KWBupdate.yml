@@ -30,7 +30,7 @@ jobs:
         run: |
           cd KWBandage
           
-          # UNUSED: git pull https://github.com/theHostileNegotiator/KWBandage.git master
+          # UNUSED: git merge KWBandage/master
           
           # Add the remote, call it "KWBandage":
 
@@ -48,4 +48,4 @@ jobs:
           # aren't already in upstream/master are replayed on top of that
           # other branch:
           
-          git merge KWBandage/master
+          git pull KWBandage master
