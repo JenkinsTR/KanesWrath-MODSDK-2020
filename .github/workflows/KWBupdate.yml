@@ -39,4 +39,4 @@ jobs:
           # git submodule update --remote
           
           # do a simple clone (sorry GH servers)
-          git clone https://github.com/theHostileNegotiator/KWBandage.git KWBandage
+          git clone https://github.com/theHostileNegotiator/KWBandage.git
