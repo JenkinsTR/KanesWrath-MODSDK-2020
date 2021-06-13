@@ -40,7 +40,10 @@ jobs:
           
           # do a simple clone (sorry GH servers)
           git remote add KWBandage https://github.com/theHostileNegotiator/KWBandage.git
+          
           # git clone https://github.com/theHostileNegotiator/KWBandage.git KWBandage
+          
+          git config pull.rebase false
           git pull KWBandage master
 
           ls
