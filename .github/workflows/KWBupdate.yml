@@ -32,12 +32,15 @@ jobs:
         run: |
         
           # hack to get around not being able to figure out how to run an update on a remote repo when changes are detected
-          # rm -rf KWBandage
-          ls
+          rm -rf KWBandage
           
           # the following submodule commands work, but the files are pushed to /home/runner/work/KanesWrath-MODSDK-2020/KanesWrath-MODSDK-2020/KWBandage which I cannot locate
           # git submodule add https://github.com/theHostileNegotiator/KWBandage.git KWBandage
           # git submodule update --remote
           
           # do a simple clone (sorry GH servers)
+          git remote add KWBandage https://github.com/theHostileNegotiator/KWBandage.git
           # git clone https://github.com/theHostileNegotiator/KWBandage.git KWBandage
+          git pull KWBandage
+
+          ls
