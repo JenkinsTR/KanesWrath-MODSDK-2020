@@ -44,6 +44,6 @@ jobs:
           # git clone https://github.com/theHostileNegotiator/KWBandage.git KWBandage
           
           git config pull.rebase false
-          git pull KWBandage master
+          git pull KWBandage master --allow-unrelated-histories
 
           ls
