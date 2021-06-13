@@ -43,6 +43,8 @@ jobs:
           
           # git clone https://github.com/theHostileNegotiator/KWBandage.git KWBandage
           
+          git config --global user.email "tmackey87@gmail.com"
+          git config --global user.name "JenkinsTR"
           git config pull.rebase false
           git pull KWBandage master --allow-unrelated-histories
 
