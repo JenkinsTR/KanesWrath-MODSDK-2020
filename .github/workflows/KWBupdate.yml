@@ -25,8 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          ref: develop
-          token: ${{ secrets.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 }}
+          ref: KWSDK
+          token: ${{ secrets.&rfD3rN&X&6CDwwuru5GddJoP^$0Ilpw21$UtN27qMNPU@2V1sSi^^sNBHuaxY8Z }}
           submodules: true
         
       # Runs a set of commands using the runners shell
