@@ -28,5 +28,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          git fetch git@github.com:theHostileNegotiator/KWBandage
-          git rebase git@github.com:theHostileNegotiator/KWBandage/master
+          mkdir KWBandage.git
+          cd KWBandage.git
+          git init
+          git remote add -f -t master -m master origin git@github.com:theHostileNegotiator/KWBandage
+          git merge origin
