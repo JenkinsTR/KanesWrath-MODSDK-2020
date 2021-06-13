@@ -24,9 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      with:
+        ref: develop
+        token: ${{ secrets.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 }}
+        submodules: true
+        
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          git submodule add https://github.com/theHostileNegotiator/KWBandage.git
+          git submodule add https://github.com/theHostileNegotiator/KWBandage.git KWBandage
           git submodule update --remote
