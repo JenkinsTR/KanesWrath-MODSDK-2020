@@ -10,9 +10,9 @@ jobs:
       - name: git-sync
         uses: wei/git-sync@v3
         with:
-          source_repo: "https://github.com/theHostileNegotiator/KWBandage.git"
+          source_repo: "git@github.com:theHostileNegotiator/KWBandage.git"
           source_branch: "master"
-          destination_repo: "https://github.com/JenkinsTR/KanesWrath-MODSDK-2020.git"
+          destination_repo: "https://JenkinsTR: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@github.com/JenkinsTR/KanesWrath-MODSDK-2020.git"
           destination_branch: "master"
           # ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # optional
           # source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
