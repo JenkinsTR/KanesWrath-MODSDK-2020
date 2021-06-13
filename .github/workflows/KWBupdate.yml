@@ -50,4 +50,4 @@ jobs:
           
           git config pull.rebase false
           
-          git pull KWBandage master
+          git pull KWBandage master --allow-unrelated-histories
