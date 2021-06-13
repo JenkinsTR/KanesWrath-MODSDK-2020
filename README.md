@@ -1,7 +1,7 @@
 ### Command & Conquer 3: Kane's Wrath Mod SDK 2020 by Jenkins/JMDigital/EALA/Bibber/theHostileNegotiator/DarthJane/JonWil.
  The unofficial Kane's Wrath Mod SDK 2020 is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane's Wrath.
  
- This SDK is built on the latest, stable version of WrathEd (1.08).
+ This SDK is built on the latest, stable version of WrathEd (1.10).
  It includes all updates and fixes made by other respected members of the community.
  
  Included are example Art assets, including working Sample code for adding new units, replacing or adding music and audio, changing main menu graphics, and much more!
@@ -14,4 +14,4 @@
  
  Documentation is also a big focus here, and many different "How to mod xxxx" threads from various forums have been compiled and checked for quality, and incorporated into this SDK.
  
- Better documentation that explain all the files and their connections is currently being worked on.
+ Better documentation that explains all the files and their connections is currently being worked on.
