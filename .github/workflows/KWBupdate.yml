@@ -9,6 +9,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: "0 0 */7 * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,7 +32,7 @@ jobs:
         run: |
         
           # hack to get around not being able to figure out how to run an update on a remote repo when changes are detected
-          rm -r KWBandage
+          rm -rf KWBandage
           
           # the following submodule commands work, but the files are pushed to /home/runner/work/KanesWrath-MODSDK-2020/KanesWrath-MODSDK-2020/KWBandage which I cannot locate
           # git submodule add https://github.com/theHostileNegotiator/KWBandage.git KWBandage
