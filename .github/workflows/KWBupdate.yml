@@ -29,7 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd KWBandage
-          
+                    
           # UNUSED: git merge KWBandage/master
           
           # Add the remote, call it "KWBandage":
@@ -47,5 +47,7 @@ jobs:
           # Rewrite your master branch so that any commits of yours that
           # aren't already in upstream/master are replayed on top of that
           # other branch:
+          
+          git config pull.rebase false
           
           git pull KWBandage master
