@@ -204,7 +204,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="FadeSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="MinHordeDensity"

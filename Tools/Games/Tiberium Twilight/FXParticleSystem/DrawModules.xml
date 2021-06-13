@@ -94,7 +94,7 @@
 			id="base"
 			AssetType="FXParticleDrawBase" />
 		<Entry
-			id="MaximumIntensityRadiusRatio"
+			id="MiscValue4"
 			AssetType="SageReal"
 			IsAttribute="true"
 			Default="0.0" />

@@ -46,7 +46,7 @@
 		id="AudioSoundEntry">
 		<EntryReference
 			id="Sound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true"
 			IsRequired="true" />
 		<Entry

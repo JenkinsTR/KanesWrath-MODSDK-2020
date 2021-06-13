@@ -191,7 +191,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="BeingBuiltSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="StoreUpgradePrice"

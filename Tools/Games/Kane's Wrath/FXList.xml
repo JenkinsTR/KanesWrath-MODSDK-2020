@@ -79,7 +79,7 @@
 			AssetType="FXNugget" />
 		<EntryReference
 			id="Value"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 	</Asset>
 

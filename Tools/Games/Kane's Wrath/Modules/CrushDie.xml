@@ -8,15 +8,15 @@
 			AssetType="DieModuleData" />
 		<EntryReference
 			id="TotalCrushSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="BackEndCrushSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="FrontEndCrushSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="TotalCrushSoundPercent"

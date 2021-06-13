@@ -29,11 +29,11 @@
 		id="SelfAudioType">
 		<EntryReference
 			id="SelfRepairFromDamageLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="SelfRepairFromRubbleLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 	</Asset>
 

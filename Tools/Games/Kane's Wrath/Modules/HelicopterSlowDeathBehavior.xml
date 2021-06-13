@@ -106,7 +106,7 @@
 			Default="99999.9"/>
 		<EntryReference
 			id="DeathSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryRelocation
 			id="AttachParticleLoc"

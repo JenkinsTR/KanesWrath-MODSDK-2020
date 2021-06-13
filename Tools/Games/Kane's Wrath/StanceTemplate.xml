@@ -16,9 +16,9 @@
 			AssetType="Stance"
 			IsAttribute="true"
 			IsRequired="true" />
-		<EntryReference
+		<EntryRelocation
 			id="AttributeModifier"
-			AssetType="AttributeModifier"
+			AssetType="AttributeModifierRef"
 			IsAttribute="true" />
 	</Asset>
 

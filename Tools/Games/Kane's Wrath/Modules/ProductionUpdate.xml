@@ -109,7 +109,7 @@
 			Default="0" />
 		<EntryReference
 			id="SpeedBonusAudioLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true"
 			Default="0" />
 		<Entry

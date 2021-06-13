@@ -37,7 +37,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="ResearchSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="ResearchCompleteEvaEvent"
@@ -45,7 +45,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="UnitSpecificSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="UpgradeFX"

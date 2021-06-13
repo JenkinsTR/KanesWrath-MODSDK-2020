@@ -8,11 +8,11 @@
 			AssetType="SpecialAbilityUpdateModuleData" />
 		<EntryReference
 			id="SoundDeploy"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="SoundUndeploy"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 	</Asset>
 

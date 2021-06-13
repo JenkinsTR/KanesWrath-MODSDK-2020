@@ -10,7 +10,7 @@
 			IsRequired="true" />
 		<EntryReference
 			id="Dialog"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="CameraFieldOfViewVariance"

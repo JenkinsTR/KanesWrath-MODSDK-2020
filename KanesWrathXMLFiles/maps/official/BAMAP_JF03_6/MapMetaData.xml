@@ -1,0 +1,23 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:BAMAP_JF03_6/Desc" DisplayName="BAMAP_JF03_6" FileName="Data\maps\official\BAMAP_JF03_6\BAMAP_JF03_6.map" Height="710" IsMultiplayer="true" IsOfficial="true" NumPlayers="6" Width="660" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="654.836" y="754.08" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="5259.38" y="6038.26" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="437.87" y="5920.8" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="5308.19" y="616.641" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_5_Start">
+    <Position x="678.192" y="3453.34" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_6_Start">
+    <Position x="5485.15" y="3251.25" z="0" />
+  </StartPosition>
+</MapMetaData>

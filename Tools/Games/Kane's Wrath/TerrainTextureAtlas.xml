@@ -2,7 +2,7 @@
 <AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
 
 	<Asset
-		id="TerrainTextureTile">
+		id="TerrainTextureCell">
 		<Entry
 			id="IndexX"
 			AssetType="Byte"

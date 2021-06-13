@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_4_SSmith_01/Desc" DisplayName="MAP_MP_4_SSmith_01" FileName="Data\maps\official\MAP_MP_4_SSmith_01\MAP_MP_4_SSmith_01.map" Height="510" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="360" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="500" y="1031.73" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="2503.25" y="1005.99" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="505.374" y="3559.22" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="2500" y="3500" z="0" />
+  </StartPosition>
+</MapMetaData>

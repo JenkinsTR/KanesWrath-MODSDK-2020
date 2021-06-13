@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:CM_2_2_Treasury_Raid/Desc" DisplayName="CM_2_2_Treasury_Raid" FileName="Data\maps\official\CM_2_2_Treasury_Raid\CM_2_2_Treasury_Raid.map" Height="435" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="467" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="399.785" y="378.338" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

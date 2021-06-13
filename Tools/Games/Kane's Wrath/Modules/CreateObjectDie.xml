@@ -17,13 +17,11 @@
 		<EntryList
 			id="UpgradeRequired"
 			AssetType="UpgradeTemplateRef"
-			IsAttribute="true"
 			MinLength="0"
 			MaxLength="0" />
 		<EntryList
 			id="UpgradeForbidden"
 			AssetType="UpgradeTemplateRef"
-			IsAttribute="true"
 			MinLength="0"
 			MaxLength="0" />
 	</Asset>

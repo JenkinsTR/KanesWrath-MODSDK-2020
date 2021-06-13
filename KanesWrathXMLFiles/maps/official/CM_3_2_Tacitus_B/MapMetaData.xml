@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="75" CRC="0" Description="Map:CM_3_2_Tacitus_B/Desc" DisplayName="CM_3_2_Tacitus_B" FileName="Data\maps\official\CM_3_2_Tacitus_B\CM_3_2_Tacitus_B.map" Height="650" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="575" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="3217.48" y="375.277" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

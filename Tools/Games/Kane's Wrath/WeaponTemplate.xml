@@ -492,7 +492,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="SpawnTemplate"
-			AssetType="GameObjectWeak"
+			AssetType="GameObjectWeakRef"
 			IsAttribute="true" />
 	</Asset>
 
@@ -1353,11 +1353,11 @@
 			Default="AUTO" />
 		<EntryReference
 			id="SingleAmmoReloadedNotFullSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="ClipReloadedSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="RadiusDamageAffects"

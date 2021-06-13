@@ -55,11 +55,11 @@
 			Default="0" />
 		<EntryReference
 			id="EnterSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="ExitSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="DamagePercentToUnits"

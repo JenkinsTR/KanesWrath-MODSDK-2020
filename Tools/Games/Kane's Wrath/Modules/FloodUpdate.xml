@@ -30,16 +30,16 @@
 		<EntryInheritance
 			id="base"
 			AssetType="UpdateModuleData" />
-		<EntryList
-			id="DataList"
-			AssetType="FloodMemberData"
-			MinLength="0"
-			MaxLength="0" />
 		<Entry
 			id="AngleOfFlow"
 			AssetType="SageReal"
 			IsAttribute="true"
 			Default="0" />
+		<EntryList
+			id="DataList"
+			AssetType="FloodMemberData"
+			MinLength="0"
+			MaxLength="0" />
 		<Entry
 			id="IsDirectionRelative"
 			AssetType="SageBool"

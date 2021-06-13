@@ -34,6 +34,11 @@
 			IsAttribute="true"
 			MinLength="0"
 			MaxLength="0" />
+		<EntryList
+			id="UpgradeTexture"
+			AssetType="ReplaceTexture"
+			MinLength="0"
+			MaxLength="0" />
 		<Entry
 			id="RecolorHouse"
 			AssetType="SageBool"

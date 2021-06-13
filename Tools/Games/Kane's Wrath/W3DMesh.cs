@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Xml;
 using Files;
 using SAGE;
+using SAGE.Stream;
 
 namespace SAGE.Compiler
 {
@@ -321,9 +323,707 @@ namespace SAGE.Compiler
 		}
 	}
 
-	public class W3DMesh : CompileHandler
-	{
-		public override bool Compile(GameAssetType gameAsset, Uri baseUri, BinaryAsset asset, XmlNode node, GameDefinition game,
+	public unsafe class W3DMesh : CompileHandler
+    {
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct SVector2
+        {
+            public float X;
+            public float Y;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct SVector3
+        {
+            public float X;
+            public float Y;
+            public float Z;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct SRGBAColor
+        {
+            public byte R;
+            public byte G;
+            public byte B;
+            public byte A;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct BoxMinMax
+        {
+            public SVector3 Min;
+            public SVector3 Max;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct Sphere
+        {
+            public float Radius;
+            public SVector3 Center;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct Triangle
+        {
+            public int VLength;
+            public int VOffset;
+            public SVector3 Nrm;
+            public float Dist;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct FXShaderMaterial
+        {
+            public int ShaderNameLength;
+            public int ShaderNameOffset;
+            public int TechniqueNameLength;
+            public int TechniqueNameOffset;
+            public int ConstantsLength;
+            public int ConstantsOffset;
+            public byte TechniqueIndex;
+        }
+        
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct AABTree
+        {
+            public int PolyIndicesLength;
+            public int PolyIndicesOffset;
+            public int NodeLength;
+            public int NodeOffset;
+        }
+
+        private enum MeshGeometryType
+        {
+            Normal,
+            Skin,
+            CameraAligned,
+            CameraOriented
+        }
+
+        private enum ConstantType : uint
+        {
+            FXShaderConstantTexture = 0xA59096A6u,
+            FXShaderConstantFloat = 0xDF08DF25u,
+            FXShaderConstantInt = 0x89181982u,
+            FXShaderConstantBool = 0xA3F84C3Du
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct W3DMeshPipelineVertexData
+        {
+            public int VertexCount;
+            public int VertexSize;
+            public int VertexOffset;
+            public int VertexElementsSize;
+            public int VertexElementsOffset;
+            public int BonesSize;
+            public int BonesOffset;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
+        private struct SVertexElement
+        {
+            public short Stream;
+            public short Offset;
+            public VertexElementType Type;
+            public VertexElementMethod Method;
+            public VertexElementUsage Usage;
+            public byte UsageIndex;
+        }
+
+        private const string _xmlNameSpace = "uri:ea.com:eala:asset";
+
+        private VertexData GetVertexData(byte* fpBin, byte* pBin)
+        {
+            W3DMeshPipelineVertexData w3dVertexData = *(W3DMeshPipelineVertexData*)pBin;
+            byte* vertexData = fpBin + w3dVertexData.VertexOffset;
+            SVertexElement* vertexElements = (SVertexElement*)(fpBin + w3dVertexData.VertexElementsOffset);
+            int vertexElementsLength = w3dVertexData.VertexElementsSize >> 3;
+            VertexData result = new VertexData();
+            SVector2* vector2;
+            SVector3* vector3;
+            SRGBAColor* color;
+            BoneInfluence boneInfluence = null;
+            for (int idx = 0; idx < w3dVertexData.VertexCount; ++idx)
+            {
+                for (int idy = 0; idy < vertexElementsLength; ++idy)
+                {
+                    SVertexElement* vertexElement = &vertexElements[idy];
+                    if (vertexElement->Type == VertexElementType.UNUSED)
+                    {
+                        continue;
+                    }
+                    switch (vertexElement->Usage)
+                    {
+                        case VertexElementUsage.POSITION:
+                            List<Vector3> v = result.Vertices[vertexElement->UsageIndex];
+                            if (v == null)
+                            {
+                                v = result.Vertices[vertexElement->UsageIndex] = new List<Vector3>();
+                                ++result.VerticesCount;
+                            }
+                            vector3 = (SVector3*)vertexData;
+                            vertexData += 12;
+                            v.Add(new Vector3() { X = vector3->X, Y = vector3->Y, Z = vector3->Z });
+                            break;
+                        case VertexElementUsage.NORMAL:
+                            List<Vector3> n = result.Normals[vertexElement->UsageIndex];
+                            if (n == null)
+                            {
+                                n = result.Normals[vertexElement->UsageIndex] = new List<Vector3>();
+                                ++result.NormalsCount;
+                            }
+                            vector3 = (SVector3*)vertexData;
+                            vertexData += 12;
+                            n.Add(new Vector3() { X = vector3->X, Y = vector3->Y, Z = vector3->Z });
+                            break;
+                        case VertexElementUsage.COLOR:
+                            List<RGBAColor> c = result.VertexColors;
+                            if (c == null)
+                            {
+                                c = result.VertexColors = new List<RGBAColor>();
+                            }
+                            color = (SRGBAColor*)vertexData;
+                            vertexData += 4;
+                            c.Add(new RGBAColor() { R = color->R, G = color->G, B = color->B, A = color->A });
+                            break;
+                        case VertexElementUsage.TANGENT:
+                            List<Vector3> t = result.Tangents;
+                            if (t == null)
+                            {
+                                t = result.Tangents = new List<Vector3>();
+                                ++result.TangentsCount;
+                            }
+                            vector3 = (SVector3*)vertexData;
+                            vertexData += 12;
+                            t.Add(new Vector3() { X = vector3->X, Y = vector3->Y, Z = vector3->Z });
+                            break;
+                        case VertexElementUsage.BINORMAL:
+                            List<Vector3> b = result.Binormals;
+                            if (b == null)
+                            {
+                                b = result.Binormals = new List<Vector3>();
+                                ++result.BinormalsCount;
+                            }
+                            vector3 = (SVector3*)vertexData;
+                            vertexData += 12;
+                            b.Add(new Vector3() { X = vector3->X, Y = vector3->Y, Z = vector3->Z });
+                            break;
+                        case VertexElementUsage.TEXCOORD:
+                            if (result.TexCoords.Count < vertexElement->UsageIndex + 1)
+                            {
+                                result.TexCoords.Add(new List<Vector2>());
+                            }
+                            List<Vector2> tc = result.TexCoords[vertexElement->UsageIndex];
+                            vector2 = (SVector2*)vertexData;
+                            vertexData += 8;
+                            tc.Add(new Vector2() { X = vector2->X, Y = vector2->Y });
+                            break;
+                        case VertexElementUsage.BLENDINDICES:
+                            List<BoneInfluence> bi = result.BoneInfluences;
+                            if (bi == null)
+                            {
+                                bi = result.BoneInfluences = new List<BoneInfluence>();
+                                ++result.BoneInfluencesCount;
+                            }
+                            color = (SRGBAColor*)vertexData;
+                            vertexData += 4;
+                            boneInfluence = new BoneInfluence();
+                            boneInfluence.Bones.R = color->R;
+                            boneInfluence.Bones.G = color->G;
+                            boneInfluence.Bones.B = color->B;
+                            boneInfluence.Bones.A = color->A;
+                            bi.Add(boneInfluence);
+                            break;
+                        case VertexElementUsage.BLENDWEIGHT:
+                            vector2 = (SVector2*)vertexData;
+                            vertexData += 8;
+                            boneInfluence.Influences.X = vector2->X;
+                            boneInfluence.Influences.Y = vector2->Y;
+                            break;
+                    }
+                }
+            }
+            return result;
+        }
+
+        private void WriteRGBAColor(XmlDocument document, XmlNode entryNode, RGBAColor color)
+        {
+            XmlAttribute attribute = document.CreateAttribute("R");
+            attribute.Value = (color.R / 255.0).ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("G");
+            attribute.Value = (color.G / 255.0).ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("B");
+            attribute.Value = (color.B / 255.0).ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("A");
+            attribute.Value = (color.A / 255.0).ToString();
+            entryNode.Attributes.Append(attribute);
+        }
+
+        private void WriteVector2(XmlDocument document, XmlNode entryNode, Vector2 vector)
+        {
+            XmlAttribute attribute = document.CreateAttribute("X");
+            attribute.Value = vector.X.ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("Y");
+            attribute.Value = vector.Y.ToString();
+            entryNode.Attributes.Append(attribute);
+        }
+
+        private void WriteVector3(XmlDocument document, XmlNode entryNode, Vector3 vector)
+        {
+            XmlAttribute attribute = document.CreateAttribute("X");
+            attribute.Value = vector.X.ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("Y");
+            attribute.Value = vector.Y.ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("Z");
+            attribute.Value = vector.Z.ToString();
+            entryNode.Attributes.Append(attribute);
+        }
+
+        private void WriteVector3(XmlDocument document, XmlNode entryNode, SVector3* vector)
+        {
+            XmlAttribute attribute = document.CreateAttribute("X");
+            attribute.Value = vector->X.ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("Y");
+            attribute.Value = vector->Y.ToString();
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("Z");
+            attribute.Value = vector->Z.ToString();
+            entryNode.Attributes.Append(attribute);
+        }
+
+        private void WriteBoxMinMax(XmlDocument document, XmlNode entryNode, BoxMinMax* box)
+        {
+            XmlNode element = document.CreateElement("Min", _xmlNameSpace);
+            WriteVector3(document, element, &box->Min);
+            entryNode.AppendChild(element);
+            element = document.CreateElement("Max", _xmlNameSpace);
+            WriteVector3(document, element, &box->Max);
+            entryNode.AppendChild(element);
+        }
+
+        private void WriteSphere(XmlDocument document, XmlNode entryNode, Sphere* sphere)
+        {
+            XmlAttribute attribute = document.CreateAttribute("Radius");
+            attribute.InnerXml = sphere->Radius.ToString();
+            entryNode.Attributes.Append(attribute);
+            XmlNode element = document.CreateElement("Center", _xmlNameSpace);
+            WriteVector3(document, element, &sphere->Center);
+            entryNode.AppendChild(element);
+        }
+
+        private void WriteTriangle(XmlDocument document, XmlNode entryNode, byte* fpBin, Triangle* triangle)
+        {
+            XmlNode element;
+            uint* pV = (uint*)(fpBin + triangle->VOffset);
+            for (int idx = 0; idx < triangle->VLength; ++idx)
+            {
+                element = document.CreateElement("V", _xmlNameSpace);
+                element.InnerXml = (*pV).ToString();
+                ++pV;
+                entryNode.AppendChild(element);
+            }
+            element = document.CreateElement("Nrm", _xmlNameSpace);
+            WriteVector3(document, element, &triangle->Nrm);
+            entryNode.AppendChild(element);
+            element = document.CreateElement("Dist", _xmlNameSpace);
+            element.InnerXml = triangle->Dist.ToString();
+            entryNode.AppendChild(element);
+        }
+
+        private byte* WriteTriangles(XmlDocument document, XmlNode entryNode, byte* fpBin, byte* pBin)
+        {
+            XmlNode element = document.CreateElement("Triangles", _xmlNameSpace);
+            int count = *(int*)pBin;
+            pBin += 4;
+            Triangle* pT = (Triangle*)(fpBin + *(int*)pBin);
+            pBin += 4;
+            XmlNode tElement;
+            for (int idx = 0; idx < count; ++idx)
+            {
+                tElement = document.CreateElement("T", _xmlNameSpace);
+                WriteTriangle(document, tElement, fpBin, pT++);
+                element.AppendChild(tElement);
+            }
+            entryNode.AppendChild(element);
+            return pBin;
+        }
+
+        private void WriteFXShaderMaterial(Stream.File stream, List<Stream.File> referencedStreams,
+            XmlDocument document, XmlNode entryNode, List<AssetReference> assetReferences, int[] imports, byte* fpBin, FXShaderMaterial* material)
+        {
+            int length;
+            int offset;
+            int count;
+            XmlAttribute attribute = document.CreateAttribute("ShaderName");
+            attribute.Value = FileHelper.GetString(fpBin + material->ShaderNameOffset, material->ShaderNameLength);
+            entryNode.Attributes.Append(attribute);
+            attribute = document.CreateAttribute("TechniqueName");
+            attribute.Value = FileHelper.GetString(fpBin + material->TechniqueNameOffset, material->TechniqueNameLength);
+            entryNode.Attributes.Append(attribute);
+            XmlNode element = document.CreateElement("Constants", _xmlNameSpace);
+            int* pConstantElement = (int*)(fpBin + material->ConstantsOffset);
+            for (int idx = 0; idx < material->ConstantsLength; ++idx)
+            {
+                int* constantElement = (int*)(fpBin + *pConstantElement++);
+                ConstantType type = *(ConstantType*)constantElement++;
+                attribute = document.CreateAttribute("Name");
+                length = *constantElement++;
+                offset = *constantElement++;
+                attribute.Value = FileHelper.GetString(fpBin + offset, length);
+                XmlNode vElement;
+                switch (type)
+                {
+                    case ConstantType.FXShaderConstantTexture:
+                        XmlNode tElement = document.CreateElement("Texture", _xmlNameSpace);
+                        tElement.Attributes.Append(attribute);
+                        vElement = document.CreateElement("Value", _xmlNameSpace);
+                        int position = (int)((byte*)constantElement - fpBin);
+                        for (int idy = 0; idy < imports.Length; ++idy)
+                        {
+                            if (imports[idy] == position)
+                            {
+                                AssetReference assetReference = assetReferences[*constantElement];
+                                bool isFound = false;
+                                foreach (AssetEntry assetEntry in stream.AssetEntries)
+                                {
+                                    if (assetEntry.TypeId == assetReference.TypeId && assetEntry.InstanceId == assetReference.InstanceId)
+                                    {
+                                        vElement.InnerXml = stream.AssetNames[assetEntry.NameOffset].Split(':')[1];
+                                        isFound = true;
+                                        break;
+                                    }
+                                }
+                                if (!isFound && referencedStreams != null)
+                                {
+                                    foreach (Stream.File file in referencedStreams)
+                                    {
+                                        foreach (AssetEntry assetEntry in file.AssetEntries)
+                                        {
+                                            if (assetEntry.TypeId == assetReference.TypeId && assetEntry.InstanceId == assetReference.InstanceId)
+                                            {
+                                                vElement.InnerXml = file.AssetNames[assetEntry.NameOffset].Split(':')[1];
+                                                isFound = true;
+                                                break;
+                                            }
+                                        }
+                                        if (isFound)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                if (!isFound)
+                                {
+                                    vElement.InnerXml = string.Format("Asset not found in stream: [{0:X08}:{1:X08}]", assetReference.TypeId, assetReference.InstanceId);
+                                }
+                            }
+                        }
+                        ++constantElement;
+                        tElement.AppendChild(vElement);
+                        element.AppendChild(tElement);
+                        break;
+                    case ConstantType.FXShaderConstantFloat:
+                        XmlNode fElement = document.CreateElement("Float", _xmlNameSpace);
+                        fElement.Attributes.Append(attribute);
+                        count = *constantElement++;
+                        float* fValue = (float*)(fpBin + *constantElement++);
+                        for (int idy = 0; idy < count; ++idy)
+                        {
+                            vElement = document.CreateElement("Value", _xmlNameSpace);
+                            vElement.InnerXml = (*fValue++).ToString();
+                            fElement.AppendChild(vElement);
+                        }
+                        element.AppendChild(fElement);
+                        break;
+                    case ConstantType.FXShaderConstantInt:
+                        XmlNode iElement = document.CreateElement("Int", _xmlNameSpace);
+                        iElement.Attributes.Append(attribute);
+                        vElement = document.CreateElement("Value", _xmlNameSpace);
+                        vElement.InnerXml = (*constantElement++).ToString();
+                        iElement.AppendChild(vElement);
+                        element.AppendChild(iElement);
+                        break;
+                    case ConstantType.FXShaderConstantBool:
+                        XmlNode bElement = document.CreateElement("Bool", _xmlNameSpace);
+                        bElement.Attributes.Append(attribute);
+                        vElement = document.CreateElement("Value", _xmlNameSpace);
+                        vElement.InnerXml = (*(byte*)constantElement != 0).ToString();
+                        ++constantElement;
+                        bElement.AppendChild(vElement);
+                        element.AppendChild(bElement);
+                        break;
+                    default:
+                        throw new InvalidOperationException(string.Format("Type {0} is unknown.", type));
+                }
+            }
+            entryNode.AppendChild(element);
+            attribute = document.CreateAttribute("TechniqueIndex");
+            attribute.Value = material->TechniqueIndex.ToString();
+            entryNode.Attributes.Append(attribute);
+        }
+
+        private void WriteAABTree(XmlDocument document, XmlNode entryNode, int[] relocations, byte* fpBin, AABTree* aabTree)
+        {
+            XmlAttribute attribute;
+            XmlNode element = document.CreateElement("PolyIndices", _xmlNameSpace);
+            XmlNode pElement;
+            uint* pP = (uint*)(fpBin + aabTree->PolyIndicesOffset);
+            for (int idx = 0; idx < aabTree->PolyIndicesLength; ++idx)
+            {
+                pElement = document.CreateElement("P", _xmlNameSpace);
+                pElement.InnerXml = (*pP).ToString();
+                element.AppendChild(pElement);
+            }
+            entryNode.AppendChild(element);
+            XmlNode nodeElement;
+            byte* pNode = fpBin + aabTree->NodeOffset;
+            for (int idx = 0; idx < aabTree->NodeLength; ++idx)
+            {
+                element = document.CreateElement("Node", _xmlNameSpace);
+                nodeElement = document.CreateElement("Min", _xmlNameSpace);
+                WriteVector3(document, nodeElement, (SVector3*)pNode);
+                pNode += sizeof(SVector3);
+                element.AppendChild(nodeElement);
+                nodeElement = document.CreateElement("Max", _xmlNameSpace);
+                WriteVector3(document, nodeElement, (SVector3*)pNode);
+                pNode += sizeof(SVector3);
+                element.AppendChild(nodeElement);
+                int position = (int)(pNode - fpBin);
+                for (int idy = 0; idy < relocations.Length; ++idy)
+                {
+                    if (relocations[idy] == position)
+                    {
+                        uint* pChildren = (uint*)(fpBin + *(int*)pNode);
+                        XmlNode cElement = document.CreateElement("Children", _xmlNameSpace);
+                        attribute = document.CreateAttribute("Front");
+                        attribute.Value = (*pChildren).ToString();
+                        pChildren += 4;
+                        cElement.Attributes.Append(attribute);
+                        attribute = document.CreateAttribute("Back");
+                        attribute.Value = (*pChildren).ToString();
+                        pChildren += 4;
+                        cElement.Attributes.Append(attribute);
+                        element.AppendChild(cElement);
+                    }
+                }
+                pNode += 4;
+                position = (int)(pNode - fpBin);
+                for (int idy = 0; idy < relocations.Length; ++idy)
+                {
+                    if (relocations[idy] == position)
+                    {
+                        uint* pPolys = (uint*)(fpBin + *(int*)pNode);
+                        XmlNode cElement = document.CreateElement("Polys", _xmlNameSpace);
+                        attribute = document.CreateAttribute("Begin");
+                        attribute.Value = (*pPolys).ToString();
+                        pPolys += 4;
+                        cElement.Attributes.Append(attribute);
+                        attribute = document.CreateAttribute("Count");
+                        attribute.Value = (*pPolys).ToString();
+                        pPolys += 4;
+                        cElement.Attributes.Append(attribute);
+                        element.AppendChild(cElement);
+                    }
+                }
+                pNode += 4;
+                entryNode.AppendChild(element);
+            }
+        }
+
+        public override bool HasSpecialDecompileHandling()
+        {
+            return true;
+        }
+
+        public override void Decompile(Stream.File stream, List<Stream.File> referencedStreams,
+            XmlDocument document, XmlNode entryNode, List<AssetReference> assetReferences,
+            byte[] bin, byte[] imp, byte[] relo)
+        {
+            int[] imports = new int[imp.Length >> 2];
+            fixed (byte* fpImp = &imp[0])
+            {
+                int* pImp = (int*)fpImp;
+                for (int idx = 0; idx < imports.Length; ++idx)
+                {
+                    imports[idx] = *pImp++;
+                }
+            }
+            int[] relocations = new int[relo.Length >> 2];
+            fixed (byte* fpRelo = &relo[0])
+            {
+                int* pRelo = (int*)fpRelo;
+                for (int idx = 0; idx < relocations.Length; ++idx)
+                {
+                    relocations[idx] = *pRelo++;
+                }
+            }
+            XmlAttribute attribute;
+            XmlNode element;
+            XmlNode cElement;
+            fixed (byte* fpBin = &bin[0])
+            {
+                byte* pBin = fpBin + 4;
+                VertexData vertexData = GetVertexData(fpBin, fpBin + *(int*)pBin);
+                pBin += 4;
+                for (int idx = 0; idx < vertexData.VerticesCount; ++idx)
+                {
+                    element = document.CreateElement("Vertices", _xmlNameSpace);
+                    List<Vector3> v = vertexData.Vertices[idx];
+                    for (int idy = 0; idy < v.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("V", _xmlNameSpace);
+                        WriteVector3(document, cElement, v[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                for (int idx = 0; idx < vertexData.NormalsCount; ++idx)
+                {
+                    element = document.CreateElement("Normals", _xmlNameSpace);
+                    List<Vector3> n = vertexData.Normals[idx];
+                    for (int idy = 0; idy < n.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("N", _xmlNameSpace);
+                        WriteVector3(document, cElement, n[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                for (int idx = 0; idx < vertexData.TangentsCount; ++idx)
+                {
+                    element = document.CreateElement("Tangents", _xmlNameSpace);
+                    List<Vector3> t = vertexData.Tangents;
+                    for (int idy = 0; idy < t.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("T", _xmlNameSpace);
+                        WriteVector3(document, cElement, t[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                for (int idx = 0; idx < vertexData.BinormalsCount; ++idx)
+                {
+                    element = document.CreateElement("Binormals", _xmlNameSpace);
+                    List<Vector3> b = vertexData.Binormals;
+                    for (int idy = 0; idy < b.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("B", _xmlNameSpace);
+                        WriteVector3(document, cElement, b[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                if (vertexData.VertexColors != null)
+                {
+                    element = document.CreateElement("VertexColors", _xmlNameSpace);
+                    List<RGBAColor> c = vertexData.VertexColors;
+                    for (int idy = 0; idy < c.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("C", _xmlNameSpace);
+                        WriteRGBAColor(document, cElement, c[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                for (int idx = 0; idx < vertexData.TexCoords.Count; ++idx)
+                {
+                    element = document.CreateElement("TexCoords", _xmlNameSpace);
+                    List<Vector2> tc = vertexData.TexCoords[idx];
+                    for (int idy = 0; idy < tc.Count; ++idy)
+                    {
+                        cElement = document.CreateElement("T", _xmlNameSpace);
+                        WriteVector2(document, cElement, tc[idy]);
+                        element.AppendChild(cElement);
+                    }
+                    entryNode.AppendChild(element);
+                }
+                if (vertexData.BoneInfluencesCount != 0)
+                {
+                    element = document.CreateElement("BoneInfluences", _xmlNameSpace);
+                    bool hasMultipleInfluences = false;
+                    XmlNode element2 = document.CreateElement("BoneInfluences", _xmlNameSpace);
+                    XmlNode cElement2;
+                    for (int idx = 0; idx < vertexData.BoneInfluences.Count; ++idx)
+                    {
+                        cElement = document.CreateElement("I", _xmlNameSpace);
+                        cElement2 = document.CreateElement("I", _xmlNameSpace);
+
+                        element.AppendChild(cElement);
+                        element2.AppendChild(cElement2);
+                    }
+                    entryNode.AppendChild(element);
+                    if (hasMultipleInfluences)
+                    {
+                        entryNode.AppendChild(element2);
+                    }
+                }
+                attribute = document.CreateAttribute("GeometryType");
+                attribute.Value = (*(MeshGeometryType*)pBin).ToString();
+                pBin += 4;
+                entryNode.Attributes.Append(attribute);
+                element = document.CreateElement("BoundingBox", _xmlNameSpace);
+                WriteBoxMinMax(document, element, (BoxMinMax*)pBin);
+                pBin += sizeof(BoxMinMax);
+                entryNode.AppendChild(element);
+                element = document.CreateElement("BoundingSphere", _xmlNameSpace);
+                WriteSphere(document, element, (Sphere*)pBin);
+                pBin += sizeof(Sphere);
+                entryNode.AppendChild(element);
+                pBin = WriteTriangles(document, entryNode, fpBin, pBin);
+                element = document.CreateElement("FXShader", _xmlNameSpace);
+                WriteFXShaderMaterial(stream, referencedStreams, document, element, assetReferences, imports, fpBin, (FXShaderMaterial*)pBin);
+                pBin += sizeof(FXShaderMaterial);
+                entryNode.AppendChild(element);
+                int position = (int)(pBin - fpBin);
+                for (int idx = 0; idx < relocations.Length; ++idx)
+                {
+                    if (relocations[idx] == position)
+                    {
+                        element = document.CreateElement("AABTree", _xmlNameSpace);
+                        WriteAABTree(document, element, relocations, fpBin, (AABTree*)(fpBin + *(int*)pBin));
+                        entryNode.AppendChild(element);
+                    }
+                }
+                pBin += 4;
+                attribute = document.CreateAttribute("Hidden");
+                attribute.Value = (*pBin != 0).ToString();
+                ++pBin;
+                entryNode.Attributes.Append(attribute);
+                attribute = document.CreateAttribute("CastShadow");
+                attribute.Value = (*pBin != 0).ToString();
+                ++pBin;
+                entryNode.Attributes.Append(attribute);
+                attribute = document.CreateAttribute("SortLevel");
+                attribute.Value = (*pBin).ToString();
+                ++pBin;
+                entryNode.Attributes.Append(attribute);
+                attribute = document.CreateAttribute("GeometryPickable");
+                attribute.Value = (*pBin != 0).ToString();
+                ++pBin;
+                entryNode.Attributes.Append(attribute);
+            }
+
+            // VertexData
+            // element Vertices max 2
+            // element Normals max 2
+            // element Tangents max 1
+            // element Binormals max 1
+            // element VertexColors max 1
+            // element TexCoords unbounded
+            // element BoneInfluences max 2
+            // element ShadeIndices max 1
+        }
+
+        public override bool Compile(GameAssetType gameAsset, Uri baseUri, BinaryAsset asset, XmlNode node, GameDefinition game,
 			string trace, ref int position, out string ErrorDescription)
 		{
 			BinaryAsset w3dMeshPipelineVertexData = new BinaryAsset(0x1C);

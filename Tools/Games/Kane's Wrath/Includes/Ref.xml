@@ -25,48 +25,8 @@
 	<Asset
 		id="AudioEventInfoRef">
 		<EntryReference
-			id="BaseAudioEventInfo"
-			AssetType="BaseAudioEventInfo" />
-	</Asset>
-
-	<Asset
-		id="AudioEventInfoRefList">
-		<EntryList
-			id="AudioEventInfoRef"
-			AssetType="AudioEventInfoRef"
-			MinLength="0"
-			MaxLength="0" />
-	</Asset>
-	
-	<Asset
-		id="AudioFileRef">
-		<EntryReference
-			id="AudioFile"
-			AssetType="AudioFile" />
-	</Asset>
-	
-	<Asset
-		id="AudioFileRefWithWeight">
-		<EntryInheritance
-			id="base"
-			AssetType="AudioFileRef" />
-		<Entry
-			id="Weight"
-			AssetType="SageUnsignedInt"
-			IsAttribute="true"
-			Default="1000" />
-	</Asset>
-	
-	<Asset
-		id="MultisoundSubsoundRef">
-		<EntryInheritance
-			id="base"
-			AssetType="AudioEventInfoRef" />
-		<Entry
-			id="Weight"
-			AssetType="SageUnsignedInt"
-			IsAttribute="true"
-			Default="1000" />
+			id="AudioEventInfo"
+			AssetType="AudioEventInfo" />
 	</Asset>
 
 	<Asset

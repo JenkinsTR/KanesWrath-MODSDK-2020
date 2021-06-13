@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentObjectSelector">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="PortraitName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="StatusTextNothingSelected"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatusTextSelectedAcrossMap"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatusTextSelectedAcrossScreen"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="AllArmyImageGDI"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="AllArmyImageNOD"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="AllArmyImageAlien"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AlienHighlightDecal"
+			AssetType="RadiusDecalTemplate" />
+		<Entry
+			id="GDIHighlightDecal"
+			AssetType="RadiusDecalTemplate" />
+		<Entry
+			id="NODHighlightDecal"
+			AssetType="RadiusDecalTemplate" />
+		<EntryList
+			id="ShortcutObjects"
+			AssetType="ObjectFilter"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ShowAllHealthBars"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -194,20 +194,20 @@
 			AssetType="String"
 			IsAttribute="true" />
 		<Entry
-			id="RecoilDamping"
-			AssetType="SageReal"
-			IsAttribute="true"
-			Default="3.0" />
-		<Entry
-			id="MaxRecoilDistance"
-			AssetType="SageReal"
-			IsAttribute="true"
-			Default="0.4" />
-		<Entry
 			id="InitialRecoilSpeed"
 			AssetType="Velocity"
 			IsAttribute="true"
 			Default="2.0" />
+		<Entry
+			id="MaxRecoilDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="3.0" />
+		<Entry
+			id="RecoilDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.4" />
 		<Entry
 			id="RecoilSettleSpeed"
 			AssetType="Velocity"

@@ -18,11 +18,11 @@
 			Default="0.0" />
 		<EntryReference
 			id="PingSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="LoudPingSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="IRBeaconParticleSys"

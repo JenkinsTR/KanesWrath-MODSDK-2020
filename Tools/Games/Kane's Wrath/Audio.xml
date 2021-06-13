@@ -1,192 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
 
-	<EnumAsset
-		id="PCAudioCompressionSetting">
-		<Entry>NONE</Entry>
-		<Entry>XAS</Entry>
-		<Entry>EALAYER3</Entry>
-	</EnumAsset>
-	
-	<EnumAsset
-		id="XenonAudioCompressionSetting">
-		<Entry>NONE</Entry>
-		<Entry>XAS</Entry>
-		<Entry>EALAYER3</Entry>
-	</EnumAsset>
-	
-	<EnumAsset
-		id="AudioPriority">
-		<Entry>LOWEST</Entry>
-		<Entry>LOW</Entry>
-		<Entry>NORMAL</Entry>
-		<Entry>HIGH</Entry>
-		<Entry>HIGHEST</Entry>
-		<Entry>CRITICAL</Entry>
-	</EnumAsset>
-	
-	<EnumAsset
-		id="AudioVolumeSlider">
-		<Entry>SOUNDFX</Entry>
-		<Entry>VOICE</Entry>
-		<Entry>MUSIC</Entry>
-		<Entry>AMBIENT</Entry>
-		<Entry>MOVIE</Entry>
-		<Entry>NONE</Entry>
-	</EnumAsset>
-	
-	<Asset
-		id="AudioVolumeSliderMultiplier">
-		<Entry
-			id="Slider"
-			AssetType="AudioVolumeSlider"
-			IsAttribute="true"
-			IsRequired="true" />
-		<Entry
-			id="Multiplier"
-			AssetType="SageReal"
-			IsAttribute="true"
-			IsRequired="true" />
-	</Asset>
-	
-	<EnumAsset
-		id="AudioTypeFlag">
-		<Entry>UI</Entry>
-		<Entry>WORLD</Entry>
-		<Entry>SHROUDED</Entry>
-		<Entry>VOICE</Entry>
-		<Entry>PLAYER</Entry>
-		<Entry>ALLIES</Entry>
-		<Entry>ENEMIES</Entry>
-		<Entry>EVERYONE</Entry>
-	</EnumAsset>
-	
-	<FlagsAsset
-		id="AudioTypeFlags"
-		BaseEnum="AudioTypeFlag" />
-
-	<EnumAsset
-		id="AudioControlFlag">
-		<Entry>LOOP</Entry>
-		<Entry>SEQUENTIAL</Entry>
-		<Entry>RANDOMSTART</Entry>
-		<Entry>INTERRUPT</Entry>
-		<Entry>FADE_ON_KILL</Entry>
-		<Entry>FADE_ON_START</Entry>
-		<Entry>ALLOW_KILL_MID_FILE</Entry>
-	</EnumAsset>
-	
-	<FlagsAsset
-		id="AudioControlFlags"
-		BaseEnum="AudioControlFlag" />
-		
-	<EnumAsset
-		id="MultisoundControlFlag">
-		<Entry>LOOP</Entry>
-		<Entry>PLAY_ONE</Entry>
-	</EnumAsset>
-	
-	<FlagsAsset
-		id="MultisoundControlFlags"
-		BaseEnum="MultisoundControlFlag" />
-	
 	<GameAsset
 		id="AudioFile"
-		TypeHash="822598043"
-		HasSpecialCompileHandling="true">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseAssetType" />
-		<EntryFile
-			id="File"
-			AssetType="WAV"
-			IsAttribute="true"
-			IsRequired="true" />
-		<Entry
-			id="PCSampleRate"
-			AssetType="SageInt"
-			IsAttribute="true" />
-		<Entry
-			id="PCCompression"
-			AssetType="PCAudioCompressionSetting"
-			IsAttribute="true" />
-		<Entry
-			id="PCQuality"
-			AssetType="SageInt"
-			IsAttribute="true"
-			Default="75" />
-		<Entry
-			id="IsStreamedOnPC"
-			AssetType="SageBool"
-			IsAttribute="true" />
-		<Entry
-			id="XenonSampleRate"
-			AssetType="SageInt"
-			IsAttribute="true" />
-		<Entry
-			id="XenonCompression"
-			AssetType="XenonAudioCompressionSetting"
-			IsAttribute="true" />
-		<Entry
-			id="XenonQuality"
-			AssetType="SageInt"
-			IsAttribute="true"
-			Default="75" />
-		<Entry
-			id="IsStreamedOnXenon"
-			AssetType="SageBool"
-			IsAttribute="true" />
-		<Entry
-			id="SubtitleStringName"
-			AssetType="String"
-			IsAttribute="true" />
-		<Entry
-			id="GUIPreset"
-			AssetType="String"
-			IsAttribute="true" />
-		<Runtime>
-			<Entry
-				id="SubtitleStringName"
-				AssetType="String"
-				IsAttribute="true"
-				IsRequired="true" />
-			<Entry
-				id="NumberOfSamples"
-				AssetType="SageInt"
-				IsAttribute="true"
-				IsRequired="true" />
-			<Entry
-				id="SampleRate"
-				AssetType="SageInt"
-				IsAttribute="true"
-				IsRequired="true" />
-			<EntryRelocation
-				id="HeaderData"
-				AssetType="SageInt"
-				IsAttribute="true"
-				IsRequired="true" />
-			<EntryRelocation
-				id="HeaderDataSize"
-				AssetType="SageInt"
-				IsAttribute="true"
-				IsRequired="true" />
-			<Entry
-				id="NumberOfChannels"
-				AssetType="Byte"
-				IsAttribute="true"
-				IsRequired="true" />
-			<Entry
-				id="fill"
-				AssetType="Byte"
-				IsVoid="true" />
-			<CData>
-				<EntryFile
-					id="File"
-					AssetType="WAV" />
-			</CData>
-		</Runtime>
 	</GameAsset>
-	
+
 	<GameAsset
 		id="BaseAudioEventInfo"
 		TypeHash="0">
@@ -201,182 +23,46 @@
 		<EntryInheritance
 			id="base"
 			AssetType="BaseAudioEventInfo" />
-		<Entry
-			id="Volume"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="100%" />
-		<Entry
-			id="VolumeShift"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<Entry
-			id="PerFileVolumeShift"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<Entry
-			id="MinVolume"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<Entry
-			id="PlayPercent"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="100%" />
-		<Entry
-			id="Limit"
-			AssetType="SageInt"
-			IsAttribute="true"
-			Default="0" />
-		<Entry
-			id="Priority"
-			AssetType="AudioPriority"
-			IsAttribute="true"
-			Default="NORMAL" />
-		<Entry
-			id="Type"
-			AssetType="AudioTypeFlags"
-			IsAttribute="true"
-			Default="" />
-		<Entry
-			id="Control"
-			AssetType="AudioControlFlags"
-			IsAttribute="true"
-			Default="" />
-		<Entry
-			id="MinRange"
-			AssetType="SageReal"
-			IsAttribute="true"
-			Default="160" />
-		<Entry
-			id="MaxRange"
-			AssetType="SageReal"
-			IsAttribute="true"
-			Default="640" />
-		<Entry
-			id="LowPassCutoff"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<Entry
-			id="ZoomedInOffscreenVolumePercent"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="50%" />
-		<Entry
-			id="ZoomedInOffscreenMinVolumePercent"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="100%" />
-		<Entry
-			id="ZoomedInOffscreenOcclusionPercent"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="20%" />
-		<Entry
-			id="ReverbEffectLevel"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<Entry
-			id="DryLevel"
-			AssetType="Percentage"
-			IsAttribute="true"
-			Default="0%" />
-		<EntryRelocation
-			id="SubmixSlider"
-			AssetType="AudioVolumeSlider"
-			IsAttribute="true" />
-		<EntryRelocation
-			id="PitchShift"
-			AssetType="RealRange" />
-		<EntryRelocation
-			id="PerFilePitchShift"
-			AssetType="RealRange" />
-		<EntryRelocation
-			id="Delay"
-			AssetType="IntRange" />
-		<EntryList
-			id="VolumeSliderMultiplier"
-			AssetType="AudioVolumeSliderMultiplier"
-			MinLength="0"
-			MaxLength="0" />
 	</GameAsset>
 
 	<GameAsset
 		id="AudioEvent"
-		TypeHash="3556692593">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseSingleSound" />
-		<EntryList
-			id="Attack"
-			AssetType="AudioFileRefWithWeight"
-			MinLength="0"
-			MaxLength="0" />
-		<EntryList
-			id="Sound"
-			AssetType="AudioFileRefWithWeight"
-			MinLength="0"
-			MaxLength="0" />
-		<EntryList
-			id="Decay"
-			AssetType="AudioFileRefWithWeight"
-			MinLength="0"
-			MaxLength="0" />
 	</GameAsset>
-	
+
 	<GameAsset
 		id="MusicTrack"
-		TypeHash="3167789449">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseSingleSound" />
-		<EntryRelocation
-			id="Filename"
-			AssetType="AudioFileRef" />
 	</GameAsset>
 
 	<GameAsset
 		id="DialogEvent"
-		TypeHash="1717852637">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseSingleSound" />
-		<EntryRelocation
-			id="Filename"
-			AssetType="AudioFileRef" />
 	</GameAsset>
 
 	<GameAsset
 		id="AmbientStream"
-		TypeHash="532307505">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseSingleSound" />
-		<EntryRelocation
-			id="Filename"
-			AssetType="AudioFileRef" />
 	</GameAsset>
 
 	<GameAsset
 		id="Multisound"
-		TypeHash="2768493560">
+		TypeHash="0">
 		<EntryInheritance
 			id="base"
 			AssetType="BaseAudioEventInfo" />
-		<Entry
-			id="Control"
-			AssetType="MultisoundControlFlags"
-			IsAttribute="true" />
-		<EntryList
-			id="Subsound"
-			AssetType="MultisoundSubsoundRef"
-			MinLength="0"
-			MaxLength="0" />
 	</GameAsset>
 
 </AssetDefinition>

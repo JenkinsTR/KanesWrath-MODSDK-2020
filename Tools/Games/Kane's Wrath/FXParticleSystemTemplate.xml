@@ -243,7 +243,7 @@
 			Default="0" />
 		<EntryReference
 			id="EmitterSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="SlavePosOffset"

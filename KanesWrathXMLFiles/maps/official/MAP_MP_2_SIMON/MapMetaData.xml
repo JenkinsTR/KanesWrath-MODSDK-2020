@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="15" CRC="0" Description="Map:MAP_MP_2_SIMON/Desc" DisplayName="MAP_MP_2_SIMON" FileName="Data\maps\official\MAP_MP_2_SIMON\MAP_MP_2_SIMON.map" Height="345" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="345" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="796.968" y="409.181" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="2519.74" y="2730.34" z="0" />
+  </StartPosition>
+</MapMetaData>

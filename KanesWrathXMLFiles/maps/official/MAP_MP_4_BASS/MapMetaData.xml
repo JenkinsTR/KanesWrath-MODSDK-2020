@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_4_BASS/Desc" DisplayName="MAP_MP_4_BASS" FileName="Data\maps\official\MAP_MP_4_BASS\MAP_MP_4_BASS.map" Height="510" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="510" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="435.365" y="2261.35" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="4036.2" y="2258.55" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="2261.65" y="4021.9" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="2265.66" y="447.309" z="0" />
+  </StartPosition>
+</MapMetaData>

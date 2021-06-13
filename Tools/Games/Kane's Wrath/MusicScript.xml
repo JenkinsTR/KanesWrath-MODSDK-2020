@@ -290,7 +290,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="Track"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true"
 			IsRequired="true" />
 		<EntryList

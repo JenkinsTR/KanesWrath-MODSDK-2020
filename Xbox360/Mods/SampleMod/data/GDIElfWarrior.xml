@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>		
+		<Include
+			type="all"
+			source="ART:EULorWar_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_SKL.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATNA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATNB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATNC.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATKA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATKB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATKC.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_ATRA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_BAKA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_BAKB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_CHRA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_CHRB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_CHRC.w3x" />		
+		<Include
+			type="all"
+			source="ART:EULorWar_DIEA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_DIEB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_DIEC.w3x" />		
+		<Include
+			type="all"
+			source="ART:EULorWar_FERA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_FLLA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_FLYA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_GTPA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_HITA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_IDLA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_IDLB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_IDLC.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_IDLD.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_IDLE.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_LNDA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_MFDA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_PNTA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_PNTB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_RUNA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_RUNB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_RUNC.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_RUND.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_RUNE.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_TNTA.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_TNTB.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_TNTC.w3x" />
+		<Include
+			type="all"
+			source="ART:EULorWar_WLKA.w3x" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseInfantry.xml" />
+	</Includes>
+	<GameObject
+		id="GDIElfWarrior"
+		inheritFrom="BaseInfantry"
+		SelectPortrait="Portrait_GDIElfWarrior"
+		ButtonImage="Portrait_GDIElfWarrior"
+		Side="GDI"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="5000"
+		BuildTime="2"
+		CommandSet="EmptyCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY CAN_SHOOT_OVER_WALLS"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="BLAST"
+		VoicePriority="88"
+		EditorName="GDIElfWarrior"
+		Description="Desc:GDIElfWarrior"
+		TypeDescription="TYPE:GDIElfWarrior">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:GDIElfWarrior</DisplayName>		
+		<ArmorSet
+			Armor="GDIElfWarriorArmor"
+			DamageFX="InfantryDamageFX" />		
+		<LocomotorSet
+			Locomotor="HumanLocomotor"
+			Condition="NORMAL"
+			Speed="65" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="EULorWar_SKN" />					
+				</ModelConditionState>
+				<xi:include
+					href="DATA:Includes/GDIUnitFormationPreviewStates.xml"
+					xpointer="xmlns(n=uri:ea.com:eala:asset) xpointer(/n:FormationPreviewStates/child::*)" />
+				<!-- invisible when garrisoned -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<Model
+						Name="" />
+					<WeaponLaunchBone
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="" />
+				</ModelConditionState>				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="INSIDE_GARRISON">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					AllowRepeatInRandomPick="true"
+					StateName="STATE_bored">
+					<Animation
+						AnimationName="EULorWar_IDLA"
+						AnimationMode="ONCE"
+						AnimationPriority="50" />
+					<Animation
+						AnimationName="EULorWar_IDLB"
+						AnimationMode="ONCE"
+						AnimationPriority="20" />
+					<Animation
+						AnimationName="EULorWar_IDLC"
+						AnimationMode="ONCE"
+						AnimationPriority="20" />
+					<Animation
+						AnimationName="EULorWar_IDLD"
+						AnimationMode="ONCE"
+						AnimationPriority="25" />
+					<Animation
+						AnimationName="EULorWar_IDLE"
+						AnimationMode="ONCE"
+						AnimationPriority="20" />										
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STUNNED_FLAILING"
+					StateName="STATE_stunned_flailing">
+					<Animation
+						AnimationName="EULoRWar_FLYA"
+						AnimationMode="LOOP" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					StateName="STATE_stunned_landing">
+					<Animation
+						AnimationName="EULorWar_LNDA"
+						AnimationMode="ONCE" />
+				</AnimationState>												
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="EULorWar_DIEA"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="EULorWar_DIEB"
+						AnimationMode="ONCE" />
+					<Animation
+						AnimationName="EULorWar_DIEC"
+						AnimationMode="ONCE" />
+				</AnimationState>				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING FIRING_OR_PREATTACK_A">
+					<Animation
+						AnimationName="EULorWar_RUNC"
+						AnimationMode="LOOP" />
+					<Animation
+						AnimationName="EULorWar_RUND"
+						AnimationMode="LOOP" />					
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FIRING_OR_PREATTACK_A"
+					Flags="RESTART_ANIM_WHEN_COMPLETE">
+					<Animation
+						AnimationName="EULorWar_ATKA"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />
+					<Animation
+						AnimationName="EULorWar_ATKB"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />
+					<Animation
+						AnimationName="EULorWar_ATKC"
+						AnimationMode="ONCE"
+						UseWeaponTiming="true" />					
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING"
+					Flags="RANDOMSTART">
+					<Animation
+						AnimationName="EULorWar_RUNA"
+						AnimationMode="LOOP"
+						Distance="75" />
+					<Animation
+						AnimationName="EULorWar_RUNB"
+						AnimationMode="LOOP"
+						Distance="75" />
+				</AnimationState>				
+				<!-- CELEBRATING -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="EMOTION_CELEBRATING">
+					<Animation
+						AnimationName="EULorWar_CHRA"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="EULorWar_CHRB"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+					<Animation
+						AnimationName="EULorWar_CHRC"
+						AnimationMode="LOOP"
+						AnimationSpeedFactorMin="0.8"
+						AnimationSpeedFactorMax="1.2" />
+				</AnimationState>
+				<!-- SELECTED -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED"
+					Flags="RESTART_ANIM_WHEN_COMPLETE"
+					StateName="STATE_SelectedPose">
+					<Animation
+						AnimationName="EULorWar_ATNA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="10" />
+					<Animation
+						AnimationName="EULorWar_ATNB"
+						AnimationMode="ONCE"
+						AnimationBlendTime="5" />
+					<Animation
+						AnimationName="EULorWar_ATNC"
+						AnimationMode="ONCE"
+						AnimationBlendTime="5" />					
+				</AnimationState>								
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="GDIElfWarriorSword" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<Physics
+				id="ModuleTag_Physics" />
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="4.5s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+			</SlowDeath>			
+			<LargeGroupAudioUpdate
+				id="LGAU">
+				<Key>GDI_GrenadierSoldier</Key>
+			</LargeGroupAudioUpdate>
+			<AudioLoopUpgrade
+				id="Generic_Infantry_Upgrade"
+				SoundToPlay="Generic_Infantry_Upgrade">
+				<TriggeredBy>Upgrade_GDICompositeArmor</TriggeredBy>
+			</AudioLoopUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES">
+				<UnitAITargetChooserData
+					IdleScanDelay="0.3s" 
+					ReacquireDelay="0.3s" 
+					CanPickDynamicTargets="true"
+				/>
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="8000" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="7.0"
+				Height="13.0"
+			/>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceAttack"
+				AudioType="voiceAttack" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceAttackBuilding"
+				AudioType="voiceAttackGarrisonedStructure" />
+			<AudioEntry
+				Sound="GDI_ElvenWarrior_VoiceCreate"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="GDI_ElvenWarrior_VoiceCreate"
+				AudioType="voiceFullyCreated" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceGarrison"
+				AudioType="voiceGarrison" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceMoveAttack"
+				AudioType="voiceAttackAfterMoving" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceRetreat"
+				AudioType="voiceRetreatToCastle" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<AudioEntry
+				Sound="GDI_GrenadierSoldier_VoiceSelectBattleMS"
+				AudioType="voiceSelectBattle" />
+		</AudioArrayVoice>
+		<!-- 
+	GDI_GrenadierSoldier_VoiceSuppress
+-->
+		<!--
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:TEMP_PredatorMoveStart" AudioType="soundMoveStart" />
+			<AudioEntry Sound="AudioEvent:PredatorAmbientLoop" AudioType="soundAmbient" />
+		</AudioArraySound>
+	-->
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			CrushableLevel="4"/>
+	</GameObject>
+</AssetDeclaration>

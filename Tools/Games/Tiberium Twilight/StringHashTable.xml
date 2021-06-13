@@ -20,7 +20,7 @@
 			id="base"
 			AssetType="BaseAssetType" />
 		<Entry
-			id="Unknown0"
+			id="Version"
 			AssetType="SageUnsignedInt"
 			IsAttribute="true" />
 		<EntryList

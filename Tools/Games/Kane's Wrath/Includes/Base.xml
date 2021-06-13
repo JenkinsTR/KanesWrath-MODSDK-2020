@@ -229,33 +229,5 @@
 			id="StringHash"
 			IsUpperCase="true" />
 	</Asset>
-	
-	<Asset
-		id="RealRange">
-		<Entry
-			id="Low"
-			AssetType="SageReal"
-			IsRequired="true"
-			IsAttribute="true" />
-		<Entry
-			id="High"
-			AssetType="SageReal"
-			IsRequired="true"
-			IsAttribute="true" />
-	</Asset>
-	
-	<Asset
-		id="IntRange">
-		<Entry
-			id="Low"
-			AssetType="SageInt"
-			IsRequired="true"
-			IsAttribute="true" />
-		<Entry
-			id="High"
-			AssetType="SageInt"
-			IsRequired="true"
-			IsAttribute="true" />
-	</Asset>
 
 </AssetDefinition>

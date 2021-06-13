@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_2_WILL1/Desc" DisplayName="MAP_MP_2_WILL1" FileName="Data\maps\official\MAP_MP_2_WILL1\MAP_MP_2_WILL1.map" Height="430" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="568" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="950" y="2650" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="4130" y="2650" z="0" />
+  </StartPosition>
+</MapMetaData>

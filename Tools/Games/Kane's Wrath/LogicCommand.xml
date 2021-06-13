@@ -60,7 +60,7 @@
 			id="SpecialPower"
 			AssetType="SpecialPowerTemplateRef" />
 		<EntryRelocation
-			id="UpgradeTemplate"
+			id="Upgrade"
 			AssetType="UpgradeTemplateRef" />
 		<EntryRelocation
 			id="Object"

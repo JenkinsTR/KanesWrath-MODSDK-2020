@@ -26,8 +26,17 @@ namespace SAGE.Compiler
 			string trace, ref int position, out string ErrorDescription)
 		{
 			List<TerrainTextureTileRuntime> tiles = new List<TerrainTextureTileRuntime>();
+			int atlasSize = 2048;
+			/*foreach (XmlAttribute attribute in node.Attributes)
+			{
+				switch (attribute.Name)
+				{
+					case "AtlasSize":
+						atlasSize = ushort.Parse(attribute.Value);
+						break;
+				}
+			}*/
 			List<XmlNode> nodes = new List<XmlNode>();
-			
 			foreach (XmlNode childNode in node.ChildNodes)
 			{
 				if (childNode.Name == "Tile")
@@ -35,7 +44,6 @@ namespace SAGE.Compiler
 					nodes.Add(childNode);
 				}
 			}
-			
 			FileHelper.SetInt(nodes.Count, 4, asset.Content);
 			BinaryAsset tileList = new BinaryAsset(12 * nodes.Count);
 			asset.SubAssets.Add(8, tileList);
@@ -45,7 +53,6 @@ namespace SAGE.Compiler
 			uint positionX = 16;
 			uint positionY = 16;
 			uint nextY = 0;
-			
 			for (int idx = 0; idx < nodes.Count; ++idx)
 			{
 				FileHelper.SetUInt(uint.Parse(nodes[idx].Attributes["TextureID"].Value), idx * 12, tileList.Content);
@@ -84,44 +91,26 @@ namespace SAGE.Compiler
 					}
 				}
 			}
-			
-			// fixed width, automatically calculated height
-			ushort atlasSize = 576;
-			ushort atlasHeight = 0;
-			/*
-			foreach (XmlAttribute attribute in node.Attributes)
-			{
-				switch (attribute.Name)
-				{
-					case "AtlasSize":
-						atlasSize = ushort.Parse(attribute.Value);
-						break;
-				}
-			}
-			*/
-			byte[] baseContent = new byte[0];
-			byte[] normalContent = new byte[0];
-			uint rowHeight = 0;
-			
+			// For now assume each texture has the same size.
+			atlasSize = (int)textureList[0, 0].Header.Width + 32;
+			atlasSize *= atlasSize * (textureList.Length >> 1);
+			atlasSize = (int)Math.Sqrt((double)atlasSize);
+			--atlasSize;
+			atlasSize |= atlasSize >> 1;
+			atlasSize |= atlasSize >> 2;
+			atlasSize |= atlasSize >> 4;
+			atlasSize |= atlasSize >> 8;
+			++atlasSize;
+			byte[] baseContent = new byte[atlasSize * atlasSize * 4];
+			byte[] normalContent = new byte[atlasSize * atlasSize * 4];
 			for (int tileIdx = 0; tileIdx < textureList.Length >> 1; ++tileIdx)
 			{
-				uint size = textureList[tileIdx, 0].Header.Height;
-				rowHeight = Math.Max(size + 32, rowHeight);
-				
+				uint size = textureList[tileIdx, 0].Header.Width;
 				if (positionX + size + 16 > atlasSize)
 				{
 					positionX = 16;
 					positionY += nextY;
-					rowHeight = size + 32;
 				}
-				
-				if (positionY + size + 16 > atlasHeight)
-				{
-					atlasHeight += atlasSize;
-					Array.Resize(ref baseContent, atlasSize * 4 * atlasHeight);
-					Array.Resize(ref normalContent, atlasSize * 4 * atlasHeight);
-				}
-				
 				byte[] color = textureList[tileIdx, 0].Content.GetColor(size, size);
 				byte[] normal = textureList[tileIdx, 1].Content.GetColor(size, size);
 				for (int idy = -16; idy < size + 16; ++idy)
@@ -163,7 +152,6 @@ namespace SAGE.Compiler
 				positionX += size + 32;
 				nextY = Math.Max(size + 32, nextY);
 			}
-			
 			bool hasAlpha = false;
 			for (int idx = 0; idx < nodes.Count; ++idx)
 			{
@@ -176,11 +164,11 @@ namespace SAGE.Compiler
 			DDSFile baseAtlas = null;
 			if (hasAlpha)
 			{
-				baseAtlas = new DDSFile(atlasSize, atlasHeight, 5, DDSType.DXT5, baseContent);
+				baseAtlas = new DDSFile((uint)atlasSize, (uint)atlasSize, 5, DDSType.DXT5, baseContent);
 			}
 			else
 			{
-				baseAtlas = new DDSFile(atlasSize, atlasHeight, 5, DDSType.DXT1, baseContent);
+				baseAtlas = new DDSFile((uint)atlasSize, (uint)atlasSize, 5, DDSType.DXT1, baseContent);
 			}
 			hasAlpha = false;
 			for (int idx = 0; idx < nodes.Count; ++idx)
@@ -194,11 +182,11 @@ namespace SAGE.Compiler
 			DDSFile normalAtlas = null;
 			if (hasAlpha)
 			{
-				normalAtlas = new DDSFile(atlasSize, atlasHeight, 5, DDSType.A1R5G5B5, normalContent);
+				normalAtlas = new DDSFile((uint)atlasSize, (uint)atlasSize, 5, DDSType.A1R5G5B5, normalContent, true);
 			}
 			else
 			{
-				normalAtlas = new DDSFile(atlasSize, atlasHeight, 5, DDSType.R5G6B5, normalContent);
+				normalAtlas = new DDSFile((uint)atlasSize, (uint)atlasSize, 5, DDSType.R5G5B5, normalContent, true);
 			}
 			baseAsset.Content = baseAtlas.Binary;
 			asset.SubAssets.Add(0x0C, baseAsset);

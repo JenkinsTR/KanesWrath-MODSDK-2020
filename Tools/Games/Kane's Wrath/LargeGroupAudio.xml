@@ -23,7 +23,7 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="Sound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryList
 			id="Key"

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<FXList id="FX_AlliedPrismTowerFire">
+		<NuggetList>
+			<ParticleSystem
+				Particle="AlliedPrismFireFlash" />
+		</NuggetList>
+	</FXList>
+
+	<FXList id="FX_AlliedPrismTowerFire_Vet">
+		<NuggetList>
+			<ParticleSystem
+				Particle="AlliedPrismFireFlash_Vet" />
+		</NuggetList>
+	</FXList>
+	
+	<FXList id="FX_MirageLaserHit">
+		<NuggetList>
+			<ParticleSystem
+				Particle="AlliedPrismHitFlash" />
+			<ParticleSystem
+				Particle="AlliedPrismHitFire" />
+			<ParticleSystem
+				Particle="AlliedPrismHitDist" />
+		</NuggetList>
+	</FXList>
+	
+	<FXList id="FX_MirageLaserHit_Vet">
+		<NuggetList>
+			<ParticleSystem
+				Particle="AlliedPrismHitFlash_Vet" />
+			<ParticleSystem
+				Particle="AlliedPrismHitFire_Vet" />
+			<ParticleSystem
+				Particle="AlliedPrismHitDist_Vet" />
+		</NuggetList>
+	</FXList>
+</AssetDeclaration>

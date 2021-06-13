@@ -40,7 +40,7 @@
 			Default="0s" />
 		<EntryReference
 			id="BurningSoundName"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="FlameDamageLimit"

@@ -5,15 +5,15 @@
 		id="SelfAudio">
 		<EntryReference
 			id="SelfBuildingLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="SelfRepairFromDamageLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="SelfRepairFromRubbleLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 	</Asset>
 

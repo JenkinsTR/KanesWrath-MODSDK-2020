@@ -33,8 +33,7 @@
 		<Entry
 			id="Type"
 			AssetType="TextureType"
-			IsAttribute="true"
-			Default="StandardTexture" />
+			IsAttribute="true" />
 		<Entry
 			id="OutputFormat"
 			AssetType="TextureOutputFormatType"
@@ -71,8 +70,7 @@
 		<Entry
 			id="Type"
 			AssetType="TextureType"
-			IsAttribute="true"
-			Default="StandardTexture" />
+			IsAttribute="true" />
 		<Entry
 			id="OutputFormat"
 			AssetType="TextureOutputFormatType"

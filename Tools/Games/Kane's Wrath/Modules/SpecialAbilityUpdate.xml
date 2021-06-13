@@ -157,23 +157,23 @@
 			IsAttribute="true" />
 		<EntryReference
 			id="PackSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="UnpackSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="PrepSoundLoop"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="TriggerSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<EntryReference
 			id="ActiveLoopSound"
-			AssetType="BaseAudioEventInfo"
+			AssetType="AudioEventInfo"
 			IsAttribute="true" />
 		<Entry
 			id="AwardXPForTriggering"
@@ -263,7 +263,7 @@
 			id="FaceTarget"
 			AssetType="SageBool"
 			IsAttribute="true"
-			Default="false" />
+			Default="true" />
 		<Entry
 			id="fill"
 			AssetType="Byte"

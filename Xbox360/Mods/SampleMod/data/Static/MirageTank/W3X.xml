@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_COL.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_COL.NEWSKIN_TREADS.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_COL.OBBOX01.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_COL_CTR.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_COL_HRC.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_FP.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_FP.NEWSKIN_TREADS.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_FP.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_FX_CTR.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_FX_HRC.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_MOVA.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKL.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.GLOWFX.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.LIGHTNINGFX.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.NEWSKIN_TREADS.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.NEWSKIN_TREADS_BACK.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.NEWSKIN_TREADS_MOVE.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.OBBOX01.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.PLASMAFX.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3_SKN.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3STEALTH_SKN.NEWSKIN.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3STEALTH_SKN.NEWSKIN_TREADS.w3x" />
+		<Include type="all" source="ART:Static/MirageTank/AUANTIVEHICLEVEHICLETECH3STEALTH_SKN.w3x" />
+	</Includes>
+</AssetDeclaration>

@@ -2,6 +2,85 @@
 <AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
 
 	<Asset
+		id="RGBColor">
+		<Entry
+			id="R"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="G"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="B"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="RGBAColor">
+		<Entry
+			id="R"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="G"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="B"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="A"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Color3f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Color4f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="a"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
 		id="Vector2">
 		<Entry
 			id="x"
@@ -121,6 +200,47 @@
 			id="A"
 			AssetType="Byte"
 			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="DistributionType">
+		<Entry>CONSTANT</Entry>
+		<Entry>UNIFORM</Entry>
+		<Entry>GAUSSIAN</Entry>
+		<Entry>TRIANGULAR</Entry>
+		<Entry>LOW_BIAS</Entry>
+		<Entry>HIGH_BIAS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="RandomVariable">
+		<Entry
+			id="Type"
+			AssetType="DistributionType"
+			IsAttribute="true"
+			Default="UNIFORM" />
+		<Entry
+			id="Low"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="High"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="LogicRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
+	</Asset>
+
+	<Asset
+		id="ClientRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
 	</Asset>
 
 	<Asset
