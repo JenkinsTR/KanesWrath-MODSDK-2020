@@ -1,3 +1,7 @@
 # _config.yml
 
-title: "Jekyll Actions Demo"
+title: "Kane's Wrath MOD SDK"
+
+# This will require each of these plugins automatically.
+plugins:
+  - jekyll-remote-theme

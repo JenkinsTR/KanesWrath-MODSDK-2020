@@ -13,3 +13,7 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+        bundle install
+        
+        bundle exec jekyll serve
