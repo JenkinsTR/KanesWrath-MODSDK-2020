@@ -17415,6 +17415,7 @@ plugins:
   - jekyll-commonmark
   - jekyll-include-cache
   - jemoji
+  - jekyll-font-awesome-sass
 
 remote_theme: daviddarnes/alembic@main
 
@@ -17423,8 +17424,11 @@ paginate: 2 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 
 # 4. Jekyll settings
+
 # 5. Collections
+
 # 6. Jekyll collections settings
+
 # 7. Site settings
 title: "Kane's Wrath MOD SDK"
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
@@ -17463,3 +17467,6 @@ navigation_header:
 navigation_footer:
 - title: Kane’s Wrath MOD SDK Knowledgebase
   url: https://jenkinstr.github.io/KanesWrath-MODSDK-2020/
+
+font-awesome:
+  assets: true
