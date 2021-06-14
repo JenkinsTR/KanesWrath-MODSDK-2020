@@ -6,5 +6,4 @@ title: "Kane's Wrath MOD SDK"
 plugins:
   - jekyll-remote-theme
 
-theme: alembic
 remote_theme: daviddarnes/alembic@main
