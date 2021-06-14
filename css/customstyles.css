@@ -1,5 +1,6 @@
 body {
     font-size:15px;
+	color: #f5f5f5;
 }
 
 @font-face {
@@ -256,11 +257,11 @@ div#toc ul li {
     list-style: square;
 }
 div#toc ul {
-    background-color: whitesmoke;
+    background-color: #292929;
     padding: 5px;
     border-radius: 5px;
     max-width: 300px;
-    color: gray;
+    color: #f5f5f5;
 }
 
 div#toc ul li ul {
@@ -275,7 +276,7 @@ div#toc ul li ul li::before {
 div#toc >ul::before {
     content: "Table of Contents";
     font-weight: 500;
-    color: #555;
+    color: #d2933a;
     text-align:center;
     margin-left:auto;
     margin-right:auto;
@@ -389,7 +390,11 @@ background-color: #347DBE;
 }
 
 ul#mysidebar {
-    border-radius:0px;
+    border-radius: 0px;
+    background-color: #333;
+    border: 2px;
+    border-color: #444;
+    border-style: solid;
 }
 
 .nav ul li ul li a {
@@ -438,10 +443,12 @@ span.projectTitle {
 
 .post-title-main {
 	font-family: 'russellsquare';
+	color: #fff3dd;
 }
 
 .clickable-header {
 	font-family: 'ConvectionUI';
+	color: #f0ad4e;
 }
 
 .footer {
@@ -573,7 +580,7 @@ hr.shaded {
     height: 12px;
     border: 0;
     margin-top: 70px;
-    background: white;
+    background: #131313;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -784,6 +791,8 @@ pre, table code {
 
 pre {
     margin: 25px 0px;
+	background-color: #333;
+    color: white;
 }
 
 #json-box-container pre {
