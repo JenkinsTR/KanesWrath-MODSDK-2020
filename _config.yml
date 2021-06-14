@@ -5,3 +5,6 @@ title: "Kane's Wrath MOD SDK"
 # This will require each of these plugins automatically.
 plugins:
   - jekyll-remote-theme
+
+theme: alembic
+remote_theme: daviddarnes/alembic@main
