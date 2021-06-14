@@ -1,16 +1,23 @@
 // Background colours
-$backgroundColour: #ffffff !default;
+$backgroundColour: #131313 !default;
 $codeBackgroundColour: #fafafa !default;
 $featureBackgroundColour: #f9fafa !default;
-$accentColour: #05bf85 !default;
+// $accentColour: #05bf85 !default;
+$accentColour: #AF0014 !default;
 
 // Text colours
-$headingColour: #242e2b !default;
-$bodyColour: #384743 !default;
-$linkColour: #05bf85 !default;
-$hoverColour: #008000 !default;
-$focusColour: #fa407a !default;
-$captionColour: #a8adac !default;
+// $headingColour: #242e2b !default;
+$headingColour: #DDC7C7 !default;
+// $bodyColour: #384743 !default;
+$bodyColour: #FFE9E8 !default;
+// $linkColour: #05bf85 !default;
+$linkColour: #BC2500 !default;
+// $hoverColour: #008000 !default;
+$hoverColour: #D88C00 !default;
+// $focusColour: #fa407a !default;
+$focusColour: #FFD800 !default;
+// $captionColour: #a8adac !default;
+$captionColour: #DBE0DF !default;
 $white: #ffffff !default;
 
 // Typography
@@ -23,7 +30,8 @@ $bodytype: (
 ) !default;
 
 $headingtype: (
-  font-family: '"Merriweather", serif',
+//  font-family: '"Merriweather", serif',
+  font-family: '"russellsquare", serif',
   regular: 400,
   bold: 700,
   cap-height: 0.75

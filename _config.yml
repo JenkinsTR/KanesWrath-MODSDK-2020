@@ -52,16 +52,16 @@ navigation_header:
 - title: Home
   url: /
 - title: Tools
-  url: /pages/tools.md
+  url: /pages/tools
   sub:
-    - title: "WrathEd"
-      url: "/pages/tools/wrathed.md"
+    - title: WrathEd
+      url: /pages/tools/wrathed
 - title: Blog
   url: /blog/
 - title: Categories
-  url: /pages/categories.md
+  url: /pages/categories
 - title: Search
-  url: /pages/search.md
+  url: /pages/search
 
 navigation_footer:
 - title: Kane’s Wrath MOD SDK Knowledgebase
