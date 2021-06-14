@@ -1,22 +1,7 @@
-# Gemfile
+source "https://rubygems.org"
 
-source 'https://rubygems.org'
+# to publish on github page
+gem 'github-pages', group: :jekyll_plugins
 
-gem 'jekyll', '~> 4.2'
-
-group :jekyll_plugins do
-  gem 'jekyll-timeago', '~> 0.13.1'
-  # Bundler found conflicting requirements:
-  # gem 'github-pages'
-end
-
-gem 'jekyll-remote-theme'
-gem 'jekyll-sitemap'
-gem 'jekyll-mentions'
-gem 'jekyll-paginate'
-gem 'jekyll-seo-tag'
-gem 'jekyll-redirect-from'
-gem 'jekyll-feed'
-gem 'jekyll-commonmark'
-gem 'jekyll-include-cache'
-gem 'jemoji'
+# to publich without github page
+#gem "jekyll"
