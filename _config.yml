@@ -17406,6 +17406,15 @@ exclude:
 # 2. Installed Gems
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-commonmark
+  - jekyll-include-cache
+  - jemoji
 
 remote_theme: daviddarnes/alembic@main
 
@@ -17439,14 +17448,17 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 navigation_header:
 - title: Home
   url: /
-- title: Elements
-  url: /elements/
+- title: Tools
+  url: /pages/tools.md
+  sub:
+    - title: "WrathEd"
+      url: "/pages/tools/wrathed.md"
 - title: Blog
   url: /blog/
 - title: Categories
-  url: /categories/
+  url: /pages/categories.md
 - title: Search
-  url: /search/
+  url: /pages/search.md
 
 navigation_footer:
 - title: Kane’s Wrath MOD SDK Knowledgebase
