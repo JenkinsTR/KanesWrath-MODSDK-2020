@@ -173,7 +173,7 @@ table > thead:first-child > tr:first-child > td {
 }
 
 table > tbody > tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
+    background-color: #4a4a4a;
 }
 
 table col[class*="col-"] {
@@ -198,6 +198,10 @@ p.external a {
     font-size:12px;
     color: #0088cc;
     display:inline;
+}
+
+.panel-default>.panel-heading {
+    background-color: #555;
 }
 
 #definition-box-container div a.active {
@@ -603,7 +607,7 @@ i.border {
 }
 
 a[data-toggle] {
-    color: #248EC2;
+	color: #ffc35f;
 }
 
 .summary {
@@ -836,6 +840,14 @@ dd {margin-left:20px;}
 .alert {
     margin-bottom:10px;
     margin-top:10px;
+}
+
+.panel {
+    background-color: #151515;
+}
+
+a.accordion-toggle:hover {
+	color: #fffada;
 }
 
 a.accordion-toggle {
