@@ -97,7 +97,7 @@ title: "Kane’s Wrath MOD SDK Knowledgebase" # Site name or title, also used in
 logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
 description: "The unofficial Kane’s Wrath Mod SDK is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane’s Wrath." # Site description and default description, also used in jekyll-seo-tag
 url: "https://jenkinstr.github.io/KanesWrath-MODSDK-2020/" # Site url, also used in jekyll-seo-tag
-baseurl: ""
+baseurl: "https://jenkinstr.github.io/KanesWrath-MODSDK-2020"
 repo: "https://github.com/JenkinsTR/KanesWrath-MODSDK-2020"
 email: "jenkinstr@noreply.github.com"
 # disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
