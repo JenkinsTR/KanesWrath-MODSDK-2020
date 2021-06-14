@@ -72,6 +72,7 @@ body {
 
 .nav {
   a {
+    font-family: 'russellsquare', serif;
     padding: .2rem;
   }
   &--social a {
@@ -90,6 +91,7 @@ body {
   // background: $headingColour;
   background: #333333;
   color: $captionColour;
+  font-family: 'russellsquare', serif;
   a {
     // color: $captionColour;
     color: $linkColour;
@@ -141,7 +143,8 @@ body {
 
 .content {
   @include breakpoint(break-1) {
-    width: 62%;
+    // width: 62%;
+    width: 80%;
   }
 }
 
