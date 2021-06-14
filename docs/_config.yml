@@ -1,5 +1,0 @@
-remote_theme: daviddarnes/alembic@main
-
-# This will require each of these plugins automatically.
-plugins:
-  - jekyll-remote-theme
