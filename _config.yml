@@ -17415,7 +17415,6 @@ plugins:
   - jekyll-commonmark
   - jekyll-include-cache
   - jemoji
-  - jekyll-font-awesome-sass
 
 remote_theme: daviddarnes/alembic@main
 
