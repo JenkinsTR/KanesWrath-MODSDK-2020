@@ -51,7 +51,8 @@ body {
   background-size: cover;
   background-position: center;
   .container {
-    min-height: 35vh;
+    // min-height: 35vh;
+    min-height: 15vh;
     max-width: 60%;
     @include flex-direction(column);
     @include justify-content(center);
@@ -86,12 +87,15 @@ body {
 }
 
 .footer {
-  background: $headingColour;
+  // background: $headingColour;
+  background: #333333;
   color: $captionColour;
   a {
-    color: $captionColour;
+    // color: $captionColour;
+    color: $linkColour;
     &:hover {
-      color: $backgroundColour;
+      // color: $backgroundColour;
+      color: $hoverColour;
     }
   }
   .container {
