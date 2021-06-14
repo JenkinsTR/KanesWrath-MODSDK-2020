@@ -30,7 +30,8 @@ paginate_path: blog/page:num # jekyll-paginate > blog page
 
 # 7. Site settings
 title: "Kane's Wrath MOD SDK"
-logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
+# logo: "/assets/logos/logo.svg" # Site logo, also used in jekyll-seo-tag
+logo: "/assets/logos/KWSDK_logo_130.png" # Site logo, also used in jekyll-seo-tag
 description: "The unofficial Kane’s Wrath Mod SDK is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane’s Wrath." # Site description and default description, also used in jekyll-seo-tag
 
 repo: "https://github.com/JenkinsTR/KanesWrath-MODSDK-2020"
@@ -38,14 +39,22 @@ email: "jenkinstr@noreply.github.com"
 
 # 8. Site favicons & manifest icons
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  16: '/assets/logos/logo@16px.png'
-  32: '/assets/logos/logo@32px.png'
-  96: '/assets/logos/logo@96px.png'
-  120: '/assets/logos/logo@120px.png'
-  144: '/assets/logos/logo@144px.png'
-  180: '/assets/logos/logo@180px.png'
-  512: '/assets/logos/logo@512px.png'
-  1024: '/assets/logos/logo@1024px.png'
+  # 16: '/assets/logos/logo@16px.png'
+  # 32: '/assets/logos/logo@32px.png'
+  # 96: '/assets/logos/logo@96px.png'
+  # 120: '/assets/logos/logo@120px.png'
+  # 144: '/assets/logos/logo@144px.png'
+  # 180: '/assets/logos/logo@180px.png'
+  # 512: '/assets/logos/logo@512px.png'
+  # 1024: '/assets/logos/logo@1024px.png'
+  16: '/assets/logos/KWSDK_logo_16.png'
+  32: '/assets/logos/KWSDK_logo_32.png'
+  96: '/assets/logos/KWSDK_logo_96.png'
+  120: '/assets/logos/KWSDK_logo_120.png'
+  144: '/assets/logos/KWSDK_logo_144.png'
+  180: '/assets/logos/KWSDK_logo_180.png'
+  512: '/assets/logos/KWSDK_logo_512.png'
+  1024: '/assets/logos/KWSDK_logo_1024.png'
 
 # 9. Site navigation
 navigation_header:
