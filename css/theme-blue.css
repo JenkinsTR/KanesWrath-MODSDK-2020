@@ -76,8 +76,8 @@ a.navbar-brand:hover {
 
 .btn-primary {
     color: #ffffff;
-    background-color: #347DBE;
-    border-color: #347DBE;
+	background-color: #c10101;
+    border-color: #330000;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -89,8 +89,21 @@ a.navbar-brand:hover {
 .btn-primary:active,
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
-    background-color: #248ec2;
-    border-color: #347DBE;
+    background-color: #d11;
+    border-color: #be3434;
+}
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover {
+    background-color: #742020;
+    border-color: #401212;
 }
 
 .printTitle {
