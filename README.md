@@ -1,5 +1,5 @@
-### Command & Conquer 3: Kane's Wrath Mod SDK 2020 by Jenkins/JMDigital/EALA/Bibber/theHostileNegotiator/DarthJane/JonWil.
- The unofficial Kane's Wrath Mod SDK 2020 is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane's Wrath.
+### Command & Conquer 3: Kane's Wrath Mod SDK by Jenkins/JMDigital/EALA/Bibber/theHostileNegotiator/DarthJane/JonWil.
+ The unofficial Kane's Wrath Mod SDK is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane's Wrath.
  
  This SDK is built on the latest, stable version of WrathEd (1.10).
  It includes all updates and fixes made by other respected members of the community.
