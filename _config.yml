@@ -68,7 +68,7 @@ collections:
     description: "My thoughts and ideas" # The post list page content
     feature_text: |
       Welcome to the blog
-    feature_image: "Documentation/images/18863b.jpg"
+    feature_image: "https://jenkinstr.github.io/KanesWrath-MODSDK-2020/Documentation/images/18863b.jpg"
 
 # 6. Jekyll collections settings
 defaults:
@@ -76,7 +76,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: "/assets/default-social-image.png" # Default image for sharing
+      image: "KanesWrath-MODSDK-2020/assets/default-social-image.png" # Default image for sharing
   -
     scope:
       path: ""
@@ -110,27 +110,27 @@ css_inline: true # Will insert all styles into a single <style> block in the <he
 
 # 8. Site favicons & manifest icons
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  16: '/assets/logos/logo@16px.png'
-  32: '/assets/logos/logo@32px.png'
-  96: '/assets/logos/logo@96px.png'
-  120: '/assets/logos/logo@120px.png'
-  144: '/assets/logos/logo@144px.png'
-  180: '/assets/logos/logo@180px.png'
-  512: '/assets/logos/logo@512px.png'
-  1024: '/assets/logos/logo@1024px.png'
+  16: 'KanesWrath-MODSDK-2020/assets/logos/logo@16px.png'
+  32: 'KanesWrath-MODSDK-2020/assets/logos/logo@32px.png'
+  96: 'KanesWrath-MODSDK-2020/assets/logos/logo@96px.png'
+  120: 'KanesWrath-MODSDK-2020/assets/logos/logo@120px.png'
+  144: 'KanesWrath-MODSDK-2020/assets/logos/logo@144px.png'
+  180: 'KanesWrath-MODSDK-2020/assets/logos/logo@180px.png'
+  512: 'KanesWrath-MODSDK-2020/assets/logos/logo@512px.png'
+  1024: 'KanesWrath-MODSDK-2020/assets/logos/logo@1024px.png'
 
 # 9. Site navigation
 navigation_header:
 - title: Home
-  url: /
+  url: /KanesWrath-MODSDK-2020/
 - title: Elements
-  url: /elements/
+  url: /KanesWrath-MODSDK-2020/elements/
 - title: Blog
-  url: /blog/
+  url: /KanesWrath-MODSDK-2020/blog/
 - title: Categories
-  url: /categories/
+  url: /KanesWrath-MODSDK-2020/categories/
 - title: Search
-  url: /search/
+  url: /KanesWrath-MODSDK-2020/search/
 
 navigation_footer:
 - title: Kane’s Wrath MOD SDK Knowledgebase
@@ -141,7 +141,7 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   LinkedIn: https://www.linkedin.com/in/daviddarnes
   GitHub: https://github.com/daviddarnes
   link: https://darn.es
-  RSS: /feed.xml
+  RSS: /KanesWrath-MODSDK-2020/feed.xml
 
 sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
   Twitter: "#0d94e7"
