@@ -12,6 +12,26 @@
       <li class="item  item--nav{% if page.url contains item.url %}  item--current{% endif %}">
         <a href="{{ url }}">{{ item.title }}</a>
       </li>
+	  {% if item.sublinks %}
+          <li class="dropdown {{ class }}">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ item.title }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  {% for sublink in item.sublinks %}
+                      {% if sublink.title == 'separator' %}
+                          <li role="separator" class="divider"></li>
+                      {% else %}
+                          <li>
+                              <a href="{{ site.url }}{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                          </li>
+                      {% endif %}
+                  {% endfor %}
+              </ul>
+          </li>
+      {% else %}
+          <li class="{{ class }}">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+          </li>
+      {% endif %}
     {% endfor %}
   </ul>
   <button class="button  button--nav" aria-label="Menu toggle">

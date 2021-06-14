@@ -2,7 +2,7 @@
 title: Welcome to the unoffical Kane's Wrath MOD SDK Knowledgebase
 feature_image: "https://raw.githubusercontent.com/JenkinsTR/KanesWrath-MODSDK-2020/master/Documentation/images/18863b.jpg"
 feature_text: |
-  <span style="color:#131313">## Kane's Wrath MOD SDK Knowledgebase</span>
+  <h1><span style="color:#131313">Kane's Wrath MOD SDK Knowledgebase</span></h1>
 ---
 
 The unofficial Kane's Wrath Mod SDK is designed to combine and enhance all of the required, useful and not-so useful tools, assets, examples and documentation for the modification of Command & Conquer 3: Kane's Wrath.
