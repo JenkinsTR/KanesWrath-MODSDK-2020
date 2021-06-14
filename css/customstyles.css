@@ -2,6 +2,16 @@ body {
     font-size:15px;
 }
 
+@font-face {
+	font-family: "russellsquare";
+	src: url("../fonts/russellsquare.ttf");
+}
+
+@font-face {
+	font-family: "ConvectionUI";
+	src: url("../fonts/ConvectionUI.ttf");
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -421,8 +431,17 @@ ul#mysidebar {
 }
 
 span.projectTitle {
-    font-family: Helvetica;
+    /* font-family: Helvetica; */
+    font-family: 'russellsquare';
     font-weight: bold;
+}
+
+.post-title-main {
+	font-family: 'russellsquare';
+}
+
+.clickable-header {
+	font-family: 'ConvectionUI';
 }
 
 .footer {
