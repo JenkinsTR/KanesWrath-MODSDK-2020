@@ -17467,6 +17467,3 @@ navigation_header:
 navigation_footer:
 - title: Kane’s Wrath MOD SDK Knowledgebase
   url: https://jenkinstr.github.io/KanesWrath-MODSDK-2020/
-
-font-awesome:
-  assets: true
