@@ -14,6 +14,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-        bundle install
-        
-        bundle exec jekyll serve
+          run: |
+            bundle install
+            bundle exec jekyll serve
