@@ -6,12 +6,10 @@ gem 'jekyll', '~> 4.2'
 
 group :jekyll_plugins do
   gem 'jekyll-timeago', '~> 0.13.1'
+  gem 'github-pages'
 end
 
-gem "github-pages", group: :jekyll_plugins
-
 gem 'jekyll-remote-theme'
-
 gem 'jekyll-sitemap'
 gem 'jekyll-mentions'
 gem 'jekyll-paginate'
