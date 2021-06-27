@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="HotKeySlotGroup">
+		<Entry>Camera</Entry>
+		<Entry>SideBar</Entry>
+		<Entry>UnitCommands</Entry>
+		<Entry>Bookmarks</Entry>
+		<Entry>PlayerPowersBar</Entry>
+		<Entry>Misc</Entry>
+		<Entry>NonConfigurable</Entry>
+		<Entry>Cheat</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

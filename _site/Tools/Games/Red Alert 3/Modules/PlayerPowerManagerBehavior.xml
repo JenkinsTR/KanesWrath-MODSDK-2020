@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PlayerPowerManagerBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="OnAvailableEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+	</Asset>
+
+</AssetDefinition>

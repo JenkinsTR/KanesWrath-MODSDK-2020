@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Mod Directory Structure</h3>
+	<p>When creating a MOD it is recommended you 
+follow the data structure laid out in this section of the document, the 
+structure can be changed but for the sake of this document we are going to 
+assume you follow these guidelines.</p>
+In the install directory there is a MODs 
+folder.&nbsp; It is recommended you create a folder directly under this folder that 
+corresponds with the name of whatever MOD you are creating, then in that folder 
+create a data folder. <span class="important">IMPORTANT: The name of your mod can no more than 15 characters long</span> 
+You can see an example of this in the SampleMOD folder.&nbsp; 
+This is important so the structure of your built MOD is correct and able to be 
+read properly by the game after you have built the MOD.&nbsp; After this is done the 
+directories created under data are up to the user wants to organize your data.  The directory 
+structure for your mod should look similar to the image below.</p>
+<img src="images/modDirStruct.png" alt="Mod Directory Structure" />
+<h4>Required Files:</h4>
+<p>There is only one required file for MOD 
+building and that is MOD.xml.&nbsp; This file is the file that should include 
+any other files you are adding/editing for your MOD.&nbsp; This is the file that 
+the batch file will try to build and directly corresponds to the name of the 
+manifest file that will be created by the build process.&nbsp; This manifest is 
+also hard coded in the game code so renaming it will cause your MOD not to work. 
+For full details on the Mod.xml file, please read the <a href="Mod_XML.htm">Mod.XML Page</a>.
+</p>
+<p>The only other file that is hard coded as such 
+is the MOD.str file.&nbsp; This file is optional and only needed if you are trying to 
+add or modify text in the game.</p>
+<h4>MOD.str Structure</h4>
+An example of how an entry in the MOD.str file is below:
+<p class="code">
+	NAME:Orca<br />
+	"Orca Fighter"<br />
+	END<br />
+</p>
+<p>To replace an existing String entry, simply create a new entry in your Mod.str file with the same 
+name as the entry you would like to replace.  You can create new entries simply by adding them to the Str 
+file, and reference them from within the .XML files, or Worldbuilder scripts.  If you forget to add a string 
+to the STR file, it will show up in the game as MISSING: folowed by the name of the string entry.</p>
+</body>
+</html>

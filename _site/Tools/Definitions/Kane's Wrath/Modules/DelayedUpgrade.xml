@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DelayedUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="DelayTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

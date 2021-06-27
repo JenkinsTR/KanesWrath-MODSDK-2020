@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ProductionQueueType"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>MAIN_STRUCTURE</Entry>
+		<Entry>OTHER_STRUCTURE</Entry>
+		<Entry>INFANTRY</Entry>
+		<Entry>VEHICLE</Entry>
+		<Entry>AIRCRAFT</Entry>
+		<Entry>UPGRADE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ProductionQueueTypeBitFlags"
+		BaseEnum="ProductionQueueType" />
+
+</AssetDefinition>

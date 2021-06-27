@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UIFixedElementId"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>ENERGY_METER</Entry>
+		<Entry>SELL_BUTTON</Entry>
+		<Entry>TOGGLE_REPAIR_BUTTON</Entry>
+		<Entry>TOGGLE_POWER_BUTTON</Entry>
+		<Entry>ATTACK_MOVE_BUTTON</Entry>
+		<Entry>FORCE_ATTACK_BUTTON</Entry>
+		<Entry>FORCE_MOVE_BUTTON</Entry>
+		<Entry>REVERSE_MOVE_BUTTON</Entry>
+		<Entry>WAYPOINT_MODE_BUTTON</Entry>
+		<Entry>PLANNING_MODE_BUTTON</Entry>
+		<Entry>STANCE_AGGRESSIVE_BUTTON</Entry>
+		<Entry>STANCE_GUARD_BUTTON</Entry>
+		<Entry>STANCE_HOLD_GROUND_BUTTON</Entry>
+		<Entry>STANCE_HOLD_FIRE_BUTTON</Entry>
+		<Entry>MAIN_STRUCTURE_TAB</Entry>
+		<Entry>OTHER_STRUCTURE_TAB</Entry>
+		<Entry>INFANTRY_TAB</Entry>
+		<Entry>VEHICLE_TAB</Entry>
+		<Entry>AIRCRAFT_TAB</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

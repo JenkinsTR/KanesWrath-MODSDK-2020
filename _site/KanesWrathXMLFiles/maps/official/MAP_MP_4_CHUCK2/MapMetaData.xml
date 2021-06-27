@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_4_CHUCK2/Desc" DisplayName="MAP_MP_4_CHUCK2" FileName="Data\maps\official\MAP_MP_4_CHUCK2\MAP_MP_4_CHUCK2.map" Height="510" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="510" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="928.628" y="863.379" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="3856.92" y="3497.09" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="741.659" y="3642.04" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="3703.24" y="920.812" z="0" />
+  </StartPosition>
+</MapMetaData>

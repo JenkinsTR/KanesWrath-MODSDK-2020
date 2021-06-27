@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WaterTextureType">
+		<Entry>FIRST</Entry>
+		<Entry>RIVER</Entry>
+		<Entry>BUMP</Entry>
+		<Entry>NORMAL</Entry>
+		<Entry>SKY</Entry>
+		<Entry>NOISE</Entry>
+		<Entry>SPARKLE</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

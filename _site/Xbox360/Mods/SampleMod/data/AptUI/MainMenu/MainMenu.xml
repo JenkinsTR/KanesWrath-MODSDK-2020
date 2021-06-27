@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AptAptData id="MainMenu_apt" File="MainMenu.apt" />
+	<AptConstData id="MainMenu_const" File="MainMenu.const" />
+	<AptDatData id="MainMenu_dat" File="MainMenu.dat" />
+	<AptGeometryData id="MainMenu_101" File="MainMenu_geometry\101.ru" AptID="101"/>
+	<AptGeometryData id="MainMenu_104" File="MainMenu_geometry\104.ru" AptID="104"/>
+	<AptGeometryData id="MainMenu_107" File="MainMenu_geometry\107.ru" AptID="107"/>
+	<AptGeometryData id="MainMenu_11" File="MainMenu_geometry\11.ru" AptID="11"/>
+	<AptGeometryData id="MainMenu_113" File="MainMenu_geometry\113.ru" AptID="113"/>
+	<AptGeometryData id="MainMenu_117" File="MainMenu_geometry\117.ru" AptID="117"/>
+	<AptGeometryData id="MainMenu_122" File="MainMenu_geometry\122.ru" AptID="122"/>
+	<AptGeometryData id="MainMenu_126" File="MainMenu_geometry\126.ru" AptID="126"/>
+	<AptGeometryData id="MainMenu_131" File="MainMenu_geometry\131.ru" AptID="131"/>
+	<AptGeometryData id="MainMenu_135" File="MainMenu_geometry\135.ru" AptID="135"/>
+	<AptGeometryData id="MainMenu_139" File="MainMenu_geometry\139.ru" AptID="139"/>
+	<AptGeometryData id="MainMenu_14" File="MainMenu_geometry\14.ru" AptID="14"/>
+	<AptGeometryData id="MainMenu_142" File="MainMenu_geometry\142.ru" AptID="142"/>
+	<AptGeometryData id="MainMenu_145" File="MainMenu_geometry\145.ru" AptID="145"/>
+	<AptGeometryData id="MainMenu_151" File="MainMenu_geometry\151.ru" AptID="151"/>
+	<AptGeometryData id="MainMenu_155" File="MainMenu_geometry\155.ru" AptID="155"/>
+	<AptGeometryData id="MainMenu_160" File="MainMenu_geometry\160.ru" AptID="160"/>
+	<AptGeometryData id="MainMenu_164" File="MainMenu_geometry\164.ru" AptID="164"/>
+	<AptGeometryData id="MainMenu_169" File="MainMenu_geometry\169.ru" AptID="169"/>
+	<AptGeometryData id="MainMenu_173" File="MainMenu_geometry\173.ru" AptID="173"/>
+	<AptGeometryData id="MainMenu_178" File="MainMenu_geometry\178.ru" AptID="178"/>
+	<AptGeometryData id="MainMenu_182" File="MainMenu_geometry\182.ru" AptID="182"/>
+	<AptGeometryData id="MainMenu_186" File="MainMenu_geometry\186.ru" AptID="186"/>
+	<AptGeometryData id="MainMenu_189" File="MainMenu_geometry\189.ru" AptID="189"/>
+	<AptGeometryData id="MainMenu_19" File="MainMenu_geometry\19.ru" AptID="19"/>
+	<AptGeometryData id="MainMenu_192" File="MainMenu_geometry\192.ru" AptID="192"/>
+	<AptGeometryData id="MainMenu_198" File="MainMenu_geometry\198.ru" AptID="198"/>
+	<AptGeometryData id="MainMenu_202" File="MainMenu_geometry\202.ru" AptID="202"/>
+	<AptGeometryData id="MainMenu_207" File="MainMenu_geometry\207.ru" AptID="207"/>
+	<AptGeometryData id="MainMenu_211" File="MainMenu_geometry\211.ru" AptID="211"/>
+	<AptGeometryData id="MainMenu_215" File="MainMenu_geometry\215.ru" AptID="215"/>
+	<AptGeometryData id="MainMenu_218" File="MainMenu_geometry\218.ru" AptID="218"/>
+	<AptGeometryData id="MainMenu_221" File="MainMenu_geometry\221.ru" AptID="221"/>
+	<AptGeometryData id="MainMenu_226" File="MainMenu_geometry\226.ru" AptID="226"/>
+	<AptGeometryData id="MainMenu_229" File="MainMenu_geometry\229.ru" AptID="229"/>
+	<AptGeometryData id="MainMenu_23" File="MainMenu_geometry\23.ru" AptID="23"/>
+	<AptGeometryData id="MainMenu_232" File="MainMenu_geometry\232.ru" AptID="232"/>
+	<AptGeometryData id="MainMenu_235" File="MainMenu_geometry\235.ru" AptID="235"/>
+	<AptGeometryData id="MainMenu_238" File="MainMenu_geometry\238.ru" AptID="238"/>
+	<AptGeometryData id="MainMenu_245" File="MainMenu_geometry\245.ru" AptID="245"/>
+	<AptGeometryData id="MainMenu_250" File="MainMenu_geometry\250.ru" AptID="250"/>
+	<AptGeometryData id="MainMenu_252" File="MainMenu_geometry\252.ru" AptID="252"/>
+	<AptGeometryData id="MainMenu_258" File="MainMenu_geometry\258.ru" AptID="258"/>
+	<AptGeometryData id="MainMenu_260" File="MainMenu_geometry\260.ru" AptID="260"/>
+	<AptGeometryData id="MainMenu_263" File="MainMenu_geometry\263.ru" AptID="263"/>
+	<AptGeometryData id="MainMenu_266" File="MainMenu_geometry\266.ru" AptID="266"/>
+	<AptGeometryData id="MainMenu_268" File="MainMenu_geometry\268.ru" AptID="268"/>
+	<AptGeometryData id="MainMenu_272" File="MainMenu_geometry\272.ru" AptID="272"/>
+	<AptGeometryData id="MainMenu_275" File="MainMenu_geometry\275.ru" AptID="275"/>
+	<AptGeometryData id="MainMenu_279" File="MainMenu_geometry\279.ru" AptID="279"/>
+	<AptGeometryData id="MainMenu_28" File="MainMenu_geometry\28.ru" AptID="28"/>
+	<AptGeometryData id="MainMenu_282" File="MainMenu_geometry\282.ru" AptID="282"/>
+	<AptGeometryData id="MainMenu_285" File="MainMenu_geometry\285.ru" AptID="285"/>
+	<AptGeometryData id="MainMenu_289" File="MainMenu_geometry\289.ru" AptID="289"/>
+	<AptGeometryData id="MainMenu_292" File="MainMenu_geometry\292.ru" AptID="292"/>
+	<AptGeometryData id="MainMenu_296" File="MainMenu_geometry\296.ru" AptID="296"/>
+	<AptGeometryData id="MainMenu_32" File="MainMenu_geometry\32.ru" AptID="32"/>
+	<AptGeometryData id="MainMenu_37" File="MainMenu_geometry\37.ru" AptID="37"/>
+	<AptGeometryData id="MainMenu_41" File="MainMenu_geometry\41.ru" AptID="41"/>
+	<AptGeometryData id="MainMenu_46" File="MainMenu_geometry\46.ru" AptID="46"/>
+	<AptGeometryData id="MainMenu_5" File="MainMenu_geometry\5.ru" AptID="5"/>
+	<AptGeometryData id="MainMenu_50" File="MainMenu_geometry\50.ru" AptID="50"/>
+	<AptGeometryData id="MainMenu_55" File="MainMenu_geometry\55.ru" AptID="55"/>
+	<AptGeometryData id="MainMenu_59" File="MainMenu_geometry\59.ru" AptID="59"/>
+	<AptGeometryData id="MainMenu_63" File="MainMenu_geometry\63.ru" AptID="63"/>
+	<AptGeometryData id="MainMenu_66" File="MainMenu_geometry\66.ru" AptID="66"/>
+	<AptGeometryData id="MainMenu_69" File="MainMenu_geometry\69.ru" AptID="69"/>
+	<AptGeometryData id="MainMenu_75" File="MainMenu_geometry\75.ru" AptID="75"/>
+	<AptGeometryData id="MainMenu_79" File="MainMenu_geometry\79.ru" AptID="79"/>
+	<AptGeometryData id="MainMenu_8" File="MainMenu_geometry\8.ru" AptID="8"/>
+	<AptGeometryData id="MainMenu_84" File="MainMenu_geometry\84.ru" AptID="84"/>
+	<AptGeometryData id="MainMenu_88" File="MainMenu_geometry\88.ru" AptID="88"/>
+	<AptGeometryData id="MainMenu_93" File="MainMenu_geometry\93.ru" AptID="93"/>
+	<AptGeometryData id="MainMenu_97" File="MainMenu_geometry\97.ru" AptID="97"/>
+	<Texture id="apt_MainMenu_1" File="art\Textures\apt_MainMenu_1.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<Texture id="apt_MainMenu_2" File="art\Textures\apt_MainMenu_2.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<Texture id="apt_MainMenu_265" File="art\Textures\apt_MainMenu_265.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+	<Texture id="apt_MainMenu_3" File="art\Textures\apt_MainMenu_3.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+</AssetDeclaration>

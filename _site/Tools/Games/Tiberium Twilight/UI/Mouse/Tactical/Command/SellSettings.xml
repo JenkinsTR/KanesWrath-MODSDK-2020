@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalCommandSellCursorSet">
+		<EntryReference
+			id="ValidTarget"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="InvalidTarget"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="UIMouseTacticalCommandSellFactionCursorSet">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Cursors"
+			AssetType="UIMouseTacticalCommandSellCursorSet" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalCommandSell"
+		TypeHash="2873907483">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DefaultCursors"
+			AssetType="UIMouseTacticalCommandSellCursorSet" />
+		<EntryList
+			id="FactionCursors"
+			AssetType="UIMouseTacticalCommandSellFactionCursorSet"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

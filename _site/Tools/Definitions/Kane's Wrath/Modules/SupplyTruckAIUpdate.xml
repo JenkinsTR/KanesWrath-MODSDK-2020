@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SupplyTruckAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AIUpdateModuleData" />
+		<Entry
+			id="MaxBoxes"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SupplyCenterActionDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="SupplyWarehouseActionDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="SupplyWarehouseScanDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DepletedAnnounceDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2000" />
+		<Entry
+			id="HarvestActivationRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="HarvestPreparationTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="HarvestActionTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="HarvestTrees"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="HarvestTiberium"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="HarvestsFromRearEnd"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPathThroughUnitsWhileDocking"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanPathThroughUnitsWhileHarvesting"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

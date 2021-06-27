@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+
+	<Asset
+		id="AudioFileRef">
+		<EntryReference
+			id="AudioFile"
+			AssetType="AudioFile" />
+	</Asset>
+
+	<Asset
+		id="AudioFileMP3Passthrough">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="File"
+			AssetType="FileReference"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="SubtitleStringName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="IsStreamed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AudioFileMP3PassthroughRuntime">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="SubtitleStringName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="IsStreamed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AudioFileMP3PassthroughRef">
+		<EntryReference
+			id="AudioFileMP3Passthrough"
+			AssetType="AudioFileMP3Passthrough" />
+	</Asset>
+
+	<EnumAsset
+		id="AudioPriority">
+		<Entry>LOWEST</Entry>
+		<Entry>LOW</Entry>
+		<Entry>NORMAL</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>HIGHEST</Entry>
+		<Entry>CRITICAL</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AudioVolumeSlider">
+		<Entry>SOUNDFX</Entry>
+		<Entry>VOICE</Entry>
+		<Entry>MUSIC</Entry>
+		<Entry>AMBIENT</Entry>
+		<Entry>MOVIE</Entry>
+		<Entry>NONE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AudioVolumeSliderMultiplier">
+		<Entry
+			id="Slider"
+			AssetType="AudioVolumeSlider"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Multiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<EnumAsset
+		id="AudioTypeFlag">
+		<Entry>UI</Entry>
+		<Entry>WORLD</Entry>
+		<Entry>SHROUDED</Entry>
+		<Entry>VOICE</Entry>
+		<Entry>PLAYER</Entry>
+		<Entry>ALLIES</Entry>
+		<Entry>ENEMIES</Entry>
+		<Entry>EVERYONE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AudioTypeFlags"
+		BaseEnum="AudioTypeFlag" />
+
+	<EnumAsset
+		id="AudioControlFlag">
+		<Entry>LOOP</Entry>
+		<Entry>SEQUENTIAL</Entry>
+		<Entry>RANDOMSTART</Entry>
+		<Entry>INTERRUPT</Entry>
+		<Entry>FADE_ON_KILL</Entry>
+		<Entry>FADE_ON_START</Entry>
+		<Entry>ALLOW_KILL_MID_FILE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AudioControlFlags"
+		BaseEnum="AudioControlFlag" />
+
+	<Asset
+		id="MP3MusicTrack">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+		<EntryRelocation
+			id="Filename"
+			AssetType="AudioFileMP3PassthroughRef" />
+	</Asset>
+
+	<Asset
+		id="AudioFileRefWithWeight">
+		<EntryReference
+			id="AudioFile"
+			AssetType="AudioFile" />
+		<EntryInheritance
+			id="base"
+			AssetType="AudioFileRef" />
+		<Entry
+			id="Weight"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+	</Asset>
+
+	<Asset
+		id="MultisoundSubsoundRef">
+		<EntryReference
+			id="BaseAudioEventInfo"
+			AssetType="BaseAudioEventInfo" />
+		<EntryInheritance
+			id="base"
+			AssetType="AudioEventInfoRef" />
+		<Entry
+			id="Weight"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+	</Asset>
+
+	<Asset
+		id="MP3DialogEvent">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+		<EntryRelocation
+			id="Filename"
+			AssetType="AudioFileMP3PassthroughRef" />
+	</Asset>
+
+	<Asset
+		id="MP3AmbientStream">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+		<EntryRelocation
+			id="Filename"
+			AssetType="AudioFileMP3PassthroughRef" />
+	</Asset>
+
+	<EnumAsset
+		id="MultisoundControlFlag">
+		<Entry>LOOP</Entry>
+		<Entry>PLAY_ONE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MultisoundControlFlags"
+		BaseEnum="MultisoundControlFlag" />
+
+	<EnumAsset
+		id="PCAudioCompressionSetting">
+		<Entry>NONE</Entry>
+		<Entry>XAS</Entry>
+		<Entry>EALAYER3</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="XenonAudioCompressionSetting">
+		<Entry>NONE</Entry>
+		<Entry>XMA</Entry>
+		<Entry>EALAYER3</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AudioFileRuntime">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="SubtitleStringName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="NumberOfSamples"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SampleRate"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="HeaderData"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="HeaderDataSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="NumberOfChannels"
+			AssetType="Byte"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="AudioFile"
+		TypeHash="1178668919">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+	</GameAsset>
+
+	<Asset
+		id="BaseAudioEventInfo">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+	</Asset>
+
+	<Asset
+		id="BaseSingleSound">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAudioEventInfo" />
+	</Asset>
+
+	<GameAsset
+		id="AudioEvent"
+		TypeHash="461922377">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="MusicTrack"
+		TypeHash="342447242">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="DialogEvent"
+		TypeHash="2253770164">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="AmbientStream"
+		TypeHash="3669695563">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="Multisound"
+		TypeHash="1313640572">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAudioEventInfo" />
+	</GameAsset>
+
+</AssetDefinition>

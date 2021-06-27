@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="RenderBinEnum">
+		<Entry>NONE</Entry>
+		<Entry>Solid</Entry>
+		<Entry>Transparent</Entry>
+		<Entry>TransparentOutlineHoverAttack</Entry>
+		<Entry>TransparentOutlineHoverSelect</Entry>
+		<Entry>TransparentOutlineSelected</Entry>
+		<Entry>Structure</Entry>
+		<Entry>StructureOutlineHoverAttack</Entry>
+		<Entry>StructureOutlineHoverSelect</Entry>
+		<Entry>StructureOutlineSelected</Entry>
+		<Entry>UnitPlayer0</Entry>
+		<Entry>UnitPlayer1</Entry>
+		<Entry>UnitPlayer2</Entry>
+		<Entry>UnitPlayer3</Entry>
+		<Entry>UnitPlayer4</Entry>
+		<Entry>UnitPlayer5</Entry>
+		<Entry>UnitPlayer6</Entry>
+		<Entry>UnitPlayer7</Entry>
+		<Entry>UnitPlayer8</Entry>
+		<Entry>UnitPlayer9</Entry>
+		<Entry>UnitPlayer10</Entry>
+		<Entry>UnitPlayer11</Entry>
+		<Entry>UnitPlayer12</Entry>
+		<Entry>UnitPlayer13</Entry>
+		<Entry>UnitPlayer14</Entry>
+		<Entry>UnitPlayer15</Entry>
+		<Entry>UnitPlayer16</Entry>
+		<Entry>UnitPlayer17</Entry>
+		<Entry>UnitPlayer18</Entry>
+		<Entry>UnitPlayer19</Entry>
+		<Entry>UnitPlayer_END</Entry>
+		<Entry>UnitOutlineHoverAttack</Entry>
+		<Entry>UnitOutlineHoverSelect</Entry>
+		<Entry>UnitOutlineSelected</Entry>
+		<Entry>Bridge</Entry>
+		<Entry>TerrainLikeGroundObject</Entry>
+		<Entry>StaticSort1</Entry>
+		<Entry>StaticSort2</Entry>
+		<Entry>StaticSort3</Entry>
+		<Entry>StaticSort4</Entry>
+		<Entry>StaticSort5</Entry>
+		<Entry>StaticSort_END</Entry>
+		<Entry>Distorter</Entry>
+		<Entry>Underwater</Entry>
+		<Entry>OceanDisplacement</Entry>
+		<Entry>TerrainUIRender</Entry>
+		<Entry>LightSource</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="RenderPassEnum">
+		<Entry>ShadowMap</Entry>
+		<Entry>DepthMap</Entry>
+		<Entry>Reflection</Entry>
+		<Entry>Frame</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="RenderCameraEnum">
+		<Entry>Viewer</Entry>
+		<Entry>ShadowMap</Entry>
+		<Entry>Reflection</Entry>
+		<Entry>OceanDisplacement</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="10" CRC="0" Description="Map:MetaGameWorldAct3/Desc" DisplayName="MetaGameWorldAct3" FileName="Data\maps\official\MetaGameWorldAct3\MetaGameWorldAct3.map" Height="320" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="620" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="4354.54" y="1507.86" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

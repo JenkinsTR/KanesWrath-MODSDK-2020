@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PlayerHealSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="HealAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HealRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HealAffects"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="HealFX"
+			AssetType="FXList"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="HealOCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="HealAsPercent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

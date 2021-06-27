@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="JoypadCommandBarButtonTemplateDataRef">
+		<EntryChoice
+			id="JoypadCommandBarButtonTemplateDataRef"
+			MinLength="1"
+			MaxLength="1">
+			<Entry
+				id="ActivateHotSpot"
+				AssetType="JoypadCommandBarButtonTemplateDataActivateHotSpot" />
+			<Entry
+				id="AIStrategicDirective"
+				AssetType="JoypadCommandBarButtonTemplateDataAIStrategicDirective" />
+			<Entry
+				id="AssembleStructure"
+				AssetType="JoypadCommandBarButtonTemplateDataAssembleStructure" />
+			<Entry
+				id="AutoControlGroup"
+				AssetType="JoypadCommandBarButtonTemplateDataAutoControlGroup" />
+			<Entry
+				id="EnterCommandMode"
+				AssetType="JoypadCommandBarButtonTemplateDataEnterCommandMode" />
+			<Entry
+				id="Evacuate"
+				AssetType="JoypadCommandBarButtonTemplateDataEvacuate" />
+			<Entry
+				id="MultiplePowersTargetedSpecialPower"
+				AssetType="JoypadCommandBarButtonTemplateDataMultiplePowersTargetedSpecialPower" />
+			<Entry
+				id="ObjectUpgrade"
+				AssetType="JoypadCommandBarButtonTemplateDataObjectUpgrade" />
+			<Entry
+				id="OpenCoopCommunicator"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenCoopCommunicator" />
+			<Entry
+				id="OpenControlGroups"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenControlGroups" />
+			<Entry
+				id="OpenPlayerPowers"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenPlayerPowers" />
+			<Entry
+				id="OpenPlayerTechStore"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenPlayerTechStore" />
+			<Entry
+				id="OpenStances"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenStances" />
+			<Entry
+				id="OpenUnitAbilities"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenUnitAbilities" />
+			<Entry
+				id="OpenUnitsMenu"
+				AssetType="JoypadCommandBarButtonTemplateDataOpenUnitsMenu" />
+			<Entry
+				id="PlaceReadyStructure"
+				AssetType="JoypadCommandBarButtonTemplateDataPlaceReadyStructure" />
+			<Entry
+				id="PlayerControlGroup"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerControlGroup" />
+			<Entry
+				id="PlayerPower"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerPower" />
+			<Entry
+				id="PlayerMultiplePowersTargetedPower"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerMultiplePowersTargetedPower" />
+			<Entry
+				id="PlayerMultipleTargetsTargetedPower"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerMultipleTargetsTargetedPower" />
+			<Entry
+				id="PlayerTargetedPower"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerTargetedPower" />
+			<Entry
+				id="PlayerUpgrade"
+				AssetType="JoypadCommandBarButtonTemplateDataPlayerUpgrade" />
+			<Entry
+				id="ProductionQueueType"
+				AssetType="JoypadCommandBarButtonTemplateDataProductionQueueType" />
+			<Entry
+				id="RedAlert"
+				AssetType="JoypadCommandBarButtonTemplateDataRedAlert" />
+			<Entry
+				id="SetStance"
+				AssetType="JoypadCommandBarButtonTemplateDataSetStance" />
+			<Entry
+				id="SpecialPower"
+				AssetType="JoypadCommandBarButtonTemplateDataSpecialPower" />
+			<Entry
+				id="TargetedSpecialPower"
+				AssetType="JoypadCommandBarButtonTemplateDataTargetedSpecialPower" />
+			<Entry
+				id="ToggleSpecialPower"
+				AssetType="JoypadCommandBarButtonTemplateDataToggleSpecialPower" />
+			<Entry
+				id="Unpack"
+				AssetType="JoypadCommandBarButtonTemplateDataUnpack" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="JoypadCommandBarButtonTemplate"
+		TypeHash="689163324">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryRelocation
+			id="Data"
+			AssetType="JoypadCommandBarButtonTemplateDataRef" />
+	</GameAsset>
+
+</AssetDefinition>

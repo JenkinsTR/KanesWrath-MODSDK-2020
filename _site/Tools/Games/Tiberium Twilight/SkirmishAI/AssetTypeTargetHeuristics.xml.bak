@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TargetingHeuristicType">
+		<Entry>EnemyStructure</Entry>
+		<Entry>FriendlyStructure</Entry>
+		<Entry>EnemyUnit</Entry>
+		<Entry>FriendlyUnit</Entry>
+		<Entry>UnderAttackBy</Entry>
+		<Entry>EnemyUnitCloseToShore</Entry>
+		<Entry>EnemyStructureCloseToShore</Entry>
+		<Entry>NeutralGarrison</Entry>
+		<Entry>EnemyGarrison</Entry>
+		<Entry>Expansion</Entry>
+		<Entry>TechBuilding</Entry>
+		<Entry>Bridge</Entry>
+		<Entry>Beacon</Entry>
+		<Entry>Crate</Entry>
+		<Entry>Help</Entry>
+		<Entry>Husk</Entry>
+		<Entry>Point</Entry>
+		<Entry>UnpackBuildingPlacement</Entry>
+		<Entry>NamedObject</Entry>
+		<Entry>Waypoint</Entry>
+		<Entry>Team</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AITargetSortType">
+		<Entry>Distance</Entry>
+		<Entry>ThreatToGround</Entry>
+		<Entry>ThreatToAir</Entry>
+		<Entry>ThreatToWater</Entry>
+		<Entry>Random</Entry>
+		<Entry>ClosestToEnemy</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AITargetLocationType">
+		<Entry>Water</Entry>
+		<Entry>Land</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AITargetLocationBitFlags"
+		BaseEnum="AITargetLocationType" />
+
+	<Asset
+		id="BuildingPlacementDistance">
+		<Entry
+			id="Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AITargetingHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="HeuristicType"
+			AssetType="TargetingHeuristicType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="SortType"
+			AssetType="AITargetSortType"
+			IsAttribute="true"
+			Default="Distance" />
+		<Entry
+			id="VitalKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="VitalObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ThreatFinderRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SearchRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1500.0" />
+		<EntryRelocation
+			id="Beacon"
+			AssetType="AIBeaconType"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Location"
+			AssetType="AITargetLocationBitFlags"
+			IsAttribute="true"
+			Default="Wate" />
+		<Entry
+			id="MaxDistanceToShore"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<EntryRelocation
+			id="Relationship"
+			AssetType="ObjectFilterRelationshipBitMask"
+			IsAttribute="true" />
+		<Entry
+			id="MinDistanceFromEnemy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinDistanceFromConyardEntrance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="IgnoreMinDistanceFromConyardEntranceForTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="BaseSelection"
+			AssetType="AIBaseSelectionCriteria" />
+		<EntryList
+			id="BuildingPlacementDistance"
+			AssetType="BuildingPlacementDistance"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="Destroyed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HighestPriorityEnemyPlayersOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UnderAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequireUniqueTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

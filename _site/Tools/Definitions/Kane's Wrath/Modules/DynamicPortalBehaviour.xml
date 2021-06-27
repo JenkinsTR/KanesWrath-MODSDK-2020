@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DynamicPortalBehaviourWaypointData">
+		<Entry
+			id="BoneIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Type"
+			AssetType="WaypointPortalType"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="DynamicPortalBehaviourLink">
+		<EntryList
+			id="DynamicPortalBehaviourLink"
+			AssetType="SageInt"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="DynamicPortalBehaviourModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="NumberOfBones"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BonePrefix"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="WallBoundsMeshOverload"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AboveWallIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TopAttackRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ActivationDelaySeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="WayPointData"
+			AssetType="DynamicPortalBehaviourWaypointData"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="LinkData"
+			AssetType="DynamicPortalBehaviourLink"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="TopAttackPosition"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="BGenerateNow"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="IsAllowEnemies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

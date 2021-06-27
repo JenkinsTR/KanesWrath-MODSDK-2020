@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StatusBitsUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="StatusToSet"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StatusToClear"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ApplyToContained"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

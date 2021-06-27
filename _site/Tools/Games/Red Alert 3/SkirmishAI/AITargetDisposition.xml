@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AITargetDisposition"
+		IsStartingNegative="true">
+		<Entry>Invalid</Entry>
+		<Entry>Offensive</Entry>
+		<Entry>Defensive</Entry>
+		<Entry>Neutral</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

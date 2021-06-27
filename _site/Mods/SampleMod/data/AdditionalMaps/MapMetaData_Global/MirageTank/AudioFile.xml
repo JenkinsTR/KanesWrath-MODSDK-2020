@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AudioFile id="AUMirag_movStartA"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_movStartA.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_movStartB"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_movStartB.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_movStartC"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_movStartC.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtka"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtka.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkd"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkd.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtke"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtke.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkf"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkf.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkg"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkg.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiAtkh"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiAtkh.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiCrea"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiCrea.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiCreb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiCreb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMova"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMova.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovAtka"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovAtka.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovAtkb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovAtkb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovAtkc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovAtkc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovAtkd"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovAtkd.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovAtke"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovAtke.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovd"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovd.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMove"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMove.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovf"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovf.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiMovg"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiMovg.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiReta"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiReta.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiRetb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiRetb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiRetc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiRetc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSela"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSela.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelBata"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelBata.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelBatb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelBatb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelBatc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelBatc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelBatd"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelBatd.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelBate"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelBate.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSelc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSelc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSeld"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSeld.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_VoiSele"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_VoiSele.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_wea1FireA"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_wea1FireA.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_wea1FireB"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_wea1FireB.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="AUMirag_wea1FireC"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/AUMirag_wea1FireC.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissa"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissa.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissb"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissb.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissc"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissc.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissd"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissd.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMisse"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMisse.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissf"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissf.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissg"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissg.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissh"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissh.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissi"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissi.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="JUChopp_weapMissj"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/JUChopp_weapMissj.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpA"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpA.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpB"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpB.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpC"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpC.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpD"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpD.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpE"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpE.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpF"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpF.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpG"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpG.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpH"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpH.wav"
+		GUIPreset="Default" />
+		
+	<AudioFile id="WTankLand_moveLpI"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/MirageTank/WTankLand_moveLpI.wav"
+		GUIPreset="Default" />
+</AssetDeclaration>

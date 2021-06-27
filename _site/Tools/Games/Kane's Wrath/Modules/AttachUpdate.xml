@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AttachUpdateFlagsType">
+		<Entry>NONE</Entry>
+		<Entry>FIND_BEST_PARENT</Entry>
+		<Entry>UNCONTAINED_ONLY</Entry>
+		<Entry>SAME_PLAYER_ONLY</Entry>
+		<Entry>ONE_ATTACH_PER_PARENT</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AttachUpdateFlagsBitFlags"
+		BaseEnum="AttachUpdateFlagsType" />
+
+	<Asset
+		id="AttachUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ParentStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenParentStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Range"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CloseEnoughRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<Entry
+			id="ParentOwnerAttachmentEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ParentAllyAttachmentEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ParentEnemyAttachmentEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttachFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ParentOwnerDiedEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ParentAllyDiedEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ParentEnemyDiedEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="InitialAttachDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="IdleScanDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.35s" />
+		<Entry
+			id="Flags"
+			AssetType="AttachUpdateFlagsBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="ShouldStickToParent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="Teleport"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseGeometry"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="DetachWhenParentHealed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DetachWhenParentOutOfSlavedRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequireFullyHealedToDetach"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ScanForNewParentWhenDetached"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanAttachToHordeMembers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

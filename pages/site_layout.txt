@@ -1,0 +1,45 @@
+Home
+	Overview
+	Setting up the SDK
+	Creating a Mod
+	Art Pipeline
+
+Tools
+	WrathEd
+	4GB Patch
+	BIG Editors
+	Jonwil's Tools
+	VP6 Converter
+	EALayer3
+
+Mapping
+	WorldBuilder
+	Map Scripting
+	Map Reference
+
+Code Reference
+	Structures
+	Units
+	AptUI
+	Powers & Upgrades
+	Gameplay
+	AI
+	Other
+
+Music & Sounds
+	Extracting Audio
+	Converting Sounds
+
+Scripting
+	LUA
+	
+Updates & Patches
+	Game Updates
+	KWBandage
+
+FAQs
+
+Bugs
+
+Credits
+

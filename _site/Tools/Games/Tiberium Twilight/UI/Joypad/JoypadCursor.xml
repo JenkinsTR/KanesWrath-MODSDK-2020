@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="JoypadCursor">
+		<Entry>DEFAULT</Entry>
+		<Entry>SELECT</Entry>
+		<Entry>MOVE</Entry>
+		<Entry>ATTACK_INRANGE</Entry>
+		<Entry>ATTACK_OUTRANGE</Entry>
+		<Entry>GARRISON</Entry>
+		<Entry>HARVEST</Entry>
+		<Entry>FORCE_MOVE</Entry>
+		<Entry>FORCE_ATTACK_INRANGE</Entry>
+		<Entry>FORCE_ATTACK_OUTRANGE</Entry>
+		<Entry>RALLY_POINT</Entry>
+		<Entry>TARGET_ABILITY</Entry>
+		<Entry>REPAIR</Entry>
+		<Entry>INVALID</Entry>
+		<Entry>PAINT_SELECT</Entry>
+		<Entry>CAPTURE</Entry>
+		<Entry>COMBINED</Entry>
+		<Entry>CHARGED_DEFENSE</Entry>
+		<Entry>CLEAR_GARRISON</Entry>
+		<Entry>COMMAND_BOMB</Entry>
+		<Entry>MANIPULATOR</Entry>
+		<Entry>CONVERSION_BEAM</Entry>
+		<Entry>BLANK_CURSOR</Entry>
+		<Entry>SELL</Entry>
+		<Entry>CANT_SELL</Entry>
+		<Entry>TOGGLE_POWER</Entry>
+		<Entry>CANT_TOGGLE_POWER</Entry>
+		<Entry>TOGGLE_REPAIR</Entry>
+		<Entry>CANT_TOGGLE_REPAIR</Entry>
+		<Entry>AI_DIRECTIVE_ASSAULT</Entry>
+		<Entry>AI_DIRECTIVE_HOLD</Entry>
+		<Entry>ASSAULT_SELECT</Entry>
+		<Entry>HEAL</Entry>
+		<Entry>MINE_ORE</Entry>
+		<Entry>DOCK</Entry>
+		<Entry>GET_CRATE</Entry>
+		<Entry>INFILTRATE_VISION_STRUCTURE</Entry>
+		<Entry>INFILTRATE_ENERGY</Entry>
+		<Entry>INFILTRATE_STEAL_MONEY</Entry>
+		<Entry>INFILTRATE_VISION_UNITS</Entry>
+		<Entry>INFILTRATE_RESET_TIMER</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

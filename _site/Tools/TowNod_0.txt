@@ -1,0 +1,6 @@
+Mission 0
+Frame 20
+Depth 1
+Postion 522.900024 170.350006
+Ratio 0.000305
+Mission Name Position Left

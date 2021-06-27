@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SPMovementType">
+		<Entry>NONE</Entry>
+		<Entry>STRAIGHT_AHEAD</Entry>
+		<Entry>TARGETED</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="MovementSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="MovementType"
+			AssetType="SPMovementType"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="ModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="LocomotorSet"
+			AssetType="LocomotorSetType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="BusyDurationOnExit"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="CollisionBounceHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="CollisionBounceDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="CollisionBounceSpeedScalar"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+	</Asset>
+
+</AssetDefinition>

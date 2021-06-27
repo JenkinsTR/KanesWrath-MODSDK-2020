@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIMilitaryCaptionSettings">
+		<Entry
+			id="Delay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="750ms" />
+		<Entry
+			id="Color"
+			AssetType="RGBColor" />
+		<Entry
+			id="Position"
+			AssetType="Coord2D" />
+		<Entry
+			id="TitleFont"
+			AssetType="FontDesc" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+		<Entry
+			id="Centered"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

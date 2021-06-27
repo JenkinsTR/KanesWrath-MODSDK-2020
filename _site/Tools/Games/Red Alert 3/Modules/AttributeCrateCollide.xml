@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AttributeCrateCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CrateCollideModuleData" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true"
+			Default="AttributeModifier_InvulnerabilityCrate" />
+	</Asset>
+
+</AssetDefinition>

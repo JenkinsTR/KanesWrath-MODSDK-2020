@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PassengerDataType">
+		<Entry
+			id="BonePrefix"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Flags"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="MemberTemplateStatusData">
+		<EntryWeakReference
+			id="ThingTemplate"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="OpenContainUpgradeOverrideData">
+		<EntryWeakReference
+			id="UpgradeTriggeredBy"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ObjectStatusOfContained"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="OpenContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ContainMax"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="EnterSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExitSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="DamagePercentToUnits"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PassengersTestCollisionHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1000" />
+		<Entry
+			id="NumberOfExitPaths"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="DoorOpenTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="ObjectStatusOfContained"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModifierRequiredTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="KillIfEmptyTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ModelConditionsWhenNotEmpty"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="PassengerFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="ManualPickUpFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="DieMuxData"
+			AssetType="DieMuxDataType" />
+		<EntryList
+			id="PassengerData"
+			AssetType="PassengerDataType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ModifierToGiveOnExit"
+			AssetType="AttributeModifierRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="MemberTemplateStatusInfo"
+			AssetType="MemberTemplateStatusData"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UpgradeContainerOnContain"
+			AssetType="UpgradeContainerOnContainModuleData"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="OpenContainUpgradeOverride"
+			AssetType="OpenContainUpgradeOverrideData" />
+		<Entry
+			id="PassengersInTurret"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowOwnPlayerInsideOverride"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowAlliesInside"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AllowEnemiesInside"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AllowNeutralInside"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ShowPips"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CollidePickup"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EjectPassengersOnDeath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="KillPassengersOnDeath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HasObjectStatusOfContainedEntry"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="Enabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

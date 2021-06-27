@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CostModifierUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryList
+			id="Percentages"
+			AssetType="Percentage"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="UILabel"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="ApplyToUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="IsUpgradeDiscountUpgrade"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartsActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="Slaughter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

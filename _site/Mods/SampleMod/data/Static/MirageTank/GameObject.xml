@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<GameObject
+		id="MirageTank"
+		SelectPortrait="Portrait_MirageTank"
+		ButtonImage="Button_MirageTank"
+		Side="GDI"
+		EditorSorting="UNIT"
+		HealthBoxHeightOffset="25"
+		CommandPoints="100"
+		TransportSlotCount="1"
+		BuildTime="20"
+		BuildCost="2000"
+		CommandSet="MirageTankCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS CAN_REVERSE_MOVE SCORE VEHICLE CAN_BE_FAVORITE_UNIT"
+		RadarPriority="UNIT"
+		ThreatLevel="10"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		WeaponCategory="CANNON"
+		VoicePriority="184"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="4s"
+		EditorName="MirageTank"
+		Description="DESC:MirageTank"
+		TypeDescription="TYPE:MirageTank">
+		<DisplayName>NAME:MirageTank</DisplayName>
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">
+			<RequiredObject>GDIArmory</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="MirageTankArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			id="DefaultLocomotor"
+			Locomotor="MirageTankLocomotor"
+			Condition="NORMAL"
+			Speed="50.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<TankDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				ExtraPublicBone="FX_Weapon BONE_EAR_LEFT BONE_EAR_RIGHT B_TREAD_FRONT_LEFT B_TREAD_FRONT_RIGHT B_TREAD_REAR_LEFT B_TREAD_REAR_RIGHT T2_UNIT"
+				TrackMarks="EXTireTrack2"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				TrackMarksLeftBone="Bone_Tire_Rear_Left"
+				TrackMarksRightBone="Bone_Tire_Rear_Right"
+				TreadAnimationRate="0.15"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_SKN" />
+					<WeaponFireFXBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_Weapon" />
+					<WeaponLaunchBone
+						WeaponSlotID="1"
+						WeaponSlotType="PRIMARY_WEAPON"
+						BoneName="FX_Weapon" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					RetainSubObjects="true"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_SKN" />
+					<Texture
+						Original="AUAntiVehicleVehicleTech3"
+						New="AUAntiVehicleVehicleTech3_D" />
+				</ModelConditionState>	
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_FP" />
+				</ModelConditionState>				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Script> 
+						CurDrawableShowSubObject("NEWSKIN_TREADS") 
+						CurDrawableHideSubObject("NEWSKIN_TREADS_BACK")
+						CurDrawableHideSubObject("NEWSKIN_TREADS_MOVE")
+					</Script>						
+				</AnimationState>
+				<AnimationState
+					  ParseCondStateType="PARSE_NORMAL"
+					  ConditionsYes="MOVING BACKING_UP">
+					<Animation
+						AnimationName="AUAntiVehicleVehicleTech3_MOVA"
+						AnimationMode="LOOP" />
+					<Script> 
+						CurDrawableShowSubObject("NEWSKIN_TREADS_BACK") 
+						CurDrawableHideSubObject("NEWSKIN_TREADS")
+						CurDrawableHideSubObject("NEWSKIN_TREADS_MOVE")
+					</Script>
+				</AnimationState>	
+				<AnimationState
+					  ParseCondStateType="PARSE_NORMAL"
+					  ConditionsYes="MOVING">
+					<Animation
+						AnimationName="AUAntiVehicleVehicleTech3_MOVA"
+						AnimationMode="LOOP" />
+					<Script> 
+						CurDrawableShowSubObject("NEWSKIN_TREADS_MOVE") 
+						CurDrawableHideSubObject("NEWSKIN_TREADS")
+						CurDrawableHideSubObject("NEWSKIN_TREADS_BACK")
+					</Script>
+				</AnimationState>	
+			</TankDraw>
+			
+			<TankDraw
+				id="ModuleTag_StealthDraw"
+				OkToChangeModelColor="true"
+				InvertStealthOpacity="true"
+				ExtraPublicBone="FX_Weapon BONE_EAR_LEFT BONE_EAR_RIGHT B_TREAD_FRONT_LEFT B_TREAD_FRONT_RIGHT B_TREAD_REAR_LEFT B_TREAD_REAR_RIGHT T2_UNIT"
+				TrackMarks="EXTireTrack2"
+				TrackMarksOnlyWhenCorneringQuickly="false"
+				TrackMarksLeftBone="Bone_Tire_Rear_Left"
+				TrackMarksRightBone="Bone_Tire_Rear_Right"
+				TreadAnimationRate="0.15"
+				TreadDriveSpeedFraction="0.25"
+				TreadPivotSpeedFraction="0.9"
+				InitialRecoilSpeed="0.1"
+				MaxRecoilDistance="0.1"
+				RecoilDamping="2.0"
+				RecoilSettleSpeed="3.0">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					RetainSubObjects="true">
+					<Model
+						Name="AUAntiVehicleVehicleTech3Stealth_SKN" />
+				</ModelConditionState>		
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Model
+						Name="" />
+				</ModelConditionState>	
+			</TankDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_FX"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_FX" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_FX" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_FX" />
+					<ParticleSysBone
+						BoneName="FX_BONE01"
+						FXParticleSystemTemplate="VehicleDamageFire02"
+						FollowBone="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>						
+			<LaserDraw
+				id="ModuleTag_LaserDraw"
+				Texture1_UTile="1"
+				Texture1_VTile="1"
+				Texture1_UScrollRate="0.2"
+				Texture1_VScrollRate=".3"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="0"
+				Texture2_UTile="1"
+				Texture2_VTile="1"
+				Texture2_UScrollRate="-.2"
+				Texture2_VScrollRate="-.3"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="0"
+				LaserWidth="25"
+				WeaponSlotID="1"
+				LaserStateID="1">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXAlliedPrismBeam</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXAlliedPrismBeam</Value>
+						</Texture>
+						<Float Name="ColorEmissive">
+							<Value>4.000000</Value>
+							<Value>4.000000</Value>
+							<Value>4.000000</Value>
+						</Float>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+			<LaserDraw
+				id="ModuleTag_LaserDraw_Vet"
+				Texture1_UTile="1"
+				Texture1_VTile="1"
+				Texture1_UScrollRate="0.2"
+				Texture1_VScrollRate=".3"
+				Texture1_NumFrames="1"
+				Texture1_FrameRate="0"
+				Texture2_UTile="1"
+				Texture2_VTile="1"
+				Texture2_UScrollRate="-.2"
+				Texture2_VScrollRate="-.3"
+				Texture2_NumFrames="1"
+				Texture2_FrameRate="0"
+				LaserWidth="25"
+				WeaponSlotID="1"
+				LaserStateID="2">
+				<FXShader
+					ShaderName="Laser.fx"
+					TechniqueIndex="0">
+					<Constants>
+						<Texture
+							Name="Texture1">
+							<Value>FXAlliedPrismBeam</Value>
+						</Texture>
+						<Texture
+							Name="Texture2">
+							<Value>FXAlliedPrismBeam_Vet</Value>
+						</Texture>
+						<Float Name="ColorEmissive">
+							<Value>4.000000</Value>
+							<Value>4.000000</Value>
+							<Value>4.000000</Value>
+						</Float>
+					</Constants>
+				</FXShader>
+			</LaserDraw>
+		</Draws>
+		<Behaviors>
+			<ProductionUpdate
+				id="ProductionUpdateModuleTag"
+				GiveNoXP="true" />
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic" />
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<InvisibilityUpdate
+				id="ModuleTag_IdleInvisibility"
+				UpdatePeriod="0.1s"
+				OpacityMin="40%"
+				OpacityMax="100%"
+				Options="STARTS_ACTIVE">
+				<InvisibilityNugget
+					ForbiddenStatus=""
+					HintDetectableStates=""
+					ForbiddenConditions="REALLYDAMAGED USING_WEAPON_A"
+					EnteringStealthFX="FX_NODStealthTransitionOn"
+					LeavingStealthFX="FX_NODStealthTransitionOff" />
+			</InvisibilityUpdate>
+			<!-- Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget
+					ForbiddenConditions="USING_WEAPON_A"
+					ForbiddenStatus=""
+					HintDetectableStates="" />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedAntiVehicleVehicleTech3PrismCannon"/>
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="AlliedAntiVehicleVehicleTech3PrismCannon_Veteran"
+						ObjectStatus="WEAPON_UPGRADED_01" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<LaserState
+				id="ModuleTag_LaserState"
+				LaserId="1" />
+			<LaserState
+				id="ModuleTag_LaserState_Vet"
+				LaserId="2" />
+			<Physics
+				id="ModuleTag_Physics" />	
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="MirageTank_Die_OCL">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</CreateObjectDie>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIMammothExplode" />
+			</FXListBehavior>
+			<StatusBitsUpgrade
+				id="ModuleTag_VeterancyUpgrade"
+				StatusToSet="WEAPON_UPGRADED_01">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</StatusBitsUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="YES"
+				HoldGroundCloseRangeDistance="250.0">
+				<UnitAITargetChooserData 
+					IdleScanDelay="0.0s"/>
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="5000" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="20.0"
+				MinorRadius="14.0"
+				Height="17.0"
+				ContactPointGeneration="VEHICLE"/>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceAttack" AudioType="voiceAttack" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceCreate" AudioType="voiceCreated" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceMove" AudioType="voiceMove" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceMoveAttack" AudioType="voiceAttackAfterMoving" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceRetreat" AudioType="voiceRetreatToCastle" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceSelect" AudioType="voiceSelect" />
+			<AudioEntry Sound="AudioEvent:ALL_MirageTank_VoiceSelectBattle" AudioType="voiceSelectBattle" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:ALL_Mirage_MoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:VehicleCrush"
+				AudioType="soundCrushing" />
+			<AudioEntry
+				Sound="AudioEvent:Tank_Land_MoveLoop"
+				AudioType="soundMoveLoop" />	
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<VisionInfo
+			VisionRange="300"
+			ShroudClearingRange="400" />
+		<CrusherInfo 
+			CrushableLevel="20" 
+			CrusherLevel="20" 
+			CrushDecelerationPercent="80%" />
+	</GameObject>
+	
+	<GameObject
+		id="MirageTank_Collapse"
+		EditorName="MirageTank_Collapse"
+		Side="Neutral"
+		EditorSorting="MISC_MAN_MADE"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CLEARED_BY_BUILD"
+		RadarPriority="NOT_ON_RADAR">
+		<DisplayName>Collapsing Object</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw 
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="AUAntiVehicleVehicleTech3_COL" />
+					<Texture
+						Original="AUAntiVehicleVehicleTech3"
+						New="AUAntiVehicleVehicleTech3_D" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifeTime"
+				MinLifetime="4s"
+				MaxLifetime="5s" />	
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="1s"
+				SinkRate="1.5"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="100" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="SPHERE"
+				MajorRadius="20.0"
+				Height="20.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+</AssetDeclaration>

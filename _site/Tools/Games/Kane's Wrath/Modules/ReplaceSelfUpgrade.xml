@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ReplaceSelfUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="NewObjectUnpackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="ReplacementTemplate"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="DisabledDuringUnpack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CheckBuildAssistant"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

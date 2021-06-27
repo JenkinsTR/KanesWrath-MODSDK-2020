@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AssistedTargetingUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="AssistingClipSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="AssistingWeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+		<EntryReference
+			id="LaserFromAssisted"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryReference
+			id="LaserToTarget"
+			AssetType="GameObject"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

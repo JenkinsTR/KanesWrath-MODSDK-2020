@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HotKeyDef">
+		<EntryReference
+			id="Slot"
+			AssetType="HotKeySlot"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Key"
+			AssetType="MappableKey"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Modifiers"
+			AssetType="HotKeyModifierFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="HotKeyMap">
+		<EntryList
+			id="HotKey"
+			AssetType="HotKeyDef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

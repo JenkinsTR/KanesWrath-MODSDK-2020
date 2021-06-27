@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentCampaign">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="TowToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MissionToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MissionBriefingToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LoadMusic"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

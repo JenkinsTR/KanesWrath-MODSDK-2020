@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="XPipeObject">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PositionX"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PositionY"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Health"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="UnitAIStateName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="UnitAIGoalObjectID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="XPipeTeamObject">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="XPipeTeam">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+		<EntryList
+			id="Objects"
+			AssetType="XPipeTeamObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="MiddleManager"
+			AssetType="XPipeAIMiddleManager" />
+	</Asset>
+
+	<Asset
+		id="XPipeAIComponent">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Enabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<EnumAsset
+		id="ProductionState">
+		<Entry>PENDING</Entry>
+		<Entry>BUILDING</Entry>
+		<Entry>QUEUE_DONE</Entry>
+		<Entry>DONE</Entry>
+		<Entry>FAILED</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="XPipeAIBuildable">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Priority"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="ProductionState"
+			AssetType="ProductionState"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeAIStates">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Weight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="XPipeAITargetTypes">
+		<Entry>ENEMY_STRUCTURE</Entry>
+		<Entry>DEFENSIVE</Entry>
+		<Entry>OPPORTUNITY</Entry>
+		<Entry>EXPANSION</Entry>
+		<Entry>TARGETLESS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="XPipeAITarget">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TargetType"
+			AssetType="XPipeAITargetTypes"
+			IsAttribute="true" />
+		<Entry
+			id="NumTactics"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyThreat"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FrameSet"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeSkirmishAIState">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Components"
+			AssetType="XPipeAIComponent"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BuildQueue"
+			AssetType="XPipeAIBuildable"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="States"
+			AssetType="XPipeAIStates"
+			MinLength="1"
+			MaxLength="0" />
+		<EntryList
+			id="Targets"
+			AssetType="XPipeAITarget"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="XPipeMiddleManagerTargeting">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TargetName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TimeOnTarget"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeAIMiddleManager">
+		<EntryList
+			id="CombatDirections"
+			AssetType="XPipeMiddleManagerTargeting"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="XPipePlayerConquerMetrics">
+		<Entry
+			id="Dummy"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipePlayer">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Teams"
+			AssetType="XPipeTeam"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ScriptTeams"
+			AssetType="XPipeTeam"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="SkirmishAI"
+			AssetType="XPipeSkirmishAIState" />
+		<Entry
+			id="PlayerConquerMetrics"
+			AssetType="XPipePlayerConquerMetrics" />
+	</Asset>
+
+	<Asset
+		id="XPipeGlobalEventObjectDamaged">
+		<EntryInheritance
+			id="base"
+			AssetType="XPipeEvent" />
+		<Entry
+			id="VictimID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SourceID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DamageAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DamageType"
+			AssetType="DamageType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeGlobalEventObjectCreated">
+		<EntryInheritance
+			id="base"
+			AssetType="XPipeEvent" />
+		<Entry
+			id="ObjectID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeGlobalEventObjectDestroyed">
+		<EntryInheritance
+			id="base"
+			AssetType="XPipeEvent" />
+		<Entry
+			id="ObjectID"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeEventList">
+		<EntryChoice
+			id="XPipeEventList"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="GlobalEventObjectDamaged"
+				AssetType="XPipeGlobalEventObjectDamaged" />
+			<Entry
+				id="GlobalEventObjectCreated"
+				AssetType="XPipeGlobalEventObjectCreated" />
+			<Entry
+				id="GlobalEventObjectDestroyed"
+				AssetType="XPipeGlobalEventObjectDestroyed" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="XPipeLogicFrame">
+		<Entry
+			id="Frame"
+			AssetType="xs:unsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="Objects"
+			AssetType="XPipeObject"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Players"
+			AssetType="XPipePlayer"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="Events"
+			AssetType="XPipeEventList" />
+	</Asset>
+
+	<Asset
+		id="XPipeWeaponTurretTemplate">
+		<EntryList
+			id="WeaponTemplates"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="XPipeThingTemplate">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MaxHealth"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Speed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BuildCost"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BuildTime"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryList
+			id="WeaponTurrets"
+			AssetType="XPipeWeaponTurretTemplate"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ArmorTemplates"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="CanAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsImmortal"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeWeaponNuggetDamage">
+		<EntryInheritance
+			id="base"
+			AssetType="XPipeWeaponNugget" />
+		<Entry
+			id="DamageAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DamageType"
+			AssetType="DamageType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeWeaponNuggetProjectile">
+		<EntryInheritance
+			id="base"
+			AssetType="XPipeWeaponNugget" />
+		<Entry
+			id="WarheadWeaponTemplate"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeWeaponNuggetList">
+		<EntryChoice
+			id="XPipeWeaponNuggetList"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="DamageNugget"
+				AssetType="XPipeWeaponNuggetDamage" />
+			<Entry
+				id="ProjectileNugget"
+				AssetType="XPipeWeaponNuggetProjectile" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="XPipeWeaponTemplate">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AverageTimePerShot"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Nuggets"
+			AssetType="XPipeWeaponNuggetList" />
+	</Asset>
+
+	<Asset
+		id="XPipeThingTemplateConquerMetrics">
+		<Entry
+			id="ThingTemplateA"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ThingTemplateB"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DPSA"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DPSB"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TTKA"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TTKB"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="XPipeGameTemplateConquerMetrics">
+		<EntryList
+			id="ThingTemplateConquerMetrics"
+			AssetType="XPipeThingTemplateConquerMetrics"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="XPipeGameTemplateData">
+		<EntryList
+			id="ThingTemplates"
+			AssetType="XPipeThingTemplate"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponTemplates"
+			AssetType="XPipeWeaponTemplate"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="GameTemplateConquerMetrics"
+			AssetType="XPipeGameTemplateConquerMetrics" />
+	</Asset>
+
+	<Asset
+		id="XPipeGameSessionHeader">
+		<Entry
+			id="GameTemplateData"
+			AssetType="XPipeGameTemplateData" />
+	</Asset>
+
+	<Asset
+		id="XPipeGameSession">
+		<Entry
+			id="GameSessionHeader"
+			AssetType="XPipeGameSessionHeader" />
+		<EntryList
+			id="LogicFrames"
+			AssetType="XPipeLogicFrame"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

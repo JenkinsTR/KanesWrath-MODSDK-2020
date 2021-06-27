@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AimWeaponBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="AimLowThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AimHighThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AimNearDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AimFarDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

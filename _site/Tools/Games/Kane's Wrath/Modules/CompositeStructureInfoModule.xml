@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CompositeStructureInfoModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryReference
+			id="ThingTemplate"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="BuildableDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="ConnectionShadowInfo"
+			AssetType="ShadowInfo" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DominateEnemySpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="DominateRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="TriggerFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DominatedFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FiringFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AttributeModifierAffects"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="PermanentlyConvert"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

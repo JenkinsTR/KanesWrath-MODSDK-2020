@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StructureUnpackUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="UnpackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="UnpackCompleteSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<Entry
+			id="OffsetHeightAboveWater"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,169 @@
+FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = [None];
+  LAYOUTUPDATE = [None];
+  LAYOUTSHUTDOWN = [None];
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = SCROLLLISTBOX;
+  SCREENRECT = UPPERLEFT: 0 0,
+               BOTTOMRIGHT: 160 160,
+               CREATIONRESOLUTION: 800 600;
+  NAME = "ListBox.wnd:";
+  STATUS = ENABLED;
+  STYLE = SCROLLLISTBOX+MOUSETRACK;
+  SYSTEMCALLBACK = "Apt:None";
+  INPUTCALLBACK = "Apt:None";
+  TOOLTIPCALLBACK = "Apt:None";
+  DRAWCALLBACK = "Apt:None";
+  FONT = NAME: "RussellSquare", SIZE: 10, BOLD: 0;
+  HEADERTEMPLATE = "AptGadgets";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 0 0 255,
+              DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+              HILITE:   255 128 128 255, HILITEBORDER:   128 0 0 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                    IMAGE: AptListBoxHiliteSelectedItem, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                     IMAGE: AptListBoxHiliteSelectedItem, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                   IMAGE: AptListBoxHiliteSelectedItem, COLOR: 254 254 254 255, BORDERCOLOR: 128 0 0 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 229 66 0 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXDATA = LENGTH: 999,
+                AUTOSCROLL: 0,
+                SCROLLIFATEND: 1,
+                AUTOPURGE: 1,
+                SCROLLBAR: 1,
+                MULTISELECT: 0,
+                COLUMNS: 1,
+                COLUMNSWIDTH: 100,
+                FORCESELECT: 1;
+  LISTBOXENABLEDUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonEnabled, COLOR: 255 0 0 255, BORDERCOLOR: 255 128 128 255,
+                                   IMAGE: AptVSliderUpButtonHiliteSelected, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXDISABLEDUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonDisabled, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                    IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXHILITEUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonHilite, COLOR: 255 0 0 255, BORDERCOLOR: 128 0 0 255,
+                                  IMAGE: AptVSliderUpButtonHiliteSelected, COLOR: 254 254 254 255, BORDERCOLOR: 128 0 0 255,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXENABLEDDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonEnabled, COLOR: 255 0 0 255, BORDERCOLOR: 255 128 128 255,
+                                     IMAGE: AptVSliderDownButtonHiliteSelected, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXDISABLEDDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonDisabled, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                      IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXHILITEDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonHilite, COLOR: 255 0 0 255, BORDERCOLOR: 128 0 0 255,
+                                    IMAGE: AptVSliderDownButtonHiliteSelected, COLOR: 254 254 254 255, BORDERCOLOR: 128 0 0 255,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXENABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 229 66 0 0, BORDERCOLOR: 229 66 0 255,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXDISABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 0, BORDERCOLOR: 73 28 1 255,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  LISTBOXHILITESLIDERDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 255, BORDERCOLOR: 229 66 0 255,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  SLIDERTHUMBENABLEDDRAWDATA = IMAGE: AptScrollBarThumbEnabledTop, COLOR: 255 4 0 0, BORDERCOLOR: 255 243 28 255,
+                               IMAGE: AptScrollBarThumbHiliteSelectedTop, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: AptScrollBarThumbHiliteSelectedMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: AptScrollBarThumbHiliteSelectedBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: AptScrollBarThumbEnabledMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: AptScrollBarThumbEnabledBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  SLIDERTHUMBDISABLEDDRAWDATA = IMAGE: AptScrollBarThumbDisabledTop, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: AptScrollBarThumbDisabledMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: AptScrollBarThumbDisabledBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  SLIDERTHUMBHILITEDRAWDATA = IMAGE: AptScrollBarThumbHiliteTop, COLOR: 255 0 0 255, BORDERCOLOR: 128 0 0 255,
+                              IMAGE: AptScrollBarThumbHiliteSelectedTop, COLOR: 254 254 254 255, BORDERCOLOR: 128 0 0 255,
+                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: AptScrollBarThumbHiliteSelectedMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: AptScrollBarThumbHiliteSelectedBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: AptScrollBarThumbHiliteMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: AptScrollBarThumbHiliteBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+END

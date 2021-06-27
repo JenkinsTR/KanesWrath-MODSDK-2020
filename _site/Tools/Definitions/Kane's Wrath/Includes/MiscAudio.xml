@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MiscAudio"
+		TypeHash="2458267513">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="RadarNotifyHarvesterUnderAttackSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RadarNotifyStructureUnderAttackSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RadarNotifyInfiltrationSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RadarNotifyOnlineSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RadarNotifyOfflineSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GenericRadarEvent"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BeaconPlacedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BeaconPlacementFailed"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="DefectorTimerTickSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="DefectorTimerDingSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="AllCheerSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="NoCanDoSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="StealthDiscoveredSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="StealthNeutralizedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MoneyDepositSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MoneyWithdrawSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="LowPower"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="SufficientPower"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BuildingDisabled"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BuildingReenabled"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VehicleDisabled"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VehicleReenabled"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="SplatterVehiclePilotsBrain"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrateHeal"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrateShroud"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrateFreeUnit"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrateMoney"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnitPromoted"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RepairSparks"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="EnterCloseCombat"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExitCloseCombat"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="IncomingChatNotification"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="PrivateMessageNotification"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BuddyMessageNotification"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="EnabledHotKeyPressed"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="DisabledHotKeyPressed"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="DisabledButtonClicked"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="LowLODShellMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="HighLODShellMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ScoreScreenMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ShellMapLoadMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="FullScreenSubMenuMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="SaveFileLoadMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="CreditsMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VolumeSampleMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VolumeSampleSoundFX"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VolumeSampleVoice"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VolumeSampleAmbient"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="VolumeSampleMovie"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MissionBriefingCharacterClick"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ComboBoxClick"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GameSpyCommunicatorOpen"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MPSecondsCountdownBeep"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RIFThingTemplateReloadedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RIFObjectsRefreshedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="FastForwardModeOn"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="FastForwardModeOff"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="RallyPointSet"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnableToSetRallyPoint"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="PlanningModeOrderGiven"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BuildingPlacementSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="BadBuildingPlacementSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="WallPlacementSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="AircraftWheelScreech"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="LockonTickSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="TargetObjectWithSpecialPowerSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ObjectiveCompletedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiFixedButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiBuildQueueButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiSelectionRefinementButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiFactorySelectionButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiTogglePowerObjectClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiToggleRepairObjectClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiSellObjectClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiCommandButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiCommandButtonRightClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiDisabledCommandButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiDisabledCommandButtonRightClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiPlayerPowerButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiPauseDialogButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiPauseDialogButtonMouseOverSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiPauseDialogButtonMouseOutSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiYesNoDialogButtonClickedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiYesNoDialogButtonMouseOverSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="GuiYesNoDialogButtonMouseOutSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="AutoResolveSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="AutoResolveWinSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="AutoResolveLoseSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MetaGameAutoResolveMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MetaGameAutoResolveWinMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MetaGameAutoResolveLoseMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

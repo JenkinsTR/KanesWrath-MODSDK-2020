@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GeometryUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryList
+			id="ShowGeometry"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="HideGeometry"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="WallBoundsMesh"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RampMesh1"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RampMesh2"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

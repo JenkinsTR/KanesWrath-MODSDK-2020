@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DelayedDeathBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="RespawnBodyModuleData" />
+		<Entry
+			id="DeathDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s"/>
+		<EntryReference
+			id="DeathFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DelayedDeathPrerequisiteUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ImmortalUntilDeathTime"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false"/>
+		<Entry
+			id="DoHealthCheck"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false"/>
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

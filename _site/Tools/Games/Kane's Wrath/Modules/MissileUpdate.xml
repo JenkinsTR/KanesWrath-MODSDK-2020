@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MissileUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BezierProjectileBehaviorModuleData" />
+		<Entry
+			id="FuelLifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="IgnitionDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DistanceToTravelBeforeTurning"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DistanceToTargetBeforeDiving"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="IgnitionFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExhaustTemplate"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="DetonateOnNoFuel"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

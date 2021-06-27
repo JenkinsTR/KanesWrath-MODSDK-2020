@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SelectiveVisibilityBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryRelocation
+			id="UpdateRate"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AllowedPlayers"
+			AssetType="RelationshipBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

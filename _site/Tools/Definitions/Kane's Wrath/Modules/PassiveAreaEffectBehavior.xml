@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PassiveAreaEffectBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="EffectRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxBeneficiaries"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HealingPercentPerSecond"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HealingPointsPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SurveyDelayFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="20" />
+		<EntryReference
+			id="UpgradeRequired"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="AntiCategoryMask"
+			AssetType="AttributeModifierCategoryBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="AntiFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="HealFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryList
+			id="Modifier"
+			AssetType="AttributeModifierRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="AllowFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="NonStackable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="AffectAttached"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectWoundedOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectUnderAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

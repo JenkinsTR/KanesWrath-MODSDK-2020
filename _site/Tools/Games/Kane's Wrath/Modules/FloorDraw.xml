@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DFloorDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="W3DPropDrawModuleData" />
+		<Entry
+			id="FloorFadeRateOnObjectDeath"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="WeatherTexture"
+			AssetType="WeatherTexture"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="HideIfModelConditions"
+			AssetType="ModelConditionBitFlags"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="StaticModelLODMode"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ForceToBack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartHidden"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

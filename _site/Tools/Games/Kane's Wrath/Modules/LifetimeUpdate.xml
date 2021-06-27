@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LifetimeUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MinLifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxLifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DeathType"
+			AssetType="DeathType"
+			IsAttribute="true" />
+		<Entry
+			id="WaitForWakeUp"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ScoreKill"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreProjectileState"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

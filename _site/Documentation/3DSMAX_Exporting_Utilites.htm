@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<P align="center"><STRONG><FONT face="Arial" size="4">3DSMax W3X Exporting Utilities</FONT>
+			</STRONG>
+		</P>
+		<P align="center"><STRONG>
+				<BR>
+			</STRONG><FONT face="Arial">Each object in the Max scene that is not hidden will be 
+				considered for export. A utility plugin is used to set the export options. Each 
+				mesh can have its transform exported for the animation system and/or its 
+				geometry exported. This separation exists due to the way the motion capture 
+				data comes into the system. There are often meshes in the system which are only 
+				there to provide transforms and vice-versa; there are meshes that are rigidly 
+				connected to those "transform-only" meshes. The exporter basically allows you 
+				to reduce the number of transforms that have to be calculated by the animation 
+				system. </FONT>
+		</P>
+		<P><FONT face="Arial">Each object that is exported will have its name associated with 
+				it. One limitation of the w3x file format is that these names be 15 characters 
+				or less. If you try to use a longer name, it will be truncated when it is 
+				exported. If two objects with the same name are loaded, only the first object 
+				will be kept.<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"><BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"><IMG height="53" src="images/idea_sm.gif" width="48">I'ts a good 
+				idea to configure your button sets, in the utilities panel in max, to display 
+				it by default. This way, you wont have to look under the "more" section 
+				everytime you want to use it.</FONT></P>
+		<P><FONT face="Arial">Here is a description of the various tools associated with 
+				exporting your selections to W3X.<BR>
+			</FONT>
+		</P>
+		<P>
+			<TABLE id="Table2" borderColor="#cccccc" cellPadding="5" width="100%" bgColor="#cccccc"
+				border="0">
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Object 
+									Export Options:</FONT></B></FONT></TD>
+					<TD><FONT face="Arial">General Export Options</FONT></TD>
+					<TD vAlign="top" rowSpan="50"><FONT face="Arial"><IMG height="1139" src="images/utilities_panel.gif" width="182" align="top"></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Selection Window:</FONT></B></TD>
+					<TD><FONT color="#ff0000"></FONT><FONT face="Arial">Displays the name of what you have 
+							selected.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Export Transform (Bone):</FONT></B></TD>
+					<TD><FONT color="#ff0000"></FONT><FONT face="Arial">Check this to only export a bone or 
+							animation.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Export Geometry:</FONT></B></TD>
+					<TD><FONT color="#000000" face="Arial">Check this to only export a mesh or geometry.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Damage Region:</FONT></B></TD>
+					<TD><FONT color="#ff0000"><FONT face="Arial"><B>Obsolete: </B><FONT color="#000000">For E &amp; 
+									B it was a labor intensive way of defining what part of an object will recieve 
+									damage. </FONT></FONT></FONT>
+					</TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD bgColor="#ffffff" colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Geometry 
+									Options: </FONT></B></FONT>
+					</TD>
+					<TD><FONT color="#000000" face="Arial">These options allow your exported geometry to 
+							have different characteristics. You can select multiple options from choices on 
+							the right. </FONT>
+					</TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">Normal</FONT></B></TD>
+					<TD><FONT color="#ff0000"><FONT color="#000000" face="Arial">Default mode, just a normal 
+								mesh with no specific characteristics.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">Cam-Parallel</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Aligns the object 
+								to the near clipping plane of the camera, for example, if an object moves 
+								around the scene, it will remain parralell to the viewport. Kind of like a 
+								strafing effect.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Cam-Orient</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">Aligns to the local X axis of the 
+							Camera: This makes the object always face torward the camera so where ever the 
+							object or camera is, the camera will always be facing the x-axis.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">AABox</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">This mesh is to be used as an axis aligned collision 
+							box.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">OBBox</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Use this if youre 
+								exporting a bounding box area. Checkmark "Hide".</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Null (LOD)</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Indicates that its 
+								an LOD object</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Aggregate</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Export a box that 
+								will be used as an aggregate, Checkmark "Hide" when selecting this option. </FONT>
+						</FONT>
+					</TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Dazzle</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Use this option to 
+								export a mesh object (usually a plane) that will be used as a Camera lens 
+								flare. Check mark-2Side.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">2Side</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">Enable/Disable two sided rendering 
+							for the entire mesh.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Hide</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">Use this option to make your 
+							geometry hidden, e.g. a bounding box.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">ZNrm</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><B><FONT color="#333333" face="Arial"><I>Disabled:</I></FONT></B></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">VAlpha</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">With this checked, your mesh will 
+							have a "vertex alpha", which is created from the grayscale values of the 
+							vertices that you have given to them in max. <B><FONT color="#ff0000">NOTE:</FONT></B>
+							texture blend mode must be "Alpha Blend" in order for this to work.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Shadw</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">The mesh is not rendered normally, 
+							it is used to generate shadows only.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Shatter</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">For use when your 
+								objects may need to shatter, such as glass.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD bgColor="#ffffff" colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Collision 
+									Options: </FONT></B></FONT>
+					</TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">You can select the 
+								physical characteristics for your geometry that you are exporting. </FONT></FONT>
+					</TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Physical</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this for a 
+								surface thats not penetrateable, such as a character or a vehicle.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Projectile</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this if a 
+								projectile can hit it.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Vehicle</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this if you 
+								wish a vehicle not to proceed through or past it.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">Vis</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">Select this when exporting your 
+							"Vis" areas. A vis area is a specific area within the cameras view, where the 
+							computer will not draw in geometry past that point until you crossed over into 
+							another Vis area.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Camera</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">Select this in case you dont want 
+							the camera to go through it, or get stuck in it.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Select 
+									by W3D Type:</FONT></B></FONT></TD>
+					<TD width="383"><FONT face="Arial">Rather than Manually selecting objects in your scene 
+							to be exported, you can use these buttons select specific items for you.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Select Bones</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"></FONT><FONT face="Arial">Selects all the bones 
+							in your scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Select Geometry</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">Selects all the geometry in you scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Select Alpha Meshes</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">Select all Alpha Meshes in your scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Phys</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">Select all Physical Objects in your scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">Proj</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">Select all objects that are affected by projectiles 
+							in your scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Vis</FONT></B></TD>
+					<TD width="383"><FONT face="Arial">Select all Vis objects in your scene.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Naming 
+									Utilities:</FONT></B></FONT></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">A convenient way 
+								to name a selected set.</FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">Assign Node Names</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000"><FONT face="Arial">Opens the 
+									"Generate Node Names" window. This allows you to assign a root name, prefix and 
+									suffix. &nbsp;After setting your preferences, all of the selected objects in 
+									your scene will be renamed in sequence according to the node name.
+									<BR>
+									<BR>
+								</FONT><I><FONT color="#000099"><FONT face="Arial"><B>Artist Note:
+												<BR>
+											</B><FONT color="#000000">You may want to de-select "Assign Collision Bits" because 
+												it will override what you already have selected, in the collision options box.</FONT></FONT></FONT></I></FONT></FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Assign Material Names</FONT></B></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Opens the 
+								"Generate Material Names" window. This allows you to assign a root name to your 
+								materials,&nbsp;After setting your preferences, all of the materials you 
+								affected will be renamed in sequence according to the node name. </FONT></FONT>
+					</TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Assign Extensions</FONT></B></TD>
+					<TD width="383"><FONT color="#000000" face="Arial">This will append an extenstion to 
+							your currently selected objects. LOD 0 should be your highest poly model, with 
+							increasing LOD numbers going to your lower poly models. Damage models should be 
+							extension numbers 1 and up.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Export 
+									with Std Mtls:</FONT></B></FONT></TD>
+					<TD width="383"><FONT color="#ff0000"></FONT><FONT face="Arial">For use when exporting 
+							LightScape files.</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD bgColor="#ffffff" colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+				</TR>
+				<TR bgColor="#ffffff">
+					<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT color="#ffffff" size="2" face="Arial">Create 
+									Settings Floater:</FONT></B></FONT></TD>
+					<TD width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">For convenience, 
+								this pens a pop up floater with the W3D settings.</FONT></FONT></TD>
+				</TR>
+			</TABLE>
+		</P>
+		<P><B><FONT face="Arial"></FONT></B>&nbsp;</P>
+	</body>
+</html>

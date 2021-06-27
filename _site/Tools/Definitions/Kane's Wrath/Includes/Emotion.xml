@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="EmotionType">
+		<Entry>TAUNT</Entry>
+		<Entry>CHEER</Entry>
+		<Entry>HERO_CHEER</Entry>
+		<Entry>POINT</Entry>
+		<Entry>FEAR</Entry>
+		<Entry>UNCONTROLLABLE_FEAR</Entry>
+		<Entry>TERROR</Entry>
+		<Entry>DOOM</Entry>
+		<Entry>QUARRELSOME</Entry>
+		<Entry>ALERT</Entry>
+		<Entry>BRACE_FOR_BEING_CRUSHED</Entry>
+		<Entry>CHEER_FOR_ABOUT_TO_CRUSH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="EmotionAIType">
+		<Entry>BACK_AWAY</Entry>
+		<Entry>AVOID_SCARER</Entry>
+		<Entry>IDLE</Entry>
+		<Entry>RUN_AWAY_PANIC</Entry>
+		<Entry>FACE_OBJECT</Entry>
+		<Entry>QUARREL</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DTreeDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DrawModuleData" />
+		<EntryReference
+			id="Model"
+			AssetType="BaseRenderAssetType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="MoveOutwardTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MoveInwardTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MoveOutwardDistanceFactor"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DarkeningFactor"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToppleFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="BounceFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="Stump"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="InitialVelocityPercent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="InitialAccelPercent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="BounceVelocityPercent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="MinimumToppleSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SinkDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SinkTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="MorphTree"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="MorphTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="MorphFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="FadeRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="FadeTarget"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="FadeDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="KillWhenFinishedToppling"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="DoTopple"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="TaintedTree"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

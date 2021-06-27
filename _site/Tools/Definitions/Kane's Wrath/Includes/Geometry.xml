@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="GeometryType">
+		<Entry>SPHERE</Entry>
+		<Entry>BOX</Entry>
+		<Entry>CYLINDER</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ContactPointGenerationType">
+		<Entry>NONE</Entry>
+		<Entry>VEHICLE</Entry>
+		<Entry>STRUCTURE</Entry>
+		<Entry>INFANTRY</Entry>
+		<Entry>SQUAD_MEMBER</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ContactPoint">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Pos"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="Shape">
+		<Entry
+			id="Type"
+			AssetType="GeometryType"
+			IsAttribute="true"
+			Default="SPHERE" />
+		<Entry
+			id="ContactPointGeneration"
+			AssetType="ContactPointGenerationType"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MajorRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MinorRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Other"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Height"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="FrontAngle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Coord3D" />
+		<Entry
+			id="Active"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UsedForHealthBox"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="Geometry">
+		<EntryRelocation
+			id="RotationAnchorOffset"
+			AssetType="Coord2D" />
+		<EntryList
+			id="Shape"
+			AssetType="Shape"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ContactPoint"
+			AssetType="ContactPoint"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="IsSmall"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="GeometryShape">
+		<Entry
+			id="Type"
+			AssetType="GeometryType"
+			IsAttribute="true" />
+		<Entry
+			id="Height"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MajorRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinorRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Coord3D" />
+		<Entry
+			id="BActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="GeometryInfo">
+		<Entry
+			id="BoundingCircleRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BoundingSphereRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="XWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="YDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="Shapes"
+			AssetType="GeometryShape"
+			MinLength="0"
+			MaxLength="128" />
+		<EntryRelocation
+			id="RotationAnchorOffset"
+			AssetType="Coord2D" />
+		<EntryRelocation
+			id="Center"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="HighestContactPoint"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="InnermostContactPoint"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="ContactPoints"
+			AssetType="ContactPoint" />
+		<Entry
+			id="IsSmall"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

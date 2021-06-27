@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>W3X Meshes</h3>
+<h4>Basic Explanation</h4>
+<p>W3X files house the 3-D art assets used in the game.  You must create these using 3DSMax, and export them using the provided W3X tools.  For more
+	information on the included tools, please explore the <a href="art_pipeline_links.htm">Art Pipeline</a> section.  
+</p>
+<h4>Locations</h4>
+<p>All W3X files should be organized as specified in the <a href="art_organization.htm">Art Organization</a> section.  In particular, they should be in a
+	subfolder named with the first two letters of the filename within the art folder.
+</p>
+<h4>General W3X Asset Creation Rules</h4>
+<ul>
+<li> 
+Minimize the number of meshes.
+</li><li> 
+Disable "export transform" on all objects that don't move relative to their parent.
+</li><li> 
+Some objects in C&C Generals ended up with 100-200 separate meshes, this should be more 
+like 10 or less whenever possible. Things that animate relative to each other have to be separate meshes.
+</li><li> 
+The main 
+thing for PC performance is to have the art be in nice big "chunks". If you have 
+a lot of polys / vertices all using the same material and transform (if rigid - 
+skins can use multiple transforms and still be the same 'chunk') then it will be 
+rendered as one 'chunk', or draw call. In many cases, the number of 'chunks' is 
+the limiting factor on performance. 
+</li><li> 
+The W3X
+viewer reports the number of draw calls - artists should have a strict (and 
+low) budget on that number for every object they 
+create.
+</li><li> 
+Keep the 
+number of skinned vertices to a minimum.  Skins incur a significant cpu cost in addition to all of the 
+other costs of rendering your object.
+</li><li> 
+Keep the number of 
+vertices to a minimum. The complexity of your model will determine the number of 
+vertices.
+</li><li> 
+On today's hardware, 
+its almost not worth rendering any mesh with fewer than around 200 vertices so 
+don't use lots of low detail meshes; use fewer more detailed meshes.
+</li><li> 
+Using hard edges can 
+increase the vertex count.&nbsp; Smooth everything but the most absolutely 
+necessary hard edges.
+</li><li> 
+Using discontinuous 
+uv-mapping can increase your vertex count.&nbsp; This is often un-avoidable but 
+just be aware that this is another way your model's vertex count goes 
+up.
+</li><li> 
+Always check the 
+vertex count displayed by W3XView or in the export log of the W3X exporter; this 
+is the <B>real</B> vertex count, and don’t rely on the reported count in within 
+Max.
+</li>
+</ul>
+<h4>Further Details</h4>
+<p><a href="Art_W3X_Faction.htm">Faction Structures</a></p>
+<p><a href="Characters.htm">Characters</a></p>
+</body>
+</html>

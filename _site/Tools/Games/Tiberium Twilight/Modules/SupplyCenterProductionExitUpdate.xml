@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SupplyCenterProductionExitUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryRelocation
+			id="UnitCreatePoint"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="NaturalRallyPoint"
+			AssetType="Vector3" />
+	</Asset>
+
+</AssetDefinition>

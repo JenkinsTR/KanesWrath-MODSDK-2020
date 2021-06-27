@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InitialRoster">
+		<EntryWeakReference
+			id="TemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Count"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="GarrisonContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="OpenContainModuleData" />
+		<Entry
+			id="InitialRoster"
+			AssetType="InitialRoster" />
+		<Entry
+			id="MobileGarrison"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="ImmuneToClearBuildingAttacks"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="ResetInitialTeamOnCapture"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

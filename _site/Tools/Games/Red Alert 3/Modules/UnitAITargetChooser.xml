@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TargetingBaseCompare">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+	</Asset>
+
+	<Asset
+		id="TargetingDistanceCompare">
+		<EntryInheritance
+			id="base"
+			AssetType="TargetingBaseCompare" />
+		<Entry
+			id="Tolerance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+	</Asset>
+
+	<Asset
+		id="TargetingCombatChainCompare">
+		<EntryInheritance
+			id="base"
+			AssetType="TargetingBaseCompare" />
+	</Asset>
+
+	<Asset
+		id="TargetingInTurretArcCompare">
+		<EntryInheritance
+			id="base"
+			AssetType="TargetingBaseCompare" />
+	</Asset>
+
+	<Asset
+		id="TargetingCompareList">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Compare"
+			AssetType="CompareTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ObjectVisionRangeItem">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Range"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="TargetingCompareListRef">
+		<EntryReference
+			id="TargetingCompareList"
+			AssetType="TargetingCompareList" />
+	</Asset>
+
+	<EnumAsset
+		id="TargetChooserDynamicTargetFlag">
+		<Entry>NEVER</Entry>
+		<Entry>ATTACK_MOVE</Entry>
+		<Entry>AGGRESSIVE_STANCE</Entry>
+		<Entry>ALWAYS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="TargetChooserDynamicTargetFlags"
+		BaseEnum="TargetChooserDynamicTargetFlag" />
+
+	<Asset
+		id="BaseAITargetChooserData">
+		<Entry
+			id="IdleScanDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.8s" />
+		<Entry
+			id="ReacquireDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="60s" />
+		<Entry
+			id="StartupDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SympathyRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="CanPickDynamicTargetType"
+			AssetType="TargetChooserDynamicTargetFlags"
+			IsAttribute="true"
+			Default="ALWAYS" />
+		<EntryList
+			id="ObjectVisionRange"
+			AssetType="ObjectVisionRangeItem"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="CheckVisionRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPickDynamicTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="RotateToTargetWhenAiming"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanAutoAcquireNonAutoAcquirable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanChaseAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanOnlyAttackTargetsInFront"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="UnitAITargetChooserData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAITargetChooserData" />
+		<EntryReference
+			id="TargetingCompareList"
+			AssetType="TargetingCompareListRef"
+			IsAttribute="true"
+			Default="DefaultTargetingCompareList" />
+	</Asset>
+
+	<Asset
+		id="TurretAITargetChooserData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAITargetChooserData" />
+		<EntryReference
+			id="TargetingCompareList"
+			AssetType="TargetingCompareListRef"
+			IsAttribute="true"
+			Default="DefaultTurretTargetingCompareList" />
+		<Entry
+			id="ActiveWhenPerformingSpecialAbility"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanAcquireDynamicIfAssignedOutOfRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPickTargetsOutOfTurretAngle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

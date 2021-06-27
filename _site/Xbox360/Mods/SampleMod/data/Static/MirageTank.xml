@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="MirageTank/ArmorTemplate.xml" />
+		<Include type="all" source="MirageTank/ExperienceLevelTemplate.xml" />
+		<Include type="all" source="MirageTank/FXList.xml" />
+		<Include type="all" source="MirageTank/FXParticleSystemTemplate.xml" />
+		<Include type="all" source="MirageTank/GameObject.xml" />
+		<Include type="all" source="MirageTank/LocomotorTemplate.xml" />
+		<Include type="all" source="MirageTank/LogicCommand.xml" />
+		<Include type="all" source="MirageTank/LogicCommandSet.xml" />
+		<Include type="all" source="MirageTank/ObjectCreationList.xml" />
+		<Include type="all" source="MirageTank/PackedTextureImage.xml" />
+		<Include type="all" source="MirageTank/Texture.xml" />
+		<Include type="all" source="MirageTank/W3X.xml" />
+		<Include type="all" source="MirageTank/WeaponTemplate.xml" />
+	</Includes>
+</AssetDeclaration>

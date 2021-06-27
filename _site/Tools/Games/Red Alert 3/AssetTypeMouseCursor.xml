@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MouseCursor"
+		TypeHash="334318473">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="File"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="NumDirections"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</GameAsset>
+
+</AssetDefinition>

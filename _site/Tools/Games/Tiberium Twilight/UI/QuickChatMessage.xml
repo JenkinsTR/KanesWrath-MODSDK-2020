@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIQuickChatMessage"
+		TypeHash="743017490">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="MessageText"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

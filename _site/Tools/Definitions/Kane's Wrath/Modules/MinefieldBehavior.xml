@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MinefieldBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="DetonationWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="DetonatedBy"
+			AssetType="ObjectFilterRelationshipBitMask"
+			IsAttribute="true" />
+		<EntryReference
+			id="DetonationFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="NumVirtualMines"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="RepeatDetonateMoveThresh"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+	</Asset>
+
+</AssetDefinition>

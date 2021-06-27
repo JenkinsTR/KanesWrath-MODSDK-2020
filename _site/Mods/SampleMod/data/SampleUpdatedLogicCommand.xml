@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+  
+  <!-- For rally point commands we associate thing templates from their prospective production queue -->
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructGDIElfWarrior">
+		<Object>GDIElfWarrior</Object>
+	</LogicCommand>
+
+</AssetDeclaration>

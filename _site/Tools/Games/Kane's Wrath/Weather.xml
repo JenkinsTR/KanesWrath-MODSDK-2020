@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SnowType">
+		<EntryReference
+			id="SnowTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="SnowFrequencyScaleX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0533" />
+		<Entry
+			id="SnowFrequencyScaleY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0275" />
+		<Entry
+			id="SnowAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="SnowPointSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SnowMaxPointSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="64.0" />
+		<Entry
+			id="SnowMinPointSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SnowQuadSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="SnowBoxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="SnowSpacing"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="SnowSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="NumberTiles"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="SnowXYSpeed"
+			AssetType="Coord2D" />
+		<Entry
+			id="SnowPointSprites"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="SnowEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsSnowing"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="RainType">
+		<EntryReference
+			id="RainTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="NumRaindropsPerBox"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="16000" />
+		<Entry
+			id="RainBoxWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="RainBoxLength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="RainBoxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="MinWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MaxWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="MinHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="MaxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="15.0" />
+		<Entry
+			id="MinSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="MaxSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="150.0" />
+		<Entry
+			id="MinAlpha"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<Entry
+			id="MaxAlpha"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="WindStrength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="IsRaining"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="LightningType">
+		<Entry
+			id="LightningDuration"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="30" />
+		<Entry
+			id="LightningChance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<EntryRelocation
+			id="LightningFactor"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="LightningEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="SpellType">
+		<Entry
+			id="SpellDuration"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="200" />
+		<Entry
+			id="SpellEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="RampType">
+		<Entry
+			id="RampControl"
+			AssetType="Coord2D" />
+		<Entry
+			id="RampSpacing"
+			AssetType="Coord2D" />
+		<Entry
+			id="RampSpeed"
+			AssetType="Coord2D" />
+	</Asset>
+
+	<Asset
+		id="CloudType">
+		<EntryRelocation
+			id="CloudTextureSize"
+			AssetType="Coord2D" />
+		<EntryRelocation
+			id="CloudOffsetPerSecond"
+			AssetType="Coord2D" />
+	</Asset>
+
+	<Asset
+		id="WeatherData">
+		<Entry
+			id="id"
+			AssetType="WeatherType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="HasLightning"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<GameAsset
+		id="Weather"
+		TypeHash="2013131206">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryRelocation
+			id="Snow"
+			AssetType="SnowType" />
+		<EntryRelocation
+			id="Rain"
+			AssetType="RainType" />
+		<EntryRelocation
+			id="Lightning"
+			AssetType="LightningType" />
+		<EntryRelocation
+			id="Spell"
+			AssetType="SpellType" />
+		<EntryRelocation
+			id="Ramp"
+			AssetType="RampType" />
+		<EntryRelocation
+			id="Cloud"
+			AssetType="CloudType" />
+		<EntryList
+			id="WeatherData"
+			AssetType="WeatherData"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

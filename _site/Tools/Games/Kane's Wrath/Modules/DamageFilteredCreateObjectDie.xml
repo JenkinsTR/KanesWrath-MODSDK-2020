@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DamageFilteredCreateObjectDieModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<EntryReference
+			id="CreationList"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="DamageTypeTriggersInstantly"
+			AssetType="DamageSubType"
+			IsAttribute="true" />
+		<Entry
+			id="DamageTypeTriggersForDuration"
+			AssetType="DamageSubType"
+			IsAttribute="true" />
+		<Entry
+			id="PostFilterTriggeredDuration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MissionObjectivePresentationSettings">
+		<Entry
+			id="ID"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Dialog"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="CameraFieldOfViewVariance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Duration"
+			AssetType="Time" />
+		<EntryRelocation
+			id="CameraStartAngle"
+			AssetType="Angle" />
+		<EntryRelocation
+			id="CameraEndAngle"
+			AssetType="Angle" />
+		<EntryRelocation
+			id="CameraFieldOfView"
+			AssetType="Angle" />
+		<Entry
+			id="UseDynamicZoom"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="MissionObjectiveTag">
+		<Entry
+			id="Script"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Faction"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="PresentationSettings"
+			AssetType="MissionObjectivePresentationSettings"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="IsBonusObjective"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<GameAsset
+		id="MissionObjectiveList"
+		TypeHash="3230120946">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="MissionObjectiveTag"
+			AssetType="MissionObjectiveTag"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

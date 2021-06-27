@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<AudioEvent
+		id="ALL_Mirage_MoveStart"
+		Volume="40"
+		VolumeShift="-5"
+		Limit="3"
+		Type="WORLD SHROUDED EVERYONE"
+		SubmixSlider="SOUNDFX"
+		MinVolume="0"
+		Priority="NORMAL"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20">
+		<PitchShift
+			Low="-5"
+			High="5" />
+		<Delay
+			Low="0"
+			High="150" />
+		<Sound>AUMirag_movStartA</Sound>
+		<Sound>AUMirag_movStartB</Sound>
+		<Sound>AUMirag_movStartC</Sound> 
+	</AudioEvent>
+	
+	<AudioEvent
+		id="ALL_Mirage_WeaponFire1"
+		Volume="45"
+		VolumeShift="-10"
+		Limit="3"
+		Control="INTERRUPT"
+		Priority="HIGH"
+		Type="WORLD SHROUDED EVERYONE"
+		SubmixSlider="SOUNDFX"
+		MinVolume="0"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20">
+		<PitchShift
+			Low="25"
+			High="30" />
+		<Sound>JUChopp_weapMissa</Sound>
+		<Sound>JUChopp_weapMissb</Sound>
+		<Sound>JUChopp_weapMissc</Sound>
+		<Sound>JUChopp_weapMissd</Sound>
+		<Sound>JUChopp_weapMisse</Sound> 
+		<Sound>JUChopp_weapMissf</Sound>
+		<Sound>JUChopp_weapMissg</Sound>
+		<Sound>JUChopp_weapMissh</Sound>
+		<Sound>JUChopp_weapMissi</Sound>
+		<Sound>JUChopp_weapMissj</Sound>
+	</AudioEvent>
+	
+	<AudioEvent
+		id="ALL_Mirage_WeaponFire2"
+		Volume="50"
+		VolumeShift="-15"
+		Limit="3"
+		Type="WORLD SHROUDED EVERYONE"
+		Control="INTERRUPT"
+		Priority="HIGH"
+		SubmixSlider="SOUNDFX"
+		MinVolume="0"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20">
+		<PitchShift
+			Low="-5"
+			High="5" />
+		<Delay
+			Low="200"
+			High="250" />
+		<Sound>AUMirag_wea1FireA</Sound>
+		<Sound>AUMirag_wea1FireB</Sound>
+		<Sound>AUMirag_wea1FireC</Sound> 
+	</AudioEvent>
+	
+	<AudioEvent
+		id="Tank_Land_MoveLoop"
+		Volume="45"
+		VolumeShift="-5"
+		MinRange="100"
+		MaxRange="700"
+		Limit="3"
+		Control="LOOP FADE_ON_KILL FADE_ON_START"
+		Type="WORLD SHROUDED EVERYONE"
+		SubmixSlider="SOUNDFX"
+		MinVolume="0"
+		Priority="NORMAL"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20">
+		<PitchShift
+			Low="-5"
+			High="5" />
+		<Sound>WTankLand_moveLpA</Sound>
+		<Sound>WTankLand_moveLpB</Sound>
+		<Sound>WTankLand_moveLpC</Sound>
+		<Sound>WTankLand_moveLpD</Sound>
+		<Sound>WTankLand_moveLpE</Sound>
+		<Sound>WTankLand_moveLpF</Sound>
+		<Sound>WTankLand_moveLpG</Sound>
+		<Sound>WTankLand_moveLpH</Sound>
+		<Sound>WTankLand_moveLpI</Sound> 
+	</AudioEvent>
+	
+	<AudioEvent
+		id="ALL_MirageTank_VoiceAttack" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiAtka</Sound>
+		<Sound>AUMirag_VoiAtkb</Sound>
+		<Sound>AUMirag_VoiAtkc</Sound>
+		<Sound>AUMirag_VoiAtkd</Sound>
+		<Sound>AUMirag_VoiAtke</Sound>
+		<Sound>AUMirag_VoiAtkf</Sound>
+		<Sound>AUMirag_VoiAtkg</Sound>
+		<Sound>AUMirag_VoiAtkh</Sound>
+	</AudioEvent>
+
+	<AudioEvent
+		id="ALL_MirageTank_VoiceCreate" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiCreb</Sound>
+	</AudioEvent>
+
+	<AudioEvent
+		id="ALL_MirageTank_VoiceMove" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiMova</Sound>
+		<Sound>AUMirag_VoiMovb</Sound>
+		<Sound>AUMirag_VoiMovc</Sound>
+		<Sound>AUMirag_VoiMovd</Sound>
+		<Sound>AUMirag_VoiMove</Sound>
+		<Sound>AUMirag_VoiMovf</Sound>
+		<Sound>AUMirag_VoiMovg</Sound>
+	</AudioEvent>
+
+	<AudioEvent
+		id="ALL_MirageTank_VoiceMoveAttack" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiMovAtka</Sound>
+		<Sound>AUMirag_VoiMovAtkb</Sound>
+		<Sound>AUMirag_VoiMovAtkc</Sound>
+		<Sound>AUMirag_VoiMovAtkd</Sound>
+		<Sound>AUMirag_VoiMovAtke</Sound>
+	</AudioEvent>
+
+	<AudioEvent
+		id="ALL_MirageTank_VoiceRetreat" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiReta</Sound>
+		<Sound>AUMirag_VoiRetb</Sound>
+		<Sound>AUMirag_VoiRetc</Sound>
+	</AudioEvent>
+	
+	<AudioEvent
+		id="ALL_MirageTank_VoiceSelect2" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiCrea</Sound>
+		<Sound>AUMirag_VoiSela</Sound>
+		<Sound>AUMirag_VoiSelb</Sound>
+		<Sound>AUMirag_VoiSelc</Sound>
+		<Sound>AUMirag_VoiSeld</Sound>
+		<Sound>AUMirag_VoiSele</Sound>
+	</AudioEvent>
+	
+	<AudioEvent
+		id="ALL_MirageTank_VoiceSelectBattle" 
+		Volume="70"
+		MinVolume="60"
+		Priority="HIGH"
+		Type="WORLD PLAYER VOICE"
+		SubmixSlider="VOICE" 
+		Limit="3"
+		MinRange="200"
+		MaxRange="800"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20" >
+		<PitchShift
+			Low="-1"
+			High="1" />
+		<Sound>AUMirag_VoiSelBata</Sound>
+		<Sound>AUMirag_VoiSelBatb</Sound>
+		<Sound>AUMirag_VoiSelBatc</Sound>
+		<Sound>AUMirag_VoiSelBatd</Sound>
+		<Sound>AUMirag_VoiSelBate</Sound>
+	</AudioEvent>
+</AssetDeclaration>

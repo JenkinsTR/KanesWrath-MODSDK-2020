@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="art_pipeline,  ">
+<title>W3X Exporting Tutorial | Kane's Wrath MOD SDK</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="KanesWrath-MODSDK-2020" href="http://0.0.0.0:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Kane's Wrath MOD SDK</span></a> -->
+            <a class="navbar-brand" href="index.html"><img src="images/KWSDK_logo_32.png" alt="Kane's Wrath MOD SDK"></img><span class="projectTitle"> Kane's Wrath MOD SDK</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/JenkinsTR/KanesWrath-MODSDK-2020/" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="Home.html">Getting Started</a></li>
+                        
+                        
+                        
+                        <li><a href="Tools.html">Tools</a></li>
+                        
+                        
+                        
+                        <li><a href="Mapping.html">Mapping</a></li>
+                        
+                        
+                        
+                        <li><a href="CodeRef.html">Code Reference</a></li>
+                        
+                        
+                        
+                        <li><a href="MusicSounds.html">Music & Sounds</a></li>
+                        
+                        
+                        
+                        <li><a href="Scripting.html">Scripting</a></li>
+                        
+                        
+                        
+                        <li><a href="UpdatesPatches.html">Updates & Patches</a></li>
+                        
+                        
+                        
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        
+                        
+                        
+                        <li><a href="Bugs.html">Bugs</a></li>
+                        
+                        
+                        
+                        <li><a href="Credits.html">Credits</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">External<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://store.steampowered.com/app/24810/Command__Conquer_3_Kanes_Wrath/" target="_blank" rel="noopener">Kane's Wrath on Steam</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.moddb.com/games/cc-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on Mod DB</a></li>
+                        
+                        
+                        
+                        <li><a href="https://en.wikipedia.org/wiki/Command_%26_Conquer_3:_Kane%27s_Wrath" target="_blank" rel="noopener">Kane's Wrath on Wikipedia</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-3-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on EA.com</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="W3X Exporting Tutorial">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Kane's Wrath MOD SDK v0.2</li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="Home_Overview.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up the SDK" href="Home_Setting_up_the_SDK.html">Setting up the SDK</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating a Mod" href="Home_Creating_a_Mod.html">Creating a Mod</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Art Pipeline" href="Home_Art_Pipeline.html">Art Pipeline</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Tools" href="#">Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="WrathEd" href="Tools_WrathEd.html">WrathEd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="4GB Patch" href="Tools_4GB_Patch.html">4GB Patch</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="BIG Editors" href="Tools_BIG_Editors.html">BIG Editors</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Jonwil's Tools" href="Tools_Jonwil_Tools.html">Jonwil's Tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="VP6 Converter" href="Tools_VP6_Converter.html">VP6 Converter</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="EALayer3" href="Tools_EALayer3.html">EALayer3</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Mapping" href="#">Mapping</a>
+      <ul>
+          
+          
+          
+          <li><a title="WorldBuilder" href="Mapping_WorldBuilder.html">WorldBuilder</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Scripting" href="Mapping_Map_Scripting.html">Map Scripting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Reference" href="Mapping_Map_Reference.html">Map Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Code Reference" href="#">Code Reference</a>
+      <ul>
+          
+          
+          
+          <li><a title="Structures" href="CodeRef_Structures.html">Structures</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Units" href="CodeRef_Units.html">Units</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AptUI" href="CodeRef_AptUI.html">AptUI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Powers & Upgrades" href="CodeRef_Powers_Upgrades.html">Powers & Upgrades</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Gameplay" href="CodeRef_Gameplay.html">Gameplay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AI" href="CodeRef_AI.html">AI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Other" href="CodeRef_Other.html">Other</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Music & Sounds" href="#">Music & Sounds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Extracting Audio" href="MusicSounds_Extracting_Audio.html">Extracting Audio</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Converting Sounds" href="MusicSounds_Extracting_Audio.html">Converting Sounds</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripting" href="#">Scripting</a>
+      <ul>
+          
+          
+          
+          <li><a title="LUA" href="Scripting_LUA.html">LUA</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Updates & Patches" href="#">Updates & Patches</a>
+      <ul>
+          
+          
+          
+          <li><a title="Game Updates" href="UpdatesPatches_Game_Updates.html">Game Updates</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="KWBandage" href="UpdatesPatches_KWBandage.html">KWBandage</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other Info" href="#">Other Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="FAQs" href="FAQs.html">FAQs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Bugs" href="Bugs.html">Bugs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Credits" href="Credits.html">Credits</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">W3X Exporting Tutorial</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary"></div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <p>&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.0 Transitional//EN”&gt;</p>
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" />
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" />
+	</head>
+	<body>
+		<p><FONT face="Arial">You will need these basic software installed on your system 
+				before you begin<br />
+				<br />
+				A: 3D Studio Max&nbsp;7 SP1. The plugin has not been tested with later 
+				versions. Support is unknown.<br />
+				B: "Max2W3X.dle" must be installed in the "plugins" directory of 3d Max.<br />
+		&lt;/P&gt;
+		<p>&lt;/FONT&gt;<FONT face="Arial">
+				<hr noshade="" size="10" />
+				<p></p>
+			</FONT>
+		<p><FONT face="Arial">=========<br />
+				<b><FONT size="3">Overview</FONT></b><br />
+				=========</FONT></p>
+		<p><b><FONT face="Arial">1. </FONT><a href="#cmodel"><FONT face="Arial">Create your model (3DS 
+						Max)</FONT></a></b></p>
+		<p><b><FONT face="Arial">2. </FONT><a href="#cmaps"><FONT face="Arial">Create your map(s) 
+						(photoshop)</FONT></a></b></p>
+		<p><b><FONT face="Arial">3. </FONT><a href="#appmap"><FONT face="Arial">Applying maps (3dmax) 
+						W3D material in your Material/Map browser.</FONT></a></b></p>
+		<p><b><FONT face="Arial">4. </FONT><a href="#cbones"><FONT face="Arial">Create bones (3d max 
+						dummy objects)</FONT></a></b></p>
+		<p><b><FONT face="Arial">5. </FONT><a href="#setbones"><FONT face="Arial">Set up your bones 
+						(3dmax) W3D plugin under "space Warps"</FONT></a></b></p>
+		<p><b><FONT face="Arial">6. </FONT><a href="#anim"><FONT face="Arial">Animating</FONT></a></b></p>
+		<strong>
+			<p><b><FONT face="Arial">7. </FONT><a href="#export"><FONT face="Arial">Export to W3X file</FONT></a></b></p>
+		</strong><FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="cmodel"></a>
+		<br />
+		<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+			<b><FONT size="3">Create your model</FONT></b><br />
+			:::::::::::::::::::::::::::::::::::::::::::::::::::::::<img height="141" src="images/1a.gif" width="421" align="right" />
+		</FONT>
+		<p><FONT face="Arial">Create a model in 3DS max, or if you have one created, move on to 
+				next step.</FONT></p>
+		<p><FONT face="Arial">---------------</FONT></p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="cmaps"></a>
+		<br />
+		<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+			<FONT size="3"><b>Create your maps</b></FONT><br />
+			:::::::::::::::::::::::::::::::::::::::::::::::::::::<img height="125" src="images/1b.jpg" width="125" align="left" />
+		</FONT>
+		<p><FONT face="Arial">Create your maps in photoshop (or whatever paint program you 
+				use), if you already made one, move on to next step.</FONT></p>
+		<p><br />
+			<FONT face="Arial"><img height="17" src="images/point.jpg" width="50" align="absBottom" /><FONT size="3">{ 
+					"Mean_fish.tga"}</FONT></FONT></p>
+		<br />
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="appmap"></a>
+		<br />
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::<br />
+			<b><FONT size="3">Applying maps</FONT></b><br />
+			:::::::::::::::::::::::::::::::::::::::::: </FONT>
+		<p><br />
+			<FONT face="Arial"><b>Step 1.<br />
+				</b>=====<br />
+				Select your model, click open the material editor, pick an empty slot, click 
+				"assign material to selection"
+				<br />
+				<img height="112" src="images/1c.jpg" width="154" /> </FONT>
+		</p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 2.</b><br />
+				=====<br />
+				Click the default "standard" 
+				button to open the material map browser. Select "DirectX 9 shader" from the list and 
+				click "OK".<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 3.</b><br />
+				=====<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial">Click on the shader file name button and select the shader file "3dsmax7/maps/fx/CnC3/Simple.fx".</FONT></p>
+		<br />
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 4.</b><br />
+				===== </FONT><FONT face="Arial">
+				<br />
+				<img height="141" src="images/1fa.jpg" width="212" align="right" /> Click the bar labeled "None" next to "Base Texture" and look for the texture you wish to apply, click on the file, then click "open". Now you've selected your texture map.
+				<br />
+				<br />
+				<br />
+				<br />
+			</FONT>
+		</p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="cbones"></a>
+		<br />
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::::<br />
+			<FONT size="3"><b>Creating bones </b></FONT>
+			<br />
+			:::::::::::::::::::::::::::::::::::::::::::: </FONT>
+		<p><br />
+			<FONT face="Arial"><FONT size="3"><b>Step 1. </b></FONT>
+				<br />
+				=====<br />
+				<img src="images/1g.gif" align="left" />Create dummy objects that you will use to 
+				control the vertices of an area of the model and Position them in the areas of 
+				the vertices you wish to control.</FONT></p>
+		<p><FONT face="Arial">Tip:<br />
+				You can use the "affect pivot only" in max to reposition the pivot center of 
+				the dummy object for greater control in your animation.<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="setbones"></a>
+		<p><FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+				<b><FONT size="3">Setting up your bones </FONT></b>
+				<br />
+				::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</FONT></p>
+		<p><br />
+			<FONT face="Arial"><b>Step 1. </b>
+				<br />
+				=====<br />
+				Click on the "Create" tab of the side toolbar in max. Click on "Space warps" 
+				and select from the drop down list "Westwood Space Warps."<br />
+				<img height="243" src="images/ww_spacewarp.gif" width="184" />
+				<br />
+			</FONT>
+		</p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 2.</b><br />
+				=====<br />
+				Click on the "WWSkin" button, (its the only one there) and Click and drag in an 
+				orthographic viewport to create the space warp.<br />
+				<img src="images/1i.gif" /> </FONT>
+		</p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 3. </b>
+				<br />
+				=====<br />
+				<img height="137" src="images/1ia.gif" width="158" align="left" /><img height="137" src="images/1ib.gif" width="158" align="right" />It 
+				will first look very tiny or not visible at all. You can use the "scale" 
+				Modifier on the main toolbar to enlarge it so that it is more viewable. The 
+				Space warp Icon looks like a set of crossbones.<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<br />
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 4. </b>
+				<br />
+				=====<br />
+				Next, you must "add the bones", do so by clicking the "Add Bones" button, 
+				located on the modify panel. Select the bones you want to add and click OK.<br />
+				<img height="437" src="images/1j.gif" width="557" /></FONT></p>
+		<FONT face="Arial"><FONT face="Arial">
+				<hr />
+				<p></p>
+			</FONT>
+			<p><FONT face="Arial"><b>Step 5. </b>
+					<br />
+					=====<br />
+					<img src="images/utilities_export.gif" align="right" />Your dummy objects 
+					probably should be hidden when exported, as they don't belong to the object.</FONT></p>
+			<p><FONT face="Arial">To achieve that go into the Utilities section, add the W3D Tools 
+					to your Utilities. If you do this the first time, it is probably hidden behind 
+					the More... button.</FONT></p>
+			<p><FONT face="Arial">Select your bone dummy object. Then in the W3D Tools uncheck the 
+					"Export Geometry" option, leave the "Export Transform" checked.</FONT></p>
+			<p><FONT face="Arial"><br />&nbsp;&lt;/P&gt;
+		</FONT>
+		<hr />
+		&lt;/FONT&gt;
+		<p><FONT face="Arial"><b>Step 6. </b>
+				<br />
+				=====<br />
+				<img height="84" src="images/1k.gif" width="123" align="right" />Bind your model 
+				to the "WWSkin" space warp by first selecting your model, then clicking the 
+				"bind to spacewarp" button located on the main toolbar in Max. Next, position 
+				your mouse back over the your model and click and drag to the "WWSkin" 
+				(crossbones) Icon to bind them.<br />
+		&lt;/P&gt;
+		<p>&lt;/FONT&gt;&nbsp;</p>
+		<p></p>
+		</FONT><FONT face="Arial">
+			<hr />
+			<br />
+			<b>Step 7. </b>
+			<br />
+			=====<br />
+			Select your model and you will see it now how the space warp bound to it and 
+			its vertices are showing.
+			<br />
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 8. </b>
+				<br />
+				=====<br />
+				<img src="images/1L.gif" align="left" />Deselect the "bind to space warp button 
+				and use the select button to draw a rectangle around the vertices you would 
+				like to bind to a particular bone, then click the "link to Bone" button located 
+				on the modify panel under your "WWSkin binding", then Click the dummy object 
+				used to represent that bone.<br />
+			</FONT>
+		</p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 9. </b>
+				<br />
+				=====<br />
+				Continue doing the until you have assigned the vertices to the particular bones 
+				you want to be able to animate.</FONT></p>
+		<p><FONT face="Arial"><img src="images/note.jpg" /><br />
+				<img height="39" src="images/1Lb.gif" width="163" align="right" />At this point 
+				you're almost done and about ready to animate, but the move,rotate,and scale 
+				tools will be ghosted and not selectable yet.<br />
+				You must first click the "*WWSkin Binding" in the modify panel to gray the word 
+				"*WWSkin binding" then click in the viewport to deselect it, now you may select 
+				the dummy objects.<br />
+			</FONT>
+		</p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="anim"></a><FONT face="Arial">:::::::::::::::::::::::::::::<br />
+			<b><FONT size="3">Animating</FONT></b><br />
+			::::::::::::::::::::::::::::: </FONT>
+		<p><FONT face="Arial"><img src="images/note.jpg" /><br />
+				<img height="333" src="images/1m.gif" width="412" align="right" />The dummy 
+				objects will not work unless you are on any frame other than frame 0 (zero) and 
+				you will also need to have the animate button depressed before beginning,
+				<br />
+				<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"><b>Step 1. </b>
+				<br />
+				=====<br />
+				Click the animate ("Auto") button and move any any frame (other than zero).</FONT></p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 2.</b><br />
+				=====<br />
+				Animate your model with the dummy objects (bones) and make note of the ending 
+				frame. When your happy with the anim loop, move on to next part.</FONT></p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<FONT face="Arial"><FONT face="Arial">
+				<hr noshade="" size="10" />
+				<p>
+			&lt;/FONT&gt;<a name="cmodel"></a>
+			<br />
+			<a name="export"></a><FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+				<FONT size="3"></FONT><strong>Export to W3X File</strong><br />
+				:::::::::::::::::::::::::::::::::::::::::::::::::::::::<img src="images/export_filename.gif" align="right" />
+			</FONT></p>
+			<p><FONT face="Arial"><FONT face="Arial"><b>Step 1. </b>
+						<br />
+						=====<br />
+					</FONT>Go to the File menu, select Export</FONT>
+		&lt;/FONT&gt;</p><FONT face="Arial"><FONT face="Arial">
+				<hr />
+				<p><b>Step 2. </b>
+					<br />
+					=====</p>
+				<p>Go to the "Data/Art" folder. <FONT face="Arial"><FONT face="Arial">Create a folder with 
+							the first two letters of the file name you want to use, eg "Fi". <FONT face="Arial">
+								<FONT face="Arial">Give the file the name "Fish.w3x"&lt;/P&gt;
+				<FONT face="Arial"><FONT face="Arial">
+						<hr />
+						<p><b>Step&nbsp;4. </b>
+							<br />
+							=====</p>
+						<p>Select "W3D XML Asset (*.w3x)" from the file type list.</p>
+						<p>Hit Save</p>
+						<FONT face="Arial"><FONT face="Arial">
+								<hr />
+								<p><b>Step&nbsp;5. </b>
+									<br />
+									=====</p>
+								<p>The export options dialog comes up. Select "Hierarchical Animated Model" as type 
+									and specify the begin and end frame of the animation you created earlier. If 
+									you skipped that part, you can just export it as "Hierachical Model". Hit Ok 
+									and your file should get written.</p>
+							</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>&lt;/FONT&gt;&lt;/FONT&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+
+
+
+
+
+
+
+
+
+[Home_Overview]: Home_Overview.html
+
+
+
+
+[Home_Setting_up_the_SDK]: Home_Setting_up_the_SDK.html
+
+
+
+
+[Home_Creating_a_Mod]: Home_Creating_a_Mod.html
+
+
+
+
+[Home_Art_Pipeline]: Home_Art_Pipeline.html
+
+
+
+
+
+
+[Tools_WrathEd]: Tools_WrathEd.html
+
+
+
+
+[Tools_4GB_Patch]: Tools_4GB_Patch.html
+
+
+
+
+[Tools_BIG_Editors]: Tools_BIG_Editors.html
+
+
+
+
+[Tools_Jonwil_Tools]: Tools_Jonwil_Tools.html
+
+
+
+
+[Tools_VP6_Converter]: Tools_VP6_Converter.html
+
+
+
+
+[Tools_EALayer3]: Tools_EALayer3.html
+
+
+
+
+
+
+[Mapping_WorldBuilder]: Mapping_WorldBuilder.html
+
+
+
+
+[Mapping_Map_Scripting]: Mapping_Map_Scripting.html
+
+
+
+
+[Mapping_Map_Reference]: Mapping_Map_Reference.html
+
+
+
+
+
+
+[CodeRef_Structures]: CodeRef_Structures.html
+
+
+
+
+[CodeRef_Units]: CodeRef_Units.html
+
+
+
+
+[CodeRef_AptUI]: CodeRef_AptUI.html
+
+
+
+
+[CodeRef_Powers_Upgrades]: CodeRef_Powers_Upgrades.html
+
+
+
+
+[CodeRef_Gameplay]: CodeRef_Gameplay.html
+
+
+
+
+[CodeRef_AI]: CodeRef_AI.html
+
+
+
+
+[CodeRef_Other]: CodeRef_Other.html
+
+
+
+
+
+
+[MusicSounds_Extracting_Audio]: MusicSounds_Extracting_Audio.html
+
+
+
+
+[MusicSounds_Extracting_Audio]: MusicSounds_Extracting_Audio.html
+
+
+
+
+
+
+[Scripting_LUA]: Scripting_LUA.html
+
+
+
+
+
+
+[UpdatesPatches_Game_Updates]: UpdatesPatches_Game_Updates.html
+
+
+
+
+[UpdatesPatches_KWBandage]: UpdatesPatches_KWBandage.html
+
+
+
+
+
+
+[FAQs]: FAQs.html
+
+
+
+
+[Bugs]: Bugs.html
+
+
+
+
+[Credits]: Credits.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[news]: news
+
+
+
+
+
+
+
+
+
+
+[Home]: Home.html
+
+
+
+[Tools]: Tools.html
+
+
+
+[Mapping]: Mapping.html
+
+
+
+[CodeRef]: CodeRef.html
+
+
+
+[MusicSounds]: MusicSounds.html
+
+
+
+[Scripting]: Scripting.html
+
+
+
+[UpdatesPatches]: UpdatesPatches.html
+
+
+
+[FAQs]: FAQs.html
+
+
+
+[Bugs]: Bugs.html
+
+
+
+[Credits]: Credits.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p></FONT></FONT></FONT></FONT></p></p></FONT></p></FONT></p></body></html>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_art_pipeline.html" class="btn btn-default navbar-btn cursorNorm" role="button">art_pipeline</a>
+        
+        
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Kane's Wrath MOD SDK. All rights reserved. <br />
+<span>Page last updated:</span> June 16, 2021<br/> Site last generated: Jun 17, 2021 <br />
+<p><img src="images/KWSDK_logo_130.png" alt="Kane's Wrath MOD SDK"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

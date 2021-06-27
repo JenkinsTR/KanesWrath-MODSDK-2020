@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SimpleEnvelopeType">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="InitialOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="PeakOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SustainOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="AttackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.01s" />
+		<Entry
+			id="DecayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.01s" />
+		<Entry
+			id="SustainTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="100000s" />
+		<Entry
+			id="ReleaseTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="100000s" />
+		<Entry
+			id="InitialDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.01s" />
+		<Entry
+			id="State"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="SustainCounter"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+</AssetDefinition>

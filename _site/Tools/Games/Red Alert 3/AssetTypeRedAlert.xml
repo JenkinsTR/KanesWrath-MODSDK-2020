@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="RedAlertTemplate"
+		TypeHash="133543122">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="OrangeAreaThreatThreshold"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RedAreaThreatThreshold"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxAllowedThreat"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="KillThreatMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="DeathThreatMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="YellowAreaThreatDecayPerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="OrangeAreaThreatDecayPerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="RedAreaThreatDecayPerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="RedAlertBuildingDamagePerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RedAlertUpdatedBuildingDamagePerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RedAlertBuildingDamageIncreaseTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="EvaEventToPlayOnRedAlertInitiateOwner"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="EvaEventToPlayOnRedAlertInitiateAlly"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="EvaEventToPlayOnRedAlertInitiateEnemy"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="YellowAlertTechPointMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OrangeAlertTechPointMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="RedAlertTechPointMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryRelocation
+			id="YellowAreaEffect"
+			AssetType="AttributeModifierRef" />
+		<EntryRelocation
+			id="OrangeAreaEffect"
+			AssetType="AttributeModifierRef" />
+		<EntryRelocation
+			id="RedAreaEffect"
+			AssetType="AttributeModifierRef" />
+		<EntryRelocation
+			id="RedAlertEffect"
+			AssetType="AttributeModifierRef" />
+		<Entry
+			id="DisableNonRepairability"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RedAlertDisableStructureBuilding"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="RedAlertShowAllUnitsAndStructures"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

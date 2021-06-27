@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="CareerStatOrder">
+		<Entry>CurrentWinStreak</Entry>
+		<Entry>CurrentLossStreak</Entry>
+		<Entry>LongestWinStreak</Entry>
+		<Entry>LongestLosingStreak</Entry>
+		<Entry>TotalMatchesPlayed</Entry>
+		<Entry>CareerLosses</Entry>
+		<Entry>CareerWins</Entry>
+		<Entry>WinLossRatio</Entry>
+		<Entry>AvgGameLength</Entry>
+		<Entry>TotalTimePlayed</Entry>
+		<Entry>StructuresBuilt</Entry>
+		<Entry>StructuresLost</Entry>
+		<Entry>StructuresDestroyed</Entry>
+		<Entry>StructuresCaptured</Entry>
+		<Entry>StructuresCapturedByEnemy</Entry>
+		<Entry>CaptureRatio</Entry>
+		<Entry>SuperWeaponsBuilt</Entry>
+		<Entry>BridgesDestroyed</Entry>
+		<Entry>StructuresSold</Entry>
+		<Entry>UnitsBuilt</Entry>
+		<Entry>UnitsLost</Entry>
+		<Entry>UnitsKilled</Entry>
+		<Entry>UnitKillLostRatio</Entry>
+		<Entry>AvgIncomePerMinute</Entry>
+		<Entry>SecondsInLowPower</Entry>
+		<Entry>ResourcesGathered</Entry>
+		<Entry>ResourcesSpent</Entry>
+		<Entry>FormationPreviewUsed</Entry>
+		<Entry>EfficiencyRatio</Entry>
+		<Entry>ValueOfUnitsLost</Entry>
+		<Entry>ValueOfUnitsKilled</Entry>
+		<Entry>FriendlyFireIncidents</Entry>
+		<Entry>ActivatedUnitAbilities</Entry>
+		<Entry>ActivatedCommanderPowers</Entry>
+		<Entry>StructuresInfiltrated</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="CareerStatFlag">
+		<Entry>Unranked</Entry>
+		<Entry>Ranked_1v1</Entry>
+		<Entry>Ranked_2v2</Entry>
+		<Entry>Clan_1v1</Entry>
+		<Entry>Clan_2v2</Entry>
+		<Entry>Campaign</Entry>
+		<Entry>Skirmish</Entry>
+		<Entry>Network</Entry>
+		<Entry>LastFlag</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="CareerStatType">
+		<Entry>Int</Entry>
+		<Entry>Float</Entry>
+		<Entry>Time</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="CareerStatData">
+		<Entry
+			id="StatType"
+			AssetType="CareerStatType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatLabel"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="RatioNumerator"
+			AssetType="CareerStatOrder"
+			IsAttribute="true" />
+		<Entry
+			id="RatioDenominator"
+			AssetType="CareerStatOrder"
+			IsAttribute="true" />
+		<Entry
+			id="IsRatio"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NoSummary"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="UIComponentCareerStats">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<EntryReference
+			id="DefaultRankImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="CareerStat"
+			AssetType="CareerStatData"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<ExperienceLevelTemplate
+		id="MirageTankExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="1000"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>MirageTank</Target>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="82"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="MirageTankExperienceLevel_2"
+		Prerequisite="GDIMammothExperienceLevel_1"
+		RequiredExperience="7000"
+		ExperienceAward="2000"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="2">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_VETERAN</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_01" />
+		<Target>MirageTank</Target>
+		<AttributeModifier>Unit_Veteran</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="82"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="MirageTankExperienceLevel_3"
+		Prerequisite="GDIMammothExperienceLevel_2"
+		RequiredExperience="14000"
+		ExperienceAward="3000"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="3">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_ELITE</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_02" />
+		<Target>MirageTank</Target>
+		<AttributeModifier>Unit_Elite</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="82"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="MirageTankExperienceLevel_4"
+		Prerequisite="GDIMammothExperienceLevel_3"
+		RequiredExperience="21000"
+		ExperienceAward="4000"
+		ModelConditionState="SPECIAL_CHEERING"
+		Rank="4">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Upgrade>Upgrade_Veterancy_HEROIC</Upgrade>
+		<LevelUpFxList
+			FxList="FX_GDILevelUp_03" />
+		<Target>MirageTank</Target>
+		<AttributeModifier>Unit_Heroic</AttributeModifier>
+		<Decal
+			Texture="decal_G_level1"
+			Texture2="decal_GDI_S_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="82"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+</AssetDeclaration>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="InGameUISettings"
+		TypeHash="3783262740">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="CommandLimitReachedText"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ObjectivesButtonFlashDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="30s" />
+		<Entry
+			id="IntelligenceDatabaseButtonFlashDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="15s" />
+		<Entry 
+			id="CommandButton"
+			AssetType="InGameUICommandButtonSettings" />
+		<Entry
+			id="AttackMoveMarkerColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="DecalCloud"
+			AssetType="InGameUIDecalCloudSettings" />
+		<Entry
+			id="DrawableCaption"
+			AssetType="InGameUIDrawableCaptionSettings" /> 
+		<Entry
+			id="ExitContainerButton"
+			AssetType="InGameUIExitContainerButtonSettings" />
+		<Entry
+			id="FixedButtonHelp"
+			AssetType="InGameUIFixedButtonHelp" />
+		<Entry
+			id="FloatingText"
+			AssetType="InGameUIFloatingTextSettings" />
+		<Entry
+			id="Message"
+			AssetType="InGameUIMessageSettings" />
+		<Entry
+			id="MilitaryCaption"
+			AssetType="InGameUIMilitaryCaptionSettings" />
+		<Entry
+			id="MoveMarkerColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="ObjectivePresentation"
+			AssetType="InGameUIObjectivePresentationSettings" />
+		<Entry
+			id="Subtitle"
+			AssetType="InGameUISubtitleSettings" />
+		<Entry
+			id="Timer"
+			AssetType="InGameUITimerSettings" />
+		<Entry
+			id="FeedbackText"
+			AssetType="FontDesc" />
+	</GameAsset>
+
+</AssetDefinition>

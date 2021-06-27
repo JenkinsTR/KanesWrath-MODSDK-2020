@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentOptionsSettingsAudio">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="LoadVarQueryReturnToken"
+			AssetType="String" />
+		<EntryL
+			id="DefaultVoipEnable"
+			AssetType="SageBool" />
+		<EntryL
+			id="DefaultVoipBoostMicGain"
+			AssetType="SageBool" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

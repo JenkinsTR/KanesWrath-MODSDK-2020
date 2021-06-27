@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXNugget">
+		<Entry
+			id="Unknown0"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown1"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown2"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown3"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown4"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown5"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown6"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown7"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown8"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Unknown9"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<!--
+		<Entry
+			id="RequiredSecondaryModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludedSecondaryModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredSourceModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludedSourceModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Weather"
+			AssetType="WeatherType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<EntryRelocation
+			id="SecondaryObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="SourceObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="SourceMustNotHaveBeenDisabledThisFrameByType"
+			AssetType="DisabledType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="StopIfPlayed"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="PlayIfSourceIsStealthed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />-->
+	</Asset>
+<!--
+	<Asset
+		id="EvaEventFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="EvaEventOwner"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="EvaEventAlly"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="EvaEventEnemy"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+	</Asset>
+
+	<Asset
+		id="SoundFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryReference
+			id="Value"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="RayEffectFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryWeakReference
+			id="Thing"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="PrimaryOffset"
+			AssetType="Coord3D" />
+		<Entry
+			id="SecondaryOffset"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="LightPulseFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusAsPercentOfObjectSize"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="IncreaseTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DecreaseTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="Color"
+			AssetType="RGBColor" />
+	</Asset>
+
+	<EnumAsset
+		id="DynamicDecalShaderType">
+		<Entry>ALPHA</Entry>
+		<Entry>ADDITIVE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="DynamicDecalFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Decal"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Shader"
+			AssetType="DynamicDecalShaderType"
+			IsAttribute="true"
+			Default="ALPHA" />
+		<Entry
+			id="Size"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityStart"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityPeak"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OpacityEnd"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityFadeTimeOne"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityFadeTimeTwo"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityPeakTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="StartingDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="Color"
+			AssetType="Color3" />
+		<Entry
+			id="Offset"
+			AssetType="Coord2D" />
+		<Entry
+			id="OrientToObject"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="LaserFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryWeakReference
+			id="LaserTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="Coord3D" />
+		<Entry
+			id="LaserBackwards"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="CameraShakerVolumeFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="Amplitude"
+			AssetType="Angle"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ViewShakeFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Type"
+			AssetType="ViewShakeType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AttachedModelFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryReference
+			id="Model"
+			AssetType="RenderObject"
+			IsAttribute="true" />
+		<Entry
+			id="ExpireTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="8s" />
+		<Entry
+			id="RandomlyRotate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="RandomRangeType">
+		<Entry
+			id="Low"
+			AssetType="TerrainScorchType"
+			IsAttribute="true"
+			Default="SCORCH_1" />
+		<Entry
+			id="High"
+			AssetType="TerrainScorchType"
+			IsAttribute="true"
+			Default="SCORCH_4" />
+	</Asset>
+
+	<Asset
+		id="TerrainScorchFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Type"
+			AssetType="TerrainScorchType"
+			IsAttribute="true"
+			Default="RANDOM" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="RandomRange"
+			AssetType="RandomRangeType" />
+	</Asset>
+
+	<Asset
+		id="TintDrawableFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="PreColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="PostColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="SustainedColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Frequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Amplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Color"
+			AssetType="RGBColor" />
+	</Asset>
+
+	<Asset
+		id="FXListAtBonePosFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryReference
+			id="FX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="Bone"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleSysBoneNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<Entry
+			id="Bone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TriggerType"
+			AssetType="FXTriggerType"
+			IsAttribute="true" />
+		<Entry
+			id="HoldBetweenStateID"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="ActionType"
+			AssetType="FXActionType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Particle"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="Coord3D" />
+		<Entry
+			id="RequireFrequentUpdate"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+-->
+	<Asset
+		id="RotateType">
+		<Entry
+			id="X"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="Y"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="Z"
+			AssetType="Angle"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ParticleSystemFXNugget">
+		<EntryInheritance
+			id="base"
+			AssetType="FXNugget" />
+		<EntryReference
+			id="Particle"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="Count"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="CreateOverrideBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TargetOverrideBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TargetCoeff"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SystemLife"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="-1s" />
+		<Entry
+			id="Rotate"
+			AssetType="RotateType" />
+		<Entry
+			id="Offset"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="TargetOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="Radius"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="Height"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="InitialDelay"
+			AssetType="ClientRandomVariable"
+			Default="CONSTANT,-1.0,-1.0" />
+		<Entry
+			id="OrientToObject"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="Ricochet"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="CreateAtGroundHeight"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="UseTarget"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="SetTargetMatrix"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="OnlyIfOnWater"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXNuggetTypes">
+		<EntryChoice
+			id="FXNuggetTypes"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="EvaEvent"
+				AssetType="EvaEventFXNugget" />
+			<Entry
+				id="Sound"
+				AssetType="SoundFXNugget" />
+			<Entry
+				id="RayEffect"
+				AssetType="RayEffectFXNugget" />
+			<Entry
+				id="LightPulse"
+				AssetType="LightPulseFXNugget" />
+			<Entry
+				id="DynamicDecal"
+				AssetType="DynamicDecalFXNugget" />
+			<Entry
+				id="Laser"
+				AssetType="LaserFXNugget" />
+			<Entry
+				id="CameraShakerVolume"
+				AssetType="CameraShakerVolumeFXNugget" />
+			<Entry
+				id="ViewShake"
+				AssetType="ViewShakeFXNugget" />
+			<Entry
+				id="AttachedModel"
+				AssetType="AttachedModelFXNugget" />
+			<Entry
+				id="TerrainScorch"
+				AssetType="TerrainScorchFXNugget" />
+			<Entry
+				id="TintDrawable"
+				AssetType="TintDrawableFXNugget" />
+			<Entry
+				id="FXListAtBonePos"
+				AssetType="FXListAtBonePosFXNugget" />
+			<Entry
+				id="FXParticleSysBone"
+				AssetType="FXParticleSysBoneNugget" />
+			<Entry
+				id="ParticleSystem"
+				AssetType="ParticleSystemFXNugget" />
+			<Entry
+				id="ForceFeedback"
+				AssetType="ForceFeedbackFXNugget" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="FXList"
+		TypeHash="963056884">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="CullTracking"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="CullTrackingMin"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="CullTrackingMax"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="NuggetList"
+			AssetType="FXNuggetTypes" />
+		<Entry
+			id="PlayEvenIfShrouded"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="Tailorable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

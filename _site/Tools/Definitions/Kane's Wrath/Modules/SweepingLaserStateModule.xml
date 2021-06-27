@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SweepingLaserStateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="LaserStateModuleData" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<EntryReference
+			id="SweepFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranSweepFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="SweepFXTimeout"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="SweepWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

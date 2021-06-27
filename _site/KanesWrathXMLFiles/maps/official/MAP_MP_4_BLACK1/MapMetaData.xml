@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="60" CRC="0" Description="Map:MAP_MP_4_BLACK1/Desc" DisplayName="MAP_MP_4_BLACK1" FileName="Data\maps\official\MAP_MP_4_BLACK1\MAP_MP_4_BLACK1.map" Height="570" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="570" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="960" y="3560" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="3560" y="3560" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="3560" y="960" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="960" y="960" z="0" />
+  </StartPosition>
+</MapMetaData>

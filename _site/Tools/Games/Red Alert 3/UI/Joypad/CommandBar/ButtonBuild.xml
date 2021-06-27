@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIJoypadCommandBarButtonBuildFactionSettings">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="LockedButtonStateData"
+			AssetType="ButtonSingleStateDataRef"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="UIJoypadCommandBarButtonBuild"
+		TypeHash="1141570868">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="FactionSettings"
+			AssetType="UIJoypadCommandBarButtonBuildFactionSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

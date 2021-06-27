@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIUpgradeHeuristicType">
+		<Entry>INVALID</Entry>
+		<Entry>IMPORTANT</Entry>
+		<Entry>BOILINGOIL</Entry>
+		<Entry>FACTORY_UNITUNLOCK</Entry>
+		<Entry>FORTRESS</Entry>
+		<Entry>IGNORE</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

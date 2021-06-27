@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CommandPointsUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="CommandPoints"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="RequiredObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

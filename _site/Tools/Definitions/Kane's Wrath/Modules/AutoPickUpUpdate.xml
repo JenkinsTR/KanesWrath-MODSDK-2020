@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EatObjectEntryType">
+		<Entry
+			id="MyHealthPercentage"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TargetHealthPercentage"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="AutoPickUpUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="PickUpScanDelayTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="ScanDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RunFromButtonNumber"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="PickUpFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="EatObjectEntries"
+			AssetType="EatObjectEntryType"
+			MinLength="0"
+			MaxLength="12" />
+		<Entry
+			id="AutoThrowObject"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="RunFromButton"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="CanScanWhileAttackingOrMoving"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

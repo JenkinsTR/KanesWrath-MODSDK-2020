@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MissionObjectiveStatus">
+		<Entry>Invalid</Entry>
+		<Entry>Hidden</Entry>
+		<Entry>Active</Entry>
+		<Entry>Completed</Entry>
+		<Entry>Failed</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

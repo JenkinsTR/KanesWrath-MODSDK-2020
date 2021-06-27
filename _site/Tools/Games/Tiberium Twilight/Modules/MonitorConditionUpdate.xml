@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MonitorConditionActionType">
+		<Entry>DUMP_ORE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MonitorConditionActionBitFlags"
+		BaseEnum="MonitorConditionActionType" />
+
+	<Asset
+		id="MonitorConditionUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ModelConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="OCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="PreDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PostDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="ActionsOnTriggered"
+			AssetType="MonitorConditionActionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

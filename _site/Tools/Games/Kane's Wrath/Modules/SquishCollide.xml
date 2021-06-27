@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SquishCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CollideModuleData" />
+		<Entry
+			id="CrushAnimTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="CrushKillDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default=".5s" />
+		<Entry
+			id="UseDirectionCheck"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

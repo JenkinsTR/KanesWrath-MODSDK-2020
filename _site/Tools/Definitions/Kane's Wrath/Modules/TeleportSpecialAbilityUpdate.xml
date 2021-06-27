@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TeleportSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="BusyDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="DestinationWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="SourceWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HeightToTeleportTo"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FadeInTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+</AssetDefinition>

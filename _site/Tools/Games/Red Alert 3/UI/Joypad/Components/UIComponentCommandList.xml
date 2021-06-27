@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentCommandList">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AptTokenLeftTrigger"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenRightTrigger"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenAButton"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenBButton"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenXButton"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenYButton"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

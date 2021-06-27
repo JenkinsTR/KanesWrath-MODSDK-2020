@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HitReactionBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="LightDamageHitReactionLifeTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MediumDamageHitReactionLifeTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="HeavyDamageHitReactionLifeTimer"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="LightDamageHitReactionThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MediumDamageHitReactionThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HeavyDamageHitReactionThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RequiredDeathTypes"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<Entry
+			id="RotateToSourceWhenDamaged"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RotateToSourceIgnoreIdleCheck"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="GoIdleWhenDamaged"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

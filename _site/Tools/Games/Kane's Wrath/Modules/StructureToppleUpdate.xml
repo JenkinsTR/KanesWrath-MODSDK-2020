@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StructureToppleUpdateFXBoneInfo">
+		<Entry
+			id="BoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="ParticleSystemTemplate"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="StructureToppleUpdateAngleFXInfo">
+		<Entry
+			id="Angle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<EntryReference
+			id="FXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="StructureToppleUpgradeOCLVec">
+		<EntryList
+			id="ObjectCreationListRef"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="StructureToppleUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MinToppleDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MinToppleDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxToppleDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="StructuralIntegrity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<Entry
+			id="StructuralDecay"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ToppleAccelerationFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.06" />
+		<Entry
+			id="DamageFXTypes"
+			AssetType="DamageBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToppleStartFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToppleDelayFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToppleFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ToppleDoneFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrushingFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrushingWeaponName"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="MinToppleBurstDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxToppleBurstDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ForceToppleAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="OCLs"
+			AssetType="StructureToppleUpgradeOCLVec"
+			MinLength="0"
+			MaxLength="3" />
+		<EntryList
+			id="OCLCount"
+			AssetType="SageInt"
+			MinLength="0"
+			MaxLength="3" />
+		<EntryList
+			id="FXBones"
+			AssetType="StructureToppleUpdateFXBoneInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AngleFX"
+			AssetType="StructureToppleUpdateAngleFXInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="Die"
+			AssetType="DieMuxDataType" />
+	</Asset>
+
+</AssetDefinition>

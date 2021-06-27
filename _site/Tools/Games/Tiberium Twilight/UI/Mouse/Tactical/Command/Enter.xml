@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalCommandEnterInfiltratorEffectTypeSettings">
+		<Entry
+			id="Effect"
+			AssetType="InfiltratorEffectType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Cursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalCommandEnter"
+		TypeHash="1130654826">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="DefaultCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ContestCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryList
+			id="InfiltratorEffectTypeSettings"
+			AssetType="UIMouseTacticalCommandEnterInfiltratorEffectTypeSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

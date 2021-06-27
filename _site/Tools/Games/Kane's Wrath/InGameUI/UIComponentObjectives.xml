@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentObjectives">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AptStringNewBonusObjective"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="AptStringObjectiveCompleted"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+	</Asset>
+
+</AssetDefinition>

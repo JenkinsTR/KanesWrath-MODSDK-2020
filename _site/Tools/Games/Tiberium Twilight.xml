@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Game
+	xmlns="uri:thundermods.net:SAGE:WrathEdXML:GameDefinition"
+	id="Tiberium Twilight"
+	ManifestVersion="7"
+	AllTypesHash="2272104097"
+	WorldBuilderVersion=""
+	ThemeColor="BLUE">
+	<RegistryEntry
+		Key="Software\Electronic Arts\Command and Conquer 4"
+		Value="UserDataLeafName" />
+	<Stream
+		Name="data/aptui/*"
+		Description="AptUI"
+		IsNameRequired="true" />
+	<Stream
+		Name="data/audio"
+		Description="Audio" />
+	<Stream
+		Name="data/global"
+		Description="Global" />
+	<Stream
+		Name="data/locale"
+		Description="Locale" />
+	<Stream
+		Name="data/static"
+		Description="Static" />
+	<Stream
+		Name="data/worldbuilder"
+		Description="WorldBuilder" />
+	<Stream
+		Name="data/mapmetadata"
+		Description="MapMetaData" />
+	<Stream
+		Name="data/maps/official/*/map"
+		Description="Map"
+		IsNameRequired="true" />
+	<Stream
+		Name="data/stringhashes"
+		Description="Stringhashes" />
+	<Stream
+		Name="data/mod"
+		Description="Mod" />
+</Game>

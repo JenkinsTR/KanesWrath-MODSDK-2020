@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SiegeEvaEventType"
+		IsUsingAll="true">
+		<Entry>SIEGE</Entry>
+		<Entry>GENERIC</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SiegeEvaEvent">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Seconds"
+			AssetType="Time"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="EvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="EventType"
+			AssetType="SiegeEvaEventType"
+			IsAttribute="true"
+			Default="ALL" />
+	</Asset>
+
+</AssetDefinition>

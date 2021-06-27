@@ -1,0 +1,1039 @@
+FILE_VERSION = 2;
+STARTLAYOUTBLOCK
+  LAYOUTINIT = MapSelectMenuInit;
+  LAYOUTUPDATE = MapSelectMenuUpdate;
+  LAYOUTSHUTDOWN = MapSelectMenuShutdown;
+ENDLAYOUTBLOCK
+WINDOW
+  WINDOWTYPE = USER;
+  SCREENRECT = UPPERLEFT: 0 0,
+               BOTTOMRIGHT: 800 600,
+               CREATIONRESOLUTION: 800 600;
+  NAME = "MapSelectMenu.wnd:MapSelectMenuParent";
+  STATUS = ENABLED+BORDER+SEE_THRU;
+  STYLE = USER;
+  SYSTEMCALLBACK = "MapSelectMenuSystem";
+  INPUTCALLBACK = "MapSelectMenuInput";
+  TOOLTIPCALLBACK = "[None]";
+  DRAWCALLBACK = "W3DNoDraw";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+  HEADERTEMPLATE = "[None]";
+  TOOLTIPDELAY = -1;
+  TEXTCOLOR = ENABLED:  255 255 255 255, ENABLEDBORDER:  255 255 255 255,
+              DISABLED: 255 255 255 255, DISABLEDBORDER: 255 255 255 255,
+              HILITE:   255 255 255 255, HILITEBORDER:   255 255 255 255;
+  ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 2 2 2 255, BORDERCOLOR: 254 254 254 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                    IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+  DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+  HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 254 254 254 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                   IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+  CHILD
+  WINDOW
+    WINDOWTYPE = USER;
+    SCREENRECT = UPPERLEFT: 0 538,
+                 BOTTOMRIGHT: 800 589,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:MainMenucBackground";
+    STATUS = ENABLED+HIDDEN+SEE_THRU;
+    STYLE = USER;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "W3DMainMenuDraw";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXTCOLOR = ENABLED:  255 255 255 0, ENABLEDBORDER:  255 255 255 0,
+                DISABLED: 255 255 255 0, DISABLEDBORDER: 255 255 255 0,
+                HILITE:   255 255 255 0, HILITEBORDER:   255 255 255 0;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 66 4 66, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = PUSHBUTTON;
+    SCREENRECT = UPPERLEFT: 22 554,
+                 BOTTOMRIGHT: 196 590,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:ButtonOK";
+    STATUS = ENABLED+IMAGE;
+    STYLE = PUSHBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+	FONT = NAME: "Albertus MT", SIZE: 24, BOLD: 0;
+    HEADERTEMPLATE = "[None]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:StartGame";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 128 128 128 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = STATICTEXT;
+    SCREENRECT = UPPERLEFT: 260 20,
+                 BOTTOMRIGHT: 524 52,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:";
+    STATUS = ENABLED;
+    STYLE = STATICTEXT+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:SelectAMap";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 2 2 2 0, BORDERCOLOR: 2 2 2 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 255, BORDERCOLOR: 255 255 255 255;
+    STATICTEXTDATA = CENTERED: 1;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = PUSHBUTTON;
+    SCREENRECT = UPPERLEFT: 690 554,
+                 BOTTOMRIGHT: 775 590,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:ButtonBack";
+    STATUS = ENABLED+IMAGE;
+    STYLE = PUSHBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+	FONT = NAME: "Albertus MT", SIZE: 24, BOLD: 0;
+    HEADERTEMPLATE = "[None]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:Back";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 128 128 128 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = SCROLLLISTBOX;
+    SCREENRECT = UPPERLEFT: 200 96,
+                 BOTTOMRIGHT: 560 448,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:ListboxMap";
+    STATUS = ENABLED;
+    STYLE = SCROLLLISTBOX+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[None]";
+    TOOLTIPDELAY = -1;
+	TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+	          DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+	          HILITE:   128 128 255 255, HILITEBORDER:   0 66 4 255;
+	ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                IMAGE: AptListBoxHiliteSelectedItem, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                 IMAGE: AptListBoxHiliteSelectedItem, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	HILITEDRAWDATA = IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	               IMAGE: AptListBoxHiliteSelectedItem, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 106 171 84 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXDATA = LENGTH: 342,
+                  AUTOSCROLL: 0,
+                  SCROLLIFATEND: 0,
+                  AUTOPURGE: 0,
+                  SCROLLBAR: 1,
+                  MULTISELECT: 0,
+                  COLUMNS: 1,
+                  FORCESELECT: 0;
+	LISTBOXENABLEDUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonEnabled, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+	                               IMAGE: AptVSliderUpButtonHiliteSelected, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                               IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXDISABLEDUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonDisabled, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+	                                IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXHILITEUPBUTTONDRAWDATA = IMAGE: AptVSliderUpButtonHilite, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+	                              IMAGE: AptVSliderUpButtonHiliteSelected, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXENABLEDDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonEnabled, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+	                                 IMAGE: AptVSliderDownButtonHiliteSelected, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXDISABLEDDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonDisabled, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+	                                  IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXHILITEDOWNBUTTONDRAWDATA = IMAGE: AptVSliderDownButtonHilite, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+	                                IMAGE: AptVSliderDownButtonHiliteSelected, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXENABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 92 148 47 0, BORDERCOLOR: 36 110 32 255,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXDISABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 0, BORDERCOLOR: 73 28 1 255,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                              IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	LISTBOXHILITESLIDERDRAWDATA = IMAGE: NoImage, COLOR: 0 0 128 0, BORDERCOLOR: 92 148 47 255,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	SLIDERTHUMBENABLEDDRAWDATA = IMAGE: AptScrollBarThumbEnabledTop, COLOR: 255 4 0 0, BORDERCOLOR: 255 243 28 255,
+	                           IMAGE: AptScrollBarThumbHiliteSelectedTop, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+	                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: AptScrollBarThumbHiliteSelectedMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: AptScrollBarThumbHiliteSelectedBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: AptScrollBarThumbEnabledMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: AptScrollBarThumbEnabledBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	SLIDERTHUMBDISABLEDDRAWDATA = IMAGE: AptScrollBarThumbDisabledTop, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+	                            IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: AptScrollBarThumbDisabledMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: AptScrollBarThumbDisabledBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+	SLIDERTHUMBHILITEDRAWDATA = IMAGE: AptScrollBarThumbHiliteTop, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+	                          IMAGE: AptScrollBarThumbHiliteSelectedTop, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+	                          IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: AptScrollBarThumbHiliteSelectedMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: AptScrollBarThumbHiliteSelectedBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: AptScrollBarThumbHiliteMiddle, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: AptScrollBarThumbHiliteBottom, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+	                          IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = RADIOBUTTON;
+    SCREENRECT = UPPERLEFT: 608 160,
+                 BOTTOMRIGHT: 720 184,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:RadioButtonEasyAI";
+    STATUS = ENABLED;
+    STYLE = RADIOBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:EasyAI";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 128 128,
+                      IMAGE: NoImage, COLOR: 0 255 128 255, BORDERCOLOR: 0 128 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    RADIOBUTTONDATA = GROUP: 1;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = RADIOBUTTON;
+    SCREENRECT = UPPERLEFT: 608 224,
+                 BOTTOMRIGHT: 720 248,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:RadioButtonHardAI";
+    STATUS = ENABLED;
+    STYLE = RADIOBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:HardAI";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 128 128,
+                      IMAGE: NoImage, COLOR: 0 255 128 255, BORDERCOLOR: 0 128 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    RADIOBUTTONDATA = GROUP: 1;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = RADIOBUTTON;
+    SCREENRECT = UPPERLEFT: 608 192,
+                 BOTTOMRIGHT: 720 216,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:RadioButtonMediumAI";
+    STATUS = ENABLED;
+    STYLE = RADIOBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:MediumAI";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 128 128,
+                      IMAGE: NoImage, COLOR: 0 255 128 255, BORDERCOLOR: 0 128 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    RADIOBUTTONDATA = GROUP: 1;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = RADIOBUTTON;
+    SCREENRECT = UPPERLEFT: 376 64,
+                 BOTTOMRIGHT: 536 88,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:RadioButtonUserMaps";
+    STATUS = ENABLED;
+    STYLE = RADIOBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:UserMaps";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   3 196 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 128 128,
+                      IMAGE: NoImage, COLOR: 0 255 128 255, BORDERCOLOR: 0 128 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    RADIOBUTTONDATA = GROUP: 2;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = RADIOBUTTON;
+    SCREENRECT = UPPERLEFT: 208 64,
+                 BOTTOMRIGHT: 368 88,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:RadioButtonSystemMaps";
+    STATUS = ENABLED;
+    STYLE = RADIOBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:SystemMaps";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   3 196 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 128 128,
+                      IMAGE: NoImage, COLOR: 0 255 128 255, BORDERCOLOR: 0 128 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    RADIOBUTTONDATA = GROUP: 2;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = PUSHBUTTON;
+    SCREENRECT = UPPERLEFT: 616 312,
+                 BOTTOMRIGHT: 736 336,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:ButtonSinglePlayer";
+    STATUS = ENABLED+IMAGE;
+    STYLE = PUSHBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[None]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:SinglePlayer";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   3 196 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 128 128 128 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = PUSHBUTTON;
+    SCREENRECT = UPPERLEFT: 616 344,
+                 BOTTOMRIGHT: 736 368,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:ButtonMultiplayer";
+    STATUS = ENABLED+IMAGE;
+    STYLE = PUSHBUTTON+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[None]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:Network";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   3 196 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 128 128 128 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 0 128 0 128, BORDERCOLOR: 0 0 128 128,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = COMBOBOX;
+    SCREENRECT = UPPERLEFT: 616 408,
+                 BOTTOMRIGHT: 736 432,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:HeadlessCount";
+    STATUS = ENABLED+IMAGE;
+    STYLE = MOUSETRACK+COMBOBOX;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+  FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "ComboBoxEntry";
+    TOOLTIPDELAY = -1;
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                     IMAGE: NoImage COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                     IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXDATA = ISEDITABLE: 0,
+                  MAXCHARS: 4,
+                  MAXDISPLAY: 8,
+                  ASCIIONLY: 0,
+                  LETTERSANDNUMBERS: 0;
+    COMBOBOXDROPDOWNBUTTONENABLEDDRAWDATA = IMAGE: NoImage COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                            IMAGE: NoImage COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                            IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXDROPDOWNBUTTONDISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                             IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 128 128 128 255,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                             IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXDROPDOWNBUTTONHILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                           IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                           IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXEDITBOXENABLEDDRAWDATA = IMAGE: NoImage COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                     IMAGE: NoImage COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                     IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXEDITBOXDISABLEDDRAWDATA = IMAGE: NoImage COLOR: 128 128 128 255, BORDERCOLOR: 0 255 128 128,
+                                      IMAGE: NoImage COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                      IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXEDITBOXHILITEDRAWDATA = IMAGE: NoImage COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXLISTBOXENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 0 0 0, BORDERCOLOR: 0 0 0 0,
+                                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXLISTBOXDISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                      IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    COMBOBOXLISTBOXHILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXENABLEDUPBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                     IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXDISABLEDUPBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                      IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXHILITEUPBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXENABLEDDOWNBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                       IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXDISABLEDDOWNBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                        IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                        IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXHILITEDOWNBUTTONDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                      IMAGE: NoImage, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXENABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                   IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXDISABLEDSLIDERDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 64 64 64 255,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                    IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    LISTBOXHILITESLIDERDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    SLIDERTHUMBENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                                 IMAGE: NoImage, COLOR: 255 255 0 255, BORDERCOLOR: 254 254 254 255,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                 IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    SLIDERTHUMBDISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 128 128 128 255, BORDERCOLOR: 192 192 192 255,
+                                  IMAGE: NoImage, COLOR: 192 192 192 255, BORDERCOLOR: 254 254 254 255,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                  IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    SLIDERTHUMBHILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 255 0 255, BORDERCOLOR: 0 128 0 255,
+                                IMAGE: NoImage, COLOR: 254 254 254 255, BORDERCOLOR: 0 128 0 255,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                                IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+  END
+  CHILD
+  WINDOW
+    WINDOWTYPE = STATICTEXT;
+    SCREENRECT = UPPERLEFT: 592 384,
+                 BOTTOMRIGHT: 776 408,
+                 CREATIONRESOLUTION: 800 600;
+    NAME = "MapSelectMenu.wnd:";
+    STATUS = ENABLED+IMAGE;
+    STYLE = STATICTEXT+MOUSETRACK;
+    SYSTEMCALLBACK = "[None]";
+    INPUTCALLBACK = "[None]";
+    TOOLTIPCALLBACK = "[None]";
+    DRAWCALLBACK = "[None]";
+    FONT = NAME: "Albertus MT", SIZE: 16, BOLD: 0;
+    HEADERTEMPLATE = "[NONE]";
+    TOOLTIPDELAY = -1;
+    TEXT = "GUI:DebugMultihead";
+    TEXTCOLOR = ENABLED:  254 254 254 255, ENABLEDBORDER:  0 255 128 128,
+                DISABLED: 192 192 192 255, DISABLEDBORDER: 64 64 64 255,
+                HILITE:   0 128 0 255, HILITEBORDER:   0 66 4 255;
+    ENABLEDDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 0 255 0 255,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                      IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    DISABLEDDRAWDATA = IMAGE: NoImage, COLOR: 64 64 64 255, BORDERCOLOR: 192 192 192 255,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                       IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    HILITEDRAWDATA = IMAGE: NoImage, COLOR: 0 128 0 255, BORDERCOLOR: 128 255 128 255,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0,
+                     IMAGE: NoImage, COLOR: 255 255 255 0, BORDERCOLOR: 255 255 255 0;
+    STATICTEXTDATA = CENTERED: 0;
+  END
+  ENDALLCHILDREN
+END

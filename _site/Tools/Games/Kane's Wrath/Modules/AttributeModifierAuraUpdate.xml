@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AttributeModifierAuraUpdateRequired">
+		<Entry>MOUNTED</Entry>
+		<Entry>TAINT</Entry>
+		<Entry>ELVEN_WOOD</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AttributeModifierAuraUpdateRequiredBitFlags"
+		BaseEnum="AttributeModifierAuraUpdateRequired" />
+
+	<Asset
+		id="AttributeModifierAuraUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryReference
+			id="AttributeModifierName"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="RefreshDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="Range"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredConditions"
+			AssetType="AttributeModifierAuraUpdateRequiredBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AntiCategory"
+			AssetType="AttributeModifierCategoryBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="AntiFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="MaxActiveRank"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredObjectStatusFlags"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="TargetEnemy"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="AllowPowerWhenAttacking"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="InitiallyActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectGood"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="AffectEvil"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="RunWhileDead"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="AllowSelf"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="AffectContainedOnly"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="AffectHordeMembersOnly"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="PartitionManagerDistTestType">
+		<Entry>CENTER_2D</Entry>
+		<Entry>CIRCLE</Entry>
+		<Entry>CENTER_3D</Entry>
+		<Entry>SPHERE</Entry>
+		<Entry>EXTENTS_3D</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

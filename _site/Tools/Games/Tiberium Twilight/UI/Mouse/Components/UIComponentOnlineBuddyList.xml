@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentOnlineBuddyList">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="BuddyNameAptTokenSpec"
+			AssetType="String" />
+		<Entry
+			id="BuddyLocAptTokenSpec"
+			AssetType="String" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ReflectDamageModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageModuleData" />
+		<Entry
+			id="DamageTypesToReflect"
+			AssetType="DamageBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ReflectDamagePercentage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinimumDamageToReflect"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

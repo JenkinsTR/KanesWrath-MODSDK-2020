@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LockWeaponCreateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CreateModuleData" />
+		<Entry
+			id="SlotToLock"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+	</Asset>
+
+</AssetDefinition>

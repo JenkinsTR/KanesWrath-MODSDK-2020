@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="ObjectFilterAsset"
+		TypeHash="2695003032">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+	<Asset
+		id="ObjectFilterAssetRef">
+		<EntryReference
+			id="ObjectFilterAsset"
+			AssetType="ObjectFilterAsset" />
+	</Asset>
+
+	<Asset
+		id="ObjectFilterAssetWeakRef">
+		<EntryWeakReference
+			id="ObjectFilterAsset"
+			AssetType="ObjectFilterAsset" />
+	</Asset>
+
+</AssetDefinition>

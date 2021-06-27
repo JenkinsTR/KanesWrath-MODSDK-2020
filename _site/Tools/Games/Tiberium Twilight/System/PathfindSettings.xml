@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PathfindSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="MaxPathfindCellsPerFrame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxPathfindCellsPerPhase"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsFindMeleeEngagementLocation"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustDestination"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustHordeMeleeDestination"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustTargetDestination"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustToPossibleDestination"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustToMeleeDestination"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustToNearestGroundCell"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsAdjustToNearestValidCell"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsPatchPath"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxCellsToExamineTowardsGoal"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxExtraCollisionResponsePathsPerFrame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="MaxExtraMoveAwayFromPathPathsPerFrame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LayerZCloseEnough"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

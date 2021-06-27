@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AIData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="StructureSeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TeamSeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ResourcesWealthy"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ResourcesPoor"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="StructuresWealthyMod"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TeamWealthyMod"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="StructuresPoorMod"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TeamPoorMod"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TeamResourcesToBuild"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="GuardChaseUnitFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="GuardEnemyScanRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="7" />
+		<Entry
+			id="GuardEnemyReturnScanRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="15" />
+		<Entry
+			id="WallHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SkirmishGroupFudgeValue"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxRecruitDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RepulsedDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinDistanceForGroup"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="FormationEnemyDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="600.0" />
+		<Entry
+			id="RebuildDelaySeconds"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="SupplyCenterSafeRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="250.0" />
+		<Entry
+			id="AIDozerBoredRadiusModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="MeleeApproachTolerance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="MeleeApproachDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="60.0" />
+		<Entry
+			id="WadeWaterDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="DeepWaterDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="FormationColumnWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="65.0" />
+		<Entry
+			id="FormationRowDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="65.0" />
+		<Entry
+			id="FormationSquadSpacing"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+		<Entry
+			id="NarrowPassageScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MaxSquadWidth"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="AltCameraZoomOverride"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.4" />
+		<Entry
+			id="AltCameraPitchOverride"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MaxRetaliateDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="RetaliateFriendsRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="120.0" />
+		<Entry
+			id="ChaseFromBehindLimit"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="CastleSiegeStandBackDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="LowLodTree"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LowLodTreeNoGrab"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LowLodTreeNoHarvest"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LowLodTreeScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.55" />
+		<Entry
+			id="Optimization_NumTeamsToRecruit"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="Optimization_NumEfficiencyUpdates"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="Optimization_TimeToCacheCanEnterTransport"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="Optimization_TimeToCacheCanReachMobileTarget"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Optimization_TimeToCacheCanReachImmobileTarget"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Optimization_ConquerMetricsCacheTimeOut"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="3s" />
+		<Entry
+			id="Optimization_TacticsEmergencyKickPeriod"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="4s" />
+		<Entry
+			id="EnableRepulsors"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ForceSkirmishAI"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RotateSkirmishBases"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AttackUsesLineOfSight"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AICrushesInfantry"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="WaitForOthers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HordesWaitForHordes"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AttackMoveUsesFormations"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AllowForestFires"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseFormations"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseLowLODTrees"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DisableTrees"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="MaximumCraterDepth"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="8" />
+	</Asset>
+
+</AssetDefinition>

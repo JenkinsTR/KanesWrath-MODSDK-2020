@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ScatterDamage">
+		<Entry
+			id="ScatterAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScatterDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<Asset
+		id="WeaponScatterEffectUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryRelocation
+			id="WeaponTemplate"
+			AssetType="WeaponTemplateRef"
+			IsAttribute="true" />
+		<Entry
+			id="ScatterSettings"
+			AssetType="ScatterDamage" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="RandomScatter3D"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

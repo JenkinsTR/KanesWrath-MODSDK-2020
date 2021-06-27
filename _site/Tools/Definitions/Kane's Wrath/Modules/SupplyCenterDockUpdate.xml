@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SupplyCenterDockUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DockUpdateModuleData" />
+		<Entry
+			id="ValueMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="BonusScience"
+			AssetType="ScienceType"
+			IsAttribute="true" />
+		<Entry
+			id="BonusScienceMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DistributedDeposit"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

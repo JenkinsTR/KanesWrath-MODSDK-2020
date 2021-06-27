@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+	</head>
+	<body>
+		<P><FONT face="Arial">You will need these basic software installed on your system 
+				before you begin<BR>
+				<BR>
+				A: 3D Studio Max&nbsp;7 SP1. The plugin has not been tested with later 
+				versions. Support is unknown.<BR>
+				B: "Max2W3X.dle" must be installed in the "plugins" directory of 3d Max.<BR>
+		</P>
+		<P></FONT><FONT face="Arial">
+				<HR noShade SIZE="10">
+				<P></P>
+			</FONT>
+		<P><FONT face="Arial">=========<BR>
+				<B><FONT size="3">Overview</FONT></B><BR>
+				=========</FONT></P>
+		<P><B><FONT face="Arial">1. </FONT><A href="#cmodel"><FONT face="Arial">Create your model (3DS 
+						Max)</FONT></A></B></P>
+		<P><B><FONT face="Arial">2. </FONT><A href="#cmaps"><FONT face="Arial">Create your map(s) 
+						(photoshop)</FONT></A></B></P>
+		<P><B><FONT face="Arial">3. </FONT><A href="#appmap"><FONT face="Arial">Applying maps (3dmax) 
+						W3D material in your Material/Map browser.</FONT></A></B></P>
+		<P><B><FONT face="Arial">4. </FONT><A href="#cbones"><FONT face="Arial">Create bones (3d max 
+						dummy objects)</FONT></A></B></P>
+		<P><B><FONT face="Arial">5. </FONT><A href="#setbones"><FONT face="Arial">Set up your bones 
+						(3dmax) W3D plugin under "space Warps"</FONT></A></B></P>
+		<P><B><FONT face="Arial">6. </FONT><A href="#anim"><FONT face="Arial">Animating</FONT></A></B></P>
+		<STRONG>
+			<P><B><FONT face="Arial">7. </FONT><A href="#export"><FONT face="Arial">Export to W3X file</FONT></A></B></P>
+		</STRONG><FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="cmodel"></A>
+		<BR>
+		<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::<BR>
+			<B><FONT size="3">Create your model</FONT></B><BR>
+			:::::::::::::::::::::::::::::::::::::::::::::::::::::::<IMG height="141" src="images/1a.gif" width="421" align="right">
+		</FONT>
+		<P><FONT face="Arial">Create a model in 3DS max, or if you have one created, move on to 
+				next step.</FONT></P>
+		<P><FONT face="Arial">---------------</FONT></P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="cmaps"></A>
+		<BR>
+		<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::<BR>
+			<FONT size="3"><B>Create your maps</B></FONT><BR>
+			:::::::::::::::::::::::::::::::::::::::::::::::::::::<IMG height="125" src="images/1b.jpg" width="125" align="left">
+		</FONT>
+		<P><FONT face="Arial">Create your maps in photoshop (or whatever paint program you 
+				use), if you already made one, move on to next step.</FONT></P>
+		<P><BR>
+			<FONT face="Arial"><IMG height="17" src="images/point.jpg" width="50" align="absBottom"><FONT size="3">{ 
+					"Mean_fish.tga"}</FONT></FONT></P>
+		<BR>
+		<FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="appmap"></A>
+		<BR>
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::<BR>
+			<B><FONT size="3">Applying maps</FONT></B><BR>
+			:::::::::::::::::::::::::::::::::::::::::: </FONT>
+		<P><BR>
+			<FONT face="Arial"><B>Step 1.<BR>
+				</B>=====<BR>
+				Select your model, click open the material editor, pick an empty slot, click 
+				"assign material to selection"
+				<BR>
+				<IMG height="112" src="images/1c.jpg" width="154"> </FONT>
+		</P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 2.</B><BR>
+				=====<BR>
+				Click the default "standard" 
+				button to open the material map browser. Select "DirectX 9 shader" from the list and 
+				click "OK".<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 3.</B><BR>
+				=====<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial">Click on the shader file name button and select the shader file "3dsmax7/maps/fx/CnC3/Simple.fx".</FONT></P>
+		<BR>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 4.</B><BR>
+				===== </FONT><FONT face="Arial">
+				<BR>
+				<IMG height="141" src="images/1fa.jpg" width="212" align="right"> Click the bar labeled "None" next to "Base Texture" and look for the texture you wish to apply, click on the file, then click "open". Now you've selected your texture map.
+				<BR>
+				<BR>
+				<BR>
+				<BR>
+			</FONT>
+		</P>
+		<FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="cbones"></A>
+		<BR>
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::::<BR>
+			<FONT size="3"><B>Creating bones </B></FONT>
+			<BR>
+			:::::::::::::::::::::::::::::::::::::::::::: </FONT>
+		<P><BR>
+			<FONT face="Arial"><FONT size="3"><B>Step 1. </B></FONT>
+				<BR>
+				=====<BR>
+				<IMG src="images/1g.gif" align="left">Create dummy objects that you will use to 
+				control the vertices of an area of the model and Position them in the areas of 
+				the vertices you wish to control.</FONT></P>
+		<P><FONT face="Arial">Tip:<BR>
+				You can use the "affect pivot only" in max to reposition the pivot center of 
+				the dummy object for greater control in your animation.<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="setbones"></A>
+		<P><FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<BR>
+				<B><FONT size="3">Setting up your bones </FONT></B>
+				<BR>
+				::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</FONT></P>
+		<P><BR>
+			<FONT face="Arial"><B>Step 1. </B>
+				<BR>
+				=====<BR>
+				Click on the "Create" tab of the side toolbar in max. Click on "Space warps" 
+				and select from the drop down list "Westwood Space Warps."<BR>
+				<IMG height="243" src="images/ww_spacewarp.gif" width="184">
+				<BR>
+			</FONT>
+		</P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 2.</B><BR>
+				=====<BR>
+				Click on the "WWSkin" button, (its the only one there) and Click and drag in an 
+				orthographic viewport to create the space warp.<BR>
+				<IMG src="images/1i.gif"> </FONT>
+		</P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 3. </B>
+				<BR>
+				=====<BR>
+				<IMG height="137" src="images/1ia.gif" width="158" align="left"><IMG height="137" src="images/1ib.gif" width="158" align="right">It 
+				will first look very tiny or not visible at all. You can use the "scale" 
+				Modifier on the main toolbar to enlarge it so that it is more viewable. The 
+				Space warp Icon looks like a set of crossbones.<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<BR>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 4. </B>
+				<BR>
+				=====<BR>
+				Next, you must "add the bones", do so by clicking the "Add Bones" button, 
+				located on the modify panel. Select the bones you want to add and click OK.<BR>
+				<IMG height="437" src="images/1j.gif" width="557"></FONT></P>
+		<FONT face="Arial"><FONT face="Arial">
+				<HR>
+				<P></P>
+			</FONT>
+			<P><FONT face="Arial"><B>Step 5. </B>
+					<BR>
+					=====<BR>
+					<IMG src="images/utilities_export.gif" align="right">Your dummy objects 
+					probably should be hidden when exported, as they don't belong to the object.</FONT></P>
+			<P><FONT face="Arial">To achieve that go into the Utilities section, add the W3D Tools 
+					to your Utilities. If you do this the first time, it is probably hidden behind 
+					the More... button.</FONT></P>
+			<P><FONT face="Arial">Select your bone dummy object. Then in the W3D Tools uncheck the 
+					"Export Geometry" option, leave the "Export Transform" checked.</FONT></P>
+			<P><FONT face="Arial"><BR>&nbsp;</P>
+		</FONT>
+		<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 6. </B>
+				<BR>
+				=====<BR>
+				<IMG height="84" src="images/1k.gif" width="123" align="right">Bind your model 
+				to the "WWSkin" space warp by first selecting your model, then clicking the 
+				"bind to spacewarp" button located on the main toolbar in Max. Next, position 
+				your mouse back over the your model and click and drag to the "WWSkin" 
+				(crossbones) Icon to bind them.<BR>
+		</P>
+		<P></FONT>&nbsp;</P>
+		<P></P>
+		</FONT><FONT face="Arial">
+			<HR>
+			<BR>
+			<B>Step 7. </B>
+			<BR>
+			=====<BR>
+			Select your model and you will see it now how the space warp bound to it and 
+			its vertices are showing.
+			<BR>
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 8. </B>
+				<BR>
+				=====<BR>
+				<IMG src="images/1L.gif" align="left">Deselect the "bind to space warp button 
+				and use the select button to draw a rectangle around the vertices you would 
+				like to bind to a particular bone, then click the "link to Bone" button located 
+				on the modify panel under your "WWSkin binding", then Click the dummy object 
+				used to represent that bone.<BR>
+			</FONT>
+		</P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 9. </B>
+				<BR>
+				=====<BR>
+				Continue doing the until you have assigned the vertices to the particular bones 
+				you want to be able to animate.</FONT></P>
+		<P><FONT face="Arial"><IMG src="images/note.jpg"><BR>
+				<IMG height="39" src="images/1Lb.gif" width="163" align="right">At this point 
+				you're almost done and about ready to animate, but the move,rotate,and scale 
+				tools will be ghosted and not selectable yet.<BR>
+				You must first click the "*WWSkin Binding" in the modify panel to gray the word 
+				"*WWSkin binding" then click in the viewport to deselect it, now you may select 
+				the dummy objects.<BR>
+			</FONT>
+		</P>
+		<FONT face="Arial">
+			<HR noShade SIZE="10">
+		</FONT><A name="anim"></A><FONT face="Arial">:::::::::::::::::::::::::::::<BR>
+			<B><FONT size="3">Animating</FONT></B><BR>
+			::::::::::::::::::::::::::::: </FONT>
+		<P><FONT face="Arial"><IMG src="images/note.jpg"><BR>
+				<IMG height="333" src="images/1m.gif" width="412" align="right">The dummy 
+				objects will not work unless you are on any frame other than frame 0 (zero) and 
+				you will also need to have the animate button depressed before beginning,
+				<BR>
+				<BR>
+			</FONT>
+		</P>
+		<P><FONT face="Arial"><B>Step 1. </B>
+				<BR>
+				=====<BR>
+				Click the animate ("Auto") button and move any any frame (other than zero).</FONT></P>
+		<FONT face="Arial">
+			<HR>
+		</FONT>
+		<P><FONT face="Arial"><B>Step 2.</B><BR>
+				=====<BR>
+				Animate your model with the dummy objects (bones) and make note of the ending 
+				frame. When your happy with the anim loop, move on to next part.</FONT></P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<FONT face="Arial"><FONT face="Arial">
+				<HR noShade SIZE="10">
+				<P>
+			</FONT><A name="cmodel"></A>
+			<BR>
+			<A name="export"></A><FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::<BR>
+				<FONT size="3"></FONT><STRONG>Export to W3X File</STRONG><BR>
+				:::::::::::::::::::::::::::::::::::::::::::::::::::::::<IMG src="images/export_filename.gif" align="right">
+			</FONT></P>
+			<P><FONT face="Arial"><FONT face="Arial"><B>Step 1. </B>
+						<BR>
+						=====<BR>
+					</FONT>Go to the File menu, select Export</FONT>
+		</FONT></P><FONT face="Arial"><FONT face="Arial">
+				<HR>
+				<P><B>Step 2. </B>
+					<BR>
+					=====</P>
+				<P>Go to the "Data/Art" folder. <FONT face="Arial"><FONT face="Arial">Create a folder with 
+							the first two letters of the file name you want to use, eg "Fi". <FONT face="Arial">
+								<FONT face="Arial">Give the file the name "Fish.w3x"</P>
+				<FONT face="Arial"><FONT face="Arial">
+						<HR>
+						<P><B>Step&nbsp;4. </B>
+							<BR>
+							=====</P>
+						<P>Select "W3D XML Asset (*.w3x)" from the file type list.</P>
+						<P>Hit Save</P>
+						<FONT face="Arial"><FONT face="Arial">
+								<HR>
+								<P><B>Step&nbsp;5. </B>
+									<BR>
+									=====</P>
+								<P>The export options dialog comes up. Select "Hierarchical Animated Model" as type 
+									and specify the begin and end frame of the animation you created earlier. If 
+									you skipped that part, you can just export it as "Hierachical Model". Hit Ok 
+									and your file should get written.</P>
+							</FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT></FONT>
+	</body>
+</html>

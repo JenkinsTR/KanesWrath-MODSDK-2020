@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SupplyWarehouseCripplingBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="SelfHealSupression"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SelfHealDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SelfHealAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

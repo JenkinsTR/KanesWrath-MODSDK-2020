@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="CritterEmitterPhaseType">
+		<Entry>INITIAL</Entry>
+		<Entry>MIDPOINT</Entry>
+		<Entry>FINAL</Entry>
+		<Entry>HIT_GROUND</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="CritterEmitterBaseType">
+		<Entry
+			id="Type"
+			AssetType="CritterEmitterPhaseType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="CritterEmitterFXListType">
+		<EntryInheritance
+			id="base"
+			AssetType="CritterEmitterBaseType" />
+		<EntryList
+			id="FX"
+			AssetType="FXListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="CritterEmitterOCLType">
+		<EntryInheritance
+			id="base"
+			AssetType="CritterEmitterBaseType" />
+		<EntryList
+			id="OCL"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="CritterEmitterUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ReloadTime"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="FX"
+			AssetType="CritterEmitterFXListType"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryList
+			id="OCL"
+			AssetType="CritterEmitterOCLType"
+			MinLength="0"
+			MaxLength="4" />
+	</Asset>
+
+</AssetDefinition>

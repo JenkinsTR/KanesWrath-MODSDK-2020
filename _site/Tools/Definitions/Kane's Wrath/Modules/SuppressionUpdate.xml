@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SuppressionUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="UpdateDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Suppressability"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SuppressionDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="3s" />
+		<EntryReference
+			id="AttributeModifierSuppressed"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttributeModifierForceMove"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="IgnoreSuppressionObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

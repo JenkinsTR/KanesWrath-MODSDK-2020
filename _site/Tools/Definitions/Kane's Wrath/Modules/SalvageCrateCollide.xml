@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SalvageCrateCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CrateCollideModuleData" />
+		<Entry
+			id="PorterChance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BannerChance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LevelUpChance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LevelUpRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ResourceChance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinimumResource"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaximumResource"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="AllowAIPickup"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

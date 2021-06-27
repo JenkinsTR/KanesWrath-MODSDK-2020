@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Texture
+		id="Portrait_MirageTank"
+		File="ART:Static/MirageTank/Portrait_MirageTank.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false"
+		AllowAutomaticResize="false" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3.dds"
+		OutputFormat="DXT3" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_D"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_D.dds"
+		OutputFormat="DXT5" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_NRM"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_NRM.dds" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_SPM"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_SPM.dds" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_Treads"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_Treads.dds"
+		OutputFormat="DXT5" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_Treads_NRM"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_Treads_NRM.dds"
+		OutputFormat="DXT5" />
+		
+	<Texture
+		id="AUAntiVehicleVehicleTech3_Treads_SPM"
+		File="ART:Static/MirageTank/AUAntiVehicleVehicleTech3_Treads_SPM.dds"
+		OutputFormat="DXT5" />
+		
+	<Texture
+		id="FXAlliedPrismBeam"
+		File="ART:Static/MirageTank/FXAlliedPrismBeam.dds"
+		OutputFormat="X8R8G8B8" />
+		
+	<Texture
+		id="FXAlliedPrismBeam_Vet"
+		File="ART:Static/MirageTank/FXAlliedPrismBeam_Vet.dds" />
+		
+	<Texture
+		id="FXDistortionFractal01"
+		File="ART:Static/MirageTank/FXDistortionFractal01.dds" />
+		
+	<Texture
+		id="FXFireGrid"
+		File="ART:Static/MirageTank/FXFireGrid.dds" />
+		
+	<Texture
+		id="FXRipples02"
+		File="ART:Static/MirageTank/FXRipples02.dds"
+		OutputFormat="DXT5" />
+		
+	<Texture
+		id="FXFireScroll3"
+		File="ART:Static/MirageTank/FXFireScroll3.dds" />
+</AssetDeclaration>

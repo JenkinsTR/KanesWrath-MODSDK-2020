@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="InvisibilityUpdateOptions">
+		<Entry>STARTS_ACTIVE</Entry>
+		<Entry>BROADCAST</Entry>
+		<Entry>BROADCAST_INVERSE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="InvisibilityUpdateOptionsBitFlags"
+		BaseEnum="InvisibilityUpdateOptions" />
+
+	<Asset
+		id="InvisibilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Options"
+			AssetType="InvisibilityUpdateOptionsBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="UpdatePeriod"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="BroadcastRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="OpacityMin"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="40%" />
+		<Entry
+			id="OpacityMax"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<EntryRelocation
+			id="NamedVoiceNameToUseAsVoiceMoveToStealthyArea"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NamedVoiceNameToUseAsVoiceEnterStateMoveToStealthyArea"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<Entry
+			id="InvisibilityNugget"
+			AssetType="InvisibilityNuggetType" />
+		<EntryRelocation
+			id="BroadcastObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="RequiresUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

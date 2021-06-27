@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HealCrateCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CrateCollideModuleData" />
+		<Entry
+			id="Range"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="75" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

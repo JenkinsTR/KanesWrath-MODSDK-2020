@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AutoDepositFlagsType">
+		<Entry>NONE</Entry>
+		<Entry>ACTIVE_WHEN_REPAIRING</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AutoDepositBitFlags"
+		BaseEnum="AutoDepositFlagsType" />
+
+	<Asset
+		id="AutoDepositUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="DepositInterval"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="DepositAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="InitialCaptureBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="UpgradeBonusScalar"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Flags"
+			AssetType="AutoDepositBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="GiveNoXP"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnlyWhenGarrisoned"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

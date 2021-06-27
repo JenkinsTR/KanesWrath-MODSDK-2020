@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="KindOfAndStatusAndModelConditionType">
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="KindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="UseLocalPlayerFilter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="RadarScanMapSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryList
+			id="IntersectionFlagsFilter"
+			AssetType="KindOfAndStatusAndModelConditionType"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

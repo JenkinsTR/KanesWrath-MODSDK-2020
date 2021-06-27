@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:BAMAP_DC10_4/Desc" DisplayName="BAMAP_DC10_4" FileName="Data\maps\official\BAMAP_DC10_4\BAMAP_DC10_4.map" Height="460" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="460" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="3000" y="3000" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="904.881" y="944.979" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="3000" y="1000" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="1000" y="3000" z="0" />
+  </StartPosition>
+</MapMetaData>

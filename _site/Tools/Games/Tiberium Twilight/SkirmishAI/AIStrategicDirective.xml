@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIStrategicDirective">
+		<Entry>Invalid</Entry>
+		<Entry>Normal</Entry>
+		<Entry>Assault</Entry>
+		<Entry>HoldPosition</Entry>
+		<Entry>HoldObject</Entry>
+		<Entry>Help</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AIStrategicDirectiveEvent">
+		<Entry>Begin</Entry>
+		<Entry>Complete</Entry>
+		<Entry>Cancel</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AIMonitorFeedback">
+		<Entry>Invalid</Entry>
+		<Entry>Normal</Entry>
+		<Entry>BuildingForces</Entry>
+		<Entry>SendingForces</Entry>
+		<Entry>InCombat</Entry>
+		<Entry>InDanger</Entry>
+		<Entry>Attacking</Entry>
+		<Entry>Defending</Entry>
+		<Entry>Expanding</Entry>
+		<Entry>Assault</Entry>
+		<Entry>HoldPosition</Entry>
+		<Entry>HoldObject</Entry>
+		<Entry>LowOnCredits</Entry>
+		<Entry>LowOnPower</Entry>
+		<Entry>OnGuard</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

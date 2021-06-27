@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags />
+	<Includes>
+	</Includes>
+
+	<Defines>
+		<Define name="GDI_UNITRESPONSE_VOLUME" value="110" />
+		<Define name="GDI_UNITRESPONSE_MINVOLUME" value="105" />
+		<Define name="GDI_UNITRESPONSE_PITCHSHIFT_LOW" value="-1" />
+		<Define name="GDI_UNITRESPONSE_PITCHSHIFT_HIGH" value="1" />
+
+		<Define
+			name="AMBIENTSOUND_KINDOF"
+			value="IMMOBILE INERT OPTIMIZED_SOUND" 
+		/>
+	</Defines>
+
+		<MiscAudio
+			id="MODMiscAudio" 
+			RadarNotifyHarvesterUnderAttackSound=""
+			RadarNotifyStructureUnderAttackSound=""
+			RadarNotifyInfiltrationSound=""        
+			RadarNotifyOnlineSound="RadarOn"              
+			RadarNotifyOfflineSound="RadarOff"             
+			GenericRadarEvent=""					
+			BeaconPlacedSound=""					
+			BeaconPlacementFailed=""				
+			DefectorTimerTickSound=""              
+			DefectorTimerDingSound=""              
+			AllCheerSound=""                       
+			NoCanDoSound=""                        
+			StealthDiscoveredSound=""              
+			StealthNeutralizedSound=""             
+			MoneyDepositSound="CashGaining"                   
+			MoneyWithdrawSound="CashLosing"
+			LowPower="PlayerBasePowerOff"
+			SufficientPower="PlayerBasePowerOn"
+			BuildingDisabled="BuildingGenericPowerOff"                    
+			BuildingReenabled="BuildingGenericPowerOn"                   
+			VehicleDisabled=""                     
+			VehicleReenabled=""                    
+			SplatterVehiclePilotsBrain=""          
+			CrateHeal="CratePickup"
+			CrateShroud="CratePickup"
+			CrateFreeUnit="CratePickup"
+			CrateMoney="CratePickup"
+			UnitPromoted=""                        
+			RepairSparks=""                        
+			EnterCloseCombat=""					
+			ExitCloseCombat=""						
+			IncomingChatNotification="ChatInGameNotification"
+			PrivateMessageNotification="ChatPrivateMesssageNotification"	
+			BuddyMessageNotification=""			
+			GameSpyCommunicatorOpen=""				
+			EnabledHotKeyPressed=""				
+			DisabledHotKeyPressed=""				
+			DisabledButtonClicked=""				
+			LowLODShellMusic="ShellLowLODMP3"
+			HighLODShellMusic="ShellLowLODMP3"
+			ScoreScreenMusic="ScoreScreenMusic"					
+			ShellMapLoadMusic="Music_BaseBuilding_Unknown"					
+			FullScreenSubMenuMusic="Music_BaseBuilding_Unknown"				
+			SaveFileLoadMusic="TEMP_RAM_Music360_LoadScreen"
+			CreditsMusic="Music_BaseBuilding_Unknown"						
+			VolumeSampleMusic="VolumeSampleMusic"					
+			VolumeSampleSoundFX="VolumeSampleSoundFX"					
+			VolumeSampleVoice="VolumeSampleVoice"					
+			VolumeSampleAmbient="VolumeSampleAmbient"					
+			VolumeSampleMovie="VolumeSampleMovie"					
+			MissionBriefingCharacterClick="MissionBriefingCharacter"		
+			ComboBoxClick=""						
+			MPSecondsCountdownBeep="Gui_MPCountdown" 
+			RIFThingTemplateReloadedSound=""       
+			RIFObjectsRefreshedSound=""		    
+			FastForwardModeOn=""					
+			FastForwardModeOff=""					
+			RallyPointSet="RallyPointSet"
+			UnableToSetRallyPoint=""		
+			PlanningModeOrderGiven="GuiCommandButtonClick"
+			BuildingPlacementSound=""				
+			BadBuildingPlacementSound=""			
+			WallPlacementSound=""					
+			AircraftWheelScreech=""				
+			LockonTickSound=""			
+			TargetObjectWithSpecialPowerSound="" 
+			ObjectiveCompletedSound="" 
+			GuiFixedButtonClickedSound="GuiFixedButtonClick"
+			GuiBuildQueueButtonClickedSound="GuiBuildQueueButtonClick"
+			GuiSelectionRefinementButtonClickedSound="GuiSelectionRefinementButtonClick"
+			GuiFactorySelectionButtonClickedSound="GuiFactorySelectionButtonClick"
+			GuiTogglePowerObjectClickedSound="GuiCommandButtonClick"
+			GuiToggleRepairObjectClickedSound="GuiCommandButtonClick"
+			GuiSellObjectClickedSound="GuiCommandButtonClick"
+			GuiCommandButtonClickedSound="GuiCommandButtonClick"
+			GuiCommandButtonRightClickedSound="GuiCommandButtonRightClick"
+			GuiDisabledCommandButtonClickedSound="GuiDisabledCommandButtonClick"
+			GuiDisabledCommandButtonRightClickedSound="GuiDisabledCommandButtonRightClick"
+			GuiPlayerPowerButtonClickedSound="GuiPlayerPowerButtonClick"
+			GuiPauseDialogButtonClickedSound="Gui_ShellMapSelect"
+			GuiPauseDialogButtonMouseOverSound="Gui_ShellMapMouseOver"
+			GuiPauseDialogButtonMouseOutSound="Gui_ShellMapMouseOut"
+			GuiYesNoDialogButtonClickedSound="Gui_ShellMapSelect"
+			GuiYesNoDialogButtonMouseOverSound="Gui_ShellMapMouseOver"
+			GuiYesNoDialogButtonMouseOutSound="Gui_ShellMapMouseOut"
+		/>
+
+		<!-- Defaults for AudioEvents in mod. Derive all other AudioEvents from this one -->
+		<!-- Copied straight from BaseSoundEffect; can't inherbit directly from XML objects in another stream  -->
+		<AudioEvent id="BaseSoundEffect_Mod"
+			Volume="100" 
+			MinVolume="0"
+			Priority="NORMAL"
+			Limit="3"
+			MinRange="200"
+			MaxRange="800"
+			PlayPercent="100"
+			Type="UI PLAYER"
+			DryLevel="100"
+			ReverbEffectLevel="100"
+			ZoomedInOffscreenVolumePercent = "50"
+			ZoomedInOffscreenMinVolumePercent = "100" 
+			ZoomedInOffscreenOcclusionPercent = "20"  >
+			<!-- You might think the following was a good idea:
+				SubmixSlider ="SOUNDFX"
+				IT'S NOT. Doing this in the default sound will mess up the special 'use the speech slider if the
+				voice flag is present and no SubmixSlider entry was seen' code.		-->
+		</AudioEvent>
+
+		<!-- Defaults for MusicTracks. Derive all other MusicTracks from this one -->
+		<MP3MusicTrack id="BaseMP3MusicTrack"
+			Volume="55.0" 
+			ReverbEffectLevel = "0"
+			DryLevel = "100" 
+			SubmixSlider = "MUSIC"
+			Control = "ALLOW_KILL_MID_FILE"
+			Priority = "CRITICAL" >
+		</MP3MusicTrack>
+
+		<!-- Defaults for unit responses in mod. Derive unit responses responses from this one -->
+		<!-- Copied straight from BaseUnitResponse; can't inherbit directly from XML objects in another stream  -->
+		<AudioEvent id="BaseUnitResponse_Mod" inheritFrom="AudioEvent:BaseSoundEffect_Mod"
+			Volume="100" 
+			MinVolume="90"
+			Priority="HIGHEST"
+			Limit="3"
+			Type="UI PLAYER VOICE"
+			SubmixSlider="VOICE" >
+		</AudioEvent>
+
+		<MP3AmbientStream id="BaseAmbientStream_Mod"
+			Volume = "85.0"
+			Control = "RANDOMSTART ALLOW_KILL_MID_FILE"
+			Priority = "CRITICAL"
+			Type = "EVERYONE"
+			MinRange = "3400.000"
+			MaxRange = "4400.000"
+			DryLevel = "100"
+			ReverbEffectLevel = "0"
+			SubmixSlider = "AMBIENT">
+		</MP3AmbientStream>
+
+		<MP3DialogEvent id="BaseMissionDialogue_Mod" 
+			Volume="110" 
+			MinVolume="100"
+			Limit="1"
+			Type="WORLD PLAYER"
+			Priority="CRITICAL" 
+			SubmixSlider="VOICE"
+			Control="FADE_ON_KILL" >
+			<VolumeSliderMultiplier Slider="VOICE" Multiplier="0.4" />
+			<VolumeSliderMultiplier Slider="SOUNDFX" Multiplier="0.7" />
+			<VolumeSliderMultiplier Slider="MUSIC" Multiplier="0.7" />
+			<VolumeSliderMultiplier Slider="AMBIENT" Multiplier="0.7" />
+		</MP3DialogEvent>
+		
+		<AudioFileMP3Passthrough id="MOHMainScreen" File="AUDIO:MedalofHonor.mp3" />		
+		<MP3MusicTrack id="ShellLowLODMP3" inheritFrom="MP3MusicTrack:BaseMP3MusicTrack" Volume="60">		
+			<VolumeSliderMultiplier Slider="NONE" Multiplier="1.0" />
+			<!-- This is a fake to prevent the volume sample from being quieted by the movie playing on the main menu -->
+			<Filename>MOHMainScreen</Filename>			
+		</MP3MusicTrack>
+
+		<AudioFile id="EUElLan_VoiCreateb" File="AUDIO:sounds\GUElLan_voxChea.wav" GUIPreset="Default" />		
+		
+		<AudioEvent id="GDI_ElvenWarrior_VoiceCreate" inheritFrom="AudioEvent:BaseUnitResponse_Mod"
+			Volume = "=$GDI_UNITRESPONSE_VOLUME + 0"
+			MinVolume = "=$GDI_UNITRESPONSE_MINVOLUME + 0"
+			Priority = "HIGH"
+			Type = "WORLD PLAYER VOICE"
+			SubmixSlider = "VOICE" >
+			<PitchShift Low="=$GDI_UNITRESPONSE_PITCHSHIFT_LOW + 0" High="=$GDI_UNITRESPONSE_PITCHSHIFT_HIGH + 0" />
+			<Sound>EUElLan_VoiCreateb</Sound>			
+		</AudioEvent>
+
+		
+		<AudioFileMP3Passthrough id="MOHAmbientTest" File="AUDIO:MOHAmbientTest.mp3" />
+		<MP3AmbientStream id="AmbStream_MOHAmbientTest" inheritFrom="MP3AmbientStream:BaseAmbientStream_Mod"
+			Volume = "45" >
+			<Filename>MOHAmbientTest</Filename>
+		</MP3AmbientStream>
+
+		<GameObject
+			id="AmbStream_MOHAmbientTest"
+			Side="Neutral"
+			EditorSorting="AUDIO"
+			KindOf="=$AMBIENTSOUND_KINDOF"
+			EditorName="AmbStream_MOHAmbientTest">
+			<ArmorSet
+				Armor="NoArmor" />
+			<Body>
+				<ImmortalBody
+					id="ModuleTag_DummyBody"
+					MaxHealth="1.0" />
+			</Body>
+			<AudioArraySound>
+				<AudioEntry Sound="AmbStream_MOHAmbientTest" AudioType="soundAmbient" />
+			</AudioArraySound>
+		</GameObject>
+		
+	</AssetDeclaration>

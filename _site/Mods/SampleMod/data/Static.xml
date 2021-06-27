@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Main Mod File for Static Data -->
+	<Includes>
+		<!-- Reference to the Game's Global Data -->
+		<Include type="reference" source="Global.xml" />
+		
+		<!-- Reference to the Mod's Global Data -->
+		<Include type="reference" source="AdditionalMaps/MapMetaData_Global.xml" />
+		
+		<!-- Includes of the Mod's Static Data -->
+		<Include type="all" source="Static/GDIReclamatorHub.xml" />
+		<Include type="all" source="Static/GDIWarFactory.xml" />
+		<Include type="all" source="Static/MirageTank.xml" />
+		<Include type="all" source="Static/Misc.xml" />
+	</Includes>
+</AssetDeclaration>

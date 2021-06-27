@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RadarTerrainImage">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="MapBorder"
+			AssetType="MapBorder"
+			IsAttribute="true"
+			Default="Orange" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ImageSize"
+			AssetType="ICoord2D" />
+		<Entry
+			id="ImagePosition"
+			AssetType="ICoord2D" />
+		<Entry
+			id="TextureSize"
+			AssetType="ICoord2D" />
+		<Entry
+			id="Rotated"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FontDirectory">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Path"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

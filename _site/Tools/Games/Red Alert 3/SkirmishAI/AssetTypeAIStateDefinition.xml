@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AIStateConstantHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Weight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+	</Asset>
+
+	<EnumAsset
+		id="AITimerType">
+		<Entry>MAP_START</Entry>
+		<Entry>AI_START</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIStateTimerHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="StartTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="EndTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="-1s" />
+		<Entry
+			id="CountFrom"
+			AssetType="AITimerType"
+			IsAttribute="true"
+			Default="MAP_START" />
+	</Asset>
+
+	<Asset
+		id="AIStateIntervalHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="IntervalTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="60s" />
+		<Entry
+			id="ActiveTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="30s" />
+		<Entry
+			id="CountFrom"
+			AssetType="AITimerType"
+			IsAttribute="true"
+			Default="MAP_START" />
+	</Asset>
+
+	<Asset
+		id="AIStateOpeningMoveHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Complete"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateHarvesterCapHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="MaxHarvesters"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+	</Asset>
+
+	<Asset
+		id="AIStateResourceNodeShareHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="PercentOfFairShare"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateTechBuildingShareHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="PercentOfFairShare"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateMoneyHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Money"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="Account"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateTimeSinceLastExpansionHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Time"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="60s" />
+		<Entry
+			id="Past"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateIsBuildingHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="KindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="PassIfBuilding"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateEnergyHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="ExcessEnergy"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="Relationship"
+			AssetType="ObjectFilterRelationship"
+			IsAttribute="true"
+			Default="ENEMIES" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateAllNearbyNodesFullHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+	</Asset>
+
+	<Asset
+		id="AIStateOpenNodeHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="MinDistanceFromEnemy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="400.0" />
+		<Entry
+			id="Exists"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateGarrisonHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="NumGarrisons"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Relationship"
+			AssetType="ObjectFilterRelationship"
+			IsAttribute="true"
+			Default="SAME_PLAYER" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStatePathToTargetHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Surface"
+			AssetType="AITargetLocationType"
+			IsAttribute="true"
+			Default="Land" />
+		<EntryWeakReference
+			id="ObjectTypeToUseForTest"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LocomotorConditionToUseForTest"
+			AssetType="LocomotorSetType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<Entry
+			id="PathExists"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateEnemyNearbyHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<Entry
+			id="MinEnemyValue"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="EnemyFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="EnemyNearby"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateStructureOrHarvesterUnderAttackHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="TimeSinceAttacked"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="4s" />
+		<Entry
+			id="UnderAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStatePowerAdvantageHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Value"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OwnKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true"
+			Default="CAN_ATTACK" />
+		<Entry
+			id="EnemyKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true"
+			Default="CAN_ATTACK" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="IncludeOwnDefenses"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="IncludeEnemyDefenses"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateIncomeAdvantageHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Value"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Above"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateOpponentFundsHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+	</Asset>
+
+	<Asset
+		id="AIStateProductionAdvantageHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+	</Asset>
+
+	<Asset
+		id="AIStateBridgeExistsHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="BridgeHealthMinimumPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="BridgeHealthMaximumPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+	</Asset>
+
+	<Asset
+		id="AIStateObjectOfTypeExistsHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Location"
+			AssetType="AITargetLocationBitFlags"
+			IsAttribute="true"
+			Default="Wate" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="PassIfExists"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateCanBuildBuildingsOnSurfaceHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="MinPlacementGridCells"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="MaxPlacementGridCells"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Surfaces"
+			AssetType="BuildingPlacementSurfaceBitFlags"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateScriptedFlagHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="FlagName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AIAlliedBeaconExistsHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Type"
+			AssetType="AIBeaconType"
+			IsAttribute="true" />
+		<Entry
+			id="Exists"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStrategicDirectiveHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Directive"
+			AssetType="AIStrategicDirective"
+			IsAttribute="true" />
+		<Entry
+			id="On"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIRedAlertHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="On"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIStateLinearCombinationHeuristic">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateHeuristic" />
+		<Entry
+			id="Weight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<EntryList
+			id="WeightedHeuristic"
+			MinLength="2"
+			MaxLength="0"
+			AssetType="WeightedHeuristicType" />
+	</Asset>
+
+	<Asset
+		id="WeightedHeuristicType">
+		<Entry
+			id="Heuristic"
+			AssetType="HeuristicType" />
+	</Asset>
+
+	<Asset
+		id="HeuristicChoice">
+		<EntryChoice
+			id="HeuristicChoice"
+			MinLength="1"
+			MaxLength="0">
+			<Entry
+				id="ConstantHeuristic"
+				AssetType="AIStateConstantHeuristic" />
+			<Entry
+				id="TimerHeuristic"
+				AssetType="AIStateTimerHeuristic" />
+			<Entry
+				id="IntervalHeuristic"
+				AssetType="AIStateIntervalHeuristic" />
+			<Entry
+				id="PowerAdvantageHeuristic"
+				AssetType="AIStatePowerAdvantageHeuristic" />
+			<Entry
+				id="IncomeAdvantageHeuristic"
+				AssetType="AIStateIncomeAdvantageHeuristic" />
+			<Entry
+				id="EnemyNearbyHeuristic"
+				AssetType="AIStateEnemyNearbyHeuristic" />
+			<Entry
+				id="StructureOrHarvesterUnderAttackHeuristic"
+				AssetType="AIStateStructureOrHarvesterUnderAttackHeuristic" />
+			<Entry
+				id="ProductionAdvantageHeuristic"
+				AssetType="AIStateProductionAdvantageHeuristic" />
+			<Entry
+				id="OpeningMoveHeuristic"
+				AssetType="AIStateOpeningMoveHeuristic" />
+			<Entry
+				id="HarvesterCapHeuristic"
+				AssetType="AIStateHarvesterCapHeuristic" />
+			<Entry
+				id="ResourceNodeShareHeuristic"
+				AssetType="AIStateResourceNodeShareHeuristic" />
+			<Entry
+				id="TechBuildingShareHeuristic"
+				AssetType="AIStateTechBuildingShareHeuristic" />
+			<Entry
+				id="MoneyHeuristic"
+				AssetType="AIStateMoneyHeuristic" />
+			<Entry
+				id="TimeSinceLastExpansionHeuristic"
+				AssetType="AIStateTimeSinceLastExpansionHeuristic" />
+			<Entry
+				id="IsBuildingHeuristic"
+				AssetType="AIStateIsBuildingHeuristic" />
+			<Entry
+				id="AllNearbyNodesFullHeuristic"
+				AssetType="AIStateAllNearbyNodesFullHeuristic" />
+			<Entry
+				id="OpenNodeHeuristic"
+				AssetType="AIStateOpenNodeHeuristic" />
+			<Entry
+				id="GarrisonHeuristic"
+				AssetType="AIStateGarrisonHeuristic" />
+			<Entry
+				id="PathToTargetHeuristic"
+				AssetType="AIStatePathToTargetHeuristic" />
+			<Entry
+				id="BridgeExistsHeuristic"
+				AssetType="AIStateBridgeExistsHeuristic" />
+			<Entry
+				id="ObjectOfTypeExistsHeuristic"
+				AssetType="AIStateObjectOfTypeExistsHeuristic" />
+			<Entry
+				id="CanBuildBuildingsOnSurfaceHeuristic"
+				AssetType="AIStateCanBuildBuildingsOnSurfaceHeuristic" />
+			<Entry
+				id="ScriptedFlagHeuristic"
+				AssetType="AIStateScriptedFlagHeuristic" />
+			<Entry
+				id="BeaconExistsHeuristic"
+				AssetType="AIAlliedBeaconExistsHeuristic" />
+			<Entry
+				id="StrategicDirectiveHeuristic"
+				AssetType="AIStrategicDirectiveHeuristic" />
+			<Entry
+				id="RedAlertHeuristic"
+				AssetType="AIRedAlertHeuristic" />
+			<Entry
+				id="OpponentFundsHeuristic"
+				AssetType="AIStateOpponentFundsHeuristic" />
+			<Entry
+				id="LinearCombinationHeuristic"
+				AssetType="AIStateLinearCombinationHeuristic" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="AIStateDefinition">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Heuristic"
+			AssetType="HeuristicChoice" />
+	</Asset>
+
+	<GameAsset
+		id="AIStrategicStateDefinition"
+		TypeHash="3594381428">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateDefinition" />
+		<Entry
+			id="MaxTargets"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxRunningCopies"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxInactiveCopies"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="PathfindingCheckType"
+			AssetType="PathfindingCheckType"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="CannotAttackTargetReaction"
+			AssetType="AICannotAttackTargetReaction"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="TeamGatherBeginFeedbackKey"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExecutionBeginFeedbackKey"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExecutionCanceledFeedbackKey"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExecutionCompleteFeedbackKey"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryList
+			id="TargetHeuristic"
+			AssetType="StateTargetHeuristic"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Tactic"
+			AssetType="AIStateTactic"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+	<GameAsset
+		id="AIStrategicStateName"
+		TypeHash="76343204">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="State"
+			AssetType="StateTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</GameAsset>
+
+	<GameAsset
+		id="AIBudgetStateDefinition"
+		TypeHash="2583631670">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateDefinition" />
+		<Entry
+			id="Budget"
+			AssetType="AIBankBudget" />
+	</GameAsset>
+
+	<GameAsset
+		id="AIBuildStateDefinition"
+		TypeHash="3400281710">
+		<EntryInheritance
+			id="base"
+			AssetType="AIStateDefinition" />
+		<EntryList
+			id="BuildEntry"
+			AssetType="AIBuildEntry"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<Asset
+		id="StateTargetHeuristic">
+		<EntryReference
+			id="TargetHeuristic"
+			AssetType="TargetHeuristicTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Priority"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+	</Asset>
+
+	<EnumAsset
+		id="Tactics">
+		<Entry>SimpleAttack</Entry>
+		<Entry>FlankAttack</Entry>
+		<Entry>DefenseAvoidanceAttack</Entry>
+		<Entry>SimpleSiege</Entry>
+		<Entry>Engineer</Entry>
+		<Entry>SimpleDefense</Entry>
+		<Entry>StaticDefense</Entry>
+		<Entry>ReactiveDefense</Entry>
+		<Entry>SimpleExpansion</Entry>
+		<Entry>ExactExpansion</Entry>
+		<Entry>Hunt</Entry>
+		<Entry>RoamingDefense</Entry>
+		<Entry>GarrisonBuilding</Entry>
+		<Entry>Scripted</Entry>
+		<Entry>NullTactic</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TacticEndBehavior">
+		<Entry>RAMPAGE</Entry>
+		<Entry>DISBAND</Entry>
+		<Entry>RETURN_HOME_AND_DISBAND</Entry>
+		<Entry>PICK_NEW_TARGET</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIStateTactic">
+		<EntryPoid
+			id="id"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Tactic"
+			AssetType="Tactics"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="EndBehavior"
+			AssetType="TacticEndBehavior"
+			IsAttribute="true"
+			Default="RAMPAGE" />
+		<Entry
+			id="DisbandAfterRetreatTeamSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AestheticsManagerPatrolIdleTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="AestheticsManagerMinDistanceFromHarvester"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="300.0" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+		<Entry
+			id="Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="400.0" />
+		<Entry
+			id="CombatLeashSlack"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="TargetDispositionToDisplay"
+			AssetType="AITargetDisposition"
+			IsAttribute="true"
+			Default="Invalid" />
+		<EntryRelocation
+			id="GatherWaypoint"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="UpdateTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1.0s" />
+		<EntryRelocation
+			id="TargetBaseCriteria"
+			AssetType="AIBaseSelectionCriteria" />
+		<EntryRelocation
+			id="HomeBaseCriteria"
+			AssetType="AIBaseSelectionCriteria" />
+		<EntryList
+			id="TeamTemplate"
+			AssetType="AITeamTemplate"
+			MinLength="0"
+			MaxLength="4" />
+		<Entry
+			id="Targetless"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EndIfStateTurnsOff"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseAestheticsManager"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseTransports"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+	</Asset>
+
+</AssetDefinition>

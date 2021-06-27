@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WeaponFireSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryReference
+			id="SpecialWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="WhichSpecialWeapon"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BusyForDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="WeaponSlotType"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+		<Entry
+			id="SkipContinue"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NeedLivingTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="PlayWeaponPreFireFX"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OffsetTargetLocationFromObject"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DestealthClosestObjectMatchingFilter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

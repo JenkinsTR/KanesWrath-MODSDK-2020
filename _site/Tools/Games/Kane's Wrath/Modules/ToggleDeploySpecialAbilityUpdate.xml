@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ToggleDeploySpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryReference
+			id="SoundDeploy"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoundUndeploy"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DecalSettings">
+		<EntryReference
+			id="ValidTexture"
+			AssetType="Texture"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="InvalidTexture"
+			AssetType="Texture"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Opacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="LegalColor"
+			AssetType="Color3" />
+		<Entry
+			id="InvalidColor"
+			AssetType="Color3" />
+	</Asset>
+
+	<GameAsset
+		id="UIDecalGrid"
+		TypeHash="4073471">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="WallTexture"
+			AssetType="Texture"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="WallOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="WallDecalColor"
+			AssetType="Color3" />
+		<Entry
+			id="PrimarySettings"
+			AssetType="DecalSettings" />
+		<Entry
+			id="SecondarySettings"
+			AssetType="DecalSettings" />
+	</GameAsset>
+
+</AssetDefinition>

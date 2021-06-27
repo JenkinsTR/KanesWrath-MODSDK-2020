@@ -1,0 +1,105 @@
+Steel Talons
+	Units
+		Infantry
+		
+			Rifleman Squad
+			Missile Squad
+			Grenadier Squad
+			Sniper Team
+			Engineer
+			Zone Raider
+			Commando
+		
+		Vehicles
+		
+			Guardian APC
+			CC-6 Pitbull
+			MBT-6 Predator
+			Slingshot
+			Zone Shatterer
+			MCV
+			Surveyor
+			Rocket Harvester
+			Rig
+			Mammoth Tank
+			MARV
+			
+		Aircraft
+		
+			ZOCOM Orca
+			Firehawk
+			V-35 Ox
+			Orca Strike Craft
+			Hammerhead
+			Ironside
+			Supersonic Fighter
+			
+		Vessels
+		
+			Aircraft carrier
+			Battleship
+			Hovercraft
+	
+	Structures
+		Production
+		
+			Construction Yard
+			Barracks
+			War Factory
+			Airfield
+			Crane
+			Reclamator Hub
+			
+		Support
+		
+			Power Plant
+			Tiberium Refinery
+			Command Post
+			Armory
+			Tech Center
+			Space Command Uplink
+			Tiberium Silo
+			Ion Cannon Control
+			Outpost
+			Combat Support Airfield
+			Tiberium Processing Plant (Global Conquest mode only)
+		
+		Defenses
+		
+			Watchtower
+			Guardian Cannon
+			Anti-Air Battery
+			Sonic Emitter
+			Battle Base
+			Foxhole
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Orca Strike
+			Radar Scan
+			Airborne
+			Sharpshooter team
+			Bloodhounds
+			Shockwave Artillery
+			Zone Raider Drop
+			Ion Cannon
+			Sonic Fence
+			Supersonic Air Strike
+			Orbital Strike
+			
+		Upgrades
+		
+			Tiberium field
+			Suits
+			Power Pack
+			Mortar
+			Scanner Pack
+			Stratofighter Upgrade
+			Sensor Pod Upgrade
+			Advanced Turbines
+			Armour Piercing
+			Ammunition
+			Tungsten Shells
+			EMP Grenades
+			Ceramic Armour

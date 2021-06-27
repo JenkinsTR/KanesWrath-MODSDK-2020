@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WeaponModeSpecialPowerUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerUpdateModuleData" />
+		<Entry
+			id="Duration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="LockWeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponSetFlags"
+			AssetType="WeaponSetBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

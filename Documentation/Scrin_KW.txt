@@ -1,0 +1,90 @@
+Scrin
+	Units
+		Infantry
+		
+			Buzzer
+			Disintegrator
+			Assimilator
+			Shock Trooper
+			Ravager (Kane's Wrath only)
+			Mastermind
+		
+		Vehicles
+		
+			Gun Walker
+			Seeker
+			Devourer Tank
+			Mechapede (Kane's Wrath only)
+			Corrupter
+			Explorer
+			Harvester
+			Annihilator Tripod
+			Eradicator Hexapod (Kane's Wrath only)
+			
+		Aircraft
+		
+			Stormrider
+			Devastator Warship
+			Planetary Assault Carrier
+			Drone Ship
+			Mothership
+			Invader Fighter
+	
+	Structures
+		Production
+		
+			Drone Platform
+			Portal
+			Warp sphere
+			Gravity Stabilizer
+			Foundry
+			Warp Chasm (Kane's Wrath only)
+			
+		Support
+		
+			Reactor
+			Extractor
+			Nerve Center
+			Stasis Chamber
+			Technology Assembler
+			Signal Transmitter
+			Growth Accelerator
+			Outpost
+			Threshold (campaign only)
+			Phase Generator (campaign only)
+			Relay Node (campaign only)
+		
+		Defenses
+		
+			Buzzer Hive
+			Photon Cannon
+			Plasma Missile Battery
+			Storm Column
+			Rift Generator
+			Tiberium Hive (Kane's Wrath only)
+			Lightning Spike
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Reconstruction Drones
+			Lightning Spike
+			The Swarm
+			Tiberium Vibration Scan
+			Stasis Shield
+			Phase Field
+			Rift
+			Mothership
+			Wormhole
+			Ichor Seed (Kane's Wrath only)
+			Infestation (Kane's Wrath only)
+			Overlord's Wrath (Kane's Wrath only)
+			
+		Upgrades
+		
+			Blink Packs
+			Forcefield Generators
+			Fusion Core
+			Plasma Disc Launchers
+			Shard Launchers (Kane's Wrath only)
+			Attenuated Forcefields (Kane's Wrath only)

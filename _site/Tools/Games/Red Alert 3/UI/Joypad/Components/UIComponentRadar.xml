@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentRadar">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="RadarWidth"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="128" />
+		<Entry
+			id="RadarHeight"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="128" />
+		<Entry
+			id="OrientationArrowSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="OrientationArrowImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatusTextInfiltration"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="LeftStickMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.035" />
+		<Entry
+			id="RightStickMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="350.0" />
+		<Entry
+			id="LeftTriggerTolerance"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="900" />
+	</Asset>
+
+</AssetDefinition>

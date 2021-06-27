@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="Threshold">
+		<Entry
+			id="NumUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AudioArrayVoice"
+			AssetType="AudioArrayVoice" />
+	</Asset>
+
+	<GameAsset
+		id="CrowdResponse"
+		TypeHash="217556117">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Weight"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<EntryList
+			id="Threshold"
+			AssetType="Threshold"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

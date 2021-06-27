@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ScriptEventType">
+		<Entry>ATTACK_MOVE_ISSUED</Entry>
+		<Entry>WAYPOINT_MODE_ENTERED</Entry>
+		<Entry>CONTROL_GROUP_CREATED</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ScriptEventTypeBitFlags"
+		BaseEnum="ScriptEventType" />
+
+	<Asset
+		id="GameScriptParameterBase" />
+
+	<Asset
+		id="GameScriptParameterObjectType">
+		<EntryInheritance
+			id="base"
+			AssetType="GameScriptParameterBase" />
+		<EntryReference
+			id="Object"
+			AssetType="GameObject"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="GameScriptParameterObjectTypeList">
+		<EntryInheritance
+			id="base"
+			AssetType="GameScriptParameterBase" />
+		<EntryList
+			id="Object"
+			AssetType="GameObjectRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="GameScriptParameter">
+		<EntryChoice
+			id="GameScriptParameter"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="ObjectType"
+				AssetType="GameScriptParameterObjectType" />
+			<Entry
+				id="ObjectTypeList"
+				AssetType="GameScriptParameterObjectTypeList" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="GameScriptAction">
+		<EntryPoid
+			id="Type"
+			IsAttribute="true"
+			IsUpperCase="true" />
+		<Entry
+			id="ParameterList"
+			AssetType="GameScriptParameter" />
+	</Asset>
+
+	<Asset
+		id="GameScript">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+		<EntryList
+			id="Action"
+			AssetType="GameScriptAction"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="GameScriptGroup">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+		<EntryList
+			id="Script"
+			AssetType="GameScript"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ScriptGroup"
+			AssetType="GameScriptGroup"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="GameScriptList"
+		TypeHash="1522989592">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryRelocation
+			id="ScriptSet"
+			AssetType="GameScriptGroup" />
+	</GameAsset>
+
+</AssetDefinition>

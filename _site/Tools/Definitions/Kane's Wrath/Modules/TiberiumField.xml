@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TiberiumFieldBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="DamageUpdateFrequencySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.67s" />
+		<Entry
+			id="HealUpdateFrequencySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.60s" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DamageRadiusAdd"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="HealRadiusAdd"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="FieldResolution"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="40" />
+		<Entry
+			id="MaxFieldMoney"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="StartingFieldMoney"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="ThingToSpawn"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ClusterScaleFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="ClusterPowerFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="CrystalGrowthRate"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LifetimeFieldMoney"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="DamageFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="HealFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="KillWhenEmptyAndFinishedSpawning"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowStartingFieldCrystalsToGrow"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

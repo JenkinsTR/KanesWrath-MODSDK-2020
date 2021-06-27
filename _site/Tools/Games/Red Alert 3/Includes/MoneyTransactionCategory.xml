@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MoneyTransactionCategory">
+		<Entry>UNKNOWN</Entry>
+		<Entry>STARTING_CASH</Entry>
+		<Entry>HARVESTER</Entry>
+		<Entry>CAPTURE_BONUS</Entry>
+		<Entry>AUTO_DEPOSIT</Entry>
+		<Entry>SELL_OBJECT</Entry>
+		<Entry>BOUNTY</Entry>
+		<Entry>CASH_CHEAT</Entry>
+		<Entry>DEVASTATE</Entry>
+		<Entry>CANCEL_BUILD</Entry>
+		<Entry>MONEY_CRATE</Entry>
+		<Entry>DEATH_REFUND</Entry>
+		<Entry>SLAUGHTER</Entry>
+		<Entry>TERRAIN_RESOURCE</Entry>
+		<Entry>SHARED_DEPOSIT</Entry>
+		<Entry>PRODUCTION</Entry>
+		<Entry>BUILD_WALLSPAN</Entry>
+		<Entry>DOZER_CONSTRUCT</Entry>
+		<Entry>SELF_REPAIR</Entry>
+		<Entry>PLAYERKILLED</Entry>
+		<Entry>SCRIPTED_MONEY_ACTION</Entry>
+		<Entry>SPECIAL_POWER</Entry>
+		<Entry>AI_MONEY_LENDER</Entry>
+		<Entry>PLAYER_GIVE_MONEY</Entry>
+		<Entry>PLAYER_CLONE</Entry>
+		<Entry>TRANSFER_ASSETS</Entry>
+		<Entry>CASH_HACK</Entry>
+		<Entry>INFILTRATOR</Entry>
+		<Entry>PILLAGE</Entry>
+		<Entry>STEAL_MONEY</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MoneyTransactionCategoryBitMask"
+		BaseEnum="MoneyTransactionCategory" />
+
+</AssetDefinition>

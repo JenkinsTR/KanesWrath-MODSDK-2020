@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SlavedUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="LeashRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="GuardMaxRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="GuardWanderRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AttackRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AttackWanderRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScoutRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScoutWanderRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DistToTargetToGrantRangeBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RepairRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RepairMinAltitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RepairMaxAltitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RepairWhenHealthBelowPercentage"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RepairRatePerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinReadyFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxReadyFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinWeldFrames"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxWeldFrames"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="WeldingSysId"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="WeldingFXBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DieOnMastersDeathDamageType"
+			AssetType="DamageType"
+			IsAttribute="true"
+			Default="UNRESISTABLE" />
+		<Entry
+			id="DieOnMastersDeathType"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<Entry
+			id="FadeOutRange"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FadeTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="GuardPosOffset"
+			AssetType="Coord3D" />
+		<Entry
+			id="StayOnSameLayerAsMaster"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DieOnMastersDeath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="MarkUnselectable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseSlaverAsControlForEvaObjectSightedEvents"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RadiateFearUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="PulseRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PulseInterval"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="VictimFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="InitiallyActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="GenerateTerror"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="GenerateFear"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="GenerateUncontrollableFear"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+	</Asset>
+
+</AssetDefinition>

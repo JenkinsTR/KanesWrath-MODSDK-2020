@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UpgradeTemplate"
+		TypeHash="373016733">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TypeDescription"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AcquireHint"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Type"
+			AssetType="UpgradeType"
+			IsAttribute="true" />
+		<Entry
+			id="BuildTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="BuildCost"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="ResearchSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="ResearchCompleteEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnitSpecificSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="UpgradeFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="LocalPlayerGainsUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AlliedPlayerGainsUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyPlayerGainsUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LocalPlayerLosesUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AlliedPlayerLosesUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EnemyPlayerLosesUpgradeEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LocalPlayerProductionStartedEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LocalPlayerBuildOnHoldEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LocalPlayerBuildCancelledEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="UseObjectTemplateForCostDiscount"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="GroupName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="GroupOrder"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="SkirmishAIHeuristic"
+			AssetType="AIUpgradeHeuristicType"
+			IsAttribute="true" />
+		<Entry
+			id="Options"
+			AssetType="UpgradeOptions"
+			IsAttribute="true" />
+		<Entry
+			id="IconImage"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="GameDependency"
+			AssetType="GameDependencyType" />
+		<Entry
+			id="WaypointQueueable"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StealthDetectorUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="DetectionRate"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.4s" />
+		<Entry
+			id="DetectionRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="PingSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="LoudPingSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="IRBeaconParticleSys"
+			AssetType="FXParticleSystemRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="IRParticleSys"
+			AssetType="FXParticleSystemRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="IRBrightParticleSys"
+			AssetType="FXParticleSystemRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="IRGridParticleSys"
+			AssetType="FXParticleSystemRef"
+			IsAttribute="true" />
+		<Entry
+			id="IRParticleSysBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ExtraRequiredKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExtraForbiddenKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="InitiallyDisabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanDetectWhileGarrisoned"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanDetectWhileContained"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseMetaAOI"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

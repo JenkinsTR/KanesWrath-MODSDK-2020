@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LevelUpFxListType">
+		<EntryReference
+			id="FxList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="BoneName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="ExperienceLevelTemplate"
+		TypeHash="3179140878">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Rank"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RequiredExperience"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="ExperienceAward"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ExperienceAwardOwnGuysDie"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="Prerequisite"
+			AssetType="ExperienceLevelTemplateRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LevelUpOCL"
+			AssetType="ObjectCreationListRef"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionState"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="LevelUpTintPreColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="LevelUpTintPostColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="LevelUpTintSustainColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="LevelUpTintFrequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="LevelUpTintAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="LevelUpTintColor"
+			AssetType="Color4f" />
+		<EntryList
+			id="Upgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="LevelUpFxList"
+			AssetType="LevelUpFxListType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Target"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AttributeModifier"
+			AssetType="AttributeModifierRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="Decal"
+			AssetType="RadiusDecalTemplate" />
+		<Entry
+			id="InformUpdateModule"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SinglePlayerOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="MultiPlayerOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShowLevelUpTint"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</GameAsset>
+
+</AssetDefinition>

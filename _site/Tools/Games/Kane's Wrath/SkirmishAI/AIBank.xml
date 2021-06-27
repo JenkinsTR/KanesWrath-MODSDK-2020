@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIBankAccountType">
+		<Entry>INVESTMENT</Entry>
+		<Entry>SPECIAL_OPERATIONS</Entry>
+		<Entry>PRODUCTION</Entry>
+		<Entry>DEFENSE</Entry>
+		<Entry>TECHNOLOGY</Entry>
+		<Entry>SLUSH_FUND</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIBankBudgetListType">
+		<Entry
+			id="Account"
+			AssetType="AIBankAccountType"
+			IsAttribute="true" />
+		<Entry
+			id="Percent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AIBankBudget">
+		<EntryList
+			id="AccountShare"
+			AssetType="AIBankBudgetListType"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

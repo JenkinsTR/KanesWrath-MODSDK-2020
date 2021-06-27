@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIFloatingTextSettings">
+		<Entry
+			id="TimeOut"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="333ms" />
+		<Entry
+			id="MoveUpSpeed"
+			AssetType="Velocity"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MoveVanishRate"
+			AssetType="Velocity"
+			Default="0.1"
+			IsAttribute="true" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+	</Asset>
+
+</AssetDefinition>

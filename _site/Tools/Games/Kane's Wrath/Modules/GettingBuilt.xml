@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SelfAudio">
+		<EntryReference
+			id="SelfBuildingLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SelfRepairFromDamageLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SelfRepairFromRubbleLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="PercentOfBuildCostToRebuildInfo">
+		<Entry
+			id="Pristine"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Damaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="ReallyDamaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Rubble"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+	</Asset>
+
+	<Asset
+		id="GettingBuiltBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryWeakReference
+			id="WorkerTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="EvilWorkerTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="SpawnTimer"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30" />
+		<EntryReference
+			id="HealWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="RebuildTimeSeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="120" />
+		<Entry
+			id="DisallowRebuildRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PercentOfBuildCostToRebuildInfo"
+			AssetType="PercentOfBuildCostToRebuildInfo" />
+		<Entry
+			id="SelfAudio"
+			AssetType="SelfAudio" />
+		<EntryRelocation
+			id="DisallowRebuildFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="TestFaction"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RebuildWhenDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseSpawnTimerWithoutWorker"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AptAptData id="TacticalHUD_apt" File="TacticalHUD.apt" />
+	<AptConstData id="TacticalHUD_const" File="TacticalHUD.const" />
+	<AptDatData id="TacticalHUD_dat" File="TacticalHUD.dat" />
+	<AptGeometryData id="TacticalHUD_10" File="TacticalHUD_geometry\10.ru" AptID="10"/>
+	<AptGeometryData id="TacticalHUD_13" File="TacticalHUD_geometry\13.ru" AptID="13"/>
+	<AptGeometryData id="TacticalHUD_14" File="TacticalHUD_geometry\14.ru" AptID="14"/>
+	<AptGeometryData id="TacticalHUD_17" File="TacticalHUD_geometry\17.ru" AptID="17"/>
+	<AptGeometryData id="TacticalHUD_2" File="TacticalHUD_geometry\2.ru" AptID="2"/>
+	<AptGeometryData id="TacticalHUD_21" File="TacticalHUD_geometry\21.ru" AptID="21"/>
+	<AptGeometryData id="TacticalHUD_6" File="TacticalHUD_geometry\6.ru" AptID="6"/>
+	<AptGeometryData id="TacticalHUD_9" File="TacticalHUD_geometry\9.ru" AptID="9"/>
+	<Texture id="apt_TacticalHUD_1" File="art\Textures\apt_TacticalHUD_1.tga" OutputFormat="A8R8G8B8" GenerateMipMaps="false" AllowAutomaticResize="false"/>
+</AssetDeclaration>

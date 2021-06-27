@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InvalidTargetsDeathUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryRelocation
+			id="InvalidStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

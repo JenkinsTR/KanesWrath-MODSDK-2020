@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DStreakDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DrawModuleData" />
+		<Entry
+			id="Length"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Width"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default=".5" />
+		<Entry
+			id="NumSegments"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryList
+			id="WeatherTexture"
+			AssetType="WeatherTexture"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="Color"
+			AssetType="Color3f" />
+		<Entry
+			id="Additive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

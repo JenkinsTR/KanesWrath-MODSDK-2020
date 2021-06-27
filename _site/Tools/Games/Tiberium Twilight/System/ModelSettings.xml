@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ModelSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSubsystemSettings" />
+		<Entry
+			id="AnimationSharingCap"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AnimationSharingFrameTolerance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AnimationSharingDrasticThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ForceModelsToFollowTimeOfDay"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ForceModelsToFollowWeather"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

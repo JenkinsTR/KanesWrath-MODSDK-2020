@@ -1,0 +1,23 @@
+<MapMetaData BorderSize="50" CRC="0" Description="Map:MAP_MP_6_BLACK2/Desc" DisplayName="MAP_MP_6_BLACK2" FileName="Data\maps\official\MAP_MP_6_BLACK2\MAP_MP_6_BLACK2.map" Height="650" IsMultiplayer="true" IsOfficial="true" NumPlayers="6" Width="600" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="696.131" y="1784.27" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="710" y="3670" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="4329.23" y="3777.08" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="4283.14" y="1798.65" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_5_Start">
+    <Position x="2512.67" y="810.919" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_6_Start">
+    <Position x="2505.39" y="4786.44" z="0" />
+  </StartPosition>
+</MapMetaData>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	id="Games"
+	targetNamespace="uri:thundermods.net:SAGE:WrathEdXML:GameDefinition"
+	elementFormDefault="qualified"
+	xmlns="uri:thundermods.net:SAGE:WrathEdXML:GameDefinition"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="ColorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RED" />
+			<xs:enumeration value="GREEN" />
+			<xs:enumeration value="BLUE" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="RegistryEntryType">
+		<xs:attribute name="Key" type="xs:string" use="required" />
+		<xs:attribute name="Value" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="StreamType">
+		<xs:attribute name="Name" type="xs:string" use="required" />
+		<xs:attribute name="Description" type="xs:string" use="optional" />
+		<xs:attribute name="IsNameRequired" type="xs:boolean" default="false" />
+	</xs:complexType>
+
+	<xs:element name="Game">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RegistryEntry" type="RegistryEntryType" minOccurs="1" maxOccurs="1" />
+				<xs:element name="Stream" type="StreamType" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required" />
+			<xs:attribute name="ManifestVersion" type="xs:short" use="required" />
+			<xs:attribute name="AllTypesHash" type="xs:unsignedInt" use="required" />
+			<xs:attribute name="WorldBuilderVersion" type="xs:string" use="required" />
+			<xs:attribute name="ThemeColor" type="ColorType" use="optional" />
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

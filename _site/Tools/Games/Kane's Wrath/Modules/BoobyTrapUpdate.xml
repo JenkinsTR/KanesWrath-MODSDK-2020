@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BoobyTrapUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AttachUpdateModuleData" />
+		<Entry
+			id="FireWeaponConditionsOnParent"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="PreventEnteringSetStatusOnParent"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpecialWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="PreventEnteringFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="AllowTriggerOnAllies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

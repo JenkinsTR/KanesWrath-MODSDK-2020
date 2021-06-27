@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TreadScrollingMapping">
+		<Entry
+			id="LeftTrack"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RightTrack"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SpeedMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TreadPivotSpeedFraction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="60%" />
+		<Entry
+			id="TreadDriveSpeedFraction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="20%" />
+	</Asset>
+
+</AssetDefinition>

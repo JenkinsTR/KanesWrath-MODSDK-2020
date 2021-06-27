@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="JoypadCommandBarButtonTemplateDataTargetedSpecialPower">
+		<EntryInheritance
+			id="base"
+			AssetType="JoypadCommandBarButtonTemplateDataSpecialPower" />
+		<EntryReference
+			id="RadiusCursor"
+			AssetType="RadiusCursorRef"
+			IsAttribute="true" />
+		<Entry
+			id="ValidTargetOutline"
+			AssetType="OutlineDrawType"
+			IsAttribute="true"
+			Default="HOVER_ATTACK" />
+		<Entry
+			id="ValidTargetTintColor"
+			AssetType="RGBColor" />
+	</Asset>
+
+</AssetDefinition>

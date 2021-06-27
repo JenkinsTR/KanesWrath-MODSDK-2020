@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DefaultValues">
+		<Entry
+			id="Difficulty"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Gamma"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.30" />
+		<Entry
+			id="Brightness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.50" />
+		<Entry
+			id="Contrast"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.30" />
+		<Entry
+			id="VolumeMusic"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.45" />
+		<Entry
+			id="VolumeFX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="VolumeVoice"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="VolumeAmbient"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.50" />
+		<Entry
+			id="VolumeMovie"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.70" />
+		<Entry
+			id="ScrollSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.00" />
+		<Entry
+			id="ScrollMagnetism"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="DefaultFaction"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="VisionCamZoom"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="ScrollSpeedMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="ScrollSpeedMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="ButtonIcon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="HealthBars"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="HighlightPads"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ToolTips"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="InvertRotate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="VisionCamVisible"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="UIComponentOptions">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="ControlsToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SaveFileName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="ControlsText"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="DefaultValues"
+			AssetType="DefaultValues" />
+	</Asset>
+
+</AssetDefinition>

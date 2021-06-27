@@ -1,0 +1,95 @@
+Steel Talons
+	Units
+		Infantry
+		
+			Rifleman Squad
+			Missile Squad
+			Grenadier Squad
+			Combat Engineer
+		
+		Vehicles
+		
+			MRT
+			CC-6 Pitbull
+			Titan
+			Wolverine
+			Slingshot
+			MCV
+			Surveyor
+			Heavy Harvester
+			Rig
+			Behemoth
+			Mammoth Tank
+			MARV
+			
+		Aircraft
+		
+			A-15 Orca
+			Firehawk
+			V-35 Ox
+			Orca Strike Craft
+			Hammerhead
+			Supersonic Fighter
+			
+		Vessels
+		
+			Aircraft carrier
+			Battleship
+			Hovercraft
+	
+	Structures
+		Production
+		
+			Construction Yard
+			Barracks
+			War Factory
+			Airfield
+			Crane
+			Reclamator Hub (Kane's Wrath only)
+			
+		Support
+		
+			Power Plant
+			Tiberium Refinery
+			Command Post
+			Tech Center
+			Space Command Uplink
+			Tiberium Silo
+			Ion Cannon Control
+			Outpost
+			Combat Support Airfield
+			Tiberium Processing Plant (Global Conquest mode only)
+		
+		Defenses
+		
+			Watchtower
+			Guardian Cannon
+			Anti-Air Battery
+			Battle Base
+			Foxhole
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Orca Strike
+			Radar Scan
+			Bloodhounds
+			Railgun Accelerator
+			Shockwave Artillery
+			Supersonic Air Strike
+			Orbital Strike
+			Ion Cannon
+			
+		Upgrades
+		
+			Mortar
+			Stratofighter
+			Upgrade
+			Sensor Pod Upgrade
+			Advanced Turbines
+			Railgun Upgrade
+			Armour Piercing
+			Ammunition
+			Tungsten Shells
+			Hardpoints
+			Adaptive Armour

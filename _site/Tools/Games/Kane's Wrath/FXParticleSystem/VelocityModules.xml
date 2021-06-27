@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleEmissionVelocityBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVelocityCylinder">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVelocityBase" />
+		<Entry
+			id="Radial"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="Normal"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVelocityOrtho">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVelocityBase" />
+		<Entry
+			id="Position"
+			AssetType="RandCoord3D" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVelocityOutward">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVelocityBase" />
+		<Entry
+			id="Speed"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="OtherSpeed"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVelocitySphere">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVelocityBase" />
+		<Entry
+			id="Speed"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVelocityHemisphere">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVelocitySphere" />
+	</Asset>
+
+	<Asset
+		id="FXParticleVelocityModule">
+		<EntryChoice
+			id="FXParticleVelocityModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="Cylindrical"
+				AssetType="FXParticleEmissionVelocityCylinder" />
+			<Entry
+				id="Ortho"
+				AssetType="FXParticleEmissionVelocityOrtho" />
+			<Entry
+				id="Outward"
+				AssetType="FXParticleEmissionVelocityOutward" />
+			<Entry
+				id="Spherical"
+				AssetType="FXParticleEmissionVelocitySphere" />
+			<Entry
+				id="Hemispherical"
+				AssetType="FXParticleEmissionVelocityHemisphere" />
+		</EntryChoice>
+	</Asset>
+
+</AssetDefinition>

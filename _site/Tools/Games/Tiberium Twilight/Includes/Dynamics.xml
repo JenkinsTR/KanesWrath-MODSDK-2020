@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="DynamicsDrawPriority">
+		<Entry>REMOVABLE</Entry>
+		<Entry>REMOVE_ONLY_IF_NEEDED</Entry>
+		<Entry>MUST_BE_DRAWN</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="DynamicsMotionType">
+		<Entry>TRACKED</Entry>
+		<Entry>SIMULATED</Entry>
+		<Entry>STATIC</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="DynamicsCollisionType">
+		<Entry>NONINTERCOLLIDING</Entry>
+		<Entry>INTERCOLLIDING</Entry>
+		<Entry>OMNICOLLIDING</Entry>
+		<Entry>NONCOLLIDING</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="IntuitiveCollisionType">
+		<Entry>COLLIDES_WITH_GROUND_ONLY</Entry>
+		<Entry>COLLIDES_WITH_GROUND_AND_VEHICLES</Entry>
+		<Entry>COLLIDES_WITH_EVERYTHING</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="DynamicsShapeType">
+		<EntryRelocation
+			id="Translation"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="Rotation"
+			AssetType="Quaternion" />
+	</Asset>
+
+	<Asset
+		id="DynamicsSphereShapeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsShapeType" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DynamicsCapsuleShapeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsShapeType" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="HalfLength"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DynamicsBoxShapeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsShapeType" />
+		<Entry
+			id="HalfSizeX"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="HalfSizeY"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="HalfSizeZ"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EdgeRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="DynamicsCylinderShapeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsShapeType" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="HalfLength"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EdgeRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="DynamicsTriangleShapeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsShapeType" />
+		<Entry
+			id="X1"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Y1"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Z1"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="X2"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Y2"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Z2"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="X3"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Y3"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Z3"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EdgeRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<EnumAsset
+		id="DynamicsContactTag">
+		<Entry>NONE</Entry>
+		<Entry>GROUND</Entry>
+		<Entry>WATER</Entry>
+		<Entry>VEHICLE</Entry>
+		<Entry>PROP</Entry>
+		<Entry>WALL</Entry>
+		<Entry>TREE</Entry>
+		<Entry>DEBRIS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="DynamicsVolumeType">
+		<EntryChoice
+			id="DynamicsVolumeType"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="Sphere"
+				AssetType="DynamicsSphereShapeType" />
+			<Entry
+				id="Capsule"
+				AssetType="DynamicsCapsuleShapeType" />
+			<Entry
+				id="Box"
+				AssetType="DynamicsBoxShapeType" />
+			<Entry
+				id="Cylinder"
+				AssetType="DynamicsCylinderShapeType" />
+			<Entry
+				id="Triangle"
+				AssetType="DynamicsTriangleShapeType" />
+			<Entry
+				id="Mass"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="0" />
+			<Entry
+				id="Bounciness"
+				AssetType="Percentage"
+				IsAttribute="true"
+				Default="30%" />
+			<Entry
+				id="Spinniness"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="2.0" />
+			<Entry
+				id="StaticFriction"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="0.6" />
+			<Entry
+				id="KineticFriction"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="0.5" />
+			<Entry
+				id="AngularDrag"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="0.1" />
+			<Entry
+				id="LinearDrag"
+				AssetType="SageReal"
+				IsAttribute="true"
+				Default="0.1" />
+			<Entry
+				id="ContactTag"
+				AssetType="DynamicsContactTag"
+				IsAttribute="true"
+				Default="NONE" />
+			<Entry
+				id="ReportContacts"
+				AssetType="SageBool"
+				IsAttribute="true"
+				Default="false" />
+			<Entry
+				id="fill"
+				AssetType="Byte"
+				IsVoid="true" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="DynamicsLifetime">
+		<Entry
+			id="Delay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="FadeTime"
+			AssetType="Time"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

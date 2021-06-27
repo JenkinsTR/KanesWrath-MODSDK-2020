@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentInGameText">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AdjustFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TextIndent"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TooltipAppearDelayMS"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="3000" />
+		<Entry
+			id="TooltipDisappearDelayMS"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="3000" />
+		<Entry
+			id="AptTokenTitle"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenPrereq"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenCost"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenTime"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenEnergy"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenShortDesc"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AptTokenLongDesc"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ProductionTextConstruction"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ProductionTextUpgrade"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ProductionTextRecruit"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ProductionTextScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubtitleStringLabelPrefix"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubtitleStringLabelSuffix"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubtitleStringExclusionChar"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StatusTextPosition"
+			AssetType="Coord2D" />
+		<Entry
+			id="ProductionTextColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="ProductionTextFont"
+			AssetType="FontDesc" />
+	</Asset>
+
+</AssetDefinition>

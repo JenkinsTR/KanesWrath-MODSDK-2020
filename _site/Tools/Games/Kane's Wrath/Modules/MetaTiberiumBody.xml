@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaTiberiumBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="MetaBodyModuleData" />
+		<Entry
+			id="SlightlyLowTiberiumPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="LowTiberiumPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ReallyLowTiberiumPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+	</Asset>
+
+</AssetDefinition>

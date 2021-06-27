@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="art_pipeline,  ">
+<title>3DS Max Exporting Utilities | Kane's Wrath MOD SDK</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="KanesWrath-MODSDK-2020" href="http://0.0.0.0:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Kane's Wrath MOD SDK</span></a> -->
+            <a class="navbar-brand" href="index.html"><img src="images/KWSDK_logo_32.png" alt="Kane's Wrath MOD SDK"></img><span class="projectTitle"> Kane's Wrath MOD SDK</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/JenkinsTR/KanesWrath-MODSDK-2020/" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="Home.html">Getting Started</a></li>
+                        
+                        
+                        
+                        <li><a href="Tools.html">Tools</a></li>
+                        
+                        
+                        
+                        <li><a href="Mapping.html">Mapping</a></li>
+                        
+                        
+                        
+                        <li><a href="CodeRef.html">Code Reference</a></li>
+                        
+                        
+                        
+                        <li><a href="MusicSounds.html">Music & Sounds</a></li>
+                        
+                        
+                        
+                        <li><a href="Scripting.html">Scripting</a></li>
+                        
+                        
+                        
+                        <li><a href="UpdatesPatches.html">Updates & Patches</a></li>
+                        
+                        
+                        
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        
+                        
+                        
+                        <li><a href="Bugs.html">Bugs</a></li>
+                        
+                        
+                        
+                        <li><a href="Credits.html">Credits</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">External<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://store.steampowered.com/app/24810/Command__Conquer_3_Kanes_Wrath/" target="_blank" rel="noopener">Kane's Wrath on Steam</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.moddb.com/games/cc-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on Mod DB</a></li>
+                        
+                        
+                        
+                        <li><a href="https://en.wikipedia.org/wiki/Command_%26_Conquer_3:_Kane%27s_Wrath" target="_blank" rel="noopener">Kane's Wrath on Wikipedia</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-3-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on EA.com</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="3DS Max Exporting Utilities">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Kane's Wrath MOD SDK v0.2</li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="Home_Overview.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up the SDK" href="Home_Setting_up_the_SDK.html">Setting up the SDK</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating a Mod" href="Home_Creating_a_Mod.html">Creating a Mod</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Art Pipeline" href="Home_Art_Pipeline.html">Art Pipeline</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Tools" href="#">Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="WrathEd" href="Tools_WrathEd.html">WrathEd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="4GB Patch" href="Tools_4GB_Patch.html">4GB Patch</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="BIG Editors" href="Tools_BIG_Editors.html">BIG Editors</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Jonwil's Tools" href="Tools_Jonwil_Tools.html">Jonwil's Tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="VP6 Converter" href="Tools_VP6_Converter.html">VP6 Converter</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="EALayer3" href="Tools_EALayer3.html">EALayer3</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Mapping" href="#">Mapping</a>
+      <ul>
+          
+          
+          
+          <li><a title="WorldBuilder" href="Mapping_WorldBuilder.html">WorldBuilder</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Scripting" href="Mapping_Map_Scripting.html">Map Scripting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Reference" href="Mapping_Map_Reference.html">Map Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Code Reference" href="#">Code Reference</a>
+      <ul>
+          
+          
+          
+          <li><a title="Structures" href="CodeRef_Structures.html">Structures</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Units" href="CodeRef_Units.html">Units</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AptUI" href="CodeRef_AptUI.html">AptUI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Powers & Upgrades" href="CodeRef_Powers_Upgrades.html">Powers & Upgrades</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Gameplay" href="CodeRef_Gameplay.html">Gameplay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AI" href="CodeRef_AI.html">AI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Other" href="CodeRef_Other.html">Other</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Music & Sounds" href="#">Music & Sounds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Extracting Audio" href="MusicSounds_Extracting_Audio.html">Extracting Audio</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Converting Sounds" href="MusicSounds_Extracting_Audio.html">Converting Sounds</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripting" href="#">Scripting</a>
+      <ul>
+          
+          
+          
+          <li><a title="LUA" href="Scripting_LUA.html">LUA</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Updates & Patches" href="#">Updates & Patches</a>
+      <ul>
+          
+          
+          
+          <li><a title="Game Updates" href="UpdatesPatches_Game_Updates.html">Game Updates</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="KWBandage" href="UpdatesPatches_KWBandage.html">KWBandage</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other Info" href="#">Other Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="FAQs" href="FAQs.html">FAQs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Bugs" href="Bugs.html">Bugs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Credits" href="Credits.html">Credits</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">3DS Max Exporting Utilities</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary"></div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <p>&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.0 Transitional//EN”&gt;</p>
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+	</head>
+	<body>
+		<p align="center"><strong><FONT face="Arial" size="4">3DSMax W3X Exporting Utilities</FONT>
+			</strong>
+		</p>
+		<p align="center"><strong>
+				<br />
+			</strong><FONT face="Arial">Each object in the Max scene that is not hidden will be 
+				considered for export. A utility plugin is used to set the export options. Each 
+				mesh can have its transform exported for the animation system and/or its 
+				geometry exported. This separation exists due to the way the motion capture 
+				data comes into the system. There are often meshes in the system which are only 
+				there to provide transforms and vice-versa; there are meshes that are rigidly 
+				connected to those "transform-only" meshes. The exporter basically allows you 
+				to reduce the number of transforms that have to be calculated by the animation 
+				system. </FONT>
+		</p>
+		<p><FONT face="Arial">Each object that is exported will have its name associated with 
+				it. One limitation of the w3x file format is that these names be 15 characters 
+				or less. If you try to use a longer name, it will be truncated when it is 
+				exported. If two objects with the same name are loaded, only the first object 
+				will be kept.<br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"><br />
+			</FONT>
+		</p>
+		<p><FONT face="Arial"><img height="53" src="images/idea_sm.gif" width="48" />I'ts a good 
+				idea to configure your button sets, in the utilities panel in max, to display 
+				it by default. This way, you wont have to look under the "more" section 
+				everytime you want to use it.</FONT></p>
+		<p><FONT face="Arial">Here is a description of the various tools associated with 
+				exporting your selections to W3X.<br />
+			</FONT>
+		</p>
+		<p>
+			<table id="Table2" bordercolor="#cccccc" cellpadding="5" width="100%" bgcolor="#cccccc" border="0">
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Object 
+									Export Options:</FONT></b></FONT></td>
+					<td><FONT face="Arial">General Export Options</FONT></td>
+					<td valign="top" rowspan="50"><FONT face="Arial"><img height="1139" src="images/utilities_panel.gif" width="182" align="top" /></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Selection Window:</FONT></b></td>
+					<td><FONT color="#ff0000"></FONT><FONT face="Arial">Displays the name of what you have 
+							selected.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Export Transform (Bone):</FONT></b></td>
+					<td><FONT color="#ff0000"></FONT><FONT face="Arial">Check this to only export a bone or 
+							animation.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Export Geometry:</FONT></b></td>
+					<td><FONT color="#000000" face="Arial">Check this to only export a mesh or geometry.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Damage Region:</FONT></b></td>
+					<td><FONT color="#ff0000"><FONT face="Arial"><b>Obsolete: </b><FONT color="#000000">For E &amp; 
+									B it was a labor intensive way of defining what part of an object will recieve 
+									damage. </FONT></FONT></FONT>
+					</td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td bgcolor="#ffffff" colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Geometry 
+									Options: </FONT></b></FONT>
+					</td>
+					<td><FONT color="#000000" face="Arial">These options allow your exported geometry to 
+							have different characteristics. You can select multiple options from choices on 
+							the right. </FONT>
+					</td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">Normal</FONT></b></td>
+					<td><FONT color="#ff0000"><FONT color="#000000" face="Arial">Default mode, just a normal 
+								mesh with no specific characteristics.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">Cam-Parallel</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Aligns the object 
+								to the near clipping plane of the camera, for example, if an object moves 
+								around the scene, it will remain parralell to the viewport. Kind of like a 
+								strafing effect.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Cam-Orient</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">Aligns to the local X axis of the 
+							Camera: This makes the object always face torward the camera so where ever the 
+							object or camera is, the camera will always be facing the x-axis.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">AABox</FONT></b></td>
+					<td width="383"><FONT face="Arial">This mesh is to be used as an axis aligned collision 
+							box.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">OBBox</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Use this if youre 
+								exporting a bounding box area. Checkmark "Hide".</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Null (LOD)</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Indicates that its 
+								an LOD object</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Aggregate</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Export a box that 
+								will be used as an aggregate, Checkmark "Hide" when selecting this option. </FONT>
+						</FONT>
+					</td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Dazzle</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Use this option to 
+								export a mesh object (usually a plane) that will be used as a Camera lens 
+								flare. Check mark-2Side.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">2Side</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">Enable/Disable two sided rendering 
+							for the entire mesh.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Hide</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">Use this option to make your 
+							geometry hidden, e.g. a bounding box.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">ZNrm</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><b><FONT color="#333333" face="Arial"><i>Disabled:</i></FONT></b></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">VAlpha</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">With this checked, your mesh will 
+							have a "vertex alpha", which is created from the grayscale values of the 
+							vertices that you have given to them in max. <b><FONT color="#ff0000">NOTE:</FONT></b>
+							texture blend mode must be "Alpha Blend" in order for this to work.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Shadw</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">The mesh is not rendered normally, 
+							it is used to generate shadows only.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Shatter</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">For use when your 
+								objects may need to shatter, such as glass.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td bgcolor="#ffffff" colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Collision 
+									Options: </FONT></b></FONT>
+					</td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">You can select the 
+								physical characteristics for your geometry that you are exporting. </FONT></FONT>
+					</td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Physical</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this for a 
+								surface thats not penetrateable, such as a character or a vehicle.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Projectile</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this if a 
+								projectile can hit it.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Vehicle</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Select this if you 
+								wish a vehicle not to proceed through or past it.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">Vis</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">Select this when exporting your 
+							"Vis" areas. A vis area is a specific area within the cameras view, where the 
+							computer will not draw in geometry past that point until you crossed over into 
+							another Vis area.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Camera</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">Select this in case you dont want 
+							the camera to go through it, or get stuck in it.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Select 
+									by W3D Type:</FONT></b></FONT></td>
+					<td width="383"><FONT face="Arial">Rather than Manually selecting objects in your scene 
+							to be exported, you can use these buttons select specific items for you.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Select Bones</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"></FONT><FONT face="Arial">Selects all the bones 
+							in your scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Select Geometry</FONT></b></td>
+					<td width="383"><FONT face="Arial">Selects all the geometry in you scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Select Alpha Meshes</FONT></b></td>
+					<td width="383"><FONT face="Arial">Select all Alpha Meshes in your scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Phys</FONT></b></td>
+					<td width="383"><FONT face="Arial">Select all Physical Objects in your scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">Proj</FONT></b></td>
+					<td width="383"><FONT face="Arial">Select all objects that are affected by projectiles 
+							in your scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Vis</FONT></b></td>
+					<td width="383"><FONT face="Arial">Select all Vis objects in your scene.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Naming 
+									Utilities:</FONT></b></FONT></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">A convenient way 
+								to name a selected set.</FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top" width="113" bgcolor="#cccccc"><b><FONT face="Arial">Assign Node Names</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000"><FONT face="Arial">Opens the 
+									"Generate Node Names" window. This allows you to assign a root name, prefix and 
+									suffix. &nbsp;After setting your preferences, all of the selected objects in 
+									your scene will be renamed in sequence according to the node name.
+									<br />
+									<br />
+								</FONT><i><FONT color="#000099"><FONT face="Arial"><b>Artist Note:
+												<br />
+											</b><FONT color="#000000">You may want to de-select "Assign Collision Bits" because 
+												it will override what you already have selected, in the collision options box.</FONT></FONT></FONT></i></FONT></FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Assign Material Names</FONT></b></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">Opens the 
+								"Generate Material Names" window. This allows you to assign a root name to your 
+								materials,&nbsp;After setting your preferences, all of the materials you 
+								affected will be renamed in sequence according to the node name. </FONT></FONT>
+					</td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#cccccc"><b><FONT face="Arial">Assign Extensions</FONT></b></td>
+					<td width="383"><FONT color="#000000" face="Arial">This will append an extenstion to 
+							your currently selected objects. LOD 0 should be your highest poly model, with 
+							increasing LOD numbers going to your lower poly models. Damage models should be 
+							extension numbers 1 and up.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Export 
+									with Std Mtls:</FONT></b></FONT></td>
+					<td width="383"><FONT color="#ff0000"></FONT><FONT face="Arial">For use when exporting 
+							LightScape files.</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td bgcolor="#ffffff" colspan="2" height="22"><FONT face="Arial">&nbsp;</FONT></td>
+				</tr>
+				<tr bgcolor="#ffffff">
+					<td width="113" bgcolor="#666666"><FONT color="#006600" size="3"><b><FONT color="#ffffff" size="2" face="Arial">Create 
+									Settings Floater:</FONT></b></FONT></td>
+					<td width="383"><FONT color="#ff0000"><FONT color="#000000" face="Arial">For convenience, 
+								this pens a pop up floater with the W3D settings.</FONT></FONT></td>
+				</tr>
+			</table>
+		</p>
+		<p><b><FONT face="Arial"></FONT></b>&nbsp;</p>
+	</body>
+</html>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_art_pipeline.html" class="btn btn-default navbar-btn cursorNorm" role="button">art_pipeline</a>
+        
+        
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Kane's Wrath MOD SDK. All rights reserved. <br />
+<span>Page last updated:</span> June 16, 2021<br/> Site last generated: Jun 17, 2021 <br />
+<p><img src="images/KWSDK_logo_130.png" alt="Kane's Wrath MOD SDK"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

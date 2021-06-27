@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TargetingBaseCompare" />
+
+	<GameAsset
+		id="TargetingDistanceCompare"
+		TypeHash="3448508464">
+		<Entry
+			id="Tolerance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="30.0" />
+	</GameAsset>
+
+	<GameAsset
+		id="TargetingCombatChainCompare"
+		TypeHash="1429735663" />
+
+	<GameAsset
+		id="TargetingInTurretArcCompare"
+		TypeHash="3441703194" />
+
+	<Asset
+		id="TargetingCompareRef">
+		<EntryReference
+			id="TargetingBaseCompare"
+			AssetType="TargetingBaseCompare" />
+	</Asset>
+
+	<GameAsset
+		id="TargetingCompareList"
+		TypeHash="1472879745">
+		<EntryList
+			id="Compare"
+			AssetType="TargetingCompareRef"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<Asset
+		id="BaseAITargetChooserData">
+		<Entry
+			id="IdleScanDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.8s" />
+		<Entry
+			id="ReacquireDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="5s" />
+		<Entry
+			id="StartupDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SympathyRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="CheckVisionRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPickDynamicTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="RotateToTargetWhenAiming"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanAutoAcquireNonAutoAcquirable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="UnitAITargetChooserData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAITargetChooserData" />
+		<EntryReference
+			id="TargetingCompareList"
+			AssetType="TargetingCompareList"
+			IsAttribute="true"
+			Default="DefaultTargetingCompareList" />
+	</Asset>
+
+	<Asset
+		id="TurretAITargetChooserData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAITargetChooserData" />
+		<EntryReference
+			id="TargetingCompareList"
+			AssetType="TargetingCompareList"
+			IsAttribute="true"
+			Default="DefaultTurretTargetingCompareList" />
+		<Entry
+			id="ActiveWhenPerformingSpecialAbility"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanAcquireDynamicIfAssignedOutOfRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPickTargetsOutOfTurretAngle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

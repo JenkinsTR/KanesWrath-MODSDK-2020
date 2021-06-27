@@ -1,0 +1,152 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Kane's Wrath MOD SDK
+  version: v0.2
+  folders:
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+
+    - title: Overview
+      url: /Home_Overview.html
+      output: web, pdf
+      type: homepage
+
+    - title: Setting up the SDK
+      url: /Home_Setting_up_the_SDK.html
+      output: web, pdf
+
+    - title: Creating a Mod
+      url: /Home_Creating_a_Mod.html
+      output: web, pdf
+
+    - title: Art Pipeline
+      url: /Home_Art_Pipeline.html
+      output: web, pdf
+
+  - title: Tools
+    output: web, pdf
+    folderitems:
+
+    - title: WrathEd
+      url: /Tools_WrathEd.html
+      output: web, pdf
+
+    - title: 4GB Patch
+      url: /Tools_4GB_Patch.html
+      output: web, pdf
+
+    - title: BIG Editors
+      url: /Tools_BIG_Editors.html
+      output: web, pdf
+
+    - title: Jonwil's Tools
+      url: /Tools_Jonwil_Tools.html
+      output: web, pdf
+
+    - title: VP6 Converter
+      url: /Tools_VP6_Converter.html
+      output: web, pdf
+
+    - title: EALayer3
+      url: /Tools_EALayer3.html
+      output: web, pdf
+
+  - title: Mapping
+    output: web, pdf
+    folderitems:
+
+    - title: WorldBuilder
+      url: /Mapping_WorldBuilder.html
+      output: web, pdf
+
+    - title: Map Scripting
+      url: /Mapping_Map_Scripting.html
+      output: web, pdf
+
+    - title: Map Reference
+      url: /Mapping_Map_Reference.html
+      output: web, pdf
+
+  - title: Code Reference
+    output: web, pdf
+
+    folderitems:
+    - title: Structures
+      url: /CodeRef_Structures.html
+      output: web, pdf
+
+    - title: Units
+      url: /CodeRef_Units.html
+      output: web, pdf
+
+    - title: AptUI
+      url: /CodeRef_AptUI.html
+      output: web, pdf
+
+    - title: Powers & Upgrades
+      url: /CodeRef_Powers_Upgrades.html
+      output: web, pdf
+
+    - title: Gameplay
+      url: /CodeRef_Gameplay.html
+      output: web, pdf
+
+    - title: AI
+      url: /CodeRef_AI.html
+      output: web, pdf
+
+    - title: Other
+      url: /CodeRef_Other.html
+      output: web, pdf
+
+  - title: Music & Sounds
+    output: web, pdf
+
+    folderitems:
+    - title: Extracting Audio
+      url: /MusicSounds_Extracting_Audio.html
+      output: web, pdf
+
+    - title: Converting Sounds
+      url: /MusicSounds_Extracting_Audio.html
+      output: web, pdf
+
+  - title: Scripting
+    output: web, pdf
+
+    folderitems:
+    - title: LUA
+      url: /Scripting_LUA.html
+      output: web, pdf
+
+  - title: Updates & Patches
+    output: web, pdf
+
+    folderitems:
+    - title: Game Updates
+      url: /UpdatesPatches_Game_Updates.html
+      output: web, pdf
+      
+    - title: KWBandage
+      url: /UpdatesPatches_KWBandage.html
+      output: web, pdf
+
+  - title: Other Info
+    output: web, pdf
+
+    folderitems:
+    - title: FAQs
+      url: /FAQs.html
+      output: web, pdf
+    
+    - title: Bugs
+      url: /Bugs.html
+      output: web, pdf
+    
+    - title: Credits
+      url: /Credits.html
+      output: web, pdf

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleEmissionVolumeBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule"/>
+		<Entry
+			id="IsHollow"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeBox">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="HalfSize"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeCylinder">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusRate"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Length"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeLine">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="StartPoint"
+			AssetType="Vector3" />
+		<Entry
+			id="EndPoint"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeSpline">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="StartPoint"
+			AssetType="Vector3" />
+		<Entry
+			id="EndPoint"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumePoint">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeSphere">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeTerrainFire">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+		<Entry
+			id="CellEmissionChance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="RandCoord3D" />
+	</Asset>
+
+	<Asset
+		id="FXParticleEmissionVolumeLightning">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleEmissionVolumeBase"/>
+	</Asset>
+
+	<Asset
+		id="FXParticleVolumeModule">
+		<EntryChoice
+			id="FXParticleVolumeModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="Box"
+				AssetType="FXParticleEmissionVolumeBox" />
+			<Entry
+				id="Cylinder"
+				AssetType="FXParticleEmissionVolumeCylinder" />
+			<Entry
+				id="Line"
+				AssetType="FXParticleEmissionVolumeLine" />
+			<Entry
+				id="Spline"
+				AssetType="FXParticleEmissionVolumeSpline" />
+			<Entry
+				id="Point"
+				AssetType="FXParticleEmissionVolumePoint" />
+			<Entry
+				id="Sphere"
+				AssetType="FXParticleEmissionVolumeSphere" />
+			<Entry
+				id="TerrainFire"
+				AssetType="FXParticleEmissionVolumeTerrainFire" />
+			<Entry
+				id="Lightning"
+				AssetType="FXParticleEmissionVolumeLightning" />
+		</EntryChoice>
+	</Asset>
+
+</AssetDefinition>

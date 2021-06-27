@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="us-ascii" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Tags />
+	<WeaponTemplate
+		id="ShadowMachineGunRangefinder"
+		Name="ShadowMachineGunRangefinder"
+		AttackRange="120"		 
+		LeechRangeWeapon="true"
+		AcceptableAimDelta="45d"
+		AntiMask="ANTI_GROUND"
+		CanFireWhileMoving="true"
+		FinishAttackOnceStarted="false"
+ 		>
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODShadowMachinePistol"
+		Name="NODShadowMachinePistol" 
+		AttackRange="100.0" 
+		WeaponSpeed="999999.0" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		ClipSize="1"
+		FireSound="NOD_ShadowSquad_WeaponFirePistol"
+		FireFX="FX_NODRifleManFire"
+		FireVeteranFX="FX_GDIRifleManFireHeroic"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.45s"
+			MaxSeconds="0.55s" />
+		<Nuggets>
+			<DamageNugget 
+				Damage="30.0" 
+				Radius="0.0" 
+				DamageType="SNIPER" 
+				DamageFXType="NOD_RIFLE"		
+				DeathType="NORMAL">
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="GDIElfWarriorSword"
+		Name="GDIElfWarriorSword"
+		AttackRange="12.0"
+		MeleeWeapon="true">
+		<FiringDuration
+			MinSeconds="1.2s"
+			MaxSeconds="1.2s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="1500.0"
+				Radius="0.0"
+				DamageType="MAGIC"
+				DamageFXType="ALIEN_BUZZER"
+				DeathType="NORMAL"
+			/>
+		</Nuggets>		
+	</WeaponTemplate>
+	
+</AssetDeclaration>
+

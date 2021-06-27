@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WeaponFireProbabilityType">
+		<Entry
+			id="DeathType"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ChancePercentage"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FireWeaponWhenDeadBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="DelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="DeathWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="FocusFireKindOfFlag"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="WeaponOffset"
+			AssetType="Coord3D" />
+		<Entry
+			id="DieMuxData"
+			AssetType="DieMuxDataType" />
+		<EntryList
+			id="WeaponFireProbability"
+			AssetType="WeaponFireProbabilityType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="InitiallyActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ActiveDuringConstruction"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ContinueToBezierDestination"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

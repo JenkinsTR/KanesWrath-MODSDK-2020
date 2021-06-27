@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalMainCommandBarHotKeysBuildQueue">
+		<Entry
+			id="QueueType"
+			AssetType="ProductionQueueType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Slot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalMainCommandBarHotKeys"
+		TypeHash="1944261033">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="SelectionRefinementPageSlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryList
+			id="BuildQueuePage"
+			AssetType="UIMouseTacticalMainCommandBarHotKeysBuildQueue"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ButtonSlot"
+			AssetType="HotKeySlotRef"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

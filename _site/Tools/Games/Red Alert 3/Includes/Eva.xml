@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EvaSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="EnemySightedMaxVoicePositionScanRange"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxTimeToKeepJumpToEvents"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MaxTimeBeforeResettingLastJumpTo"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MinDistanceBetweenJumpToEvents"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SideSound">
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="Side"
+			AssetType="PlayerTemplateWeakRef"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="EvaEvent">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Priority"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TimeBetweenEvents"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ExpirationTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="QuietTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="TimeToWaitBeforePlaying"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="SideSound"
+			AssetType="SideSound"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="OtherEvaEventToBlock"
+			AssetType="EvaEventWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="AlwaysPlayFromHomeBase"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CountAsJumpToLocation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="SuppressOn360"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SuppressOnPC"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AudioVoiceEntry">
+		<EntryInheritance
+			id="base"
+			AssetType="SoundOrEvaEvent" />
+		<Entry
+			id="AudioType"
+			AssetType="ThingTemplateVoiceType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

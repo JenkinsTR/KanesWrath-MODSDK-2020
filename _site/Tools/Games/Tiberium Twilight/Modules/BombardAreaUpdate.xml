@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BombardAreaUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="IncomingAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<EntryReference
+			id="WeaponName"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="MaxShots"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<Entry
+			id="TimeDelayRange"
+			AssetType="TimeRange" />
+		<Entry
+			id="RadiusSpreadRange"
+			AssetType="RealRange" />
+		<Entry
+			id="UsePlayerStore"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

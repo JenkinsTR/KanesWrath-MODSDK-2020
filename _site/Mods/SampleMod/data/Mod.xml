@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+		<!--
+			mod.xml is the central include for mod setup data.		
+		-->
+		<Include type="reference" source="DATA:static.xml" />
+		<Include type="reference" source="DATA:global.xml" />    
+    
+		<!--UI Mod-->
+		<Include type="reference" source="DATA:SampleMod/Data/AptUI/MainMenu.xml" />
+		<Include type="reference" source="DATA:SampleMod/Data/AptUI/TacticalHUD.xml" />
+
+		<Include type="all" source="DATA:SampleMod/Data/SoundMod.xml" />
+
+		<!--Artwork include for Elven Warriors Portrait-->
+		<Include type="all" source="ART:Images/SampleUpdatedPackedImages.xml" />
+		 
+		<!--Sample AI-->
+		<Include type="all" source="DATA:SampleMod/Data/AI/SampleNodOpeningMoves.xml" />	  
+		<Include type="all" source="DATA:SampleMod/Data/AI/SampleNodPersonality.xml" />
+		<Include type="all" source="DATA:SampleMod/Data/AI/SampleNodStates.xml" />
+		<Include type="all" source="DATA:SampleMod/Data/AI/SampleAITargetHeuristics.xml" />	
+		
+		<!--Files for Elven Warrior Addition-->
+		<Include type="all" source="DATA:SampleMod/Data/SampleUpdatedWeapons.xml" />
+		<Include type="all" source="DATA:SampleMod/Data/SampleUpdatedArmor.xml" />
+		<Include type="all" source="DATA:SampleMod/Data/SampleUpdatedLogicCommand.xml" />
+		<Include type="all" source="DATA:SampleMod/Data/SampleUpdatedLogicCommandSet.xml" />	
+		<Include type="all" source="DATA:SampleMod/Data/GDIElfWarrior.xml"/>
+
+	</Includes>
+
+</AssetDeclaration>
+

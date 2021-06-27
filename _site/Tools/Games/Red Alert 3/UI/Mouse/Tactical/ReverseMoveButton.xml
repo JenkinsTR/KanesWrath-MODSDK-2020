@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalReverseMoveButton"
+		TypeHash="1863152725">
+		<EntryInheritance
+			id="base"
+			AssetType="UIMouseSimpleFixedButton" />
+	</GameAsset>
+
+</AssetDefinition>

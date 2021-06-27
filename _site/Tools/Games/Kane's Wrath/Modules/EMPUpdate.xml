@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EMPUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="StartFadeDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DisabledDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="StartScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="TargetScaleMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="TargetScaleMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<EntryReference
+			id="DisableFXParticleSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="SparksPerCubicFoot"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="StartColor"
+			AssetType="Color3f" />
+		<EntryRelocation
+			id="EndColor"
+			AssetType="Color3f" />
+	</Asset>
+
+</AssetDefinition>

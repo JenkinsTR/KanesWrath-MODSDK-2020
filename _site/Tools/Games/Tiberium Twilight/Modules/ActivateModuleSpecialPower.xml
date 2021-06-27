@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ActivateModuleInfo">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleInfo" />
+		<Entry
+			id="Deactivate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ActivateModuleSpecialPower">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<EntryList
+			id="Modules"
+			AssetType="ActivateModuleInfo"
+			MinLength="0"
+			MaxLength="4" />
+	</Asset>
+
+</AssetDefinition>

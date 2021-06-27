@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RunOffMapBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="RunOffMapWaypointName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RequiresSpecificTrigger"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="DieOnMap"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FlyingOffMap"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

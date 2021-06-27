@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DockUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="NumberApproachPositions"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinDockTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ObjectsInLineWeight"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="13s" />
+		<EntryRelocation
+			id="ForVoiceRetreatThisIsASafeHarborToObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="AllowsPassthrough"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="GoToRallyPointAfterDock"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShouldDockInReverse"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

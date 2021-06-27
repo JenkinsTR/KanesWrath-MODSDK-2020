@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LaserUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientUpdateModuleData" />
+		<EntryReference
+			id="ParticleSystemId"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ParentFireBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="TargetParticleSystemId"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="LaserLifetime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ParentFireBoneOnTurret"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

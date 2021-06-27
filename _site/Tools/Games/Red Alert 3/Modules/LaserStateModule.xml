@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LaserStateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="LaserId"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="OriginBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="LaserEndParticleSystem"
+			AssetType="FXParticleSystem"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="LaserStartParticleSystem"
+			AssetType="FXParticleSystem"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="EndOffset"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,109 @@
+GDI
+	Units
+		Infantry
+		
+			Rifleman Squad
+			Missile Squad
+			Grenadier Squad
+			Sniper Team
+			Engineer
+			Zone Trooper
+			Commando
+		
+		Vehicles
+		
+			Guardian APC
+			CC-6 Pitbull
+			MBT-6 Predator
+			Slingshot (Kane's Wrath only)
+			Shatterer (Kane's Wrath only)
+			MCV
+			Surveyor
+			Harvester
+			Rig
+			Juggernaut
+			Mammoth Tank
+			MARV (Kane's Wrath only)
+			
+		Aircraft
+		
+			A-15 Orca
+			Firehawk
+			V-35 Ox
+			Orca Strike Craft
+			Hammerhead (Kane's Wrath only)
+			Ironside (Kane's Wrath only)
+			Supersonic Fighter (Kane's Wrath only)
+			
+		Vessels
+		
+			Aircraft carrier
+			Battleship
+			Hovercraft
+	
+	Structures
+		Production
+		
+			Construction Yard
+			Barracks
+			War Factory
+			Airfield
+			Crane
+			Reclamator Hub (Kane's Wrath only)
+			
+		Support
+		
+			Power Plant
+			Tiberium Refinery
+			Command Post
+			Armory
+			Tech Center
+			Space Command Uplink
+			Tiberium Silo
+			Ion Cannon Control
+			Outpost
+			Combat Support Airfield (Kane's Wrath only)
+			Tiberium Processing Plant (Kane's Wrath's Global Conquest Mode only)
+			Intelligence Center (campaign only)
+		
+		Defenses
+		
+			Watchtower
+			Guardian Cannon
+			Anti-Air Battery
+			Sonic Emitter
+			Battle Base
+			Foxhole
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Orca Strike
+			Radar Scan
+			Airborne
+			Sharpshooter team
+			Bloodhounds
+			Shockwave Artillery
+			Zone Trooper Drop Pods
+			Ion Cannon
+			Sonic Fence (Kane's Wrath only)
+			Supersonic Air Strike (Kane's Wrath only)
+			
+		Upgrades
+		
+			Composite Armor
+			Power Pack
+			Mortar
+			Scanner Pack
+			Stratofighter
+			Upgrade
+			Sensor Pod Upgrade
+			Advanced Turbines
+			Railgun Upgrade
+			Armour Piercing
+			Ammunition (Kane's Wrath only)
+			Tungsten Shells (Kane's Wrath only)
+			EMP Grenades (Kane's Wrath only)
+			Hardpoints (Kane's Wrath only)
+			
+		

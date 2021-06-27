@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AttributeModifierUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

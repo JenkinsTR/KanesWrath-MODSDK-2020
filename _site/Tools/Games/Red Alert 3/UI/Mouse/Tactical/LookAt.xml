@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalLookAtViewBookmark">
+		<EntryReference
+			id="GoToHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="SaveHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="UIMouseTacticalLookAt"
+		TypeHash="1676252299">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="ScrollCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ScrollLeftHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ScrollRightHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ScrollUpHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ScrollDownHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="RotateLeftHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="RotateRightHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ZoomInHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<EntryReference
+			id="ZoomOutHotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+		<Entry
+			id="KeyScrollFactor"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MouseDragScrollFactor"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MouseEdgeScrollFactor"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<EntryList
+			id="ViewBookmark"
+			AssetType="UIMouseTacticalLookAtViewBookmark"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

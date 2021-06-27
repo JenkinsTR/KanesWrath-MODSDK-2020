@@ -1,0 +1,20 @@
+Mission 0
+Frame 24
+Depth 169
+Postion 340.899994 170.550003
+Ratio 0.000366
+Mission Name Position Right
+
+Mission 1
+Frame 44
+Depth 1
+Postion 535.799988 443.700012
+Ratio 0.000671
+Mission Name Position Left
+
+Mission 2
+Frame 29
+Depth 337
+Postion 457.700012 275.549988
+Ratio 0.000443
+Mission Name Position Right

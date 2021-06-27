@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+
+  <!--
+  This file contains several annotated states that are referenced by the example AI.  At the end of the file you can
+  find a comment with a full list of heuristics and tactics.  
+  -->
+
+  <!--
+  /***********************
+  Anatomy of an AI State
+  ************************/
+  -->
+
+  <!--
+  AIStrategicStateDefinition defines the entire state.  
+		id - the name references from the AI personality file
+		UnitUpgradeMultiplier - deprecated or unused value
+  -->
+  
+    <AIStrategicStateDefinition
+		id="AlienOptimalDirectAttack1"
+		UnitUpgradeMultiplier="0.0">
+  
+  <!--
+  Heuristic determines when the State runs.  If there are multiple heuristics, they are multiplied together.  For example, if you have a 
+  TimerHeuristic and an IntervalHeuristic in the same Heuristic, the State will not run until the conditions of both the Timer and Interval
+  heuristic are met.
+  
+  Heuristic List:
+		ConstantHeuristic - makes a state active constantly with a defined weight. 
+			Weight - determines weight that the state has
+		TimerHeuristic - makes the state active within the start and end time of a timer set from when the map begins
+			StartTime - when the state activates
+			EndTime - when the state ends
+		IntervalHeuristic - makes a state active during an interval for a set amount of time
+			IntervalTime - the time intervals for the state to turn on 
+			ActiveTime - how long the state remains active when the interval begins, before it turns off
+		ScriptedFlagHeuristic - references a flag initialized in World Builder and runs the state on "true"
+			FlagName - the flag 
+		PathToTargetHeuristic - makes the state activate depending on if a ground path exists or not
+			PathExists - "true" activates the state if a ground path exists; "false" activates the state if a ground path does not exist
+		FocusedThresholdHeuristic - returns true if AI has more forces than opponent
+		SpreadThresholdHeuristic - returns false if the AI has more forces than opponent
+		SiegeThresholdHeuristic - if siegemode is true this will return true if the opponent of the AI has more base defenses than the AI has mobile forces
+			SiegeMode - 
+			Threshold - 
+		CounterattackHeuristic - same thing as focused except with multiplier: returns true if the AI has more than the threshold multiplied by their opponents forces
+			Threshold -
+		BalanceOfPowerHeuristic - returns a value closer to 1 the more identical the AI and opponent forces are
+		PowerAdvantageHeuristic - identical to FocusedHeuristic
+		PenetrabilityHeuristic - returns a value closer to 1 as the ratio of the AI's mobile forces over its opponents defenses increases
+		BridgeExistsHeuristic - returns true if a bridge on the map exists with the condition specified in the parameters
+			Health <>
+		SuperweaponHeuristic - returns true if the AI's opponent has a super weapon with less than 10% on its countdown timer
+		MiddleGameHeuristic - makes the state active if the AI player has a GDI Command Post, Nod Operations Center, or Scrin Nerve Center
+		LateGameHeuristic - makes the state active if the AI player has a GDI Tech Center, Nod Tech Assembly Plant, or Scrin Technology Center 
+		OpponentFundsHeuristic - returns a number to 1 the more money the AI's opponent has
+		PowerThresholdHeuristic - returns a value closer to 1 the larger the opponent's power deficit is
+			if AI's opponent is low power, returns 1; if destroying 1 more 
+		OpponentAAPowerHeuristic - unused & doesn't work
+		ProductionAdvantageHeuristic - counts AI's and opponents production levels where the production level is the min of harvesters or factories they have
+			Returns true if the AI's is higher than opponents
+			Parameters
+		HarvesterCapHeuristic - parameter is number of harvesters; returns false if AI has more than the cap
+		FullInvestmentHeuristic - returns true if the AI has more than threshold amount in its investment account
+		OpeningMoveHeuristic - returns true if the AI is still in its opening move
+   -->
+
+    <Heuristic>
+      <TimerHeuristic StartTime="180s" EndTime="900s"/>
+      <IntervalHeuristic IntervalTime="90s" ActiveTime="30s"/>
+    </Heuristic>
+
+  <!--
+  TargetHeuristic determines which target a tactic runs on.  The TargetType should exactly match one of the TacticalAITargets defined in the personality
+  file.  If it does not, the tactic will never run.  A TargetHeuristic can be defined multiple times for the same TacticalAITarget (a FocusedTarget for example
+  could reference a "ClosestStructureHeuristic" and a "ClosestOffensiveUnitHeuristic" target heuristic.
+  
+  TargetHeuristics fall into a few categories:
+		- heuristics that pick enemy targets by distance 
+		- heuristics that pick enemy targets by a prioritized list
+		- heuristics that pick enemy targets by threat and distance
+		- heuristics that pick friendly targets by distance
+		- heuristics that pick neutral targets by distance
+		- heuristics for special targets
+  
+  TargetHeuristic List:
+		Distance
+			ClosestStructureHeuristic
+			ClosestOffensiveStructureHeuristic
+			ClosestUnitHeuristic
+			ClosestVehicleHeuristic
+			ClosestInfantryHeuristic
+			ClosestAircraftHeuristic
+			ClosestOffensiveUnitHeuristic
+			EngineerUnitHeuristic
+			CommandoUnitHeuristic
+			ExpansionUnitHeuristic
+			OutpostStructureHeuristic
+			ClosestHarvesterHeuristic
+			RandomStructureHeuristic
+			OutsideAAHeuristic
+			ClosestMothershipHeuristic
+		Threat & Distance
+			SafestToGroundStructureHeuristic
+			SafestToAirStructureHeuristic
+			SafestToAirPowerPlantHeuristic
+			SafestToGroundUnitHeuristic
+			SafestToGroundVehicleHeuristic
+			SafestToAirUnitHeuristic
+			SafestToGroundHarvesterHeuristic
+		Friendly & Distance
+			ClosestFriendlyStructureHeuristic
+			ClosestFriendlyUnitHeuristic
+			ClosestFriendlyHarvesterHeuristic
+			ClosestFriendlyExpanderHeuristic
+			ClosestFriendlyConyardHeuristic
+			ClosestFriendlySuperweaponHeuristic
+		Neutral & Distance
+			ClosestNeutralTechHeuristic
+			GarrisonHeuristic
+			AntiGarrisonHeuristic
+			BridgeHeuristic
+		Prioritized Lists
+			PowerKillHeuristic
+			ProductionKillHeuristic
+			EconomyKillHeuristic
+			ConstructionKillHeuristic
+			EngineerHeuristic
+			CommandoHeuristic
+			SuperweaponHeuristic
+			ProductionHaltHeuristic
+			ResourceSqueezeHeuristic
+		Special Targets
+			ExpansionHeuristic
+			BeaconHeuristic
+			CrateHeuristic
+			FriendlyHuskHeuristic
+			EnemyHuskHeuristic
+		
+  -->
+  
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="FocusedTarget"/>
+    
+  <!--
+  Tactic defines how the assembled team will act upon the target defined in the target heuristic.  
+		Tactic - the tactic to be used by the team
+		TargetType - references what target type the tactic runs on
+    
+  Tactic List
+  		SimpleAttack - units take the shortest, straight-line path to target
+		FlankAttack - units choose a random angle and approach target from it
+		DefenseAvoidanceAttack - units attempt to avoid enemy defenses
+		SimpleSiege - units guard siege units that try to eliminate targets from a distance
+		ReactiveDefense - units gather around the AI player's con-yard or specified base and protect it in a 
+		StaticDefense - units defend a specified target
+		Engineer - unit attempts a context-sensitive capture attack on target (for capturing buildings or husks)
+		Garrison - unit attempts to garrison a building or empty the garrison
+		BridgeRepair - units attempt to repair bridge
+		Expansion - sends a surveyor to the closest tiberium field, unpacks there and builds two refineries
+  
+  -->
+  <!--
+  TeamTemplate assembled the team to run the tactic on the specified target. 
+		MinUnits - the minimum number of units required for the team to be assembled and the tactic to run
+		MaxUnits - the maximum number of units the tactic will attempt to use
+		IncludeKindOf - specifies which parameters a unit must have to be on this team
+		ExcludeKindOf - specifies which parameters a unit must have to be excluded from this team
+		AlwaysRelease - determines if other teams are allowed to steal members from this team
+		AlwaysRecruit - determines if the team will attempt to recruit additional members after it has formed (if true, the team will reinforce itself up to its MaxUnits)
+		
+	CreateUnits is a special field within the tactic that allows specific units to be requested for the team.  These units will be made regardless of the
+	unit cap for the team
+	
+		KindOf List:
+			INFANTRY
+			AIRCRAFT
+			VEHICLE
+			ASSAULT_AIRCRAFT - Stormriders, Orcas, Venoms
+			BOMBER_AIRCRAFT - Vertigo, Firhawk
+			MOTHERSHIP
+			ENGINEER
+			UNIQUE_UNIT - units that you can only have 1 of
+		
+  -->
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="FocusedTarget">
+      <TeamTemplate MinUnits="6" MaxUnits="8" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+		<CreateUnits UnitName="AlienBuzzers"/>
+		<CreateUnits UnitName="AlienBuzzers"/>
+	  </TeamTemplate>
+    </Tactic>
+    
+  <!--
+  UnitModifierByName is used to set preferences for particular units for use in a State.   
+		UnitName - the unit's name
+		UnitPreferenceOffensiveModifier - 100% indicates no preferences; less than 100% makes the unit less preferred and over 100% begins to prefer the unit
+		UnitPreferenceDefensiveModifier - 100% indicates no preferences; less than 100% makes the unit less preferred and over 100% begins to prefer the unit
+  
+  -->
+		<UnitModifierByName UnitName="AlienDevourerTank" UnitPreferenceOffensiveModifier="120%" UnitPreferenceDefensiveModifier="120%"/>
+  </AIStrategicStateDefinition>
+  
+  <!--
+  /***********************
+  AI Budget States
+  ************************/
+  -->
+
+  <!-- 
+  AIBudgetStateDefinition is used to define an AI budget state which determines how an AI spends the money it has.
+
+  BudgetStates use the same Heuristic syntax as strategic AI states.  The most important part of a budget state are the 
+  AccountShare items in the <Budget> field:
+		Investment - budget used for building expansions
+		Special Operations - budget used for using special powers
+		Production - budget used for building units and structures
+		Defense - budget used for building base defenses
+		Technology - budget used for teching up and building tech buildings
+		Slush Fund - catch-all fund for miscellaneous use
+  -->
+  <AIBudgetStateDefinition
+    id="AlienEarlyGameBudget">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="10%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="0%"/>
+      <AccountShare Account="PRODUCTION" Percent="70%"/>
+      <AccountShare Account="DEFENSE" Percent="0%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="20%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="00%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+  <AIBudgetStateDefinition
+    id="AlienMidGameBudget">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="5%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="10%"/>
+      <AccountShare Account="PRODUCTION" Percent="65%"/>
+      <AccountShare Account="DEFENSE" Percent="5%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="10%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="5%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+    <AIBudgetStateDefinition
+    id="AlienLateGameBudget">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Budget>
+      <AccountShare Account="INVESTMENT" Percent="0%"/>
+      <AccountShare Account="SPECIAL_OPERATIONS" Percent="10%"/>
+      <AccountShare Account="PRODUCTION" Percent="75%"/>
+      <AccountShare Account="DEFENSE" Percent="5%"/>
+      <AccountShare Account="TECHNOLOGY" Percent="5%"/>
+      <AccountShare Account="SLUSH_FUND" Percent="5%"/>
+    </Budget>
+  </AIBudgetStateDefinition>
+  
+  <!--
+  /***********************
+  Annotated AI States
+  ************************/
+  -->
+
+  <!--
+  Unit Cap States are used to cap the number of units that an AI player will build.  This is good for managing difficulty and for keeping the frame
+  rate of the game sane.  These states run constantly with no tactics in them.  If a state with a higher weight exists, the unit cap within those
+  states will take precedence (so if there is no unit cap in the higher weighted state, the AI player will have no cap).  It's important to make
+  sure your cap leaves enough space for your attack teams to meet their minimum amount of units necessary to assemble a team.
+  -->
+  
+   <AIStrategicStateDefinition
+		id="AlienUnitCap_Easy"
+		UnitUpgradeMultiplier="0.0"
+		UnitBuilderSimpleUnitCap="20">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+     <AIStrategicStateDefinition
+		id="AlienUnitCap_Medium"
+		UnitUpgradeMultiplier="0.0"
+		UnitBuilderSimpleUnitCap="30">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+    <AIStrategicStateDefinition
+		id="AlienUnitCap_Hard"
+		UnitUpgradeMultiplier="0.0"
+		UnitBuilderSimpleUnitCap="40">
+    <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+  </AIStrategicStateDefinition>
+  
+  <!-- 
+  ReactiveDefense States are used to make sure the AI is always doing something with its units.  A reactive defense team will sit around the AI player's
+  Construction Yard or another defined base area and will attempt to attack anything within their reactive defense radius (which is defined in the AI 
+  personality file).  Nearly every AI personality should have a reactive defense tactic running that always recruits and always releases (so units 
+  join the reactive defense team and then are recruited off the defense team to run other tactics).  This will ensure that none of your units are 
+  sitting on the default team doing nothing.
+  
+  ReactiveDefense teams often exclude aircraft since it is not always optimal to have them hovering around the center of the base (if you want to 
+  keep them at their pad for example).
+  
+  The ReactiveDefense team below always releases to other teams and always recruits units that are on the default team (it won't recruit from other
+  teams running tactics unless they also set always release to true).  
+  -->
+  
+   <AIStrategicStateDefinition
+		id="AlienReactiveDefend"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <Tactic Tactic="ReactiveDefense" TargetType="Targetless">
+		<TeamTemplate MinUnits="1" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="" AlwaysRelease="true" AlwaysRecruit="true"/>
+	</Tactic>
+  </AIStrategicStateDefinition>
+  
+  <!--
+  Ground Assault States are used to send groups of units at the enemy forces.  These are standard attack teams.  The states below indicate varying ways
+  of writing ground assault states.
+  
+  The assault states below are examples of slowly escalating attacks on the player, that all run on the same TargetType (though note the targetting heuristic
+  changes).  In the states below, an AI starts by sending out a small group in the first three minutes, then only sends a larger ground using a smarter attack against
+  a less-defended target.  The same sorts of techniques can be used to design states for easier and harder difficulties.
+  -->
+  
+   <AIStrategicStateDefinition
+		id="AlienDirectAttack1"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <TimerHeuristic StartTime="0s" EndTime="180s"/>
+      <PathToTargetHeuristic PathExists="true"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="ClosestStructureHeuristic" TargetType="FocusedTarget"/>
+    <Tactic Tactic="SimpleAttack" TargetType="FocusedTarget">
+		<TeamTemplate MinUnits="6" MaxUnits ="8" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="ASSAULT_AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+	</Tactic>
+  </AIStrategicStateDefinition>
+  
+   <AIStrategicStateDefinition
+    id="AlienDirectAttack2"
+    UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <TimerHeuristic StartTime="181s" EndTime="-1s"/>
+      <PathToTargetHeuristic PathExists="true"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToGroundStructureHeuristic" TargetType="FocusedTarget"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="FocusedTarget">
+      <TeamTemplate MinUnits="10" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="ASSAULT_AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false"/>
+    </Tactic>
+  </AIStrategicStateDefinition>
+   
+  <!--
+  Air Assault States are used to get the AI using air units for tactical assaults on particular targets.  In the states below, particular aircraft
+  are selected and used for strikes on certain targets.  In the first state, Alien Stormriders are created to harass enemy units.  In the second state,
+  other Alien aircraft are selected (PACs or Destroyers depending on what the AI finds suitable to build) to run at the enemy's base.
+  
+  Alien aircraft are somewhat of a poor example for this, since they lack the "bomber" aircraft that NOD or GDI have.  
+  Here is an example of a bomber aircraft state that would match up to a BombingAirstrike TacticalAITarget defined in the personality:
+  
+	<AIStrategicStateDefinition
+		id="NODBombingRuns"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <IntervalHeuristic IntervalTime="320s" ActiveTime="15s"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToAirStructureHeuristic" TargetType="BombingAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="BombingAirstrike">
+      <TeamTemplate MinUnits="2" MaxUnits="2" IncludeKindOf="CAN_ATTACK AIRCRAFT BOMBER_AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="NODVertigo"/>
+        <CreateUnits UnitName="NODVertigo"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+    -->
+  
+     <AIStrategicStateDefinition
+		id="AlienStormriderHarassment"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <IntervalHeuristic IntervalTime="120s" ActiveTime="30s"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="SafestToAirUnitHeuristic" TargetType="AssaultAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="AssaultAirstrike">
+		<TeamTemplate MinUnits="2" MaxUnits ="2" IncludeKindOf="CAN_ATTACK ASSAULT_AIRCRAFT" ExcludeKindOf="" AlwaysRelease="false" AlwaysRecruit="false">
+			<CreateUnits UnitName="AlienStormrider"/>
+			<CreateUnits UnitName="AlienStormrider"/>
+		</TeamTemplate>
+	</Tactic>
+  </AIStrategicStateDefinition>
+  
+   <AIStrategicStateDefinition
+		id="AlienAirArmada"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <IntervalHeuristic IntervalTime="200s" ActiveTime="30s"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="PowerKillHeuristic" TargetType="BombingAirstrike"/>
+    <Tactic Tactic="SimpleAttack" TargetType="BombingAirstrike">
+		<TeamTemplate MinUnits="4" MaxUnits ="4" IncludeKindOf="CAN_ATTACK AIRCRAFT" ExcludeKindOf="ASSAULT_AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+		</TeamTemplate>
+	</Tactic>
+  </AIStrategicStateDefinition>
+  
+  <!--
+  Special Operations States are used to accomplish specific non-attacking related actions in the game world.  These can be capturing enemy buidlings, tech structures,
+  and husks.  Special states can also be used to repair bridges, build expansions, garrison buildings and clear buildings.  These can be found in the default AIStates.xml file.
+  
+  AI modifier states are states like the "unit cap states" that don't actually run tactics but instead modify the AI in some way.  These can be found in SP campaign mission AI files.
+
+  Unique budget states are used to get the AI to slowly change the focus of its economy.  These were not used much in SP, but the Skirmish files contain them.
+  
+  -->
+
+</AssetDeclaration>

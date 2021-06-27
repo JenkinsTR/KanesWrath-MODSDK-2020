@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="TargetKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="MetaGameOPtoUse"
+			AssetType="MetagameOperationsEnums"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UpgradeToWatchFor"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RadiusOfDropZone"
+			AssetType="SageReal"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ObjectFilter"
+			AssetType="ObjectFilter"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="TargetSelf"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="SpecialMove"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

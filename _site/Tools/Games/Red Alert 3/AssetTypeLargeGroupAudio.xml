@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DuckInfo">
+		<EntryReference
+			id="AudioMap"
+			AssetType="AudioMapTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryPoid
+			id="SoundRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="VolumeMultiplier"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="SoundKeyPair">
+		<EntryPoid
+			id="Name"
+			IsAttribute="true" />
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Key"
+			AssetType="StringHash"
+			MinLength="1"
+			MaxLength="0" />
+		<EntryList
+			id="Duck"
+			AssetType="DuckInfo"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="LargeGroupAudioMap">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryRelocation
+			id="RequiredModelConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExcludedModelConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="RequiredObjectStatusBits"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExcludedObjectStatusBits"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Size"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="HandOffModeTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="MaximumAudioSpeed"
+			AssetType="Velocity"
+			IsAttribute="true"
+			Default="100" />
+		<EntryList
+			id="Sound"
+			AssetType="SoundKeyPair"
+			MinLength="1"
+			MaxLength="0" />
+		<Entry
+			id="StartThreshold"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StopThreshold"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="IgnoreStealthedUnits"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

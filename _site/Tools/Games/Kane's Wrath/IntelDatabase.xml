@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="IntelDBEntry">
+		<Entry
+			id="CategoryId"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="EntryId"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TextureId"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="IntelDB"
+		TypeHash="4223029136">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="IntelDBEntry"
+			AssetType="IntelDBEntry"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

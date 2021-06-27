@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TerrainTextureTile">
+		<Entry
+			id="IndexX"
+			AssetType="Byte"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="IndexY"
+			AssetType="Byte"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="TerrainTextureTile">
+		<Entry
+			id="TextureID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryFile
+			id="BaseTexture"
+			AssetType="DDS"
+			IsRequired="true" />
+		<EntryFile
+			id="NormalTexture"
+			AssetType="DDS"
+			IsRequired="true" />
+		<EntryList
+			id="Cell"
+			AssetType="TerrainTextureCell"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="TerrainTextureTileRuntime">
+		<Entry
+			id="TextureID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UpperLeftX"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UpperLeftY"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="BottomRightX"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="BottomRightY"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="TerrainTextureAtlas"
+		TypeHash="2065336836"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="File"
+			AssetType="TerrainTextureTile"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="AtlasSize"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			Default="2048" />
+		<Entry
+			id="AllowLossyCompression"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Runtime>
+			<EntryList
+				id="Tile"
+				AssetType="TerrainTextureTileRuntime"
+				MinLength="0"
+				MaxLength="0" />
+			<EntryFile
+				id="BaseTextureAtlas"
+				AssetType="DDS" />
+			<EntryFile
+				id="NormalTextureAtlas"
+				AssetType="DDS" />
+		</Runtime>
+	</GameAsset>
+
+</AssetDefinition>

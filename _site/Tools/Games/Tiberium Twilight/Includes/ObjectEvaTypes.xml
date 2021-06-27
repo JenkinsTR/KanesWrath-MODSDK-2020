@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ThingTemplateEvaEventType">
+		<Entry>dieOwner</Entry>
+		<Entry>dieAlly</Entry>
+		<Entry>dieEnemy</Entry>
+		<Entry>soldOwner</Entry>
+		<Entry>damagedOwner</Entry>
+		<Entry>damagedFromShroudedSourceOwner</Entry>
+		<Entry>damagedByFireOwner</Entry>
+		<Entry>secondDamageFarFromFirstOwner</Entry>
+		<Entry>secondDamageFarFromFirstScanRange</Entry>
+		<Entry>secondDamageFarFromFirstTimeoutMS</Entry>
+		<Entry>damagedAlly</Entry>
+		<Entry>ambushed</Entry>
+		<Entry>repairingOwner</Entry>
+		<Entry>enemyObjectSighted</Entry>
+		<Entry>enemyObjectSightedAfterRespawn</Entry>
+		<Entry>onFirstSightingEnemy</Entry>
+		<Entry>onFirstSightingNonEnemy</Entry>
+		<Entry>detectedEnemy</Entry>
+		<Entry>detectedAlly</Entry>
+		<Entry>detectedOwner</Entry>
+		<Entry>availableForProduction</Entry>
+		<Entry>productionStarted</Entry>
+		<Entry>productionComplete</Entry>
+		<Entry>placementFailed</Entry>
+		<Entry>cannotBuildDueToFullBuildQueue</Entry>
+		<Entry>buildOnHold</Entry>
+		<Entry>buildCancelled</Entry>
+		<Entry>promotedOwner</Entry>
+		<Entry>manuallyPoweredOff</Entry>
+		<Entry>manuallyPoweredOn</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

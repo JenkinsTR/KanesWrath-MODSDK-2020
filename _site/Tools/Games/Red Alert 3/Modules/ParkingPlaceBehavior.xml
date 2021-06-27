@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ParkingPlaceBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="NumRows"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="NumCols"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="ApproachHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DoorOpenTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DoorCloseTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="QueueDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="LimitedProductionAircraftSpots"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HelipadBoneName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="HeliPark01" />
+		<EntryRelocation
+			id="CanParkHereFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="DefaultRallyPointOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="ParkInHangars"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="LowersOntoParkingPlaceOnProduction"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanSetRallyPoint"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="DoorsUnpackOpen"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+	</Asset>
+
+</AssetDefinition>

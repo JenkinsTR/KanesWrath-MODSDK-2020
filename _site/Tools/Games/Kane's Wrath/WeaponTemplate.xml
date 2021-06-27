@@ -1,0 +1,1617 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RangeReal">
+		<Entry
+			id="Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="RangeDuration">
+		<Entry
+			id="MinSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<Asset
+		id="LinearTargetType">
+		<Entry
+			id="Time"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Position"
+			AssetType="Coord2D" />
+	</Asset>
+
+	<EnumAsset
+		id="PartitionManagerDistTestType">
+		<Entry>SPHERE</Entry>
+		<Entry>EXTENTS_3D</Entry>
+		<Entry>CIRCLE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WeaponFlagsType">
+		<Entry>NONE</Entry>
+		<Entry>EMPTY_CLIP_ON_ACTIVATE</Entry>
+		<Entry>ORTHOGONAL_SCATTER</Entry>
+		<Entry>LENGTH_SCATTER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="WeaponFlagsBitFlags"
+		BaseEnum="WeaponFlagsType" />
+
+	<EnumAsset
+		id="WeaponReloadType">
+		<Entry>AUTO</Entry>
+		<Entry>NONE</Entry>
+		<Entry>RETURN_TO_BASE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WeaponPrefireType">
+		<Entry>PER_SHOT</Entry>
+		<Entry>PER_CLIP</Entry>
+		<Entry>PER_BURST</Entry>
+		<Entry>PER_TARGET</Entry>
+		<Entry>PER_POSITION</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WeaponReAcquireDetailType">
+		<Entry>PRE_SHOT</Entry>
+		<Entry>PER_SHOT</Entry>
+		<Entry>PER_CLIP</Entry>
+		<Entry>PER_ATTACK</Entry>
+		<Entry>PRE_FIRE</Entry>
+		<Entry>POST_FIRE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WeaponCollideType">
+		<Entry>ALLIES</Entry>
+		<Entry>ENEMIES</Entry>
+		<Entry>NEUTRAL</Entry>
+		<Entry>STRUCTURES</Entry>
+		<Entry>SHRUBBERY</Entry>
+		<Entry>PROJECTILES</Entry>
+		<Entry>WALLS</Entry>
+		<Entry>SMALL_MISSILES</Entry>
+		<Entry>BALLISTIC_MISSILES</Entry>
+		<Entry>CONTROLLED_STRUCTURES</Entry>
+		<Entry>MONSTERS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="WeaponCollideBitFlags"
+		BaseEnum="WeaponCollideType" />
+
+	<EnumAsset
+		id="WeaponAffectsType">
+		<Entry>SELF</Entry>
+		<Entry>ALLIES</Entry>
+		<Entry>ENEMIES</Entry>
+		<Entry>NEUTRALS</Entry>
+		<Entry>SUICIDE</Entry>
+		<Entry>NOT_SIMILAR</Entry>
+		<Entry>NOT_AIRBORNE</Entry>
+		<Entry>PROJECTILES</Entry>
+		<Entry>SAME_HEIGHT_ONLY</Entry>
+		<Entry>MINES</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="WeaponAffectsBitFlags"
+		BaseEnum="WeaponAffectsType" />
+
+	<EnumAsset
+		id="WpnAntiT">
+		<Entry>ANTI_AIRBORNE_VEHICLE</Entry>
+		<Entry>ANTI_GROUND</Entry>
+		<Entry>ANTI_PROJECTILE</Entry>
+		<Entry>ANTI_SMALL_MISSILE</Entry>
+		<Entry>ANTI_MINE</Entry>
+		<Entry>ANTI_AIRBORNE_INFANTRY</Entry>
+		<Entry>ANTI_BALLISTIC_MISSILE</Entry>
+		<Entry>ANTI_PARACHUTE</Entry>
+		<Entry>ANTI_STRUCTURE</Entry>
+		<Entry>ANTI_AIRBORNE_MONSTER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="WeaponAntiBitFlags"
+		BaseEnum="WpnAntiT" />
+
+	<EnumAsset
+		id="FireEffectType">
+		<Entry>INCREASE_BURN_RATE</Entry>
+		<Entry>DECREASE_BURN_RATE</Entry>
+		<Entry>INCREASE_FUEL</Entry>
+		<Entry>INCREASE_BURN_RATE_ON_EXISTING_FIRE</Entry>
+		<Entry>INCREASE_FUEL_ON_EXISTING_FIRE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ParalyzeEffectType">
+		<Entry>EMP</Entry>
+		<Entry>USER_PARALYZE</Entry>
+		<Entry>NONE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="InfoWarEffect">
+		<Entry>NONE</Entry>
+		<Entry>RADAR_JAM</Entry>
+		<Entry>RESET_RADAR_JAM</Entry>
+		<Entry>RESET_RADAR_SPIES</Entry>
+		<Entry>RESET_RADAR_HACKS</Entry>
+		<Entry>RESET_RADAR_FREEZE</Entry>
+		<Entry>RESET_RADAR_ALL</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="InfoWarEffectBitFlags"
+		BaseEnum="InfoWarEffect" />
+
+	<Asset
+		id="WeaponEffectNugget">
+		<Entry
+			id="PartitionFilterTestType"
+			AssetType="PartitionManagerDistTestType"
+			IsAttribute="true"
+			Default="EXTENTS_3D" />
+		<Entry
+			id="ForbiddenTargetObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenTargetModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SpecialObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ForbiddenUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ScalarInfo">
+		<Entry
+			id="Scalar"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ParalyzeNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EffectArc"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="DurationSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ParalyzeType"
+			AssetType="ParalyzeEffectType"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="RemoveParalyzeType"
+			AssetType="ParalyzeEffectType"
+			IsAttribute="true"
+			Default="NONE" />
+		<EntryReference
+			id="ParalyzeFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="InformationWarfareNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="InfoWarType"
+			AssetType="InfoWarEffectBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="RadarJamRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RadarJamDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<Asset
+		id="SpendStolenTiberiumNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="AmountToSpend"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<Asset
+		id="ReportWeaponFiredStatNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+	</Asset>
+
+	<Asset
+		id="DamageNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Damage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DamageTaperOff"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1.0" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DamageArc"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="DamageMaxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="DamageMaxHeightAboveTerrain"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="FlankingBonus"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FlankedScalar"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="DelayTimeSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DamageType"
+			AssetType="DamageType"
+			IsAttribute="true"
+			Default="UNDEFINED" />
+		<Entry
+			id="DeathType"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<Entry
+			id="DamageFXType"
+			AssetType="DamageFXType"
+			IsAttribute="true"
+			Default="UNDEFINED" />
+		<Entry
+			id="DamageSubType"
+			AssetType="DamageSubType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<Entry
+			id="DrainLifeMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="DamageSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="UnderAttackOverrideEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="VictimShroudRevealer"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="DamageScalarDetails"
+			AssetType="ScalarInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="DamageArcInverted"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AcceptDamageAdd"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="OnlyKillOwnerWhenTriggered"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DrainLife"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CylinderAOE"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="MetaGameOperationNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="OperationToFire"
+			AssetType="MetagameOperationsEnums"
+			IsAttribute="true"
+			Default="INVALID" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DOTNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="DamageInterval"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DamageDuration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DamageDecay"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AppliedStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="UseMetaGameTurns"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="DamageAndSpawnNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="SpawnProbability"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SpawnedModelConditionFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpawnTemplate"
+			AssetType="GameObjectWeakRef"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FireLogicNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="FireEffect"
+			AssetType="FireEffectType"
+			IsAttribute="true" />
+		<Entry
+			id="MinMaxBurnRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinDecay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxResistance"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FireOnObjectsNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<EntryReference
+			id="Weapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="TintObjectsNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="PreColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="PostColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="SustainedColorTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Frequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Amplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Color"
+			AssetType="RGBColor" />
+	</Asset>
+
+	<Asset
+		id="TintObjectsNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<EntryReference
+			id="WeaponTemplate"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="DurationSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<Asset
+		id="VeteranProjectile">
+		<Entry
+			id="VeterancyLevel"
+			AssetType="VeterancyLevel"
+			IsAttribute="true" />
+		<EntryReference
+			id="ProjectileTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ProjectileNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<EntryReference
+			id="WarheadTemplate"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="ProjectileTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponLaunchBoneSlotOverride"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="NO_WEAPON" />
+		<EntryRelocation
+			id="AttackOffset"
+			AssetType="Coord3D" />
+		<EntryList
+			id="VeterancyProjectiles"
+			AssetType="VeteranProjectile"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="SuppressionNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Suppression"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DurationSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<Asset
+		id="WeaponOCLNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<EntryReference
+			id="WeaponOCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ActivateLaserNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="LaserId"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="HitGroundFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ActivateStreamNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="StreamId"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="ActivateLinearDamageNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+	</Asset>
+
+	<Asset
+		id="SlavesAttackNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+	</Asset>
+
+	<Asset
+		id="MetaImpactNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="ShockWaveAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockWaveRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockWaveArc"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="ShockWaveTaperOff"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockWaveSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockWaveZMult"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="CyclonicFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockwaveDelaySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Suppression"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HeroResist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShockWaveClearWaveMult"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="ShockWaveClearFlingHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100" />
+		<EntryRelocation
+			id="KillObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="ShockWaveArcInverted"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="InvertShockWave"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FlipDirection"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnlyWhenJustDied"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShockWaveClearRadius"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="SpecialPowerNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="AttributeModifierNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<EntryReference
+			id="AttributeModifierName"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttributeModifierOwnerName"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="DamageFXType"
+			AssetType="DamageFXType"
+			IsAttribute="true" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DamageArc"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="AntiCategories"
+			AssetType="AttributeModifierCategoryBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="AntiFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DamageContainedNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="MaxUnitsToDamage"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<EntryReference
+			id="WindowBlastFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="DamageObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="LuaEventNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="EventName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SendToEnemies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SendToAllies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SendToNeutral"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="LineDamageNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageNuggetType" />
+		<Entry
+			id="OffsetAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="LineWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LineLengthLeadIn"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LineLengthLeadOut"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="SeedTiberiumNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponOCLNuggetType" />
+		<Entry
+			id="FieldAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SpawnedInFieldBonus"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="ScatterProjectileNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponOCLNuggetType" />
+		<Entry
+			id="ScatterMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScatterMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="ScatterRadiusType">
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="ContainedObjectAttackNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+	</Asset>
+
+	<Asset
+		id="CrushTiberiumNuggetType">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponEffectNugget" />
+		<Entry
+			id="DamageFXType"
+			AssetType="DamageFXType"
+			IsAttribute="true" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="DamageArc"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="ProductionModifer"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+	</Asset>
+
+	<Asset
+		id="WeaponTemplateNuggets">
+		<EntryChoice
+			id="WeaponTemplateNuggets"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="DamageNugget"
+				AssetType="DamageNuggetType" />
+			<Entry
+				id="DamageAndSpawnNugget"
+				AssetType="DamageAndSpawnNuggetType" />
+			<Entry
+				id="DamageFieldNugget"
+				AssetType="DamageFieldNuggetType" />
+			<Entry
+				id="ProjectileNugget"
+				AssetType="ProjectileNuggetType" />
+			<Entry
+				id="SuppressionNugget"
+				AssetType="SuppressionNuggetType" />
+			<Entry
+				id="WeaponOCLNugget"
+				AssetType="WeaponOCLNuggetType" />
+			<Entry
+				id="ActivateLaserNugget"
+				AssetType="ActivateLaserNuggetType" />
+			<Entry
+				id="ActivateStreamNugget"
+				AssetType="ActivateStreamNuggetType" />
+			<Entry
+				id="ActivateLinearDamageNugget"
+				AssetType="ActivateLinearDamageNuggetType" />
+			<Entry
+				id="SlavesAttackNugget"
+				AssetType="SlavesAttackNuggetType" />
+			<Entry
+				id="MetaImpactNugget"
+				AssetType="MetaImpactNuggetType" />
+			<Entry
+				id="SpecialPowerNugget"
+				AssetType="SpecialPowerNuggetType" />
+			<Entry
+				id="AttributeModifierNugget"
+				AssetType="AttributeModifierNuggetType" />
+			<Entry
+				id="DamageContainedNugget"
+				AssetType="DamageContainedNuggetType" />
+			<Entry
+				id="LuaEventNugget"
+				AssetType="LuaEventNuggetType" />
+			<Entry
+				id="LineDamageNugget"
+				AssetType="LineDamageNuggetType" />
+			<Entry
+				id="SeedTiberiumNugget"
+				AssetType="SeedTiberiumNuggetType" />
+			<Entry
+				id="FireLogicNugget"
+				AssetType="FireLogicNuggetType" />
+			<Entry
+				id="ParalyzeNugget"
+				AssetType="ParalyzeNuggetType" />
+			<Entry
+				id="InformationWarfareNugget"
+				AssetType="InformationWarfareNuggetType" />
+			<Entry
+				id="SpendStolenTiberiumNugget"
+				AssetType="SpendStolenTiberiumNuggetType" />
+			<Entry
+				id="ReportWeaponFiredStatNugget"
+				AssetType="ReportWeaponFiredStatNuggetType" />
+			<Entry
+				id="ScatterProjectileNugget"
+				AssetType="ScatterProjectileNuggetType" />
+			<Entry
+				id="FireOnObjectsNugget"
+				AssetType="FireOnObjectsNuggetType" />
+			<Entry
+				id="TintObjectsNugget"
+				AssetType="TintObjectsNuggetType" />
+			<Entry
+				id="ContainedObjectAttackNugget"
+				AssetType="ContainedObjectAttackNuggetType" />
+			<Entry
+				id="MetaGameOperationNugget"
+				AssetType="MetaGameOperationNuggetType" />
+			<Entry
+				id="DOTNugget"
+				AssetType="DOTNuggetType" />
+			<Entry
+				id="CrushTiberiumNugget"
+				AssetType="CrushTiberiumNuggetType" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="WeaponTemplate"
+		TypeHash="2427366260">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AttackRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinimumAttackRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RangeBonusMinHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RangeBonus"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RangeBonusPerFoot"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RequestAssistRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AcceptableAimDelta"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="AimDirection"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="ScatterRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScatterLength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScatterTargetScalar"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="WeaponSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="99999.0" />
+		<Entry
+			id="MinWeaponSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="99999.0" />
+		<Entry
+			id="MaxWeaponSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="99999.0" />
+		<Entry
+			id="IdleAfterFiringDelaySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="-1s" />
+		<Entry
+			id="HoldAfterFiringDelaySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="WeaponRecoil"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="MinTargetPitch"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="-180d" />
+		<Entry
+			id="MaxTargetPitch"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="180d" />
+		<Entry
+			id="PreferredTargetBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FireSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FireSoundPerClip"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FiringLoopSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FiringAndAimingLoopSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="FireFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FireVeteranFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FireFlankFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="PreAttackFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ClipSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ContinuousFireOne"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="99999" />
+		<Entry
+			id="ContinuousFireTwo"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="99999" />
+		<Entry
+			id="ContinuousFireCoastSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="AutoReloadWhenIdleSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ShotsPerBarrel"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RequiredFiringObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenFiringObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ContinueAttackRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SuspendFXDelaySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="HitPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="HitPassengerPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="HealthProportionalResolution"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxAttackPassengers"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RestrictedHeightRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Flags"
+			AssetType="WeaponFlagsBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="PreAttackType"
+			AssetType="WeaponPrefireType"
+			IsAttribute="true"
+			Default="PER_SHOT" />
+		<Entry
+			id="ReAcquireDetailType"
+			AssetType="WeaponReAcquireDetailType"
+			IsAttribute="true"
+			Default="PER_SHOT" />
+		<Entry
+			id="AutoReloadsClip"
+			AssetType="WeaponReloadType"
+			IsAttribute="true"
+			Default="AUTO" />
+		<EntryReference
+			id="SingleAmmoReloadedNotFullSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="ClipReloadedSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusDamageAffects"
+			AssetType="WeaponAffectsBitFlags"
+			IsAttribute="true"
+			Default="ALLIES ENEMIES NEUTRALS" />
+		<Entry
+			id="FXTrigger"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ProjectileCollidesWith"
+			AssetType="WeaponCollideBitFlags"
+			IsAttribute="true"
+			Default="STRUCTURES" />
+		<Entry
+			id="AntiMask"
+			AssetType="WeaponAntiBitFlags"
+			IsAttribute="true"
+			Default="ANTI_GROUND" />
+		<EntryReference
+			id="ProjectileStreamName"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="OverrideVoiceAttackSound"
+			AssetType="SoundOrEvaEvent" />
+		<EntryRelocation
+			id="OverrideVoiceEnterStateAttackSound"
+			AssetType="SoundOrEvaEvent" />
+		<EntryRelocation
+			id="PreAttackDelay"
+			AssetType="RangeDuration" />
+		<EntryRelocation
+			id="FiringDuration"
+			AssetType="RangeDuration" />
+		<EntryRelocation
+			id="CoolDownDelayBetweenShots"
+			AssetType="RangeDuration" />
+		<EntryRelocation
+			id="ClipReloadTime"
+			AssetType="RangeDuration" />
+		<EntryRelocation
+			id="ScatterTarget"
+			AssetType="Coord2D" />
+		<EntryRelocation
+			id="LinearTarget"
+			AssetType="LinearTargetType" />
+		<Entry
+			id="Nuggets"
+			AssetType="WeaponTemplateNuggets" />
+		<EntryRelocation
+			id="SurpriseAttackObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="CombinedAttackObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="HitStoredObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="ScatterRadiusVsType"
+			AssetType="ScatterRadiusType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ScatterIndependently"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DisableScatterForTargetsOnWall"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ScaleWeaponSpeed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanBeDodged"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HoldDuringReload"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanFireWhileMoving"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanFireWhileCharging"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FiringLoopSoundContinuesDuringReload"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="FiringLoopSoundPlaysOnlyForAttackPosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DamageDealtAtSelfPosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CheckStatusFlagsInRangeChecks"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ProjectileSelf"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="MeleeWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ChaseWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="LeechRangeWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HitStoredTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CapableOfFollowingWaypoints"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShowsAmmoPips"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowAttackGarrisonedBldgs"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="PlayFXWhenStealthed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreLinearFirstTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ForceDisplayPercentReady"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsAimingWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NoVictimNeeded"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RotatingTurret"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="PassengerProportionalAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FinishAttackOnceStarted"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CannotTargetCastleVictims"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequireFollowThru"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShareTimers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShouldPlayUnderAttackEvaEvent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="InstantLoadClipOnActivate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="LockWhenUsing"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BombardType"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseInnateAttributes"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StopFiringOnCanBeInvisible"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ContactWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

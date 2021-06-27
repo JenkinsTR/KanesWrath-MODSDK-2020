@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentOptionsSettingsGeneral">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="LoadVarQueryReturnToken"
+			AssetType="String" />
+		<Entry
+			id="MinTooltipDelayMS"
+			AssetType="SageInt" />
+		<Entry
+			id="MaxTooltipDelayMS"
+			AssetType="SageInt" />
+		<Entry
+			id="DefaultTooltipDelayMS"
+			AssetType="SageInt" />
+		<Entry
+			id="DefaultMouseSensitivity"
+			AssetType="SageReal" />
+		<EntryL
+			id="DefaultAlternateMouse"
+			AssetType="SageBool" />
+		<EntryL
+			id="DefaultShowNews"
+			AssetType="SageBool" />
+		<EntryL
+			id="DefaultShowAds"
+			AssetType="SageBool" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

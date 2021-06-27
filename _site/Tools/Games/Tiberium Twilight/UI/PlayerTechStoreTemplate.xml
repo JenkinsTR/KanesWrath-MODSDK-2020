@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PlayerTechStoreTemplateRow">
+		<EntryList
+			id="Button"
+			AssetType="PurchasePlayerTechButtonTemplateRef"
+			MinLength="3"
+			MaxLength="3" />
+	</Asset>
+
+	<GameAsset
+		id="PlayerTechStoreTemplate"
+		TypeHash="981786901">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Row"
+			AssetType="PlayerTechStoreTemplateRow"
+			MinLength="5"
+			MaxLength="5" />
+	</GameAsset>
+
+</AssetDefinition>

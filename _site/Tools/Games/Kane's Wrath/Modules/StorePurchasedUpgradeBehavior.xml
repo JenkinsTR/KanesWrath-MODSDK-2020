@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StorePurchasedUpgradeBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="MaxPlayerUpgrades"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="9999" />
+	</Asset>
+
+</AssetDefinition>

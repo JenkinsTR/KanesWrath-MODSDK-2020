@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="LightingSet">
+		<Entry>Sun</Entry>
+		<Entry>Accent1</Entry>
+		<Entry>Accent2</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="LightingInfo">
+		<Entry
+			id="Ambient"
+			AssetType="RGBColor" />
+		<Entry
+			id="Diffuse"
+			AssetType="RGBColor" />
+		<Entry
+			id="LightPos"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="LightingTime">
+		<Entry
+			id="TimeOfDay"
+			AssetType="TimeOfDayType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Lighting"
+			AssetType="LightingInfo"
+			MinLength="3"
+			MaxLength="3" />
+	</Asset>
+
+	<Asset
+		id="LightingGroup">
+		<EntryList
+			id="LightingTimeGroup"
+			AssetType="LightingTime"
+			MinLength="6"
+			MaxLength="6" />
+	</Asset>
+
+	<Asset
+		id="LightingSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSubsystemSettings" />
+		<Entry
+			id="TimeOfDay"
+			AssetType="TimeOfDayType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="OccludedLuminanceScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="LightingMultiplierIfNoClouds"
+			AssetType="RGBColor" />
+		<Entry
+			id="CurrentLightingSettings"
+			AssetType="LightingTime" />
+		<Entry
+			id="TerrainLighting"
+			AssetType="LightingGroup" />
+	</Asset>
+
+</AssetDefinition>

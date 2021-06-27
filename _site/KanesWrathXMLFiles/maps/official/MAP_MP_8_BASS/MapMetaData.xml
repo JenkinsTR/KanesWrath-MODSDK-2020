@@ -1,0 +1,29 @@
+<MapMetaData BorderSize="50" CRC="0" Description="Map:MAP_MP_8_BASS/Desc" DisplayName="MAP_MP_8_BASS" FileName="Data\maps\official\MAP_MP_8_BASS\MAP_MP_8_BASS.map" Height="750" IsMultiplayer="true" IsOfficial="true" NumPlayers="8" Width="750" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="1628.34" y="1589.42" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="1626.88" y="4901.83" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="4884.1" y="4899.74" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="4909.1" y="1623.69" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_5_Start">
+    <Position x="3250" y="5570" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_6_Start">
+    <Position x="3250" y="930" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_7_Start">
+    <Position x="980" y="3260" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_8_Start">
+    <Position x="5550" y="3260" z="0" />
+  </StartPosition>
+</MapMetaData>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="QueueProductionExitUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="PlacementViewAngle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="ExitDelaySeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="InitialBurst"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="UnitCreatePoint"
+			AssetType="Vector3" />
+		<Entry
+			id="NaturalRallyPoint"
+			AssetType="Vector3" />
+		<Entry
+			id="AllowAirborneCreation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NoExitPath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanRallyToSlaughter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ClearAlliesFromDestination"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+	</Asset>
+
+</AssetDefinition>

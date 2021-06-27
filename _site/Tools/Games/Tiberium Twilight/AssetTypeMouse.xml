@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="Mouse"
+		TypeHash="1246977355">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DragTolerance"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="48" />
+		<Entry
+			id="DragThreshold"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="100ms" />
+		<Entry
+			id="InGameUIMaxDoubleClickDistance"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="AptHitRegionMaxDoubleClickDistance"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="10" />
+	</GameAsset>
+
+</AssetDefinition>

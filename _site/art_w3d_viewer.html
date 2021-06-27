@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="art_pipeline,  ">
+<title>W3X Viewer Tutorial | Kane's Wrath MOD SDK</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="KanesWrath-MODSDK-2020" href="http://0.0.0.0:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Kane's Wrath MOD SDK</span></a> -->
+            <a class="navbar-brand" href="index.html"><img src="images/KWSDK_logo_32.png" alt="Kane's Wrath MOD SDK"></img><span class="projectTitle"> Kane's Wrath MOD SDK</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/JenkinsTR/KanesWrath-MODSDK-2020/" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="Home.html">Getting Started</a></li>
+                        
+                        
+                        
+                        <li><a href="Tools.html">Tools</a></li>
+                        
+                        
+                        
+                        <li><a href="Mapping.html">Mapping</a></li>
+                        
+                        
+                        
+                        <li><a href="CodeRef.html">Code Reference</a></li>
+                        
+                        
+                        
+                        <li><a href="MusicSounds.html">Music & Sounds</a></li>
+                        
+                        
+                        
+                        <li><a href="Scripting.html">Scripting</a></li>
+                        
+                        
+                        
+                        <li><a href="UpdatesPatches.html">Updates & Patches</a></li>
+                        
+                        
+                        
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        
+                        
+                        
+                        <li><a href="Bugs.html">Bugs</a></li>
+                        
+                        
+                        
+                        <li><a href="Credits.html">Credits</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">External<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://store.steampowered.com/app/24810/Command__Conquer_3_Kanes_Wrath/" target="_blank" rel="noopener">Kane's Wrath on Steam</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.moddb.com/games/cc-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on Mod DB</a></li>
+                        
+                        
+                        
+                        <li><a href="https://en.wikipedia.org/wiki/Command_%26_Conquer_3:_Kane%27s_Wrath" target="_blank" rel="noopener">Kane's Wrath on Wikipedia</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-3-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on EA.com</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="W3X Viewer Tutorial">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Kane's Wrath MOD SDK v0.2</li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="Home_Overview.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up the SDK" href="Home_Setting_up_the_SDK.html">Setting up the SDK</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating a Mod" href="Home_Creating_a_Mod.html">Creating a Mod</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Art Pipeline" href="Home_Art_Pipeline.html">Art Pipeline</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Tools" href="#">Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="WrathEd" href="Tools_WrathEd.html">WrathEd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="4GB Patch" href="Tools_4GB_Patch.html">4GB Patch</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="BIG Editors" href="Tools_BIG_Editors.html">BIG Editors</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Jonwil's Tools" href="Tools_Jonwil_Tools.html">Jonwil's Tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="VP6 Converter" href="Tools_VP6_Converter.html">VP6 Converter</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="EALayer3" href="Tools_EALayer3.html">EALayer3</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Mapping" href="#">Mapping</a>
+      <ul>
+          
+          
+          
+          <li><a title="WorldBuilder" href="Mapping_WorldBuilder.html">WorldBuilder</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Scripting" href="Mapping_Map_Scripting.html">Map Scripting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Reference" href="Mapping_Map_Reference.html">Map Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Code Reference" href="#">Code Reference</a>
+      <ul>
+          
+          
+          
+          <li><a title="Structures" href="CodeRef_Structures.html">Structures</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Units" href="CodeRef_Units.html">Units</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AptUI" href="CodeRef_AptUI.html">AptUI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Powers & Upgrades" href="CodeRef_Powers_Upgrades.html">Powers & Upgrades</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Gameplay" href="CodeRef_Gameplay.html">Gameplay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AI" href="CodeRef_AI.html">AI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Other" href="CodeRef_Other.html">Other</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Music & Sounds" href="#">Music & Sounds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Extracting Audio" href="MusicSounds_Extracting_Audio.html">Extracting Audio</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Converting Sounds" href="MusicSounds_Extracting_Audio.html">Converting Sounds</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripting" href="#">Scripting</a>
+      <ul>
+          
+          
+          
+          <li><a title="LUA" href="Scripting_LUA.html">LUA</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Updates & Patches" href="#">Updates & Patches</a>
+      <ul>
+          
+          
+          
+          <li><a title="Game Updates" href="UpdatesPatches_Game_Updates.html">Game Updates</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="KWBandage" href="UpdatesPatches_KWBandage.html">KWBandage</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other Info" href="#">Other Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="FAQs" href="FAQs.html">FAQs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Bugs" href="Bugs.html">Bugs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Credits" href="Credits.html">Credits</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">W3X Viewer Tutorial</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary"></div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <p>&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.0 Transitional//EN”&gt;</p>
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1" />
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" />
+	</head>
+	<body>
+		&lt;/FONT&gt;
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT>
+		<p><FONT face="Arial">=========<br />
+				<b><FONT size="3">Overview</FONT></b><br />
+				=========</FONT></p>
+		<p><b><FONT face="Arial">1. </FONT><a href="#lfw3d"><FONT face="Arial">Loading the files into 
+						W3X Viewer</FONT></a></b></p>
+		<p><b><FONT face="Arial">2. </FONT><a href="#cyva"><FONT face="Arial">Changing your viewing 
+						angle.</FONT></a><FONT face="Arial"> (Moving the camera around)</FONT></b></p>
+		<p><b><FONT face="Arial">3. </FONT><a href="#ctlp"><FONT face="Arial">Changing the lighting 
+						position</FONT></a></b></p>
+		<p><b><FONT face="Arial">4. </FONT><a href="#ctlv"><FONT face="Arial">Changing the lighting 
+						Values</FONT></a></b></p>
+		<p><b><FONT face="Arial">5. </FONT><a href="#atl"><FONT face="Arial">Animating the light</FONT></a></b></p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT>
+		<p><a name="lfw3d"></a><br />
+			<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+				<b><FONT size="3">Loading the files into W3X Viewer</FONT></b><br />
+				:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</FONT></p>
+		<br />
+		<p><FONT face="Arial"><b>Step 1.<br />
+				</b>=====<br />
+				<img height="52" src="images/w3d_di.jpg" width="57" />Open the W3XView 
+				program by double clicking the icon.</FONT></p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 2.<br />
+				</b>=====<br />
+				Go- File &gt; open &gt;, from the main toolbar. Select all your W3X Files, then 
+				click "open".</FONT></p>
+		<FONT face="Arial">
+			<hr />
+		</FONT>
+		<p><FONT face="Arial"><b>Step 3.<br />
+				</b>=====<br />
+				<img height="144" src="images/2a.gif" width="215" align="right" />You 
+				wont see anything just yet, Click the "+" (plus) sign next to "Hierarchy" in 
+				the W3X explorer panel to expand it. Click the plus sign next to eg "Fish_model" 
+				to expand that, Click on "Fish_Bones.Fish_SWIM". Now your animated model will 
+				show up in the viewport.</FONT></p>
+		<p><FONT face="Arial">Alternatively- ** (If you just want to view the model without any 
+				animation, just click on word "Fish_model", in the hierarchy tree.</FONT></p>
+		<br />
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="cyva"></a>
+		<br />
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+			<FONT size="3"><b>Changing your viewing angle. </b><FONT size="2">(Moving the camera 
+					around)</FONT></FONT><br />
+			::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		</FONT>
+		<p><FONT face="Arial">To change the camera angle is pretty simple. There is no icon to 
+				represent the camera because the camera is in first-person perspective. When 
+				you left click and drag around the viewport you will spin the camera around the 
+				geometry's center axis.</FONT></p>
+		<p><FONT face="Arial">Left and right spins the Camera along the "y" axis<br />
+				<br />
+				up and down spins the camera along the "x" axis</FONT></p>
+		<p><FONT face="Arial">left clicking and dragging the mouse in a clockwise 
+				(counterclockwise) circular pattern kind of spins it along the "z" axis.</FONT></p>
+		<p><FONT face="Arial"><img src="images/note.jpg" />For more accurate results, you can use 
+				the "Object &gt; Rotate X, Rotate Y, or Rotate Z"<br />
+				alternatively, you can use the constraints located on the "Object Controls" 
+				panel.<br />
+				<img height="72" src="images/ob_con.gif" width="188" align="center" /> </FONT>
+		</p>
+		<p><br />
+			<FONT face="Arial">*** Hold the left and right buttons Simultaneously as you drag, 
+				to pan the Camera around.</FONT></p>
+		<p><FONT face="Arial">*** Right click and drag up and down to zoom the camera in and 
+				out.</FONT></p>
+		<p><FONT face="Arial">*** IF you want more accuracy for positioning the camera 
+				distance, From the Main toolbar- Select "Camera &gt; Set Distance..." and type 
+				in a number, I.e.: "500" and click "OK". (Distance is measured in meters)</FONT></p>
+		<p><FONT face="Arial">*** You also have the standard viewports you can select from the 
+				main toolbar under "Camera", such as front, left, etc.</FONT></p>
+		<p><FONT face="Arial">-Here are the Keyboard shortcuts to change the viewport. </FONT>
+		</p>
+		<p><FONT face="Arial">Top = "CTRL"+"T"<br />
+				Front = "CTRL"+"F"<br />
+				Left = "CTRL"+"L"<br />
+				Right = "CTRL"+"R"<br />
+				Back = "CTRL"+"B"<br />
+				Bottom = "CTRL"+"M"</FONT></p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="ctlp"></a>
+		<br />
+		<FONT face="Arial">:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+			<b><FONT size="3">Changing the lighting position</FONT></b><br />
+			:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		</FONT>
+		<p><FONT face="Arial"><img height="99" src="images/2b.gif" width="95" align="right" />*** 
+				By Holding "CTRL" down on the keyboard, the lighting Icon will appear in the 
+				viewport</FONT></p>
+		<p><FONT face="Arial">*** Holding "CTRL" down while left Clicking and dragging your 
+				mouse will move the light around the viewport. The camera's target is facing 
+				toward the geometry in center of the scene. Therefore, When you move the camera 
+				around, it will track around the geometry.</FONT></p>
+		<p><FONT face="Arial">*** Holding "CTRL" down while right clicking and dragging will 
+				zoom the lighting toward or away from the geometry in the center of the scene.</FONT></p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="ctlv"></a>
+		<br />
+		<FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+			<FONT size="3"><b>Changing the lighting Values</b></FONT><br />
+			<img src="images/2c.jpg" align="right" />::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+		</FONT>
+		<p><br />
+			<FONT face="Arial">There are also some more accurate controls for adjusting the 
+				lighting as well.</FONT></p>
+		<p><FONT face="Arial">If you go to the main toolbar and select "Lighting &gt; Scene 
+				Light..." you have more controls at setting the color values, switch between 
+				ambient, specular or both. Setting the Attenuation and distance as well.</FONT></p>
+		<p><FONT face="Arial">*** Main toolbar "Lighting &gt; Ambient..." controls the rgb 
+				values of the light, as well as the grayscale.</FONT></p>
+		<p><FONT face="Arial"></FONT>&nbsp;</p>
+		<FONT face="Arial">
+			<hr noshade="" size="10" />
+		</FONT><a name="atl"></a>
+		<p><FONT face="Arial">::::::::::::::::::::::::::::::::::::::::::::::::::::::<br />
+				<b><FONT size="3">Animating the light</FONT></b><br />
+				::::::::::::::::::::::::::::::::::::::::::::::::::::::</FONT></p>
+		<p><br />
+			<FONT face="Arial">*** On the main toolbar select "Lighting &gt; Rotate Y" to 
+				animate the light spinning around the models y axis.<br />
+				Keyboard shortcut "CTRL"+"up arrow"</FONT></p>
+		<p><FONT face="Arial">*** On the main toolbar select "lighting &gt; Rotate z" to 
+				animate the light spinning around the models x axis.<br />
+				Keyboard shortcut "CTRL"+"Right arrow"</FONT></p>
+		<div align="center">
+			<p><FONT face="Arial"></FONT>&nbsp;</p>
+			<p><FONT face="Arial"></FONT>&nbsp;</p>
+		</div>
+	</body>
+</html>
+
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_art_pipeline.html" class="btn btn-default navbar-btn cursorNorm" role="button">art_pipeline</a>
+        
+        
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Kane's Wrath MOD SDK. All rights reserved. <br />
+<span>Page last updated:</span> June 16, 2021<br/> Site last generated: Jun 17, 2021 <br />
+<p><img src="images/KWSDK_logo_130.png" alt="Kane's Wrath MOD SDK"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UnitLocomotorType">
+		<Entry>LAND</Entry>
+		<Entry>WATER</Entry>
+		<Entry>AMPHIBIOUS</Entry>
+		<Entry>AIR</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TeamReleaseType">
+		<Entry>ALWAYS_RELEASE</Entry>
+		<Entry>RELEASE_TO_PRIORITY</Entry>
+		<Entry>NEVER_RELEASE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TeamPriority">
+		<Entry>DEFAULT</Entry>
+		<Entry>DEFENSE</Entry>
+		<Entry>LOW</Entry>
+		<Entry>STANDARD</Entry>
+		<Entry>DEFENSE_HIGH</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>COOP</Entry>
+		<Entry>SCRIPTED</Entry>
+		<Entry>HOTSPOT</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="UnitLocomotorTypeBitFlags"
+		BaseEnum="UnitLocomotorType" />
+
+	<Asset
+		id="CreateUnitInfo">
+		<Entry
+			id="MinUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryWeakReference
+			id="UnitName"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ExperienceLevel"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<EnumAsset
+		id="DistanceSortPoints">
+		<Entry>TARGET_POINT</Entry>
+		<Entry>HOME_BASE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AITeamTemplate">
+		<Entry
+			id="MinUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="MaxUnits"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="MinPowerAdvantage"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="MaxTypesOfUnits"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="IncludeKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludeKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true"
+			Default="HARVESTE" />
+		<Entry
+			id="Priority"
+			AssetType="TeamPriority"
+			IsAttribute="true"
+			Default="STANDARD" />
+		<Entry
+			id="ReleaseType"
+			AssetType="TeamReleaseType"
+			IsAttribute="true"
+			Default="RELEASE_TO_PRIORITY" />
+		<EntryReference
+			id="MicroManager"
+			AssetType="MicroManagerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AllowedLocomotorTypes"
+			AssetType="UnitLocomotorTypeBitFlags"
+			IsAttribute="true"
+			Default="LAN" />
+		<Entry
+			id="DistanceSortPoint"
+			AssetType="DistanceSortPoints"
+			IsAttribute="true"
+			Default="TARGET_POINT" />
+		<Entry
+			id="RegisteredObjectSet"
+			AssetType="RegisteredObjectSetId"
+			IsAttribute="true"
+			Default="UNITS" />
+		<EntryRelocation
+			id="BaseDefenseMaxDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryList
+			id="CreateUnits"
+			AssetType="CreateUnitInfo"
+			MinLength="0"
+			MaxLength="7" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="AlwaysRecruit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AllowRecruitUnitsInCombat"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequireCanAttackTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SortByDistance"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="IsBaseDefenseTeam"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

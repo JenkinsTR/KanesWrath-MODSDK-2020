@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EncloseBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="EnclosureHitFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryPoid
+			id="ScalableDrawModuleId"
+			IsAttribute="true" />
+		<Entry
+			id="ScaledBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EnclosureRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="300" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

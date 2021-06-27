@@ -1,0 +1,14 @@
+<MapMetaData BorderSize="60" CRC="0" Description="Map:EAMAP_SB03_3/Desc" DisplayName="EAMAP_SB03_3" FileName="Data\maps\official\EAMAP_SB03_3\EAMAP_SB03_3.map" Height="420" IsMultiplayer="true" IsOfficial="true" NumPlayers="3" Width="720" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="3261.6" y="2447.78" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="1888.02" y="766.081" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="5260.66" y="1395.83" z="0" />
+  </StartPosition>
+</MapMetaData>

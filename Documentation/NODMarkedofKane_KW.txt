@@ -1,0 +1,99 @@
+Marked of Kane
+	Units
+		Infantry
+		
+			Awakened
+			Militant rocket squad
+			Fanatics
+			Shadow Team
+			Saboteur
+			Tiberium trooper
+			Enlightened
+			Commando
+		
+		Vehicles
+		
+			Attack bike
+			Raider buggy
+			Reckoner
+			Scorpion tank
+			MCV
+			Emissary
+			Harvester
+			Specter
+			Beam cannon
+			Stealth tank
+			Avatar
+			Redeemer
+			
+		Aircraft
+		
+			Venom
+			Vertigo
+			Carryall
+			Armageddon
+			
+		Vessels
+		
+			Battleship
+			Hovercraft
+	
+	Structures
+		Production
+		
+			Construction yard
+			Hand of Nod
+			War factory
+			Air tower
+			Crane
+			Redeemer Engineering Facility (KW only)
+			
+		Support
+		
+			Power Plant
+			Tiberium Refinery
+			Operations center
+			Secret shrine
+			Tech lab
+			Tiberium chemical plant
+			Air support tower (KW only)
+			Temple of Nod
+			Outpost
+		
+		Defenses
+		
+			Shredder turret
+			Laser turret
+			SAM turret
+			Obelisk of Light
+			Disruption tower
+			Voice of Kane (KW only)
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Radar Jamming Missile
+			Decoy Army
+			Cloaking Field
+			Shadow Strike Team
+			Magnetic Mine Drop
+			Tiberium Vapor Bomb
+			Seed Tiberium
+			Catalyst Missile
+			Master Computer Countermeasures
+			Nuclear Missile Strike
+			Laser Fencing
+			Tiberium Vein Detonation
+			
+		Upgrades
+		
+			Tiberium Infusion
+			EMP Coils
+			Dozer Blades
+			Signature Generator
+			Liquid Tiberium Core
+			Quad Turrets
+			Disruption Pods
+			Tiberium Core Missiles
+			Cybernetic Legs
+			Supercharged Particle Beams

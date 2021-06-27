@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UpgradeDieModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<EntryReference
+			id="UpgradeId"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

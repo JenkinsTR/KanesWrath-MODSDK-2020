@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MatchRule">
+		<Entry
+			id="MeshID"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Instances"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="MeshInstanceTemplate">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryList
+			id="Rule"
+			AssetType="MatchRule"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

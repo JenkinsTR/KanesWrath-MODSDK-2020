@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUICommandButtonFactionSettings">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="LockedImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<Entry
+			id="ImageTintColor"
+			AssetType="Color3" />
+	</Asset>
+
+	<Asset
+		id="InGameUICommandButtonSettings">
+		<EntryList
+			id="FactionSettings"
+			AssetType="InGameUICommandButtonFactionSettings"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

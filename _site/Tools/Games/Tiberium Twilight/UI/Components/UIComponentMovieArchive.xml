@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ArchivableMovie">
+		<Entry
+			id="ProgressLock"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="MovieImage"
+			AssetType="OnDemandImageRef"
+			IsAttribute="true" />
+		<Entry
+			id="FileName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="OnScreenName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="ArchiveMovieList">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			Default="Soviet" />
+		<EntryList
+			id="Movie"
+			AssetType="ArchivableMovie"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="UIComponentMovieArchive">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="MissionSpec"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="FactionMovieArchive"
+			AssetType="ArchiveMovieList"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

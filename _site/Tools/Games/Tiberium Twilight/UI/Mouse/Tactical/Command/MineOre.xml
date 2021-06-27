@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalCommandMineOre"
+		TypeHash="3017648610">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="Cursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

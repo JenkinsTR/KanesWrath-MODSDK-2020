@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:KC_BAMAP_DC07_4/Desc" DisplayName="KC_BAMAP_DC07_4" FileName="Data\maps\official\KC_BAMAP_DC07_4\KC_BAMAP_DC07_4.map" Height="460" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="660" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="725" y="3250" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="1964.27" y="670.393" z="-24" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="3924.7" y="709.576" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="5275" y="3250" z="0" />
+  </StartPosition>
+</MapMetaData>

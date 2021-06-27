@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FlingPassengerSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryRelocation
+			id="FlingPassengerVelocity"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="FlingPassengerLandingWarhead"
+			AssetType="WeaponTemplateRef" />
+	</Asset>
+
+</AssetDefinition>

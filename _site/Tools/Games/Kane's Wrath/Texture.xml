@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TextureType">
+		<Entry>StandardTexture</Entry>
+		<Entry>VolumeTexture</Entry>
+		<Entry>CubeTexture</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TextureOutputFormatType">
+		<Entry>DXT1</Entry>
+		<Entry>DXT1A</Entry>
+		<Entry>DXT3</Entry>
+		<Entry>DXT5</Entry>
+		<Entry>A8R8G8B8</Entry>
+		<Entry>X8R8G8B8</Entry>
+		<Entry>R5G6B5</Entry>
+	</EnumAsset>
+
+	<GameAsset
+		id="Texture"
+		TypeHash="3004110043"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryFile
+			id="File"
+			AssetType="DDS"
+			IsAttribute="true" />
+		<Entry
+			id="Type"
+			AssetType="TextureType"
+			IsAttribute="true" />
+		<Entry
+			id="OutputFormat"
+			AssetType="TextureOutputFormatType"
+			IsAttribute="true"
+			Default="DXT1" />
+		<Entry
+			id="GenerateMipMaps"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AllowAutomaticResize"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Runtime>
+			<EntryFile
+				id="File"
+				AssetType="DDS" />
+		</Runtime>
+	</GameAsset>
+
+	<GameAsset
+		id="OnDemandTexture"
+		TypeHash="2649644764"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryFile
+			id="File"
+			AssetType="DDS"
+			IsAttribute="true" />
+		<Entry
+			id="Type"
+			AssetType="TextureType"
+			IsAttribute="true" />
+		<Entry
+			id="OutputFormat"
+			AssetType="TextureOutputFormatType"
+			IsAttribute="true"
+			Default="DXT1" />
+		<Entry
+			id="GenerateMipMaps"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AllowAutomaticResize"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Runtime>
+			<Entry
+				id="Type"
+				AssetType="TextureType"
+				IsAttribute="true"
+				Default="StandardTexture"/>
+			<CData>
+				<EntryFile
+					id="File"
+					AssetType="DDS" />
+			</CData>
+		</Runtime>
+	</GameAsset>
+
+</AssetDefinition>

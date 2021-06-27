@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="OCLMonitorOption">
+		<Entry>MASTER</Entry>
+		<Entry>KILL_WHEN_RELEASED</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="OCLMonitorOptionFlag"
+		BaseEnum="OCLMonitorOption" />
+
+	<Asset
+		id="OCLMonitorUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Options"
+			AssetType="OCLMonitorOptionFlag"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredMasterObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

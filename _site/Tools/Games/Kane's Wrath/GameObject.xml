@@ -1,0 +1,2085 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="BuildCompletionType">
+		<Entry>INVALID</Entry>
+		<Entry>APPEARS_AT_RALLY_POINT</Entry>
+		<Entry>PLACED_BY_PLAYER</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="BuildPlacementType">
+		<Entry>INVALID</Entry>
+		<Entry>MAIN_STRUCTURE</Entry>
+		<Entry>OTHER_STRUCTURE</Entry>
+		<Entry>TIBERIUM_FIELD</Entry>
+		<Entry>META_STRIKEFORCE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="BuildPlacementTypeBitFlags"
+		BaseEnum="BuildPlacementType" />
+
+	<EnumAsset
+		id="BuildableStatus">
+		<Entry>YES</Entry>
+		<Entry>IGNORE_PREREQUISITES</Entry>
+		<Entry>NO</Entry>
+		<Entry>ONLY_BY_AI</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ArmorTemplateSet">
+		<EntryReference
+			id="Armor"
+			AssetType="ArmorTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="DamageFX"
+			AssetType="DamageFX"
+			IsAttribute="true" />
+		<Entry
+			id="Conditions"
+			AssetType="ArmorSetBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="LocomotorSet">
+		<Entry
+			id="Speed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Condition"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Locomotor"
+			AssetType="LocomotorTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Flammability">
+		<Entry
+			id="Fuel"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxBurnRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Decay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Resistance"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<EnumAsset
+		id="SkirmishAIBaseLocation">
+		<Entry>FRONT</Entry>
+		<Entry>SIDE</Entry>
+		<Entry>BACK</Entry>
+		<Entry>SPREAD</Entry>
+		<Entry>CENTER</Entry>
+		<Entry>TIBERIUM</Entry>
+		<Entry>HOMEBASE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SkirmishAIInformation">
+		<Entry
+			id="BaseBuildingLocation"
+			AssetType="SkirmishAIBaseLocation"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="ConquerMetricsOverrideDPS"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ConquerMetricsOverrideDamageType"
+			AssetType="DamageType"
+			IsAttribute="true"
+			Default="UNDEFINED" />
+		<Entry
+			id="ConquerMetricsOverrideAntiMask"
+			AssetType="WeaponAntiBitFlags"
+			IsAttribute="true"
+			Default="ANTI_GROUND" />
+		<Entry
+			id="UnitBuilderStandardCombatUnit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="DrawModules">
+		<EntryChoice
+			id="DrawModules"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="FloorDraw"
+				AssetType="W3DFloorDrawModuleData" />
+			<Entry
+				id="ScriptedModelDraw"
+				AssetType="W3DScriptedModelDrawModuleData" />
+			<Entry
+				id="TankDraw"
+				AssetType="W3DTankDrawModuleData" />
+			<Entry
+				id="TruckDraw"
+				AssetType="W3DTruckDrawModuleData" />
+			<Entry
+				id="PropDraw"
+				AssetType="W3DPropDrawModuleData" />
+			<Entry
+				id="DebrisDraw"
+				AssetType="W3DDebrisDrawModuleData" />
+			<Entry
+				id="TreeDraw"
+				AssetType="W3DTreeDrawModuleData" />
+			<Entry
+				id="BuffDraw"
+				AssetType="W3DBuffDrawModuleData" />
+			<Entry
+				id="LaserDraw"
+				AssetType="W3DLaserDrawModuleData" />
+			<Entry
+				id="StreamDraw"
+				AssetType="W3DStreamDrawModuleData" />
+			<Entry
+				id="QuadrupedDraw"
+				AssetType="W3DQuadrupedDrawModuleData" />
+			<Entry
+				id="StreakDraw"
+				AssetType="W3DStreakDrawModuleData" />
+			<Entry
+				id="HordeModelDraw"
+				AssetType="W3DHordeModelDrawModuleData" />
+			<Entry
+				id="TracerModelDraw"
+				AssetType="W3DTracerDrawModuleData" />
+			<Entry
+				id="SpotlightDraw"
+				AssetType="W3DSpotlightDrawModuleData" />
+			<!--No original entries, names are from Generals and Battle for Middle Earth 2-->
+			<Entry
+				id="DefaultDraw"
+				AssetType="W3DDefaultDrawModuleData" />
+			<Entry
+				id="LightDraw"
+				AssetType="W3DLightDrawModuleData" />
+			<Entry
+				id="ProjectileStreamDraw"
+				AssetType="W3DProjectileStreamDrawModuleData" />
+			<Entry
+				id="SupplyDraw"
+				AssetType="W3DSupplyDrawModuleData" />
+			<Entry
+				id="BoatWakeModelDraw"
+				AssetType="W3DBoatWakeModelDrawModuleData" />
+			<Entry
+				id="RopeDraw"
+				AssetType="W3DRopeDrawModuleData" />
+			<Entry
+				id="TornadoDraw"
+				AssetType="W3DTornadoDrawModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="BehaviorModules">
+		<EntryChoice
+			id="BehaviorModules"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="AISpecialPowerUpdate"
+				AssetType="AISpecialPowerUpdateModuleData" />
+			<Entry
+				id="AttributeModifierUpgrade"
+				AssetType="AttributeModifierUpgradeModuleData" />
+			<Entry
+				id="AttackTargetSpecialPower"
+				AssetType="AttackTargetSpecialPowerModuleData" />
+			<Entry
+				id="ArmorUpgrade"
+				AssetType="ArmorUpgradeModuleData" />
+			<Entry
+				id="BeamTargetBehavior"
+				AssetType="BeamTargetModuleData" />
+			<Entry
+				id="SlavedUpdate"
+				AssetType="SlavedUpdateModuleData" />
+			<Entry
+				id="BezierProjectile"
+				AssetType="BezierProjectileBehaviorModuleData" />
+			<Entry
+				id="BuildingBehavior"
+				AssetType="BuildingBehaviorModuleData" />
+			<Entry
+				id="CastleUpgrade"
+				AssetType="CastleUpgradeModuleData" />
+			<Entry
+				id="ClusterBombUpdate"
+				AssetType="ClusterBombUpdateModuleData" />
+			<Entry
+				id="Collide"
+				AssetType="CollideModuleData" />
+			<Entry
+				id="CommandSetUpgrade"
+				AssetType="CommandSetUpgradeModuleData" />
+			<Entry
+				id="CreateObjectDie"
+				AssetType="CreateObjectDieModuleData" />
+			<Entry
+				id="CrushDie"
+				AssetType="CrushDieModuleData" />
+			<Entry
+				id="RebuildHoleExposeDie"
+				AssetType="RebuildHoleExposeDieModuleData" />
+			<Entry
+				id="RebuildHoleBehavior"
+				AssetType="RebuildHoleBehaviorModuleData" />
+			<Entry
+				id="DefaultProductionExit"
+				AssetType="DefaultProductionExitUpdateModuleData" />
+			<Entry
+				id="DestroyDie"
+				AssetType="DestroyDieModuleData" />
+			<Entry
+				id="DynamicShroudClearingRangeUpdate"
+				AssetType="DynamicShroudClearingRangeUpdateModuleData" />
+			<Entry
+				id="EmotionTrackerUpdate"
+				AssetType="EmotionTrackerUpdateModuleData" />
+			<Entry
+				id="EngineerContain"
+				AssetType="EngineerContainModuleData" />
+			<Entry
+				id="InfiltratorContain"
+				AssetType="InfiltratorContainModuleData" />
+			<Entry
+				id="InvalidTargetsDeathUpdate"
+				AssetType="InvalidTargetsDeathUpdateModuleData" />
+			<Entry
+				id="FireWeaponCollide"
+				AssetType="FireWeaponCollideModuleData" />
+			<Entry
+				id="FireWeaponUpdate"
+				AssetType="FireWeaponUpdateModuleData" />
+			<Entry
+				id="StructureToppleUpdate"
+				AssetType="StructureToppleUpdateModuleData" />
+			<Entry
+				id="ToppleUpdate"
+				AssetType="ToppleUpdateModuleData" />
+			<Entry
+				id="OilSpillUpdate"
+				AssetType="OilSpillUpdateModuleData" />
+			<Entry
+				id="DamageFieldUpdate"
+				AssetType="DamageFieldUpdateModuleData" />
+			<Entry
+				id="FlammableUpdate"
+				AssetType="FlammableUpdateModuleData" />
+			<Entry
+				id="AutoDepositUpdate"
+				AssetType="AutoDepositUpdateModuleData" />
+			<Entry
+				id="FXListBehavior"
+				AssetType="FXListBehaviorModuleData" />
+			<Entry
+				id="GeometryUpgrade"
+				AssetType="GeometryUpgradeModuleData" />
+			<Entry
+				id="GettingBuilt"
+				AssetType="GettingBuiltBehaviorModuleData" />
+			<Entry
+				id="GiveUpgradeUpdate"
+				AssetType="GiveUpgradeUpdateModuleData" />
+			<Entry
+				id="GrantUpgradeCreate"
+				AssetType="GrantUpgradeCreateModuleData" />
+			<Entry
+				id="HeightDieUpdate"
+				AssetType="HeightDieUpdateModuleData" />
+			<Entry
+				id="MissileUpdate"
+				AssetType="MissileUpdateModuleData" />
+			<Entry
+				id="JumpJetSpecialPower"
+				AssetType="JumpJetSpecialPowerModuleData" />
+			<Entry
+				id="LevelUpUpgrade"
+				AssetType="LevelUpUpgradeModuleData" />
+			<Entry
+				id="LifetimeUpdate"
+				AssetType="LifetimeUpdateModuleData" />
+			<Entry
+				id="MetaGameLifetimeUpdate"
+				AssetType="MetaGameLifetimeUpdateModuleData" />
+			<Entry
+				id="LocomotorSetUpgrade"
+				AssetType="LocomotorSetModuleData" />
+			<Entry
+				id="SwitchLocomotorsSpecialAbilityUpdate"
+				AssetType="SwitchLocomotorsSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="MaxHealthUpgrade"
+				AssetType="MaxHealthUpgradeModuleData" />
+			<Entry
+				id="MinefieldBehavior"
+				AssetType="MinefieldBehaviorModuleData" />
+			<Entry
+				id="ModelConditionSpecialAbilityUpdate"
+				AssetType="ModelConditionSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="ModelConditionUpgrade"
+				AssetType="ModelConditionUpgradeModuleData" />
+			<Entry
+				id="RandomModelCondition"
+				AssetType="RandomModelConditionBehaviorModuleData" />
+			<Entry
+				id="StrafeAreaUpdate"
+				AssetType="StrafeAreaUpdateModuleData" />
+			<Entry
+				id="OCLMonitorUpdate"
+				AssetType="OCLMonitorUpdateModuleData" />
+			<Entry
+				id="TeleportSpecialAbilityUpdate"
+				AssetType="TeleportSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="TeleportToCasterSpecialPower"
+				AssetType="TeleportToCasterSpecialPowerModuleData" />
+			<Entry
+				id="ObjectCreationUpgrade"
+				AssetType="ObjectCreationUpgradeModuleData" />
+			<Entry
+				id="OCLSpecialPower"
+				AssetType="OCLSpecialPowerModuleData" />
+			<Entry
+				id="SpawnHordeMemberSpecialPower"
+				AssetType="SpawnHordeMemberSpecialPowerModuleData" />
+			<Entry
+				id="TemporaryOwnerSpecialPower"
+				AssetType="TemporaryOwnerSpecialPowerModuleData" />
+			<Entry
+				id="DominateEnemySpecialPower"
+				AssetType="DominateEnemySpecialPowerModuleData" />
+			<Entry
+				id="TemporarilyDefectUpdate"
+				AssetType="TemporarilyDefectUpdateModuleData" />
+			<Entry
+				id="OCLUpdate"
+				AssetType="OCLUpdateModuleData" />
+			<Entry
+				id="OpenContain"
+				AssetType="OpenContainModuleData" />
+			<Entry
+				id="HealContain"
+				AssetType="HealContainModuleData" />
+			<Entry
+				id="Physics"
+				AssetType="PhysicsBehaviorModuleData" />
+			<Entry
+				id="CombinedInfoModule"
+				AssetType="CombinedInfoModuleData" />
+			<Entry
+				id="CompositeStructureInfoModule"
+				AssetType="CompositeStructureInfoModuleData" />
+			<Entry
+				id="PlayerUpgradeSpecialPower"
+				AssetType="PlayerUpgradeSpecialPowerModuleData" />
+			<Entry
+				id="ProductionUpdate"
+				AssetType="ProductionUpdateModuleData" />
+			<Entry
+				id="ProductionUpdateInfo"
+				AssetType="ProductionUpdateInfoModuleData" />
+			<Entry
+				id="QueueProductionExitUpdate"
+				AssetType="QueueProductionExitUpdateModuleData" />
+			<Entry
+				id="CombineSpecialPower"
+				AssetType="CombineSpecialPowerModuleData" />
+			<Entry
+				id="UncombineSpecialPower"
+				AssetType="UncombineSpecialPowerModuleData" />
+			<Entry
+				id="RadarHackSpecialPower"
+				AssetType="RadarHackSpecialPowerModuleData" />
+			<Entry
+				id="RadarJamSpecialPower"
+				AssetType="RadarJamSpecialPowerModuleData" />
+			<Entry
+				id="RadarSpySpecialPower"
+				AssetType="RadarSpySpecialPowerModuleData" />
+			<Entry
+				id="RadarFreezeSpecialPower"
+				AssetType="RadarFreezeSpecialPowerModuleData" />
+			<Entry
+				id="CaptureAndGiveCommandSetSpecialPower"
+				AssetType="CaptureAndGiveCommandSetSpecialPowerModuleData" />
+			<Entry
+				id="GiveOrRestoreUpgradeSpecialPower"
+				AssetType="GiveOrRestoreUpgradeSpecialPowerModuleData" />
+			<Entry
+				id="RefundDie"
+				AssetType="RefundDieModuleData" />
+			<Entry
+				id="RemoveUpgradeUpgrade"
+				AssetType="RemoveUpgradeUpgradeModuleData" />
+			<Entry
+				id="ReplaceSelfUpgrade"
+				AssetType="ReplaceSelfUpgradeModuleData" />
+			<Entry
+				id="SalvageCrateCollide"
+				AssetType="SalvageCrateCollideModuleData" />
+			<Entry
+				id="HealCrateCollide"
+				AssetType="HealCrateCollideModuleData" />
+			<Entry
+				id="MoneyCrateCollide"
+				AssetType="MoneyCrateCollideModuleData" />
+			<Entry
+				id="ShroudCrateCollide"
+				AssetType="ShroudCrateCollideModuleData" />
+			<Entry
+				id="UnitCrateCollide"
+				AssetType="UnitCrateCollideModuleData" />
+			<Entry
+				id="VeterancyCrateCollide"
+				AssetType="VeterancyCrateCollideModuleData" />
+			<Entry
+				id="SlowDeath"
+				AssetType="SlowDeathBehaviorModuleData" />
+			<Entry
+				id="SpawnBehavior"
+				AssetType="SpawnBehaviorModuleData" />
+			<Entry
+				id="SpecialAbilityUpdate"
+				AssetType="SpecialAbilityUpdateModuleData" />
+			<Entry
+				id="CurseSpecialPower"
+				AssetType="CurseSpecialPowerModuleData" />
+			<Entry
+				id="OCLMonitorSpecialAbilityUpdate"
+				AssetType="OCLMonitorSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="LargeGroupAudioUpdate"
+				AssetType="LargeGroupAudioUpdateModuleData" />
+			<Entry
+				id="SpecialPower"
+				AssetType="SpecialPowerModuleData" />
+			<Entry
+				id="AssignSlavesTargetObjectSpecialPower"
+				AssetType="AssignSlavesTargetObjectSpecialPowerModuleData" />
+			<Entry
+				id="HordeDispatchSpecialPower"
+				AssetType="HordeDispatchSpecialPowerModuleData" />
+			<Entry
+				id="SpecialPowerDispatchSpecialPower"
+				AssetType="SpecialPowerDispatchSpecialPowerModuleData" />
+			<Entry
+				id="SpecialPowerUpdate"
+				AssetType="SpecialPowerUpdateModuleData" />
+			<Entry
+				id="StealthDetectorUpdate"
+				AssetType="StealthDetectorUpdateModuleData" />
+			<Entry
+				id="StructureCollapseUpdate"
+				AssetType="StructureCollapseUpdateModuleData" />
+			<Entry
+				id="InitiateRepairDie"
+				AssetType="InitiateRepairDieModuleData" />
+			<Entry
+				id="AttributeModifierAuraUpdate"
+				AssetType="AttributeModifierAuraUpdateModuleData" />
+			<Entry
+				id="ShieldBodyUpdate"
+				AssetType="ShieldBodyUpdateModuleData" />
+			<Entry
+				id="SubObjectsUpgrade"
+				AssetType="SubObjectsUpgradeModuleData" />
+			<Entry
+				id="TerrainResource"
+				AssetType="TerrainResourceBehaviorModuleData" />
+			<Entry
+				id="TransportContain"
+				AssetType="TransportContainModuleData" />
+			<Entry
+				id="HordeTransportContain"
+				AssetType="HordeTransportContainModuleData" />
+			<Entry
+				id="HordeContain"
+				AssetType="HordeContainModuleData" />
+			<Entry
+				id="UnpauseSpecialPowerUpgrade"
+				AssetType="UnpauseSpecialPowerUpgradeModuleData" />
+			<Entry
+				id="Upgrade"
+				AssetType="UpgradeModuleData" />
+			<Entry
+				id="AudioLoopUpgrade"
+				AssetType="AudioLoopUpgradeModuleData" />
+			<Entry
+				id="WeaponSetUpdate"
+				AssetType="WeaponSetUpdateModuleData" />
+			<Entry
+				id="BeamSpecialAbilityUpdate"
+				AssetType="BeamSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="CaptureSpecialAbilityUpdate"
+				AssetType="CaptureSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="WeaponFireSpecialAbilityUpdate"
+				AssetType="WeaponFireSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="TiberiumThiefSpecialAbilityUpdate"
+				AssetType="TiberiumThiefSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="MetaSpecialAbilityUpdate"
+				AssetType="MetaSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="TiberiumField"
+				AssetType="TiberiumFieldBehaviorModuleData" />
+			<Entry
+				id="TiberiumCrystal"
+				AssetType="TiberiumCrystalBehaviorModuleData" />
+			<Entry
+				id="TiberiumGrowthModBehavior"
+				AssetType="TiberiumGrowthModBehaviorModuleData" />
+			<Entry
+				id="TiberiumFieldModBehavior"
+				AssetType="TiberiumFieldModBehaviorModuleData" />
+			<Entry
+				id="RadarBehavior"
+				AssetType="RadarBehaviorModuleData" />
+			<Entry
+				id="DockUpdate"
+				AssetType="DockUpdateModuleData" />
+			<Entry
+				id="RepairUpdate"
+				AssetType="RepairUpdateModuleData" />
+			<Entry
+				id="SupplyCenterDockUpdate"
+				AssetType="SupplyCenterDockUpdateModuleData" />
+			<Entry
+				id="SupplyWarehouseDockUpdate"
+				AssetType="SupplyWarehouseDockUpdateModuleData" />
+			<Entry
+				id="AimWeapon"
+				AssetType="AimWeaponBehaviorModuleData" />
+			<Entry
+				id="DistributedMoney"
+				AssetType="DistributedMoneyBehaviorModuleData" />
+			<Entry
+				id="AutoAbility"
+				AssetType="AutoAbilityBehaviorModuleData" />
+			<Entry
+				id="FireWeaponWhenDamaged"
+				AssetType="FireWeaponWhenDamagedBehaviorModuleData" />
+			<Entry
+				id="FireWeaponWhenDead"
+				AssetType="FireWeaponWhenDeadBehaviorModuleData" />
+			<Entry
+				id="GarrisonContain"
+				AssetType="GarrisonContainModuleData" />
+			<Entry
+				id="ExperienceLevelCreate"
+				AssetType="ExperienceLevelCreateModuleData" />
+			<Entry
+				id="InheritUpgradeCreate"
+				AssetType="InheritUpgradeCreateModuleData" />
+			<Entry
+				id="DeletionUpdate"
+				AssetType="DeletionUpdateModuleData" />
+			<Entry
+				id="EMPUpdate"
+				AssetType="EMPUpdateModuleData" />
+			<Entry
+				id="DelayedUpgrade"
+				AssetType="DelayedUpgradeModuleData" />
+			<Entry
+				id="ProductionSpeedBonusUpgrade"
+				AssetType="ProductionSpeedBonusUpgradeModuleData" />
+			<Entry
+				id="StatusBitsUpgrade"
+				AssetType="StatusBitsUpgradeModuleData" />
+			<Entry
+				id="RadarUpdate"
+				AssetType="RadarUpdateModuleData" />
+			<Entry
+				id="UpgradeDie"
+				AssetType="UpgradeDieModuleData" />
+			<Entry
+				id="KeepObjectDie"
+				AssetType="KeepObjectDieModuleData" />
+			<Entry
+				id="AutoHealBehavior"
+				AssetType="AutoHealBehaviorModuleData" />
+			<Entry
+				id="ParkingPlaceBehavior"
+				AssetType="ParkingPlaceBehaviorModuleData" />
+			<Entry
+				id="ExperienceScalarUpgrade"
+				AssetType="ExperienceScalarUpgradeModuleData" />
+			<Entry
+				id="LevelGrantSpecialPower"
+				AssetType="LevelGrantSpecialPowerModuleData" />
+			<Entry
+				id="CostModifierUpgrade"
+				AssetType="CostModifierUpgradeModuleData" />
+			<Entry
+				id="StealthUpgrade"
+				AssetType="StealthUpgradeModuleData" />
+			<Entry
+				id="SquishCollide"
+				AssetType="SquishCollideModuleData" />
+			<Entry
+				id="InactiveBody"
+				AssetType="InactiveBodyModuleData" />
+			<Entry
+				id="Damage"
+				AssetType="DamageModuleData" />
+			<Entry
+				id="Damager"
+				AssetType="DamagerModuleData" />
+			<Entry
+				id="Destroy"
+				AssetType="DestroyModuleData" />
+			<Entry
+				id="DamageStateList"
+				AssetType="DamageStateListModuleData" />
+			<Entry
+				id="LaserUpdate"
+				AssetType="LaserUpdateModuleData" />
+			<Entry
+				id="LaserState"
+				AssetType="LaserStateModuleData" />
+			<Entry
+				id="SweepingLaserState"
+				AssetType="SweepingLaserStateModuleData" />
+			<Entry
+				id="StreamState"
+				AssetType="StreamStateModuleData" />
+			<Entry
+				id="ActivateModuleSpecialPower"
+				AssetType="ActivateModuleSpecialPowerModuleData" />
+			<Entry
+				id="DualWeaponBehavior"
+				AssetType="DualWeaponBehaviorModuleData" />
+			<Entry
+				id="CaptureBehavior"
+				AssetType="CaptureBehaviorModuleData" />
+			<Entry
+				id="StorePurchasedUpgradeBehavior"
+				AssetType="StorePurchasedUpgradeBehaviorModuleData" />
+			<Entry
+				id="StoreObjectsSpecialPowerUpdate"
+				AssetType="StoreObjectsSpecialPowerModuleData" />
+			<Entry
+				id="CloneStoredObjectsSpecialPowerUpdate"
+				AssetType="CloneStoredObjectsSpecialPowerUpdateModuleData" />
+			<Entry
+				id="RecallUnitsSpecialPower"
+				AssetType="RecallUnitsSpecialPowerModuleData" />
+			<Entry
+				id="ReturnToProducerSpecialPower"
+				AssetType="ReturnToProducerSpecialPowerModuleData" />
+			<Entry
+				id="ReturnToDockSpecialPower"
+				AssetType="ReturnToDockSpecialPowerModuleData" />
+			<Entry
+				id="HordeGarrisonContain"
+				AssetType="HordeGarrisonContainModuleData" />
+			<Entry
+				id="TunnelContain"
+				AssetType="TunnelContainModuleData" />
+			<Entry
+				id="TunnelTeleportContain"
+				AssetType="TunnelTeleportContainModuleData" />
+			<Entry
+				id="SlaughterHordeContain"
+				AssetType="SlaughterHordeContainModuleData" />
+			<Entry
+				id="InvisibilityUpdate"
+				AssetType="InvisibilityUpdateModuleData" />
+			<Entry
+				id="PowerUpdate"
+				AssetType="PowerUpdateModuleData" />
+			<Entry
+				id="SupplyCenterCreate"
+				AssetType="SupplyCenterCreateModuleData" />
+			<Entry
+				id="GatherSlavesUpdate"
+				AssetType="GatherSlavesUpdateModuleData" />
+			<Entry
+				id="StancesBehavior"
+				AssetType="StancesBehaviorModuleData" />
+			<Entry
+				id="RubbleRiseUpdate"
+				AssetType="RubbleRiseUpdateModuleData" />
+			<Entry
+				id="FiringTracker"
+				AssetType="FiringTrackerModuleData" />
+			<Entry
+				id="SpecialPowerTimerRefreshSpecialPower"
+				AssetType="SpecialPowerTimerRefreshSpecialPowerModuleData" />
+			<Entry
+				id="ObjectDefectionHelper"
+				AssetType="ObjectDefectionHelperModuleData" />
+			<Entry
+				id="ClickReactionBehavior"
+				AssetType="ClickReactionBehaviorModuleData" />
+			<Entry
+				id="HitReactionBehavior"
+				AssetType="HitReactionBehaviorModuleData" />
+			<Entry
+				id="ReplaceObjectUpdate"
+				AssetType="ReplaceObjectUpdateModuleData" />
+			<Entry
+				id="HelicopterSlowDeath"
+				AssetType="HelicopterSlowDeathBehaviorModuleData" />
+			<Entry
+				id="ClearanceTestingSlowDeathBehavior"
+				AssetType="ClearanceTestingSlowDeathBehaviorModuleData" />
+			<Entry
+				id="AttachUpdate"
+				AssetType="AttachUpdateModuleData" />
+			<Entry
+				id="BoobyTrapUpdate"
+				AssetType="BoobyTrapUpdateModuleData" />
+			<Entry
+				id="StealUnitUpdate"
+				AssetType="StealUnitUpdateModuleData" />
+			<Entry
+				id="SpawnCrateUpdate"
+				AssetType="SpawnCrateUpdateModuleData" />
+			<Entry
+				id="BridgeBuilder"
+				AssetType="BridgeBuilderModuleData" />
+			<Entry
+				id="PassiveAreaEffectBehavior"
+				AssetType="PassiveAreaEffectBehaviorModuleData" />
+			<Entry
+				id="PowerUpgrade"
+				AssetType="PowerUpgradeModuleData" />
+			<Entry
+				id="CreateAndEnterObjectSpecialPower"
+				AssetType="CreateAndEnterObjectSpecialPowerModuleData" />
+			<Entry
+				id="MoveToPositionAndEvacuateSpecialPower"
+				AssetType="MoveToPositionAndEvacuateSpecialPowerModuleData" />
+			<Entry
+				id="MoveToPositionAndReplaceSelfSpecialPower"
+				AssetType="MoveToPositionAndReplaceSelfSpecialPowerModuleData" />
+			<Entry
+				id="RunOffMapBehavior"
+				AssetType="RunOffMapBehaviorModuleData" />
+			<Entry
+				id="SuppressionUpdate"
+				AssetType="SuppressionUpdateModuleData" />
+			<Entry
+				id="AttributeModifierPoolUpdate"
+				AssetType="AttributeModifierPoolUpdateModuleData" />
+			<Entry
+				id="WallHubBehavior"
+				AssetType="WallHubBehaviorModuleData" />
+			<Entry
+				id="StructureUnpackUpdate"
+				AssetType="StructureUnpackUpdateModuleData" />
+			<Entry
+				id="BannerCarrierUpgrade"
+				AssetType="BannerCarrierUpgradeModuleData" />
+			<Entry
+				id="FindCoverBehavior"
+				AssetType="FindCoverBehaviorModuleData" />
+			<Entry
+				id="HighlightReachableTargetsSpecialAbilityUpdate"
+				AssetType="HighlightReachableTargetsSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="RepairSpecialPower"
+				AssetType="RepairSpecialPowerModuleData" />
+			<Entry
+				id="RadarScanMapSpecialAbilityUpdate"
+				AssetType="RadarScanMapSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="RestrictSpecialPowerBehavior"
+				AssetType="RestrictSpecialPowerBehaviorModuleData" />
+			<Entry
+				id="AreaRestrictSpecialPowerBehavior"
+				AssetType="AreaRestrictSpecialPowerBehaviorModuleData" />
+			<Entry
+				id="MonitorConditionUpdate"
+				AssetType="MonitorConditionUpdateModuleData" />
+			<Entry
+				id="MonitorSpecialPowerTimerUpdate"
+				AssetType="MonitorSpecialPowerTimerUpdateModuleData" />
+			<Entry
+				id="ShroudClearBehavior"
+				AssetType="ShroudClearBehaviorModuleData" />
+			<Entry
+				id="LinearDamageUpdate"
+				AssetType="LinearDamageUpdateModuleData" />
+			<Entry
+				id="GrantUpgradeAreaOfEffectSpecialPower"
+				AssetType="GrantUpgradeAreaOfEffectSpecialPowerModuleData" />
+			<Entry
+				id="SetLocomotorSpeedUpdate"
+				AssetType="SetLocomotorSpeedUpdateModuleData" />
+			<Entry
+				id="DestroyObjectsUpdate"
+				AssetType="DestroyObjectsUpdateModuleData" />
+			<Entry
+				id="PlayerPowerManager"
+				AssetType="PlayerPowerManagerBehaviorModuleData" />
+			<Entry
+				id="MetaUpgradeAura"
+				AssetType="MetaUpgradeAuraBehaviorModuleData" />
+			<Entry
+				id="MetaGameStratButtonInfo"
+				AssetType="MetaGameStratButtonInfoModuleData" />
+			<Entry
+				id="SpecialDisguiseUpdate"
+				AssetType="SpecialDisguiseUpdateModuleData" />
+			<Entry
+				id="FloodUpdate"
+				AssetType="FloodUpdateModuleData" />
+			<Entry
+				id="SalvagerInfo"
+				AssetType="SalvagerInfoModuleData" />
+			<!--No original entries, names are from Generals and Battle for Middle Earth 2-->
+			<Entry
+				id="AllowBannerSpawnUpgrade"
+				AssetType="AllowBannerSpawnUpgradeModuleData" />
+			<Entry
+				id="AnnounceBirthAndDeathBehavior"
+				AssetType="AnnounceBirthAndDeathBehaviorModuleData" />
+			<Entry
+				id="AssistedTargetingUpdate"
+				AssetType="AssistedTargetingUpdateModuleData" />
+			<Entry
+				id="AutoFindHealingUpdate"
+				AssetType="AutoFindHealingUpdateModuleData" />
+			<Entry
+				id="AutoPickUpUpdate"
+				AssetType="AutoPickUpUpdateModuleData" />
+			<Entry
+				id="BannerCarrierUpdate"
+				AssetType="BannerCarrierUpdateModuleData" />
+			<Entry
+				id="BaseUpgrade"
+				AssetType="BaseUpgradeModuleData" />
+			<Entry
+				id="BoredUpdate"
+				AssetType="BoredUpdateModuleData" />
+			<Entry
+				id="BroadcastStealthUpdate"
+				AssetType="BroadcastStealthUpdateModuleData" />
+			<Entry
+				id="CallHelpOnDamage"
+				AssetType="CallHelpOnDamageModuleData" />
+			<Entry
+				id="CashHackSpecialPower"
+				AssetType="CashHackSpecialPowerModuleData" />
+			<Entry
+				id="CastleMemberBehavior"
+				AssetType="CastleMemberBehaviorModuleData" />
+			<Entry
+				id="CaveContain"
+				AssetType="CaveContainModuleData" />
+			<Entry
+				id="CivilianSpawnCollide"
+				AssetType="CivilianSpawnCollideModuleData" />
+			<Entry
+				id="CivilianSpawnUpdate"
+				AssetType="CivilianSpawnUpdateModuleData" />
+			<Entry
+				id="CommandPointsUpgrade"
+				AssetType="CommandPointsUpgradeModuleData" />
+			<Entry
+				id="CreateCrateDie"
+				AssetType="CreateCrateDieModuleData" />
+			<Entry
+				id="CritterEmitterUpdate"
+				AssetType="CritterEmitterUpdateModuleData" />
+			<Entry
+				id="DamageFilteredCreateObjectDie"
+				AssetType="DamageFilteredCreateObjectDieModuleData" />
+			<Entry
+				id="DefectorSpecialPower"
+				AssetType="DefectorSpecialPowerModuleData" />
+			<Entry
+				id="DeflectSpecialPower"
+				AssetType="DeflectSpecialPowerModuleData" />
+			<Entry
+				id="DelayedLuaEventUpdate"
+				AssetType="DelayedLuaEventUpdateModuleData" />
+			<Entry
+				id="DemoTrapUpdate"
+				AssetType="DemoTrapUpdateModuleData" />
+			<Entry
+				id="DoCommandUpgrade"
+				AssetType="DoCommandUpgradeModuleData" />
+			<Entry
+				id="DynamicPortalBehaviour"
+				AssetType="DynamicPortalBehaviourModuleData" />
+			<Entry
+				id="EvacuateDamage"
+				AssetType="EvacuateDamageModuleData" />
+			<Entry
+				id="FadeAndDieOrnamentUpdate"
+				AssetType="FadeAndDieOrnamentUpdateModuleData" />
+			<Entry
+				id="FakePathfindPortalBehaviour"
+				AssetType="FakePathfindPortalBehaviourModuleData" />
+			<Entry
+				id="FireSpreadUpdate"
+				AssetType="FireSpreadUpdateModuleData" />
+			<Entry
+				id="FlingPassengerSpecialAbilityUpdate"
+				AssetType="FlingPassengerSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="FloatUpdate"
+				AssetType="FloatUpdateModuleData" />
+			<Entry
+				id="GateOpenAndCloseBehavior"
+				AssetType="GateOpenAndCloseBehaviorModuleData" />
+			<Entry
+				id="GateProxyBehavior"
+				AssetType="GateProxyBehaviorModuleData" />
+			<Entry
+				id="GrabPassengerSpecialPower"
+				AssetType="GrabPassengerSpecialPowerModuleData" />
+			<Entry
+				id="HijackerUpdate"
+				AssetType="HijackerUpdateModuleData" />
+			<Entry
+				id="HordeMemberCollide"
+				AssetType="HordeMemberCollideModuleData" />
+			<Entry
+				id="HordeNotifyTargetsOfImminentProbableCrushingUpdate"
+				AssetType="HordeNotifyTargetsOfImminentProbableCrushingUpdateModuleData" />
+			<Entry
+				id="HordeTransportContainDamage"
+				AssetType="HordeTransportContainDamageModuleData" />
+			<Entry
+				id="HorseHordeContain"
+				AssetType="HorseHordeContainModuleData" />
+			<Entry
+				id="InvisibilitySpecialPower"
+				AssetType="InvisibilitySpecialPowerModuleData" />
+			<Entry
+				id="LargeGroupBonusUpdate"
+				AssetType="LargeGroupBonusUpdateModuleData" />
+			<Entry
+				id="LockWeaponCreate"
+				AssetType="LockWeaponCreateModuleData" />
+			<Entry
+				id="MineshaftPortalBehavior"
+				AssetType="MineshaftPortalBehaviorModuleData" />
+			<Entry
+				id="NotifyTargetsOfImminentProbableCrushingUpdate"
+				AssetType="NotifyTargetsOfImminentProbableCrushingUpdateModuleData" />
+			<Entry
+				id="ObjectGuardingHelper"
+				AssetType="ObjectGuardingHelperModuleData" />
+			<Entry
+				id="ObjectRecoveryHelper"
+				AssetType="ObjectRecoveryHelperModuleData" />
+			<Entry
+				id="ObjectRepulsorHelper"
+				AssetType="ObjectRepulsorHelperModuleData" />
+			<Entry
+				id="ObjectSMCHelper"
+				AssetType="ObjectSMCHelperModuleData" />
+			<Entry
+				id="ObjectWeaponStatusHelper"
+				AssetType="ObjectWeaponStatusHelperModuleData" />
+			<Entry
+				id="PickupStuffUpdate"
+				AssetType="PickupStuffUpdateModuleData" />
+			<Entry
+				id="PillageModule"
+				AssetType="PillageModuleData" />
+			<Entry
+				id="PlayerHealSpecialPower"
+				AssetType="PlayerHealSpecialPowerModuleData" />
+			<Entry
+				id="PoisonedBehavior"
+				AssetType="PoisonedBehaviorModuleData" />
+			<Entry
+				id="PreorderCreate"
+				AssetType="PreorderCreateModuleData" />
+			<Entry
+				id="ProductionQueueHordeContain"
+				AssetType="ProductionQueueHordeContainModuleData" />
+			<Entry
+				id="ProductionSpeedBonus"
+				AssetType="ProductionSpeedBonusModuleData" />
+			<Entry
+				id="ProjectileStreamUpdate"
+				AssetType="ProjectileStreamUpdateModuleData" />
+			<Entry
+				id="ProneUpdate"
+				AssetType="ProneUpdateModuleData" />
+			<Entry
+				id="RadiateFearUpdate"
+				AssetType="RadiateFearUpdateModuleData" />
+			<Entry
+				id="RadiusDecalUpdate"
+				AssetType="RadiusDecalUpdateModuleData" />
+			<Entry
+				id="RailedTransportDockUpdate"
+				AssetType="RailedTransportDockUpdateModuleData" />
+			<Entry
+				id="ReflectDamage"
+				AssetType="ReflectDamageModuleData" />
+			<Entry
+				id="RepairDockUpdate"
+				AssetType="RepairDockUpdateModuleData" />
+			<Entry
+				id="ReplenishUnitsBehavior"
+				AssetType="ReplenishUnitsBehaviorModuleData" />
+			<Entry
+				id="RespawnUpdate"
+				AssetType="RespawnUpdateModuleData" />
+			<Entry
+				id="ScavengerSpecialPower"
+				AssetType="ScavengerSpecialPowerModuleData" />
+			<Entry
+				id="ShareExperienceBehavior"
+				AssetType="ShareExperienceBehaviorModuleData" />
+			<Entry
+				id="ShipSlowDeathBehavior"
+				AssetType="ShipSlowDeathBehaviorModuleData" />
+			<Entry
+				id="SlaveWatcherBehavior"
+				AssetType="SlaveWatcherBehaviorModuleData" />
+			<Entry
+				id="SpawnedModelConditionCreate"
+				AssetType="SpawnedModelConditionCreateModuleData" />
+			<Entry
+				id="SpawnPointProductionExitUpdate"
+				AssetType="SpawnPointProductionExitUpdateModuleData" />
+			<Entry
+				id="SpawnUnitBehavior"
+				AssetType="SpawnUnitBehaviorModuleData" />
+			<Entry
+				id="SpecialEnemySenseUpdate"
+				AssetType="SpecialEnemySenseUpdateModuleData" />
+			<Entry
+				id="SpecialPowerCompletionDie"
+				AssetType="SpecialPowerCompletionDieModuleData" />
+			<Entry
+				id="SpecialPowerCreate"
+				AssetType="SpecialPowerCreateModuleData" />
+			<Entry
+				id="SpellRechargeModifierUpgrade"
+				AssetType="SpellRechargeModifierUpgradeModuleData" />
+			<Entry
+				id="StealthUpdate"
+				AssetType="StealthUpdateModuleData" />
+			<Entry
+				id="StopSpecialPower"
+				AssetType="StopSpecialPowerModuleData" />
+			<Entry
+				id="SupplyCenterProductionExitUpdate"
+				AssetType="SupplyCenterProductionExitUpdateModuleData" />
+			<Entry
+				id="SupplyWarehouseCreate"
+				AssetType="SupplyWarehouseCreateModuleData" />
+			<Entry
+				id="SupplyWarehouseCripplingBehavior"
+				AssetType="SupplyWarehouseCripplingBehaviorModuleData" />
+			<Entry
+				id="TaintSpecialPower"
+				AssetType="TaintSpecialPowerModuleData" />
+			<Entry
+				id="ThreatFinderUpdate"
+				AssetType="ThreatFinderUpdateModuleData" />
+			<Entry
+				id="ToggleDeploySpecialAbilityUpdate"
+				AssetType="ToggleDeploySpecialAbilityUpdateModuleData" />
+			<Entry
+				id="ToggleHiddenSpecialAbilityUpdate"
+				AssetType="ToggleHiddenSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="ToggleMountedSpecialAbilityUpdate"
+				AssetType="ToggleMountedSpecialAbilityUpdateModuleData" />
+			<Entry
+				id="TooltipUpgrade"
+				AssetType="TooltipUpgradeModuleData" />
+			<Entry
+				id="UnleashSpecialPower"
+				AssetType="UnleashSpecialPowerModuleData" />
+			<Entry
+				id="WallUpgradeUpdate"
+				AssetType="WallUpgradeUpdateModuleData" />
+			<Entry
+				id="WeaponModeSpecialPowerUpdate"
+				AssetType="WeaponModeSpecialPowerUpdateModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="AIModule">
+		<EntryChoice
+			id="AIModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="AIUpdate"
+				AssetType="AIUpdateModuleData" />
+			<Entry
+				id="ConstructionYardAIUpdate"
+				AssetType="ConstructionYardAIUpdateModuleData" />
+			<Entry
+				id="AIGateUpdate"
+				AssetType="AIGateUpdateModuleData" />
+			<Entry
+				id="DeployStyleAIUpdate"
+				AssetType="DeployStyleAIUpdateModuleData" />
+			<Entry
+				id="TransportAIUpdate"
+				AssetType="TransportAIUpdateModuleData" />
+			<Entry
+				id="HordeAIUpdate"
+				AssetType="HordeAIUpdateModuleData" />
+			<Entry
+				id="JetAIUpdate"
+				AssetType="JetAIUpdateModuleData" />
+			<Entry
+				id="SupplyTruckAIUpdate"
+				AssetType="SupplyTruckAIUpdateModuleData" />
+			<Entry
+				id="TransportHelicopterAIUpdate"
+				AssetType="TransportHelicopterAIUpdateModuleData" />
+			<Entry
+				id="WanderAIUpdate"
+				AssetType="WanderAIUpdateModuleData" />
+			<Entry
+				id="AnimalAIUpdate"
+				AssetType="AnimalAIUpdateModuleData" />
+			<Entry
+				id="MetaGameAIUpdate"
+				AssetType="MetaGameAIUpdateModuleData" />
+			<!--No original entries, names are from Generals and Battle for Middle Earth 2-->
+			<Entry
+				id="AssaultTransportAIUpdate"
+				AssetType="AssaultTransportAIUpdateModuleData" />
+			<Entry
+				id="FoundationAIUpdate"
+				AssetType="FoundationAIUpdateModuleData" />
+			<Entry
+				id="DozerAIUpdate"
+				AssetType="DozerAIUpdateModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="BodyModule">
+		<EntryChoice
+			id="BodyModule"
+			MinLength="1"
+			MaxLength="1">
+			<Entry
+				id="ActiveBody"
+				AssetType="ActiveBodyModuleData" />
+			<Entry
+				id="ShieldBody"
+				AssetType="ShieldBodyModuleData" />
+			<Entry
+				id="ImmortalBody"
+				AssetType="ImmortalBodyModuleData" />
+			<Entry
+				id="DelayedDeathBody"
+				AssetType="DelayedDeathBodyModuleData" />
+			<Entry
+				id="RespawnBody"
+				AssetType="RespawnBodyModuleData" />
+			<Entry
+				id="HighlanderBody"
+				AssetType="HighlanderBodyModuleData" />
+			<Entry
+				id="MetaBaseBody"
+				AssetType="MetaBaseBodyModuleData" />
+			<Entry
+				id="MetaCityBody"
+				AssetType="MetaCityBodyModuleData" />
+			<Entry
+				id="MetaSFBody"
+				AssetType="MetaSFBodyModuleData" />
+			<Entry
+				id="MetaTiberiumBody"
+				AssetType="MetaTiberiumBodyModuleData" />
+			<Entry
+				id="MetaICMUMOBody"
+				AssetType="MetaICMUMOBodyModuleData" />
+			<!--No original entries, names are from Generals and Battle for Middle Earth 2-->
+			<Entry
+				id="FreeLifeBody"
+				AssetType="FreeLifeBodyModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="ClientUpdateModules">
+		<EntryChoice
+			id="ClientUpdateModules"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="AnimatedParticleSysBoneClientUpdate"
+				AssetType="AnimatedParticleSysBoneClientUpdateModuleData" />
+			<Entry
+				id="BeaconClientUpdate"
+				AssetType="BeaconClientUpdateModuleData" />
+			<Entry
+				id="EvaAnnounceClientCreate"
+				AssetType="EvaAnnounceClientCreateModuleData" />
+			<Entry
+				id="EvaAnnounceSpecialPowerReadyClientUpdate"
+				AssetType="EvaAnnounceSpecialPowerReadyClientUpdateModuleData" />
+			<Entry
+				id="LaserUpdate"
+				AssetType="LaserUpdateModuleData" />
+			<Entry
+				id="RadarMarkerClientUpdate"
+				AssetType="RadarMarkerClientUpdateModuleData" />
+			<Entry
+				id="SwayClientUpdate"
+				AssetType="SwayClientUpdateModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="ClientBehaviorModules">
+		<EntryChoice
+			id="ClientBehaviorModules"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="AnimationSoundClientBehavior"
+				AssetType="AnimationSoundClientBehaviorModuleData" />
+			<Entry
+				id="ModelConditionAudioLoopClientBehavior"
+				AssetType="ModelConditionAudioLoopClientBehaviorModuleData" />
+			<Entry
+				id="ModelConditionSoundSelectorClientBehavior"
+				AssetType="ModelConditionSoundSelectorClientBehaviorModuleData" />
+			<Entry
+				id="RandomSoundSelectorClientBehavior"
+				AssetType="RandomSoundSelectorClientBehaviorModuleData" />
+			<Entry
+				id="UpgradeSoundSelectorClientBehavior"
+				AssetType="UpgradeSoundSelectorClientBehaviorModuleData" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="AutoResolveArmor">
+		<EntryReference
+			id="Armor"
+			AssetType="ArmorTemplate"
+			IsAttribute="true" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ExcludedUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="AutoResolveWeapon">
+		<EntryReference
+			id="Weapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ExcludedUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="FormationPreviewDecal">
+		<Entry
+			id="Texture"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Width"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="Height"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+	</Asset>
+
+	<Asset
+		id="AutoResolveInfo">
+		<Entry
+			id="AutoResolveUnitType"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryPoid
+			id="AutoResolveBody"
+			IsAttribute="true" />
+		<EntryReference
+			id="AutoResolveArmor"
+			AssetType="ArmorTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="AutoResolveWeapon"
+			AssetType="ArmorTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="AutoResolveLeadership"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AutoResolveCombatChain"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="VisionInfo">
+		<Entry
+			id="VisionRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.00" />
+		<Entry
+			id="ShroudClearingRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="VisionSide"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="VisionRear"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="VisionBonusTestRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="VisionBonusTestSegments"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="8" />
+		<Entry
+			id="VisionBonusPercentPerFoot"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxVisionBonusPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MinVisionBonusPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="-50" />
+	</Asset>
+
+	<Asset
+		id="CrusherInfo">
+		<Entry
+			id="CrushKnockback"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CrushZFactor"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MinCrushVelocityPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="CrushDecelerationPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="CrushWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrushRevengeWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="CrusherLevel"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CrushableLevel"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="127" />
+		<Entry
+			id="MountedCrusherLevel"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="255" />
+		<Entry
+			id="MountedCrushableLevel"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="255" />
+		<Entry
+			id="CrushEqualLevelProps"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseCrushAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CrushOnlyWhileCharging"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CrushAllies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="ProjectedBuildabilityInfo">
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BuildPlacementTypes"
+			AssetType="BuildPlacementTypeBitFlags"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="StatusToReject"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditionsToReject"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="GameObject"
+		TypeHash="1348546025">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="KindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="Browser"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ReviveText"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RecruitText"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TypeDescription"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Hotkey"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RadarPriority"
+			AssetType="RadarPriorityType"
+			IsAttribute="true" />
+		<Entry
+			id="BuildCompletion"
+			AssetType="BuildCompletionType"
+			IsAttribute="true" />
+		<Entry
+			id="FenceWidth"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FenceXOffset"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RemoveTerrainRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EmotionRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PlacementViewAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0r" />
+		<Entry
+			id="BuildFadeInOnCreateTimeSeconds"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="FactoryExitWidth"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FactoryExtraBibWidth"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EditorName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EditorSorting"
+			AssetType="EditorSortingType"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="BountyValue"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BuildTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="BuildFadeInOnCreateTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="EnergyProduction"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="EnergyBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="CommandSet"
+			AssetType="LogicCommandSet"
+			IsAttribute="true" />
+		<Entry
+			id="SelectPortrait"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ButtonImage"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="VoicePriority"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinZIncreaseForVoiceMoveToHigherGround"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<EntryReference
+			id="CrowdResponse"
+			AssetType="CrowdResponse"
+			IsAttribute="true" />
+		<Entry
+			id="CampnessValue"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CampnessValueRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="600.0" />
+		<Entry
+			id="Scale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="HealthBoxScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="HealthBoxHeightOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="OcclusionDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LiveCameraPitch"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FormationWidth"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="FormationDepth"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="InstanceScaleFuzziness"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ThreatRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="RamPower"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RamZMult"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="ShockwaveResistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CommandPoints"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CommandPointBonus"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="VoiceAttackChargeTimeout"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDistanceForEngaged"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EngagedStateTimeout"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="ThreatLevel"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SlopeLimitIndex"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PathfindDiameter"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="SupplyOverride"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DisplayMeleeDamage"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="DisplayRangedDamage"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="HeroSortOrder"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2147483647" />
+		<Entry
+			id="ExperienceScalarTable"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FiringArc"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="360" />
+		<Entry
+			id="CamouflageDetectionMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="SelectionPriority"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2147483647" />
+		<Entry
+			id="ProductionQueueType"
+			AssetType="ProductionQueueType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="BuildPlacementTypeFlag"
+			AssetType="BuildPlacementType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="BuildOnRequiredObjectKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="UnitCategory"
+			AssetType="UnitCategory"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="WeaponCategory"
+			AssetType="WeaponCategory"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="HasFiredRecentlyTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<EntryReference
+			id="UnitTypeIcon"
+			AssetType="UnitTypeIcon"
+			IsAttribute="true" />
+		<Entry
+			id="ReinvisibilityDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="4s" />
+		<EntryList
+			id="WorldMapArmoryUpgradesAllowed"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="CaptureTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="DisplayName"
+			AssetType="String" />
+		<EntryRelocation
+			id="GameDependency"
+			AssetType="GameDependencyType" />
+		<EntryList
+			id="ArmorSet"
+			AssetType="ArmorTemplateSet"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponSet"
+			AssetType="WeaponTemplateSet"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="LocomotorSet"
+			AssetType="LocomotorSet"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="Buildable"
+			AssetType="BuildableStatus" />
+		<EntryRelocation
+			id="ThingClass"
+			AssetType="ThingClassType" />
+		<EntryRelocation
+			id="DeadCollideSize"
+			AssetType="DeadCollideSizeType" />
+		<EntryRelocation
+			id="BuildFadeInOnCreateList"
+			AssetType="StringList" />
+		<EntryRelocation
+			id="BuildVariations"
+			AssetType="StringList" />
+		<EntryList
+			id="EquivalentTo"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="DisplayColor"
+			AssetType="Color4" />
+		<EntryRelocation
+			id="Flammability"
+			AssetType="Flammability" />
+		<EntryRelocation
+			id="SkirmishAIInformation"
+			AssetType="SkirmishAIInformation" />
+		<EntryRelocation
+			id="Draws"
+			AssetType="DrawModules" />
+		<EntryRelocation
+			id="Behaviors"
+			AssetType="BehaviorModules" />
+		<EntryRelocation
+			id="AI"
+			AssetType="AIModule" />
+		<EntryRelocation
+			id="Body"
+			AssetType="BodyModule" />
+		<EntryRelocation
+			id="ClientUpdates"
+			AssetType="ClientUpdateModules" />
+		<EntryRelocation
+			id="ClientBehaviors"
+			AssetType="ClientBehaviorModules" />
+		<EntryRelocation
+			id="UnitSpecificFX"
+			AssetType="PerUnitFX" />
+		<EntryRelocation
+			id="Geometry"
+			AssetType="Geometry" />
+		<EntryRelocation
+			id="ReplaceModule"
+			AssetType="ReplaceModule" />
+		<EntryRelocation
+			id="InheritableModule"
+			AssetType="InheritableModule" />
+		<EntryRelocation
+			id="AutoResolveArmor"
+			AssetType="AutoResolveArmor" />
+		<EntryRelocation
+			id="AutoResolveWeapon"
+			AssetType="AutoResolveWeapon" />
+		<EntryRelocation
+			id="FormationPreviewDecal"
+			AssetType="FormationPreviewDecal" />
+		<EntryRelocation
+			id="FormationPreviewItemDecal"
+			AssetType="FormationPreviewDecal" />
+		<EntryRelocation
+			id="LiveCameraOffset"
+			AssetType="Coord3D" />
+		<EntryRelocation
+			id="AudioArrayVoice"
+			AssetType="AudioArrayVoice" />
+		<EntryRelocation
+			id="AudioArraySound"
+			AssetType="AudioArraySound" />
+		<EntryRelocation
+			id="EvaEvents"
+			AssetType="GameObjectEvaEvents" />
+		<EntryList
+			id="UpgradeCameo"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryRelocation
+			id="ShadowInfo"
+			AssetType="ShadowInfo" />
+		<EntryRelocation
+			id="AutoResolveInfo"
+			AssetType="AutoResolveInfo" />
+		<EntryRelocation
+			id="VisionInfo"
+			AssetType="VisionInfo" />
+		<EntryRelocation
+			id="CrusherInfo"
+			AssetType="CrusherInfo" />
+		<EntryRelocation
+			id="ProjectedBuildabilityInfo"
+			AssetType="ProjectedBuildabilityInfo" />
+		<EntryList
+			id="DisplayUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="2" />
+		<Entry
+			id="BuildCost"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RefundValue"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ThreatValue"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxSimultaneousOfType"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true" />
+		<Entry
+			id="TransportSlotCount"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="IsTrainable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="IsForbidden"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsPrerequisite"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsGrabbable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsHarvestable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StructureRubbleHeight"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ForceLuaRegistration"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ShowHealthInSelectionDecal"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="KeepSelectableWhenDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsAutoBuilt"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanPathThroughGates"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ShouldClearShotsOnIdle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BuildInProximityToSamePlayerStucture"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>
