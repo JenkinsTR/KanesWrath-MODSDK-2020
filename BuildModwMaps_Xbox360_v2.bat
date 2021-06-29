@@ -1,4 +1,11 @@
 @ECHO off
+:: ------------------------------------------
+:: Xbox360 BuildMod with Maps v2.0
+:: ------------------------------------------
+:: 
+:: Compiles both mod and any custom maps stored in Mods\%modname%\Data\Maps
+:: 
+
 CD /D "%~dp0"
 
 ::SET modname and version from input
@@ -26,6 +33,8 @@ IF NOT DEFINED modname GOTO modname
 :modversion
 IF NOT DEFINED modversion SET /P modversion="Mod Version: "
 IF NOT DEFINED modversion GOTO modversion
+
+:: TODO: Fix this for LanguagePacks
 REM SET streamversion=_mod
 SET "streamversion="
 
@@ -51,7 +60,7 @@ IF NOT DEFINED userdataleaf FOR /F "tokens=2* delims=	 " %%A IN ('REG QUERY "HKL
 
 IF NOT DEFINED userdataleaf (
 	::This seems to vary based on which install
-	::TODO fix this
+	::TODO fix this hack
 	::SET userdataleaf="Command and Conquer 3 Kanes Wrath"
 	SET userdataleaf="Command ^& Conquer 3 Kane's Wrath"
 )
@@ -100,19 +109,19 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\Data\MetaGame.xml" "%wrathed%" -gameDefini
 ::AptUI
 SETLOCAL EnableDelayedExpansion
 
-SET sdk=!cd!
-CD /D "!sdk!\Game Files\Manifest\AptUI"
+SET sdk=%cd%
+CD /D "%sdk%\Game Files\Manifest\AptUI"
 
-FOR %%A IN ("*.manifest") DO IF EXIST "!sdk!\Xbox360\Mods\%modname%\Data\AptUI\%%~nA.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!sdk!\Xbox360\Mods\%modname%\Data\AptUI\%%~nA.xml" -art:"..\..\Art" -audio:"..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\Data\AptUI" -bps:"aptui\%%~nA.manifest,!sdk!\Game Files\Manifest\AptUI\%%~nA.manifest" -version:"%streamversion%"
+FOR %%A IN ("*.manifest") DO IF EXIST "%sdk%\Xbox360\Mods\%modname%\Data\AptUI\%%~nA.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"%sdk%\Xbox360\Mods\%modname%\Data\AptUI\%%~nA.xml" -art:"..\..\Art" -audio:"..\..\Audio" -out:"%sdk%\Compilation\Xbox360\Mods\%modname%\Data\AptUI" -bps:"aptui\%%~nA.manifest,%sdk%\Game Files\Manifest\AptUI\%%~nA.manifest" -version:"%streamversion%"
 
-CD /D "!sdk!"
+CD /D "%sdk%"
 SET sdk=
 
 ENDLOCAL EnableDelayedExpansion
 
 ::StringHashGenerator
 :: not sure if this is even needed...
-"%cd%\Tools\StringHashGenerator.exe" "%cd%\Compilation\Xbox360\Mods\%modname%" "%cd%\Xbox360\Mods\%modname%\Data\StringHashes.xml"
+:: "%cd%\Tools\StringHashGenerator.exe" "%cd%\Compilation\Xbox360\Mods\%modname%" "%cd%\Xbox360\Mods\%modname%\Data\StringHashes.xml"
 
 SET XBBIGOUT1=%cd%\Xbox360\BuiltMods\%modname%
 
@@ -133,7 +142,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 		)
 		
 		::MapMetaData_Global
-		IF EXIST "!cd!\%%A\Data\AdditionalMaps\MapMetaData_Global.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\AdditionalMaps\MapMetaData_Global.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AdditionalMaps" -version:"_LanguagePack" !bps!
+		IF EXIST "!cd!\%%A\Data\AdditionalMaps\MapMetaData_Global.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\AdditionalMaps\MapMetaData_Global.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AdditionalMaps" -version:"_LanguagePack" !bps!
 				
 		::MapMetaData_GlobalOverrides
 		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\Data\AdditionalMaps\MapMetaData_GlobalOverrides.manifest" (
@@ -142,7 +151,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 			SET bps=
 		)
 		
-		IF EXIST "!cd!\%%A\Data\AdditionalMaps\MapMetaData_GlobalOverrides.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\AdditionalMaps\MapMetaData_GlobalOverrides.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AdditionalMaps" -version:"_LanguagePack" !bps!
+		IF EXIST "!cd!\%%A\Data\AdditionalMaps\MapMetaData_GlobalOverrides.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\AdditionalMaps\MapMetaData_GlobalOverrides.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AdditionalMaps" -version:"_LanguagePack" !bps!
 		
 		::Global manifest
 		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\Data\Global%streamversion%.manifest" (
@@ -152,7 +161,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 		)
 		
 		::Global.xml
-		IF EXIST "!cd!\%%A\Data\Global.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\Global.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"global_languagepack.manifest" !bps!
+		IF EXIST "!cd!\%%A\Data\Global.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\Global.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"global_languagepack.manifest" !bps!
 
 		::Static manifest
 		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\Data\Static%streamversion%.manifest" (
@@ -162,7 +171,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 		)
 		
 		::Static.xml
-		IF EXIST "!cd!\%%A\Data\Static.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\Static.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"static_languagepack.manifest" !bps!
+		IF EXIST "!cd!\%%A\Data\Static.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\Static.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"static_languagepack.manifest" !bps!
 
 		::MapMetaData
 		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\Data\MapMetaData%streamversion%.manifest" (
@@ -171,7 +180,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 			SET bps=-bps:"mapmetadata.manifest,!sdk!\Game Files\Manifest\MapMetaData.manifest"
 		)
 		
-		IF EXIST "!cd!\%%A\Data\MapMetaData.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\MapMetaData.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"mapmetadata_languagepack.manifest" !bps!
+		IF EXIST "!cd!\%%A\Data\MapMetaData.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\MapMetaData.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"mapmetadata_languagepack.manifest" !bps!
 
 		::MetaGame
 		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\Data\MetaGame%streamversion%.manifest" (
@@ -180,7 +189,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 			SET bps=-bps:"metagame.manifest,!sdk!\Game Files\Manifest\MetaGame.manifest"
 		)
 		
-		IF EXIST "!cd!\%%A\Data\MetaGame.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\MetaGame.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"metagame_languagepack.manifest" !bps!
+		IF EXIST "!cd!\%%A\Data\MetaGame.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!cd!\%%A\Data\MetaGame.xml" -art:"..\Art;..\..\..\Art" -audio:"..\Audio;..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data" -version:"_LanguagePack" -lowlod:"metagame_languagepack.manifest" !bps!
 
 		::AptUI
 		SET dir=!cd!
@@ -193,7 +202,7 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 				SET bps=-bps:"aptui\%%~nB.manifest,!sdk!\Game Files\Manifest\AptUI\%%~nB.manifest"
 			)
 		
-			IF EXIST "!dir!\%%A\Data\AptUI\%%~nB.xml" "!sdk!\Tools\WrathEd.exe" -gameDefinition:"Kane's Wrath" -compile:"!dir!\%%A\Data\AptUI\%%~nB.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AptUI" -version:"_LanguagePack" !bps!
+			IF EXIST "!dir!\%%A\Data\AptUI\%%~nB.xml" "%wrathed%" -gameDefinition:"Kane's Wrath" -compile:"!dir!\%%A\Data\AptUI\%%~nB.xml" -art:"..\..\Art;..\..\..\..\Art" -audio:"..\..\Audio;..\..\..\..\Audio" -out:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A\Data\AptUI" -version:"_LanguagePack" !bps!
 			
 		)
 		
@@ -216,8 +225,8 @@ IF EXIST "%cd%\Xbox360\Mods\%modname%\LanguagePacks" (
 		REM )
 		
 		::MakeBig
-		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" "!sdk!\Tools\MakeBig.exe" -f "!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" -o:"%XBBIGOUT1%\%modname%_%modversion%_Streams_%%A.big"
-		IF EXIST "!cd!\%%A\Misc" "!sdk!\Tools\MakeBig.exe" -f "!cd!\%%A\Misc" -o:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" -o:"%XBBIGOUT1%\%modname%_%modversion%_Misc_%%A.big"
+		IF EXIST "!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" "%WEBIG%" -f "!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" -o:"%XBBIGOUT1%\%modname%_%modversion%_Streams_%%A.big"
+		IF EXIST "!cd!\%%A\Misc" "%WEBIG%" -f "!cd!\%%A\Misc" -o:"!sdk!\Compilation\Xbox360\Mods\%modname%\LanguagePacks\%%A" -o:"%XBBIGOUT1%\%modname%_%modversion%_Misc_%%A.big"
 	)
 	
 	CD /D "!sdk!"
