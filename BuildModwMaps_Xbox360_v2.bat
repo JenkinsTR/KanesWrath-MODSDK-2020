@@ -271,6 +271,8 @@ FOR /R %%G IN (*.map) DO (
 	COPY "%SDKDIR%\Xbox360\Mods\%modname%\Data\Maps\!mapname!\!mapname!_art.tga" "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!\!mapname!_art.tga"
 	COPY "%SDKDIR%\Xbox360\Mods\%modname%\Data\Maps\!mapname!\!mapname!.map" "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!\!mapname!.map"
 	
+	:: TODO: Fix (remove?) the below
+	:: A good idea in theory but messy
 	:: BIG it up!
 	REM "%WEBIG%" -f "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!" -o:"!XBBIGOUT!\Map_Data.big"
 	REM IF EXIST "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!\Misc" "%WEBIG%" -f "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!\Misc" -o:"!XBBIGOUT!\Map_Misc.big"
@@ -293,9 +295,9 @@ FOR /R %%G IN (*.map) DO (
 POPD
 
 :: We don't need to put the generated BIGs inside Mydocs as we're building FOR Xbox
+:: Removed BIG Mydocs copy code
 
-:: Remove stringhashes for this build (They're everywhere!)
-
+:: Disable stringhashes for this build
 REM DEL "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\stringhashes.*" /S /F /Q
 
 ::MakeBig
@@ -307,8 +309,8 @@ IF EXIST "%XBBIGOUT1%\%modname%_%modversion%.cfg" DEL "%XBBIGOUT1%\%modname%_%mo
 IF EXIST "%XBBIGOUT1%\%modname%_%modversion%.big" ECHO add-big %modname%_%modversion%.big>> "%XBBIGOUT1%\%modname%_%modversion%.cfg"
 IF EXIST "%XBBIGOUT1%\%modname%_%modversion%_Misc.big" ECHO add-big %modname%_%modversion%_Misc.big>> "%XBBIGOUT1%\%modname%_%modversion%.cfg"
 
+:: Disable these as we're packing the maps directly into the mod BIG for now
 REM "%WEBIG%" -f "%SDKDIR%\Compilation\Xbox360\Mods\%modname%\Data\Maps\!mapname!" -o:"!XBBIGOUT!\Map_Data.big"
-
 REM IF EXIST "%SDKDIR%\Xbox360\BuiltMods\%modname%\%modname%_%modversion%_maps.cfg" ECHO try-add-config %modname%_%modversion%_maps.cfg>> "%SDKDIR%\Xbox360\BuiltMods\%modname%\%modname%_%modversion%.cfg""
 
 
