@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<xs:schema id="SageLuaScriptSection" targetNamespace="http://tempuri.org/ScriptEvents.xsd"
+	xmlns:mstns="http://tempuri.org/ScriptEvents.xsd" xmlns="http://tempuri.org/ScriptEvents.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="SageLuaScriptSection" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Events">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="InternalEvent" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" form="unqualified" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ScriptedEvent" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" form="unqualified" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ModelConditionEvent" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Conditions" type="xs:string" minOccurs="1" maxOccurs="1" msdata:Ordinal="0" />
+									</xs:sequence>
+									<xs:attribute name="Name" form="unqualified" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ObjectStatusEvent" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Conditions" type="xs:string" minOccurs="1" maxOccurs="1" msdata:Ordinal="0" />
+									</xs:sequence>
+									<xs:attribute name="Name" form="unqualified" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="EventList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EventHandler" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="EventName" form="unqualified" type="xs:string" use="required" />
+									<xs:attribute name="ScriptFunctionName" form="unqualified" type="xs:string" use="required" />
+									<xs:attribute name="DebugSingleStep" form="unqualified" use="optional">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="true" />
+												<xs:enumeration value="false" />
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Name" form="unqualified" type="xs:string" use="required" />
+						<xs:attribute name="Inherit" form="unqualified" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
