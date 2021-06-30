@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="InGameUISubtitleSettings">
+		<Entry id="HoldTime" AssetType="Time" Default="20s" IsAttribute="true"/>
+		<Entry id="LineCount" AssetType="SageInt" Default="8" IsAttribute="true"/>
+			<Entry id="Font" AssetType="FontDesc" />
+			<Entry id="PanelColor" AssetType="Color4" />
+			<Entry id="TextColor" AssetType="Color3" />
+			<Entry id="Position" AssetType="Coord2D" />
+			<Entry id="Size" AssetType="Coord2D" />
+	</Asset>
+
+</AssetDefinition>

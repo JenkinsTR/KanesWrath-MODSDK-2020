@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<Texture
+		id="Button_ActivateMetaControl_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaControlActivate.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_ActivateMetaControl"
+		Texture="Button_ActivateMetaControl_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_DeActivateMetaControl_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaControlDeActivate.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_DeActivateMetaControl"
+		Texture="Button_DeActivateMetaControl_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>	
+	
+	<Texture
+		id="Button_ExternalLuaScript_Texture"
+		File="ART:Buttons/MetaControl/Button_ExternalLuaScript.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_ExternalLuaScript"
+		Texture="Button_ExternalLuaScript_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_EnemyAIOFF_Texture"
+		File="ART:Buttons/MetaControl/Button_EnemyAIOFF.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_EnemyAIOFF"
+		Texture="Button_EnemyAIOFF_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MapRevealerToggle_Texture"
+		File="ART:Buttons/MetaControl/Button_MapRevealerToggle.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MapRevealerToggle"
+		Texture="Button_MapRevealerToggle_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_SendMoney_Texture"
+		File="ART:Buttons/MetaControl/Button_SendMoney.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_SendMoney"
+		Texture="Button_SendMoney_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RiftGen_Texture"
+		File="ART:Buttons/MetaControl/Button_RiftGen.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_RiftGen"
+		Texture="Button_RiftGen_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaControlGlobalDeactivate_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaControlGlobalDeactivate.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaControlGlobalDeactivate"
+		Texture="Button_MetaControlGlobalDeactivate_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_EveryAIOFF_Texture"
+		File="ART:Buttons/MetaControl/Button_EveryAIOFF.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_EveryAIOFF"
+		Texture="Button_EveryAIOFF_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Money5k_Texture"
+		File="ART:Buttons/MetaControl/Button_Money5k.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Money5k"
+		Texture="Button_Money5k_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+	<Texture
+		id="Button_AIBoostToggle_Texture"
+		File="ART:Buttons/MetaControl/Button_AIBoostToggle.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_AIBoostToggle"
+		Texture="Button_AIBoostToggle_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_AIBoostAlliesToggle_Texture"
+		File="ART:Buttons/MetaControl/Button_AIBoostAlliesToggle.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_AIBoostAlliesToggle"
+		Texture="Button_AIBoostAlliesToggle_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MainTabMenuSelector_Texture"
+		File="ART:Buttons/MetaControl/Button_MainTabMenuSelector.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MainTabMenuSelector"
+		Texture="Button_MainTabMenuSelector_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaControlPlayerPowerBar_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaControlPlayerPowerBar.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaControlPlayerPowerBar"
+		Texture="Button_MetaControlPlayerPowerBar_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_AICoControlToggle_Texture"
+		File="ART:Buttons/MetaControl/Button_AICoControlToggle.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_AICoControlToggle"
+		Texture="Button_AICoControlToggle_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_NAOD_NextWave_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaControlNAOD_NextWave.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_NAOD_NextWave"
+		Texture="Button_NAOD_NextWave_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuExecute_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuExecute.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuExecute"
+		Texture="Button_MetaMenuExecute_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuSelectionUp_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuSelectionUp.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuSelectionUp"
+		Texture="Button_MetaMenuSelectionUp_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuSelectionDown_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuSelectionDown.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuSelectionDown"
+		Texture="Button_MetaMenuSelectionDown_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_UnitInfo_Texture"
+		File="ART:Buttons/MetaControl/Button_UnitInfo.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_UnitInfo"
+		Texture="Button_UnitInfo_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaCreditShopMenu_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaCreditShopMenu.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaCreditShopMenu"
+		Texture="Button_MetaCreditShopMenu_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+	<Texture
+		id="Button_ChoosePosition_Texture"
+		File="ART:Buttons/MetaControl/Button_ChoosePosition.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_ChoosePosition"
+		Texture="Button_ChoosePosition_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_CameraZoomSetup_Texture"
+		File="ART:Buttons/MetaControl/Button_CameraZoomSetup.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_CameraZoomSetup"
+		Texture="Button_CameraZoomSetup_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Indestructible_Texture"
+		File="ART:Buttons/MetaControl/Button_Indestructible.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Indestructible"
+		Texture="Button_Indestructible_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Spawn_Texture"
+		File="ART:Buttons/MetaControl/Button_Spawn.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Spawn"
+		Texture="Button_Spawn_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_ThirdFirstPersonMode_Texture"
+		File="ART:Buttons/MetaControl/Button_ThirdFirstPersonMode.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_ThirdFirstPersonMode"
+		Texture="Button_ThirdFirstPersonMode_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuHideMetaControlMenu_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuHideMetaControlMenu.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuHideMetaControlMenu"
+		Texture="Button_MetaMenuHideMetaControlMenu_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuSelectionLeft_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuSelectionLeft.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuSelectionLeft"
+		Texture="Button_MetaMenuSelectionLeft_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MetaMenuSelectionRight_Texture"
+		File="ART:Buttons/MetaControl/Button_MetaMenuSelectionRight.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_MetaMenuSelectionRight"
+		Texture="Button_MetaMenuSelectionRight_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+</AssetDeclaration>

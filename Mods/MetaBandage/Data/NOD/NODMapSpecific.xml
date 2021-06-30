@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+  <Includes>
+		<Include type="all" source="props/NodPowerStore.xml" />	  
+		
+		<Include type="all" source="Structures_SinglePlayerCampaign/NODBunker.xml" />	  
+		<Include type="all" source="Structures_SinglePlayerCampaign/NODControlNode.xml" />	  
+		<Include type="all" source="Structures_SinglePlayerCampaign/NSLabRadarBuilding.xml" />	  
+		<Include type="all" source="Structures_SinglePlayerCampaign/NSSilo.xml" />	  
+  </Includes>
+</AssetDeclaration>

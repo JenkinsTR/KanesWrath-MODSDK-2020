@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	
+	<GameObject
+		id="AttributeBooster4"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>		
+			<AttributeModifierPoolUpdate
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierAuraUpdate
+				id="ModuleTag_AttributeModifierAura" 
+				InitiallyActive="true"
+				AttributeModifierName="AttributeModifier_SlowDown"
+				RefreshDelay="0.05s"
+				AllowSelf="false"
+				Range="13000"
+				TargetEnemy="true"
+				AffectContainedOnly="false">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL ENEMIES"
+					Include="INFANTRY VEHICLE"
+					Exclude="" />
+			</AttributeModifierAuraUpdate>			
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="3.0s"
+				MaxLifetime="3.0s" />			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="NAODAllVeterancy1"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		EnergyProduction="10000000"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate135" UpgradeToGrant="Upgrade_ProductionVeterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate136" UpgradeToGrant="Upgrade_ProductionVeterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate137" UpgradeToGrant="Upgrade_ProductionVeterancy_VETERAN" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate176" UpgradeToGrant="Upgrade_Veterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate177" UpgradeToGrant="Upgrade_Veterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate178" UpgradeToGrant="Upgrade_Veterancy_VETERAN" />
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="NAODAllVeterancy2"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		EnergyProduction="10000000"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate135" UpgradeToGrant="Upgrade_ProductionVeterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate136" UpgradeToGrant="Upgrade_ProductionVeterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate137" UpgradeToGrant="Upgrade_ProductionVeterancy_VETERAN" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate176" UpgradeToGrant="Upgrade_Veterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate177" UpgradeToGrant="Upgrade_Veterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate178" UpgradeToGrant="Upgrade_Veterancy_VETERAN" />
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" />			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="NAODAllVeterancy3"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		EnergyProduction="10000000"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate135" UpgradeToGrant="Upgrade_ProductionVeterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate136" UpgradeToGrant="Upgrade_ProductionVeterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate137" UpgradeToGrant="Upgrade_ProductionVeterancy_VETERAN" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate176" UpgradeToGrant="Upgrade_Veterancy_ELITE" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate177" UpgradeToGrant="Upgrade_Veterancy_HEROIC" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate178" UpgradeToGrant="Upgrade_Veterancy_VETERAN" />
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" />			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+</AssetDeclaration>

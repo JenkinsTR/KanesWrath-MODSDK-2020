@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+    <UnitAbilityButtonTemplate
+        id="ButtonSpecialPowerGuardShield"
+        LogicCommand="Command_SpecialPowerGuardShield">
+		<Data>
+			<SpecialPower
+            StateData="ButtonSpecialPowerGuardShieldOn"/>
+        </Data>
+    </UnitAbilityButtonTemplate>
+			
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_GuardShield"
+		SpecialPower="SpecialPower_GuardShield">
+		<Data>
+			<TargetedPower
+				StateData="ButtonSpecialPowerGuardShieldOn">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+
+	<ButtonSingleStateData
+		id="ButtonSpecialPowerGuardShieldOn">
+		<State
+					Image="Button_PlayerPowerCrystalShield"
+                    Title="NAME:GuardShield"
+					Description="DESC:GuardShield" />
+	</ButtonSingleStateData>
+
+	<UnitAbilityButtonTemplate
+		id="ButtonGuardShieldAIModusON"
+		LogicCommand="Command_Upgrade_GuardShieldAIModusON">
+		<Data>
+			<ObjectUpgrade
+				StateData="ButtonStateGuardShieldAIModusON" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateGuardShieldAIModusON">
+		<State
+			Image="Button_GuardShieldAIModusActivator"
+			Title="NAME:GuardShieldAIModusON"
+			Description="DESC:GuardShieldAIModusON" />
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonGuardShieldAIModusOFF"
+		LogicCommand="Command_Upgrade_GuardShieldAIModusOFF">
+		<Data>
+			<ObjectUpgrade
+				StateData="ButtonStateGuardShieldAIModusOFF" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateGuardShieldAIModusOFF">
+		<State
+			Image="Button_GuardShieldAIModusDeactivator"
+			Title="NAME:GuardShieldAIModusOFF"
+			Description="DESC:GuardShieldAIModusOFF" />
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonGuardShieldAIModusActivator"
+		LogicCommand="Command_SpecialPower_GuardShieldAIModusActivator">
+		<Data>
+			<SpecialPower
+				StateData="ButtonStateGuardShieldAIModusActivator" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateGuardShieldAIModusActivator">
+		<State
+			Image="Button_UpgradeCompositeArmor"
+			Title="NAME:UpgradeAdvancedTurbines"
+			Description="DESC:UpgradeAdvancedTurbines" />
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonGuardShieldAIModusDeactivator"
+		LogicCommand="Command_SpecialPower_GuardShieldAIModusDeactivator">
+		<Data>
+			<SpecialPower
+				StateData="ButtonStateGuardShieldAIModusDeactivator" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateGuardShieldAIModusDeactivator">
+		<State
+			Image="Button_UpgradeAdvancedTurbines"
+			Title="NAME:UpgradeAdvancedTurbines"
+			Description="DESC:UpgradeAdvancedTurbines" />
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonForceFieldDistractionWeapon"
+		LogicCommand="Command_SpecialPower_ForceFieldDistractionWeapon">
+		<Data>
+			<SpecialPower
+				StateData="ButtonStateForceFieldDistractionWeapon" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateForceFieldDistractionWeapon">
+		<State
+			Image="Portrait_NeutralCrate"
+			Title="NAME:ForceFieldDistractionWeapon"
+			Description="DESC:ForceFieldDistractionWeapon" />
+	</ButtonSingleStateData>	
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonForceFieldAttractionWeapon"
+		LogicCommand="Command_SpecialPower_ForceFieldAttractionWeapon">
+		<Data>
+			<SpecialPower
+				StateData="ButtonStateForceFieldAttractionWeapon" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateForceFieldAttractionWeapon">
+		<State
+			Image="Portrait_NeutralCrate"
+			Title="NAME:ForceFieldAttractionWeapon"
+			Description="DESC:ForceFieldAttractionWeapon" />
+	</ButtonSingleStateData>
+	
+
+</AssetDeclaration>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="InGameUISimpleHelpTemplate">
+		<Entry id="Title" AssetType="String" IsRequired="true" IsAttribute="true"/>
+		<Entry id="Description" AssetType="String" IsAttribute="true" />
+		<Entry id="TypeDescription" AssetType="String" IsAttribute="true" />
+		<Entry id="Instructions" AssetType="String" IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RadiusCursor">
+		<EntryPoid
+			id="Id"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="DecalTemplate"
+			AssetType="RadiusDecalTemplate" />
+	</Asset>
+
+	<GameAsset
+		id="RadiusCursorLibrary"
+		TypeHash="4046700439">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="RadiusCursor"
+			AssetType="RadiusCursor"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

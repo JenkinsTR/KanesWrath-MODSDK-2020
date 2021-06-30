@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+
+	<SpecialPowerTemplate
+		id="SpecialPower_ActivateMetaControl"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_ToggleAICoControl"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney5000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-5000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney10000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-10000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney15000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-15000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney20000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-20000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney25000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-25000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney30000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-30000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney35000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-35000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney40000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-40000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney45000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-45000"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerTakeMoney50000"
+		TargetType="NONE"
+		ReloadTime="0s"
+		Money="-50000"/>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_DeActivateMetaControl"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_NAOD_NextWave"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_DiplomacyMenuSelect"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_EnemyAIOFF"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_MapRevealerToggle"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_ExternalLuaScript"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_SendMoney"
+		ReloadTime="0s"
+        TargetType="OBJECT" 
+		Flags="IS_PLAYER_POWER NEEDS_OBJECT_FILTER"
+		Money="-500">
+		<ObjectFilter 
+			Rule="ANY"
+			Relationship="ALLIES ENEMIES" 
+			Include="VEHICLE HUGE_VEHICLE INFANTRY" 
+		/>
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="AIRCRAFT"
+		/> 
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_RiftGen"
+		DisplayName="NAME:SuperweaponTimerRiftGenerator"
+		Description="DESC:SuperweaponTimerRiftGenerator"
+		Flags="IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+		ReloadTime="0s"
+		TargetType="LOCATION"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		EvaEventToPlayOnInitiateOwner="OwnRiftGeneratorActivated"
+		EvaEventToPlayOnInitiateAlly="AlliedRiftGeneratorActivated"
+		EvaEventToPlayOnInitiateEnemy="EnemyRiftGeneratorActivated"
+		RadiusCursorRadius="250"
+		RestrictionType="1"
+		TimerImage="Button_PlayerPowerRiftGenerator">
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_MetaControlGlobalDeactivate"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_Money5k"
+		ReloadTime="0s"
+        TargetType="OBJECT" 
+		Flags="IS_PLAYER_POWER NEEDS_OBJECT_FILTER">
+		<ObjectFilter 
+			Rule="ANY"
+			Relationship="ALLIES ENEMIES" 
+			Include="VEHICLE HUGE_VEHICLE INFANTRY" 
+		/>
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="AIRCRAFT"
+		/> 
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_EveryAIOFF"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_AIBoostToggle"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_MetaControlDummyMainTabMenuSelector"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerEdgeCoordinateAnchorUpperRight"
+		TargetType="LOCATION"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerEdgeCoordinateAnchorUpperLeft"
+		TargetType="LOCATION"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerEdgeCoordinateAnchorDownRightSpawner"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerEdgeCoordinateAnchorDownRight"
+		TargetType="LOCATION"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		RadiusCursorRadius="150"
+		ReloadTime="0s"/>
+			
+	<SpecialPowerTemplate
+		id="SpecialPowerMetaCreditShopMenu"
+		Flags="IS_PLAYER_POWER"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerDiplomacy_Accept"
+		Flags="IS_PLAYER_POWER"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerDiplomacy_Deny"
+		Flags="IS_PLAYER_POWER"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerChoosePosition"
+		TargetType="LOCATION"
+		Flags="IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS"
+		RadiusCursorRadius="10"
+		ReloadTime="0s"/>
+				
+	<SpecialPowerTemplate
+		id="SpecialPowerCameraSetup"
+		Flags="IS_PLAYER_POWER"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+		
+	<SpecialPowerTemplate
+		id="SpecialPowerFirstAndThirdPersonMode"
+		Flags="IS_PLAYER_POWER"
+		TargetType="NONE"
+		ReloadTime="0s"/>
+		
+</AssetDeclaration>

@@ -1,0 +1,2869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<MapMetaData
+		id="Multiplayer">
+		<MapMetaData
+			id="MAP_MP_2_BASS1"
+			Description="Map:MAP_MP_2_BASS1/Desc"
+			DisplayName="MAP_MP_2_BASS1"
+			NumPlayers="2"
+			CRC="2832794840"
+			FileName="Data\maps\official\MAP_MP_2_BASS1\MAP_MP_2_BASS1.map"
+			Width="410"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1761.65"
+					y="4021.9"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1765.66"
+					y="447.309"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK1"
+			Description="Map:MAP_MP_2_BLACK1/Desc"
+			DisplayName="MAP_MP_2_BLACK1"
+			NumPlayers="2"
+			CRC="2846588341"
+			FileName="Data\maps\official\MAP_MP_2_BLACK1\MAP_MP_2_BLACK1.map"
+			Width="270"
+			Height="370"
+			BorderSize="35"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1000.9"
+					y="400.799"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="994.593"
+					y="2724.32"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK10"
+			Description="Map:MAP_MP_2_BLACK10/Desc"
+			DisplayName="MAP_MP_2_BLACK10"
+			NumPlayers="2"
+			CRC="3743801994"
+			FileName="Data\maps\official\MAP_MP_2_BLACK10\MAP_MP_2_BLACK10.map"
+			Width="410"
+			Height="410"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="670"
+					y="510"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2760"
+					y="2850"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK11"
+			Description="Map:MAP_MP_2_BLACK11/Desc"
+			DisplayName="MAP_MP_2_BLACK11"
+			NumPlayers="2"
+			CRC="3957789722"
+			FileName="Data\maps\official\MAP_MP_2_BLACK11\MAP_MP_2_BLACK11.map"
+			Width="420"
+			Height="422"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="403.597"
+					y="2835.88"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2726.15"
+					y="499.046"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK12"
+			Description="Map:MAP_MP_2_BLACK12/Desc"
+			DisplayName="MAP_MP_2_BLACK12"
+			NumPlayers="2"
+			CRC="1649342550"
+			FileName="Data\maps\official\MAP_MP_2_BLACK12\MAP_MP_2_BLACK12.map"
+			Width="585"
+			Height="450"
+			BorderSize="80"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="503.378"
+					y="2392.91"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3815.8"
+					y="526.205"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK2"
+			Description="Map:MAP_MP_2_BLACK2/Desc"
+			DisplayName="MAP_MP_2_BLACK2"
+			NumPlayers="2"
+			CRC="2272639584"
+			FileName="Data\maps\official\MAP_MP_2_BLACK2\MAP_MP_2_BLACK2.map"
+			Width="500"
+			Height="400"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="750"
+					y="2250"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3250"
+					y="750"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK3"
+			Description="Map:MAP_MP_2_BLACK3/Desc"
+			DisplayName="MAP_MP_2_BLACK3"
+			NumPlayers="2"
+			CRC="3240913807"
+			FileName="Data\maps\official\MAP_MP_2_BLACK3\MAP_MP_2_BLACK3.map"
+			Width="500"
+			Height="360"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="599.999"
+					y="1321.97"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3394.18"
+					y="1301.45"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK4"
+			Description="Map:MAP_MP_2_BLACK4/Desc"
+			DisplayName="MAP_MP_2_BLACK4"
+			NumPlayers="2"
+			CRC="723449353"
+			FileName="Data\maps\official\MAP_MP_2_BLACK4\MAP_MP_2_BLACK4.map"
+			Width="410"
+			Height="310"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="437.16"
+					y="2119.99"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3102.04"
+					y="348.71"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK5"
+			Description="Map:MAP_MP_2_BLACK5/Desc"
+			DisplayName="MAP_MP_2_BLACK5"
+			NumPlayers="2"
+			CRC="148771586"
+			FileName="Data\maps\official\MAP_MP_2_BLACK5\MAP_MP_2_BLACK5.map"
+			Width="360"
+			Height="360"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2550"
+					y="2550"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="450"
+					y="450"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK6"
+			Description="Map:MAP_MP_2_BLACK6/Desc"
+			DisplayName="MAP_MP_2_BLACK6"
+			NumPlayers="2"
+			CRC="3342535951"
+			FileName="Data\maps\official\MAP_MP_2_BLACK6\MAP_MP_2_BLACK6.map"
+			Width="800"
+			Height="800"
+			BorderSize="25"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2520.62"
+					y="2496.78"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="5000"
+					y="5000"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK7"
+			Description="Map:MAP_MP_2_BLACK7/Desc"
+			DisplayName="MAP_MP_2_BLACK7"
+			NumPlayers="2"
+			CRC="2153591958"
+			FileName="Data\maps\official\MAP_MP_2_BLACK7\MAP_MP_2_BLACK7.map"
+			Width="500"
+			Height="350"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="613.724"
+					y="2002.5"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3364.95"
+					y="502.944"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK8"
+			Description="Map:MAP_MP_2_BLACK8/Desc"
+			DisplayName="MAP_MP_2_BLACK8"
+			NumPlayers="2"
+			CRC="768055388"
+			FileName="Data\maps\official\MAP_MP_2_BLACK8\MAP_MP_2_BLACK8.map"
+			Width="450"
+			Height="450"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="500"
+					y="1500"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3000"
+					y="1500"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_BLACK9"
+			Description="Map:MAP_MP_2_BLACK9/Desc"
+			DisplayName="MAP_MP_2_BLACK9"
+			NumPlayers="2"
+			CRC="1782835261"
+			FileName="Data\maps\official\MAP_MP_2_BLACK9\MAP_MP_2_BLACK9.map"
+			Width="360"
+			Height="540"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1500"
+					y="4200"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1500"
+					y="600"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_CHUCK1"
+			Description="Map:MAP_MP_2_CHUCK1/Desc"
+			DisplayName="MAP_MP_2_CHUCK1"
+			NumPlayers="2"
+			CRC="297101861"
+			FileName="Data\maps\official\MAP_MP_2_CHUCK1\MAP_MP_2_CHUCK1.map"
+			Width="610"
+			Height="435"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="777.075"
+					y="2760.46"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4751.2"
+					y="999.628"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_SIMON"
+			Description="Map:MAP_MP_2_SIMON/Desc"
+			DisplayName="MAP_MP_2_SIMON"
+			NumPlayers="2"
+			CRC="2709739455"
+			FileName="Data\maps\official\MAP_MP_2_SIMON\MAP_MP_2_SIMON.map"
+			Width="345"
+			Height="345"
+			BorderSize="15"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="796.968"
+					y="409.181"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2519.74"
+					y="2730.34"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_2_WILL1"
+			Description="Map:MAP_MP_2_WILL1/Desc"
+			DisplayName="MAP_MP_2_WILL1"
+			NumPlayers="2"
+			CRC="661230142"
+			FileName="Data\maps\official\MAP_MP_2_WILL1\MAP_MP_2_WILL1.map"
+			Width="568"
+			Height="430"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="950"
+					y="2650"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4130"
+					y="2650"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_3_BLACK1"
+			Description="Map:MAP_MP_3_BLACK1/Desc"
+			DisplayName="MAP_MP_3_BLACK1"
+			NumPlayers="3"
+			CRC="3067926079"
+			FileName="Data\maps\official\MAP_MP_3_BLACK1\MAP_MP_3_BLACK1.map"
+			Width="360"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1450"
+					y="3950"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="529.408"
+					y="438.644"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2534.39"
+					y="432.177"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_3_BLACK2"
+			Description="Map:MAP_MP_3_BLACK2/Desc"
+			DisplayName="MAP_MP_3_BLACK2"
+			NumPlayers="3"
+			CRC="3688145123"
+			FileName="Data\maps\official\MAP_MP_3_BLACK2\MAP_MP_3_BLACK2.map"
+			Width="360"
+			Height="360"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="505.757"
+					y="2043.71"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2470.95"
+					y="2036.88"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="1498.85"
+					y="378.865"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_BASS"
+			Description="Map:MAP_MP_4_BASS/Desc"
+			DisplayName="MAP_MP_4_BASS"
+			NumPlayers="4"
+			CRC="2114782290"
+			FileName="Data\maps\official\MAP_MP_4_BASS\MAP_MP_4_BASS.map"
+			Width="510"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="435.365"
+					y="2261.35"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4036.2"
+					y="2258.55"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2261.65"
+					y="4021.9"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2265.66"
+					y="447.309"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_BENDER"
+			Description="Map:MAP_MP_4_BENDER/Desc"
+			DisplayName="MAP_MP_4_BENDER"
+			NumPlayers="4"
+			CRC="3712558834"
+			FileName="Data\maps\official\MAP_MP_4_BENDER\MAP_MP_4_BENDER.map"
+			Width="560"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="820"
+					y="820"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4180"
+					y="820"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4180"
+					y="4180"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="820.787"
+					y="4176.74"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_BLACK1"
+			Description="Map:MAP_MP_4_BLACK1/Desc"
+			DisplayName="MAP_MP_4_BLACK1"
+			NumPlayers="4"
+			CRC="410295152"
+			FileName="Data\maps\official\MAP_MP_4_BLACK1\MAP_MP_4_BLACK1.map"
+			Width="570"
+			Height="570"
+			BorderSize="60"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="960"
+					y="3560"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3560"
+					y="3560"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3560"
+					y="960"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="960"
+					y="960"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_BLACK5"
+			Description="Map:MAP_MP_4_BLACK5/Desc"
+			DisplayName="MAP_MP_4_BLACK5"
+			NumPlayers="4"
+			CRC="3702962967"
+			FileName="Data\maps\official\MAP_MP_4_BLACK5\MAP_MP_4_BLACK5.map"
+			Width="610"
+			Height="410"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="500"
+					y="1750"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2340.9"
+					y="2966.66"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2750"
+					y="500"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="5000"
+					y="1750"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_BLACK6"
+			Description="Map:MAP_MP_4_BLACK6/Desc"
+			DisplayName="MAP_MP_4_BLACK6"
+			NumPlayers="4"
+			CRC="1779331451"
+			FileName="Data\maps\official\MAP_MP_4_BLACK6\MAP_MP_4_BLACK6.map"
+			Width="410"
+			Height="410"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="700"
+					y="700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2800"
+					y="700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="700"
+					y="2800"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2800"
+					y="2800"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_CHUCK1"
+			Description="Map:MAP_MP_4_CHUCK1/Desc"
+			DisplayName="MAP_MP_4_CHUCK1"
+			NumPlayers="4"
+			CRC="794153116"
+			FileName="Data\maps\official\MAP_MP_4_CHUCK1\MAP_MP_4_CHUCK1.map"
+			Width="610"
+			Height="435"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="889.959"
+					y="1332.57"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="678.002"
+					y="2910.52"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4623.59"
+					y="2369"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4774.66"
+					y="798.134"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_CHUCK2"
+			Description="Map:MAP_MP_4_CHUCK2/Desc"
+			DisplayName="MAP_MP_4_CHUCK2"
+			NumPlayers="4"
+			CRC="1402360054"
+			FileName="Data\maps\official\MAP_MP_4_CHUCK2\MAP_MP_4_CHUCK2.map"
+			Width="510"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="928.628"
+					y="863.379"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3856.92"
+					y="3497.09"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="741.659"
+					y="3642.04"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3703.24"
+					y="920.812"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_RAO"
+			Description="Map:MAP_MP_4_RAO/Desc"
+			DisplayName="MAP_MP_4_RAO"
+			NumPlayers="4"
+			CRC="4087840770"
+			FileName="Data\maps\official\MAP_MP_4_RAO\MAP_MP_4_RAO.map"
+			Width="340"
+			Height="340"
+			BorderSize="20"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2450"
+					y="550"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2400"
+					y="2400"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="600"
+					y="2400"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="600"
+					y="550"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_4_SSmith_01"
+			Description="Map:MAP_MP_4_SSmith_01/Desc"
+			DisplayName="MAP_MP_4_SSmith_01"
+			NumPlayers="4"
+			CRC="3088786060"
+			FileName="Data\maps\official\MAP_MP_4_SSmith_01\MAP_MP_4_SSmith_01.map"
+			Width="360"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="500"
+					y="1031.73"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2503.25"
+					y="1005.99"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="505.374"
+					y="3559.22"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2500"
+					y="3500"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_5_BLACK1"
+			Description="Map:MAP_MP_5_BLACK1/Desc"
+			DisplayName="MAP_MP_5_BLACK1"
+			NumPlayers="5"
+			CRC="3557607711"
+			FileName="Data\maps\official\MAP_MP_5_BLACK1\MAP_MP_5_BLACK1.map"
+			Width="440"
+			Height="440"
+			BorderSize="20"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="285.057"
+					y="2695.95"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1516.83"
+					y="3427.48"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3590"
+					y="3550"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2760"
+					y="350"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="660"
+					y="450"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_6_BLACK1"
+			Description="Map:MAP_MP_6_BLACK1/Desc"
+			DisplayName="MAP_MP_6_BLACK1"
+			NumPlayers="6"
+			CRC="3172971229"
+			FileName="Data\maps\official\MAP_MP_6_BLACK1\MAP_MP_6_BLACK1.map"
+			Width="800"
+			Height="800"
+			BorderSize="25"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2500"
+					y="2500"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="550.886"
+					y="6950.62"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4991.98"
+					y="4996.55"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="6936.16"
+					y="512.207"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="6228.64"
+					y="3752.3"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="1377.2"
+					y="3940.56"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_6_BLACK2"
+			Description="Map:MAP_MP_6_BLACK2/Desc"
+			DisplayName="MAP_MP_6_BLACK2"
+			NumPlayers="6"
+			CRC="3621213581"
+			FileName="Data\maps\official\MAP_MP_6_BLACK2\MAP_MP_6_BLACK2.map"
+			Width="600"
+			Height="650"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="696.131"
+					y="1784.27"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="710"
+					y="3670"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4329.23"
+					y="3777.08"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4283.14"
+					y="1798.65"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="2512.67"
+					y="810.919"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="2505.39"
+					y="4786.44"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_6_Hayes"
+			Description="Map:MAP_MP_6_Hayes/Desc"
+			DisplayName="MAP_MP_6_Hayes"
+			NumPlayers="6"
+			CRC="4081249608"
+			FileName="Data\maps\official\MAP_MP_6_Hayes\MAP_MP_6_Hayes.map"
+			Width="700"
+			Height="700"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1009.55"
+					y="999.873"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1000"
+					y="5000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4975.76"
+					y="4997.86"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4994.63"
+					y="990.588"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="3126.22"
+					y="5641.26"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="3007.79"
+					y="349.702"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_8_BASS"
+			Description="Map:MAP_MP_8_BASS/Desc"
+			DisplayName="MAP_MP_8_BASS"
+			NumPlayers="8"
+			CRC="1577161602"
+			FileName="Data\maps\official\MAP_MP_8_BASS\MAP_MP_8_BASS.map"
+			Width="750"
+			Height="750"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1628.34"
+					y="1589.42"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1626.88"
+					y="4901.83"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4884.1"
+					y="4899.74"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4909.1"
+					y="1623.69"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="3250"
+					y="5570"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="3250"
+					y="930"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_7_Start">
+				<Position
+					x="980"
+					y="3260"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_8_Start">
+				<Position
+					x="5550"
+					y="3260"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="MAP_MP_8_BLACK1"
+			Description="Map:MAP_MP_8_BLACK1/Desc"
+			DisplayName="MAP_MP_8_BLACK1"
+			NumPlayers="8"
+			CRC="292690059"
+			FileName="Data\maps\official\MAP_MP_8_BLACK1\MAP_MP_8_BLACK1.map"
+			Width="850"
+			Height="600"
+			BorderSize="50"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1500"
+					y="4000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="6000"
+					y="4000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="6000"
+					y="1000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="1500"
+					y="1000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="3000"
+					y="4000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="4500"
+					y="4000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_7_Start">
+				<Position
+					x="4500"
+					y="1000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_8_Start">
+				<Position
+					x="3000"
+					y="1000"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_AW01_04"
+			Description="Map:BAMAP_AW01_04/Desc"
+			DisplayName="BAMAP_AW01_04"
+			NumPlayers="4"
+			CRC="3463306903"
+			FileName="Data\maps\official\BAMAP_AW01_04\BAMAP_AW01_04.map"
+			Width="660"
+			Height="610"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="937"
+					y="4787"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="937"
+					y="715"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="5040"
+					y="709"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="5040"
+					y="4781"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC01_4"
+			Description="Map:BAMAP_DC01_4/Desc"
+			DisplayName="BAMAP_DC01_4"
+			NumPlayers="4"
+			CRC="621358210"
+			FileName="Data\maps\official\BAMAP_DC01_4\BAMAP_DC01_4.map"
+			Width="560"
+			Height="410"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="685.044"
+					y="2807.31"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1770.81"
+					y="860.767"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3506.31"
+					y="2889.9"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4314.56"
+					y="704.606"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC02_4"
+			Description="Map:BAMAP_DC02_4/Desc"
+			DisplayName="BAMAP_DC02_4"
+			NumPlayers="4"
+			CRC="3691106827"
+			FileName="Data\maps\official\BAMAP_DC02_4\BAMAP_DC02_4.map"
+			Width="430"
+			Height="515"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="857.341"
+					y="2668.51"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2750"
+					y="2700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="437.219"
+					y="1065.64"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3316.55"
+					y="949.769"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC03_3"
+			Description="Map:BAMAP_DC03_3/Desc"
+			DisplayName="BAMAP_DC03_3"
+			NumPlayers="4"
+			CRC="3612702066"
+			FileName="Data\maps\official\BAMAP_DC03_3\BAMAP_DC03_3.map"
+			Width="510"
+			Height="480"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="355.022"
+					y="3460.68"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4105.2"
+					y="396.892"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3817.12"
+					y="3794.11"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="407.494"
+					y="422.536"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC04_3"
+			Description="Map:BAMAP_DC04_3/Desc"
+			DisplayName="BAMAP_DC04_3"
+			NumPlayers="4"
+			CRC="321904090"
+			FileName="Data\maps\official\BAMAP_DC04_3\BAMAP_DC04_3.map"
+			Width="600"
+			Height="435"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="5074.61"
+					y="1375.25"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="669.316"
+					y="3008.72"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2056.82"
+					y="3299.59"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3691.28"
+					y="595.219"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC05_2"
+			Description="Map:BAMAP_DC05_2/Desc"
+			DisplayName="BAMAP_DC05_2"
+			NumPlayers="2"
+			CRC="3770216594"
+			FileName="Data\maps\official\BAMAP_DC05_2\BAMAP_DC05_2.map"
+			Width="435"
+			Height="435"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="670"
+					y="550"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3200"
+					y="3080"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC05_3"
+			Description="Map:BAMAP_DC05_3/Desc"
+			DisplayName="BAMAP_DC05_3"
+			NumPlayers="3"
+			CRC="3821435454"
+			FileName="Data\maps\official\BAMAP_DC05_3\BAMAP_DC05_3.map"
+			Width="435"
+			Height="435"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="670"
+					y="550"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3200"
+					y="3080"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3104.24"
+					y="631.935"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC06_4"
+			Description="Map:BAMAP_DC06_4/Desc"
+			DisplayName="BAMAP_DC06_4"
+			NumPlayers="4"
+			CRC="2104616938"
+			FileName="Data\maps\official\BAMAP_DC06_4\BAMAP_DC06_4.map"
+			Width="460"
+			Height="385"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="690.426"
+					y="1652.92"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3250.86"
+					y="1623.77"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="1540"
+					y="2830"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2460"
+					y="370"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC07_4"
+			Description="Map:BAMAP_DC07_4/Desc"
+			DisplayName="BAMAP_DC07_4"
+			NumPlayers="4"
+			CRC="121617951"
+			FileName="Data\maps\official\BAMAP_DC07_4\BAMAP_DC07_4.map"
+			Width="660"
+			Height="460"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="725"
+					y="3250"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1964.27"
+					y="670.393"
+					z="-24" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3924.7"
+					y="709.576"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="5275"
+					y="3250"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC08_4"
+			Description="Map:BAMAP_DC08_4/Desc"
+			DisplayName="BAMAP_DC08_4"
+			NumPlayers="4"
+			CRC="3321755673"
+			FileName="Data\maps\official\BAMAP_DC08_4\BAMAP_DC08_4.map"
+			Width="460"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="600"
+					y="1200"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3400"
+					y="3800"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="600"
+					y="3800"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3400"
+					y="1200"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC10_4"
+			Description="Map:BAMAP_DC10_4/Desc"
+			DisplayName="BAMAP_DC10_4"
+			NumPlayers="4"
+			CRC="1065203306"
+			FileName="Data\maps\official\BAMAP_DC10_4\BAMAP_DC10_4.map"
+			Width="460"
+			Height="460"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="3000"
+					y="3000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="904.881"
+					y="944.979"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3000"
+					y="1000"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="1000"
+					y="3000"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_DC11_4"
+			Description="Map:BAMAP_DC11_4/Desc"
+			DisplayName="BAMAP_DC11_4"
+			NumPlayers="4"
+			CRC="2720524550"
+			FileName="Data\maps\official\BAMAP_DC11_4\BAMAP_DC11_4.map"
+			Width="460"
+			Height="610"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="377.482"
+					y="4662.59"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3601.82"
+					y="809.575"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="500"
+					y="1400"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3501.78"
+					y="4094.19"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW01_4"
+			Description="Map:BAMAP_EW01_4/Desc"
+			DisplayName="BAMAP_EW01_4"
+			NumPlayers="4"
+			CRC="4137649117"
+			FileName="Data\maps\official\BAMAP_EW01_4\BAMAP_EW01_4.map"
+			Width="610"
+			Height="610"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1250"
+					y="3150"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2350"
+					y="4250"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4250"
+					y="2350"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3150"
+					y="1250"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW03_04"
+			Description="Map:BAMAP_EW03_04/Desc"
+			DisplayName="BAMAP_EW03_04"
+			NumPlayers="4"
+			CRC="1808596251"
+			FileName="Data\maps\official\BAMAP_EW03_04\BAMAP_EW03_04.map"
+			Width="560"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1250"
+					y="3650"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3814.02"
+					y="3686.05"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3816.28"
+					y="1353.28"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="1216.97"
+					y="1350.81"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW05_04"
+			Description="Map:BAMAP_EW05_04/Desc"
+			DisplayName="BAMAP_EW05_04"
+			NumPlayers="4"
+			CRC="2461173003"
+			FileName="Data\maps\official\BAMAP_EW05_04\BAMAP_EW05_04.map"
+			Width="550"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1200"
+					y="3800"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3250"
+					y="2850"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3700"
+					y="700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="1650"
+					y="1650"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW06_04"
+			Description="Map:BAMAP_EW06_04/Desc"
+			DisplayName="BAMAP_EW06_04"
+			NumPlayers="4"
+			CRC="2636327502"
+			FileName="Data\maps\official\BAMAP_EW06_04\BAMAP_EW06_04.map"
+			Width="560"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2901.58"
+					y="1118.79"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1080.04"
+					y="2750.45"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2079.79"
+					y="3873.4"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3979.35"
+					y="2268.28"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW07_04"
+			Description="Map:BAMAP_EW07_04/Desc"
+			DisplayName="BAMAP_EW07_04"
+			NumPlayers="4"
+			CRC="2801075313"
+			FileName="Data\maps\official\BAMAP_EW07_04\BAMAP_EW07_04.map"
+			Width="520"
+			Height="520"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="900"
+					y="3700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="900"
+					y="900"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3700"
+					y="3700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3700"
+					y="930"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW08_04"
+			Description="Map:BAMAP_EW08_04/Desc"
+			DisplayName="BAMAP_EW08_04"
+			NumPlayers="4"
+			CRC="914227408"
+			FileName="Data\maps\official\BAMAP_EW08_04\BAMAP_EW08_04.map"
+			Width="520"
+			Height="520"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2300"
+					y="800"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="800"
+					y="2300"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2247.95"
+					y="3869.18"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3804.92"
+					y="2296.01"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW09_03"
+			Description="Map:BAMAP_EW09_03/Desc"
+			DisplayName="BAMAP_EW09_03"
+			NumPlayers="3"
+			CRC="1513952902"
+			FileName="Data\maps\official\BAMAP_EW09_03\BAMAP_EW09_03.map"
+			Width="610"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1300"
+					y="2500"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="3700"
+					y="1100"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3700"
+					y="3900"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW10_06"
+			Description="Map:BAMAP_EW10_06/Desc"
+			DisplayName="BAMAP_EW10_06"
+			NumPlayers="6"
+			CRC="3695804184"
+			FileName="Data\maps\official\BAMAP_EW10_06\BAMAP_EW10_06.map"
+			Width="600"
+			Height="600"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="800"
+					y="700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1300"
+					y="2700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="1700"
+					y="4700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4600"
+					y="4700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="4100"
+					y="2700"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="3700"
+					y="700"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_EW11_05"
+			Description="Map:BAMAP_EW11_05/Desc"
+			DisplayName="BAMAP_EW11_05"
+			NumPlayers="5"
+			CRC="2220958424"
+			FileName="Data\maps\official\BAMAP_EW11_05\BAMAP_EW11_05.map"
+			Width="560"
+			Height="560"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="400"
+					y="3100"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2531.14"
+					y="4620.9"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="4600"
+					y="3100"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="3809.86"
+					y="668.456"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="1199.68"
+					y="674.423"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_JF01_4"
+			Description="Map:BAMAP_JF01_4/Desc"
+			DisplayName="BAMAP_JF01_4"
+			NumPlayers="4"
+			CRC="1234906735"
+			FileName="Data\maps\official\BAMAP_JF01_4\BAMAP_JF01_4.map"
+			Width="660"
+			Height="660"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1059.25"
+					y="5463.73"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="5472.25"
+					y="1273.04"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="5482.09"
+					y="4708.44"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="1071.14"
+					y="544.941"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_JF03_6"
+			Description="Map:BAMAP_JF03_6/Desc"
+			DisplayName="BAMAP_JF03_6"
+			NumPlayers="6"
+			CRC="2086749361"
+			FileName="Data\maps\official\BAMAP_JF03_6\BAMAP_JF03_6.map"
+			Width="660"
+			Height="710"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="654.836"
+					y="754.08"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="5259.38"
+					y="6038.26"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="437.87"
+					y="5920.8"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="5308.19"
+					y="616.641"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_5_Start">
+				<Position
+					x="678.192"
+					y="3453.34"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_6_Start">
+				<Position
+					x="5485.15"
+					y="3251.25"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_KK03_3"
+			Description="Map:BAMAP_KK03_3/Desc"
+			DisplayName="BAMAP_KK03_3"
+			NumPlayers="3"
+			CRC="2673192138"
+			FileName="Data\maps\official\BAMAP_KK03_3\BAMAP_KK03_3.map"
+			Width="510"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="1015.04"
+					y="718.641"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4143.86"
+					y="3434.95"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="918.938"
+					y="3956.16"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_RH01_4"
+			Description="Map:BAMAP_RH01_4/Desc"
+			DisplayName="BAMAP_RH01_4"
+			NumPlayers="4"
+			CRC="3102741280"
+			FileName="Data\maps\official\BAMAP_RH01_4\BAMAP_RH01_4.map"
+			Width="740"
+			Height="740"
+			BorderSize="70"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="887.801"
+					y="1685.49"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="4862.9"
+					y="5095.91"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="1228.24"
+					y="5003.5"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="4539.66"
+					y="966.677"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="BAMAP_SB01_4"
+			Description="Map:BAMAP_SB01_4/Desc"
+			DisplayName="BAMAP_SB01_4"
+			NumPlayers="4"
+			CRC="1591136307"
+			FileName="Data\maps\official\BAMAP_SB01_4\BAMAP_SB01_4.map"
+			Width="510"
+			Height="510"
+			BorderSize="30"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="2118.72"
+					y="3834.99"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="671.323"
+					y="2072.38"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3848.66"
+					y="2528.59"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_4_Start">
+				<Position
+					x="2476.22"
+					y="681.885"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="EAMAP_SB01_3"
+			Description="Map:EAMAP_SB01_3/Desc"
+			DisplayName="EAMAP_SB01_3"
+			NumPlayers="3"
+			CRC="1494237815"
+			FileName="Data\maps\official\EAMAP_SB01_3\EAMAP_SB01_3.map"
+			Width="560"
+			Height="510"
+			BorderSize="80"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="592.306"
+					y="2717.12"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2994.45"
+					y="370.048"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2457.08"
+					y="2191.92"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="EAMAP_SB02_3"
+			Description="Map:EAMAP_SB02_3/Desc"
+			DisplayName="EAMAP_SB02_3"
+			NumPlayers="3"
+			CRC="2353507816"
+			FileName="Data\maps\official\EAMAP_SB02_3\EAMAP_SB02_3.map"
+			Width="648"
+			Height="448"
+			BorderSize="48"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="614.993"
+					y="955.342"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="5089.08"
+					y="942.336"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="2978.05"
+					y="1522.6"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="EAMAP_SB03_3"
+			Description="Map:EAMAP_SB03_3/Desc"
+			DisplayName="EAMAP_SB03_3"
+			NumPlayers="3"
+			CRC="3381515658"
+			FileName="Data\maps\official\EAMAP_SB03_3\EAMAP_SB03_3.map"
+			Width="720"
+			Height="420"
+			BorderSize="60"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="3261.6"
+					y="2447.78"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="1888.02"
+					y="766.081"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="5260.66"
+					y="1395.83"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+		<MapMetaData
+			id="EAMAP_SB04_3"
+			Description="Map:EAMAP_SB04_3/Desc"
+			DisplayName="EAMAP_SB04_3"
+			NumPlayers="3"
+			CRC="906453103"
+			FileName="Data\maps\official\EAMAP_SB04_3\EAMAP_SB04_3.map"
+			Width="480"
+			Height="480"
+			BorderSize="48"
+			IsMultiplayer="true"
+			IsOfficial="true">
+			<StartPosition
+				Name="InitialCameraPosition">
+				<Position
+					x="0"
+					y="0"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_1_Start">
+				<Position
+					x="643.981"
+					y="3145.01"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_2_Start">
+				<Position
+					x="2736.23"
+					y="255.201"
+					z="0" />
+			</StartPosition>
+			<StartPosition
+				Name="Player_3_Start">
+				<Position
+					x="3404.74"
+					y="3398.45"
+					z="0" />
+			</StartPosition>
+		</MapMetaData>
+	</MapMetaData>
+</AssetDeclaration>

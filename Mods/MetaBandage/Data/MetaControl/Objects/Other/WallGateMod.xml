@@ -1,0 +1,7103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructGDIWallHub">
+		<Object>GDIWallHub</Object>
+	</LogicCommand>
+	<LogicCommand		
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_NOD_BuildTempleOfNOD">
+		<Object>NODTempleOfNOD</Object>
+	</LogicCommand>
+	<LogicCommand	
+		Type="CONSTRUCTION_YARD_CONSTRUCT" 
+		id="Command_NOD_BuildWallHub" >
+		<Object>NODWallHub</Object>
+	</LogicCommand>
+	<LogicCommand
+		Options="OPTION_ONE"
+		Type="DOZER_CONSTRUCT"
+		id="Command_GDI_BeginWallSpan">
+		<Object>GDIWallHub</Object>
+	</LogicCommand>
+	<LogicCommand
+		Options="OPTION_ONE"
+		Type="DOZER_CONSTRUCT"
+		id="Command_NOD_BeginWallSpan">
+		<Object>NODWallHub</Object>
+	</LogicCommand>
+	<LogicCommand
+		Options="OPTION_ONE"
+		Type="DOZER_CONSTRUCT"
+		id="Command_Alien_BeginWallSpan">
+		<Object>AlienWallHub</Object>
+	</LogicCommand>
+
+  	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_UpWallHubS">
+		<SpecialPower>SpecialPower_GrantUpWallHubS</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_UpWallHubG">
+		<SpecialPower>SpecialPower_GrantUpWallHubG</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_UpWallHubW">
+		<SpecialPower>SpecialPower_GrantUpWallHubW</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Options="OPTION_ONE"
+		Type="DOZER_CONSTRUCT"
+		id="Command_BeginWallSSpan">
+		<Object></Object>
+	</LogicCommand>
+	<LogicCommand
+		Options="OPTION_ONE"
+		Type="DOZER_CONSTRUCT"
+		id="Command_BeginWallGSpan">
+		<Object></Object>
+	</LogicCommand>
+	
+  	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_LowerWG">
+		<SpecialPower>SpecialPower_LowerWallGate</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_RaiseWG">
+		<SpecialPower>SpecialPower_RaiseWallGate</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_AutoWG">
+		<SpecialPower>SpecialPower_AutoWallGate</SpecialPower>
+	</LogicCommand>
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_NAutoWG">
+		<SpecialPower>SpecialPower_NAutoWallGate</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommandSet
+		id="WallGateAutoCommandSet">
+		<Cmd>Command_NAutoWG</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallGateCommandSet">
+		<Cmd>Command_LowerWG</Cmd>
+		<Cmd>Command_AutoWG</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallGateOpenedCommandSet">
+		<Cmd>Command_RaiseWG</Cmd>
+		<Cmd>Command_AutoWG</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallHubCommandSet">
+		<Cmd>Command_UpWallHubS</Cmd>
+		<Cmd>Command_UpWallHubG</Cmd>
+		<Cmd>Command_UpWallHubW</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallHubBldSCommandSet">
+		<Cmd>Command_BeginWallSSpan</Cmd>
+		<Cmd>Command_UpWallHubG</Cmd>
+		<Cmd>Command_UpWallHubW</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallHubBldGCommandSet">
+		<Cmd>Command_BeginWallGSpan</Cmd>
+		<Cmd>Command_UpWallHubS</Cmd>
+		<Cmd>Command_UpWallHubW</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="WallHubBldWCommandSet">
+		<Cmd>Command_UpWallHubS</Cmd>
+		<Cmd>Command_UpWallHubG</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="GDIWallHubCommandSet">
+		<Cmd>Command_GDI_BeginWallSpan</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="NODWallHubCommandSet">
+		<Cmd>Command_NOD_BeginWallSpan</Cmd>
+		<Cmd>Command_TogglePower</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	
+			<SpecialPowerButton
+				Id="Command_UpWallHubS">
+				<State
+					Image="Button_UpWallHS"
+					Title="Name:UpWallHubS"
+					Description="DESC:UpWallHubS" />
+			</SpecialPowerButton>
+			<SpecialPowerButton
+				Id="Command_UpWallHubG">
+				<State
+					Image="Button_UpWallHG"
+					Title="Name:UpWallHubG"
+					Description="DESC:UpWallHubG" />
+			</SpecialPowerButton>
+			<SpecialPowerButton
+				Id="Command_UpWallHubW">
+				<State
+					Image="Button_UpWallHW"
+					Title="Name:UpWallHubW"
+					Description="DESC:UpWallHubW" />
+			</SpecialPowerButton>
+			<BuildWallButton
+				Id="Command_BeginWallSSpan">
+				<State
+					Image="Button_AbilityWall"
+					Title="NAME:AbilityWallSSpan"
+					Description="DESC:AbilityWallSSpan" />
+			</BuildWallButton>
+			<BuildWallButton
+				Id="Command_BeginWallGSpan">
+				<State
+					Image="Button_AbilityWall"
+					Title="NAME:AbilityWallGSpan"
+					Description="DESC:AbilityWallGSpan" />
+			</BuildWallButton>
+			
+			<SpecialPowerButton
+				Id="Command_AutoWG">
+				<State
+					Image="Button_AutoWG"
+					Title="NAME:AbilityAutoWG"
+					Description="DESC:AbilityAutoWG" />
+			</SpecialPowerButton>
+			<SpecialPowerButton
+				Id="Command_NAutoWG">
+				<State
+					Image="Button_NAutoWG"
+					Title="NAME:AbilityNAutoWG"
+					Description="DESC:AbilityNAutoWG" />
+			</SpecialPowerButton>
+
+			<SpecialPowerButton
+				Id="Command_LowerWG">
+				<State
+					Image="Button_LowerWG"
+					Title="NAME:AbilityLowerWG"
+					Description="DESC:AbilityLowerWG" />
+			</SpecialPowerButton>
+			<SpecialPowerButton
+				Id="Command_RaiseWG">
+				<State
+					Image="Button_RaiseWG"
+					Title="NAME:AbilityRaiseWG"
+					Description="DESC:AbilityRaiseWG" />
+			</SpecialPowerButton>
+			
+	<SpecialPowerTemplate
+		id="SpecialPower_GrantUpWallHubS"
+		TargetType="NONE"
+		Money="-500"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_GrantUpWallHubG"
+		TargetType="NONE"
+		Money="-500"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_GrantUpWallHubW"
+		TargetType="NONE"
+		Money="-500"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_LowerWallGate"
+		TargetType="NONE"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_RaiseWallGate"
+		TargetType="NONE"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_AutoWallGate"
+		TargetType="NONE"
+	/>
+	<SpecialPowerTemplate
+		id="SpecialPower_NAutoWallGate"
+		TargetType="NONE"
+	/>
+	
+	<ExperienceLevelTemplate
+		id="AlienWallHub_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienWallHubInit</Target>
+		<Target>AlienWallHubTrans</Target>
+		<Target>AlienWallHub</Target>
+		<Target>AlienWallHubS</Target>
+		<Target>AlienWallHubG</Target>
+		<Target>AlienWallHubW</Target>
+		<Target>AlienWallSegmentInit</Target>
+		<Target>AlienWallSegmentTrans</Target>
+		<Target>AlienWallSegment</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienWallGate_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienWallGate</Target>
+		<Target>AlienWallGateOpened</Target>
+		<Target>AlienWallGateClosed</Target>
+		<Target>AlienWallGateAutoOpened</Target>
+		<Target>AlienWallGateAutoClosed</Target>
+		<Target>AlienWallGateAutoClosedTemp</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="100"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="NODWallHub_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>NODWallHub</Target>
+		<Target>NODWallSegment</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="GDIWallHubExperienceLevel_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>GDIWallHub</Target>
+		<Target>GDIWallSegment</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO"  
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<ExperienceLevelTemplate
+		id="AlienWallHub_1"
+		RequiredExperience="1"
+		ExperienceAward="50"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienWallHubInit</Target>
+		<Target>AlienWallHubTrans</Target>
+		<Target>AlienWallHub</Target>
+		<Target>AlienWallHubS</Target>
+		<Target>AlienWallHubG</Target>
+		<Target>AlienWallHubW</Target>
+		<Target>AlienWallSegmentInit</Target>
+		<Target>AlienWallSegmentTrans</Target>
+		<Target>AlienWallSegment</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="50"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	<ExperienceLevelTemplate
+		id="AlienWallGate_1"
+		RequiredExperience="1"
+		ExperienceAward="100"
+		Rank="1">
+		<LevelUpTintColor
+			r="1.0"
+			g="1.0"
+			b="1.0" />
+		<Target>AlienWallGate</Target>
+		<Target>AlienWallGateOpened</Target>
+		<Target>AlienWallGateClosed</Target>
+		<Target>AlienWallGateAutoOpened</Target>
+		<Target>AlienWallGateAutoClosed</Target>
+		<Target>AlienWallGateAutoClosedTemp</Target>
+		<Decal
+			Texture="decal_S_level1"
+			Texture2="Decal_Struct_CO" 
+			Style="MERGE_DECAL"
+			OpacityMin="80"
+			OpacityMax="100"
+			MinRadius="100"
+			MaxRadius="200"
+			MaxSelectedUnits="40"/>
+	</ExperienceLevelTemplate>
+	
+	<UpgradeTemplate id="Upgrade_WallHubW"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+
+	<UpgradeTemplate id="Upgrade_WallHubG"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_WallHubS"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_AutoWG"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_NAutoWG0"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_NAutoWG1"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_NAutoWG2"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<UpgradeTemplate id="Upgrade_LowerWG"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+
+	<UpgradeTemplate id="Upgrade_RaiseWG"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+
+	<UpgradeTemplate id="Upgrade_PrepareRaiseWG"
+		Type="OBJECT"
+		BuildCost="0"
+		BuildTime="0.0s"
+		SkirmishAIHeuristic="IGNORE"
+		WaypointQueueable="true">
+		<GameDependency 
+			ForbiddenModelConditions="UNPACKING"/>
+	</UpgradeTemplate>
+	
+	<GameObject
+		id="NGateUpdater"
+		Side="NEUTRAL"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE"
+		EditorName="NGateUpdater">
+		<DisplayName>NGateUpdater</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0.4s"
+				MaxLifetime="0.4s" />
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<FireWeaponUpdate
+				id="ModuleTag_NGateUpdaterEffects">
+				<FireWeaponNugget
+					WeaponName="CheckEnemiesGateWeapon"
+					FireDelay="0.1s"
+					OneShot="true"/>
+			</FireWeaponUpdate>
+			<FireWeaponUpdate
+				id="ModuleTag_NGateUpdaterEffects1">
+				<FireWeaponNugget
+					WeaponName="HealGateWeapon"
+					FireDelay="0.2s"
+					OneShot="true"/>
+			</FireWeaponUpdate>
+			<FireWeaponUpdate
+				id="ModuleTag_NGateUpdaterEffects2">
+				<FireWeaponNugget
+					WeaponName="CheckGroundUnitsGateWeapon"
+					FireDelay="0.3s"
+					OneShot="true"/>
+			</FireWeaponUpdate>
+		
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="25.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="9999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"></Shape>
+		</Geometry>
+		<ShadowInfo
+			Type="NONE" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+	
+	<GameObject
+		id="N40CylinderU"
+		Side="NEUTRAL"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		IsTrainable="false"
+		KindOf="PRELOAD CAN_CAST_REFLECTIONS VEHICLE UNATTACKABLE MOVE_FOR_NOONE IGNORES_SELECT_ALL"
+		EditorName="N40CylinderU">
+		<DisplayName>N40CylinderU</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="CivilianBlockLocomotor"
+			Condition="NORMAL"
+			Speed="0.1" />
+		<Draws>
+		</Draws>
+		<Behaviors>
+			<Physics
+				id="ModuleTag_Physics" />
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0.6s"
+				MaxLifetime="0.6s" />
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO">
+				<UnitAITargetChooserData
+					CanPickDynamicTargets="false"
+					SympathyRange="25.0" />
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="9999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="20.0"
+				Height="30.0" />
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="15"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15"
+					y="-15"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-15"
+					y="-15"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="15"
+					z="25" />
+			</ContactPoint>
+		</Geometry>
+		<ShadowInfo
+			Type="NONE" />
+		<CrusherInfo
+			CrushableLevel="0" />
+	</GameObject>
+	
+	<ObjectCreationList
+		id="AlienWallHubDie2OCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS USE_CREATORS_HEALTH_PERCENTAGE"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>AlienWallHub</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="AlienWallHubTransOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>AlienWallHubTrans</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="AlienWallSegmentDie2OCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>AlienWallSegment</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="AlienWallSegmentTransOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>AlienWallSegmentTrans</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="AlienWallGateDieOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>AlienWallGateAutoOpened</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_40CYLINDERU">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Count="4" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="90d"
+			DispositionIntensity="80">
+			<CreateObject>N40CylinderU</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GateUpdater">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING">
+			<CreateObject>NGateUpdater</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericNTC_Tiny">
+		<CreateObject
+			Disposition="LIKE_EXISTING"
+			Options="IGNORE_ALL_OBJECTS CLEAR_REMOVEABLES">
+			<Offset z="-50"/>
+			<CreateObject>GenericNTC_Tiny</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericNTC_Small">
+		<CreateObject
+			Disposition="LIKE_EXISTING"
+			Options="IGNORE_ALL_OBJECTS CLEAR_REMOVEABLES">
+			<Offset z="-50"/>
+			<CreateObject>GenericNTC_Small</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericNTC_Big">
+		<CreateObject
+			Disposition="LIKE_EXISTING"
+			Options="IGNORE_ALL_OBJECTS CLEAR_REMOVEABLES">
+			<Offset z="-50"/>
+			<CreateObject>GenericNTC_Big</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<WeaponTemplate
+		id="CloseGateWeapon"
+		Name="CloseGateWeapon"
+		ClipSize="1">
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.4s"
+			MaxSeconds="0.4s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_40CYLINDERU"/>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="CreateGateUpdaterWeapon"
+		Name="CreateGateUpdaterWeapon"
+		ClipSize="1">
+		<PreAttackDelay
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<ClipReloadTime
+			MinSeconds="0.25s"
+			MaxSeconds="0.25s" />
+		<Nuggets>
+			<WeaponOCLNugget WeaponOCL="OCL_GateUpdater"/>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="CheckGroundUnitsGateWeapon"
+		Name="CheckGroundUnitsGateWeapon">
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="200.0" 
+				Weapon="CheckGroundUnitsGateCoreWeapon">
+				<Filter
+					Rule="ANY"
+					Include="INFANTRY VEHICLE HUGE_VEHICLE"
+					Exclude="AIRCRAFT">
+				</Filter>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="CheckGroundUnitsGateCoreWeapon"
+		Name="CheckGroundUnitsGateCoreWeapon">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="200.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_WGMod1"
+				ForbiddenTargetModelCondition="USER_3 USER_5">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+			<AttributeModifierNugget
+				Radius="200.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_WGMod2"
+				ForbiddenTargetModelCondition="USER_5">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+			<AttributeModifierNugget
+				Radius="200.0"
+				PartitionFilterTestType="CIRCLE"
+				AttributeModifierName="AttributeModifier_WGMod3"
+				ForbiddenTargetModelCondition="USER_5">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="CheckEnemiesGateWeapon"
+		Name="CheckEnemiesGateWeapon">
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="5.0" 
+				Weapon="CheckEnemiesGateCoreWeapon">
+				<Filter
+					Rule="NONE">
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosed</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosed</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosedTemp</IncludeThing>
+				</Filter>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="CheckEnemiesGateCoreWeapon"
+		Name="CheckEnemiesGateCoreWeapon">
+		<Nuggets>
+			<DamageNugget
+				Damage="0.01"
+				Radius="0.0"
+				DamageType="PENALTY">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosed</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosed</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosedTemp</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="HealGateWeapon"
+		Name="HealGateWeapon">
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="5.0" 
+				Weapon="HealGateCoreWeapon">
+				<Filter
+					Rule="NONE">
+					<IncludeThing>AlienWallGateOpened</IncludeThing>
+					<IncludeThing>GDIWallGateOpened</IncludeThing>
+					<IncludeThing>NODWallGateOpened</IncludeThing>
+					<IncludeThing>AlienWallGateClosed</IncludeThing>
+					<IncludeThing>GDIWallGateClosed</IncludeThing>
+					<IncludeThing>NODWallGateClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosed</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosed</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosedTemp</IncludeThing>
+				</Filter>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="HealGateCoreWeapon"
+		Name="HealGateCoreWeapon">
+		<Nuggets>
+			<DamageNugget
+				Damage="0.01"
+				Radius="0.0"
+				DamageType="HEALING">
+				<SpecialObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>AlienWallGateOpened</IncludeThing>
+					<IncludeThing>GDIWallGateOpened</IncludeThing>
+					<IncludeThing>NODWallGateOpened</IncludeThing>
+					<IncludeThing>AlienWallGateClosed</IncludeThing>
+					<IncludeThing>GDIWallGateClosed</IncludeThing>
+					<IncludeThing>NODWallGateClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoOpened</IncludeThing>
+					<IncludeThing>GDIWallGateAutoOpened</IncludeThing>
+					<IncludeThing>NODWallGateAutoOpened</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosed</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosed</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosed</IncludeThing>
+					<IncludeThing>AlienWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>GDIWallGateAutoClosedTemp</IncludeThing>
+					<IncludeThing>NODWallGateAutoClosedTemp</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<GameObject
+		id="GenericNTC_Small"
+		Side="NEUTRAL"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE"
+		EditorName="GenericNTC_Small">
+		<DisplayName>GenericNTC_Small</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>	
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="9999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="50.0"
+				Height="100.0"/>
+		</Geometry>
+		<CrusherInfo
+			CrusherLevel="0"
+			CrushEqualLevelProps="true"
+			CrushableLevel="0" />
+	</GameObject>
+	
+	<GameObject
+		id="GenericNTC_Big"
+		Side="NEUTRAL"
+		EditorSorting="UNIT"
+		TransportSlotCount="0"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE"
+		EditorName="GenericNTC_Big">
+		<DisplayName>GenericNTC_Big</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>	
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="9999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="300.0"
+				Height="100.0"/>
+		</Geometry>
+		<CrusherInfo
+			CrusherLevel="0"
+			CrushEqualLevelProps="true"
+			CrushableLevel="0" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:NBWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWallHub_D2.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWallHub_A.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="NODWallHub"
+		inheritFrom="BaseStructure"
+		Side="NOD"
+		EditorSorting="STRUCTURE"
+		BuildCost="200"
+		BuildTime="20"
+		SelectPortrait="Portrait_NODWallHub"
+		ButtonImage="Portrait_NODWallHub"
+		EnergyProduction="0"
+		CommandSet="NODWallHubCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="NODWallHub"
+		Description="Desc:NODWallHub"
+		TypeDescription="Type:NODWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:NODWallHub</DisplayName>
+		<ArmorSet
+			Armor="NODWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NBWallHub" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="NBWallHub_A" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="NBWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="NBWallHub_D2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="NBWallHub" />
+					<Texture
+						Original="NBwall"
+						New="NBwall_D1" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="NBWallHub_A"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="NBWallHub_D3"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="NBWallHub_D2"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="NBWallHub_D2"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="NBWallHub_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>					
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<WallHubBehavior
+				id="ModuleTag_SoWeCanBuildWalls"
+				StaggeredBuildFactor="0"
+				BuilderRadius="8"
+				HubCapTemplateId="NODWallHub"
+				DefaultSegmentTemplateId="NODWallSegment"
+				CliffCapTemplateId="NODWallHub"
+				Options="16">
+				<SegmentPattern>NODWallSegment</SegmentPattern>
+				<SegmentPattern>NODWallSegment</SegmentPattern>
+				<SegmentPattern>NODWallSegment</SegmentPattern>
+				<SegmentPattern>NODWallSegment</SegmentPattern>
+				<SegmentPattern>NODWallSegment</SegmentPattern>
+				<SegmentPattern>NODWallHub</SegmentPattern>
+			</WallHubBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericNODBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericNODBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="3500" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="11.0"
+				MinorRadius="11.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+		<ProjectedBuildabilityInfo
+			Radius="100.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:NBWall.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWall_A.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWall_D2.w3x" />
+		<Include
+			type="all"
+			source="ART:NBWall_D3.w3x" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="NODWallSegment"
+		inheritFrom="BaseStructure"
+		Side="NOD"
+		EditorSorting="STRUCTURE"
+		BuildCost="50"
+		BuildTime="5"
+		SelectPortrait="Portrait_NODWallSegment"
+		ButtonImage="Portrait_NODWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE SCORE WALL_SEGMENT NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		ProductionQueueType="MAIN_STRUCTURE"
+		BuildPlacementTypeFlag="MAIN_STRUCTURE"
+		EditorName="NODWallSegment">
+		<DisplayName
+			xai:joinAction="Replace">Name:NODWallSegment</DisplayName>
+		<ArmorSet
+			Armor="NODWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="NBWall" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="NBWall_A" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="NBWall_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="NBWall_D2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="NBWall" />
+					<Texture
+						Original="NBwall"
+						New="NBwall_D1" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="NBWall_A"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="NBWall_D3"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="NBWall_D2"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="NBWall_D2"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="NBWall_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>				
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericNODBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericNODBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="2000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				Name="Geom_Orig"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="20.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound xai:joinAction="Remove" >
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallHub_D2.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallHub_A.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDIWallHub"
+		inheritFrom="BaseStructure"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		SelectPortrait="Portrait_GDIWallHub2"
+		ButtonImage="Portrait_GDIWallHub2"
+		EnergyProduction="-1"
+		CommandSet="GDIWallHubCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GDIWallHub"
+		Description="Desc:GDIWallHub"
+		TypeDescription="Type:GDIWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:GDIWallHub</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBWallHub" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBWallHub_A" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBWallHub_D2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBWallHub" />
+					<Texture
+						Original="GBwall2"
+						New="GBwall2_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBWallHub_A"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWallHub_D3"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWallHub_D2"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="GBWallHub_D2"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBWallHub_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>					
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Small" />
+			</FXListBehavior>				
+			<WallHubBehavior
+				id="ModuleTag_SoWeCanBuildWalls"
+				StaggeredBuildFactor="0"
+				BuilderRadius="8"
+				HubCapTemplateId="GDIWallHub"
+				DefaultSegmentTemplateId="GDIWallSegment"
+				CliffCapTemplateId="GDIWallHub"
+				Options="16">
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallSegment</SegmentPattern>
+				<SegmentPattern>GDIWallHub</SegmentPattern>
+			</WallHubBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="11.0"
+				MinorRadius="11.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+		<ProjectedBuildabilityInfo
+			Radius="100.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBWall.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWall_A.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWall_D2.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWall_D3.w3x" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDIWallSegment"
+		inheritFrom="BaseStructure"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_GDIWallSegment"
+		ButtonImage="Portrait_GDIWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_SEGMENT NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		ProductionQueueType="MAIN_STRUCTURE"
+		BuildPlacementTypeFlag="MAIN_STRUCTURE"
+		EditorName="GDIWallSegment">
+		<DisplayName
+			xai:joinAction="Replace">Name:GDIWallSegment</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBWall" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBWall_A" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBWall_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBWall_D2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBWall" />
+					<Texture
+						Original="GBwall2"
+						New="GBwall2_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBWall_A"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWall_D3"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWall_D2"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="GBWall_D2"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBWall_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>				
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Small" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Small" />
+			</FXListBehavior>			
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="10000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				Name="Geom_Orig"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="20.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound xai:joinAction="Remove" >
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBWallGate_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D2_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D3_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDIWallGate"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_GDIWallGate"
+		ButtonImage="Portrait_GDIWallGate"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="2000"
+		BuildTime="20"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateCommandSet"
+		EnergyProduction="-2"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GDIWallGate"
+		Description="Desc:GDIWallGate"
+		TypeDescription="Type:GDIWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:GDIWallGate</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBWallGate_SKN" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBWallGate_SKN" />
+				</ModelConditionState>				
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBWallGate_D2_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBWallGate_SKN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBWallGate_ANI"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Medium"
+						FollowBone="true" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>					
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Medium" />
+			</FXListBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericUnpackPower.xml" />
+			<xi:include
+				href="DATA:Includes/GenericUnpackUpdate.xml" />
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>GDIWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AIForLua"
+				AILuaEventsList="GDIWallGate" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="44"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="-44"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="10.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="-10.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="30.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="-30.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="500"
+			ShroudClearingRange="500" />
+		<ProjectedBuildabilityInfo
+			Radius="100"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBWallGate_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D2_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D3_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_CLS.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDIWallGateClosed"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_GDIWallGate"
+		ButtonImage="Portrait_GDIWallGate"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="2000"
+		BuildTime="20"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateCommandSet"
+		EnergyProduction="-2"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GDIWallGateClosed"
+		Description="Desc:GDIWallGate"
+		TypeDescription="Type:GDIWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:GDIWallGate</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBWallGate_SKN" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBWallGate_D2_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBWallGate_SKN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBWallGate_SKN" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBWallGate_CLS"
+						AnimationMode="ONCE" />
+				</AnimationState>				
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Medium" />
+			</FXListBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.0s" />
+			<xi:include
+				href="DATA:Includes/GenericUnpackPower.xml" />
+			<xi:include
+				href="DATA:Includes/GenericUnpackUpdate.xml" />
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>GDIWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AIForLua"
+				AILuaEventsList="GDIWallGateClosed" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="44"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="-44"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="10.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="-10.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="30.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="21.0">
+				<Offset
+					x="0.25"
+					y="-30.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="GDI_wallgate_up" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="500"
+			ShroudClearingRange="500" />
+		<ProjectedBuildabilityInfo
+			Radius="100"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBWallGateOPN_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGateOPN_D2_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGateOPN_D3_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGateOPN_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:GBWallGate_OPN.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDIWallGateOpened"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_GDIWallGateOpened"
+		ButtonImage="Portrait_GDIWallGateOpened"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="2000"
+		BuildTime="20"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateOpenedCommandSet"
+		EnergyProduction="-2"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GDIWallGateOpened"
+		Description="Desc:GDIWallGate"
+		TypeDescription="Type:GDIWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:GDIWallGate</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBWallGateOPN_SKN" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBWallGateOPN_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBWallGateOPN_D2_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBWallGateOPN_SKN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="GBWallGateOPN_SKN" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBWallGateOPN_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBWallGateOPN_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="GBWallGate_OPN"
+						AnimationMode="ONCE" />
+				</AnimationState>				
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_BuildDamaged_Medium" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Medium" />
+			</FXListBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.0s" />
+			<xi:include
+				href="DATA:Includes/GenericPackPower.xml" />
+			<xi:include
+				href="DATA:Includes/GenericPackUpdate.xml" />
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_Pack</TriggeredBy>
+				<ReplacementTemplate>GDIWallGateClosed</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/GenericEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AIForLua"
+				AILuaEventsList="GDIWallGateOpened" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="10000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="44"
+					z="0" />
+			</Shape>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="4"
+				MinorRadius="4"
+				Height="25.0">
+				<Offset
+					x="0.25"
+					y="-44"
+					z="0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="-48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="25" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="3.0"
+					y="48.0"
+					z="0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="GDI_wallgate_down" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="500"
+			ShroudClearingRange="500" />
+		<ProjectedBuildabilityInfo
+			Radius="100"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBTibWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:GBTibWallHub_D2.w3x" />
+		<Include
+			type="all"
+			source="ART:GBTibWallHub_D3.w3x" />			
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GBTibWallHub"
+		inheritFrom="BaseStructure"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="600"
+		BuildTime="6"
+		SelectPortrait="Portrait_BlueZoneWallHub"
+		ButtonImage="Portrait_BlueZoneWallHub"
+		EnergyProduction="-1"
+		CommandSet="GDIWallHubCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GDITibWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:GDIWallHub</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBTibWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="GBTibWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GBTibWallHub_D2" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GBTibWallHub" />
+					<Texture
+						Original="GBTibWallHub"
+						New="GBTibWallHub_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBTibWallHub_D3"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GBTibWallHub_D2"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="GBTibWallHub_D2"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="GBTibWallHub_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>					
+			</ScriptedModelDraw>		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="1.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" /> 
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_BuildRubble_Small" />
+			</FXListBehavior>	
+
+<!--			
+			<StructureCollapseUpdate
+				id="ModuleTag_08"
+				CollapseDamping=".5"
+				MaxShudder="0.6"
+				MinBurstDelay="250"
+				MaxBurstDelay="800"
+				BigBurstFrequency="4"
+				DestroyObjectWhenDone="true"
+				CollapseHeight="155"></StructureCollapseUpdate>
+-->				
+			<WallHubBehavior
+				id="ModuleTag_SoWeCanBuildWalls"
+				StaggeredBuildFactor="0"
+				BuilderRadius="8"
+				HubCapTemplateId="GBTibWallHub"
+				DefaultSegmentTemplateId="GBTibWallSeg"
+				CliffCapTemplateId="GDIWallHub"
+				Options="16">
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallSeg</SegmentPattern>
+				<SegmentPattern>GBTibWallHub</SegmentPattern>
+			</WallHubBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="12000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="11.0"
+				MinorRadius="11.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+		<ProjectedBuildabilityInfo
+			Radius="100.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:GBTibWallseg.w3x" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GDITibWallSeg"
+		inheritFrom="BaseStructure"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		BuildCost="300"
+		BuildTime="3"
+		SelectPortrait="Portrait_GDIWallSegment"
+		ButtonImage="Portrait_GDIWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD NO_COLLIDE STRUCTURE IMMOBILE WALL_SEGMENT UNATTACKABLE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY RESIST_EMP CAN_SEE_THROUGH_STRUCTURE"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		ProductionQueueType="MAIN_STRUCTURE"
+		BuildPlacementTypeFlag="MAIN_STRUCTURE"
+		EditorName="GDITibWallSeg"
+		Description="Desc:GDITibWallSeg">
+		<DisplayName
+			xai:joinAction="Replace">Name:GDIWallSegment</DisplayName>
+		<ArmorSet
+			Armor="GDIWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				UseStandardModelNames="true"
+				StaticModelLODMode="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GBTibWallseg" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<GettingBuilt
+				id="ModuleTag_04"
+				UseSpawnTimerWithoutWorker="true">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</GettingBuilt>
+			
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="2s"
+				Fade="true"
+				FadeTime="2s">
+				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" /> 
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+<!--			
+			<StructureCollapseUpdate
+				id="ModuleTag_08"
+				CollapseDamping=".5"
+				MaxShudder="0.6"
+				MinBurstDelay="250"
+				MaxBurstDelay="800"
+				BigBurstFrequency="4"
+				DestroyObjectWhenDone="true"
+				CollapseHeight="155"></StructureCollapseUpdate>
+-->				
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericGDIBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="6000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				Name="Geom_Orig"
+				MajorRadius="5.0"
+				MinorRadius="10.0"
+				Height="20.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+		</Geometry>
+		<AudioArraySound xai:joinAction="Remove" >
+			<AudioEntry Sound="HumanFaction_SmallBuilding_LightDamageMS" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="HumanFaction_SmallBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="100" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWallGate_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_D2_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_D3_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_CLS.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGateOPN_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGateOPN_D2_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGateOPN_D3_SKN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGateOPN_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_OPN.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_CLS.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallGate_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallGate"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		Side="Alien"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="225d"
+		CommandSet=""
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE IMMOBILE WALL_GATE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP NOT_SELLABLE"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallGate"
+		Description="Desc:AlienWallGate"
+		TypeDescription="Type:AlienWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallGate</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<!-- BUILD UP -->
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABWallGate_ANI"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1.5s"
+				MaxLifetime="1.5s" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+				<Event
+					Index="onCreate"
+					FX="FX_AlienWallGUnPack" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleM" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AlienWallGateDieOCL">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</CreateObjectDie>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="40.1"
+				Height="25.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-40.1"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="40.1"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="20"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-20"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="ALI_Building_Placed" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="500" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallGateAutoClosed"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		Side="Alien"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateAutoCommandSet"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_GATE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallGateAutoClosed"
+		Description="Desc:AlienWallGateAuto"
+		TypeDescription="Type:AlienWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallGateAuto</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallGate_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallGate_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>		
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FireWeaponUpdate
+				id="ModuleTag_CloseGate">
+				<FireWeaponNugget
+					WeaponName="CloseGateWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FireWeaponUpdate
+				id="ModuleTag_CheckGate">
+				<FireWeaponNugget
+					WeaponName="CreateGateUpdaterWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedM" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleM" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<SpecialPower
+				id="ModuleTag_GiveNAutoWG1UpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveNAutoWG1UpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpgradeToGive="Upgrade_NAutoWG1"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_NAutoWG1</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_LowerWG</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateAutoOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="WallGateFunctions"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="20"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-20"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="500" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallGateAutoClosedTemp"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		Side="Alien"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateAutoCommandSet"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_GATE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallGateAutoClosedTemp"
+		Description="Desc:AlienWallGateAuto"
+		TypeDescription="Type:AlienWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallGateAuto</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallGate_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallGate_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE STRUCTURE_UNPACKING"
+					StateName="STATE_Rubble1"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble1" and Prev ~= "TRANS_IntoRubble2" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble2")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABWallGate_CLS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble2">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FireWeaponUpdate
+				id="ModuleTag_CloseGate">
+				<FireWeaponNugget
+					WeaponName="CloseGateWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FireWeaponUpdate
+				id="ModuleTag_CheckGate">
+				<FireWeaponNugget
+					WeaponName="CreateGateUpdaterWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedM" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleM" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.0s" />
+			<SpecialPower
+				id="ModuleTag_GiveNAutoWG1UpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveNAutoWG1UpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpgradeToGive="Upgrade_NAutoWG1"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_NAutoWG1</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_LowerWG</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateAutoOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="WallGateFunctions"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="ALI_Building_Placed" Animation="ABWallGate_CLS" Frame="25" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="20"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-20"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="500" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallGateAutoOpened"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		Side="Alien"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateAutoCommandSet"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_GATE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallGateAutoOpened"
+		Description="Desc:AlienWallGateAuto"
+		TypeDescription="Type:AlienWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallGateAuto</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_1">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_1">
+					<Model
+						Name="ABWallGate_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1">
+					<Model
+						Name="ABWallGate_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_2">
+					<Model
+						Name="ABWallGateOPN_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_2">
+					<Model
+						Name="ABWallGateOPN_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_2">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_2">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_3">
+					<Model
+						Name="ABWallGateOPN_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED USER_3">
+					<Model
+						Name="ABWallGateOPN_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_3">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallGate_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallGate_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_1"
+					StateName="STATE_Rubble2"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble2" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Animation
+						AnimationName="ABWallGate_OPN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_2"
+					StateName="STATE_Rubble3"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble3" and Prev ~= "TRANS_IntoRubble2" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble2")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_2">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE USER_3"
+					StateName="STATE_Rubble4"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble4" and Prev ~= "TRANS_IntoRubble2" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble2")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_3">
+					<Animation
+						AnimationName="ABWallGate_CLS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble2">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FireWeaponUpdate
+				id="ModuleTag_CheckGate">
+				<FireWeaponNugget
+					WeaponName="CreateGateUpdaterWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedM" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleM" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<SpecialPower
+				id="ModuleTag_GiveNAutoWG0UpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveNAutoWG0UpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_NAutoWallGate"
+				UpgradeToGive="Upgrade_NAutoWG0"
+			/>
+			<ModelConditionUpgrade
+				id="ModuleTag_ModelCondition_ChangeToManual"
+				AddConditionFlags="USER_4">
+				<TriggeredBy>Upgrade_NAutoWG0</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ModelConditionUpgrade
+				id="ModuleTag_ModelCondition_PrepareToRaise"
+				AddConditionFlags="USER_5">
+				<TriggeredBy>Upgrade_PrepareRaiseWG</TriggeredBy>
+			</ModelConditionUpgrade>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf2"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_NAutoWG2</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_NAutoWG1</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateClosed</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_RaiseWG</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateAutoClosed</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/GenericEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="WallGateFunctions"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="ALI_Building_Placed" Animation="ABWallGate_CLS" Frame="25" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="5.00"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="-5.00"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0.01"
+					y="-20"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0.01"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0.01"
+					y="20"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="500" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallGateClosed"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		Side="Alien"
+		EditorSorting="STRUCTURE"
+		BuildCost="1000"
+		BuildTime="10"
+		PlacementViewAngle="225d"
+		CommandSet="WallGateCommandSet"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_GATE NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallGateClosed"
+		Description="Desc:AlienWallGate"
+		TypeDescription="Type:AlienWallGate">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallGate</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallGate_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="ABWallGateOPN_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallGate_D3_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallGate_D2_SKN" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXFIRE02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallGate_SKN" />
+					<Texture
+						Original="ABWall"
+						New="ABWall_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE STRUCTURE_UNPACKING"
+					StateName="STATE_Rubble1"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble1" and Prev ~= "TRANS_IntoRubble2" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble2")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABWallGate_CLS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallGate_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble2">
+					<Animation
+						AnimationName="ABWallGateOPN_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FireWeaponUpdate
+				id="ModuleTag_CloseGate">
+				<FireWeaponNugget
+					WeaponName="CloseGateWeapon"
+					FireDelay="0.1s"
+				/>
+			</FireWeaponUpdate>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedM" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleM" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.0s" />
+			<SpecialPower
+				id="ModuleTag_GiveAutoWGUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_AutoWallGate"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveAutoWGUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_AutoWallGate"
+				UpgradeToGive="Upgrade_AutoWG"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_AutoWG</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateAutoClosed</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveLowerWGUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_LowerWallGate"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveLowerWGUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_LowerWallGate"
+				UpgradeToGive="Upgrade_LowerWG"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_LowerWG</TriggeredBy>
+				<ReplacementTemplate>AlienWallGateOpened</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="20000.0" />
+		</Body>
+		<ClientBehaviors>
+			<AnimationSoundClientBehavior id="ModuleTag_ASCB">
+				<Sound Sound="ALI_Building_Placed" Animation="ABWallGate_CLS" Frame="25" />
+			</AnimationSoundClientBehavior>
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="39.5"
+				Height="25.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="34.0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="25"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="20"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-20"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="500" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHub"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="0"
+		CommandSet="WallHubCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHub"
+		Description="Desc:AlienWallHub"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHub</DisplayName>
+		<GameDependency>
+			<ObjectFilter
+				Rule="ANY">
+				<IncludeThing>AlienDronePlatform</IncludeThing>
+				<IncludeThing>AlienFoundry</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<SpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpgradeToGive="Upgrade_WallHubW"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf2"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubW</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubW</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpgradeToGive="Upgrade_WallHubG"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubG</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubG</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpgradeToGive="Upgrade_WallHubS"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubS</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubS</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="8.0"
+				MinorRadius="8.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="120"
+			ShroudClearingRange="120" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHubG"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="-1"
+		CommandSet="WallHubBldGCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHubG"
+		Description="Desc:AlienWallHubG"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHubG</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<WallHubBehavior
+				id="ModuleTag_SoWeCanBuildWalls"
+				StaggeredBuildFactor="0"
+				BuilderRadius="8.5"
+				HubCapTemplateId="AlienWallHubInit"
+				DefaultSegmentTemplateId="AlienWallGate"
+				CliffCapTemplateId="AlienWallHubInit"
+				Options="16">
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+				<SegmentPattern>AlienWallGate</SegmentPattern>
+			</WallHubBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<SpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpgradeToGive="Upgrade_WallHubW"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf2"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubW</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubW</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpgradeToGive="Upgrade_WallHubS"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubS</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubS</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AI" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="8.0"
+				MinorRadius="8.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="120"
+			ShroudClearingRange="120" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHubInit"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="0"
+		CommandSet=""
+		KindOf="PRELOAD STRUCTURE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP NOT_SELLABLE"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHubInit"
+		Description="Desc:AlienWallHub"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHub</DisplayName>
+		<GameDependency>
+			<ObjectFilter
+				Rule="ANY">
+				<IncludeThing>AlienDronePlatform</IncludeThing>
+				<IncludeThing>AlienFoundry</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABWallHub_ANI"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1.5s"
+				MaxLifetime="1.5s" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+				<Event
+					Index="onCreate"
+					FX="FX_AlienWallHUnPack" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AlienWallHubTransOCL">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="1" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="8.4"
+				MinorRadius="8.4"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="ALI_Building_Placed" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="160"
+			ShroudClearingRange="100" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHubS"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="-1"
+		CommandSet="WallHubBldSCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHubS"
+		Description="Desc:AlienWallHubS"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHubS</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="EXTRA_7"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="EXTRA_7" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="EXTRA_7"/>
+			</SlowDeath>
+			<WallHubBehavior
+				id="ModuleTag_SoWeCanBuildWalls"
+				StaggeredBuildFactor="0"
+				BuilderRadius="8.5"
+				HubCapTemplateId="AlienWallHubInit"
+				DefaultSegmentTemplateId="AlienWallSegmentInit"
+				CliffCapTemplateId="AlienWallHubInit"
+				Options="16">
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+				<SegmentPattern>AlienWallSegmentInit</SegmentPattern>
+			</WallHubBehavior>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<SpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubWUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubW"
+				UpgradeToGive="Upgrade_WallHubW"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf2"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubW</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubW</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpgradeToGive="Upgrade_WallHubG"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubG</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubG</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AI" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="8.0"
+				MinorRadius="8.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="120"
+			ShroudClearingRange="120" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHubTrans"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="1"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="0"
+		CommandSet=""
+		KindOf="PRELOAD STRUCTURE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP NOT_SELLABLE"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHubTrans"
+		Description="Desc:AlienWallHub"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHub</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1.0s"
+				MaxLifetime="1.0s" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AlienWallHubDie2OCL">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="1" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="1.0"
+				Height="1.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="160"
+			ShroudClearingRange="100" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWallHub.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWallHub_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallHubW"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="500"
+		BuildTime="5"
+		SelectPortrait="Portrait_AlienWallHub"
+		ButtonImage="Portrait_AlienWallHub"
+		EnergyProduction="-1"
+		CommandSet="WallHubBldWCommandSet"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_HUB NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallHubW"
+		Description="Desc:AlienWallHubW"
+		TypeDescription="Type:AlienWallHub">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:AlienWallHubW</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWallHub" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWallHub_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALLHUB"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWallHub_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWallHub_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"/>
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+			<SpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubGUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubG"
+				UpgradeToGive="Upgrade_WallHubG"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf1"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubG</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubG</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveWallHubSUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUpWallHubS"
+				UpgradeToGive="Upgrade_WallHubS"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="1.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_WallHubS</TriggeredBy>
+				<ReplacementTemplate>AlienWallHubS</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<SpawnBehavior
+				id="ModuleTag_SpawnIonStorm"
+				SpawnNumberData="1"
+				InitialBurst="1"
+				SpawnedRequireSpawner="true"
+				KillSpawnsOnDisabled="true">
+				<SpawnTemplate>IonStorm</SpawnTemplate>
+			</SpawnBehavior>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModulTag_AI" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="CYLINDER"
+				Name="Geom_Orig"
+				MajorRadius="8.0"
+				MinorRadius="8.0"
+				Height="25.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="8"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-4"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-8"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				Sound="ALI_WallHub_Select"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="120"
+			ShroudClearingRange="120" />
+		<ProjectedBuildabilityInfo
+			Radius="120.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallSegment"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="200"
+		BuildTime="2"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE SELECTABLE IMMOBILE WALL_SEGMENT NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallSegment"
+		Description="Desc:AlienWallSegment">
+		<DisplayName
+			xai:joinAction="Replace">Name:AlienWallSegment</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWall" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWall_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABWall_D" />
+					<ParticleSysBone
+						BoneName="ALIENWALL"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALL"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ALIENWALL"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABWall_D" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/RepairAlliesEngineerContain.xml" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="20000" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				MajorRadius="3.0"
+				MinorRadius="10.1"
+				Height="20.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="10"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-10"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="50"
+			ShroudClearingRange="50" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="ART:ABWall.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWall_D.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWall_D3.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWall_D3_ANI.w3x" />
+		<Include
+			type="all"
+			source="ART:ABWall_ANI.w3x" />
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallSegmentInit"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="200"
+		BuildTime="2"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE IMMOBILE WALL_SEGMENT NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP NOT_SELLABLE"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallSegmentInit"
+		Description="Desc:AlienWallSegment">
+		<DisplayName
+			xai:joinAction="Replace">Name:AlienWallSegment</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWall" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWall_D3" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABWall_ANI"
+						AnimationMode="ONCE" />
+				</AnimationState>	
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1.5s"
+				MaxLifetime="1.5s" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+				<Event
+					Index="onCreate"
+					FX="FX_AlienWallSUnPack" />
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AlienWallSegmentTransOCL">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="1" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				MajorRadius="3.0"
+				MinorRadius="10.0"
+				Height="20.0">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="10"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-10"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="ALI_Building_Placed" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="50"
+			ShroudClearingRange="50" />
+	</GameObject>
+	
+	<Includes>
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+		<!-- Base Object -->
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="AlienWallSegmentTrans"
+		inheritFrom="BaseStructure"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		BuildCost="200"
+		BuildTime="1"
+		SelectPortrait="Portrait_AlienWallSegment"
+		ButtonImage="Portrait_AlienWallSegment"
+		EnergyProduction="0"
+		KindOf="PRELOAD STRUCTURE IMMOBILE WALL_SEGMENT NOT_AUTOACQUIRABLE AUTO_ACQUIRABLE_BY_AI COVER IGNORE_FOR_VICTORY CAN_CAST_REFLECTIONS RESIST_EMP NOT_SELLABLE"
+		RadarPriority="STRUCTURE"
+		PlacementViewAngle="225d"
+		BuildCompletion="PLACED_BY_PLAYER"
+		CampnessValue="=$CAMPNESS_WALL"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="AlienWallSegmentTrans"
+		Description="Desc:AlienWallSegment">
+		<DisplayName
+			xai:joinAction="Replace">Name:AlienWallSegment</DisplayName>
+		<ArmorSet
+			Armor="AlienWallArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="FRONT" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABWall" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABWall_D3" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+					<!-- no anim -->
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWall_D3_ANI"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="1.0s"
+				MaxLifetime="1.0s" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+				<Event
+					Index="onDeath"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death1"
+				DestructionDelay="0.0s">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</SlowDeath>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="NONE"/>
+			</SlowDeath>
+			<StructureUnpackUpdate
+				UnpackTime="0.0s" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingDestructionNoSpawn.xml" />
+			<xi:include
+				href="DATA:Includes/GenericAlienBuildingSuicideNoSpawn.xml" />
+			<CreateObjectDie
+				id="ModuleTag_CreateObjectDie"
+				CreationList="AlienWallSegmentDie2OCL">
+				<DieMuxData
+					DeathTypes="NONE" />
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_05"
+				MaxHealth="1" />
+		</Body>
+		<Geometry>
+			<Shape
+				Type="BOX"
+				MajorRadius="0.0"
+				MinorRadius="1.0"
+				Height="1.0">
+				<Offset
+					x="0.01"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="0"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="10"
+					z="1" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-5"
+					z="12" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="0"
+					y="-10"
+					z="1" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="50"
+			ShroudClearingRange="50" />
+	</GameObject>
+
+</AssetDeclaration>

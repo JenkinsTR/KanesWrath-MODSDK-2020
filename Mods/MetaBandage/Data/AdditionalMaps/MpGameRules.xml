@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes></Includes>
+	
+   <MpGameRules 
+       id="TheMpGameRules">
+       <SkirmishStartCash 
+			LoCash="5000"
+			HiCash="1000000"
+			ChoiceStepAmount="5000"
+			DefaultChoiceIndex="8" />
+		   <MetaGameTiberiumSupply
+		       DefaultChoiceIndex="2">
+			   <entry value="1400" difficulty="Easy" />
+			   <entry value="1200" difficulty="Medium" />
+			   <entry value="1000" difficulty="Hard" />
+			   <entry value="800" difficulty="Brutal" />
+		   </MetaGameTiberiumSupply>
+		   <MetaGameTiberiumInfestation
+		       DefaultChoiceIndex="2">
+			   <entry value="10" difficulty="Easy" />
+			   <entry value="30" difficulty="Medium" />
+			   <entry value="50" difficulty="Hard" />
+			   <entry value="75" difficulty="Brutal" />
+		   </MetaGameTiberiumInfestation>
+		   <MetaGameOPsPoints DefaultChoiceIndex="2">
+			   <entry value="140" difficulty="Easy" />
+			   <entry value="120" difficulty="Medium" />
+			   <entry value="100" difficulty="Hard" />
+			   <entry value="80" difficulty="Brutal" />
+		   </MetaGameOPsPoints><MetaGameCoreObjectives
+			   DefaultChoiceIndex="2">
+			   <entry value="1" difficulty="Easy" />
+			   <entry value="2" difficulty="Medium" />
+			   <entry value="3" difficulty="Hard" />
+			   <entry value="4" difficulty="Brutal" />
+		   </MetaGameCoreObjectives>
+	</MpGameRules>
+	
+    <MultiplayerSettings 
+	    id="MultiplayerSettings">
+	    <InitialCreditsVeryLow>500</InitialCreditsVeryLow>
+		<InitialCreditsLow>1000</InitialCreditsLow><InitialCreditsMedium>1500
+		</InitialCreditsMedium><InitialCreditsHigh>2000</InitialCreditsHigh>
+		<InitialCreditsVeryHigh>2500
+		</InitialCreditsVeryHigh>
+		<StartCountdownTimer>5</StartCountdownTimer>
+		<MaxBeaconsPerPlayer>3</MaxBeaconsPerPlayer>
+		<GameStatsModeData GameStatsMode="ONLINE_RANKED_1V1_GAME">
+		<AvailableMapName>BAMAP_RH01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC08_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC05_2</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_WILL1</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BLACK5</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BASS1</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BLACK7</AvailableMapName>
+		</GameStatsModeData><GameStatsModeData GameStatsMode="ONLINE_RANKED_2V2_GAME">
+		<AvailableMapName>BAMAP_EW01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC06_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_EW03_04</AvailableMapName>
+		<AvailableMapName>MAP_MP_4_BASS</AvailableMapName>
+		<AvailableMapName>MAP_MP_4_CHUCK2</AvailableMapName>
+		<AvailableMapName>BAMAP_RH01_4</AvailableMapName>
+		</GameStatsModeData><GameStatsModeData GameStatsMode="ONLINE_CLAN_1V1_GAME">
+		<AvailableMapName>BAMAP_RH01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC08_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC05_2</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_WILL1</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BLACK5</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BASS1</AvailableMapName>
+		<AvailableMapName>MAP_MP_2_BLACK7</AvailableMapName>
+		</GameStatsModeData><GameStatsModeData GameStatsMode="ONLINE_CLAN_2V2_GAME">
+		<AvailableMapName>BAMAP_EW01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC06_4</AvailableMapName>
+		<AvailableMapName>BAMAP_DC01_4</AvailableMapName>
+		<AvailableMapName>BAMAP_EW03_04</AvailableMapName>
+		<AvailableMapName>MAP_MP_4_BASS</AvailableMapName>
+		<AvailableMapName>MAP_MP_4_CHUCK2</AvailableMapName>
+		<AvailableMapName>BAMAP_RH01_4</AvailableMapName>
+		</GameStatsModeData><ShowRandomPlayerTemplate>True</ShowRandomPlayerTemplate>
+		<ShowRandomStartPos>True</ShowRandomStartPos>
+		<ShowRandomColor>True</ShowRandomColor>
+	</MultiplayerSettings>
+
+   <ShadowMap 
+     id="ShadowMap"> 
+	 MaxViewDistance="1500"
+   </ShadowMap>
+	
+</AssetDeclaration>
+
+
+

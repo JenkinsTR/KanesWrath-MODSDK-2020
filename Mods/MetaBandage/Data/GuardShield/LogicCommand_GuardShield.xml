@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerGuardShield">
+		<SpecialPower>SpecialPower_GuardShield</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_ForceFieldDistractionWeapon">
+		<SpecialPower>SpecialPower_ForceFieldDistractionWeapon</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_ForceFieldAttractionWeapon">
+		<SpecialPower>SpecialPower_ForceFieldAttractionWeapon</SpecialPower>
+	</LogicCommand>	
+	
+	<LogicCommand
+		id="Command_ConstructGuardShieldEmitter"
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		Options="">
+		<Object>GuardShieldEmitter</Object>
+	</LogicCommand>
+		
+	<LogicCommand
+		id="Command_Upgrade_GuardShieldAIModusON"
+		Type="PLAYER_UPGRADE"
+		Options="">
+		<UpgradeTemplate>Upgrade_GuardShieldAIModusON</UpgradeTemplate>
+	</LogicCommand>
+	
+	<LogicCommand
+		id="Command_Upgrade_GuardShieldAIModusOFF"
+		Type="PLAYER_UPGRADE"
+		Options="">
+		<UpgradeTemplate>Upgrade_GuardShieldAIModusOFF</UpgradeTemplate>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_GuardShieldAIModusActivator">
+		<SpecialPower>SpecialPower_GuardShieldAIModusActivator</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_GuardShieldAIModusDeactivator">
+		<SpecialPower>SpecialPower_GuardShieldAIModusDeactivator</SpecialPower>
+	</LogicCommand>
+		
+</AssetDeclaration>

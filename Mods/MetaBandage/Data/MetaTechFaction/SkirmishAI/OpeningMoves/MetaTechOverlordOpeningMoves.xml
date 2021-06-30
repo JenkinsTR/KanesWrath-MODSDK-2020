@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="MetaTechZoneTrooperRush"
+    Side="MetaTech">
+    
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechCommandPost" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="MetaTechMedicalBay" />
+
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMRifleSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+    <Order Build="ZOCOMMissileSoldierSquad" />
+
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Build="ZOCOMZoneRaiderSquad" />
+    <Order Time="220s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="MetaTechBrutalInfantryRush"
+    Side="MetaTech">
+
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechBarracks" />
+    <Order Time="137s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="MetaTechBrutalMixedRush"
+    Side="MetaTech">
+
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="MetaTechWarFactory" />
+    <Order Build="SteelTalonsHarvester" />
+    <Order Build="SteelTalonsHarvester" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="MetaTechWarFactory" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="MetaTechBarracks" />
+    <Order Build="MetaTechWarFactory" />
+    <Order Time="181s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

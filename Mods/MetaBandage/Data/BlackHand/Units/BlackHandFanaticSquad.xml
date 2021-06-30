@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- Removed Tiberium Infusion Upgrade in Global Conquest -->
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="BlackHandFanaticSquad"
+		inheritFrom="NODFanaticSquad"
+		SelectPortrait="Portrait_NODFanatic"
+		ButtonImage="Portrait_NODFanatic"
+		Side="BlackHand"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="700"
+		BuildTime="7"
+		CommandSet="BlackHandFanaticSquadCommandSet"
+		CommandPoints="100" 
+		KindOf="SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT INFANTRY HORDE ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND SURPRISE_ATTACKER PATH_THROUGH_INFANTRY HORDE SKIRMISH_AI_DONT_GARRISON CAN_CAPTURE ATTACK_FROM_STRUCTURE_ONLY_WHEN_GARRISONED CAN_BE_FAVORITE_UNIT SCORE"
+		FormationWidth="2"
+		FormationDepth="1"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="BLAST"
+		EditorName="BlackHandFanaticSquad"
+		Description="Desc:BlackHandFanatic"
+		TypeDescription="Type:BlackHandFanatic"
+		UnitTypeIcon="FanaticIcon"
+		WorldMapArmoryUpgradesAllowed=""
+		RadarPriority="NOT_ON_RADAR">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:NODFanatic</DisplayName>
+		<GameDependency>
+			<RequiredObject>BlackHandOperationsCenter</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="NormalRangedSquadLocomotor"
+			Condition="NORMAL"
+			Speed="70.0" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="false" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXFanatic_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Model
+						Name="" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="NODTibInfusion"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WORLD_BUILDER">
+					<Model
+						Name="SquadMarkNUFan" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic" />
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+				<AddEmotion>CheerIdle_Base</AddEmotion>
+				<AddEmotion>CheerBusy_Base</AddEmotion>
+			</EmotionTrackerUpdate>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<WeaponSetUpdate>
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODFanaticSquadRangeFinder" />
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="NODFanaticSquadRangeFinder_InGarrison"
+						ObjectStatus="INSIDE_GARRISON" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100" />
+			<Physics
+				id="ModuleTag_PhysicsBehavior" />
+			<ProductionUpdate
+				id="ProductionUpdateModuleTag"
+				GiveNoXP="true" />
+			<AttributeModifierUpgrade
+				id="Upgrade_TiberiumInfusion"
+				AttributeModifier="AttributeModifier_TiberiumInfusion">
+				<CustomAnimAndDuration
+					AnimState="USER_1" />
+				<TriggeredBy>Upgrade_TiberiumInfusion</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_TiberiumInfusion2"
+				StatusToSet="HAS_TIBERIUM_UPGRADE">
+				<TriggeredBy>Upgrade_TiberiumInfusion</TriggeredBy>
+			</StatusBitsUpgrade>
+			<CreateAndEnterObjectSpecialPower
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportNOD"
+				OCL="OCL_NodCallForTransportInfantry"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_NodCallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+			<HordeContain
+				id="ModuleTag_HordeContain"
+				FrontAngle="4.7123"
+				FlankedDelaySeconds="2.0"
+				ShowPips="false"
+				Formation="MAIN"
+				MeleeAttackLeashDistance="1"
+				Slots="5"
+				ObjectStatusOfContained=""
+				ConditionForEntry="INVALID">
+				<PassengerFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+				<DieMuxData />
+				<InitialPayload
+					Name="BlackHandFanatic"
+					Count="5" />
+				<MeleeBehavior
+					Type="AMOEBA" />
+				<!-- please keep rank info like this; we need a guy at the front so the melee style weapon works well. -->
+				<RankInfo
+					RankID="1"
+					UnitType="BlackHandFanatic">
+					<Position
+						X="20"
+						Y="0" />
+				</RankInfo>
+				<RankInfo
+					RankID="2"
+					UnitType="BlackHandFanatic">
+					<Position
+						X="10"
+						Y="20" />
+					<Position
+						X="10"
+						Y="-20" />
+					<Position
+						X="-10"
+						Y="10" />
+					<Position
+						X="-10"
+						Y="-10" />
+				</RankInfo>
+				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
+				<RankToReleaseWhenAttacking>2</RankToReleaseWhenAttacking>
+			</HordeContain>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade"
+				LevelCap="4"
+				DoFlash="false"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
+			</LevelUpUpgrade>  
+		</Behaviors>
+		<AI>
+			<HordeAIUpdate
+				id="ModuleTag_HordeAIUpdate"
+				AutoAcquireEnemiesWhenIdle="YES"
+				MaxCowerTime="5.0s"
+				MinCowerTime="3.0s"
+				CanAttackWhileContained="true">
+				<UnitAITargetChooserData
+					SympathyRange="100.0"
+					CheckVisionRange="true" />
+			</HordeAIUpdate>
+		</AI>
+		<Body>
+			<ImmortalBody
+				id="ModuleTag_ImmortalBody"
+				MaxHealth="1.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="15.0"
+				MinorRadius="20.0"
+				Height="13.0"/>
+		</Geometry>
+		<!-- Yes, we need these. Catapults & such actually do damage to the horde brain not the units
+		     And the build queue builds horde brains not units for squads -->
+		<EvaEvents
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack" 
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" /> <!-- But not sighting events!! -->
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+		<CrusherInfo
+			UseCrushAttack="false"
+			CrushableLevel="0"
+			CrusherLevel="0" />
+	</GameObject>
+</AssetDeclaration>
+<!-- 
+
+Object NODFanaticSquad
+
+	ThreatBreakdown NODFanaticHorde_DetailedThreat
+		AIKindOf = ARCHER
+	End	
+End
+
+
+
+-->

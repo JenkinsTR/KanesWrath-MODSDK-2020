@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:shield/FXSHLDABILITYMod.w3x" />			
+		<Include
+			type="all"
+			source="DATA:GlobalData/GlobalDefines.xml" />
+	</Includes>
+	<GameObject
+		id="GuardShield"
+		Side="ALIEN"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="0"
+		CommandSet="EmptyCommandSet"
+		KindOf="NOT_AUTOACQUIRABLE DRONE CAN_CAST_REFLECTIONS RESIST_EMP IGNORED_IN_FINDPOSITIONAROUND NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="AlienCrystalShield"
+		EnergyProduction="-500">
+		<DisplayName>AlienCrystalShield</DisplayName>
+		<ArmorSet
+			Armor="StructureArmor"
+			DamageFX="GenericStructureDamageFX" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FXShldAbilityMod" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_1">
+					<Animation
+						AnimationName="FXShldAbilityMod"
+						AnimationMode="ONCE" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="0s"
+				SinkRate="0"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL"/>
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_ALI_StasisShield_Die" />
+				<Event
+					Index="onCreate"
+					FX="FX_AlienMothershipLaser100" />
+			</FXListBehavior>
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate">
+				<FireWeaponNugget
+					WeaponName="GuardShieldWeapon"
+					FireDelay="0s"
+					OneShot="false" />
+				<FireWeaponNugget
+					WeaponName="GuardShieldProtectorWeapon"
+					FireDelay="0s"
+					OneShot="false" />
+				<FireWeaponNugget
+					WeaponName="GuardShieldDisadvantageWeapon"
+					FireDelay="0s"
+					OneShot="false" />
+			</FireWeaponUpdate>							
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="GuardShieldEvents"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="99999.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="11"/>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="ALI_StasisShieldLoop"
+				AudioType="soundAmbient" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="360"
+			ShroudClearingRange="360" />
+	</GameObject>
+</AssetDeclaration>

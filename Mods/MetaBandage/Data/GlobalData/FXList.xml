@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all"
+						 source="FXListGDI.xml" />
+		<Include type="all"
+						 source="FXListNOD.xml" />
+		<Include type="all"
+						 source="FXListAlien.xml" />
+	<!--
+		<Include type="all"
+						 source="FXListAudio.xml" /-->
+    <!--
+		<Include type="all"
+						 source="FXListMetaGame.xml" />
+     -->
+	</Includes>
+
+</AssetDeclaration>

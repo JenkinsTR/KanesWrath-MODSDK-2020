@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Tags />
+	<Includes />
+
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_ActivateMetaControl"
+		SpecialPower="SpecialPower_ActivateMetaControl">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_ActivateMetaControl">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_ActivateMetaControl">
+		<State
+			Image="Button_ActivateMetaControl"
+			Title="NAME:ActivateMetaControl"/>
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_DeActivateMetaControl"
+		SpecialPower="SpecialPower_DeActivateMetaControl">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_DeActivateMetaControl">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_DeActivateMetaControl">
+		<State
+			Image="Button_DeActivateMetaControl"
+			Title="NAME:DeActivateMetaControl"/>
+	</ButtonSingleStateData>
+
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgrade_MetaControlTabNextCS"
+		LogicCommand="Command_MetaControlTabNextCS">
+		<Data>
+			<ObjectUpgrade
+				StateData="ButtonSingleStateData_MetaControlTabNextCS" />
+		</Data>
+	</UnitAbilityButtonTemplate>	
+	
+	<ButtonSingleStateData
+		id="ButtonSingleStateData_MetaControlTabNextCS">
+		<State
+			Image="Button_AbilityReturntoBase"
+			Title="NAME:UpgradeAdvancedTurbines"
+			Description="DESC:UpgradeAdvancedTurbines" />
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgrade_MetaControlTabPrevCS"
+		LogicCommand="Command_MetaControlTabPrevCS">
+		<Data>
+			<ObjectUpgrade
+				StateData="ButtonSingleStateData_MetaControlTabPrevCS" />
+		</Data>
+	</UnitAbilityButtonTemplate>	
+	
+	<ButtonSingleStateData
+		id="ButtonSingleStateData_MetaControlTabPrevCS">
+		<State
+			Image="Button_AbilityReturntoBase"
+			Title="NAME:UpgradeAdvancedTurbines"
+			Description="DESC:UpgradeAdvancedTurbines" />
+	</ButtonSingleStateData>
+
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_ExternalLuaScript"
+		SpecialPower="SpecialPower_ExternalLuaScript">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_ExternalLuaScript">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_ExternalLuaScript">
+		<State
+			Image="Button_ExternalLuaScript"
+			Title="NAME:ExternalLuaScript"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerEnemyAIOFF"
+		SpecialPower="SpecialPower_EnemyAIOFF">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerEnemyAIOFF">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerEnemyAIOFF">
+		<State
+			Image="Button_EnemyAIOFF"
+			Title="NAME:EnemyAIOFF"/>
+	</ButtonSingleStateData>	
+
+	<PlayerPowerButtonTemplate
+		id="ButtonMapRevealerToggle"
+		SpecialPower="SpecialPower_MapRevealerToggle">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerMapRevealerToggle">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerMapRevealerToggle">
+		<State
+			Image="Button_MapRevealerToggle"
+			Title="NAME:MapRevealerToggle"/>
+	</ButtonSingleStateData>
+
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_SendMoney"
+		SpecialPower="SpecialPower_SendMoney">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_SendMoney">
+				<!-- ValidTargetCursor="Bombard" > -->
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_SendMoney">
+		<State
+			Image="Button_SendMoney"
+			Title="NAME:SendMoney"/>
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_RiftGen"
+		SpecialPower="SpecialPower_RiftGen">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_RiftGen"
+				RadiusCursor="TargetingDecalRiftGenerator">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_RiftGen">
+		<State
+					Image="Button_RiftGen"
+					Title="NAME:PlayerPowerRiftGenerator"
+					TypeDescription="TYPE:PlayerPowerRiftGenerator"
+					Description="DESC:PlayerPowerRiftGenerator" />
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_MetaControlGlobalDeactivate"
+		SpecialPower="SpecialPower_MetaControlGlobalDeactivate">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_MetaControlGlobalDeactivate">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_MetaControlGlobalDeactivate">
+		<State
+			Image="Button_MetaControlGlobalDeactivate"
+			Title="NAME:MetaControlGlobalDeactivate"/>
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_Money5k"
+		SpecialPower="SpecialPower_Money5k">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_Money5k">
+				<!-- ValidTargetCursor="Bombard" > -->
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_Money5k">
+		<State
+			Image="Button_Money5k"
+			Title="NAME:Money5k"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerEveryAIOFF"
+		SpecialPower="SpecialPower_EveryAIOFF">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerEveryAIOFF">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerEveryAIOFF">
+		<State
+			Image="Button_EveryAIOFF"
+			Title="NAME:EveryAIOFF"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_AIBoostToggle"
+		SpecialPower="SpecialPower_AIBoostToggle">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_AIBoostToggle">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_AIBoostToggle">
+		<State
+			Image="Button_AIBoostToggle"
+			Title="NAME:AIBoostToggle"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_MetaControlDummyMainTabMenuSelector"
+		SpecialPower="SpecialPower_MetaControlDummyMainTabMenuSelector">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_MetaControlDummyMainTabMenuSelector">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_MetaControlDummyMainTabMenuSelector">
+		<State
+			Image="Button_MainTabMenuSelector"
+			Title="NAME:MainTabMenuSelector"/>
+	</ButtonSingleStateData>
+	
+	<UnitAbilityButtonTemplate
+		id="ButtonSpecialPowerToggleEvoUnitAIAbility"
+		LogicCommand="Command_SpecialPowerToggleEvoUnitAI">
+		<Data>
+			<TargetedSpecialPower
+				StateData="ButtonStateSpecialPowerToggleEvoUnitAI"
+				ValidTargetCursor="Bombard" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerToggleEvoUnitAI">
+		<State
+			Image="Portrait_NeutralCrate"
+			Title="NAME:AIBoostToggle"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_NAOD_NextWave"
+		SpecialPower="SpecialPower_NAOD_NextWave">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_NAOD_NextWave">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_NAOD_NextWave">
+		<State
+			Image="Button_NAOD_NextWave"
+			Title="NAME:NAOD_NextWave"/>
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_DiplomacyMenu"
+		SpecialPower="SpecialPower_DiplomacyMenuSelect">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_DiplomacyMenu">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_DiplomacyMenu">
+		<State
+			Image="Button_DiplomacyMenu"
+			Title="NAME:DiplomacyMenu"/>
+	</ButtonSingleStateData>
+
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPower_ToggleAICoControl"
+		SpecialPower="SpecialPower_ToggleAICoControl">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPower_ToggleAICoControl">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPower_ToggleAICoControl">
+		<State
+			Image="Button_AICoControlToggle"
+			Title="NAME:MetaControlDummyAICoControlToggler"/>
+	</ButtonSingleStateData>	
+
+
+
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerEdgeCoordinateAnchorUpperRight"
+		SpecialPower="SpecialPowerEdgeCoordinateAnchorUpperRight">
+		<Data>
+			<TargetedPower
+				StateData="ButtonState_Generic">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerEdgeCoordinateAnchorDownRight"
+		SpecialPower="SpecialPowerEdgeCoordinateAnchorDownRight">
+		<Data>
+			<TargetedPower
+				StateData="ButtonState_Generic">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerEdgeCoordinateAnchorUpperLeft"
+		SpecialPower="SpecialPowerEdgeCoordinateAnchorUpperLeft">
+		<Data>
+			<TargetedPower
+				StateData="ButtonState_Generic">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonState_Generic">
+		<State
+			Image="Portrait_NeutralCrate"
+			Title="NAME:Generic"/>
+	</ButtonSingleStateData>	
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerMetaCreditShopMenu"
+		SpecialPower="SpecialPowerMetaCreditShopMenu">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerMetaCreditShopMenu">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerMetaCreditShopMenu">
+		<State
+			Image="Button_MetaCreditShopMenu"
+			Title="NAME:MetaCreditShopMenu"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerDiplomacy_Accept"
+		SpecialPower="SpecialPowerDiplomacy_Accept">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerDiplomacy_Accept">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerDiplomacy_Accept">
+		<State
+			Image="Button_Diplomacy_Accept"
+			Title="NAME:Diplomacy_Accept"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerDiplomacy_Deny"
+		SpecialPower="SpecialPowerDiplomacy_Deny">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerDiplomacy_Deny">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerDiplomacy_Deny">
+		<State
+			Image="Button_Diplomacy_Deny"
+			Title="NAME:Diplomacy_Deny"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerChoosePosition"
+		SpecialPower="SpecialPowerChoosePosition">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerChoosePosition"
+				RadiusCursor="TargetingDecalLightningSpike">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerChoosePosition">
+		<State
+			Image="Button_ChoosePosition"
+			Title="NAME:ChoosePosition"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonSpecialPowerCameraSetup"
+		SpecialPower="SpecialPowerCameraSetup">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerCameraSetup">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerCameraSetup">
+		<State
+			Image="Button_CameraZoomSetup"
+			Title="NAME:CameraHack1"/>
+	</ButtonSingleStateData>
+	
+	<PlayerPowerButtonTemplate
+		id="Button_ThirdFirstPersonMode"
+		SpecialPower="SpecialPowerFirstAndThirdPersonMode">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateSpecialPowerFirstAndThirdPersonMode">
+			</TargetedPower>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<ButtonSingleStateData
+		id="ButtonStateSpecialPowerFirstAndThirdPersonMode">
+		<State
+			Image="Button_ThirdFirstPersonMode"
+			Title="NAME:ThirdFirstPersonMode"
+			Description="DESC:ThirdFirstPersonMode" />
+	</ButtonSingleStateData>
+		
+</AssetDeclaration>

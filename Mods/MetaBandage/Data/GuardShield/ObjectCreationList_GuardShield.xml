@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<ObjectCreationList
+		id="OCL_GuardShield">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1"
+			>
+			<CreateObject>ShieldRemoveHelper</CreateObject>
+		</CreateObject>			
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS DO_NOT_TREAT_AS_STRUCTURE"
+			TempModelCondition="USER_1"
+			TempModelConditionTime="1s"
+			Count="1"
+			ContainInsideSourceObject = "Yes" 
+			>
+			<CreateObject>GuardShield</CreateObject>
+		</CreateObject>			
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_ShieldRemover">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1"
+			>
+			<CreateObject>ShieldRemover</CreateObject>
+		</CreateObject>		
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="EnemyDetectorWeaponResponderOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF">
+			<CreateObject>GuardShieldEnemyDetector</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_GuardShieldAIModusDeactivator">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF">
+			<CreateObject>GuardShieldAIModusDeactivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_GuardShieldAIModusActivator">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF">
+			<CreateObject>GuardShieldAIModusActivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_ShieldEmitterDieCleanUp">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>ShieldRemover</CreateObject>
+		</CreateObject>	
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF">
+			<CreateObject>GuardShieldAIModusDeactivator</CreateObject>
+		</CreateObject>		
+	</ObjectCreationList>
+
+</AssetDeclaration>

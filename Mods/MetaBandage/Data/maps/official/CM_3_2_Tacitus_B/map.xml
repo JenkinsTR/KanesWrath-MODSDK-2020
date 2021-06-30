@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration
+	xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags/>
+	<Includes>
+		<Include
+			source="DATA:static.xml"
+			type="reference"/>
+		<Include
+			source="DATA:global.xml"
+			type="reference"/>
+		<Include
+			source="DATA:gdi/structures_singleplayercampaign/gdibunker.xml"
+			type="all"/>
+		<Include
+			source="DATA:gdi/structures_singleplayercampaign/gditacitusbldg.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/tacituswall.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/tiberiumsilo.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/tiberiumspike.xml"
+			type="all"/>
+		<Include
+			source="overrides.xml"
+			type="all"/>
+	</Includes>
+</AssetDeclaration>

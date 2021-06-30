@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="MarkedOfKane_EASY"
+    Side="MarkedOfKane">
+    <Order Build="MarkedOfKanePowerPlant" />
+    <Order Build="MarkedOfKaneCrane" />
+    <Order Build="MarkedOfKaneHandOfNOD" />
+    <Order Build="MarkedOfKaneHandOfNOD" />
+    <Order Build="MarkedOfKanePowerPlant" />
+    <Order Build="MarkedOfKaneRefinery" />
+    <Order Build="MarkedOfKaneDropZone" />
+    <Order Build="MarkedOfKanePowerPlant" />
+
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="MarkedOfKaneStandard"
+    Side="MarkedOfKane"> <!--Power: +10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="MOKCyborgInfantrySquad" />
+		<Order Build="MOKCyborgInfantrySquad" />
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="95s" Account="PRODUCTION" Deposit="1500" />
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="165s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="MarkedOfKaneStandard2"
+    Side="MarkedOfKane"> <!--Power: +10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="55s" Account="PRODUCTION" Deposit="4500" />
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="165s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="MarkedOfKaneStandardCrane"
+    Side="MarkedOfKane"> <!--Power: +10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+		<!--Order Time="150s" Account="PRODUCTION" Deposit="2000" /-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="185s" />
+	</SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="MarkedOfKaneOpening"
+    Side="MarkedOfKane"> <!--Power: +10-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKaneCrane" /> <!--Time: 15 Power: -10-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneOperationsCenter" />  <!--Time: 15 Power: -10-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneTechAssemblyPlant" /> <!--Time: 40 Power: -15-->
+    <Order Build="MarkedOfKaneSecretShrine" /> <!--Time: 15 Power: -8-->
+
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MOKCyborgInfantrySquad" />
+    <Order Build="MarkedOfKaneImprovedCyborgInfantrySquad" />
+    <Order Build="MarkedOfKaneImprovedCyborgInfantrySquad" />
+    <Order Build="MarkedOfKaneImprovedCyborgInfantrySquad" />
+    <Order Build="MarkedOfKaneImprovedCyborgInfantrySquad" />
+    <Order Build="MarkedOfKaneTibTrooperSquad" />
+    <Order Build="MarkedOfKaneTibTrooperSquad" />
+    <Order Build="MarkedOfKaneTibTrooperSquad" />
+    <Order Build="MarkedOfKaneTibTrooperSquad" />
+    <Order Build="MarkedOfKaneStealthTank" />
+    <Order Build="MarkedOfKaneStealthTank" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+
+    <Order Time="245s" />
+  </SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="MarkedOfKaneBrutalCrane"
+    Side="MarkedOfKane"> <!--Power: +10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="115s" Account="PRODUCTION" Deposit="999999" />
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="250s" />
+	</SkirmishOpeningMove>
+
+</AssetDeclaration>

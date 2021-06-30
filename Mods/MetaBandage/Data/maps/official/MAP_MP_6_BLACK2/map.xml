@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration
+	xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags/>
+	<Includes>
+		<Include
+			source="DATA:static.xml"
+			type="reference"/>
+		<Include
+			source="DATA:global.xml"
+			type="reference"/>
+		<Include
+			source="DATA:civilian/brazil_br/buildings/brbwat01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/north_carolina_badlands_nc/buildings/ncbfac01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/north_carolina_badlands_nc/buildings/ncbhse01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/north_carolina_badlands_nc/buildings/ncbhse02.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/north_carolina_badlands_nc/buildings/ncbwse01.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/captureflag.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/civbunker.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/controlpoint.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/defensivetower.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/electromagneticpulsecontrolcenter.xml"
+			type="all"/>
+		<Include
+			source="overrides.xml"
+			type="all"/>
+	</Includes>
+</AssetDeclaration>

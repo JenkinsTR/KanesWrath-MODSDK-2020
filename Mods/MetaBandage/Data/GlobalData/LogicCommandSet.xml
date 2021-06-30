@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+<!-- IMPORTED FROM KWBANDAGE 30-06-2021 -->
+
+	<!-- Adjusted Upgrade Ordering for consistency between Sub Factions -->
+	<!-- Removed Sonic Repulsion Field Command -->
+	<LogicCommandSet
+		id="GDIArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgun</Cmd>
+		<Cmd>Command_CommandPostCallHunterKiller</Cmd>
+	</LogicCommandSet>
+	<!-- Adjusted Upgrade Ordering for consistency between Sub Factions -->
+	<!-- Added Sonic Repulsion Field Command -->
+	<LogicCommandSet
+		id="GDICommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneTrooperScannerPack</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Refer to GDI Command Post -->
+	<LogicCommandSet
+		id="SteelTalonsCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Wolverine and Slingshot ordering to match Warfactory -->
+	<LogicCommandSet
+		id="SteelTalonsReclamatorHubCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPitbull</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTitan</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRepairAPC</Cmd>
+		<Cmd>Command_ConstructSteelTalonsHeavyHarvester</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMCV</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWolverine</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAAScout</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRig</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMammoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBehemoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMARV</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+	<!-- Removed Evacuate Infantry at Location -->
+	<LogicCommandSet
+		id="SteelTalonsRepairAPCCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_APCMinefield</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+		<Cmd>Command_Stop</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to GDI Tech Center -->
+	<!-- Added Command for Railgun Accelerators -->
+	<LogicCommandSet
+		id="SteelTalonsTechCenterCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgunST</Cmd>
+		<Cmd>Command_PurchaseUpgradeAdaptiveArmor</Cmd>
+		<Cmd>Command_SpecialPowerRailgunAccelerator</Cmd>
+	</LogicCommandSet>
+
+	<!-- Refer to GDI Command Post -->
+	<LogicCommandSet
+		id="ZOCOMCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneRaiderScannerPack</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to GDI Tech Center -->
+	<!-- Swapped Sharpshooter Team to ZOCOM -->
+	<LogicCommandSet
+		id="ZOCOMArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMHunterKiller</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Added Laser Fencing Command -->
+	<LogicCommandSet
+		id="NODOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_CloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Removed Laser Fencing Command -->
+	<LogicCommandSet
+		id="NODTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_UpgradeNODLaserCapacitor</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+		<Cmd>Command_Redemption</Cmd>
+	</LogicCommandSet>
+
+	<!-- Refer to Nod Operations Center -->
+	<LogicCommandSet
+		id="BlackHandOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to Nod Tech Lab -->
+	<LogicCommandSet
+		id="BlackHandTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_PurchaseUpgradeChargedParticleBeam</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissilesBH</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Refer to Nod Operations Center -->
+	<LogicCommandSet
+		id="MarkedOfKaneOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_MarkedOfKaneCloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Mines Command to Magnetic Mines -->
+	<LogicCommandSet
+		id="MarkedOfKaneHangarCommandSet">
+		<Cmd>Command_ConstructMarkedOfKaneVenom</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneVertigo</Cmd>
+		<Cmd>Command_NODRecallAllAircraft</Cmd>
+		<Cmd>Command_UpgradeNODSignatureGenerator</Cmd>
+		<Cmd>Command_PurchaseUpgradeVertigoDisruptionPod</Cmd>
+		<Cmd>Command_MarkedOfKaneMagneticMines</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Shadow Strike Team to Marked of Kane -->
+	<LogicCommandSet
+		id="MarkedOfKaneSecretShrineCommandSet">
+		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
+		<Cmd>Command_PurchaseUpgradeTiberiumInfusion</Cmd>
+		<Cmd>Command_MarkedOfKaneRedShadowStrikeTeam</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to Nod Tech Lab -->
+	<LogicCommandSet
+		id="MarkedOfKaneTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_PurchaseUpgradeSuperChargedParticleBeam</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Command to spawn Reaper 17 Buzzers Instead -->
+	<!-- Command to spawn Reaper 17 Disintigrators -->
+	<!-- Command to spawn Reaper 17 Assimilator -->
+	<LogicCommandSet
+		id="Reaper17PortalCommandSet">
+		<Cmd>Command_ConstructReaper17Buzzers</Cmd>
+		<Cmd>Command_ConstructReaper17RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructReaper17Assimilator</Cmd>
+		<Cmd>Command_ConstructReaper17ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructReaper17StalkerSquad</Cmd>
+	</LogicCommandSet>
+	<!-- Command to use Reaper 17 Buzzer Swarm -->
+	<LogicCommandSet
+		id="Reaper17ControlCenterCommandSet">
+		<Cmd>Command_Reaper17TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Reaper17SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+		<Cmd>Command_PurchaseUpgradeReaper17MinorForcefieldGenerator</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Command to spawn Traveler 59 Buzzers Instead -->
+	<LogicCommandSet
+		id="Traveler59PortalCommandSet">
+		<Cmd>Command_ConstructTraveler59Buzzers</Cmd>
+		<Cmd>Command_ConstructTraveler59RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59Assimilator</Cmd>
+		<Cmd>Command_ConstructTraveler59ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59CultistSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59StalkerSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59BlinkMastermind</Cmd>
+	</LogicCommandSet>
+	<!-- Command to use Reaper 17 Buzzer Swarm -->
+	<LogicCommandSet
+		id="Traveler59ControlCenterCommandSet">
+		<Cmd>Command_TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Traveler59SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+	</LogicCommandSet>
+	<!-- Added Temporal Wormhole Command -->
+	<LogicCommandSet
+		id="Traveler59ReactorCommandSet">
+		<Cmd>Command_PurchaseUpgradeTravelerEngines</Cmd>
+		<Cmd>Command_PurchaseUpgradeAlienShardLaunchers</Cmd>
+		<Cmd>Command_SpecialPowerPhaseField</Cmd>
+		<Cmd>Command_SpecialPowerTemporalWormhole</Cmd>
+	</LogicCommandSet>	
+
+<!-- END IMPORT FROM KWBANDAGE 30-06-2021 -->
+
+	<LogicCommandSet
+		id="PlayerSpellBookCommandSet">
+		<Cmd>Command_LaunchCatalystMissile</Cmd>
+		<Cmd>Command_ComputerCounterMeasures</Cmd>
+		<Cmd>Command_CommandPostCallAirborne</Cmd>
+		<Cmd>Command_CommandPostCallBloodhound</Cmd>
+		<Cmd>Command_CommandPostCallHunterKiller</Cmd>
+		<Cmd>Command_SpaceCommandGDIDropPods</Cmd>
+		<Cmd>Command_SpaceCommandGDIShockwave</Cmd>
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_CommandPostBombingRun</Cmd>
+		<Cmd>Command_IonCannonSuperweapon</Cmd>
+		<Cmd>Command_TempleOfNodNuclearMissile</Cmd>
+		<Cmd>Command_ChemicalPlantTibVeinDetonation</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_NODBurrowMines</Cmd>
+		<Cmd>Command_TiberiumFacilitySeedTiberium</Cmd>
+		<Cmd>Command_TiberiumFacilityAirDispersion</Cmd>
+		<Cmd>Command_RedShadowStrikeTeam</Cmd>
+		<Cmd>Command_CloakingField</Cmd>
+		<Cmd>Command_MarkedOfKaneCloakingField</Cmd>
+		<Cmd>Command_AlienRepairDrones</Cmd>
+		<Cmd>Command_TiberiumVibrationScan</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+		<Cmd>Command_AlienShockPods</Cmd>
+		<Cmd>Command_SummonMothership</Cmd>
+		<Cmd>Command_RiftGeneratorSuperweapon</Cmd>
+		<Cmd>Command_SpecialPowerCrystalField</Cmd>
+		<Cmd>Command_SpecialPowerSwarm</Cmd>
+		<Cmd>Command_SpecialPowerPhaseField</Cmd>
+		<Cmd>Command_EMPControlCenterEMP</Cmd>
+		<Cmd>Command_SpaceCommandZOCOMRaiderPods</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMAirborne</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMBloodhound</Cmd>
+		<Cmd>Command_CommandPostCallSTBloodhound</Cmd>
+		<Cmd>Command_ZOCOMCommandPostBombingRun</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMHunterKiller</Cmd>
+		<Cmd>Command_SpecialPowerRise_Insurection</Cmd>
+		<Cmd>Command_SpecialPowerFriendsOfNod</Cmd>
+		<Cmd>Command_SpecialPowerMetaNuclearMissile</Cmd>
+		<Cmd>Command_SpecialPowerBlackHand</Cmd>
+		<Cmd>Command_SpecialPowerMarkedOfKane</Cmd>
+		<Cmd>Command_SpecialPowerKaneLives</Cmd>
+		<Cmd>Command_SpecialPowerSpecialForces</Cmd>
+		<Cmd>Command_SpecialPowerFuryOfNod</Cmd>
+		<Cmd>Command_SpecialPowerVertigoStrike</Cmd>
+		<Cmd>Command_SpecialPowerNodTraitor</Cmd>
+		<Cmd>Command_SpecialPowerMetaIonBlast</Cmd>
+		<Cmd>Command_SpecialPowerFireHawkRaid</Cmd>
+		<Cmd>Command_SpecialPowerRefugeeAid</Cmd>
+		<Cmd>Command_SpecialPowerSonicAgitation</Cmd>
+		<Cmd>Command_SpecialPowerZocomInfiltration</Cmd>
+		<Cmd>Command_SpecialPowerMediaBlitz</Cmd>
+		<Cmd>Command_SpecialPowerAlienPlague</Cmd>
+		<Cmd>Command_SpecialPowerSkySentry</Cmd>
+		<Cmd>Command_SpecialPowerMetaWormhole</Cmd>
+		<Cmd>Command_SpecialPowerEradicate</Cmd>
+		<Cmd>Command_SpecialPowerIchorInjection</Cmd>
+		<Cmd>Command_SpecialPowerPlanetaryBombardment</Cmd>
+		<Cmd>Command_SpecialPowerIonSuperstorm</Cmd>
+		<Cmd>Command_SpecialPowerMetaPhaseField</Cmd>
+		<Cmd>Command_SpecialPowerAlienDropship</Cmd>
+		<Cmd>Command_SpecialPowerCommandoStrike</Cmd>
+		<Cmd>Command_SpecialPowerMetaRiftGenerator</Cmd>
+		<Cmd>Command_SpecialPowerBuildTower</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="BlackHandConstructionYardCommandSet">
+		<Cmd>Command_Construct_BlackHandPowerPlant</Cmd>
+		<Cmd>Command_Construct_BlackHandRefinery</Cmd>
+		<Cmd>Command_Construct_BlackHandHandOfNod</Cmd>
+		<Cmd>Command_Construct_BlackHandDropZone</Cmd>
+		<Cmd>Command_Construct_BlackHandOperationsCenter</Cmd>
+		<Cmd>Command_Construct_BlackHandSecretShrine</Cmd>
+		<Cmd>Command_Construct_BlackHandTechAssemblyPlant</Cmd>
+		<Cmd>Command_Construct_BlackHandShredderTurretHub</Cmd>
+		<Cmd>Command_Construct_BlackHandLaserCannon</Cmd>
+		<Cmd>Command_Construct_BlackHandRocketBunker</Cmd>
+		<Cmd>Command_Construct_BlackHandTiberiumSilo</Cmd>
+		<Cmd>Command_Construct_BlackHandPropagandaTower</Cmd>
+		<Cmd>Command_Construct_BlackHandObeliskOfLight</Cmd>
+		<Cmd>Command_Construct_BlackHandTempleOfNOD</Cmd>
+		<Cmd>Command_Construct_BlackHandTiberiumLiquidationFacility</Cmd>
+		<Cmd>Command_Construct_BlackHandCrane</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_Construct_BlackHandEmissary</Cmd>
+		<Cmd>Command_ConstructBlackHandWarMechFacility</Cmd>
+		<Cmd>Command_PackNODMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="GDIConstructionYardCommandSet">
+		<Cmd>Command_ConstructGDIPowerPlant</Cmd>
+		<Cmd>Command_ConstructGDIRefinery</Cmd>
+		<Cmd>Command_ConstructGDIBarracks</Cmd>
+		<Cmd>Command_ConstructGDIWarfactory</Cmd>
+		<Cmd>Command_ConstructGDICommandPost</Cmd>
+		<Cmd>Command_ConstructGDIAirTower</Cmd>
+		<Cmd>Command_ConstructGDIMedicalCenter</Cmd>
+		<Cmd>Command_ConstructGDIArmory</Cmd>
+		<Cmd>Command_ConstructGDISpaceCommandUplink</Cmd>
+		<Cmd>Command_ConstructGDIReclamatorHub</Cmd>
+		<Cmd>Command_ConstructGDIWatchTower</Cmd>
+		<Cmd>Command_ConstructGDIGolumCannon</Cmd>
+		<Cmd>Command_ConstructGDIAABattery</Cmd>
+		<Cmd>Command_ConstructGDITiberiumSilo</Cmd>
+		<Cmd>Command_ConstructGDITerraformingStation</Cmd>
+		<Cmd>Command_ConstructGDIIonCannonControl</Cmd>
+		<Cmd>Command_ConstructGDICrane</Cmd>
+		<Cmd>Command_ConstructGDIAirSupport</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructGDISurveyor</Cmd>
+		<Cmd>Command_PackGDIMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MarkedOfKaneConstructionYardCommandSet">
+		<Cmd>Command_Construct_MarkedOfKanePowerPlant</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneRefinery</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneBarracks</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneDropZone</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneOperationsCenter</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneHangar</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneSecretShrine</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneTechAssemblyPlant</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneTiberiumLiquidationFacility</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneShredderTurretHub</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneLaserCannon</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneRocketBunker</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneTiberiumSilo</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneDisruptionTower</Cmd>
+		<Cmd>Command_Construct_MarkedOfKanePropagandaTower</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneObeliskOfLight</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneTempleOfNOD</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneAirSupport</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneCrane</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneWarMechFacility</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_Construct_MarkedOfKaneEmissary</Cmd>
+		<Cmd>Command_PackNODMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="NODConstructionYardCommandSet">
+		<Cmd>Command_NOD_BuildPowerPlant</Cmd>
+		<Cmd>Command_NOD_BuildRefinery</Cmd>
+		<Cmd>Command_NOD_BuildBarracks</Cmd>
+		<Cmd>Command_NOD_BuildDropZone</Cmd>
+		<Cmd>Command_NOD_BuildOperationsCenter</Cmd>
+		<Cmd>Command_NOD_BuildHangar</Cmd>
+		<Cmd>Command_NOD_BuildSecretShrine</Cmd>
+		<Cmd>Command_NOD_BuildTechAssemblyPlant</Cmd>
+		<Cmd>Command_NOD_BuildTiberiumLiquidationFacility</Cmd>
+		<Cmd>Command_NOD_BuildShredderTurretHub</Cmd>
+		<Cmd>Command_NOD_BuildLaserCannon</Cmd>
+		<Cmd>Command_NOD_BuildRocketBunker</Cmd>
+		<Cmd>Command_NOD_BuildTiberiumSilo</Cmd>
+		<Cmd>Command_NOD_BuildDisruptionTower</Cmd>
+		<Cmd>Command_NOD_BuildPropagandaTower</Cmd>
+		<Cmd>Command_NOD_BuildObeliskOfLight</Cmd>
+		<Cmd>Command_NOD_BuildTempleOfNOD</Cmd>
+		<Cmd>Command_ConstructNODAirSupport</Cmd>
+		<Cmd>Command_NOD_BuildCrane</Cmd>
+		<Cmd>Command_ConstructNODWarMechFacility</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructNODEmissary</Cmd>
+		<Cmd>Command_PackNODMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="SteelTalonsConstructionYardCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPowerPlant</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRefinery</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBarracks</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWarfactory</Cmd>
+		<Cmd>Command_ConstructSteelTalonsCommandPost</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAirTower</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTechCenter</Cmd>
+		<Cmd>Command_ConstructSteelTalonsSpaceCommandUplink</Cmd>
+		<Cmd>Command_ConstructSteelTalonsReclamatorHub</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWatchTower</Cmd>
+		<Cmd>Command_ConstructSteelTalonsGolumCannon</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAABattery</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTiberiumSilo</Cmd>
+		<Cmd>Command_ConstructSteelTalonsIonCannonControl</Cmd>
+		<Cmd>Command_ConstructSteelTalonsCrane</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAirSupport</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructSteelTalonsSurveyor</Cmd>
+		<Cmd>Command_PackGDIMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="ZOCOMConstructionYardCommandSet">
+		<Cmd>Command_ConstructZOCOMPowerPlant</Cmd>
+		<Cmd>Command_ConstructZOCOMRefinery</Cmd>
+		<Cmd>Command_ConstructZOCOMBarracks</Cmd>
+		<Cmd>Command_ConstructZOCOMWarFactory</Cmd>
+		<Cmd>Command_ConstructZOCOMCommandPost</Cmd>
+		<Cmd>Command_ConstructZOCOMAirTower</Cmd>
+		<Cmd>Command_ConstructZOCOMMedicalCenter</Cmd>
+		<Cmd>Command_ConstructZOCOMArmory</Cmd>
+		<Cmd>Command_ConstructZOCOMSpaceCommandUplink</Cmd>
+		<Cmd>Command_ConstructZOCOMReclamatorHub</Cmd>
+		<Cmd>Command_ConstructZOCOMWatchTower</Cmd>
+		<Cmd>Command_ConstructZOCOMGolumCannon</Cmd>
+		<Cmd>Command_ConstructZOCOMAABattery</Cmd>
+		<Cmd>Command_ConstructZOCOMTiberiumSilo</Cmd>
+		<Cmd>Command_ConstructZOCOMTerraformingStation</Cmd>
+		<Cmd>Command_ConstructZOCOMIonCannonControl</Cmd>
+		<Cmd>Command_ConstructZOCOMCrane</Cmd>
+		<Cmd>Command_ConstructZOCOMAirSupport</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructZOCOMSurveyor</Cmd>
+		<Cmd>Command_PackGDIMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="AlienDronePlatformCommandSet">
+		<Cmd>Command_ConstructAlienPowerProjector</Cmd>
+		<Cmd>Command_ConstructAlienTiberiumTower</Cmd>
+		<Cmd>Command_ConstructAlienPortal</Cmd>
+		<Cmd>Command_ConstructAlienGateway</Cmd>
+		<Cmd>Command_ConstructAlienBuzzerHive</Cmd>
+		<Cmd>Command_ConstructAlienPhotonCannon</Cmd>
+		<Cmd>Command_ConstructAlienPlasmaMissileBattery</Cmd>
+		<Cmd>Command_ConstructAlienSporePod</Cmd>
+		<Cmd>Command_ConstructAlienControlCenter</Cmd>
+		<Cmd>Command_ConstructAlienStormColumn</Cmd>
+		<Cmd>Command_ConstructAlienWarpBeacon</Cmd>
+		<Cmd>Command_ConstructAlienStatisChamber</Cmd>
+		<Cmd>Command_ConstructAlienReactor</Cmd>
+		<Cmd>Command_ConstructAlienSignalTransmitter</Cmd>
+		<Cmd>Command_ConstructAlienRiftGenerator</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructAlienExplorer</Cmd>
+		<Cmd>Command_ConstructAlienFoundry</Cmd>
+		<Cmd>Command_ConstructAlienMetaHive</Cmd>
+		<Cmd>Command_PackALIENMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Reaper17DronePlatformCommandSet">
+		<Cmd>Command_ConstructReaper17PowerProjector</Cmd>
+		<Cmd>Command_ConstructReaper17TiberiumTower</Cmd>
+		<Cmd>Command_ConstructReaper17Portal</Cmd>
+		<Cmd>Command_ConstructReaper17Gateway</Cmd>
+		<Cmd>Command_ConstructReaper17BuzzerHive</Cmd>
+		<Cmd>Command_ConstructReaper17PhotonCannon</Cmd>
+		<Cmd>Command_ConstructReaper17PlasmaMissileBattery</Cmd>
+		<Cmd>Command_ConstructReaper17GrowthStimulator</Cmd>
+		<Cmd>Command_ConstructReaper17ControlCenter</Cmd>
+		<Cmd>Command_ConstructReaper17StormColumn</Cmd>
+		<Cmd>Command_ConstructReaper17WarpBeacon</Cmd>
+		<Cmd>Command_ConstructReaper17StasisChamber</Cmd>
+		<Cmd>Command_ConstructReaper17Reactor</Cmd>
+		<Cmd>Command_ConstructReaper17SignalTransmitter</Cmd>
+		<Cmd>Command_ConstructReaper17RiftGenerator</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructReaper17Explorer</Cmd>
+		<Cmd>Command_ConstructReaper17Foundry</Cmd>
+		<Cmd>Command_ConstructReaper17MetaHive</Cmd>
+		<Cmd>Command_PackALIENMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Traveler59DronePlatformCommandSet">
+		<Cmd>Command_ConstructTraveler59PowerProjector</Cmd>
+		<Cmd>Command_ConstructTraveler59TiberiumTower</Cmd>
+		<Cmd>Command_ConstructTraveler59Portal</Cmd>
+		<Cmd>Command_ConstructTraveler59Gateway</Cmd>
+		<Cmd>Command_ConstructTraveler59BuzzerHive</Cmd>
+		<Cmd>Command_ConstructTraveler59PhotonCannon</Cmd>
+		<Cmd>Command_ConstructTraveler59PlasmaMissileBattery</Cmd>
+		<Cmd>Command_ConstructTraveler59SporePod</Cmd>
+		<Cmd>Command_ConstructTraveler59ControlCenter</Cmd>
+		<Cmd>Command_ConstructTraveler59StormColumn</Cmd>
+		<Cmd>Command_ConstructTraveler59WarpBeacon</Cmd>
+		<Cmd>Command_ConstructTraveler59StatisChamber</Cmd>
+		<Cmd>Command_ConstructTraveler59Reactor</Cmd>
+		<Cmd>Command_ConstructTraveler59SignalTransmitter</Cmd>
+		<Cmd>Command_ConstructTraveler59RiftGenerator</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructTraveler59Explorer</Cmd>
+		<Cmd>Command_ConstructTraveler59Foundry</Cmd>
+		<Cmd>Command_ConstructTraveler59MetaHive</Cmd>
+		<Cmd>Command_PackALIENMCV</Cmd>
+	</LogicCommandSet>
+	
+</AssetDeclaration>

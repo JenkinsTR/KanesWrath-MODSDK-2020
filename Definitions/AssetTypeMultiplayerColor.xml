@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MultiplayerColor"
+		TypeHash="1940241980">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="MetaGameSide"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RGBColor"
+			AssetType="Color4" />
+		<EntryRelocation
+			id="RGBColorT"
+			AssetType="Color4" />
+		<Entry
+			id="RGBNightColor"
+			AssetType="Color4" />
+		<Entry
+			id="LivingWorldColor"
+			AssetType="Color4" />
+		<Entry
+			id="LivingWorldBannerColor"
+			AssetType="Color4" />
+		<Entry
+			id="TooltipName"
+			AssetType="String" />
+		<Entry
+			id="AvailableInMetaGame"
+			AssetType="SageBool" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

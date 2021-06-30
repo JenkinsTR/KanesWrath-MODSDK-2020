@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+
+	<GameObject
+		id="GenericDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="1.00s"
+				MaxLifetime="1.00s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="GenericDummyNull"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.00s"
+				MaxLifetime="0.00s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="GenericDummyStay"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="GenericDummyEffect"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.00s"
+				MaxLifetime="0.00s" /> 
+			<FXListBehavior
+				id="FXDeath">
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="" />
+				<Event
+					Index="onDeath"
+					FX="FX_GrenadeHitHeroic"
+					MinThreshold="0"
+					MaxThreshold="0"
+					Direction="Default"
+					OrientToObject="True"
+					ForceUseDoFXObj="False" />
+			</FXListBehavior>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="TestDummyA"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.00s"
+				MaxLifetime="0.00s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="TestDummyAEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="InfiniteEnergyDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EnergyProduction="10000000"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>	
+	
+	<GameObject
+		id="InfiniteTiberiumRegeneration"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE FS_CASH_PRODUCER"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<TiberiumGrowthModBehavior
+				id="ModuleTag_TiberiumGrowth"
+				GreenTiberiumMultiplier="100000"
+				BlueTiberiumMultiplier="100000">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</TiberiumGrowthModBehavior>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="BuildAnywhereDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="BuildAnywhereDummyEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+		<ProjectedBuildabilityInfo
+			Radius="13000"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE TIBERIUM_FIELD INVALID"/>
+	</GameObject>
+	
+	<GameObject
+		id="GetMapViewDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.01s"
+				MaxLifetime="0.01s" /> 		
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="13000" />
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>	
+	
+	<GameObject
+		id="InfiniteProductionSpeedDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate"
+				AliveOnly="true"
+				ActiveWhenDisabled="true">
+				<FireWeaponNugget
+					WeaponName="InfiniteProductionSpeedWeapon"
+					FireDelay="0.05s"
+					OneShot="false" />
+			</FireWeaponUpdate>			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="OCLWeaponScriptExtender"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="OCLWeaponScriptExtenderEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>	
+	
+	<GameObject
+		id="ControlPointX"
+		Side="Neutral"
+		EditorSorting="STRUCTURE"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE SELECTABLE ALWAYS_VISIBLE DO_NOT_CLASSIFY CAN_CAST_REFLECTIONS UNIQUE_UNIT REVEAL_TO_ALL NOT_AUTOACQUIRABLE IGNORE_FOR_VICTORY NOT_SELLABLE NEUTRAL_TECH CAPTURABLE"
+		RadarPriority="STRUCTURE"
+		EditorName="ControlPoint"
+		ForceLuaRegistration="True">
+		<DisplayName>Name:CaptureFlag</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor"
+			DamageFX="GenericStructureDamageFX"/>
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="TBCaptureFlag" />
+				</ModelConditionState>				
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>	
+			<SubObjectsUpgrade
+				id="ModuleTag_GDICapture"
+				ShowSubObjects="TB_CP_GDI LIGHTSF01"
+				HideSubObjects="TB_CP_ALN TB_CP_NOD" 
+				Permanent="true">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_NODCapture"
+				ShowSubObjects="TB_CP_NOD LIGHTSF01"
+				HideSubObjects="TB_CP_ALN TB_CP_GDI" 
+				Permanent="true">
+				<TriggeredBy>Upgrade_NODFaction</TriggeredBy>
+			</SubObjectsUpgrade>
+			<SubObjectsUpgrade
+				id="ModuleTag_AlienCapture"
+				ShowSubObjects="TB_CP_ALN LIGHTSF01"
+				HideSubObjects="TB_CP_GDI TB_CP_NOD" 
+				Permanent="true">
+				<TriggeredBy>Upgrade_AlienFaction</TriggeredBy>
+			</SubObjectsUpgrade> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="ControlPointEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="3000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="25.0"
+				Height="75.0"
+				ContactPointGeneration="INFANTRY"/>
+		</Geometry>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="200" />
+	</GameObject>
+	
+	<GameObject
+		id="ControlPointX_OCL"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.00s"
+				MaxLifetime="0.00s" /> 
+			<CreateObjectDie
+				id="ModuleTag_OCL_Extender"
+				CreationList="OCL_Extender_ControlPointX"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>	
+
+	<ObjectCreationList
+		id="OCL_Extender_ControlPointX">
+	    <CreateObject
+			Disposition="ON_GROUND_ALIGNED USE_WATER_SURFACE USE_CLIFF"
+			Options="CLEAR_REMOVEABLES"
+			Count="1">
+			<CreateObject>ControlPointX</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<GameObject
+		id="MetaControlDummyFreezeGame"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR AIRCRAFT"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<LocomotorSet
+			Locomotor="MetaControlDummyLocomotor"
+			Condition="NORMAL"
+			Speed="1" />
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<FireWeaponUpdate
+				id="ModuleTag_FireWeaponUpdate">
+				<FireWeaponNugget
+					WeaponName="FreezeGameFWeapon"
+					FireDelay="0.05s"
+					OneShot="false" />
+			</FireWeaponUpdate>			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MetaControlDummyFreezeGameEvent">
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="FearRadiatorDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>		
+			<RadiateFearUpdate
+				id="ModuleTag_RadiateFearUpdate"
+				PulseRadius="13000"
+				PulseInterval="0"
+				InitiallyActive="true"
+				GenerateTerror="true"
+				GenerateFear="true"
+				GenerateUncontrollableFear="true">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL ENEMIES"
+					Include="INFANTRY VEHICLE"
+					Exclude="" />
+			</RadiateFearUpdate>					
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="SlowDownEnemyDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>		
+			<AttributeModifierPoolUpdate
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierAuraUpdate
+				id="ModuleTag_AttributeModifierAura" 
+				InitiallyActive="true"
+				AttributeModifierName="AttributeModifier_SlowDown"
+				RefreshDelay="0.05s"
+				AllowSelf="false"
+				Range="13000"
+				TargetEnemy="true"
+				AffectContainedOnly="false">
+				<ObjectFilter
+					Rule="ANY"
+					Relationship="NEUTRAL ENEMIES"
+					Include="INFANTRY VEHICLE"
+					Exclude="" />
+			</AttributeModifierAuraUpdate>				
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+		<VisionInfo
+			VisionRange="13000"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="NAODTeamReferenceDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		EnergyProduction="10000000"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate1" UpgradeToGrant="BasePurchasableUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate2" UpgradeToGrant="InfantryCaptureBuilding" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate3" UpgradeToGrant="Upgrade_AdaptiveArmor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate4" UpgradeToGrant="Upgrade_AlienBlueShardWeapon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate5" UpgradeToGrant="Upgrade_AlienFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate6" UpgradeToGrant="Upgrade_AlienMinorForcefieldGenerator" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate7" UpgradeToGrant="Upgrade_AlienReactorForcefieldGenerator" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate8" UpgradeToGrant="Upgrade_AlienShardLaunchers" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate9" UpgradeToGrant="Upgrade_AlienShockTrooperBlinkPack" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate10" UpgradeToGrant="Upgrade_AlienShockTrooperPlasmaDiskLauncher" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate11" UpgradeToGrant="Upgrade_AllFactionUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate12" UpgradeToGrant="Upgrade_AllowStratBuilding1" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate13" UpgradeToGrant="Upgrade_AllowStratBuilding2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate14" UpgradeToGrant="Upgrade_AllowStratBuilding3" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate15" UpgradeToGrant="Upgrade_AllowStratBuilding4" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate16" UpgradeToGrant="Upgrade_AllowStratBuilding5" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate17" UpgradeToGrant="Upgrade_AvatarBeamCannon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate18" UpgradeToGrant="Upgrade_AvatarFlamer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate19" UpgradeToGrant="Upgrade_AvatarInvisibility" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate20" UpgradeToGrant="Upgrade_AvatarStealthDetect" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate21" UpgradeToGrant="Upgrade_Base_Airlift" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate22" UpgradeToGrant="Upgrade_BlackHandBlackDisciplesUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate23" UpgradeToGrant="Upgrade_BlackHandFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate24" UpgradeToGrant="Upgrade_BlackHandLiquidTiberiumCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate25" UpgradeToGrant="Upgrade_BlackHandSecretShrinePurifyingFlame" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate26" UpgradeToGrant="Upgrade_CallSupportUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate27" UpgradeToGrant="Upgrade_CallSupportZOCOMUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate28" UpgradeToGrant="Upgrade_CeramicArmor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate29" UpgradeToGrant="Upgrade_CloakingFieldInvisibility" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate30" UpgradeToGrant="Upgrade_DeployNODBunkerTruck" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate31" UpgradeToGrant="Upgrade_EasyAIMultiPlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate32" UpgradeToGrant="Upgrade_EasyAISinglePlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate33" UpgradeToGrant="Upgrade_EMPGrenades" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate34" UpgradeToGrant="Upgrade_EradicatorDiscsFront" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate35" UpgradeToGrant="Upgrade_EradicatorDiscsMiddle" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate36" UpgradeToGrant="Upgrade_EradicatorDiscsRear" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate37" UpgradeToGrant="Upgrade_EradicatorHealingFront" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate38" UpgradeToGrant="Upgrade_EradicatorHealingMiddle" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate39" UpgradeToGrant="Upgrade_EradicatorHealingRear" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate40" UpgradeToGrant="Upgrade_EradicatorLaserFront" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate41" UpgradeToGrant="Upgrade_EradicatorLaserMiddle" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate42" UpgradeToGrant="Upgrade_EradicatorLaserRear" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate43" UpgradeToGrant="Upgrade_EradicatorShardsFront" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate44" UpgradeToGrant="Upgrade_EradicatorShardsMiddle" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate45" UpgradeToGrant="Upgrade_EradicatorShardsRear" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate46" UpgradeToGrant="Upgrade_EradicatorTeleportFront" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate47" UpgradeToGrant="Upgrade_EradicatorTeleportMiddle" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate48" UpgradeToGrant="Upgrade_EradicatorTeleportRear" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate49" UpgradeToGrant="Upgrade_FirehawkStratofighterBooster" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate50" UpgradeToGrant="Upgrade_FortifyBuilding" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate51" UpgradeToGrant="Upgrade_FusionCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate52" UpgradeToGrant="Upgrade_GDIAPAmmo" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate53" UpgradeToGrant="Upgrade_GDIArmoryPitbullMortar" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate54" UpgradeToGrant="Upgrade_GDIArmoryRailgunTech" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate55" UpgradeToGrant="Upgrade_GDICompositeArmor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate56" UpgradeToGrant="Upgrade_GDIFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate57" UpgradeToGrant="Upgrade_GDIHardpoints" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate58" UpgradeToGrant="Upgrade_GDITungstenAAShells" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate59" UpgradeToGrant="Upgrade_HardAIMultiPlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate60" UpgradeToGrant="Upgrade_HardAISinglePlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate61" UpgradeToGrant="Upgrade_ICMUMO_TIER1" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate62" UpgradeToGrant="Upgrade_ICMUMO_TIER2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate63" UpgradeToGrant="Upgrade_ICMUMO_TIER3" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate64" UpgradeToGrant="Upgrade_LaserFencing" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate65" UpgradeToGrant="Upgrade_MarkedOfKaneCyberneticLegs" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate66" UpgradeToGrant="Upgrade_MarkedOfKaneFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate67" UpgradeToGrant="Upgrade_MarkedOfKaneLiquidTiberiumCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate68" UpgradeToGrant="Upgrade_MarkedOfKaneTechCenterSuperChargedParticleBeam" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate69" UpgradeToGrant="Upgrade_MARVEngineerFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate70" UpgradeToGrant="Upgrade_MARVEngineerFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate71" UpgradeToGrant="Upgrade_MARVEngineerRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate72" UpgradeToGrant="Upgrade_MARVEngineerRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate73" UpgradeToGrant="Upgrade_MARVGrenadeSoldierSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate74" UpgradeToGrant="Upgrade_MARVGrenadeSoldierSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate75" UpgradeToGrant="Upgrade_MARVGrenadeSoldierSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate76" UpgradeToGrant="Upgrade_MARVGrenadeSoldierSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate77" UpgradeToGrant="Upgrade_MARVMissileSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate78" UpgradeToGrant="Upgrade_MARVMissileSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate79" UpgradeToGrant="Upgrade_MARVMissileSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate80" UpgradeToGrant="Upgrade_MARVMissileSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate81" UpgradeToGrant="Upgrade_MARVRifleSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate82" UpgradeToGrant="Upgrade_MARVRifleSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate83" UpgradeToGrant="Upgrade_MARVRifleSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate84" UpgradeToGrant="Upgrade_MARVRifleSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate85" UpgradeToGrant="Upgrade_MARVSniperSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate86" UpgradeToGrant="Upgrade_MARVSniperSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate87" UpgradeToGrant="Upgrade_MARVSniperSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate88" UpgradeToGrant="Upgrade_MARVSniperSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate89" UpgradeToGrant="Upgrade_MARVZoneRaiderSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate90" UpgradeToGrant="Upgrade_MARVZoneRaiderSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate91" UpgradeToGrant="Upgrade_MARVZoneRaiderSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate92" UpgradeToGrant="Upgrade_MARVZoneRaiderSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate93" UpgradeToGrant="Upgrade_MARVZoneTrooperSquadFrontLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate94" UpgradeToGrant="Upgrade_MARVZoneTrooperSquadFrontRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate95" UpgradeToGrant="Upgrade_MARVZoneTrooperSquadRearLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate96" UpgradeToGrant="Upgrade_MARVZoneTrooperSquadRearRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate97" UpgradeToGrant="Upgrade_MechapedeDiskWeapon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate98" UpgradeToGrant="Upgrade_MechapedeRazorWeapon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate99" UpgradeToGrant="Upgrade_MechapedeShardWeapon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate100" UpgradeToGrant="Upgrade_MechapedeTioxinWeapon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate101" UpgradeToGrant="Upgrade_MediumAIMultiPlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate102" UpgradeToGrant="Upgrade_MediumAISinglePlayer" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate103" UpgradeToGrant="Upgrade_MetaBaseDefenses" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate104" UpgradeToGrant="Upgrade_MetaBaseStratBuilding1" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate105" UpgradeToGrant="Upgrade_MetaBaseStratBuilding2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate106" UpgradeToGrant="Upgrade_MetaBaseStratBuilding3" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate107" UpgradeToGrant="Upgrade_MetaBaseStratBuilding4" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate108" UpgradeToGrant="Upgrade_MetaBaseStratBuilding5" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate109" UpgradeToGrant="Upgrade_MetaBaseTier2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate110" UpgradeToGrant="Upgrade_MetaBaseTier3" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate111" UpgradeToGrant="Upgrade_MissleSolderArmor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate112" UpgradeToGrant="Upgrade_MOKDisguise" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate113" UpgradeToGrant="Upgrade_MotherShipBuilt" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate114" UpgradeToGrant="Upgrade_MultifunctionUpgradeCenterArmor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate115" UpgradeToGrant="Upgrade_MultifunctionUpgradeCenterDamage" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate116" UpgradeToGrant="Upgrade_MultifunctionUpgradeCenterSpeed" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate117" UpgradeToGrant="Upgrade_NODConfessorUpgrade" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate118" UpgradeToGrant="Upgrade_NODDozerBlades" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate119" UpgradeToGrant="Upgrade_NODEmpBurst" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate120" UpgradeToGrant="Upgrade_NODFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate121" UpgradeToGrant="Upgrade_NODLiquidTiberiumCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate122" UpgradeToGrant="Upgrade_NODQuadTurrets" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate123" UpgradeToGrant="Upgrade_NodRedShadowSquadVeterancy" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate124" UpgradeToGrant="Upgrade_NODSignatureGenerator" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate125" UpgradeToGrant="Upgrade_NodTechCenterChargedParticleBeam" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate126" UpgradeToGrant="Upgrade_NODTechCenterLaserCapacitor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate127" UpgradeToGrant="Upgrade_NODTechCenterTibCoreMissiles" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate128" UpgradeToGrant="Upgrade_NoSpawnUponDestruction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate129" UpgradeToGrant="Upgrade_ObjectDefault" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate130" UpgradeToGrant="Upgrade_Orca_Locomotor" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate131" UpgradeToGrant="Upgrade_OrcaEchoCannon" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate132" UpgradeToGrant="Upgrade_OrcaSensorPod" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate133" UpgradeToGrant="Upgrade_Pack" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate134" UpgradeToGrant="Upgrade_PowerPlantTurbine" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate138" UpgradeToGrant="Upgrade_Reaper17ConversionReserves" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate139" UpgradeToGrant="Upgrade_Reaper17Faction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate140" UpgradeToGrant="Upgrade_Reaper17FusionCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate141" UpgradeToGrant="Upgrade_Reaper17MinorForcefieldGenerator" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate142" UpgradeToGrant="Upgrade_Reaper17ReactorForcefieldGenerator" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate143" UpgradeToGrant="Upgrade_RedeemerFlameThrowerLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate144" UpgradeToGrant="Upgrade_RedeemerFlameThrowerRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate145" UpgradeToGrant="Upgrade_RedeemerHvyMachineGunLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate146" UpgradeToGrant="Upgrade_RedeemerHvyMachineGunRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate147" UpgradeToGrant="Upgrade_RedeemerRegenModuleLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate148" UpgradeToGrant="Upgrade_RedeemerRegenModuleRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate149" UpgradeToGrant="Upgrade_RedeemerRocketPodLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate150" UpgradeToGrant="Upgrade_RedeemerRocketPodRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate151" UpgradeToGrant="Upgrade_RedeemerTibTrooperLeft" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate152" UpgradeToGrant="Upgrade_RedeemerTibTrooperRight" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate153" UpgradeToGrant="Upgrade_ResupplyStrikeForce" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate154" UpgradeToGrant="Upgrade_SelectLoad_01" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate155" UpgradeToGrant="Upgrade_SelectLoad_02" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate156" UpgradeToGrant="Upgrade_SelectLoad_03" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate157" UpgradeToGrant="Upgrade_SelectLoad_04" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate158" UpgradeToGrant="Upgrade_SonicRepulsionField" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate159" UpgradeToGrant="Upgrade_SteelTalonsFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate160" UpgradeToGrant="Upgrade_SteelTalonsPowerPlantTurbine" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate161" UpgradeToGrant="Upgrade_Strike_Force" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate162" UpgradeToGrant="Upgrade_StructureLevel1" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate163" UpgradeToGrant="Upgrade_StructureLevel2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate164" UpgradeToGrant="Upgrade_StructureLevel3" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate165" UpgradeToGrant="Upgrade_TestBuilding" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate166" UpgradeToGrant="Upgrade_TestBuilding2" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate167" UpgradeToGrant="Upgrade_TiberiumInfusion" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate168" UpgradeToGrant="Upgrade_Traveler59AdvancedArticulators" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate169" UpgradeToGrant="Upgrade_Traveler59Faction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate170" UpgradeToGrant="Upgrade_Traveler59FusionCore" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate171" UpgradeToGrant="Upgrade_Traveler59ShockTrooperBlinkPack" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate172" UpgradeToGrant="Upgrade_TravelerEngines" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate173" UpgradeToGrant="Upgrade_UnPack" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate174" UpgradeToGrant="Upgrade_UseEmptyCommandSet" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate175" UpgradeToGrant="Upgrade_VertigoDisruptionPod" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate179" UpgradeToGrant="Upgrade_WormholeMove" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate180" UpgradeToGrant="Upgrade_ZOCOMFaction" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate181" UpgradeToGrant="Upgrade_ZOCOMFieldSuits" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate182" UpgradeToGrant="Upgrade_ZOCOMPowerPlantTurbine" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate183" UpgradeToGrant="Upgrade_ZoneRaiderAutoInjectors" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate184" UpgradeToGrant="Upgrade_ZoneRaiderScannerPack" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate185" UpgradeToGrant="Upgrade_ZoneTrooperAutoInjectors" />
+			<GrantUpgradeCreate id="ModuleTag_GrantUpgradeCreate186" UpgradeToGrant="Upgrade_ZoneTrooperScannerPack" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="ReferenceDummy"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="MetaModScriptComObject"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="MetaModScriptComObjectServer"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+</AssetDeclaration>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- Refer to ZoneRaider Squad -->
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="ZOCOMZoneRaiderSquad_Veteran"
+		inheritFrom="ZOCOMZoneRaiderSquad"
+		SelectPortrait="Portrait_ZoneRaider"
+		ButtonImage="Portrait_ZoneRaider"
+		Side="ZOCOM"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="1300"
+		BuildTime="13"
+		CommandSet="ZOCOMZoneRaiderSquadCommandSet"
+		CommandPoints="100" 
+		KindOf="SELECTABLE CAN_ATTACK SCORE ATTACK_NEEDS_LINE_OF_SIGHT INFANTRY HORDE ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND PATH_THROUGH_INFANTRY SKIRMISH_AI_DONT_GARRISON CAN_CAPTURE CAN_BE_FAVORITE_UNIT"
+		IsTrainable="true"
+		FormationWidth="2"
+		FormationDepth="1"
+		ThreatLevel="0"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="CANNON"
+		EditorName="ZOCOMZoneRaiderSquad_Veteran"
+		Description="Desc:GDIZoneRaider"
+		TypeDescription="Type:GDIZoneRaider"
+		WorldMapArmoryUpgradesAllowed="Upgrade_ZoneTrooperScannerPack Upgrade_ZoneTrooperAutoInjectors"
+		UnitTypeIcon="ZoneRaiderIcon"
+		RadarPriority="NOT_ON_RADAR">
+		<EquivalentTo>ZOCOMZoneRaiderSquad</EquivalentTo>
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:ZOCOMZoneRaider</DisplayName>
+		<DisplayUpgrade>Upgrade_ZoneTrooperScannerPack</DisplayUpgrade>
+		<DisplayUpgrade>Upgrade_ZoneTrooperAutoInjectors</DisplayUpgrade>
+		<GameDependency>
+			<RequiredObject>ZOCOMArmory</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="NormalRangedSquadLocomotor"
+			Condition="NORMAL"
+			Speed="60" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				DependencySharedModelFlags="EMOTION_TAUNTING EMOTION_ALERT EMOTION_MORALE_HIGH EMOTION_MORALE_LOW EMOTION_AFRAID EMOTION_COWER SELECTED  EMOTION_TERROR EMOTION_LOOK_TO_SKY">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUZnRaider_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WORLD_BUILDER">
+					<Model
+						Name="SquadMarkGUZon" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"/>
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+				<AddEmotion>CheerIdle_Base</AddEmotion>
+				<AddEmotion>CheerBusy_Base</AddEmotion>
+			</EmotionTrackerUpdate>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="ZoneTrooperSquadRangefinder" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="100" />
+			<Physics
+				id="ModuleTag_Physics"></Physics>
+			<HordeContain
+				id="ModuleTag_HordeContain"
+				FrontAngle="4.7123"
+				FlankedDelaySeconds="2.0"
+				ShowPips="false"
+				Formation="MAIN"
+				Slots="4"
+				ObjectStatusOfContained=""
+				ConditionForEntry="INVALID">
+				<PassengerFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+				<DieMuxData />
+				<InitialPayload
+					Name="ZOCOMZoneRaider"
+					Count="4" />
+				<MeleeBehavior
+					Type="AMOEBA" />
+				<RankInfo
+					RankID="1"
+					UnitType="ZOCOMZoneRaider">
+					<Position
+						X="-10"
+						Y="-20" />
+					<Position
+						X="10"
+						Y="-10" />
+					<Position
+						X="10"
+						Y="10" />
+					<Position
+						X="-10"
+						Y="20" />
+				</RankInfo>
+				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
+			</HordeContain>
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				GiveNoXP="true" />
+			<SpecialPower
+				id="ModuleTag_JumpJets"
+				SpecialPowerTemplate="SpecialPowerGetToJumpJetRange"
+				UpdateModuleStartsAttack="true" />
+			<SpecialAbilityUpdate
+				id="ModuleTag_JumpJetUpdate"
+				SpecialPowerTemplate="SpecialPowerGetToJumpJetRange"
+				UnpackTime="0s"
+				PackTime="0s"
+				StartAbilityRange="420.0"
+				ChainedButton="Command_ZoneTrooperSquadFireJumpJets" />
+			<SpecialPowerDispatchSpecialPower
+				id="ModuleTag_Dispatch"
+				SpecialPowerTemplate="SpecialPowerJumpJetDispatch">
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPowerJumpJetHordeTrigger" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPowerTriggerJumpJets" />
+			</SpecialPowerDispatchSpecialPower>
+			<HordeDispatchSpecialPower
+				id="ModuleTag_HordeDispatchSpecialPower"
+				SpecialPowerTemplate="SpecialPowerTriggerJumpJets"></HordeDispatchSpecialPower>
+			<SpecialPower
+				id="ModuleTag_JumpJetsTrigger"
+				SpecialPowerTemplate="SpecialPowerJumpJetHordeTrigger"
+				UpdateModuleStartsAttack="true"></SpecialPower>
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_JumpJetTriggerUpdate"
+				SpecialWeapon="ZoneTrooperFireJumpJets"
+				SpecialPowerTemplate="SpecialPowerJumpJetHordeTrigger"
+				UnpackTime="0s"
+				PackTime="0s"				
+				BusyForDuration="3s"
+				WhichSpecialWeapon="1" />
+			<BezierProjectile
+				id="ModuleTag_Projectile"
+				FirstHeightMin="50"
+				FirstHeightMax="50"
+				SecondHeightMin="50"
+				SecondHeightMax="50"
+				FirstPercentIndent="30"
+				SecondPercentIndent="70"
+				TumbleRandomly="true"
+				CrushStyle="true"
+				BounceCount="0"
+				FinalStuckTime="1.766s"
+				PreLandingStateTime="0.3s" />
+			<!--Scanner Pack-->
+			<StealthDetectorUpdate
+				id="ModuleTag_ScannerPack_01"
+				DetectionRange="400"
+				InitiallyDisabled="true">
+				<TriggeredBy>Upgrade_ZoneTrooperScannerPack</TriggeredBy>
+			</StealthDetectorUpdate>
+			<AttributeModifierUpgrade
+				id="Upgrade_ScannerPack_02"
+				AttributeModifier="ZoneTrooper_ScannerPack">
+				<TriggeredBy>Upgrade_ZoneTrooperScannerPack</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<!--Auto Injectors-->
+			<AttributeModifierUpgrade
+				id="Upgrade_AutoInjectors_01"
+				AttributeModifier="ZoneTrooper_AutoInjectors">
+				<TriggeredBy>Upgrade_ZoneTrooperAutoInjectors</TriggeredBy>
+			</AttributeModifierUpgrade>
+<!--			
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade"
+				LevelCap="4"
+				DoFlash="false"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</LevelUpUpgrade>   
+-->
+			<CreateAndEnterObjectSpecialPower xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportZOCOM"
+				OCL="OCL_ZOCOMCallForTransport"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_GDICallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<AISpecialPowerUpdate xmlns="uri:ea.com:eala:asset"
+				id ="ModuleTag_ZOCOMCallForTransportAI"
+				CommandButtonName="Command_ZOCOMCallForTransportInfantry"
+				SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
+				MinimumCutoff="10000"
+				UpdateTime="5.0s"/>
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade"
+				LevelCap="4"
+				DoFlash="false"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_CallSupportUpgrade</TriggeredBy>
+			</LevelUpUpgrade>
+			<GrantUpgradeCreate
+				id="ModuleTag_GrantUpgradeCreate" 
+				UpgradeToGrant="Upgrade_CallSupportUpgrade"/>
+		</Behaviors>
+		<AI>
+			<HordeAIUpdate
+				id="ModuleTag_HordeAIUpdate"
+				AutoAcquireEnemiesWhenIdle="YES ATTACK_BUILDINGS"
+				MaxCowerTime="5.0s"
+				MinCowerTime="3.0s"
+				CanAttackWhileContained="true">
+				<UnitAITargetChooserData
+					SympathyRange="100.0" />
+			</HordeAIUpdate>
+		</AI>
+		<Body>
+			<ImmortalBody
+				id="ModuleTag_ImmortalBody"
+				MaxHealth="1.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="20.0"
+				MinorRadius="25.0"
+				Height="13.0"></Shape>
+		</Geometry>
+		<!--
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:GDI_ZoneTrooper_GroupSmall_MoveLoop"
+				AudioType="soundMoveLoop" />
+		</AudioArraySound>
+-->
+		<!-- Yes, we need these. Catapults & such actually do damage to the horde brain not the units
+		     And the build queue builds horde brains not units for squads -->
+		<EvaEvents
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack" 
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" /> <!-- But not sighting events!! -->
+		<VisionInfo
+			VisionRange="350"
+			ShroudClearingRange="400" />
+		<CrusherInfo
+			UseCrushAttack="false"
+			CrushableLevel="1"
+			CrusherLevel="0" />
+	</GameObject>
+</AssetDeclaration>

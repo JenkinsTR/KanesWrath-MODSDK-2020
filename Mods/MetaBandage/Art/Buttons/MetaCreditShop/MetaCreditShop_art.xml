@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<Texture
+		id="Button_AntiVehicleDefEndPoint_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_AntiVehicleDefEndPoint.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_AntiVehicleDefEndPoint"
+		Texture="Button_AntiVehicleDefEndPoint_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_DollartoMC_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_DollartoMC.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_DollartoMC"
+		Texture="Button_DollartoMC_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_SpawnTemplate_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_SpawnTemplate.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_SpawnTemplate"
+		Texture="Button_SpawnTemplate_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RandomCircleDefense_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_RandomCircleDefense.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_RandomCircleDefense"
+		Texture="Button_RandomCircleDefense_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RandomSpiralDefense_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_RandomSpiralDefense.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_RandomSpiralDefense"
+		Texture="Button_RandomSpiralDefense_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_AntiVehicleDefStartPoint_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_AntiVehicleDefStartPoint.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_AntiVehicleDefStartPoint"
+		Texture="Button_AntiVehicleDefStartPoint_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Indestructable_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_Indestructable.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_Indestructable"
+		Texture="Button_Indestructable_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_InfiniteEnergy_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_InfiniteEnergy.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_InfiniteEnergy"
+		Texture="Button_InfiniteEnergy_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_ProductionSpeed_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_ProductionSpeed.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_ProductionSpeed"
+		Texture="Button_ProductionSpeed_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_BuildAnywhere_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_BuildAnywhere.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_BuildAnywhere"
+		Texture="Button_BuildAnywhere_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_MCtoDollar_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_MCtoDollar.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_MCtoDollar"
+		Texture="Button_MCtoDollar_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_GetStatistics_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_GetStatistics.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_GetStatistics"
+		Texture="Button_GetStatistics_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_BoostSelectedUnit_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_BoostSelectedUnit.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_BoostSelectedUnit"
+		Texture="Button_BoostSelectedUnit_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_TimetravelFixpoint_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_TimetravelFixpoint.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_TimetravelFixpoint"
+		Texture="Button_TimetravelFixpoint_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Timetravel_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_Timetravel.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_Timetravel"
+		Texture="Button_Timetravel_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_SpawnRandomUnitForce_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_SpawnRandomUnitForce.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_SpawnRandomUnitForce"
+		Texture="Button_SpawnRandomUnitForce_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RandomSquareDefense_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_RandomSquareDefense.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_RandomSquareDefense"
+		Texture="Button_RandomSquareDefense_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RandomAntiGroundDefenseBlock_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_RandomAntiGroundDefenseBlock.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_RandomAntiGroundDefenseBlock"
+		Texture="Button_RandomAntiGroundDefenseBlock_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_RandomAntiAirDefenseBlock_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_RandomAntiAirDefenseBlock.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_RandomAntiAirDefenseBlock"
+		Texture="Button_RandomAntiAirDefenseBlock_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Bet_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_Bet.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_Bet"
+		Texture="Button_Bet_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_SlowDownEnemy_Texture"
+		File="ART:Buttons/MetaCreditShop/Button_SlowDownEnemy.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />
+
+	<PackedTextureImage
+		id="Button_SlowDownEnemy"
+		Texture="Button_SlowDownEnemy_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+	
+</AssetDeclaration>

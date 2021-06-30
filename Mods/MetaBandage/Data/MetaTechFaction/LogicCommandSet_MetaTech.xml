@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommandSet
+		id="MetaTechConstructionYardCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPowerPlant</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRefinery</Cmd>
+		<Cmd>Command_ConstructMetaTechBarracks</Cmd> 
+		<Cmd>Command_ConstructMetaTechWarFactory</Cmd>
+		<Cmd>Command_ConstructMetaTechCommandPost</Cmd>
+		<Cmd>Command_ConstructMetaTechHangar</Cmd>
+		<Cmd>Command_ConstructMetaTechTechCenter</Cmd>
+		<Cmd>Command_ConstructSteelTalonsSpaceCommandUplink</Cmd>
+		<Cmd>Command_ConstructMetaTechMedicalBay</Cmd>
+		<Cmd>Command_ConstructMetaTechReclamatorHub</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWatchTower</Cmd>
+		<Cmd>Command_ConstructSteelTalonsGolumCannon</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAABattery</Cmd>
+		<Cmd>Command_ConstructZOCOMTerraformingStation</Cmd>
+		<Cmd>Command_NOD_BuildObeliskOfLight</Cmd>
+		<Cmd>Command_NOD_BuildDisruptionTower</Cmd>
+		<Cmd>Command_ConstructSteelTalonsIonCannonControl</Cmd>
+		<Cmd>Command_NOD_BuildTempleOfNOD</Cmd>
+		<Cmd>Command_ConstructAlienRiftGenerator</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTiberiumSilo</Cmd>
+		<Cmd>Command_ConstructMetaTechCrane</Cmd>
+		<Cmd>Command_ConstructGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructSteelTalonsSurveyor</Cmd>
+		<Cmd>Command_ConstructGDIWallHub</Cmd>
+		<Cmd>Command_PackGDIMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechCraneCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPowerPlant</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRefinery</Cmd>
+		<Cmd>Command_ConstructMetaTechBarracks</Cmd> 
+		<Cmd>Command_ConstructMetaTechWarFactory</Cmd>
+		<Cmd>Command_ConstructMetaTechCommandPost</Cmd>
+		<Cmd>Command_ConstructMetaTechHangar</Cmd>
+		<Cmd>Command_ConstructMetaTechTechCenter</Cmd>
+		<Cmd>Command_ConstructSteelTalonsSpaceCommandUplink</Cmd>
+		<Cmd>Command_ConstructMetaTechMedicalBay</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechWarFactoryCommandSet">
+		<Cmd>Command_ConstructNODAttackBike</Cmd>
+		<Cmd>Command_ConstructSteelTalonsPitbull</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneScorpionBuggy</Cmd>
+		<Cmd>Command_ConstructZOCOMPredator</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneRaiderTank</Cmd>
+		<Cmd>Command_ConstructBlackHandFlameTank</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWolverine</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTitan</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRepairAPC</Cmd>
+		<Cmd>Command_ConstructSteelTalonsHeavyHarvester</Cmd>
+		<Cmd>Command_ConstructMetaTechMCV</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAAScout</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRig</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMammoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBehemoth</Cmd>
+		<Cmd>Command_ConstructNODBeamCannon</Cmd>
+		<Cmd>Command_ConstructNODStealthTank</Cmd>
+		<Cmd>Command_ConstructNODMobileArtillery</Cmd>
+		<Cmd>Command_ConstructNODAvatar</Cmd>
+		<Cmd>Command_ConstructTraveler59Corrupter</Cmd>
+		<Cmd>Command_ConstructTraveler59CustomizableVehicle</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechReclamatorHubCommandSet">
+		<Cmd>Command_ConstructNODAttackBike</Cmd>
+		<Cmd>Command_ConstructSteelTalonsPitbull</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneScorpionBuggy</Cmd>
+		<Cmd>Command_ConstructZOCOMPredator</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneRaiderTank</Cmd>
+		<Cmd>Command_ConstructBlackHandFlameTank</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTitan</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRepairAPC</Cmd>
+		<Cmd>Command_ConstructSteelTalonsHeavyHarvester</Cmd>
+		<Cmd>Command_ConstructMetaTechMCV</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWolverine</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAAScout</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRig</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMammoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBehemoth</Cmd>
+		<Cmd>Command_ConstructNODBeamCannon</Cmd>
+		<Cmd>Command_ConstructNODStealthTank</Cmd>
+		<Cmd>Command_ConstructNODMobileArtillery</Cmd>
+		<Cmd>Command_ConstructNODAvatar</Cmd>
+		<Cmd>Command_ConstructTraveler59Corrupter</Cmd>
+		<Cmd>Command_ConstructTraveler59CustomizableVehicle</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMARV</Cmd>
+		<Cmd>Command_ConstructNODMetaUnit</Cmd>
+		<Cmd>Command_ConstructAlienMetaUnit</Cmd>
+		<Cmd>Command_ConstructMetaTechSuperAvatar</Cmd>
+	</LogicCommandSet>
+
+	
+	<LogicCommandSet
+		id="MetaTechBarracksCommandSet">
+		<Cmd>Command_ConstructZOCOMRifleSoldierSquad</Cmd>
+		<Cmd>Command_ConstructZOCOMMissileSoldierSquad</Cmd>
+		<Cmd>Command_ConstructZOCOMEngineer</Cmd>
+		<Cmd>Command_ConstructZOCOMGrenadeSoldierSquad</Cmd>
+		<Cmd>Command_ConstructZOCOMSniperSquad</Cmd>
+		<Cmd>Command_ConstructZOCOMCommando</Cmd>
+		<Cmd>Command_ConstructZOCOMZoneRaiderSquad</Cmd>
+		<Cmd>Command_ConstructBlackHandBlackHandSquad</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneImprovedCyborgInfantrySquad</Cmd>
+		<Cmd>Command_ConstructNODShadowSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59BlinkMastermind</Cmd>
+	</LogicCommandSet>
+	
+	
+	<LogicCommandSet
+		id="MetaTechHangarCommandSet">
+		<Cmd>Command_ConstructMarkedOfKaneVenom</Cmd>
+		<Cmd>Command_ConstructZOCOMHammerhead</Cmd>
+        <Cmd>Command_UpgradeNODSignatureGenerator</Cmd>
+		<Cmd>Command_PurchaseUpgradeCeramicArmor</Cmd>
+	</LogicCommandSet>
+	
+	
+	<LogicCommandSet
+		id="MetaTechMedicalBayCommandSet">
+		<Cmd>Command_UpgradeZoneRaiderAutoInjectors</Cmd>
+        <Cmd>Command_UpgradeZoneRaiderScannerPack</Cmd>
+		<Cmd>Command_PurchaseUpgradePurifyingFlame</Cmd>
+        <Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMAirborne</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechTechCenterCommandSet">
+		<Cmd>Command_PurchaseUpgradeSuperChargedParticleBeam</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgunST</Cmd>
+		<Cmd>Command_PurchaseUpgradeAdaptiveArmor</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTAPAmmo</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechMCVCommandSet">
+		<Cmd>Command_UnPackGDIMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechPowerPlantCommandSet">
+		<Cmd>Command_UpgradePowerPlantTurbine</Cmd>
+		<Cmd>Command_SelfRepair</Cmd>
+		<Cmd>Command_Sell</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaTechAvatarCommandSet">
+        <Cmd>Command_StanceDrillDown</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+	
+</AssetDeclaration>

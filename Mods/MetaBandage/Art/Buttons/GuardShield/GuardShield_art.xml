@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- 	<Texture
+		id="GuardShieldEmitter"
+		File="ART:GuardShieldEmitter/GuardShieldEmitter.dds" />
+		
+	<Texture
+		id="GuardShieldEmitter_D"
+		File="ART:GuardShieldEmitter/GuardShieldEmitter_D.dds" />
+		
+	<Texture
+		id="GuardShieldEmitter_NRM"
+		File="ART:GuardShieldEmitter/GuardShieldEmitter_NRM.dds" />
+		
+	<Texture
+		id="GuardShieldEmitter_SPM"
+		File="ART:GuardShieldEmitter/GuardShieldEmitter_SPM.dds" /> -->
+	
+	<Texture
+		id="Button_GuardShieldAIModusActivator_Texture"
+		File="ART:Buttons/GuardShield/Button_GuardShieldAIModusActivator.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_GuardShieldAIModusActivator"
+		Texture="Button_GuardShieldAIModusActivator_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_GuardShieldAIModusDeactivator_Texture"
+		File="ART:Buttons/GuardShield/Button_GuardShieldAIModusDeactivator.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_GuardShieldAIModusDeactivator"
+		Texture="Button_GuardShieldAIModusDeactivator_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+</AssetDeclaration>

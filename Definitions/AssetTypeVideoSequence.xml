@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FadeData">
+		<Entry
+			id="FrameCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="StartColor"
+			AssetType="Color3f" />
+		<Entry
+			id="EndColor"
+			AssetType="Color3f" />
+	</Asset>
+
+	<Asset
+		id="VideoEvent">
+		<EntryRelocation
+			id="FadeIn"
+			AssetType="FadeData" />
+		<EntryRelocation
+			id="FadeOut"
+			AssetType="FadeData" />
+	</Asset>
+
+	<Asset
+		id="MovieEvent">
+		<EntryInheritance
+			id="base"
+			AssetType="VideoEvent" />
+		<Entry
+			id="MovieName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<EnumAsset
+		id="TextJustificationType">
+		<Entry>LEFT</Entry>
+		<Entry>RIGHT</Entry>
+		<Entry>CENTER</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TextInstanceType">
+		<EntryList
+			id="TextId"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="Justification"
+			AssetType="TextJustificationType"
+			IsAttribute="true"
+			Default="LEFT" />
+		<Entry
+			id="XOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="YOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Font"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="PointSize"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TextColor"
+			AssetType="Color3f" />
+	</Asset>
+
+	<Asset
+		id="TitleCardEvent">
+		<EntryInheritance
+			id="base"
+			AssetType="VideoEvent" />
+		<Entry
+			id="DisplayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="TextInstance"
+			AssetType="TextInstanceType"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="VideoEventTypes">
+		<EntryChoice
+			id="VideoEventTypes"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="Movie"
+				AssetType="MovieEvent" />
+			<Entry
+				id="TitleCard"
+				AssetType="TitleCardEvent" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="VideoEventList"
+		TypeHash="413159116">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="EventList"
+			AssetType="VideoEventTypes" />
+	</GameAsset>
+
+</AssetDefinition>

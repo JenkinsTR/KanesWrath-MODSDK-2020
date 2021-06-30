@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- There is no guarantee that the extracted animation is correct! - Bibber -->
+	<W3DAnimation id="FXSHLDABILITYMod" Hierarchy="FXSHLDABILITYMod" NumFrames="31" FrameRate="30">
+		<Channels>
+			<ChannelScalar Pivot="1" Type="Visibility" FirstFrame="0">
+				<Frame>0.000000</Frame>
+				<Frame>0.003105</Frame>
+				<Frame>0.012033</Frame>
+				<Frame>0.026394</Frame>
+				<Frame>0.045801</Frame>
+				<Frame>0.069867</Frame>
+				<Frame>0.098201</Frame>
+				<Frame>0.130418</Frame>
+				<Frame>0.165739</Frame>
+				<Frame>0.204166</Frame>
+				<Frame>0.244921</Frame>
+				<Frame>0.288006</Frame>
+				<Frame>0.332643</Frame>
+				<Frame>0.378444</Frame>
+				<Frame>0.425410</Frame>
+				<Frame>0.472376</Frame>
+				<Frame>0.519730</Frame>
+				<Frame>0.566386</Frame>
+				<Frame>0.612277</Frame>
+				<Frame>0.657021</Frame>
+				<Frame>0.699852</Frame>
+				<Frame>0.740771</Frame>
+				<Frame>0.779014</Frame>
+				<Frame>0.814197</Frame>
+				<Frame>0.846321</Frame>
+				<Frame>0.874620</Frame>
+				<Frame>0.898713</Frame>
+				<Frame>0.918216</Frame>
+				<Frame>0.932748</Frame>
+				<Frame>0.941544</Frame>
+				<Frame>0.944604</Frame>
+			</ChannelScalar>
+			<ChannelScalar Pivot="2" Type="Visibility" FirstFrame="0">
+				<Frame>0.000000</Frame>
+				<Frame>0.003105</Frame>
+				<Frame>0.012033</Frame>
+				<Frame>0.026394</Frame>
+				<Frame>0.045801</Frame>
+				<Frame>0.069867</Frame>
+				<Frame>0.098201</Frame>
+				<Frame>0.130418</Frame>
+				<Frame>0.165739</Frame>
+				<Frame>0.204166</Frame>
+				<Frame>0.244921</Frame>
+				<Frame>0.288006</Frame>
+				<Frame>0.332643</Frame>
+				<Frame>0.378444</Frame>
+				<Frame>0.425410</Frame>
+				<Frame>0.472376</Frame>
+				<Frame>0.519730</Frame>
+				<Frame>0.566386</Frame>
+				<Frame>0.612277</Frame>
+				<Frame>0.657021</Frame>
+				<Frame>0.699852</Frame>
+				<Frame>0.740771</Frame>
+				<Frame>0.779014</Frame>
+				<Frame>0.814197</Frame>
+				<Frame>0.846321</Frame>
+				<Frame>0.874620</Frame>
+				<Frame>0.898713</Frame>
+				<Frame>0.918216</Frame>
+				<Frame>0.932748</Frame>
+				<Frame>0.941544</Frame>
+				<Frame>0.944604</Frame>
+			</ChannelScalar>
+		</Channels>
+	</W3DAnimation>
+</AssetDeclaration>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<FXList id="FX_AlienTibShardHitBlueHeroic">
+			<NuggetList>
+				<ParticleSystem
+					Particle="TibShardHit_Debris_blue"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Flash_heroic"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Smoke1_heroic"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Smoke2_heroic"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Smoke3_blue"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Spark_blue"
+					OrientToObject="true" />
+	
+			</NuggetList>
+		</FXList>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<FXList id="FX_AlienTibShardHitBlueHeroicBuilding">
+			<NuggetList>
+				<ParticleSystem
+					Particle="TibShardHit_Debris_blue"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Flash_heroic"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Smoke2_heroic"
+					OrientToObject="true" />
+				<ParticleSystem
+					Particle="TibShardHit_Spark_blue"
+					OrientToObject="true" />
+			</NuggetList>
+		</FXList>		
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<FXList id="FX_AlienTiberiumInfestation">
+		<NuggetList>
+			<ParticleSystem
+				Particle="TibInfestationLiquidStreamGas1"
+				OrientToObject = "true">
+				<Offset x="3.5" y="0.0" z="2.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="TibInfestationBugsHuddle"
+				OrientToObject = "true">
+				<Offset x="3.5" y="0.0" z="2.0" />
+			</ParticleSystem>
+
+		</NuggetList>
+	</FXList>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+	<FXList id="FX_ALI_Mechapede_SoundCreate">
+		<NuggetList>
+			<Sound Value="AudioEvent:ALI_Mechapede_SoundCreate" />
+		</NuggetList>
+	</FXList>
+	
+</AssetDeclaration>

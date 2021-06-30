@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:aupacarrier_skl.w3x"/>
+	</Includes>
+	<W3DMesh id="AUPACARRIER_SKN.TRAVENG01" GeometryType="Normal" SortLevel="1">
+		<BoundingBox>
+			<Min X="-9.953377" Y="-43.524693" Z="-42.750622" />
+			<Max X="9.953396" Y="43.524696" Z="42.750633" />
+		</BoundingBox>
+		<BoundingSphere Radius="43.794968">
+			<Center X="-0.000206" Y="0.000040" Z="-0.000000" />
+		</BoundingSphere>
+		<Vertices>
+			<V X="1.709370" Y="33.798111" Z="27.798496" />
+			<V X="9.952911" Y="32.344563" Z="-27.798487" />
+			<V X="-9.953377" Y="-32.344566" Z="27.798491" />
+			<V X="-1.709816" Y="-33.798115" Z="-27.798492" />
+			<V X="8.935307" Y="-27.934525" Z="32.523983" />
+			<V X="2.726997" Y="27.934530" Z="33.618687" />
+			<V X="-2.727455" Y="-27.934530" Z="-33.618687" />
+			<V X="-8.935753" Y="27.934528" Z="-32.523991" />
+			<V X="1.709869" Y="-10.910303" Z="42.379639" />
+			<V X="9.953396" Y="38.863384" Z="17.565990" />
+			<V X="-9.952888" Y="-38.863388" Z="-17.565987" />
+			<V X="-1.709347" Y="10.910303" Z="-42.379635" />
+			<V X="8.935783" Y="-3.245218" Z="-42.750622" />
+			<V X="2.727505" Y="-43.524693" Z="-4.019316" />
+			<V X="-2.726990" Y="43.524696" Z="4.019321" />
+			<V X="-8.935265" Y="3.245223" Z="42.750633" />
+		</Vertices>
+		<Normals>
+			<N X="-0.973832" Y="0.171713" Z="-0.148882"/>
+			<N X="-0.973832" Y="0.171713" Z="-0.148883"/>
+			<N X="-0.973832" Y="0.171713" Z="-0.148883"/>
+			<N X="-0.973832" Y="0.171713" Z="-0.148883"/>
+			<N X="-0.978598" Y="-0.112125" Z="0.172554"/>
+			<N X="-0.978598" Y="-0.112125" Z="0.172553"/>
+			<N X="-0.978598" Y="-0.112125" Z="0.172553"/>
+			<N X="-0.978598" Y="-0.112125" Z="0.172553"/>
+			<N X="-0.973832" Y="0.207502" Z="0.092705"/>
+			<N X="-0.973832" Y="0.207502" Z="0.092705"/>
+			<N X="-0.973832" Y="0.207502" Z="0.092705"/>
+			<N X="-0.973832" Y="0.207502" Z="0.092704"/>
+			<N X="-0.978598" Y="-0.042730" Z="-0.201298"/>
+			<N X="-0.978598" Y="-0.042730" Z="-0.201298"/>
+			<N X="-0.978598" Y="-0.042730" Z="-0.201298"/>
+			<N X="-0.978598" Y="-0.042730" Z="-0.201298"/>
+		</Normals>
+		<VertexColors>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="0.000000"/>
+		</VertexColors>
+		<TexCoords>
+			<T X="0.500000" Y="0.500000"/>
+			<T X="0.500000" Y="0.000000"/>
+			<T X="0.999628" Y="0.499141"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.500000" Y="0.500000"/>
+			<T X="0.500000" Y="0.000000"/>
+			<T X="0.999628" Y="0.499141"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.500000" Y="0.500000"/>
+			<T X="0.500000" Y="0.000000"/>
+			<T X="0.999628" Y="0.499141"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.500000" Y="0.500000"/>
+			<T X="0.500000" Y="0.000000"/>
+			<T X="0.999628" Y="0.499141"/>
+			<T X="1.000000" Y="0.000000"/>
+		</TexCoords>
+		<ShadeIndices>
+			<I>0</I>
+			<I>1</I>
+			<I>2</I>
+			<I>3</I>
+			<I>4</I>
+			<I>5</I>
+			<I>6</I>
+			<I>7</I>
+			<I>8</I>
+			<I>9</I>
+			<I>10</I>
+			<I>11</I>
+			<I>12</I>
+			<I>13</I>
+			<I>14</I>
+			<I>15</I>
+		</ShadeIndices>
+		<Triangles>
+			<T>
+				<V>3</V>
+				<V>2</V>
+				<V>1</V>
+				<Nrm X="-0.973832" Y="0.171713" Z="-0.148883"/>
+				<Dist>57.447189</Dist>
+			</T>
+			<T>
+				<V>1</V>
+				<V>2</V>
+				<V>0</V>
+				<Nrm X="-0.973832" Y="0.000000" Z="0.000000"/>
+				<Dist>57.447189</Dist>
+			</T>
+			<T>
+				<V>4</V>
+				<V>5</V>
+				<V>6</V>
+				<Nrm X="-0.978598" Y="-0.112125" Z="0.172554"/>
+				<Dist>57.342144</Dist>
+			</T>
+			<T>
+				<V>6</V>
+				<V>5</V>
+				<V>7</V>
+				<Nrm X="-0.978598" Y="0.000000" Z="0.000000"/>
+				<Dist>57.342144</Dist>
+			</T>
+			<T>
+				<V>8</V>
+				<V>9</V>
+				<V>10</V>
+				<Nrm X="-0.973832" Y="0.207502" Z="0.092705"/>
+				<Dist>57.084267</Dist>
+			</T>
+			<T>
+				<V>10</V>
+				<V>9</V>
+				<V>11</V>
+				<Nrm X="-0.973832" Y="0.000000" Z="0.000000"/>
+				<Dist>57.084267</Dist>
+			</T>
+			<T>
+				<V>12</V>
+				<V>13</V>
+				<V>14</V>
+				<Nrm X="-0.978598" Y="-0.042730" Z="-0.201298"/>
+				<Dist>57.866074</Dist>
+			</T>
+			<T>
+				<V>14</V>
+				<V>13</V>
+				<V>15</V>
+				<Nrm X="-0.978598" Y="0.000000" Z="0.000000"/>
+				<Dist>57.866070</Dist>
+			</T>
+		</Triangles>
+		<FXShader ShaderName="MuzzleFlash.fx">
+			<Constants>
+				<Float Name="ColorEmissive">
+					<Value>0.525490</Value>
+					<Value>0.525490</Value>
+					<Value>0.525490</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Texture Name="Texture_0">
+					<Value>FXElectric</Value>
+				</Texture>
+				<Bool Name="MultiTextureEnable">
+					<Value>false</Value>
+				</Bool>
+				<Float Name="TexCoordTransformAngle_0">
+					<Value>80.000000</Value>
+				</Float>
+				<Float Name="TexCoordTransformU_0">
+					<Value>0.750000</Value>
+				</Float>
+				<Float Name="TexCoordTransformV_0">
+					<Value>0.751000</Value>
+				</Float>
+				<Float Name="TexCoordTransformU_1">
+					<Value>0.128000</Value>
+				</Float>
+				<Float Name="TexCoordTransformV_1">
+					<Value>0.126000</Value>
+				</Float>
+				<Float Name="TexCoordTransformU_2">
+					<Value>0.359000</Value>
+				</Float>
+				<Float Name="TexCoordTransformV_2">
+					<Value>0.123000</Value>
+				</Float>
+			</Constants>
+		</FXShader>
+	</W3DMesh>
+	<W3DMesh id="AUPACARRIER_SKN.TRAVENG02" GeometryType="Normal" SortLevel="1">
+		<BoundingBox>
+			<Min X="-85.332870" Y="-12.132645" Z="-3.821834" />
+			<Max X="12.918911" Y="12.554897" Z="6.493833" />
+		</BoundingBox>
+		<BoundingSphere Radius="50.406922">
+			<Center X="-36.444324" Y="-1.268449" Z="1.346797" />
+		</BoundingSphere>
+		<Vertices>
+			<V X="-57.822884" Y="-10.998400" Z="-0.917833" />
+			<V X="12.869785" Y="-7.104452" Z="-0.917860" />
+			<V X="12.869789" Y="0.251954" Z="2.766842" />
+			<V X="12.869793" Y="7.692729" Z="6.493803" />
+			<V X="-57.822876" Y="11.620502" Z="6.493833" />
+			<V X="-57.773796" Y="11.904911" Z="0.143900" />
+			<V X="12.918884" Y="7.878792" Z="0.143950" />
+			<V X="12.879333" Y="0.253785" Z="2.779281" />
+			<V X="12.918911" Y="-7.418927" Z="5.431100" />
+			<V X="-57.773766" Y="-11.479105" Z="5.431044" />
+			<V X="12.918900" Y="0.258081" Z="2.777796" />
+			<V X="-75.003586" Y="12.554796" Z="-2.844187" />
+			<V X="7.044453" Y="0.232956" Z="-0.000528" />
+			<V X="7.044437" Y="12.554897" Z="-2.844156" />
+			<V X="7.044472" Y="-12.132545" Z="2.853152" />
+			<V X="-75.003555" Y="-12.132645" Z="2.853122" />
+			<V X="7.056381" Y="0.273924" Z="0.027265" />
+			<V X="7.056396" Y="-10.334196" Z="-3.821802" />
+			<V X="7.056381" Y="0.273924" Z="0.027265" />
+			<V X="7.056366" Y="10.756548" Z="3.830797" />
+			<V X="7.056381" Y="0.273924" Z="0.027265" />
+			<V X="-85.332870" Y="10.756432" Z="3.830767" />
+			<V X="-85.332840" Y="-10.334311" Z="-3.821834" />
+		</Vertices>
+		<Normals>
+			<N X="0.012377" Y="-0.380613" Z="0.924651"/>
+			<N X="0.024661" Y="-0.447709" Z="0.893839"/>
+			<N X="-0.000063" Y="-0.403326" Z="0.915056"/>
+			<N X="-0.024875" Y="-0.447707" Z="0.893834"/>
+			<N X="-0.012460" Y="-0.380613" Z="0.924651"/>
+			<N X="-0.009305" Y="-0.273953" Z="-0.961698"/>
+			<N X="-0.009296" Y="-0.326600" Z="-0.945117"/>
+			<N X="0.000038" Y="-0.305694" Z="-0.952130"/>
+			<N X="0.009382" Y="-0.326600" Z="-0.945116"/>
+			<N X="0.009399" Y="-0.273952" Z="-0.961697"/>
+			<N X="0.000007" Y="-0.326657" Z="-0.945143"/>
+			<N X="-0.000001" Y="0.224867" Z="0.974389"/>
+			<N X="-0.000001" Y="0.224867" Z="0.974389"/>
+			<N X="-0.000001" Y="0.224867" Z="0.974389"/>
+			<N X="-0.000001" Y="0.224867" Z="0.974389"/>
+			<N X="-0.000001" Y="0.224867" Z="0.974389"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+			<N X="0.000000" Y="0.000000" Z="0.000000"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+			<N X="0.000000" Y="-0.341083" Z="0.940033"/>
+		</Normals>
+		<VertexColors>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.349020" G="0.000000" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+			<C R="0.000000" G="0.894118" B="1.000000" A="1.000000"/>
+		</VertexColors>
+		<TexCoords>
+			<T X="0.000000" Y="1.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.497149" Y="0.000000"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="0.000000" Y="1.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.498441" Y="0.000560"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="0.498160" Y="0.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="0.500882" Y="0.000000"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.000000" Y="1.000000"/>
+			<T X="0.502975" Y="0.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.502975" Y="0.000000"/>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.502975" Y="0.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="0.000000" Y="1.000000"/>
+		</TexCoords>
+		<TexCoords>
+			<T X="0.069664" Y="0.349026"/>
+			<T X="0.069664" Y="0.258528"/>
+			<T X="0.114655" Y="0.258528"/>
+			<T X="0.160162" Y="0.258528"/>
+			<T X="0.160162" Y="0.349026"/>
+			<T X="0.069664" Y="0.349026"/>
+			<T X="0.069664" Y="0.258528"/>
+			<T X="0.114772" Y="0.258579"/>
+			<T X="0.160162" Y="0.258528"/>
+			<T X="0.160162" Y="0.349026"/>
+			<T X="0.114746" Y="0.258528"/>
+			<T X="0.545249" Y="0.545249"/>
+			<T X="0.500080" Y="0.454751"/>
+			<T X="0.545249" Y="0.454751"/>
+			<T X="0.454751" Y="0.454751"/>
+			<T X="0.454751" Y="0.545249"/>
+			<T X="0.223105" Y="0.648521"/>
+			<T X="0.177587" Y="0.648521"/>
+			<T X="0.223105" Y="0.648521"/>
+			<T X="0.268084" Y="0.648521"/>
+			<T X="0.223105" Y="0.648521"/>
+			<T X="0.268084" Y="0.739019"/>
+			<T X="0.177587" Y="0.739019"/>
+		</TexCoords>
+		<ShadeIndices>
+			<I>0</I>
+			<I>1</I>
+			<I>2</I>
+			<I>3</I>
+			<I>4</I>
+			<I>5</I>
+			<I>6</I>
+			<I>7</I>
+			<I>8</I>
+			<I>9</I>
+			<I>10</I>
+			<I>11</I>
+			<I>12</I>
+			<I>13</I>
+			<I>14</I>
+			<I>15</I>
+			<I>16</I>
+			<I>17</I>
+			<I>18</I>
+			<I>19</I>
+			<I>20</I>
+			<I>21</I>
+			<I>22</I>
+		</ShadeIndices>
+		<Triangles>
+			<T>
+				<V>19</V>
+				<V>21</V>
+				<V>18</V>
+				<Nrm X="0.000000" Y="-0.341083" Z="0.940033"/>
+				<Dist>-1.337704</Dist>
+			</T>
+			<T>
+				<V>21</V>
+				<V>22</V>
+				<V>16</V>
+				<Nrm X="0.000000" Y="-0.341083" Z="0.940033"/>
+				<Dist>-1.337704</Dist>
+			</T>
+			<T>
+				<V>16</V>
+				<V>22</V>
+				<V>17</V>
+				<Nrm X="0.000000" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.337703</Dist>
+			</T>
+			<T>
+				<V>1</V>
+				<V>2</V>
+				<V>0</V>
+				<Nrm X="0.024661" Y="-0.447709" Z="0.893839"/>
+				<Dist>0.055702</Dist>
+			</T>
+			<T>
+				<V>0</V>
+				<V>2</V>
+				<V>4</V>
+				<Nrm X="0.000024" Y="0.000000" Z="0.000000"/>
+				<Dist>1.256210</Dist>
+			</T>
+			<T>
+				<V>3</V>
+				<V>4</V>
+				<V>2</V>
+				<Nrm X="-0.024875" Y="-0.447707" Z="0.893834"/>
+				<Dist>2.331865</Dist>
+			</T>
+			<T>
+				<V>13</V>
+				<V>11</V>
+				<V>12</V>
+				<Nrm X="-0.000001" Y="0.224867" Z="0.974389"/>
+				<Dist>-1.433485</Dist>
+			</T>
+			<T>
+				<V>12</V>
+				<V>11</V>
+				<V>15</V>
+				<Nrm X="-0.000001" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.433486</Dist>
+			</T>
+			<T>
+				<V>12</V>
+				<V>15</V>
+				<V>14</V>
+				<Nrm X="-0.000001" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.433486</Dist>
+			</T>
+			<T>
+				<V>5</V>
+				<V>6</V>
+				<V>7</V>
+				<Nrm X="-0.018595" Y="-0.326515" Z="-0.945009"/>
+				<Dist>-0.382754</Dist>
+			</T>
+			<T>
+				<V>7</V>
+				<V>6</V>
+				<V>10</V>
+				<Nrm X="0.000005" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.237405</Dist>
+			</T>
+			<T>
+				<V>7</V>
+				<V>10</V>
+				<V>8</V>
+				<Nrm X="0.000010" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.237633</Dist>
+			</T>
+			<T>
+				<V>8</V>
+				<V>9</V>
+				<V>7</V>
+				<Nrm X="0.018754" Y="-0.326513" Z="-0.945006"/>
+				<Dist>-2.098563</Dist>
+			</T>
+			<T>
+				<V>7</V>
+				<V>9</V>
+				<V>5</V>
+				<Nrm X="0.000015" Y="0.000000" Z="0.000000"/>
+				<Dist>-1.281925</Dist>
+			</T>
+		</Triangles>
+		<FXShader ShaderName="DefaultW3D.fx">
+			<Constants>
+				<Float Name="ColorAmbient">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="ColorDiffuse">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="ColorSpecular">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="Shininess">
+					<Value>1.000000</Value>
+				</Float>
+				<Float Name="ColorEmissive">
+					<Value>0.301961</Value>
+					<Value>0.301961</Value>
+					<Value>0.301961</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="Opacity">
+					<Value>1.000000</Value>
+				</Float>
+				<Float Name="EdgeFadeOut">
+					<Value>0.000000</Value>
+				</Float>
+				<Int Name="NumTextures">
+					<Value>2</Value>
+				</Int>
+				<Texture Name="Texture_0">
+					<Value>FXBlast01</Value>
+				</Texture>
+				<Texture Name="Texture_1">
+					<Value>FXMotes</Value>
+				</Texture>
+				<Bool Name="UseRecolorColors">
+					<Value>false</Value>
+				</Bool>
+				<Bool Name="HouseColorPulse">
+					<Value>false</Value>
+				</Bool>
+				<Bool Name="DepthWriteEnable">
+					<Value>false</Value>
+				</Bool>
+				<Bool Name="AlphaTestEnable">
+					<Value>false</Value>
+				</Bool>
+				<Bool Name="CullingEnable">
+					<Value>false</Value>
+				</Bool>
+				<Int Name="BlendMode">
+					<Value>2</Value>
+				</Int>
+				<Int Name="SecondaryTextureBlendMode">
+					<Value>1</Value>
+				</Int>
+				<Int Name="TexCoordMapper_0">
+					<Value>1</Value>
+				</Int>
+				<Float Name="TexCoordTransform_0">
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="TextureAnimation_FPS_NumPerRow_LastFrame_FrameOffset_0">
+					<Value>0.000000</Value>
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Int Name="TexCoordMapper_1">
+					<Value>1</Value>
+				</Int>
+				<Float Name="TexCoordTransform_1">
+					<Value>2.000000</Value>
+					<Value>2.000000</Value>
+					<Value>0.500000</Value>
+					<Value>5.000000</Value>
+				</Float>
+				<Float Name="Sampler_ClampU_ClampV_NoMip_0">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="Sampler_ClampU_ClampV_NoMip_1">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+			</Constants>
+		</FXShader>
+	</W3DMesh>
+	<W3DContainer id="AUPACARRIER_SKN" Hierarchy="AUPACARRIER_SKL">
+		<SubObject SubObjectID="OBBOX05" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX05</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX04" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX04</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX02" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX02</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX01" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="OBBOX03" BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUPACARRIER_SKN.OBBOX03</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TRAVENG01" BoneIndex="2">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.TRAVENG01</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="TRAVENG02" BoneIndex="2">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.TRAVENG02</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="PAC" BoneIndex="1">
+			<RenderObject>
+				<Mesh>AUPACARRIER_SKN.PAC</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

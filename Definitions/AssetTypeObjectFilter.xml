@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<!-- ObjectFilter KW != TW => Unknown Hash -->
+	<GameAsset
+		id="ObjectFilterAsset"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!-- Removed Rate of Fire bonus due to removal in TW Patch 1.09 -->
+	<AttributeModifier
+		id="AttributeModifier_BlackHandLeadership"
+		Category="NONE"
+		StackingLimit="1"
+		Duration="1.5s">
+		<Modifier Type="RATE_OF_FIRE" Value="100%" />
+		<Modifier Type="ARMOR" Value="75%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+	</AttributeModifier>
+<!-- Fixed Radio Tower Armor Bug in First Mission, Now increases armor rather than reduce -->
+	<AttributeModifier
+		id="AttributeModifier_CM11RadioTowerBuff"
+		Category="BUFF"
+		StackingLimit="1"
+		Duration="1.5s"
+		StartFX="FX_NOD_BlkHndLeadershipBuff"
+		EndFX="">
+		<Modifier Type="RATE_OF_FIRE" Value="100%" />
+		<Modifier Type="ARMOR" Value="75%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+	</AttributeModifier>
+	<AttributeModifier
+		id="Confessor_Militant_AttributeModifier"
+		Category="BUFF"
+		StackingLimit="1"
+		Duration="1.5s"
+		ReplaceInCategoryIfLongest="true"
+		StartFX="FX_NOD_BlkHndLeadershipBuff"
+		EndFX="">
+		<Modifier Type="RATE_OF_FIRE" Value="100"/>
+		<Modifier Type="SUPPRESSABILITY" Value="150"/>
+		<Modifier Type="ARMOR" Value="75%" />
+	</AttributeModifier>
+	
+<!-- CRUSHER_LEVEL=-100% will reduce CrusherLevel instead of 0% -->
+	<AttributeModifier
+		id="AttributeModifier_BunkerTruckDeployed"
+		Category="NONE"
+		ObjectStatusToSet="CAN_ATTACK IMMOBILE"
+		ModelConditionsSet="UNPACKING">
+		<Modifier Type="SPEED" Value="0%"/>
+		<Modifier Type="ARMOR" Value="25%" />
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="CRUSHER_LEVEL" Value="-100%"/>
+	</AttributeModifier>	
+	
+<!-- Hide Confessor or Black Disciple when upgrades are triggered while garrisoned -->
+	<AttributeModifier
+		id="AttributeModifier_Garrisoned"
+		Category="NONE"
+		Duration="1.55s"
+		ModelConditionsSet="INSIDE_GARRISON">
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="200"/>
+	</AttributeModifier>
+	
+<!-- Increased Duration for consistency with Recycling -->
+	<AttributeModifier
+		id="AttributeModifier_Recyclotron"
+		Category="NONE"
+		Duration="1.55s"
+		ObjectStatusToSet="SUICIDE_BOMBER_HAS_TARGET">
+	</AttributeModifier>
+	
+<!-- This will give the Overload Beam the extra damage instead of a projectile -->
+	<AttributeModifier
+		id="AttributeModifier_OverloadBeam"
+		Category="BUFF"
+		Duration="2.0s">
+		<Modifier Type="DAMAGE_MULT" Value="250"/>
+	</AttributeModifier>
+	
+<!-- New Mission Specific AttributeModifier to Buff ROF rather than nerf -->
+	<AttributeModifier
+		id="AttributeModifier_CM24MetaUnitBuff"
+		Category="BUFF">
+		<Modifier Type="RATE_OF_FIRE" Value="200%" />
+		<Modifier Type="DAMAGE_MULT" Value="150"/>
+	</AttributeModifier>
+</AssetDeclaration>

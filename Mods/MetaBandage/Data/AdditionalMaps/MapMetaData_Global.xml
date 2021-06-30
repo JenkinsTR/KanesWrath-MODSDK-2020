@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Special Mod File for Global Data -->
+	<Includes>
+		<Include type="all" source="MpGameRules.xml" />
+		<Include type="all" source="MultiplayerColors.xml" />
+		<Include type="all" source="MetaGameStatic.xml" />
+	</Includes>
+</AssetDeclaration>

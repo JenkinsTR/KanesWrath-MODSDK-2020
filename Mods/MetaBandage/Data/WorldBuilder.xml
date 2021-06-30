@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Main Mod File for WorldBuilder Data -->
+	<Includes>
+		<Include type="reference" source="global.xml" />
+		<Include type="reference" source="static.xml" />
+		<Include type="reference" source="download.xml" />
+		<Include type="reference" source="metagame.xml" />
+		
+		<Include type="all" source="MapSpecific.xml" />
+
+	</Includes>
+</AssetDeclaration>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="FontDesc">
+		<Entry id="Name" AssetType="String" IsRequired="true" IsAttribute="true"/>
+		<Entry id="Size" AssetType="SageUnsignedInt" IsRequired="true" IsAttribute="true"/>
+		<Entry id="Bold" AssetType="SageBool" Default="false" IsAttribute="true"/>
+		<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

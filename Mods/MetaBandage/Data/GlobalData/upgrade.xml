@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--*********************************************-->
+	<!--******************GDI Upgrades***************-->
+
+<!-- Removed Dependency -->
+	<UpgradeTemplate id="Upgrade_ZoneTrooperScannerPack"
+		inheritFrom="BasePurchasableUpgrade" 
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		DisplayName="UpgradeName:ZoneTrooperScannerPack"
+		AcquireHint="UpgradePrereq:ZoneTrooperScannerPack"
+		TypeDescription="UpgradeType:ZoneTrooperScannerPack"
+		Description="UpgradeDesc:ZoneTrooperScannerPack"
+		Type="PLAYER"
+		BuildCost="500"
+		BuildTime="15s"
+		ResearchSound="AudioEvent:GDI_ScannerPacks_Upgrade"
+		IconImage="Button_UpgradeScannerPack">
+	</UpgradeTemplate>
+<!-- Removed Dependency -->
+	<UpgradeTemplate id="Upgrade_ZoneTrooperAutoInjectors"
+		LocalPlayerProductionStartedEvaEvent="None"
+		ResearchCompleteEvaEvent ="UpgradeComplete"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		inheritFrom="BasePurchasableUpgrade" 
+		DisplayName="UpgradeName:ZoneTrooperAutoInjectors"
+		AcquireHint="UpgradePrereq:ZoneTrooperAutoInjectors"
+		TypeDescription="UpgradeType:ZoneTrooperAutoInjectors"
+		Description="UpgradeDesc:ZoneTrooperAutoInjectors"
+		Type="PLAYER"
+		BuildCost="1000"
+		BuildTime="30s"
+		ResearchSound="AudioEvent:GDI_PowerPacks_Upgrade"
+		IconImage="Button_UpgradeAutoInjectors">
+	</UpgradeTemplate>
+	
+	<!-- FROM METAMOD -->
+	<UpgradeTemplate id="Upgrade_GiveMetaControlDummyPREActivation"
+		Type="PLAYER"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_TiberiumCrystalInfinite"
+		Type="OBJECT"
+	/>
+	
+	<UpgradeTemplate
+		id="Upgrade_NoSpawnUponDestructionTiberium"
+		Type="PLAYER">
+	</UpgradeTemplate>
+	<!-- END FROM METAMOD -->
+	
+</AssetDeclaration>

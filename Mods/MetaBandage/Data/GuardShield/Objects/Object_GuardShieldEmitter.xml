@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="instance"
+			source="DATA:BaseObjects/BaseStructure.xml" />
+	</Includes>
+	<GameObject
+		id="GuardShieldEmitter"
+		inheritFrom="BaseStructure"
+		SelectPortrait="Portrait_GDIWallHub"
+		ButtonImage="Portrait_GDIWallHub"
+		Side="GDI"
+		EditorSorting="STRUCTURE"
+		TransportSlotCount="1"
+		BuildCost="12000"
+		BuildTime="180"
+		PlacementViewAngle="225d"
+		CommandSet="GuardShieldEmitterCommandSet"
+		KindOf="STRUCTURE SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS UNIQUE_UNIT AUTO_ACQUIRABLE_BY_AI NOT_AUTOACQUIRABLE SUPER_WEAPON REVEAL_TO_ALL"
+		RadarPriority="STRUCTURE"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="OTHER_STRUCTURE"
+		EditorName="GuardShieldEmitter"
+		Description="Desc:GuardShieldEmitter"
+		TypeDescription="Type:GuardShieldEmitter"
+		IsTrainable="True"
+		ThreatLevel="3"
+		MaxSimultaneousOfType="1">
+		<DisplayName>Name:GuardShieldEmitter</DisplayName>
+		<GameDependency
+			RequiredModelConditionsAny=""
+			ForbiddenModelConditions=""
+			RequiredObjectStatusAny="">		
+			<ObjectFilter
+				Rule="ANY">
+			    <IncludeThing>GDIArmory</IncludeThing>
+			    <IncludeThing>SteelTalonsTechCenter</IncludeThing>
+			    <IncludeThing>ZOCOMArmory</IncludeThing>
+			    <IncludeThing>NODTechAssemblyPlant</IncludeThing>
+			    <IncludeThing>MarkedOfKaneTechAssemblyPlant</IncludeThing>
+			    <IncludeThing>BlackHandTechAssemblyPlant</IncludeThing>
+			    <IncludeThing>AlienReactor</IncludeThing>
+			    <IncludeThing>Traveler59Reactor</IncludeThing>
+			    <IncludeThing>Reaper17Reactor</IncludeThing>
+			    <IncludeThing>MetaTechTechCenter</IncludeThing>
+			</ObjectFilter>
+		</GameDependency>
+		<ArmorSet
+			Armor="NODConstructionYardArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SPREAD" />
+		<Draws>
+			<ScriptedModelDraw
+				id="50DF2C46"
+				RecoilDamping="0.4"
+				MaxRecoilDistance="3"
+				InitialRecoilSpeed="2"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="True"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="True"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GBWALLHUB"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GBWALLHUB_A"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GBWALLHUB_D3"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GBWALLHUB_D2"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:GBWALLHUB"
+						ExtraMesh="False" />
+					<Texture
+						Original="GBwall2"
+						New="GBwall2_D" />
+				</ModelConditionState>
+				
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="GBWALLHUB_A"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Con_Small"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="GBWALLHUB_D3"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="GBWALLHUB_D2"
+						AnimationMode="MANUAL"
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="GBWALLHUB_D2"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						AnimationName="GBWALLHUB_D3"
+						AnimationMode="ONCE"
+						Distance="0"
+						AnimationBlendTime="0"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+				</AnimationState>
+			</ScriptedModelDraw>
+			
+			<ScriptedModelDraw
+				id="ModuleTag_Draw_Selected_Repair_Decal"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="SELECTED">
+					<Model Name="FXInvisBone" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL"
+						SizeX="820"
+						SizeY="820"
+						OverrideLODVisibility="true"
+						MaxHeight="200"
+						UseHouseColor="true"
+						Texture="Decal_LeadershipBuff" 
+						LocalPlayerOnly="true" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+			
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL" />
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_ShieldEmitterDieCleanUp</OCL>
+				</OCL>
+			</SlowDeath>
+
+			<OCLSpecialPower
+				id="ModuleTag_GuardShield"
+				SpecialPowerTemplate="SpecialPower_GuardShield"
+				OCL="OCL_GuardShield"
+				CreateLocation="USE_OWNER_OBJECT"
+			/>						
+			<OCLSpecialPower
+				id="ModuleTag_GuardShieldAIModusActivator"
+				SpecialPowerTemplate="SpecialPower_GuardShieldAIModusActivator"
+				OCL="OCL_GuardShieldAIModusActivator"
+				CreateLocation="CREATE_AT_LOCATION"/>			
+			<OCLSpecialPower
+				id="ModuleTag_GuardShieldAIModusDeactivator"
+				SpecialPowerTemplate="SpecialPower_GuardShieldAIModusDeactivator"
+				OCL="OCL_GuardShieldAIModusDeactivator"
+				CreateLocation="CREATE_AT_LOCATION"/>			
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"/>									
+			<CommandSetUpgrade
+				id="ModuleTag_GuardShieldAIModuleActiveCommandset"
+				CommandSet="GuardShieldEmitterCommandSetAIModusON">
+				<TriggeredBy>Upgrade_GuardShieldAIModusON</TriggeredBy>
+			</CommandSetUpgrade>
+			
+			<CommandSetUpgrade
+				id="ModuleTag_GuardShieldAIModuleInactiveCommandset"
+				CommandSet="GuardShieldEmitterCommandSet">
+				<TriggeredBy>Upgrade_GuardShieldAIModusOFF</TriggeredBy>
+			</CommandSetUpgrade>
+			
+			<RemoveUpgradeUpgrade
+				id="ModuleTag_CommandSet_GuardShield_RemoveFor_01">
+				<TriggeredBy>Upgrade_GuardShieldAIModusON</TriggeredBy>
+				<UpgradeToRemove>Upgrade_GuardShieldAIModusOFF</UpgradeToRemove>
+			</RemoveUpgradeUpgrade>
+			
+			<RemoveUpgradeUpgrade
+				id="ModuleTag_CommandSet_GuardShield_RemoveFor_02">
+				<TriggeredBy>Upgrade_GuardShieldAIModusOFF</TriggeredBy>
+				<UpgradeToRemove>Upgrade_GuardShieldAIModusON</UpgradeToRemove>
+			</RemoveUpgradeUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_GuardShield_StatusBitUpgrade01"
+				StatusToClear="RIDER2"
+				StatusToSet="RIDER1">
+				<TriggeredBy>Upgrade_GuardShieldAIModusON</TriggeredBy>
+			</StatusBitsUpgrade>
+			
+			<StatusBitsUpgrade
+				id="ModuleTag_GuardShield_StatusBitUpgrade02"
+				StatusToClear="RIDER1"
+				StatusToSet="RIDER2">
+				<TriggeredBy>Upgrade_GuardShieldAIModusOFF</TriggeredBy>
+			</StatusBitsUpgrade>						
+			<UpgradeDie
+				id="ModuleTag_RemoveAllUpgrades"
+				UpgradeId="Upgrade_GuardShieldAIModusON">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</UpgradeDie>
+			
+			<SpecialPower
+				id="ModuleTag_ForceFieldDistractionWeaponStart"
+				SpecialPowerTemplate="SpecialPower_ForceFieldDistractionWeapon"
+				UpdateModuleStartsAttack="true"
+				StartsPaused="false"
+			/>		
+
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_ForceFieldDistractionWeaponUpdate"
+				SpecialPowerTemplate="SpecialPower_ForceFieldDistractionWeapon"
+				WhichSpecialWeapon="1"
+				SkipContinue="true"
+				UnpackTime="0s"
+				PreparationTime="0s"
+				PersistentPrepTime="0s"
+				PackTime="0s" 		
+				AwardXPForTriggering="0"				
+				StartAbilityRange="360"
+				MustFinishAbility="true"			
+				SpecialWeapon="ForceFieldDistractionWeapon"				
+			/>		
+
+			<SpecialPower
+				id="ModuleTag_ForceFieldAttractionWeaponStart"
+				SpecialPowerTemplate="SpecialPower_ForceFieldAttractionWeapon"
+				UpdateModuleStartsAttack="true"
+				StartsPaused="false"
+			/>		
+
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_ForceFieldAttractionWeaponUpdate"
+				SpecialPowerTemplate="SpecialPower_ForceFieldAttractionWeapon"
+				WhichSpecialWeapon="2"
+				SkipContinue="true"
+				UnpackTime="0s"
+				PreparationTime="0s"
+				PersistentPrepTime="0s"
+				PackTime="0s" 			
+				AwardXPForTriggering="0"				
+				StartAbilityRange="360"
+				MustFinishAbility="true"			
+				SpecialWeapon="ForceFieldAttractionWeapon"				
+			/>				
+						
+			<xi:include
+				href="DATA:Includes/GenericBuildingRepair.xml" />
+			<xi:include
+				href="DATA:Includes/GenericEngineerContain.xml" />
+			<xi:include
+				href="DATA:Includes/AdvancedAlienBuildingDestruction.xml" />
+			<xi:include
+				href="DATA:Includes/AdvancedAlienBuildingSuicide.xml" />
+			<StructureUnpackUpdate
+				id="StructureUnpackUpdate"
+				UnpackTime="2.0s" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="GuardShieldAIActiveEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="10000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="11.0"
+				MinorRadius="11.0"
+				Height="25.0"
+				ContactPointGeneration="STRUCTURE">
+				<Offset
+					x="0"
+					y="0"
+					z="0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry
+				EvaEvent="AudioEvent:BuildingStolen"
+				AudioType="voiceDefectingAway" />
+			<AudioEntry
+				EvaEvent="AudioEvent:EnemyBuildingCaptured"
+				AudioType="voiceDefectingTowards" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:GDI_BuildingPlaced"
+				AudioType="soundUnderConstruction" />
+			<AudioEntry
+				Sound="Multisound:HumanFaction_SmallBuilding_LightDamageMS"
+				AudioType="soundOnDamaged" />
+			<AudioEntry
+				Sound="Multisound:HumanFaction_SmallBuilding_HeavyDamageMS"
+				AudioType="soundOnReallyDamaged" />
+		</AudioArraySound>
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="360"
+			ShroudClearingRange="360" />
+	</GameObject>
+</AssetDeclaration>

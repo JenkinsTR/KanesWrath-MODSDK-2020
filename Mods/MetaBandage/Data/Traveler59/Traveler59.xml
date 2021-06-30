@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+	
+		<!--Units-->
+		<Include type="all" source="units/Traveler59AnnihilatorTripod.xml" />
+		<Include type="all" source="units/Traveler59AnnihilatorTripodHusk.xml" />
+		<Include type="all" source="Units/Traveler59BlinkMastermind.xml" />
+		<Include type="all" source="Units/Traveler59Buzzers.xml" />
+		<Include type="all" source="Units/Traveler59Corrupter.xml" />
+		<Include type="all" source="Units/Traveler59Cultist.xml" />
+		<Include type="all" source="Units/Traveler59CultistSquad.xml" />
+		<Include type="all" source="Units/Traveler59CustomizableVehicle.xml" />	
+		<Include type="all" source="Units/Traveler59DevastatorWarship.xml" />
+		<Include type="all" source="Units/Traveler59EradicatorHexapod.xml" />	
+		<Include type="all" source="Units/Traveler59Explorer.xml" />	
+		<Include type="all" source="Units/Traveler59GunWalker.xml" />	
+		<Include type="all" source="Units/Traveler59Harvester.xml" />	
+		<Include type="all" source="Units/Traveler59MillipedeBody.xml" />	
+		<Include type="all" source="Units/Traveler59MillipedeHead.xml" />	
+		<Include type="all" source="Units/Traveler59Mothership.xml" />	
+		<Include type="all" source="Units/Traveler59MCV.xml" />	
+		<Include type="all" source="Units/Traveler59PlanetaryAssaultCarrier.xml" />	
+		<Include type="all" source="Units/Traveler59RazorDroneSquad.xml" />
+		<Include type="all" source="Units/Traveler59SeekerTank.xml" />
+		<Include type="all" source="Units/Traveler59ShockTrooper.xml" />
+		<Include type="all" source="Units/Traveler59Stalker.xml" />
+		<Include type="all" source="Units/Traveler59StalkerSquad.xml" />
+		<Include type="all" source="Units/Traveler59Stormrider.xml" />	
+		
+		<!--Structures-->
+		<Include type="all" source="structures/Traveler59BuzzerHive.xml" />
+		<Include type="all" source="structures/Traveler59ControlCenter.xml" /> <!-- Nerve Center -->
+		<Include type="all" source="structures/Traveler59DronePlatform.xml" />
+		<Include type="all" source="structures/Traveler59Foundry.xml" />
+		<Include type="all" source="structures/Traveler59Gateway.xml" /> <!-- Assembler -->
+		<Include type="all" source="structures/Traveler59PlasmaMissileBattery.xml" />
+		<Include type="all" source="structures/Traveler59Portal.xml" />
+		<Include type="all" source="structures/Traveler59PowerProjector.xml" /> <!-- Power Plant -->
+		<Include type="all" source="structures/Traveler59Reactor.xml" /> <!-- Technology Plant -->
+		<Include type="all" source="structures/Traveler59RiftGenerator.xml" />
+		<Include type="all" source="structures/Traveler59SignalTransmitter.xml" /> <!-- Transmission Tower -->
+		<Include type="all" source="structures/Traveler59SporePod.xml" /> <!-- Growth Accelerator -->
+		<Include type="all" source="structures/Traveler59StatisChamber.xml" />
+		<Include type="all" source="structures/Traveler59StormColumn.xml" />
+		<Include type="all" source="structures/Traveler59TiberiumTower.xml" /> <!-- Extractor (Refinery) -->
+		<Include type="all" source="structures/Traveler59WarpBeacon.xml" />
+		<Include type="all" source="structures/Traveler59MiniMCVOutpost.xml" />
+		<Include type="all" source="structures/Traveler59PhotonCannon.xml"/>
+		<Include type="all" source="structures/MG_Traveler59_Hive.xml" />		
+	</Includes>
+</AssetDeclaration>

@@ -1,0 +1,110 @@
+CustomHotkeys
+	1.0 -> KW: 
+		Background is noticably dim compared to other Setting tabs.
+	KW -> Mod: 
+		Fixed Background brightness.
+Disconnect Screen
+	1.0 -> 1.6: 
+		Design Changes.
+	1.0 -> KW: 
+		Slight Change to Geometry (41).
+	KW -> Mod:
+		Same changes as 1.0 -> 1.6.
+GameCastRating
+	1.0 -> 1.5:
+		Added Geometry (Text: 33_5): Commentator Header.
+	1.0 -> KW:
+		Slight geometry change.
+	KW -> Mod: 
+		Same changes as 1.0 -> 1.5.
+GUIFX
+	1.0 -> 1.1:
+		New art.
+		New geometry.
+		Changed Load Progress Bar?
+	1.1 -> 1.5:
+		No changes.
+	1.0 -> KW:
+		Added Support for New Factions.
+		Changed Font (where?).
+	KW -> Mod
+		Same changes as 1.0 to 1.1 (Whatever that is).
+HUDReplayControlPanel
+	1.9
+		Added Apt.
+	KW_MOD
+		Added Apt (Does nothing).
+Loadscreen
+	1.0 -> 1.5:
+		Design Change to have map display above player list.
+	1.0 -> KW1.0:
+		Design Change to Nod Graphics.
+		Missing HideWideScreen import.
+	KW1.0 -> KW1.1:
+		Change with Load Bar.
+		Added Map Display.
+	KW1.1 -> Mod
+		Design change to match 1.5.
+		Different Background.
+		Map Display has Map title now.
+Messenger
+	1.0 -> 1.5:
+		_StartMinimized Parameter.
+	1.0 -> KW:
+		No Changes (Text Color to red is about it).
+	KW -> Mod:
+		Same changes as 1.0 -> 1.5.
+Mission Summary
+	1.0 -> KW:
+		Design change (made it red).
+	KW -> Mod:
+		Finished design change, Objective headers and two lines that flash when revealing the medal were still blue.
+Options
+	1.0 -> 1.1: 
+		Added "Enable Kane Edition Content" Setting.
+	1.1 -> 1.5: 
+		Added "Classic C&C Mouse" Setting.
+	1.1? -> KW: 
+		Replaced "Enable Kane Edition Content" for "Classic C&C Mouse" Setting. 
+		Background Split Bug in Network Setting Tab.
+	KW -> Mod: 
+		Adjusted Art.
+		Fixed Background Split in Network.
+TacticalHUD
+	1.0 -> 1.9: 
+		Added Support for Fast Forwarding Button.
+	1.0 -> KW: 
+		Added Support for New Factions.
+TacticalHUDSelectionDetails
+	1.0 -> 1.5: 
+		Added Ammo Counter in Unit Portraits.
+	1.0 -> KW: 
+		Added Support for New Factions (And Traveler17 apparently). Necessary?
+	KW -> Mod: 
+		Same changes as 1.0 -> 1.5.
+Timeline
+	1.0 -> KW:
+		Design change (made it red).
+		Bug with bottom bar being too long.
+	KW -> Mod:
+		Fixed bottom bar.
+
+Already Fully Updated by Devs:
+PlayerVoting
+	1.0 -> 1.5:
+		Small Changes, probably with sounds.
+	1.0 -> KW:
+		Same changes as 1.0 -> 1.5 with slight variance.
+TacticalHUDRadar
+	1.0 -> KW: 
+		Added New Factions.
+TacticalHUDMainCommandBar
+	1.0 -> 1.5:
+		Added OnSelectedTabClicked Parameter.
+	1.0 -> KW:
+		Same changes as 1.0 -> 1.5.
+TacticalHUDTelestratorControlPanel
+	1.0 -> 1.5: 
+		Color and Line Selection, Open Menu (Verify?). Slight Change to Geometry (22).
+	1.0 -> KW: 
+		Same changes as 1.0 -> 1.5.

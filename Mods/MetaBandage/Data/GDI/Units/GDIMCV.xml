@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+<!-- "Created" voice line won't be delayed when trained from the Reclamation Hub -->
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="GDIMCV"
+		inheritFrom="BaseVehicle"
+		SelectPortrait="Portrait_GDIMCV"
+		ButtonImage="Portrait_GDIMCV"
+		Side="GDI"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="3500"
+		BuildTime="35"
+		BuildFadeInOnCreateTimeSeconds="0.25s"
+		CommandSet="GDIMCVCommandSet"
+		CommandPoints="100" 
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS SCORE VEHICLE FS_FACTORY CAN_REVERSE_MOVE EXPANSION_UNIT CAN_BE_FAVORITE_UNIT MCV IGNORES_SELECT_ALL"
+		RadarPriority="UNIT"
+		PlacementViewAngle="315d"
+		ProductionQueueType="VEHICLE"
+		UnitCategory="VEHICLE"
+		VoicePriority="32"
+		EditorName="GDIMCV"
+		Description="Desc:GDIMCV"
+		TypeDescription="Type:GDIMCV"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName
+			xai:joinAction="Replace">Name:GDIMCV</DisplayName>
+		<ArmorSet
+			Armor="GDIMCVArmor"
+			DamageFX="VehicleDamageFX" />
+		<LocomotorSet
+			Locomotor="GDIMCVLocomotor"
+			Condition="NORMAL"
+			Speed="40.0" />
+		<Draws>
+			<TruckDraw
+				id="ModuleTag_Draw"
+				LeftFrontTireBone="BONE_TireCabL"
+				RightFrontTireBone="BONE_TireCabR"
+				MidLeftRearTireBone="BONE_TrailerLF"
+				MidRightRearTireBone="BONE_TrailerRF"
+				LeftRearTireBone="BONE_TrailerLR"
+				RightRearTireBone="BONE_TrailerRR"
+				TireRotationMultiplier="0.2"
+				TireRotationMultiplierFront="0.5"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUMCV_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING REALLYDAMAGED">
+					<Model
+						Name="GUMCVUPAK_SN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING DAMAGED">
+					<Model
+						Name="GUMCVUPAK_SN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING">
+					<Model
+						Name="GUMCVUPAK_SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="GUMCVR_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="GUMCV_SKN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="GUMCV_SKN" />
+					<Texture
+						Original="GB_Conyard01"
+						New="GB_Conyard01D" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="GUMCV_FP" />
+				</ModelConditionState>					
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT">
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<Script>
+						Prev = CurDrawablePrevAnimationState()
+						if Prev == "STATE_built" then
+						CurDrawableSetTransitionAnimState("TRANS_built")
+						end
+					</Script>					
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="UNPACKING"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="GUMCVUPAK_AN"
+						AnimationMode="ONCE_BACKWARDS" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="COMING_OUT_OF_FACTORY"
+					StateName="STATE_built">
+					<Animation
+						AnimationName="GUMCV_BLDA"
+						AnimationMode="ONCE" />
+				</AnimationState>	
+				<!--   Transitions -->
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_built">
+					<Animation
+						AnimationName="GUMCV_BLDA"
+						AnimationMode="ONCE"></Animation>
+				</AnimationState>							
+			</TruckDraw>
+			<ScriptedModelDraw
+				id="ModuleTag_FX"
+				ExtraPublicBone="FXTracksLR FXTracksRR FXTracksLF FXTracksRF MUZZLEFX01 MUZZLEFX02">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUMamm_FX" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="MOVING">
+					<ParticleSysBone
+						BoneName="FXTracksLF"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXTracksRF"
+						FXParticleSystemTemplate="TreadDust"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXTracksRF"
+						FXParticleSystemTemplate="TreadDirt"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXTracksLF"
+						FXParticleSystemTemplate="TreadDirt"
+						FollowBone="true" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<Physics
+				id="ModuleTag_Physics" />
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate" />
+			<ProductionUpdateInfo
+				id="ModuleTag_ProductionUpdateInfo"/>
+			<SlowDeath
+				id="ModuleTag_Death"
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
+				SinkDelay="3s"
+				SinkRate="1.0"
+				DestructionDelay="7s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIMCVDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound
+					Type="INITIAL"
+					List="GDI_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplode" />
+			</FXListBehavior>
+			<!-- special power that grants the Unpack upgrade -->
+			<SpecialPower
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpdateModuleStartsAttack="true" />
+			<!-- update for the Unpack upgrade special power -->
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpgradeToGive="Upgrade_UnPack" />
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="5.0s"
+				DisabledDuringUnpack="false"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>GDIConstructionYard</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<AISpecialPowerUpdate
+				id="ModuleTag_MCVBuildConyardAI"
+				CommandButtonName="Command_UnPackGDIMCV"
+				SpecialPowerAIType="SPECIAL_POWER_BUILD_CONYARD" />
+			<!-- No stances because there's no weapon -->
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"></AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="5000" />
+		</Body>
+		<ClientBehaviors>
+			<ModelConditionAudioLoopClientBehavior
+				id="ModuleTag_MCALCB">
+				<ModelConditionSound
+					Sound="AudioEvent:GDI_MCVPackBed"
+					RequiredFlags="UNPACKING" />
+			</ModelConditionAudioLoopClientBehavior>
+			<AnimationSoundClientBehavior
+				id="AnimationSoundCB" >
+<!-- This animation plays in reverse, hence the frame numbers going from high to low.  The frame 12 to 20 for pack3 to pack4 is a planning mistake, but fits the animation -->
+				<Sound
+					Sound="AudioEvent:GDI_MCVPack1"
+					Animation="GUMCVUPAK_AN"
+					Frame="84" />
+				<Sound
+					Sound="AudioEvent:GDI_MCVPack2"
+					Animation="GUMCVUPAK_AN"
+					Frame="52" />
+				<Sound
+					Sound="AudioEvent:GDI_MCVPack3"
+					Animation="GUMCVUPAK_AN"
+					Frame="12" />
+				<Sound
+					Sound="AudioEvent:GDI_MCVPack4"
+					Animation="GUMCVUPAK_AN"
+					Frame="20" />
+				<Sound
+					Sound="AudioEvent:GDI_MCVPack5"
+					Animation="GUMCVUPAK_AN"
+					Frame="1" />
+			</AnimationSoundClientBehavior>				
+		</ClientBehaviors>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="BOX"
+				MajorRadius="30.0"
+				MinorRadius="20.0"
+				Height="20.0"
+				ContactPointGeneration="VEHICLE">
+				<Offset
+					x="-10"
+					y="0"
+					z="0" />
+			</Shape>
+		</Geometry>
+		<AudioArrayVoice>
+			<!-- Triggered when created by being packed from a ConYard -->
+			<AudioEntry
+				Sound="AudioEvent:GDI_MCV_VoicePackedUp"
+				AudioType="voiceCreated" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_MCV_VoiceMove"
+				AudioType="voiceGuard" />
+			<AudioEntry
+				Sound="AudioEvent:GDI_MCV_VoiceMove"
+				AudioType="voiceMove" />
+			<AudioEntry
+				Sound="Multisound:GDI_MCV_VoiceSelectMS"
+				AudioType="voiceSelect" />
+			<!-- Triggered when built from factory -->
+			<ObjectSpecificEntry
+				Sound="AudioEvent:GDI_MCV_VoiceCreate"
+				AudioType="voiceCreatedFrom"
+				TargetObject="GDIWarFactory" />
+			<!-- Triggered when built from Reclamation Hub -->
+			<ObjectSpecificEntry
+				Sound="AudioEvent:GDI_MCV_VoiceCreate"
+				AudioType="voiceCreatedFrom"
+				TargetObject="MG_GDI_ReclamatorHub" />
+			<!-- Safety in case we do this in some campaign mission -->
+			<ObjectSpecificEntry
+				Sound="AudioEvent:GDI_MCV_VoiceCreate"
+				AudioType="voiceCreatedFrom"
+				TargetObject="ReinforcementBay" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:MCVMoveStart"
+				AudioType="soundMoveStart" />
+			<AudioEntry
+				Sound="AudioEvent:MammothIdleLoop"
+				AudioType="soundAmbient" />
+		</AudioArraySound>
+		 <EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="155" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="100"
+			ShroudClearingRange="200" />
+		<CrusherInfo
+			CrusherLevel="1" 
+			CrushableLevel="2" />
+	</GameObject>
+</AssetDeclaration>

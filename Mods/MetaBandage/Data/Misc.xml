@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include source="art:EXTibCluster.W3X" type="all"/>
+		<Include source="art:EXTibBlueCluster.W3X" type="all"/>
+		<Include source="art:FXTibClusterBlue.W3X" type="all"/>
+	</Includes>
+</AssetDeclaration>

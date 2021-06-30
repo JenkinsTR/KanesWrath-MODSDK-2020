@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Adjusted Upgrade Ordering for consistency between Sub Factions -->
+	<!-- Removed Sonic Repulsion Field Command -->
+	<LogicCommandSet
+		id="GDIArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgun</Cmd>
+		<Cmd>Command_CommandPostCallHunterKiller</Cmd>
+	</LogicCommandSet>
+	<!-- Adjusted Upgrade Ordering for consistency between Sub Factions -->
+	<!-- Added Sonic Repulsion Field Command -->
+	<LogicCommandSet
+		id="GDICommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneTrooperScannerPack</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Refer to GDI Command Post -->
+	<LogicCommandSet
+		id="SteelTalonsCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeSTAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Wolverine and Slingshot ordering to match Warfactory -->
+	<LogicCommandSet
+		id="SteelTalonsReclamatorHubCommandSet">
+		<Cmd>Command_ConstructSteelTalonsPitbull</Cmd>
+		<Cmd>Command_ConstructSteelTalonsTitan</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRepairAPC</Cmd>
+		<Cmd>Command_ConstructSteelTalonsHeavyHarvester</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMCV</Cmd>
+		<Cmd>Command_ConstructSteelTalonsWolverine</Cmd>
+		<Cmd>Command_ConstructSteelTalonsAAScout</Cmd>
+		<Cmd>Command_ConstructSteelTalonsRig</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMammoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsBehemoth</Cmd>
+		<Cmd>Command_ConstructSteelTalonsMARV</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+	<!-- Removed Evacuate Infantry at Location -->
+	<LogicCommandSet
+		id="SteelTalonsRepairAPCCommandSet">
+		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
+		<Cmd>Command_APCMinefield</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+		<Cmd>Command_Stop</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to GDI Tech Center -->
+	<!-- Added Command for Railgun Accelerators -->
+	<LogicCommandSet
+		id="SteelTalonsTechCenterCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_PurchaseUpgradeTankRailgunST</Cmd>
+		<Cmd>Command_PurchaseUpgradeAdaptiveArmor</Cmd>
+		<Cmd>Command_SpecialPowerRailgunAccelerator</Cmd>
+	</LogicCommandSet>
+
+	<!-- Refer to GDI Command Post -->
+	<LogicCommandSet
+		id="ZOCOMCommandPostCommandSet">
+		<Cmd>Command_CommandPostRadarScan</Cmd>
+		<Cmd>Command_SpecialPowerSonicRepulsionField</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDIAPAmmo</Cmd>
+		<Cmd>Command_PurchaseUpgradeOrcaSensorPod</Cmd>
+		<Cmd>Command_UpgradeZoneRaiderScannerPack</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to GDI Tech Center -->
+	<!-- Swapped Sharpshooter Team to ZOCOM -->
+	<LogicCommandSet
+		id="ZOCOMArmoryCommandSet">
+		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
+		<Cmd>Command_PurchaseUpgradeGDITungstenAAShells</Cmd>
+		<Cmd>Command_CommandPostCallZOCOMHunterKiller</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Added Laser Fencing Command -->
+	<LogicCommandSet
+		id="NODOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_CloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Removed Laser Fencing Command -->
+	<LogicCommandSet
+		id="NODTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_UpgradeNODLaserCapacitor</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+		<Cmd>Command_Redemption</Cmd>
+	</LogicCommandSet>
+
+	<!-- Refer to Nod Operations Center -->
+	<LogicCommandSet
+		id="BlackHandOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to Nod Tech Lab -->
+	<LogicCommandSet
+		id="BlackHandTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_PurchaseUpgradeChargedParticleBeam</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissilesBH</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Refer to Nod Operations Center -->
+	<LogicCommandSet
+		id="MarkedOfKaneOperationsCenterCommandSet">
+		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
+		<Cmd>Command_SelectObjectsForClone</Cmd>
+		<Cmd>Command_SpawnObjectsForClone</Cmd>
+		<Cmd>Command_MarkedOfKaneCloakingField</Cmd>
+		<Cmd>Command_FireRadarJammingMissile</Cmd>
+		<Cmd>Command_SpecialPowerLaserFencing</Cmd>
+		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Mines Command to Magnetic Mines -->
+	<LogicCommandSet
+		id="MarkedOfKaneHangarCommandSet">
+		<Cmd>Command_ConstructMarkedOfKaneVenom</Cmd>
+		<Cmd>Command_ConstructMarkedOfKaneVertigo</Cmd>
+		<Cmd>Command_NODRecallAllAircraft</Cmd>
+		<Cmd>Command_UpgradeNODSignatureGenerator</Cmd>
+		<Cmd>Command_PurchaseUpgradeVertigoDisruptionPod</Cmd>
+		<Cmd>Command_MarkedOfKaneMagneticMines</Cmd>
+	</LogicCommandSet>
+	<!-- Swapped Shadow Strike Team to Marked of Kane -->
+	<LogicCommandSet
+		id="MarkedOfKaneSecretShrineCommandSet">
+		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
+		<Cmd>Command_PurchaseUpgradeTiberiumInfusion</Cmd>
+		<Cmd>Command_MarkedOfKaneRedShadowStrikeTeam</Cmd>
+	</LogicCommandSet>
+	<!-- Refer to Nod Tech Lab -->
+	<LogicCommandSet
+		id="MarkedOfKaneTechAssemblyPlantCommandSet">
+		<Cmd>Command_UpgradeNODEmpBurst</Cmd>
+		<Cmd>Command_PurchaseUpgradeSuperChargedParticleBeam</Cmd>
+		<Cmd>Command_PurchaseUpgradeTibCoreMissiles</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Command to spawn Reaper 17 Buzzers Instead -->
+	<!-- Command to spawn Reaper 17 Disintigrators -->
+	<!-- Command to spawn Reaper 17 Assimilator -->
+	<LogicCommandSet
+		id="Reaper17PortalCommandSet">
+		<Cmd>Command_ConstructReaper17Buzzers</Cmd>
+		<Cmd>Command_ConstructReaper17RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructReaper17Assimilator</Cmd>
+		<Cmd>Command_ConstructReaper17ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructReaper17StalkerSquad</Cmd>
+	</LogicCommandSet>
+	<!-- Command to use Reaper 17 Buzzer Swarm -->
+	<LogicCommandSet
+		id="Reaper17ControlCenterCommandSet">
+		<Cmd>Command_Reaper17TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Reaper17SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+		<Cmd>Command_PurchaseUpgradeReaper17MinorForcefieldGenerator</Cmd>
+	</LogicCommandSet>
+	
+	<!-- Command to spawn Traveler 59 Buzzers Instead -->
+	<LogicCommandSet
+		id="Traveler59PortalCommandSet">
+		<Cmd>Command_ConstructTraveler59Buzzers</Cmd>
+		<Cmd>Command_ConstructTraveler59RazorDroneSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59Assimilator</Cmd>
+		<Cmd>Command_ConstructTraveler59ShockTrooperSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59CultistSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59StalkerSquad</Cmd>
+		<Cmd>Command_ConstructTraveler59BlinkMastermind</Cmd>
+	</LogicCommandSet>
+	<!-- Command to use Reaper 17 Buzzer Swarm -->
+	<LogicCommandSet
+		id="Traveler59ControlCenterCommandSet">
+		<Cmd>Command_TiberiumVibrationScan</Cmd>
+		<Cmd>Command_Traveler59SpecialPowerSwarm</Cmd>
+		<Cmd>Command_LightningSpike</Cmd>
+	</LogicCommandSet>
+	<!-- Added Temporal Wormhole Command -->
+	<LogicCommandSet
+		id="Traveler59ReactorCommandSet">
+		<Cmd>Command_PurchaseUpgradeTravelerEngines</Cmd>
+		<Cmd>Command_PurchaseUpgradeAlienShardLaunchers</Cmd>
+		<Cmd>Command_SpecialPowerPhaseField</Cmd>
+		<Cmd>Command_SpecialPowerTemporalWormhole</Cmd>
+	</LogicCommandSet>	
+	
+</AssetDeclaration>

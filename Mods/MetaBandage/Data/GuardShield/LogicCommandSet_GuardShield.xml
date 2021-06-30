@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommandSet
+		id="GuardShieldEmitterCommandSet">
+		<Cmd>Command_SpecialPowerGuardShield</Cmd>
+		<Cmd>Command_Upgrade_GuardShieldAIModusON</Cmd>
+<!-- 		<Cmd>Command_SpecialPower_ForceFieldDistractionWeapon</Cmd>
+		<Cmd>Command_SpecialPower_ForceFieldAttractionWeapon</Cmd> -->
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="GuardShieldEmitterCommandSetAIModusON">
+		<Cmd>Command_SpecialPowerGuardShield</Cmd>
+		<Cmd>Command_Upgrade_GuardShieldAIModusOFF</Cmd>
+<!-- 		<Cmd>Command_SpecialPower_ForceFieldDistractionWeapon</Cmd>
+		<Cmd>Command_SpecialPower_ForceFieldAttractionWeapon</Cmd> -->
+	</LogicCommandSet>
+	
+</AssetDeclaration>

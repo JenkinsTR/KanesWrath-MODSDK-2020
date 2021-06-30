@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<!--Units-->
+		<Include type="all" source="Units/ZOCOMAAScout.xml" />	
+		<Include type="all" source="Units/ZOCOMAPC.xml" />	
+		<Include type="all" source="Units/ZOCOMAPC_Veteran.xml" />	
+		<Include type="all" source="Units/ZOCOMFirehawk.xml" />	
+		<Include type="all" source="Units/ZOCOMGrenadeSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMGrenadeSoldierSquad.xml" />
+		<Include type="all" source="Units/ZOCOMImprovedSonicTank.xml" />	
+		<Include type="all" source="Units/ZOCOMJuggernaughtHusk.xml" />
+		<Include type="all" source="Units/ZOCOMHammerhead.xml" />
+		<Include type="all" source="Units/ZOCOMHarvester.xml" />
+		<Include type="all" source="Units/ZOCOMMammoth.xml" />
+		<Include type="all" source="Units/ZOCOMMARV.xml" />
+		<Include type="all" source="Units/ZOCOMMCV.xml" />
+		<Include type="all" source="Units/ZOCOMMissileSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMOrca.xml" />
+		<Include type="all" source="Units/ZOCOMPredator.xml" />
+		<Include type="all" source="Units/ZOCOMRifleSoldier.xml" />
+		<Include type="all" source="Units/ZOCOMRig.xml" />
+		<Include type="all" source="Units/ZOCOMSniper.xml" />	
+		<Include type="all" source="Units/ZOCOMSniperSquad.xml" />	
+		<Include type="all" source="Units/ZOCOMSniperSquad_Veteran.xml" />	
+		<Include type="all" source="Units/ZOCOMSpotter.xml" />	
+		<Include type="all" source="Units/ZOCOMV35Ox_CallSupportHunterKillerTeam.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_CallSupportZOCOMAirborne.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_CallSupportZOCOMAirborneRockets.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_CallSupportZOCOMBloodhound.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_CallSupportZOCOMBloodhound_APC.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_Summoned.xml" />
+		<Include type="all" source="Units/ZOCOMV35Ox_SummonedForVehicle.xml" />
+		<Include type="all" source="Units/ZOCOMZoneRaider.xml" />
+		<Include type="all" source="Units/ZOCOMZoneRaiderSquad.xml" />
+		<Include type="all" source="Units/ZOCOMZoneRaiderSquad_Veteran.xml" />
+		
+		<!--Structures-->
+		<Include type="all" source="structures/ZOCOMAABattery.xml" />
+		<Include type="all" source="structures/ZOCOMAirTower.xml" />
+		<Include type="all" source="structures/ZOCOMAirSupport.xml" />
+		<Include type="all" source="structures/ZOCOMArmory.xml" />
+		<Include type="all" source="structures/ZOCOMBarracks.xml" />
+		<Include type="all" source="structures/ZOCOMBattleBase.xml" />
+		<Include type="all" source="structures/ZOCOMCommandPost.xml" />
+		<Include type="all" source="structures/ZOCOMConstructionYard.xml" />
+		<Include type="all" source="structures/ZOCOMCrane.xml" />
+		<Include type="all" source="structures/ZOCOMGolumCannon.xml" />
+		<Include type="all" source="structures/ZOCOMIonCannonControl.xml" />
+		<Include type="all" source="structures/ZOCOMMedicalBay.xml" />
+		<Include type="all" source="structures/MG_ZOCOM_ReclamatorHub.xml" />		
+		<Include type="all" source="structures/ZOCOMPowerPlant.xml" />
+		<Include type="all" source="structures/ZOCOMRefinery.xml" />
+		<Include type="all" source="structures/ZOCOMSpaceCommandUplink.xml" />
+		<Include type="all" source="structures/ZOCOMTerraformingStation.xml" />
+		<Include type="all" source="structures/ZOCOMTiberiumSilo.xml" />
+		<Include type="all" source="structures/ZOCOMWarFactory.xml" />
+		<Include type="all" source="structures/ZOCOMWatchTower.xml" />
+		<Include type="all" source="structures/ZOCOMMiniMCVOutpost.xml" />
+	</Includes>
+</AssetDeclaration>

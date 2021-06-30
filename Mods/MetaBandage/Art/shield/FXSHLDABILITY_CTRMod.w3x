@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer id="FXSHLDABILITYMod" Hierarchy="FXSHLDABILITYMod">
+		<SubObject SubObjectID="DISTORTIONMod" BoneIndex="2">
+			<RenderObject>
+				<Mesh>FXSHLDABILITY.DISTORTIONMod</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject SubObjectID="DIFFUSEMod" BoneIndex="1">
+			<RenderObject>
+				<Mesh>FXSHLDABILITY.DIFFUSEMod</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

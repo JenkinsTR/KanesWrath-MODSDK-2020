@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RandomAlphaKeyframe">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="RelativeAge"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="Frame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+	</Asset>
+
+	<Asset
+		id="RGBColorKeyframe">
+		<Entry
+			id="RelativeAge"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="Frame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="Color"
+			AssetType="Color3f" />
+	</Asset>
+
+	<Asset
+		id="FXParticleAlpha">
+		<EntryList
+			id="Alpha"
+			AssetType="RandomAlphaKeyframe"
+			MinLength="0"
+			MaxLength="8" />
+	</Asset>
+
+	<Asset
+		id="FXParticleColor">
+		<Entry
+			id="HouseColorSaturation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryList
+			id="Color"
+			AssetType="RGBColorKeyframe"
+			MinLength="0"
+			MaxLength="8" />
+		<Entry
+			id="ColorScale"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="UseHouseColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleWind">
+		<Entry
+			id="Motion"
+			AssetType="FXParticleSystem_WindMotion"
+			IsAttribute="true"
+			Default="NOT_USED" />
+		<Entry
+			id="Strength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="FullStrengthDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="75.0" />
+		<Entry
+			id="ZeroStrengthDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="AngleChangeMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.15" />
+		<Entry
+			id="AngleChangeMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.45" />
+		<Entry
+			id="PingPongStartAngleMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="PingPongStartAngleMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.7853981633974483" />
+		<Entry
+			id="PingPongEndAngleMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.4977871437821381" />
+		<Entry
+			id="PingPongEndAngleMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="6.2831853071795864" />
+		<Entry
+			id="TurbulenceAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TurbulenceFrequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="FXParticlePhysicsBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDefaultPhysics">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticlePhysicsBase" />
+		<Entry
+			id="Gravity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="VelocityDamping"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="DriftVelocity"
+			AssetType="Coord3D" />
+		<Entry
+			id="Swirly"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="ParticlesAttachToBone"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleSwarmPhysics">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticlePhysicsBase" />
+		<Entry
+			id="AttractStrength"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticlePhysicsModule">
+		<EntryChoice
+			id="FXParticlePhysicsModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="Default"
+				AssetType="FXParticleDefaultPhysics" />
+			<Entry
+				id="Swarm"
+				AssetType="FXParticleSwarmPhysics" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="FXParticleSystemTemplate"
+		TypeHash="2697291522">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Priority"
+			AssetType="FXParticleSystem_Priority"
+			IsAttribute="true"
+			Default="ULTRA_HIGH_ONLY" />
+		<Entry
+			id="Shader"
+			AssetType="FXParticleSystem_ShaderType"
+			IsAttribute="true"
+			Default="ADDITIVE" />
+		<Entry
+			id="Type"
+			AssetType="FXParticleSystem_Type"
+			IsAttribute="true"
+			Default="PARTICLE" />
+		<EntryReference
+			id="ParticleTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="Drawable"
+			AssetType="RenderObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SlaveSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="PerParticleAttachedSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="SystemLifetime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SortLevel"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="EmitterSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="SlavePosOffset"
+			AssetType="Coord3D" />
+		<Entry
+			id="Lifetime"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="Size"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="StartSizeRate"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="BurstDelay"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="BurstCount"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="InitialDelay"
+			AssetType="ClientRandomVariable" />
+		<EntryRelocation
+			id="Alphas"
+			AssetType="FXParticleAlpha" />
+		<EntryRelocation
+			id="Colors"
+			AssetType="FXParticleColor" />
+		<EntryRelocation
+			id="Wind"
+			AssetType="FXParticleWind" />
+		<EntryRelocation
+			id="Physics"
+			AssetType="FXParticlePhysicsModule" />
+		<EntryRelocation
+			id="Draw"
+			AssetType="FXParticleDrawModule" />
+		<EntryRelocation
+			id="Volume"
+			AssetType="FXParticleVolumeModule" />
+		<EntryRelocation
+			id="Velocity"
+			AssetType="FXParticleVelocityModule" />
+		<Entry
+			id="Event"
+			AssetType="FXParticleEventModule" />
+		<EntryRelocation
+			id="Update"
+			AssetType="FXParticleUpdateModule" />
+		<Entry
+			id="IsOneShot"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsGroundAligned"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsEmitAboveGroundOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsParticleUpTowardsEmitter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseMaximumHeight"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

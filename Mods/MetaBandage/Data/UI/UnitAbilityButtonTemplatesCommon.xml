@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<UnitAbilityButtonTemplate
+		id="ButtonUpgradeReaper17MinorForcefieldGenerator"
+		LogicCommand="Command_PurchaseUpgradeReaper17MinorForcefieldGenerator">
+		<Data>
+			<PlayerUpgrade
+				StateData="ButtonStateUpgradeReaper17MinorForcefieldGenerator" />
+		</Data>
+	</UnitAbilityButtonTemplate>
+</AssetDeclaration>

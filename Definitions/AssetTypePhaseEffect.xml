@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TemporalSineWave">
+		<Entry
+			id="WaveLength"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="Amplitude"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="CameraShift">
+		<Entry
+			id="Randomness"
+			AssetType="ClientRandomVariable" />
+		<EntryList
+			id="SineWave"
+			AssetType="TemporalSineWave"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="PhaseEffect"
+		TypeHash="86890229">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="PhaseMaskModel"
+			AssetType="RenderObject"
+			IsAttribute="true" />
+		<Entry
+			id="PhaseStateShader"
+			AssetType="FXShaderMaterial" />
+		<Entry
+			id="CameraShift"
+			AssetType="CameraShift" />
+	</GameAsset>
+
+</AssetDefinition>

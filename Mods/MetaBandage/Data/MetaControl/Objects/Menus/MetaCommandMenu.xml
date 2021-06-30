@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+
+	<GameObject
+		id="MetaMenuExecute"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuExecute"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>NAME:MetaMenuExecute</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="ExecuteMenuSelectionEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="MetaMenuSelectionUp"
+		Side="Neutral"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuSelectionUp"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName></DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MenuSelectionUpEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+	id="MetaMenuSelectionDown"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuSelectionDown"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName></DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MenuSelectionDownEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="MetaMenuChoosePosition"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="MetaMenuChoosePositionCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_MetaMenuChoosePosition"
+				SpecialPowerTemplate="SpecialPowerChoosePosition"
+				OCL="OCL_MetaMenuPositionObject"
+				CreateLocation="CREATE_AT_LOCATION" 
+			/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="MetaMenuPositionObject"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.3s"
+				MaxLifetime="0.3s" />	
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="MetaMenuPositionObjectEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="MetaMenuHide"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuHideMetaControlMenu"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>NAME:MetaMenuHide</DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MetaMenuHideMetaControlMenuEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+	
+	<GameObject
+		id="MetaMenuSelectionLeft"
+		Side="Neutral"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuSelectionLeft"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName></DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MetaMenuSelectionLeftEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>
+
+	<GameObject
+		id="MetaMenuSelectionRight"
+		Side="Neutral"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED NOT_AUTOACQUIRABLE RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		ProductionQueueType="AIRCRAFT"
+		SelectPortrait="Portrait_NeutralCrate"
+		ButtonImage="Button_MetaMenuSelectionRight"
+		BuildTime="0"
+		BuildCost="0"
+		EditorName="GenericCrateSpawner">
+		<DisplayName></DisplayName>
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>	
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.5s"
+				MaxLifetime="0.5s" />			
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+                AILuaEventsList="MenuSelectionRightEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>	
+	
+</AssetDeclaration>

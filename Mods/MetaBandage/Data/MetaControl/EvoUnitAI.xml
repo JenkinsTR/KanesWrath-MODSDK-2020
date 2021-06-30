@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+
+	<SpecialPowerTemplate
+		id="SpecialPowerToggleEvoUnitAI3"
+		Flags="NEEDS_OBJECT_FILTER WATER_OK IGNORE_MAP_EXTENTS"
+		ReloadTime="0s"
+		TargetType="LOCATION" 
+		RadiusCursorRadius="100"
+		EvaEventToPlayWhenSelectingTarget="SelectUnit">
+		<ObjectFilter
+				Relationship="ALLIES"
+				Rule="ANY"
+				Include="INFANTRY VEHICLE AIRCRAFT">
+			<ExcludeThing>AlienMCVUnpacking</ExcludeThing>
+			<ExcludeThing>AlienBuzzers_Slaved</ExcludeThing>
+			<ExcludeThing>Viceroid</ExcludeThing>
+			<ExcludeThing>GDIJuggernaughtHusk</ExcludeThing>
+			<ExcludeThing>NODAvatarHusk</ExcludeThing>
+			<ExcludeThing>AlienAnnihilatorTripodHusk</ExcludeThing>
+		</ObjectFilter>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerToggleEvoUnitAI2"
+		Flags="WATER_OK IGNORE_MAP_EXTENTS"
+		ReloadTime="0s"
+		TargetType="OBJECT" 
+		EvaEventToPlayWhenSelectingTarget="SelectUnit">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPowerToggleEvoUnitAIDispatch5"
+		TargetType="OBJECT_OR_LOCATION" 
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceBoobyTrap"
+		EvaEventToPlayWhenSelectingTarget="SelectUnit"/>
+	<SpecialPowerTemplate
+		id="SpecialPowerToggleEvoUnitAI5"
+		Flags="WATER_OK IGNORE_MAP_EXTENTS"
+		ReloadTime="0s"
+		TargetType="OBJECT_OR_LOCATION">
+	</SpecialPowerTemplate>	
+			
+	<SpecialPowerTemplate
+		id="SpecialPowerToggleEvoUnitAI"
+		TargetType="OBJECT"
+		ReloadTime="0s">
+	</SpecialPowerTemplate>		
+			
+</AssetDeclaration>

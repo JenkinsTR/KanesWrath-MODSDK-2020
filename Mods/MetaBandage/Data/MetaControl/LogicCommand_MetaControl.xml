@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_ExternalLuaScript">
+		<SpecialPower>SpecialPower_ExternalLuaScript</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_EnemyAIOFF">
+		<SpecialPower>SpecialPower_EnemyAIOFF</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_MapRevealerToggle">
+		<SpecialPower>SpecialPower_MapRevealerToggle</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_ActivateMetaControl">
+		<SpecialPower>SpecialPower_ActivateMetaControl</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_DeActivateMetaControl">
+		<SpecialPower>SpecialPower_DeActivateMetaControl</SpecialPower>
+	</LogicCommand>
+		
+	<LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT NEED_TARGET_ENEMY_OBJECT"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_SendMoney">
+		<SpecialPower>SpecialPower_SendMoney</SpecialPower>
+	</LogicCommand>
+	
+<!-- 	<LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT NEED_TARGET_ENEMY_OBJECT NEED_UPGRADE"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_SendMoney">
+		<UpgradeTemplate>Upgrade_SuperweaponON</UpgradeTemplate>
+		<SpecialPower>SpecialPower_SendMoney</SpecialPower>
+	</LogicCommand> -->
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_RiftGen">
+		<SpecialPower>SpecialPower_RiftGen</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_MetaControlGlobalDeactivate">
+		<SpecialPower>SpecialPower_MetaControlGlobalDeactivate</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT NEED_TARGET_ENEMY_OBJECT"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_Money5k">
+		<SpecialPower>SpecialPower_Money5k</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_EveryAIOFF">
+		<SpecialPower>SpecialPower_EveryAIOFF</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_RiftGenTabMenu">
+		<SpecialPower>SpecialPower_RiftGen</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_AIBoostToggleMetaControl">
+		<SpecialPower>SpecialPower_DeActivateMetaControl</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyLuaScriptRunner">
+		<Object>MetaControlDummyLuaScriptRunner</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyAIBoostActivator">
+		<Object>MetaControlDummyAIBoostActivator</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyAIBoostAlliesActivator">
+		<Object>MetaControlDummyAIBoostAlliesActivator</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMoneyImmediate">
+		<Object>MetaControlDummyMoneyImmediate</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlGuardShieldEmitterFree">
+		<Object>MetaControlGuardShieldEmitterFree</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyGlobalDeactivator">
+		<Object>MetaControlDummyGlobalDeactivator</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyLuaEventTrigger">
+		<Object>MetaControlDummyLuaEventTrigger</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyEveryAIOFFToggler">
+		<Object>MetaControlDummyEveryAIOFFToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_MainTabMenuSelector">
+		<SpecialPower>SpecialPower_MetaControlDummyMainTabMenuSelector</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyUnlimitedCameraHack2">
+		<Object>MetaControlDummyUnlimitedCameraHackDelayer2</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyEnemyAIOFFToggler">
+		<Object>MetaControlDummyEnemyAIOFFToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMapRevealerToggler">
+		<Object>MetaControlDummyMapRevealerToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyActivator">
+		<Object>MetaControlDummyActivator</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyAICoControlToggler">
+		<Object>MetaControlDummyAICoControlToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructTestCommand">
+		<Object>RiftGeneratorWeaponObject</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMainTabMenuPlayerPowerToggler">
+		<Object>MetaControlDummyMainTabMenuPlayerPowerToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		id="Command_MetaControlTabNextCS"
+		Type="PLAYER_UPGRADE"
+		Options="">
+		<UpgradeTemplate>Upgrade_MetaControlTabNextCS</UpgradeTemplate>
+	</LogicCommand>
+	
+	<LogicCommand
+		id="Command_MetaControlTabPrevCS"
+		Type="PLAYER_UPGRADE"
+		Options="">
+		<UpgradeTemplate>Upgrade_MetaControlTabPrevCS</UpgradeTemplate>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMainTabMenuSwitcher">
+		<Object>MetaControlDummyMainTabMenuSwitcher</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyCamZoomLockToggler">
+		<Object>MetaControlDummyCamZoomLockToggler</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyUnitSpawner">
+		<Object>MetaControlDummyUnitSpawner</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyReloadAutostartConfig">
+		<Object>MetaControlDummyReloadAutostartConfig</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMakePlayerIndestructible">
+		<Object>MetaControlDummyMakePlayerIndestructible</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyMergeTeams">
+		<Object>MetaControlDummyMergeTeams</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerToggleEvoUnitAI">
+		<SpecialPower>SpecialPowerToggleEvoUnitAI</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_NAOD_NextWave">
+		<SpecialPower>SpecialPower_NAOD_NextWave</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPower_DiplomacyMenuSelect">
+		<SpecialPower>SpecialPower_DiplomacyMenuSelect</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_NextPlayer">
+		<Object>Diplomacy_NextPlayer</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_PrevPlayer">
+		<Object>Diplomacy_PrevPlayer</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_BreakAlliance">
+		<Object>Diplomacy_BreakAlliance</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_RequestAlliance">
+		<Object>Diplomacy_RequestAlliance</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_ShowAllRelations">
+		<Object>Diplomacy_ShowAllRelations</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_RequestAlliedHelp">
+		<Object>Diplomacy_RequestAlliedHelp</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_TakeControlOfAllied">
+		<Object>Diplomacy_TakeControlOfAllied</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_TemporaryMergeAlliedTeam">
+		<Object>Diplomacy_TemporaryMergeAlliedTeam</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_TemporaryMergeOwnTeam">
+		<Object>Diplomacy_TemporaryMergeOwnTeam</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_SwitchTeams">
+		<Object>Diplomacy_SwitchTeams</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaMenuExecute">
+		<Object>MetaMenuExecute</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaMenuSelectionUp">
+		<Object>MetaMenuSelectionUp</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaMenuSelectionDown">
+		<Object>MetaMenuSelectionDown</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_ToggleAICoControl">
+		<SpecialPower>SpecialPower_ToggleAICoControl</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerEdgeCoordinateAnchorUpperRight">
+		<SpecialPower>SpecialPowerEdgeCoordinateAnchorUpperRight</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerEdgeCoordinateAnchorDownRight">
+		<SpecialPower>SpecialPowerEdgeCoordinateAnchorDownRight</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerEdgeCoordinateAnchorUpperLeft">
+		<SpecialPower>SpecialPowerEdgeCoordinateAnchorUpperLeft</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopNuke">
+		<Object>MetaCreditShopNuke</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRiftGenerator">
+		<Object>MetaCreditShopRiftGenerator</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopIonCannon">
+		<Object>MetaCreditShopIonCannon</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopEMP">
+		<Object>MetaCreditShopEMP</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopSuperAvatar">
+		<Object>MetaCreditShopSuperAvatar</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopConvertMoney">
+		<Object>MetaCreditShopConvertMoney</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopBaseTemplate">
+		<Object>MetaCreditShopBaseTemplate</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRandomCircleDefense">
+		<Object>MetaCreditShopRandomCircleDefense</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRandomSpiralDefense">
+		<Object>MetaCreditShopRandomSpiralDefense</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopAntiVehicleDefStartPoint">
+		<Object>MetaCreditShopAntiVehicleDefStartPoint</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopAntiVehicleDefEndPoint">
+		<Object>MetaCreditShopAntiVehicleDefEndPoint</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopIndestructible">
+		<Object>MetaCreditShopIndestructible</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditInfiniteEnergy">
+		<Object>MetaCreditInfiniteEnergy</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopInfiniteProductionSpeed">
+		<Object>MetaCreditShopInfiniteProductionSpeed</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopBuildAnywhere">
+		<Object>MetaCreditShopBuildAnywhere</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopConvertMCtoDollar">
+		<Object>MetaCreditShopConvertMCtoDollar</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRevealMap">
+		<Object>MetaCreditShopRevealMap</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopGetStatistics">
+		<Object>MetaCreditShopGetStatistics</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopGuardShieldEmitter">
+		<Object>MetaCreditShopGuardShieldEmitter</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopBoostSelectedUnit">
+		<Object>MetaCreditShopBoostSelectedUnit</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopTimetravelFixpoint">
+		<Object>MetaCreditShopTimetravelFixpoint</Object>
+	</LogicCommand>
+
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopTimetravel">
+		<Object>MetaCreditShopTimetravel</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopSpawnRandomUnitForce7">
+		<Object>MetaCreditShopSpawnRandomUnitForce7</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRandomSquareDefense">
+		<Object>MetaCreditShopRandomSquareDefense</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRandomAntiGroundDefenseBlock">
+		<Object>MetaCreditShopRandomAntiGroundDefenseBlock</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopRandomAntiAirDefenseBlock">
+		<Object>MetaCreditShopRandomAntiAirDefenseBlock</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopBet">
+		<Object>MetaCreditShopBet</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlInfoAboutUnit">
+		<Object>MetaControlInfoAboutUnit</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerMetaCreditShopSelectTabMenu">
+		<SpecialPower>SpecialPowerMetaCreditShopMenu</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerDiplomacy_Accept">
+		<SpecialPower>SpecialPowerDiplomacy_Accept</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerDiplomacy_Deny">
+		<SpecialPower>SpecialPowerDiplomacy_Deny</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Options="NEED_TARGET_POS"
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerChoosePosition">
+		<SpecialPower>SpecialPowerChoosePosition</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopMenuToggle">
+		<Object>MetaCreditShopMenuToggle</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacyMenuToggle">
+		<Object>DiplomacyMenuToggle</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaCreditShopSlowDownEnemy">
+		<Object>MetaCreditShopSlowDownEnemy</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_ApplyForTeamCommander">
+		<Object>Diplomacy_ApplyForTeamCommander</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_MoveAttackCommand">
+		<Object>Diplomacy_MoveAttackCommand</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructDiplomacy_SendMoney">
+		<Object>Diplomacy_SendMoney</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_SpecialPowerCameraSetup">
+		<SpecialPower>SpecialPowerCameraSetup</SpecialPower>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_FirstAndThirdPersonMode">
+		<SpecialPower>SpecialPowerFirstAndThirdPersonMode</SpecialPower>
+	</LogicCommand>	
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlDummyViewChanger">
+		<Object>MetaControlDummyViewChanger</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaControlMetaMenuHide">
+		<Object>MetaMenuHide</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaMenuSelectionRight">
+		<Object>MetaMenuSelectionRight</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaMenuSelectionLeft">
+		<Object>MetaMenuSelectionLeft</Object>
+	</LogicCommand>	
+		
+</AssetDeclaration>

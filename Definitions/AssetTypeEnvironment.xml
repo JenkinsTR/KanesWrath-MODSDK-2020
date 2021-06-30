@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CloudEffectType">
+		<EntryReference
+			id="CloudTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="DarkCloudTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="AlphaTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="PropagateSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Angle"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="DarkeningRate"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="LighteningRate"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="CloudScrollSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"/>
+		<EntryReference
+			id="DissipateTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="DissipateStartLevel"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DissipateSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DissipateRateScale"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="LightningChance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="LightningFrequency"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="LightningShadowIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="LightningFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="DarkeningFactor"
+			AssetType="RGBColor" />
+		<Entry
+			id="DarkeningFactorRain"
+			AssetType="RGBColor" />
+		<Entry
+			id="LightningShadowColor"
+			AssetType="RGBColor" />
+		<Entry
+	 		id="LightningLightPosition1"
+			AssetType="Coord2D" />
+		<Entry
+			id="LightningLightPosition2"
+			AssetType="Coord2D" />
+		<Entry
+			id="LightningLightPosition3"
+			AssetType="Coord2D" />
+		<Entry
+			id="LightningIntensity"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="LightningDuration"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="LightningShadows"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="JitterLightningLightIntensity"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="JitterLightningLightPosition"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<GameAsset
+		id="Environment"
+		TypeHash="1693288122">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="CloudEffect"
+			AssetType="CloudEffectType" />
+	</GameAsset>
+
+</AssetDefinition>

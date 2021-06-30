@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+	
+		<!--Units-->
+		<Include type="all" source="Units/AlienAnnihilatorTripodHusk.xml" />
+		<Include type="all" source="Units/AlienCorrupter.xml" />
+		<Include type="all" source="Units/AlienCustomizableVehicle.xml" />
+		<Include type="all" source="Units/AlienDevastatorWarship.xml" />
+		<Include type="all" source="Units/AlienDevourerTank.xml" />
+		<Include type="all" source="Units/AlienEradicatorHexapod.xml" />	
+		<Include type="all" source="Units/AlienExplorer.xml" />	
+		<Include type="all" source="Units/AlienGunWalker.xml" />	
+		<Include type="all" source="Units/AlienHarvester.xml" />	
+		<Include type="all" source="Units/AlienInvaderFighter.xml" />	
+		<Include type="all" source="Units/AlienMCV.xml" />	
+		<Include type="all" source="Units/AlienMillipedeBody.xml" />	
+		<Include type="all" source="Units/AlienMillipedeHead.xml" />	
+		<Include type="all" source="Units/AlienMothership.xml" />	
+		<Include type="all" source="Units/AlienPlanetaryAssaultCarrier.xml" />	
+		<Include type="all" source="Units/AlienSeekerTank.xml" />
+		<Include type="all" source="Units/AlienShockTrooper.xml" />	
+		<Include type="all" source="Units/AlienStalker.xml" />	
+		<Include type="all" source="Units/AlienStalkerSquad.xml" />	
+		<Include type="all" source="Units/AlienStormrider.xml" />	
+		
+		<!--Structures-->
+		<Include type="all" source="structures/AlienBuzzerHive.xml" />
+		<Include type="all" source="structures/AlienControlCenter.xml" /> <!-- Nerve Center -->
+		<Include type="all" source="structures/AlienDronePlatform.xml" />
+		<Include type="all" source="structures/AlienFoundry.xml" />
+		<Include type="all" source="structures/AlienGateway.xml" /> <!-- Assembler -->
+		<Include type="all" source="structures/AlienLightningSpike.xml" />
+		<Include type="all" source="structures/AlienPlasmaMissileBattery.xml" />
+		<Include type="all" source="structures/AlienPortal.xml" />
+		<Include type="all" source="structures/AlienPowerProjector.xml" /> <!-- Power Plant -->
+		<Include type="all" source="structures/AlienReactor.xml" /> <!-- Technology Plant -->
+		<Include type="all" source="structures/AlienRiftGenerator.xml" />
+		<Include type="all" source="structures/AlienSignalTransmitter.xml" /> <!-- Transmission Tower -->
+		<Include type="all" source="structures/AlienSporePod.xml" /> <!-- Growth Accelerator -->
+		<Include type="all" source="structures/AlienStatisChamber.xml" />
+		<Include type="all" source="structures/AlienStormColumn.xml" />
+		<Include type="all" source="structures/AlienTiberiumTower.xml" /> <!-- Extractor (Refinery) -->
+		<Include type="all" source="structures/AlienWarpBeacon.xml" />
+		<Include type="all" source="structures/AlienMiniMCVOutpost.xml" />
+		<Include type="all" source="structures/AlienAVTower.xml" />
+		<Include type="all" source="structures/AlienPhotonCannon.xml"/>
+		<Include type="all" source="structures/AlienTibHive.xml" />
+		
+		<!--Props-->
+		<Include type="all" source="Props/AlienTibShardProjectile.xml" />
+		<Include type="all" source="Props/AlienBlueShardProjectile.xml" />
+		<Include type="all" source="props/AlienGiantTiberiumRock.xml"/>
+		<Include type="all" source="props/AlienGiantTiberiumRockTiberiumField.xml"/>
+		<Include type="all" source="props/AlienMiniTiberiumRock.xml"/>		
+		<Include type="all" source="props/AlienMiniTiberiumRock2.xml"/>		
+		<Include type="all" source="props/AlienInnerTiberiumRock.xml"/>		
+		<Include type="all" source="Props/AlienTibAgitationProjectile.xml" />
+		
+		<!--	MetaGame Strategic Buildings	-->
+		<Include type="all" source="structures/MG_Alien_Hive.xml" />
+		<Include type="all" source="structures/MG_Alien_LifeFormPlant.xml" />
+		<Include type="all" source="structures/MG_Alien_TerraformingNexus.xml" />
+		<Include type="all" source="structures/MG_Alien_Tower.xml" />		
+	</Includes>
+</AssetDeclaration>

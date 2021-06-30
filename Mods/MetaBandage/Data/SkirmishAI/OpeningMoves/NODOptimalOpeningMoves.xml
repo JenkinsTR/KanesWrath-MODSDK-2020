@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="NOD_EASY"
+    Side="NOD">
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODCrane" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODHandOfNOD" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODPowerPlant" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+    <Order Build="NODMilitantSquad" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="NODStandard"
+    Side="NOD"> <!--Power: +10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="NODMilitantSquad" />
+		<Order Build="NODMilitantSquad" />
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="95s" Account="PRODUCTION" Deposit="1500" />
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="165s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="NODStandard2"
+    Side="NOD"> <!--Power: +10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="55s" Account="PRODUCTION" Deposit="4500" />
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="165s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="NODStandardCrane"
+    Side="NOD"> <!--Power: +10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+		<!--Order Time="150s" Account="PRODUCTION" Deposit="2000" /-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="185s" />
+	</SkirmishOpeningMove>
+
+	<SkirmishOpeningMove
+    id="NODBrutalCrane"
+    Side="NOD"> <!--Power: +10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODCrane" /> <!--Time: 15 Power: -10-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Time="115s" Account="PRODUCTION" Deposit="999999" />
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+		<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+		<Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+		<Order Time="250s" />
+	</SkirmishOpeningMove>
+
+</AssetDeclaration>

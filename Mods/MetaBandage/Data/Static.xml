@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+	
+<!-- 		<Include type="reference" source="Global.xml" /> -->
+		<Include type="reference" source="AdditionalMaps/MapMetaData_Global.xml" />
+		<Include type="all" source="AdditionalMaps/MapMetaData.xml" />	
+<!--   		<Include type="all" source="DATA:AdditionalMaps/InGameUISettings.xml" /> -->
+
+		<!-- FROM KWBANDAGE -->
+			<!-- Reference to the Game's Global Data -->
+			<Include type="reference" source="global.xml" />
+			
+			<Include type="all" source="StaticGameObjects.xml" />
+	
+			<Include type="all" source="GlobalData/Armor.xml" />		
+			<Include type="all" source="GlobalData/AttributeModifier.xml" />
+			<Include type="all" source="GlobalData/ExperienceLevels.xml" />
+			<Include type="all" source="GlobalData/FXParticleSystem.xml" />
+			<Include type="all" source="GlobalData/FXList.xml" />
+			<Include type="all" source="GlobalData/Locomotor.xml" />
+			<Include type="all" source="GlobalData/LogicCommand.xml" />
+			<Include type="all" source="GlobalData/LogicCommandSet.xml" />
+			<Include type="all" source="GlobalData/ObjectCreationLists.xml" />
+			<Include type="all" source="GlobalData/SpecialPowerTemplates.xml" />
+			<Include type="all" source="GlobalData/upgrade.xml" />
+			<Include type="all" source="GlobalData/Weapon.xml" />
+	
+			<Include type="all" source="SkirmishAI/SkirmishAIIncludes.xml" />
+			
+			<Include type="all" source="UI/ButtonStateData.xml" />
+			<Include type="all" source="UI/PlayerPowerButtonTemplates.xml" />
+			<Include type="all" source="UI/UnitAbilityButtonTemplates.xml" />
+			
+			<Include type="all" source="ART:Images/PackedLocalisedImages.xml" />
+			
+			<!--Include type="all" source="Misc.xml" /-->
+		<!-- END FROM KWBANDAGE -->
+
+		<!--GLOBALDATA-->
+		
+		<!-- KWBANDAGE OVERRIDES THESE -->
+		<!-- <Include type="all" source="DATA:GlobalData/LogicCommandSet.xml" /> -->
+		<!-- <Include type="all" source="DATA:GlobalData/Weapon.xml" />  -->
+		<!-- <Include type="all" source="DATA:GlobalData/Upgrades.xml" />  -->
+		<!-- <Include type="all" source="DATA:GlobalData/SpecialPower.xml" />  -->
+
+		<!-- KWBANDAGE OVERRIDES THIS in StaticGameObjects.xml -->
+		<!-- <Include type="all" source="DATA:GlobalData/Objects/PlayerSpellBook.xml" />	 -->
+		
+		<Include type="all" source="DATA:GlobalData/Objects/GenericCrateSpawner.xml" />
+		<Include type="all" source="DATA:GlobalData/Objects/NoSuperweaponsCrate.xml" />				
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumCrystalInfinite.xml" /> 
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumCrystal.xml" /> 
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumCrystalBlue.xml" /> 
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumCrystalBlueInfinite.xml" /> 
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumCrystalInfiniteEnabler.xml" /> 		
+		<Include type="all" source="DATA:GlobalData/Objects/TiberiumKillerCrate.xml" /> 		
+<!-- 		<Include type="all" source="DATA:GlobalData/TiberiumFields.xml" />  -->		
+		
+		<!--MetaControl-->
+		<Include type="all" source="DATA:MetaControl/LogicCommand_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/LogicCommandSet_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/ObjectCreationList_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/SpecialPower_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/Weapon_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/Locomotor.xml" />
+		<Include type="all" source="DATA:MetaControl/PlayerPowerAndUnitAbilityButton_MetaControl.xml" />		
+		<Include type="all" source="DATA:MetaControl/Upgrades_MetaControl.xml" />
+		<Include type="all" source="DATA:MetaControl/Movies.xml" />	
+		
+		<Include type="all" source="DATA:MetaControl/Objects/Menus/MetaCommandMenu.xml" />			
+		<Include type="all" source="DATA:MetaControl/Objects/Menus/MainTabMenu.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/Menus/MetaCreditShop.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/Menus/DiplomacyTabMenu.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Menus/PlayerPowerBarMenu.xml" />				
+		
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyPeriodicMasterChecker.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlTeamRelationsInitializator.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyCoordinateEvalHelper.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyCoordinateSpawner.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyCoordinateSpawner2.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyCounterBaseDummy.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyTimerCounterChecker.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyPeriodicMasterCheckerDelayer.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyPerHumanPlayerPeriodicChecker.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyMoney1.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyMoney10.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyMoney100.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyMoney1000.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyVictoryConditionHelper.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyScriptTimer.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyScriptTimerFast.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyTakeMoney.xml" />
+ 		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyOCLSpawnExtender.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyOCLSpawnExtenderWB.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyMiscDummys.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/ScriptHelper/Object_MetaControlDummyAttributeBooster.xml" />	
+	
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEnemyAIOFFToggler.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEnemyAIOFF.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEnemyAIOFFKiller.xml" />		
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEveryAIOFFToggler.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEveryAIOFF.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIToggle/Object_MetaControlDummyEveryAIOFFKiller.xml" />			
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostMoney.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostUnitSpawner.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostTogglerByForce.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostTogglerByForceDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostMoneyDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostMoneyEnabler.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostActivator.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/AIBOOST/Object_MetaControlDummyAIBoostAlliesActivator.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/MapRevealer/Object_MetaControlDummyMapRevealerToggler.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/MapRevealer/Object_MetaControlDummyMapRevealer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Toggler/MapRevealer/Object_MetaControlDummyMapRevealerKiller.xml" />			
+		
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyPREActivator.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyGameSetupMaker.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyMoneyCrate.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyMoney5k.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyUnlimitedCameraHack.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyUnlimitedCameraHack2.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyLuaScriptRunner.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyTiberiumKillerSpawner.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyMoneyTransmitter.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyMoneyTransmitterDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyForceLuaScriptActivator.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyForceLuaScriptActivatorDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyPermanentMapRevealer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyPermanentMapRevealerDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyMoneyImmediate.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyAICoControlToggler.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummySuperweaponOFF.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummySuperweaponOFFDelayer.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlGuardShieldEmitterFree.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyLuaEventTrigger.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/MeteorSpawner.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/HeroGeneralBooster.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/AICoControlTogglerByPlayerPower.xml" />
+		<Include type="all" source="DATA:MetaControl/Objects/Other/WallGateMod.xml" />			
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyNAODRoundBasedHelper.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlDummyNAODNextWaveEnabler.xml" />		
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlCameraSetup.xml" />	
+		<Include type="all" source="DATA:MetaControl/Objects/Other/Object_MetaControlViewChanger.xml" />				
+		
+		<!--GUARDSHIELD-->
+		<Include type="all" source="DATA:GuardShield/LogicCommand_GuardShield.xml" />
+		<Include type="all" source="DATA:GuardShield/LogicCommandSet_GuardShield.xml" />
+		<Include type="all" source="DATA:GuardShield/ObjectCreationList_GuardShield.xml" />
+		<Include type="all" source="DATA:GuardShield/Weapon_GuardShield.xml" />
+		<Include type="all" source="DATA:GuardShield/SpecialPower_GuardShield.xml" />
+		<Include type="all" source="DATA:GuardShield/UnitAbilityAndPlayerPowerButton_GuardShield.xml" />	
+		<Include type="all" source="DATA:GuardShield/GuardShield_Upgrades.xml" />
+		<Include type="all" source="DATA:GuardShield/Objects/Object_GuardShieldEmitter.xml" />
+		<Include type="all" source="DATA:GuardShield/Objects/Object_GuardShield.xml" />		
+		<Include type="all" source="DATA:GuardShield/Objects/Object_ShieldRemoveHelper.xml" />
+		<Include type="all" source="DATA:GuardShield/Objects/Object_ShieldRemover.xml" />
+		<Include type="all" source="DATA:GuardShield/Objects/Object_GuardShieldAIModusDeactivator.xml" />
+		<Include type="all" source="DATA:GuardShield/Objects/Object_GuardShieldAIModusActivator.xml" />			
+		
+		<!--METATECHFACTION-->
+		<Include type="all" source="DATA:MetaTechFaction/LogicCommandSet_MetaTech.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/LogicCommand_MetaTech.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Upgrades.xml" />		
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechConstructionYard.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechWarFactory.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechReclamatorHub.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechCommandPost.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechCrane.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechHangar.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechTechCenter.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechBarracks.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Structures/MetaTechMedicalBay.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Units/MetaTechMCV.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/Units/MetaTechSuperAvatar.xml" />	
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/ArmyDefMetaTech.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/OpeningMoves/MetaTechDefensiveOpeningMoves.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/OpeningMoves/MetaTechGuerillaOpeningMoves.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/OpeningMoves/MetaTechOffensiveOpeningMoves.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/OpeningMoves/MetaTechOptimalOpeningMoves.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/OpeningMoves/MetaTechOverlordOpeningMoves.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/Personalities/MetaTechDefensive.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/Personalities/MetaTechGuerilla.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/Personalities/MetaTechOffensive.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/Personalities/MetaTechOptimal.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/Personalities/MetaTechOverlord.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/States/MetaTechDefensiveStates.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/States/MetaTechGuerillaStates.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/States/MetaTechOffensiveStates.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/States/MetaTechOptimalStates.xml" />
+		<Include type="all" source="DATA:MetaTechFaction/SkirmishAI/States/MetaTechOverlordStates.xml" />
+
+
+		<!--MENUDATA-->
+		<Include type="all" source="ART:MainMenu/MainMenuTexture.xml" />
+
+		<!--ARTDATA-->
+		<Include type="all" source="ART:shield/FXSHLDABILITY.DIFFUSEMod.w3x" />
+		<Include type="all" source="ART:shield/FXSHLDABILITY.DISTORTIONMod.w3x" />
+		<Include type="all" source="ART:shield/FXSHLDABILITY_CTRMod.w3x" />
+		<Include type="all" source="ART:shield/FXSHLDABILITY_HRCMod.w3x" />
+		<Include type="all" source="ART:shield/FXSHLDABILITYMod.w3x" />
+		<Include type="all" source="ART:Buttons/MetaControl/MetaControl_art.xml" />
+		<Include type="all" source="ART:Buttons/MetaCreditShop/MetaCreditShop_art.xml" />			
+		<Include type="all" source="ART:Buttons/Diplomacy/Diplomacy_art.xml" />	
+		<Include type="all" source="ART:Buttons/GuardShield/GuardShield_art.xml" />
+<!-- 		<Include type="all" source="ART:TBCaptureFlag/TBCaptureFlag.xml" />	 -->
+		
+		<!--AUDIO-->		
+		<Include type="all" source="AUDIO:Audio.xml" />			
+		
+	</Includes>
+	
+
+	
+</AssetDeclaration>

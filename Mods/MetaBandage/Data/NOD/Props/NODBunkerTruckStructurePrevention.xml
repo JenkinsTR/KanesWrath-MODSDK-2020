@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="NODBunkerTruckStructurePrevention"
+		Side="NOD"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE NOT_AUTOACQUIRABLE IMMOBILE STRUCTURE DO_NOT_CLASSIFY"
+		EditorName="NODBunkerTruckStructurePrevention">
+		<DisplayName>Name:NODBunkerTruckStructurePrevention</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"/>
+		<Behaviors>
+			<DestroyDie
+				id="ModuleTag_Death">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<SlavedUpdate
+				id="ModuleTag_SlavedUpdate"
+				DieOnMastersDeath="true"
+				UseSlaverAsControlForEvaObjectSightedEvents="false" />
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="100.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="BOX"
+				MajorRadius="23.725"
+				MinorRadius="16.6182"
+				Height="18.0333">
+			    <Offset
+			        x="-1.43687"
+			        y="0.0"
+			        z="0.0" />
+			</Shape>
+		</Geometry>
+	</GameObject>
+</AssetDeclaration>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Main Mod File for Static Data -->
+	<Includes>
+		<!-- Reference to the Game's Global Data -->
+		<Include type="reference" source="global.xml" />
+		
+		<Include type="all" source="StaticGameObjects.xml" />
+
+		<Include type="all" source="GlobalData/Armor.xml" />		
+		<Include type="all" source="GlobalData/AttributeModifier.xml" />
+		<Include type="all" source="GlobalData/ExperienceLevels.xml" />
+		<Include type="all" source="GlobalData/FXParticleSystem.xml" />
+		<Include type="all" source="GlobalData/FXList.xml" />
+		<Include type="all" source="GlobalData/Locomotor.xml" />
+		<Include type="all" source="GlobalData/LogicCommand.xml" />
+		<Include type="all" source="GlobalData/LogicCommandSet.xml" />
+		<Include type="all" source="GlobalData/ObjectCreationLists.xml" />
+		<Include type="all" source="GlobalData/SpecialPowerTemplates.xml" />
+		<Include type="all" source="GlobalData/upgrade.xml" />
+		<Include type="all" source="GlobalData/Weapon.xml" />
+
+		<Include type="all" source="SkirmishAI/SkirmishAIIncludes.xml" />
+		
+		<Include type="all" source="UI/ButtonStateData.xml" />
+		<Include type="all" source="UI/PlayerPowerButtonTemplates.xml" />
+		<Include type="all" source="UI/UnitAbilityButtonTemplates.xml" />
+		
+		<Include type="all" source="ART:Images/PackedLocalisedImages.xml" />
+		
+		<!--Include type="all" source="Misc.xml" /-->
+	</Includes>
+</AssetDeclaration>

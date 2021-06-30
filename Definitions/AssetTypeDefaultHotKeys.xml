@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="DefaultHotKeys"
+		TypeHash="315327452">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Map"
+			AssetType="HotKeyMap" />
+		<Entry
+			id="Groups"
+			AssetType="HotKeyGroupingList" />
+	</GameAsset>
+
+</AssetDefinition>

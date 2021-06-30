@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include source="ART:abhived2_skl.w3x" type="all"/>
+	</Includes>
+	<W3DMesh id="ABHIVE02_SKN.SCRINHIVE_D2" CastShadow="true" GeometryType="Normal">
+		<BoundingBox>
+			<Min X="-0.500000" Y="-0.500000" Z="-0.000594"/>
+			<Max X="0.500000" Y="0.500000" Z="-0.000594"/>
+		</BoundingBox>
+		<BoundingSphere Radius="0.707107">
+			<Center X="0.000000" Y="0.000000" Z="-0.000594"/>
+		</BoundingSphere>
+		<Vertices>
+			<V X="-0.500000" Y="-0.500000" Z="-0.000594"/>
+			<V X="0.500000" Y="0.500000" Z="-0.000594"/>
+			<V X="-0.500000" Y="0.500000" Z="-0.000594"/>
+			<V X="0.500000" Y="0.500000" Z="-0.000594"/>
+			<V X="-0.500000" Y="-0.500000" Z="-0.000594"/>
+			<V X="0.500000" Y="-0.500000" Z="-0.000594"/>
+		</Vertices>
+		<Normals>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+		</Normals>
+		<VertexColors>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+			<C R="1.000000" G="1.000000" B="1.000000" A="1.000000"/>
+		</VertexColors>
+		<TexCoords>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+			<T X="0.000000" Y="1.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+		</TexCoords>
+		<Triangles>
+			<T>
+				<V>2</V>
+				<V>3</V>
+				<V>4</V>
+				<Nrm X="0.000000" Y="0.000000" Z="-1.000000"/>
+				<Dist>0.000594</Dist>
+			</T>
+			<T>
+				<V>5</V>
+				<V>0</V>
+				<V>1</V>
+				<Nrm X="0.000000" Y="0.000000" Z="-1.000000"/>
+				<Dist>0.000594</Dist>
+			</T>
+		</Triangles>
+		<FXShader ShaderName="BasicW3D.fx">
+			<Constants>
+				<Float Name="ColorAmbient">
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="ColorDiffuse">
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>1.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="ColorSpecular">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Float Name="Shininess">
+					<Value>1.000000</Value>
+				</Float>
+				<Float Name="ColorEmissive">
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+					<Value>0.000000</Value>
+				</Float>
+				<Texture Name="Texture_0">
+					<Value>FXAlienOverlay</Value>
+				</Texture>
+				<Bool Name="DepthWriteEnable">
+					<Value>true</Value>
+				</Bool>
+				<Bool Name="AlphaTestEnable">
+					<Value>false</Value>
+				</Bool>
+				<Bool Name="CullingEnable">
+					<Value>true</Value>
+				</Bool>
+				<Int Name="BlendMode">
+					<Value>2</Value>
+				</Int>
+			</Constants>
+		</FXShader>
+	</W3DMesh>
+	<W3DContainer id="ABHIVE02_SKN" Hierarchy="ABHIVED2_SKL">
+		<SubObject SubObjectID="SCRINHIVE_D2" BoneIndex="0">
+			<RenderObject>
+				<Mesh>ABHIVE02_SKN.SCRINHIVE_D2</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+	
+		<Include type="all" source="Units/BlackHandAttackBike.xml" />
+		<Include type="all" source="Units/BlackHandBlackDisciple.xml" />
+		<Include type="all" source="Units/BlackHandBlackHand.xml" />
+		<Include type="all" source="Units/BlackHandBlackHandSquad.xml" />
+		<Include type="all" source="Units/BlackHandBunkerTruck.xml" />
+		<Include type="all" source="Units/BlackHandCommando.xml" />
+		<Include type="all" source="Units/BlackHandConfessor.xml" />
+		<Include type="all" source="Units/BlackHandConfessorSquad.xml" />
+		<Include type="all" source="Units/BlackHandCustomWarmech.xml" />
+		<Include type="all" source="Units/BlackHandCustomWarmechHusk.xml" />
+		<Include type="all" source="Units/BlackHandFanatic.xml" />
+		<Include type="all" source="Units/BlackHandFanaticSquad.xml" />
+		<Include type="all" source="Units/BlackHandFlameTank.xml" />
+		<Include type="all" source="Units/BlackHandHarvester.xml" />
+		<Include type="all" source="Units/BlackHandMobileArtillery.xml" />
+		<Include type="all" source="Units/BlackHandMCV.xml" />	
+		<Include type="all" source="Units/BlackHandMetaUnit.xml" />	
+		<Include type="all" source="Units/BlackHandMilitantRocket.xml" />
+		<Include type="all" source="Units/BlackHandMilitantRocketSquad.xml" />
+		<Include type="all" source="Units/BlackHandRaiderTank.xml" />
+		<Include type="all" source="Units/BlackHandScorpionBuggy.xml" />	
+		<Include type="all" source="Units/BlackHandStealthTank.xml" />	
+		<Include type="all" source="Units/BlackHandVenom.xml" />	
+		
+		<Include type="all" source="structures/BlackHandConstructionYard.xml" />
+		<Include type="all" source="structures/BlackHandCrane.xml" />
+		<Include type="all" source="structures/BlackHandMiniMCVOutpost.xml" />
+		<Include type="all" source="structures/BlackHandDropZone.xml" />
+		<Include type="all" source="structures/BlackHandHangar.xml" />
+		<Include type="all" source="structures/BlackHandLaserCannon.xml" />
+		<Include type="all" source="structures/BlackHandLaserCannonSpawn.xml" />
+		<Include type="all" source="structures/BlackHandObelisk.xml" />
+		<Include type="all" source="structures/BlackHandOperationsCenter.xml" />
+		<Include type="all" source="structures/BlackHandPowerPlant.xml" />
+		<Include type="all" source="structures/BlackHandRefinery.xml" />
+		<Include type="all" source="structures/BlackHandRocketBunker.xml" />
+		<Include type="all" source="structures/BlackHandRocketBunkerSpawn.xml" />
+		<Include type="all" source="structures/BlackHandSecretShrine.xml" />
+		<Include type="all" source="structures/BlackHandShredderTurret.xml" />
+		<Include type="all" source="structures/BlackHandShredderTurretHub.xml" />
+		<Include type="all" source="structures/BlackHandTechAssemblyPlant.xml" />
+		<Include type="all" source="structures/BlackHandTempleOfNOD.xml" />
+		<Include type="all" source="structures/BlackHandTiberiumSilo.xml" />
+		<Include type="all" source="structures/BlackHandHandOfNod.xml" />
+		<Include type="all" source="structures/BlackHandTiberiumLiquidationFacility.xml" />
+		<Include type="all" source="structures/BlackHandPropagandaTower.xml" />	
+		<Include type="all" source="structures/MG_BlackHand_WarmechFacility.xml" />
+	</Includes>
+</AssetDeclaration>
