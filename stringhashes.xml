@@ -49619,6 +49619,6 @@
         <StringAndHash Hash="3136352204" Text="FX_MGStrikeSummonMdCast" />
         <StringAndHash Hash="2227377241" Text="FX_MGStrikeSummonLgCast" />
         <StringAndHash Hash="3386552966" Text="FXMGMove_Turn" />
-        <StringAndHash Hash="4038627249" Text="TheStringTable" />
+        <StringAndHash Hash="1250824835" Text="SinglePlayer" />
     </StringHashTable>
 </AssetDeclaration>
