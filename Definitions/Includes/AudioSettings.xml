@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="MicrophoneSettings">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<Entry id="MicrophonePreferredFractionCameraToGround" AssetType="Percentage" IsAttribute="true" Default="86%" />
+		<Entry id="VolumeMicrophonePullTowardsTerrainLookAtPoint" AssetType="Percentage" IsAttribute="true" Default="60%" />
+		<Entry id="PanningMicrophonePullTowardsTerrainLookAtPoint" AssetType="Percentage" IsAttribute="true" Default="60%" />
+		<Entry id="MicrophoneMinDistanceToCamera" AssetType="SageReal" IsAttribute="true" Default="100" />
+		<Entry id="MicrophoneMaxDistanceToCamera" AssetType="SageReal" IsAttribute="true" Default="300" />
+		<Entry id="ZoomMinDistance" AssetType="SageReal" IsAttribute="true" Default="130" />
+		<Entry id="ZoomMaxDistance" AssetType="SageReal" IsAttribute="true" Default="425" />
+		<Entry id="ZoomSoundVolumePercentageAmount" AssetType="Percentage" IsAttribute="true" Default="20%" />
+		<Entry id="ZoomFadeDistanceForMaxEffect" AssetType="SageReal" IsAttribute="true" Default="200" />
+		<Entry id="ZoomFadeZeroEffectEdgeLength" AssetType="SageReal" IsAttribute="true" Default="260" />
+		<Entry id="ZoomFadeFullEffectEdgeLength" AssetType="SageReal" IsAttribute="true" Default="135" />
+	</Asset>
+
+	<Asset id="VolumeCompressionSettings">
+		<Entry id="Threshold" AssetType="SageReal" IsAttribute="true" Default="20" />
+		<Entry id="Ratio" AssetType="SageReal" IsAttribute="true" Default="10" />
+		<Entry id="AttackTime" AssetType="Time" IsAttribute="true" Default="100ms" />
+		<Entry id="ReleaseTime" AssetType="Time" IsAttribute="true" Default="500ms" />
+		<Entry id="AppliesEquallyToAllChannels" AssetType="SageBool" IsAttribute="true" Default="true" />
+		<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</Asset>
+
+	<GameAsset id="AudioSettings" TypeHash="3628225693">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<Entry id="StreamBufferSizePerChannel" AssetType="SageInt" IsAttribute="true" Default="65536" />
+		<Entry id="MaxRequestsPerStream" AssetType="SageInt" IsAttribute="true" Default="4" />
+		<Entry id="ForceResetTime" AssetType="Time" IsAttribute="true" Default="0s" />
+		<Entry id="EmergencyResetTime" AssetType="Time" IsAttribute="true" Default="0s" />
+		<Entry id="MinOcclusion" AssetType="Percentage" IsAttribute="true" Default="0%" />
+		<Entry id="DelayPriorToPlayingToReadSoundFile" AssetType="Time" IsAttribute="true" Default="1s" />
+		<Entry id="ReadAheadTime" AssetType="Time" IsAttribute="true" Default="3s" />
+		<Entry id="QueueAheadTime" AssetType="Time" IsAttribute="true" Default=".5s" />
+		<Entry id="LongTime" AssetType="Time" IsAttribute="true" Default="60s" />
+		<Entry id="AudioFootprintInBytes" AssetType="SageUnsignedInt" IsAttribute="true" Default="4194304" />
+		<Entry id="DontLoadThirdVariationWhenFileReadQueueIsLongerThan" AssetType="SageUnsignedInt" IsAttribute="true" Default="50" />
+		<Entry id="DontLoadSecondVariationWhenFileReadQueueIsLongerThan" AssetType="SageUnsignedInt" IsAttribute="true" Default="100" />
+		<Entry id="DontLoadForLowPrioritySoundsWhenFileReadQueueIsLongerThan" AssetType="SageUnsignedInt" IsAttribute="true" Default="100" />
+		<Entry id="WhatIsLowPriorityForDontLoadForLowPrioritySoundsWhenFileReadQueueIsLongerThan" AssetType="AudioPriority" IsAttribute="true" Default="LOW" />
+		<Entry id="DefaultSoundVolume" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="DefaultVoiceVolume" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="DefaultMusicVolume" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="DefaultMovieVolume" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="DefaultAmbientVolume" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="AutomaticSubtitleDuration" AssetType="Time" IsAttribute="true" Default="8s" />
+		<Entry id="AutomaticSubtitleLines" AssetType="SageInt" IsAttribute="true" Default="8" />
+		<Entry id="PanRadiusScaleValue" AssetType="SageReal" IsAttribute="true" Default="1.0" />
+		<Entry id="PanSize" AssetType="SageReal" IsAttribute="true" Default="1.0" />
+		<Entry id="MinSampleVolume" AssetType="Percentage" IsAttribute="true" Default="0.01%" />
+		<Entry id="PositionDeltaForReverbCheck" AssetType="SageReal" IsAttribute="true" Default="10.0" />
+		<Entry id="TimeToFadeAudio" AssetType="Time" IsAttribute="true" Default="1s" />
+		<Entry id="AmbientStreamHysteresisVolume" AssetType="SageInt" IsAttribute="true" Default="5" />
+		<Entry id="VolumeMultiplierFor2DSounds" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="VolumeMultiplierFor3DSounds" AssetType="Percentage" IsAttribute="true" Default="100%" />
+		<Entry id="VoiceMoveToCampMaxCampnessAtStartPoint" AssetType="SageUnsignedInt" IsAttribute="true" Default="0" />
+		<Entry id="VoiceMoveToCampMinCampnessAtEndPoint" AssetType="SageUnsignedInt" IsAttribute="true" Default="5" />
+		<Entry id="MinDelayBetweenEnterStateVoice" AssetType="Time" IsAttribute="true" Default="5s" />
+		<Entry id="TimeSinceLastAttackForVoiceRetreatToCastle" AssetType="Time" IsAttribute="true" Default="3s" />
+		<Entry id="DistanceToLookForEnemiesForVoiceRetreatToCastle" AssetType="SageReal" IsAttribute="true" Default="500" />
+		<Entry id="PostPostGameMusicWait" AssetType="Time" IsAttribute="true" Default="10s" />
+			<Entry id="AutomaticSubtitleWindowColor" AssetType="RGBAColor" />
+			<Entry id="AutomaticSubtitleTextColor" AssetType="RGBAColor" />
+			<EntryList id="VolumeSliderMultiplierForMovie" AssetType="AudioVolumeSliderMultiplier" MinLength="0" MaxLength="0" />
+			<Entry id="TacticalMicSettings" AssetType="MicrophoneSettings" />
+			<Entry id="LivingWorldMicSettings" AssetType="MicrophoneSettings" />
+			<Entry id="ShellMicSettings" AssetType="MicrophoneSettings" />
+			<Entry id="VolumeCompressorSettings" AssetType="VolumeCompressionSettings" />
+		<Entry id="SuppressOcclusion" AssetType="SageBool" IsAttribute="true" Default="false" />
+		<Entry id="PlayEnemySightedEventsOnlyFromNearbyUnits" AssetType="SageBool" IsAttribute="true" Default="false" />
+		<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="StateMachineType">
+		<Entry>AIStateMachine</Entry>
+		<Entry>CombinedHelicopterAIStateMachine</Entry>
+		<Entry>HelicopterAIStateMachine</Entry>
+		<Entry>HordeAIStateMachine</Entry>
+		<Entry>JetAIStateMachine</Entry>
+		<Entry>OffensiveStructureAIStateMachine</Entry>
+		<Entry>StructureAIStateMachine</Entry>
+		<Entry>UnitAIStateMachine</Entry>
+		<Entry>OreNodeStateMachine</Entry>
+		<Entry>OreMinerStateMachine</Entry>
+		<Entry>OreMinerOffensiveStateMachine</Entry>
+		<Entry>OreRefineryStateMachine</Entry>
+		<Entry>DisguiseWhenIdleAIStateMachine</Entry>
+		<Entry>TransportHelicopterAIStateMachine</Entry>
+		<Entry>StrafingRunAIStateMachine</Entry>
+		<Entry>DiveBomberJetAIStateMachine</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

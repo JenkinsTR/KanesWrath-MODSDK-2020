@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UITimerDisplay"
+		TypeHash="2082140658">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="FlashDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Position"
+			AssetType="Vector2" />
+		<Entry
+			id="FlashColor"
+			AssetType="Color3" />
+		<Entry
+			id="NormalFont"
+			AssetType="FontDesc" />
+		<Entry
+			id="NormalColor"
+			AssetType="Color3" />
+		<Entry
+			id="ReadyFont"
+			AssetType="FontDesc" />
+		<Entry
+			id="ReadyColor"
+			AssetType="Color3" />
+		<Entry
+			id="Centered"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="GameModeEnum">
+		<Entry>NONE</Entry>
+		<Entry>CAMPAIGN</Entry>
+		<Entry>SKIRMISH</Entry>
+		<Entry>TUTORIAL</Entry>
+		<Entry>MULTIPLAYER</Entry>
+		<Entry>SHELL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="UIComponentGameInfo">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="GameScoreDisplayToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ScorePlayerToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FactionLabelToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="GameScoreXLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="GameScoreXLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="GameScoreYLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="GameScoreYLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player1ScoreXLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player1ScoreXLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player1ScoreYLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player1ScoreYLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player2ScoreXLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player2ScoreXLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player2ScoreYLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player2ScoreYLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player3ScoreXLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player3ScoreXLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player3ScoreYLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player3ScoreYLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player4ScoreXLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player4ScoreXLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player4ScoreYLocWS"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Player4ScoreYLoc"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryList
+			id="FactionValue"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

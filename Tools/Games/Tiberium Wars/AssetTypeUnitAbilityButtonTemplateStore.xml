@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UnitAbilityButtonTemplates">
+		<EntryChoice
+			id="UnitAbilityButtonTemplates"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="BuildWallButton"
+				AssetType="BuildWallUnitAbilityButtonTemplateData" />
+			<Entry
+				id="EvacuateButton"
+				AssetType="EvacuateUnitAbilityButtonTemplateData" />
+			<Entry
+				id="MultiplePowersTargetedSpecialPowerButton"
+				AssetType="MultiplePowersTargetedSpecialPowerUnitAbilityButtonTemplateData" />
+			<Entry
+				id="ObjectUpgradeButton"
+				AssetType="ObjectUpgradeUnitAbilityButtonTemplateData" />
+			<Entry
+				id="PlayerUpgradeButton"
+				AssetType="PlayerUpgradeUnitAbilityButtonTemplateData" />
+			<Entry
+				id="SpecialPowerButton"
+				AssetType="SpecialPowerUnitAbilityButtonTemplateData" />
+			<Entry
+				id="TargetedSpecialPowerButton"
+				AssetType="TargetedSpecialPowerUnitAbilityButtonTemplateData" />
+			<Entry
+				id="SingleStateUnitAbility"
+				AssetType="SingleStateUnitAbilityButtonTemplateData" />
+			<Entry
+				id="StanceButton"
+				AssetType="StanceUnitAbilityButtonTemplateData" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="UnitAbilityButtonTemplateStore"
+		TypeHash="1514721929">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Templates"
+			AssetType="UnitAbilityButtonTemplates" />
+	</GameAsset>
+
+</AssetDefinition>

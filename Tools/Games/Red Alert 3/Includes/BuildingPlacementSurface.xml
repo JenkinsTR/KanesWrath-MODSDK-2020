@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="BuildingPlacementSurface">
+		<Entry>LAND</Entry>
+		<Entry>WATER</Entry>
+		<Entry>DEEP_WATER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="BuildingPlacementSurfaceBitFlags"
+		BaseEnum="BuildingPlacementSurface" />
+
+</AssetDefinition>

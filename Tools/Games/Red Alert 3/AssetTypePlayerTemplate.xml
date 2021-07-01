@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="PlayerTemplateType">
+		<Entry>NONPLAYABLE</Entry>
+		<Entry>PLAYABLE</Entry>
+		<Entry>OBSERVER</Entry>
+		<Entry>RANDOM</Entry>
+		<Entry>COMMENTATOR</Entry>
+		<Entry>NULL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="StartingUnitInfoType">
+		<Entry
+			id="Object"
+			AssetType="GameObjectRef" />
+		<Entry
+			id="Position"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="PlayerTemplateAIBeaconSettings">
+		<Entry
+			id="BeaconType"
+			AssetType="AIBeaconType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="UnattachedTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AttachedTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TechProductionBonusInfo">
+		<EntryReference
+			id="RequiredTech"
+			AssetType="PlayerTechRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="BuildCostBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildCostBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildTimeBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildTimeBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="HarvesterBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="HarvesterBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+	</Asset>
+
+	<GameAsset
+		id="PlayerTemplate"
+		TypeHash="891373896">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Type"
+			AssetType="PlayerTemplateType"
+			IsAttribute="true"
+			Default="NONPLAYABLE" />
+		<Entry
+			id="DisplayNameToken"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FactionIconImageName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="LoadScreenMusic"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SkirmishMPVictoryMusic"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SkirmishMPDefeatMusic"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="FactionDataPathMusicEvent"
+			AssetType="PathMusicEventRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MatchVictoryPathMusicEvent"
+			AssetType="PathMusicEventRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="MatchDefeatPathMusicEvent"
+			AssetType="PathMusicEventRef"
+			IsAttribute="true" />
+		<Entry
+			id="Side"
+			AssetType="FactionType"
+			IsAttribute="true"
+			Default="Neutral" />
+		<EntryWeakReference
+			id="StartingBuilding"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SpellBookSP"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SpellBookMP"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="UnattachedMpBeaconTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AttachedMpBeaconTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="MaxMpBeacons"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ResourceModifierValueList"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="NumberOfResourceAccounts"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryReference
+			id="ScriptedHuntTactic"
+			AssetType="ScriptedHuntTacticTemplate"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ParachuteOCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DefaultTech"
+			AssetType="PlayerTechRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="PlayerTechUpgradeBinding"
+			AssetType="PlayerTechUpgradeBindingRef"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+		<Entry
+			id="TechRankPointsPerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="InitialTechPoints"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="RedAlertTemplate"
+			AssetType="RedAlertTemplateWeakRef" />
+		<Entry
+			id="PreferredColor"
+			AssetType="Color3" />
+		<Entry
+			id="PreferredCampaignRadarColor"
+			AssetType="Color3" />
+		<EntryList
+			id="InitialUpgrade"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="StartingUnitInfo"
+			AssetType="StartingUnitInfoType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="ResourceModifierObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="StartingMoney"
+			AssetType="MoneyTransaction"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="MoneyCap"
+			AssetType="MoneyTransaction"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AIBeaconSettings"
+			AssetType="PlayerTemplateAIBeaconSettings"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="TechRank"
+			AssetType="PlayerTechRankRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="TechProductionBonuses"
+			AssetType="TechProductionBonusInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="PowerOutageTurnsOffRadar"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Adding a New Unit</title>
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="4">Adding a New Unit</font></b></p>
+<span style="font-family: Arial; color: black">In the Sample MOD we added a new 
+unit the Elven Warrior.&nbsp; This unit is available for GDI from the Barracks.&nbsp; 
+In order to add a new unit to the game there a few steps to follow to make it 
+easier:</span><ul>
+	<li><span style="font-family: Arial; color: black">Try and pick an existing unit 
+that is similar and copy the corresponding units XML file from the CnC3XML files 
+directory to your MOD directory location and rename it to something more 
+appropriate.</span></li>
+	<li><span style="font-family: Arial; color: black">Edit the XML for this new unit 
+making any changes necessary for your unit’s unique abilities.</span></li>
+	<li><span style="font-family: Arial; color: black">Create an updated LogicCommand 
+that builds this unit, for example in the Sample MOD we added a file that 
+defines a new LogicCommand that builds the ElfWarrior:&nbsp; </span></li>
+</ul>
+<font face="Arial"><span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;LogicCommand<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Type=&quot;UNIT_BUILD&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id=&quot;Command_ConstructGDIElfWarrior&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Object&gt;GDIElfWarrior&lt;/Object&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/LogicCommand&gt;</span></font><span style="font-family: Arial; color: black">
+</span>
+<p class="MsoNormal" style="text-indent: .25in; margin-left: .75in">
+<span style="font-family: Arial; color: black">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-left: .25in">
+<span style="font-family: Arial; color: black">This can be defined in any file 
+as long as it’s included in the MOD.xml file.&nbsp; This will be a recurring theme 
+when working with the MOD SDK you can include these elements pretty much 
+anywhere you like as long as the file is included.</span></p>
+<ul>
+	<li><span style="font-family: Arial; color: black">Update the LogicCommandSet 
+of the object you’d like to build your new unit, for example in the Sample MOD 
+we updated the GDIBarracks to now be able to build the Elf Warrior:</span></li>
+</ul>
+<p><span style="font-family: Arial; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The bolded command is the new 
+command used to build the new Elf Warrior unit.</span></p>
+<p class="MsoNormal" style="text-indent: .5in; text-autospace: none; margin-left: .5in">
+<font face="Arial"><span style="font-family: Consolas; color: black">&lt;LogicCommandSet<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id=&quot;GDIBarracksCommandSet&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;Cmd&gt;Command_ConstructGDIRifleSoldierSquad&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDIMissileSoldierSquad&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDIEngineer&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDIGrenadeSoldierSquad&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDISniperSquad&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDICommando&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_ConstructGDIZoneTrooperSquad&lt;/Cmd&gt;<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Cmd&gt;Command_ConstructGDIElfWarrior&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+&lt;Cmd&gt;Command_TogglePower&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_SelfRepair&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_Sell&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_SetDefaultBuilding&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Cmd&gt;Command_SetRallyPoint_Infantry&lt;/Cmd&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/LogicCommandSet&gt;</span></font></p>
+<p class="MsoNormal" style="margin-left: .75in">
+<span style="font-family: Arial; color: black">The Sample MOD also created a new 
+Armor and Weapon template for the Elf Warrior.&nbsp; These are defined in the files, 
+SampleUpdatedArmor.xml, and SampleUpdatedWeapon.xml, again these templates can 
+be defined in any file as long as its properly included in the MOD.xml file.</span></p>
+<div class="Section1">
+	<p class="MsoNormal" style="MARGIN-LEFT: 0.5in" align="center"><b>
+	<font face="Arial" color="black" size="4">
+	<span style="font-weight: bold; color: black; font-family: Arial">Updating 
+	an Existing Unit</span></font></b></p>
+	<font face="Arial" color="black"><span style="color: black; font-family: Arial">
+We do not include an example of updating an exiting unit in the Sample MOD.&nbsp; The 
+process to do this is quite simple.&nbsp; Merely copy over the unit you wish to 
+update from your install directory’s CnC3XML folder to your MOD folder.&nbsp; Include 
+it in your mod.xml file, and update as you wish.&nbsp; One thing to note when you 
+build the MOD using the BuildMOD bat file you will see some errors involving art 
+that cannot be found this is normal.&nbsp; These errors are because we don’t include 
+all the raw art assets and Binary Asset Builder cannot find them.&nbsp; The unit will 
+still function properly, and you can use these assets in new units if you wish.&nbsp; 
+The new unit will generate the same errors but when the game loads the unit it 
+will find the assets without issue.</span></font></div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HelicopterSlowDeathBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SlowDeathBehaviorModuleData" />
+		<Entry
+			id="SpiralOrbitTurnRate"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SpiralOrbitForwardSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SpiralOrbitForwardSpeedDamping"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MinSelfSpin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxSelfSpin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SelfSpinUpdateDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="SelfSpinUpdateAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FallHowFast"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinBladeFlyOffDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MaxBladeFlyOffDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttachParticleSystem"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="AttachParticleBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BladeObjectName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BladeBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="OclEjectPilot"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FxBlade"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="OclBlade"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FxHitGround"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="OclHitGround"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryReference
+			id="FxFinalBlowUp"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="OclFinalBlowUp"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="DelayFromGroundToFinalDeath"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="FinalRubbleObject"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="MaxBraking"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="99999.9"/>
+		<EntryReference
+			id="DeathSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AttachParticleLoc"
+			AssetType="Coord3D" />
+	</Asset>
+
+</AssetDefinition>

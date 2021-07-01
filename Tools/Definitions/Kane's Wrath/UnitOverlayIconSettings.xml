@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="VeterancyRankOverlayIcon">
+		<Entry
+			id="Rank"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Image"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="FactionVeterancyOverlayIcons">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="RankIcon"
+			AssetType="VeterancyRankOverlayIcon"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="UnitOverlayIconSettings"
+		TypeHash="984935605">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="AmmoPipImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="AmmoPipFrameImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="ContainPipImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="ContainPipFrameImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnitTypeIconBackgroundImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="PowerIconImageSequence"
+			AssetType="ImageSequence"
+			IsAttribute="true" />
+		<EntryReference
+			id="RepairIconImageSequence"
+			AssetType="ImageSequence"
+			IsAttribute="true" />
+		<Entry
+			id="AmmoPipScale"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"/>
+		<Entry
+			id="ContainPipScale"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"/>
+		<Entry
+			id="UnitTypeIconScale"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"/>
+		<Entry
+			id="StatusIconScale"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"/>
+		<Entry
+			id="VeterancyIconScale"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"/>
+		<EntryList
+			id="FactionVeterancy"
+			AssetType="FactionVeterancyOverlayIcons"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="JoypadHUDFixedElementId">
+		<Entry>Invalid</Entry>
+		<Entry>EnergyMeter</Entry>
+		<Entry>Resources</Entry>
+		<Entry>Radar</Entry>
+		<Entry>UnitCap</Entry>
+		<Entry>ControllerButtonA</Entry>
+		<Entry>ControllerButtonB</Entry>
+		<Entry>ControllerButtonX</Entry>
+		<Entry>ControllerButtonY</Entry>
+		<Entry>ControllerLeftTrigger</Entry>
+		<Entry>ControllerRightTrigger</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

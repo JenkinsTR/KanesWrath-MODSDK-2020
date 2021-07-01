@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TargetingHeuristicType">
+		<Entry>BaseDefense</Entry>
+		<Entry>EnemyStructure</Entry>
+		<Entry>FriendlyStructure</Entry>
+		<Entry>EnemyUnit</Entry>
+		<Entry>FriendlyUnit</Entry>
+		<Entry>Expansion</Entry>
+		<Entry>Prioritized</Entry>
+		<Entry>TechBuilding</Entry>
+		<Entry>Bridge</Entry>
+		<Entry>NeutralGarrison</Entry>
+		<Entry>AntiGarrison</Entry>
+		<Entry>Beacon</Entry>
+		<Entry>Crate</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AITargetSortType">
+		<Entry>Distance</Entry>
+		<Entry>ThreatToGround</Entry>
+		<Entry>ThreatToAir</Entry>
+		<Entry>Random</Entry>
+	</EnumAsset>
+
+	<GameAsset
+		id="AITargetingHeuristic"
+		TypeHash="1621045461">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="HeuristicType"
+			AssetType="TargetingHeuristicType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ReturnTargetType"
+			AssetType="AITargetType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SortType"
+			AssetType="AITargetSortType"
+			IsAttribute="true"
+			Default="Distance"
+			IsRequired="false" />
+		<Entry
+			id="VitalKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ThreatFinderRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SearchRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1500.0" />
+		<EntryList
+			id="PrioritizedKindOf"
+			AssetType="KindOfBitFlags"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="Destroyed"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

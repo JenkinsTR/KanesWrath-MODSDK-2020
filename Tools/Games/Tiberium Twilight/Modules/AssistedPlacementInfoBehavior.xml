@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HintObjectMapping">
+		<EntryRelocation
+			id="PlayerTemplate"
+			AssetType="PlayerTemplateWeakRefRef"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="HintDisplayObject"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="HintOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="HintUsesShaders"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="PlacementRestriction">
+		<Entry
+			id="FilterRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryRelocation
+			id="RestrictedObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<Asset
+		id="AssistedPlacementInfoBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryList
+			id="HintObject"
+			AssetType="HintObjectMapping"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="PlacementRestriction"
+			AssetType="PlacementRestriction" />
+		<Entry
+			id="SuggestedOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="AllowShrouded"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

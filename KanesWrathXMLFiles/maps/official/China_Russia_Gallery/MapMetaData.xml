@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="60" CRC="0" Description="Map:China_Russia_Gallery/Desc" DisplayName="Rogue's Gallery Buildings" FileName="Data\maps\official\China_Russia_Gallery\China_Russia_Gallery.map" Height="220" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="220" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="825.941" y="122.446" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="167.199" y="782.614" z="0" />
+  </StartPosition>
+</MapMetaData>

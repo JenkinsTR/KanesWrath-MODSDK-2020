@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<!-- New Locomotor for the ZOCOM Shatterer to prevent clipping with Warfactory -->
+	<LocomotorTemplate
+		id="GDIImprovedSonicTankLocomotor"
+		Name="GDIImprovedSonicTankLocomotor"
+		Surfaces="GROUND CRUSHABLE_OBSTACLE" 
+		TurnTimeSeconds="3.5s" 
+		TurnTimeDamagedSeconds="3.5s" 
+		MaxSpeedDamaged="75%"
+		AccelerationSeconds="1.0s"
+		BrakingSeconds="1.0s"
+		SlowTurnRadius="15.0" 
+		FastTurnRadius="30.0" 
+		BehaviorZ="NO_MOTIVE_FORCE"	
+		Appearance="FOUR_WHEELS" 
+		UseTerrainSmoothing="true"
+
+		UniformAxialDamping="0.1" 
+		PitchStiffness="0.5"
+		RollStiffness="0.75"
+		PitchDamping="0.5"
+		RollDamping="0.1"
+		ForwardAccelerationPitchFactor="-0.05"
+		LateralAccelerationRollFactor="-0.2"
+		ClampOrientationToPathTangent="true"
+		ReorientIfTurnTooSharp="false"
+		LateralVelocityRollFactor="-15"
+		/>
+		
+</AssetDeclaration>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Units/NODAttackBike.xml" />		
+		<Include type="all" source="Units/NODAvatar.xml" />	
+		<Include type="all" source="Units/NODAvatarHusk.xml" />	
+		<Include type="all" source="Units/NODBunkerTruck.xml" />	
+		<Include type="all" source="Units/NODConfessor.xml" />	
+		<Include type="all" source="Units/NODCyborgInfantry.xml" />	
+		<Include type="all" source="Units/NODCyborgInfantrySquad.xml" />
+		<Include type="all" source="Units/NODFanatic.xml" />	
+		<Include type="all" source="Units/NODFlameTank.xml" />	
+		<Include type="all" source="Units/NODMCV.xml" />	
+		<Include type="all" source="Units/NODMetaUnit.xml" />	
+		<Include type="all" source="Units/NODMilitant.xml" />	
+		<Include type="all" source="Units/NODMilitantSquad.xml" />
+		<Include type="all" source="Units/NODMilitantRocket.xml" />	
+		<Include type="all" source="Units/NODMilitantRocketSquad.xml" />	
+		<Include type="all" source="Units/NODMobileArtillery.xml" />
+		<Include type="all" source="Units/NODShadow.xml" />	
+		<Include type="all" source="Units/NODStealthTank.xml" />	
+		<Include type="all" source="Units/NODVenom.xml" />	
+		<Include type="all" source="Units/NODVertigo.xml" />	
+
+		<Include type="all" source="structures/NODConstructionYard.xml" />
+		<Include type="all" source="structures/NODCrane.xml" />
+		<Include type="all" source="structures/NODMiniMCVOutpost.xml" />
+		<Include type="all" source="structures/NODDisruptionTower.xml" />
+		<Include type="all" source="structures/NODDropZone.xml" />
+		<Include type="all" source="structures/NODHangar.xml" />
+		<Include type="all" source="structures/NODLaserCannon.xml" />
+		<Include type="all" source="structures/NODLaserCannonSpawn.xml" />
+		<Include type="all" source="structures/NODObelisk.xml" />
+		<Include type="all" source="structures/NODOperationsCenter.xml" />
+		<Include type="all" source="structures/NODPowerPlant.xml" />
+		<Include type="all" source="structures/NODRefinery.xml" />
+		<Include type="all" source="structures/NODRocketBunker.xml" />
+		<Include type="all" source="structures/NODRocketBunkerSpawn.xml" />
+		<Include type="all" source="structures/NODSecretShrine.xml" />
+		<Include type="all" source="structures/NODShredderTurret.xml" />
+		<Include type="all" source="structures/NODShredderTurretHub.xml" />
+		<Include type="all" source="structures/NODShredderTurretSpawnHole.xml" />
+		<Include type="all" source="structures/NODTechAssemblyPlant.xml" />
+		<Include type="all" source="structures/NODTempleOfNOD.xml" />
+		<Include type="all" source="structures/NODTiberiumLiquidationFacility.xml" />
+		<Include type="all" source="structures/NODTiberiumSilo.xml" />
+		<Include type="all" source="structures/NODHandOfNod.xml" />
+		<Include type="all" source="structures/NODPropagandaTower.xml" />
+		<Include type="all" source="structures/NODAirSupport.xml" />
+		
+		<!-- Props -->
+		<Include type="all" source="Props/NODBlackHandFlamerProjectile.xml" />	
+		<Include type="all" source="Props/NODBunkerTruckStructurePrevention.xml" />	
+		<Include type="all" source="Props/NODVeinDetonation.xml" />	
+		<Include type="all" source="Props/NODVertigoBombProjectile.xml" />	
+		<Include type="all" source="Props/NODVertigoDisruptionPod.xml" />	
+		
+		<!--	MetaGame Strategic Buildings	-->
+		<Include type="all" source="structures/MG_NOD_DisruptionGenerator.xml" />
+		<Include type="all" source="structures/MG_NOD_TemplePrime.xml" />
+		<Include type="all" source="structures/MG_NOD_TiberiumForge.xml" />
+		<Include type="all" source="structures/MG_NOD_WarmechFacility.xml" />			
+	</Includes>
+</AssetDeclaration>

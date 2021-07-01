@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BeaconClientUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientUpdateModuleData" />
+		<Entry
+			id="FramesBetweenRadarPulses"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RadarPulseDuration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpellRechargeModifierUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryList
+			id="Percentages"
+			AssetType="Percentage"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="UILabel"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="StartsActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

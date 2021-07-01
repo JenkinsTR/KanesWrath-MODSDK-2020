@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="Mouse"
+		TypeHash="2813607398">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="TooltipFontName"
+			AssetType="String" />
+		<Entry
+			id="TooltipFontSize"
+			AssetType="SageInt" />
+		<Entry
+			id="TooltipDelayTime"
+			AssetType="SageInt" />
+		<Entry
+			id="TooltipTextColor"
+			AssetType="Color4" />
+		<Entry
+			id="OrthoZoom"
+			AssetType="SageReal" />
+		<Entry
+			id="DragTolerance"
+			AssetType="SageInt" />
+		<Entry
+			id="TooltipFontIsBold"
+			AssetType="SageBool" />
+		<Entry
+			id="UseTooltipAltTextColor"
+			AssetType="SageBool" />
+		<Entry
+			id="AdjustTooltipAltColor"
+			AssetType="SageBool" />
+		<Entry
+			id="OrthoCamera"
+			AssetType="SageBool" />
+	</GameAsset>
+
+</AssetDefinition>

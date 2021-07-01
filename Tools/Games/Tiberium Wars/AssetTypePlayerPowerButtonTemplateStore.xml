@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PlayerPowerButtonTemplates">
+		<EntryChoice
+			id="PlayerPowerButtonTemplates"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="PowerButton"
+				AssetType="PlayerPowerButtonTemplateData" />
+			<Entry
+				id="TargetedPowerButton"
+				AssetType="TargetedPlayerPowerButtonTemplateData" />
+			<Entry
+				id="MultipleTargetsTargetedPowerButton"
+				AssetType="MultipleTargetsTargetedPlayerPowerButtonTemplateData" />
+			<Entry
+				id="MultiplePowersTargetedPowerButton"
+				AssetType="MultiplePowersTargetedPlayerPowerButtonTemplateData" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="PlayerPowerButtonTemplateStore"
+		TypeHash="3679955791">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Templates"
+			AssetType="PlayerPowerButtonTemplates" />
+	</GameAsset>
+
+</AssetDefinition>

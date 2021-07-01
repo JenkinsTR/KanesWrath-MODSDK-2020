@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="VideoSoundOverrideEventType">
+		<Entry>DUCK</Entry>
+		<Entry>NO_DUCK</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="Video">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Filename"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Comment"
+			AssetType="String"
+			IsAttribute="true"
+			Default="N" />
+		<Entry
+			id="Volume"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="80%" />
+		<Entry
+			id="SoundOverride"
+			AssetType="VideoSoundOverrideEventType"
+			IsAttribute="true"
+			Default="DUCK" />
+	</Asset>
+
+</AssetDefinition>

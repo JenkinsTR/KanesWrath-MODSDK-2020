@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SkirmishOpeningMoveOrder">
+		<Entry
+			id="Time"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Build"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="Account"
+			AssetType="AIBankAccountType"
+			IsAttribute="true"
+			Default="SLUSH_FUND" />
+		<Entry
+			id="Deposit"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<GameAsset
+		id="SkirmishOpeningMove"
+		TypeHash="2318477119">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Order"
+			AssetType="SkirmishOpeningMoveOrder"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

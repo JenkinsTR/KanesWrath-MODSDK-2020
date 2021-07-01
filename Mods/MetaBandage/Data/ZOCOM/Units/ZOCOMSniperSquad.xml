@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- ZOCOM Sniper Squad uses ZOCOM members instead of GDI Members -->
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="ZOCOMSniperSquad"
+		inheritFrom="BaseSquad"
+		SelectPortrait="Portrait_GDISniperTeam"
+		ButtonImage="Portrait_GDISniperTeam"
+		Side="ZOCOM"
+		EditorSorting="UNIT"
+		TransportSlotCount="1"
+		BuildCost="1000"
+		BuildTime="10"
+		CommandSet="ZOCOMSniperSquadCommandSet"
+		CommandPoints="100"
+		KindOf="SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT INFANTRY HORDE ARMY_SUMMARY LARGE_RECTANGLE_PATHFIND PATH_THROUGH_INFANTRY STEALTH_GARRISON CAN_CAPTURE SNIPER CAN_BE_FAVORITE_UNIT SCORE"
+		IsTrainable="true"
+		FormationWidth="2"
+		FormationDepth="1"
+		ThreatLevel="0"
+		ProductionQueueType="INFANTRY"
+		UnitCategory="INFANTRY"
+		WeaponCategory="GUN"
+		EditorName="ZOCOMSniperSquad"
+		Description="Desc:ZOCOMSniperTeam"
+		TypeDescription="Type:ZOCOMSniperTeam"
+		UnitTypeIcon="SniperIcon"
+		RadarPriority="NOT_ON_RADAR">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:GDISniperTeam</DisplayName>
+		<GameDependency>
+			<RequiredObject>ZOCOMMedicalBay</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="NoArmor" />
+		<LocomotorSet
+			Locomotor="NormalRangedSquadLocomotor"
+			Condition="NORMAL"
+			Speed="55" />
+		<SkirmishAIInformation
+			UnitBuilderStandardCombatUnit="true" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true"
+				DependencySharedModelFlags="EMOTION_TAUNTING EMOTION_ALERT EMOTION_MORALE_HIGH EMOTION_MORALE_LOW EMOTION_AFRAID EMOTION_COWER SELECTED  EMOTION_TERROR EMOTION_LOOK_TO_SKY">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="FORMATION_PREVIEW">
+					<Model
+						Name="FXSniper_FP" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="WORLD_BUILDER">
+					<Model
+						Name="GU_SnprSh_SKN" />
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+				/>
+			<EmotionTrackerUpdate
+				id="Module_ETU">
+				<TauntAndPointExcluded
+					Rule="NONE" />
+				<AddEmotion>CheerIdle_Base</AddEmotion>
+				<AddEmotion>CheerBusy_Base</AddEmotion>
+			</EmotionTrackerUpdate>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<WeaponSetUpdate
+				id="ModuleTag_WeaponSetUpdate">
+				<WeaponSlotHardpoint
+					ID="1"
+					AllowInterleavedFiring="false"
+					InterleavedStyle="INTERLEAVE_FIRST_AVAILABLE"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="SquadSniperRangefinder" />
+				</WeaponSlotHardpoint>
+			</WeaponSetUpdate>
+			<StealthDetectorUpdate
+				id="ModuleTag_StealthDetect"
+				DetectionRange="400" />
+			<Physics
+				id="ModuleTag_Physics"></Physics>
+			<ProductionUpdate
+				id="ModuleTag_ProductionUpdate"
+				GiveNoXP="true" />
+			<!-- Trigger for Call Airstrike. This power makes the squad move to within casting range and triggers the actual OCl power -->
+			<SpecialPower
+				id="ModuleTag_CallAirstrikeSpecialPowerDispatch"
+				SpecialPowerTemplate="SpecialPowerCallAirstrike"
+				UpdateModuleStartsAttack="true" />
+			<!-- Update for the trigger. This makes the unit move to within range -->
+			<ActivateModuleSpecialPower
+				id="ModuleTag_CallAirstrikeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCallAirstrike"
+				StartAbilityRange="400">
+				<SpecialPowerModules
+					ModuleId="ModuleTag_OCLSpecialPowerCallAirstrike"
+					TriggerAtTargetPosition="true" />
+			</ActivateModuleSpecialPower>
+			<!-- Actual work for Call Airstrike is done by this power and update-->
+			<OCLSpecialPower
+				id="ModuleTag_OCLSpecialPowerCallAirstrike"
+				SpecialPowerTemplate="SpecialPowerDummyTriggered1"
+				UpdateModuleStartsAttack="true"
+				OCL="OCL_GDISniperAirstrike"
+				CreateLocation="CREATE_AT_EDGE_NEAR_TARGET_AND_MOVE_TO_LOCATION" />
+			<OCLMonitorSpecialAbilityUpdate
+				id="ModuleTag_OCLMonitorSpecialAbilityUpdateCallAirstrike"
+				SpecialPowerTemplate="SpecialPowerDummyTriggered1"
+				UnpackTime="2s"
+				PreparationTime="1s"
+				PreTriggerUnstealthTime="9999s"
+				Options="LOSE_STEALTH_ON_TRIGGER" />
+			<CreateAndEnterObjectSpecialPower xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportGDI"
+				OCL="OCL_ZOCOMCallForTransport"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_GDICallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<SpecialPower
+				id="ModuleTag_CaptureSpecialPower"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UpdateModuleStartsAttack="true" />
+			<CaptureSpecialAbilityUpdate
+				id="ModuleTag_CaptureSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPowerCaptureControlPoint"
+				UnpackTime="2s"
+				PreparationTime="10s"
+				PackTime="1s"
+				StartAbilityRange="30.0"
+				Options="DO_CAPTURE_FX"/>
+			<HordeContain
+				id="ModuleTag_HordeContain"
+				FrontAngle="4.7123"
+				FlankedDelaySeconds="2.0"
+				ShowPips="false"
+				Formation="MAIN"
+				MeleeAttackLeashDistance="1"
+				Slots="1"
+				ObjectStatusOfContained=""
+				ConditionForEntry="INVALID"
+				SpawnBannerCarrierImmediately="true">
+				<PassengerFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+				<DieMuxData />
+				<InitialPayload
+					Name="ZOCOMSniper"
+					Count="1" />
+				<!--<InitialPayload Name="GDISpotter" Count="1" />-->
+				<MeleeBehavior
+					Type="AMOEBA" />
+				<!--<RankInfo RankID="1" UnitType="GDISpotter">
+					<Position X="0" Y="10" />
+				</RankInfo>
+				-->
+				<RankInfo
+					RankID="1"
+					UnitType="ZOCOMSniper">
+					<Position
+						X="0"
+						Y="10" />
+				</RankInfo>
+				<RankToReleaseWhenAttacking>1</RankToReleaseWhenAttacking>
+				<BannerCarrierPosition>
+					<UnitType>ZOCOMSpotter</UnitType>
+					<Pos
+						x="-20"
+						y="-10" />
+				</BannerCarrierPosition>
+				<BannerCarriersAllowed>ZOCOMSpotter</BannerCarriersAllowed>
+				<MemberTemplateStatusInfo
+					ThingTemplate="ZOCOMSpotter"
+					ObjectStatus="PRIMARY_MEMBER_PRESENT" />
+			</HordeContain>
+		</Behaviors>
+		<AI>
+			<HordeAIUpdate
+				id="ModuleTag_HordeAIUpdate"
+				AutoAcquireEnemiesWhenIdle="YES ATTACK_BUILDINGS"
+				MaxCowerTime="5.0s"
+				MinCowerTime="3.0s"
+				CanAttackWhileContained="true"
+				AILuaEventsList="GDISniperSquadFunctions">
+				<UnitAITargetChooserData
+					SympathyRange="100.0" />
+			</HordeAIUpdate>
+		</AI>
+		<Body>
+			<ImmortalBody
+				id="ModuleTag_ImmortalBody"
+				MaxHealth="1.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="BOX"
+				MajorRadius="15.0"
+				MinorRadius="15.0"
+				Height="20.0"></Shape>
+		</Geometry>
+		<!--
+		<AudioArraySound>
+			<AudioEntry
+				Sound="AudioEvent:GDI_Sniper_GroupSmall_MoveLoop"
+				AudioType="soundMoveLoop" />
+		</AudioArraySound>
+-->
+		<!-- Yes, we need these. Catapults & such actually do damage to the horde brain not the units
+		     And the build queue builds horde brains not units for squads -->
+		<EvaEvents
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack" 
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" /> <!-- But not sighting events!! -->
+		<VisionInfo
+			VisionRange="400"
+			ShroudClearingRange="500"
+			MaxVisionBonusPercent="300"
+			VisionBonusTestRadius="200"
+			VisionBonusPercentPerFoot="1" />
+		<CrusherInfo
+			UseCrushAttack="false"
+			CrushableLevel="0"
+			CrusherLevel="0" />
+	</GameObject>
+</AssetDeclaration>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalThreatMeter"
+		TypeHash="472971368">
+		<EntryInheritance
+			id="base"
+			AssetType="UIMouseSimpleFixedButton" />
+	</GameAsset>
+
+</AssetDefinition>

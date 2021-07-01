@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- Packed Texture: PackedLocalisedImages_001.tga -->
+	<Texture id="PackedLocalisedImages_001" File="PackedLocalisedImages_001.dds" OutputFormat="A8R8G8B8" GenerateMipMaps="false"/>
+	<!--
+	<PackedTextureImage id="Button_PlayerPowerLiquidTiberiumBomb" Texture="PackedLocalisedImages_001" Rotated="false">
+		<Dimensions x="64" y="64"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="256" y="256"/>
+	</PackedTextureImage>
+	<PackedTextureImage id="Button_PlayerPowerNuclearMissile" Texture="PackedLocalisedImages_001" Rotated="false">
+		<Dimensions x="64" y="64"/>
+		<Coords x="65" y="0"/>
+		<TextureDimensions x="256" y="256"/>
+	</PackedTextureImage>
+	<PackedTextureImage id="Portrait_NODFanatic" Texture="PackedLocalisedImages_001" Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="65"/>
+		<TextureDimensions x="256" y="256"/>
+	</PackedTextureImage>
+	-->
+</AssetDeclaration>

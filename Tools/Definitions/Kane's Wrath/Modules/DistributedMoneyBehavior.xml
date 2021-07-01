@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DistributedMoneyBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CreateModuleData" />
+		<Entry
+			id="Capacity"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="OnDieSpawnPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="RedistributeMoneyOnDeathType"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="SUICIDED" />
+	</Asset>
+
+</AssetDefinition>

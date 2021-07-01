@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ParkingPlaceBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="HealAmount"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="NumRows"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="NumCols"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="ApproachHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DoorOpenTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DoorCloseTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryRelocation
+			id="CanParkHereFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="DefaultRallyPointOffset"
+			AssetType="Coord3D" />
+		<Entry
+			id="ParkInHangars"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="LowersOntoParkingPlaceOnProduction"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanSetRallyPoint"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

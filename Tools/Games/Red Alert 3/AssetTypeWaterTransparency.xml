@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WaterTransparency">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="TransparentWaterDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="3.0" />
+		<Entry
+			id="TransparentWaterMinOpacity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryReference
+			id="StandingWaterTexture"
+			AssetType="WeakReference"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

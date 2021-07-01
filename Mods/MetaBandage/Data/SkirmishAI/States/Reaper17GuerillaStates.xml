@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+  <!--If opponent's base is undefended sneak an engineer in to capture key structures-->
+  <AIStrategicStateDefinition
+		id="Reaper17Engineer"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <ConstantHeuristic Weight="1.0"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerHeuristic" TargetType="Engineer"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Engineer">
+      <TeamTemplate MinUnits="2" MaxUnits="8" IncludeKindOf="" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Reaper17Assimilator"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+</AssetDeclaration>
+

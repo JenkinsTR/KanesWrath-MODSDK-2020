@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BezierProjectileBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="FirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstHeightMin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstHeightMax"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeightMin"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SecondHeightMax"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="SecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="FinalStuckTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingStateTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="BounceCount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="BounceDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceFirstHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceSecondHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceFirstPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="BounceSecondPercentIndent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillRequiredKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillForbiddenKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="GarrisonHitKillCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="GarrisonHitKillFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundHitFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="MaxDistanceReachedFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundBounceFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundHitWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="GroundBounceWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="FlightPathAdjustDistPerSecond"
+			AssetType="Velocity"
+			IsAttribute="true" />
+		<Entry
+			id="FirstPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="SecondPercentHeight"
+			AssetType="Percentage"
+			IsAttribute="true" />
+		<Entry
+			id="CurveFlattenMinDist"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingEmotion"
+			AssetType="EmotionType"
+			IsAttribute="true" />
+		<Entry
+			id="PreLandingEmotionRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="InvisibleTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="FadeInTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingStateTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingEmotion"
+			AssetType="EmotionType"
+			IsAttribute="true" />
+		<Entry
+			id="PostLandingEmotionRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SidewaysDrift"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDistanceToTravel"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000000" />
+		<Entry
+			id="TumbleRandomly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DetonateCallsKill"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OrientToFlightPath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CrushStyle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DieOnImpact"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FlightPathAdjustStraightOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreTerrainHeight"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="PingPongSidewaysDrift"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+	</Asset>
+
+</AssetDefinition>

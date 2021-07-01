@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUITimerSettings">
+		<Entry
+			id="FlashDuration"
+			AssetType="Time"
+			Default="1s"
+			IsAttribute="true"/>
+		<Entry
+			id="Position"
+			AssetType="Coord2D" />
+		<Entry
+			id="FlashColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="NormalFont"
+			AssetType="FontDesc" />
+		<Entry
+			id="NormalColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="ReadyFont"
+			AssetType="FontDesc" />
+		<Entry
+			id="ReadyColor"
+			AssetType="RGBColor" />
+		<Entry
+			id="Centered"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

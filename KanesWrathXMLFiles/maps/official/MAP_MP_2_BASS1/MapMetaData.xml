@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_2_BASS1/Desc" DisplayName="MAP_MP_2_BASS1" FileName="Data\maps\official\MAP_MP_2_BASS1\MAP_MP_2_BASS1.map" Height="510" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="410" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="1761.65" y="4021.9" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="1765.66" y="447.309" z="0" />
+  </StartPosition>
+</MapMetaData>

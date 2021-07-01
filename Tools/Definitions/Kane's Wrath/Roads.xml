@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="Road"
+		TypeHash="423265251">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="NormalTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="RoadWidth"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RoadWidthInTexture"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Priority"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="RubbleRisePhaseType">
+		<Entry>INITIAL</Entry>
+		<Entry>DELAY</Entry>
+		<Entry>BURST</Entry>
+		<Entry>FINAL</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="RubbleRisePhaseEvent">
+		<Entry
+			id="Phase"
+			AssetType="RubbleRisePhaseType"
+			IsAttribute="true" />
+		<Entry
+			id="OclCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="FxCount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryList
+			id="Ocl"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Fx"
+			AssetType="FXListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="RubbleRiseUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MinRubbleRiseDelay"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxRubbleRiseDelay"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinBurstDelay"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MaxBurstDelay"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="BigBurstFrequency"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="RubbleRiseDamping"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RubbleHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxShudder"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryList
+			id="Phase"
+			AssetType="RubbleRisePhaseEvent"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryRelocation
+			id="Die"
+			AssetType="DieMuxDataType" />
+	</Asset>
+
+</AssetDefinition>

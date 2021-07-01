@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="15" CRC="0" Description="Map:CM_2_1_Capture_Tech/Desc" DisplayName="CM_2_1_Capture_Tech" FileName="Data\maps\official\CM_2_1_Capture_Tech\CM_2_1_Capture_Tech.map" Height="345" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="345" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="551.608" y="369.29" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="PackedTextureImage"
+		TypeHash="2325806992">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="Dimensions"
+			AssetType="ICoord2D" />
+		<Entry
+			id="Coords"
+			AssetType="ICoord2D" />
+		<Entry
+			id="TextureDimensions"
+			AssetType="ICoord2D" />
+		<Entry
+			id="Rotated"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

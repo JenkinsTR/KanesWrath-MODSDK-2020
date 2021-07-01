@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="W3DTracerDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DrawModuleData" />
+		<Entry
+			id="MinLength"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxLength"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Width"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="SweepSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SpreadAngle"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MinTracersPerFrame"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxTracersPerFrame"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FrameLifeTime"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponSlotType"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="TracerHitFx"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="TracerEmitFx"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="TextureIndex"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="HeadColor"
+			AssetType="Color4f" />
+		<Entry
+			id="TailColor"
+			AssetType="Color4f" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+		<Entry
+			id="UseAdditiveBlending"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

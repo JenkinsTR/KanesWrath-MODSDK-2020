@@ -1,0 +1,14 @@
+<MapMetaData BorderSize="10" CRC="0" Description="Map:MetaGameWorld/Desc" DisplayName="MetaGameWorld" FileName="Data\maps\official\MetaGameWorld\MetaGameWorld.map" Height="320" IsMultiplayer="true" IsOfficial="true" NumPlayers="3" Width="620" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="2172.78" y="1665.71" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="2110.93" y="1586.26" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="2033.68" y="1666.89" z="0" />
+  </StartPosition>
+</MapMetaData>

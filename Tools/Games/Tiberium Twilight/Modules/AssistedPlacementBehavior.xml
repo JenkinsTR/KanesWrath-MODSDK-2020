@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AssistanceHintType">
+		<Entry>NONE</Entry>
+		<Entry>FACING_TOWARDS</Entry>
+		<Entry>FACING_AWAY</Entry>
+		<Entry>ALLOW_SHROUDED</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AssistanceHintBitFlags"
+		BaseEnum="AssistanceHintType" />
+
+	<Asset
+		id="AssistedPlacementBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="PlacementHint"
+			AssetType="AssistanceHintBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="SnappingDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="RequirementObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

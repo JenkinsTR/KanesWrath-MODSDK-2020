@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaGameLifetimeUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="LifeTimeTurns"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+</AssetDefinition>

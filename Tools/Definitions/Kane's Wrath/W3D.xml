@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="BaseRenderAssetType"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+	</GameAsset>
+
+	<Asset
+		id="Vector2">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Vector3">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Vector4">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="W"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Quaternion">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="W"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<EnumAsset
+		id="MeshGeometryType">
+		<Entry>Normal</Entry>
+		<Entry>Skin</Entry>
+		<Entry>CameraAligned</Entry>
+		<Entry>CameraOriented</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="BoneInfluence">
+		<Entry
+			id="Weight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Bone"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="Triangle">
+		<EntryList
+			id="V"
+			AssetType="SageUnsignedInt"
+			MinLength="3"
+			MaxLength="3" />
+		<Entry
+			id="Nrm"
+			AssetType="Vector3" />
+		<Entry
+			id="Dist"
+			AssetType="SageReal" />
+	</Asset>
+
+	<Asset
+		id="BoxMinMax">
+		<Entry
+			id="Min"
+			AssetType="Vector3" />
+		<Entry
+			id="Max"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="Sphere">
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Center"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstant">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstantTexture">
+		<EntryInheritance
+			id="base"
+			AssetType="FXShaderConstant" />
+		<Entry
+			id="Value"
+			AssetType="TextureRef" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstantFloat">
+		<EntryInheritance
+			id="base"
+			AssetType="FXShaderConstant" />
+		<EntryList
+			id="Value"
+			AssetType="SageReal"
+			MinLength="0"
+			MaxLength="4" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstantInt">
+		<EntryInheritance
+			id="base"
+			AssetType="FXShaderConstant" />
+		<Entry
+			id="Value"
+			AssetType="SageInt" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstantBool">
+		<EntryInheritance
+			id="base"
+			AssetType="FXShaderConstant" />
+		<Entry
+			id="Value"
+			AssetType="SageBool" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXShaderConstants">
+		<EntryChoice
+			id="FXShaderConstants"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="Texture"
+				AssetType="FXShaderConstantTexture" />
+			<Entry
+				id="Float"
+				AssetType="FXShaderConstantFloat" />
+			<Entry
+				id="Int"
+				AssetType="FXShaderConstantInt" />
+			<Entry
+				id="Bool"
+				AssetType="FXShaderConstantBool" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="FXShaderMaterial">
+		<Entry
+			id="ShaderName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TechniqueName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="Constants"
+			AssetType="FXShaderConstants" />
+		<Entry
+			id="TechniqueIndex"
+			AssetType="Byte"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="PolyIndicesType">
+		<EntryList
+			id="P"
+			AssetType="SageUnsignedInt"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="Children">
+		<Entry
+			id="Front"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Back"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Polys">
+		<Entry
+			id="Begin"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="NodeType">
+		<Entry
+			id="Min"
+			AssetType="Vector3" />
+		<Entry
+			id="Max"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="Children"
+			AssetType="Children" />
+		<EntryRelocation
+			id="Polys"
+			AssetType="Polys" />
+	</Asset>
+
+	<Asset
+		id="AABTree">
+		<Entry
+			id="PolyIndices"
+			AssetType="PolyIndicesType" />
+		<EntryList
+			id="Node"
+			AssetType="NodeType"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="VertexElementsType">
+		<Entry
+			id="Stream"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true" />
+		<Entry
+			id="Type"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="Method"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="Usage"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="UsageIndex"
+			AssetType="Byte"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="W3DMeshPipelineVertexData">
+		<Entry
+			id="VertexCount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="VertexSize"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="VertexOffset"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="VertexElementsSize"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="VertexElementsOffset"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryList
+			id="Bone"
+			AssetType="SageUnsignedShort"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="TrianglesType">
+		<EntryList
+			id="T"
+			AssetType="Triangle"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="W3DMesh"
+		TypeHash="1750982594"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseRenderAssetType" />
+		<Runtime>
+			<EntryRelocation
+				id="VertexData"
+				AssetType="W3DMeshPipelineVertexData" />
+			<Entry
+				id="GeometryType"
+				AssetType="MeshGeometryType"
+				IsAttribute="true" />
+			<Entry
+				id="BoundingBox"
+				AssetType="BoxMinMax" />
+			<Entry
+				id="BoundingSphere"
+				AssetType="Sphere" />
+			<Entry
+				id="Triangles"
+				AssetType="TrianglesType" />
+			<Entry
+				id="FXShader"
+				AssetType="FXShaderMaterial" />
+			<EntryRelocation
+				id="AABTree"
+				AssetType="AABTree" />
+			<Entry
+				id="Hidden"
+				AssetType="SageBool"
+				IsAttribute="true"
+				Default="false" />
+			<Entry
+				id="CastShadow"
+				AssetType="SageBool"
+				IsAttribute="true"
+				Default="false" />
+			<Entry
+				id="SortLevel"
+				AssetType="Byte"
+				IsAttribute="true"
+				Default="0" />
+			<Entry
+				id="GeometryPickable"
+				AssetType="SageBool"
+				IsAttribute="true"
+				Default="false" />
+		</Runtime>
+	</GameAsset>
+
+	<Asset
+		id="MeshRef">
+		<EntryReference
+			id="Mesh"
+			AssetType="W3DMesh" />
+	</Asset>
+
+	<Asset
+		id="CollisionBoxRef">
+		<EntryReference
+			id="CollisionBox"
+			AssetType="W3DCollisionBox" />
+	</Asset>
+
+	<Asset
+		id="RenderObjectReference">
+		<EntryChoice
+			id="RenderObjectReference"
+			MinLength="1"
+			MaxLength="1">
+			<Entry
+				id="Mesh"
+				AssetType="MeshRef" />
+			<Entry
+				id="CollisionBox"
+				AssetType="CollisionBoxRef" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="SubObject">
+		<Entry
+			id="BoneIndex"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubObjectID"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RenderObject"
+			AssetType="RenderObjectReference" />
+	</Asset>
+
+	<Asset
+		id="SubObjectRuntime">
+		<Entry
+			id="BoneIndex"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SubObjectID"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="RenderObject"
+			AssetType="BaseRenderAssetType" />
+	</Asset>
+
+	<GameAsset
+		id="W3DContainer"
+		TypeHash="2426263871"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseRenderAssetType" />
+		<EntryReference
+			id="Hierarchy"
+			AssetType="W3DHierarchy"
+			IsAttribute="true" />
+		<EntryList
+			id="SubObject"
+			AssetType="SubObject"
+			MinLength="0"
+			MaxLength="0" />
+		<Runtime>
+			<EntryReference
+				id="Hierarchy"
+				AssetType="W3DHierarchy"
+				IsAttribute="true" />
+			<EntryList
+				id="SubObject"
+				AssetType="SubObjectRuntime"
+				MinLength="0"
+				MaxLength="0" />
+		</Runtime>
+	</GameAsset>
+
+	<Asset
+		id="FixupMatrixType">
+		<Entry
+			id="M00"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M10"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M20"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M30"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M01"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M11"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M21"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M31"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M02"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M12"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M22"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M32"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M03"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M13"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M23"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="M33"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="PivotType">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Parent"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Translation"
+			AssetType="Vector3" />
+		<Entry
+			id="Rotation"
+			AssetType="Quaternion" />
+		<Entry
+			id="FixupMatrix"
+			AssetType="FixupMatrixType" />
+	</Asset>
+
+	<GameAsset
+		id="W3DHierarchy"
+		TypeHash="1002596986">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Pivot"
+			AssetType="PivotType"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<EnumAsset
+		id="AnimationChannelType">
+		<Entry>XTranslation</Entry>
+		<Entry>YTranslation</Entry>
+		<Entry>ZTranslation</Entry>
+		<Entry>Orientation</Entry>
+		<Entry>Visibility</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AnimationChannelBaseRuntime">
+		<Entry
+			id="Type"
+			AssetType="AnimationChannelType"
+			IsAttribute="true" />
+		<Entry
+			id="NumFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="VectorLen"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="Pivot"
+			AssetType="SageUnsignedShort"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AnimationChannelTimecoded">
+		<EntryInheritance
+			id="base"
+			AssetType="AnimationChannelBaseRuntime" />
+		<EntryList
+			id="FrameAndBinaryFlag"
+			AssetType="SageUnsignedShort"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Values"
+			AssetType="SageReal"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="AnimationChannelDelta">
+		<EntryInheritance
+			id="base"
+			AssetType="AnimationChannelBaseRuntime" />
+		<Entry
+			id="Scale"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryList
+			id="Init"
+			AssetType="SageReal"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="NumBits"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryList
+			id="CompressedValues"
+			AssetType="Byte"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ChannelsTypeRuntime">
+		<EntryChoice
+			id="Channels"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="Timecoded"
+				AssetType="AnimationChannelTimecoded" />
+			<Entry
+				id="Delta"
+				AssetType="AnimationChannelDelta" />
+		</EntryChoice>
+	</Asset>
+
+	<GameAsset
+		id="W3DAnimation"
+		TypeHash="3422982547"
+		HasSpecialCompileHandling="true">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Runtime>
+			<EntryReference
+				id="Hierarchy"
+				AssetType="W3DHierarchy"
+				IsAttribute="true" />
+			<Entry
+				id="NumFrames"
+				AssetType="SageUnsignedInt"
+				IsAttribute="true" />
+			<Entry
+				id="FrameRate"
+				AssetType="SageUnsignedInt"
+				IsAttribute="true" />
+			<Entry
+				id="Channels"
+				AssetType="ChannelsTypeRuntime" />
+		</Runtime>
+	</GameAsset>
+
+	<GameAsset
+		id="W3DCollisionBox"
+		TypeHash="3373786917">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseRenderAssetType" />
+		<Entry
+			id="Center"
+			AssetType="Vector3" />
+		<Entry
+			id="Extent"
+			AssetType="Vector3" />
+		<Entry
+			id="JoypadPickingOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="QuantityModifier">
+		<EntryWeakReference
+			id="Name"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Count"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ProductionModifier">
+		<EntryReference
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="CostMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TimeMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="ModifierFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="HeroPurchase"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HeroRevive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ProductionUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="MaxQueueEntries"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="99" />
+		<Entry
+			id="NumDoorAnimations"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DoorOpeningTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DoorOpeningTimeMetaUnit"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DoorWaitOpenTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DoorCloseTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ConstructionCompleteDuration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DisabledTypesToProcess"
+			AssetType="DisabledBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="UnitInvulnerableTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SpecialPrepModelconditionTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="BonusForType"
+			AssetType="GameObject"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="SpeedBonusAudioLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Type"
+			AssetType="ProductionQueueType"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="ProductionTimeDelayScalar"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="QuantityModifier"
+			AssetType="QuantityModifier"
+			MinLength="0"
+			MaxLength="2" />
+		<EntryList
+			id="ProductionModifier"
+			AssetType="ProductionModifier"
+			MinLength="0"
+			MaxLength="2" />
+		<Entry
+			id="GiveNoXP"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="VeteranUnitsFromVeteranFactory"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SetBonusModelConditionOnSpeedBonus"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SecondaryQueue"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnorePreReqs"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

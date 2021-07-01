@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RespawnBodyModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ActiveBodyModuleData" />
+		<EntryRelocation
+			id="PermanentlyKilledByFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="UseRespawn"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

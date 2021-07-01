@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="BreezeInfo"
+		TypeHash="890675481">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSubsystemSettings" />
+		<Entry
+			id="Direction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0472" />
+		<Entry
+			id="Intensity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.027488125" />
+		<Entry
+			id="Lean"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0157075" />
+		<Entry
+			id="Randomness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="BreezePeriod"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+	</GameAsset>
+
+</AssetDefinition>

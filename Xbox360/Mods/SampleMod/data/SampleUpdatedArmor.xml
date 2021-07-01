@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Tags />
+	<Includes />
+	<ArmorTemplate
+		id="GDIElfWarriorArmor"
+		Default="5"
+		SideDamageScalar="0"
+		RearDamageScalar="0">		
+	</ArmorTemplate>
+</AssetDeclaration>

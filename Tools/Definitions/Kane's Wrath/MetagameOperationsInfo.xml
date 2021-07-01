@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetagameOperationsFactionalCost">
+		<Entry
+			id="Faction"
+			AssetType="FactionType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Cost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<GameAsset
+		id="MetagameOperationsInfoType"
+		TypeHash="3945285520">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="ID"
+			AssetType="MetagameOperationsEnums"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MarkerTemplateName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ObjectMarkerTemplateName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="NotificationPower"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="TurnsToComplete"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TurnsToCoolDown"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PowerPrereqs"
+			AssetType="MGPowerPrereqBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="EffectLength"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="FactionalCost"
+			AssetType="MetagameOperationsFactionalCost"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="IsInstantCast"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsRepeating"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

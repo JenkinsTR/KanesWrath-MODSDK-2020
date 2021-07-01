@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BoredUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ScanDelayTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScanDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="BoredSpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="BoredFilter"
+			AssetType="ObjectFilter"
+			IsAttribute="true" />
+		<Entry
+			id="CanScanWhileAttackingOrMoving"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

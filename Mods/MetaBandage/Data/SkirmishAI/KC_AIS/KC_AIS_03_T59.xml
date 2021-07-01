@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes></Includes>
+  
+<!-- KC_03 - TRAVELER-59 - Basics -->
+  
+  <AIStrategicStateDefinition
+	id="KC_03_T59_UntPref"
+	UnitUpgradeMultiplier="0.0">
+   <Heuristic>
+      <ConstantHeuristic Weight="999.0"/>
+    </Heuristic>
+    
+	<UnitModifierByName UnitName="Traveler59RazorDroneSquad" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59ShockTrooperSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59StalkerSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59CultistSquad" UnitPreferenceOffensiveModifier="300%" UnitPreferenceDefensiveModifier="100%"/>
+
+    <UnitModifierByName UnitName="Traveler59GunWalker" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59Corrupter" UnitPreferenceOffensiveModifier="125%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59SeekerTank" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59AnnihilatorTripod" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59CustomizableVehicle" UnitPreferenceOffensiveModifier="500%" UnitPreferenceDefensiveModifier="500%"/>
+
+    <UnitModifierByName UnitName="Traveler59BuzzerHive" UnitPreferenceOffensiveModifier="50%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59PhotonCannon" UnitPreferenceOffensiveModifier="150%" UnitPreferenceDefensiveModifier="100%"/>
+    <UnitModifierByName UnitName="Traveler59PlasmaMissileBattery" UnitPreferenceOffensiveModifier="100%" UnitPreferenceDefensiveModifier="50%"/>
+    <UnitModifierByName UnitName="Traveler59StormColumn" UnitPreferenceOffensiveModifier="200%" UnitPreferenceDefensiveModifier="100%"/>
+
+  </AIStrategicStateDefinition>
+  
+
+  <AIStrategicStateDefinition
+		id="KC_03_T59_AttackState_Engineer"
+		UnitUpgradeMultiplier="0.0">
+    <Heuristic>
+      <PathToTargetHeuristic PathExists="true"/>
+      <SiegeThresholdHeuristic SiegeMode="false" Threshold="1.5"/>
+      <IntervalHeuristic IntervalTime="175s" ActiveTime="30s"/>
+    </Heuristic>
+    <TargetHeuristic TargetHeuristic="EngineerHeuristic" TargetType="Engineer"/>
+    <Tactic Tactic="DefenseAvoidanceAttack" TargetType="Engineer">
+      <TeamTemplate MinUnits="6" MaxUnits="6" IncludeKindOf="CAN_ATTACK" ExcludeKindOf="AIRCRAFT" AlwaysRelease="false" AlwaysRecruit="false">
+        <CreateUnits UnitName="Traveler59Assimilator"/>
+      </TeamTemplate>
+    </Tactic>
+  </AIStrategicStateDefinition>
+  
+  </AssetDeclaration>
+ 

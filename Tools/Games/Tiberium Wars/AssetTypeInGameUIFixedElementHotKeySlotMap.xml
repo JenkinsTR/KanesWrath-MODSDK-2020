@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIFixedElementHotKeySlotMapEntry">
+		<Entry
+			id="ElementId"
+			AssetType="UIFixedElementId"
+			IsAttribute="true" />
+		<EntryReference
+			id="HotKeySlot"
+			AssetType="HotKeySlot"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="InGameUIFixedElementHotKeySlotMap"
+		TypeHash="1197384288">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Entry"
+			AssetType="InGameUIFixedElementHotKeySlotMapEntry"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

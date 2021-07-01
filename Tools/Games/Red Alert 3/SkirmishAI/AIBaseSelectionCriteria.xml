@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIBaseSortingOrder">
+		<Entry>PREFER_OLDEST</Entry>
+		<Entry>PREFER_NEWEST</Entry>
+		<Entry>PREFER_SMALLEST</Entry>
+		<Entry>PREFER_LARGEST</Entry>
+		<Entry>PREFER_MOST_RECENTLY_ATTACKED</Entry>
+		<Entry>PREFER_LEAST_RECENTLY_ATTACKED</Entry>
+		<Entry>PREFER_CLOSEST</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIBaseSelectionCriteria">
+		<Entry
+			id="RequiredBaseTypes"
+			AssetType="AIBaseTypeBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ExcludedBaseTypes"
+			AssetType="AIBaseTypeBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="PreferredBaseTypes"
+			AssetType="AIBaseTypeBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="PreferredNotBaseTypes"
+			AssetType="AIBaseTypeBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="SortOrder"
+			AssetType="AIBaseSortingOrder"
+			IsAttribute="true"
+			Default="PREFER_NEWEST" />
+	</Asset>
+
+</AssetDefinition>

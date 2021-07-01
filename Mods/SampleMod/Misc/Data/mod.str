@@ -1,0 +1,15 @@
+APT:Quit
+	"QUIT\nSAMPLE MOD"
+END
+
+NAME:MirageTank
+	"Mirage Tank"
+END
+
+DESC:MirageTank
+	"Abilities:\n     » Stealthed when not attacking"
+END
+
+TYPE:MirageTank
+	"High-Tech Tank. Strong vs. Infantry, Vehicles, Structures."
+END

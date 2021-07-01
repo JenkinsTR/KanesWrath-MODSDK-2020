@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:MAP_MP_4_BENDER/Desc" DisplayName="MAP_MP_4_BENDER" FileName="Data\maps\official\MAP_MP_4_BENDER\MAP_MP_4_BENDER.map" Height="560" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="560" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="820" y="820" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="4180" y="820" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="4180" y="4180" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="820.787" y="4176.74" z="0" />
+  </StartPosition>
+</MapMetaData>

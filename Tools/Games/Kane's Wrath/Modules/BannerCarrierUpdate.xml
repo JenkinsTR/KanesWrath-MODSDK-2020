@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MorphCondition">
+		<Entry
+			id="UnitTypeId"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="LocomotorName"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="SubObjectDraw">
+		<Entry
+			id="SubObjectId"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Show"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ExpLevelDraw">
+		<Entry
+			id="ExpLevel"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryList
+			id="SubObjects"
+			AssetType="SubObjectDraw"
+			MinLength="0"
+			MaxLength="12" />
+	</Asset>
+
+	<Asset
+		id="BannerCarrierUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="IdleSpawnRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="MeleeFreeUnitSpawnRate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DiedRespawnTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="MeleeFreeBannerRespawnTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="BannerMorphFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="UnitSpawnFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ScanDistance"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="UpgradeRequired"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryList
+			id="MorphCondition"
+			AssetType="MorphCondition"
+			MinLength="0"
+			MaxLength="12" />
+		<EntryList
+			id="ExpLevelDraw"
+			AssetType="ExpLevelDraw"
+			MinLength="0"
+			MaxLength="12" />
+		<Entry
+			id="ReplenishNearbyHordes"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="ReplenishAllNearbyHordes"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

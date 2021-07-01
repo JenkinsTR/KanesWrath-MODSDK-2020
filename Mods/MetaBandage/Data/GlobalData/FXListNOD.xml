@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+	<FXList id="FX_NOD_RedeemerExplodeWithVoice">
+		<NuggetList>
+			<ParticleSystem
+				Particle="RedeemerExplodeSparksBig"
+				OrientToObject="true">
+				<Offset x="0.0" y="0.0" z="-0.0"/>
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="RedeemerExplodeSpark"
+				OrientToObject="true">
+				<Offset x="0.0" y="0.0" z="-0.0"/>
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="RedeemerExplodeFlash2"
+				OrientToObject="true">
+				<Offset x="0.0" y="0.0" z="30.0"/>
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="RedeemerExplodeDistort"
+				OrientToObject="true">
+				<Offset x="0.0" y="0.0" z="30.0"/>
+			</ParticleSystem>
+
+			<TerrainScorch
+				Type		= "RANDOM"
+				Weather		= "NORMAL"
+				Radius		= "70" >
+				<RandomRange Low="SCORCH_9"
+							 High="SCORCH_16" />
+			</TerrainScorch>			
+			<Sound Value="AudioEvent:NOD_Redeemer_VoiceDie" />
+			<Sound Value="Multisound:VehicleExplosionSmallMS" />
+		</NuggetList>
+	</FXList>
+	
+</AssetDeclaration>

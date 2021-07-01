@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="InvisibilityType"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>STEALTH</Entry>
+		<Entry>CAMOUFLAGE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="InvisibilityNuggetOptions">
+		<Entry>ALLOW_NEAR_TREES</Entry>
+		<Entry>DETECTED_BY_FRIENDLIES</Entry>
+		<Entry>DISCONTINUE_WHEN_REVEALED</Entry>
+		<Entry>UNTOGGLE_HIDDEN_WHEN_LEAVING_STEALTH</Entry>
+		<Entry>CAN_ATTACK_WHILE_ACTIVE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="InvisibilityNuggetOptionsBitFlags"
+		BaseEnum="InvisibilityNuggetOptions" />
+
+	<GameAsset
+		id="InvisibilityTemplate"
+		TypeHash="419230569">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="ForbiddenConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="PREATTACK_" />
+		<Entry
+			id="ForbiddenConditionExceptions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ForbiddenStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="IS_FIRING_WEAPO" />
+		<Entry
+			id="CamouflageLevel"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="InvisibilityType"
+			AssetType="InvisibilityType"
+			IsAttribute="true"
+			Default="STEALTH" />
+		<Entry
+			id="Options"
+			AssetType="InvisibilityNuggetOptionsBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="EnteringStealthFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="LeavingStealthFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="HintDetectableStates"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="IS_ATTACKING" />
+		<Entry
+			id="NoStealthForAttackWindow"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="IgnoreTreeCheckUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

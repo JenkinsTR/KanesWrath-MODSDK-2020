@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TestModules">
+		<EntryChoice
+			id="TestModules"
+			MinLength="0"
+			MaxLength="0">
+			<Entry
+				id="TestModuleA"
+				AssetType="TestModuleA" />
+			<Entry
+				id="TestModuleB"
+				AssetType="TestModuleB" />
+		</EntryChoice>
+	</Asset>
+
+	<Asset
+		id="TestModuleA">
+		<Entry
+			id="id"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TestModuleB">
+		<Entry
+			id="id"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TestTexture">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="CustomData"
+			AssetType="FileReference"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="File"
+			AssetType="DataBlob"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="TestTextureRef">
+		<EntryReference
+			id="TestTexture"
+			AssetType="TestTexture" />
+	</Asset>
+
+	<Asset
+		id="TestTextureCollection">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryList
+			id="Texture"
+			AssetType="TestTextureRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="TestTextureCollectionRef">
+		<EntryReference
+			id="TestTextureCollection"
+			AssetType="TestTextureCollection" />
+	</Asset>
+
+	<Asset
+		id="TestGameObject">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryList
+			id="DisplayName"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="Modules"
+			AssetType="TestModules" />
+		<EntryList
+			id="TextureCollection"
+			AssetType="TestTextureCollectionRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

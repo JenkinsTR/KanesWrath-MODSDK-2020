@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:CM_1_1_Rio_Insurrection/Desc" DisplayName="CM_1_1_Rio_Insurrection" FileName="Data\maps\official\CM_1_1_Rio_Insurrection\CM_1_1_Rio_Insurrection.map" Height="580" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="580" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="3213.77" y="1790.96" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

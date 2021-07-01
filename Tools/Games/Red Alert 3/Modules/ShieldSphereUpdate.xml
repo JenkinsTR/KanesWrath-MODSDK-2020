@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ShieldSphereUpdateOption">
+		<Entry>ALLOW_ALLIES_PROJECTTILE_GOTHROUGH</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ShieldSphereUpdateOptionFlag"
+		BaseEnum="ShieldSphereUpdateOption" />
+
+	<Asset
+		id="ShieldSphereUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="RadiusMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="40" />
+		<Entry
+			id="RadiusMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="DamageTypesNotToAbsorb"
+			AssetType="DamageBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ScanFrequency"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="MaxDamage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ShieldBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ShieldSizeMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="Options"
+			AssetType="ShieldSphereUpdateOptionFlag"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="PositionOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="IgnoreInsideToInsideCheck"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="InitiallyActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

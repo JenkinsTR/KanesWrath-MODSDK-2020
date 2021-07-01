@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MetaGameStaticData"
+		TypeHash="3276830766">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="TiberiumAveragingRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="GreenZoneCutoff"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.3333333" />
+		<Entry
+			id="YellowZoneCutoff"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.6666666" />
+		<Entry
+			id="BattleMarker"
+			AssetType="String"
+			IsAttribute="true"
+			Default="Marker_Battle" />
+		<Entry
+			id="AutoresolveDamageofBase"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="7.0" />
+		<Entry
+			id="MaxAutoresolveAttacksPerBase"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="12" />
+		<Entry
+			id="MarkerOffsetDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="MoveLineTextureDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="MoveLineWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="MoveTurnMarker"
+			AssetType="String"
+			IsAttribute="true"
+			Default="Marker_MoveTurn" />
+		<Entry
+			id="MoveLineTexture"
+			AssetType="String"
+			IsAttribute="true"
+			Default="FXDestinationLine" />
+		<Entry
+			id="PlayerAtNegativeOpsPointsEvent"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_ASATDefensesComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_ASATDefensesDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_AutoResolve"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_AutoResolveBattleLost"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_AutoResolveBattleWon"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BadDestination"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BaseAttacked"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BaseDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BattleHappens"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BattlePhaseNo"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BattlePhaseYes"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BuildBase"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BuildSF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_BuildStratBldg"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_Cancel"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_DecBase"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_DecSF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_DeploySF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyBaseKill"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyBaseSigh"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyUnitSigh"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EradicatorBuild"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EradicatorDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EradicatorReady"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_GDIElim"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_IntelCenterComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_IntelCenterDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_LifeRecyclePlantComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_LifeRecyclePlantDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_MARVBuild"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_MARVDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_MARVReady"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_MoveSF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_NewPowersAv"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_NoBattles"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_NoComply"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_NodElim"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_OpsPhaseEnd"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_OpsPhaseStart"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_Patrola"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_Patrolb"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_PortCaptured"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_PropCenterComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_PropCenterDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_ReclamatorHubComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_ReclamatorHubDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RedeemerBuild"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RedeemerDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RedeemerReady"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RepairBase"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RepairSF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RiftGeneratorComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_RiftGeneratorDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_ScrinElim"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SecoObjAchiev"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SFBaseKill"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SFLost"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SignalTowerComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SignalTowerDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_StartBattle"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_StratBldgComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_StratBldgDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_SWHitYou"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TempleOfNodComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TempleOfNodDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_DisruptionArrayComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_DisruptionArrayDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TerraNexusComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TerraNexusDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TiberiumForgeComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TiberiumForgeDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TibProcessingPlantComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TibProcessingPlantDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TowerCapture"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_TowerDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_UpgBaseDef"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_UpgBasePow"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_UpgBaseTier"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_UpgSF"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_WarmechFacilityComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_WarmechFacilityDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_WarnSuperDete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_WarpNimbusComplete"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_WarpNimbusDestroyed"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_YouFiredIC"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_YouFiredNuke"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_YouFiredRift"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_YouResign"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyIonDetected"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyTempleDetected"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="Meva_EnemyRiftDetected"
+			AssetType="String"
+			IsAttribute="true"
+			Default="EVA_INVALID" />
+		<Entry
+			id="NOD_TibLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="NOD_TibLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="NOD_PopLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.67" />
+		<Entry
+			id="NOD_PopLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="NOD_UnrestLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.67" />
+		<Entry
+			id="NOD_UnrestLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="NOD_MinOwnedAlienTowers"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="GDI_TibLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.25" />
+		<Entry
+			id="GDI_TibLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="GDI_PopLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="GDI_PopLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="GDI_UnrestLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.33" />
+		<Entry
+			id="GDI_UnrestLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="GDI_MinDestroiedAlienTowers"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="SCRIN_TibLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.8" />
+		<Entry
+			id="SCRIN_TibLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="SCRIN_PopLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.33" />
+		<Entry
+			id="SCRIN_PopLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SCRIN_UnrestLevel_Min"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SCRIN_UnrestLevel_Max"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SCRIN_MinOwnedAlienTowers"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="GDIPercentOfWorldOwned"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="NODPercentOfCitiesAt100Unrest"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ALIENNumberOfTowersOwned"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="4.0" />
+		<Entry
+			id="GDIPercentOfWorldOwnedEASY"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+		<Entry
+			id="NODPercentOfCitiesAt100UnrestEASY"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+		<Entry
+			id="ALIENNumberOfTowersOwnedEASY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<Entry
+			id="GDIPercentOfWorldOwnedHARD"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="NODPercentOfCitiesAt100UnrestHARD"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="45%" />
+		<Entry
+			id="ALIENNumberOfTowersOwnedHARD"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="8.0" />
+		<EntryReference
+			id="SFBuildLightPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SFBuildMediumPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SFBuildHeavyPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="SFBuildMetaPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="SFBuildValidCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SFBuildInvalidCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SFBuildRadiusCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MetaGDIIonBlastTier2BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaGDIIonBlastTier3BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="55" />
+		<Entry
+			id="MetaGDIIonBlastMediumStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaGDIIonBlastHeavyStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaGDIIonBlastMetaUnitStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaGDIOrcaStrikeLightStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="MetaGDIOrcaStrikeMediumStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaGDIOrcaStrikeHeavyStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaGDIOrcaStrikeMetaUnitStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaGDIRefugeeAidUnrestModificationAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-10.0" />
+		<Entry
+			id="MetaGDIOrcaStrikeNumberOfBuildingsToDestroy"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MetaGDIStateOfEmergencyNumberOfOPToGive"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="6" />
+		<Entry
+			id="MetaGDIStateOfEmergenctNumberOfOPToTake"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="MetaGDIEmergencyCleanupAmountToDamageTiberiumBy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-250.0" />
+		<Entry
+			id="MetaGDIZOCOMInfiltrationAmountToDamageTiberiumBy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-250.0" />
+		<Entry
+			id="MetaGDIZOCOMInfiltrationPercentOfDamageToBase"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MetaGDIZOCOMInfiltrationPercentOfDamageToStrikeForce"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MetaNODRaiseInsurrectionUnrestModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="MetaNODTiberiumProductionSurgeTiberiumModifier"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="-20" />
+		<Entry
+			id="MetaNODTiberiumProductionSurgeOPModifier"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="MetaNODVertigoStrikeNumberOfBuildingsToDestroy"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MetaNODTheFuryOfNodUnrestModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="MetaNODTheFuryOfNodPercentageOfTroopDamage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MetaNODSabotageChanceOfSuccess"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="MetaNODNuclearMissleTier2BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaNODNuclearMissleTier3BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaNODNuclearMissleMediumStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaNODNuclearMissleHeavyStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaGNODNuclearMissleMetaUnitStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaNODVertigoStrikeLightStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="MetaNODVertigoStrikeMediumStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaNODVertigoStrikeHeavyStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaGNODVertigoStrikeMetaUnitStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaSCRINEradicatePopulationModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1000.0" />
+		<Entry
+			id="MetaSCRINIchorInjectionTiberiumModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="250.0" />
+		<Entry
+			id="StartingPlayerOpsPoints"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="StartingPlayerMaxTiberium"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="10000000" />
+		<Entry
+			id="StartingPlayerTiberium"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="10000" />
+		<Entry
+			id="StartingPlayerFREETiberiumPerTurn"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="MetaSCRINIonSuperStormBaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MetaSCRINIonSuperStormStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25" />
+		<Entry
+			id="MetaSCRINPlanetaryBombardmentBaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="MetaSCRINPlanetaryBombardmentStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="MetaSCRINPlanetaryBombardmentPopulationReductionPercent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="MetaSCRINRiftGeneratorTier2BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaSCRINRiftGeneratorTier3BaseDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaSCRINRiftGeneratorMediumStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="MetaSCRINRiftGeneratorHeavyStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="MetaSCRINRiftGeneratorMetaUnitStrikeForceDestruction"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75" />
+		<Entry
+			id="SummonSFBlackHandT1"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFBlackHandT2"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFBlackHandT3"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFMarkedOfKane"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFKaneLives"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFSpecialForces"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SummonSFAlienDropship"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="MaximumAOIRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="350" />
+		<EntryWeakReference
+			id="AllowStratBuilding1Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AllowStratBuilding2Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AllowStratBuilding3Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AllowStratBuilding4Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AllowStratBuilding5Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="GDI_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="STEEL_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ZOCOM_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="NOD_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="BHAND_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="MARKED_TempAirfield"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="GDI_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="STEEL_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ZOCOM_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="NOD_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="BHAND_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="MARKED_TempBaseHub"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="GDI_Rig"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="GDI_BattleBase"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="STEEL_Rig"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="STEEL_BattleBase"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ZOCOM_Rig"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ZOCOM_BattleBase"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="BasePlacementRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BaseStartingValue"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TiberiumPointValue"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="CityPointValue"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="HighPointThreshold"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="LowPointThreshold"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="MinTiberiumValueOfNode"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="25.0" />
+		<Entry
+			id="TiberiumValueOfNode"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="SkirmishLoadingScreen"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="MetaGameLoadingMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<Entry
+			id="PopulationBlinkieDisplay"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="180" />
+		<Entry
+			id="UnrestBlinkieDisplay"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="180" />
+		<Entry
+			id="BonusAlerts"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="180" />
+		<Entry
+			id="BaseGather"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="180" />
+		<Entry
+			id="UnresolvedBattle"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="900" />
+		<Entry
+			id="TiberiumGrowthThresholdPercent"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.8" />
+		<Entry
+			id="TiberiumAdjacencyDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="TiberuimGrowthAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-100.0" />
+		<Entry
+			id="CamMoveSpeedMult"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.3" />
+		<Entry
+			id="CamEaseInPct"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="CamEaseOutPct"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.7" />
+		<Entry
+			id="MGAIBaseValue0"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="MGAIBaseValue1"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="250" />
+		<Entry
+			id="MGAIBaseValue2"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="500" />
+		<Entry
+			id="MGAIBaseValue3"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="750" />
+		<Entry
+			id="MGAIBaseValue4"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="MGAIBaseValue5"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1500" />
+		<Entry
+			id="MGAIBaseValue6"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2000" />
+	</GameAsset>
+
+</AssetDefinition>

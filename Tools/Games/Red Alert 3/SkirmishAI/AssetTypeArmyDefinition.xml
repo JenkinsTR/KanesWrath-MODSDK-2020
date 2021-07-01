@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="EconomyResourceType">
+		<Entry>TIBERIUM</Entry>
+		<Entry>ORE</Entry>
+		<Entry>SIGMA</Entry>
+		<Entry>ENERGY</Entry>
+	</EnumAsset>
+
+	<GameAsset
+		id="ArmyDefinition"
+		TypeHash="213154423">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="MCVTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="GathererTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ExpanderTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="EnergyProducer"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="PrimaryResourceNodeCollector"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="PrimaryResourceThingToBuild"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="SecondaryResourceNodeCollector"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="VehicleRepairFacility"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="NavalRepairFacility"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AircraftRepairFacility"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="WallPiece"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="TechStructure"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

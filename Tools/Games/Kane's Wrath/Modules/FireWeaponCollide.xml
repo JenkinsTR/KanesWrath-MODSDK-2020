@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WhereToFireType">
+		<Entry>TARGET_OBJECT</Entry>
+		<Entry>TARGET_POSITION</Entry>
+		<Entry>OWNER_POSITION</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FireWeaponFlagsType">
+		<Entry>NONE</Entry>
+		<Entry>TARGET_MUST_BE_MOVING</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="FireWeaponFlagsBitFlags"
+		BaseEnum="FireWeaponFlagsType" />
+
+	<Asset
+		id="FireWeaponCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CollideModuleData" />
+		<EntryReference
+			id="CollideWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="Flags"
+			AssetType="FireWeaponFlagsBitFlags"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="WhereToFire"
+			AssetType="WhereToFireType"
+			IsAttribute="true"
+			Default="TARGET_OBJECT" />
+		<Entry
+			id="FireOnce"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

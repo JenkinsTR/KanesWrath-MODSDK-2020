@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+
+	<Texture
+		id="Button_DiplomacyMenu_Texture"
+		File="ART:Buttons/Diplomacy/Button_DiplomacyMenu.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_DiplomacyMenu"
+		Texture="Button_DiplomacyMenu_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_NextPlayer_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_NextPlayer.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_NextPlayer"
+		Texture="Button_Diplomacy_NextPlayer_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_PrevPlayer_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_PrevPlayer.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_PrevPlayer"
+		Texture="Button_Diplomacy_PrevPlayer_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_RequestAlliance_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_RequestAlliance.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_RequestAlliance"
+		Texture="Button_Diplomacy_RequestAlliance_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_BreakAlliance_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_BreakAlliance.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_BreakAlliance"
+		Texture="Button_Diplomacy_BreakAlliance_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_ShowAllRelations_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_ShowAllRelations.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_ShowAllRelations"
+		Texture="Button_Diplomacy_ShowAllRelations_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_RequestAlliedHelp_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_RequestAlliedHelp.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_RequestAlliedHelp"
+		Texture="Button_Diplomacy_RequestAlliedHelp_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+	<Texture
+		id="Button_Diplomacy_Accept_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_Accept.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_Accept"
+		Texture="Button_Diplomacy_Accept_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_Deny_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_Deny.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_Deny"
+		Texture="Button_Diplomacy_Deny_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_CommandMoveAttackPosition_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_CommandMoveAttackPosition.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_CommandMoveAttackPosition"
+		Texture="Button_Diplomacy_CommandMoveAttackPosition_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_MergeWithNextAlly_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_MergeWithNextAlly.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_MergeWithNextAlly"
+		Texture="Button_Diplomacy_MergeWithNextAlly_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_TakeControlOfAllied_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_TakeControlOfAllied.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_TakeControlOfAllied"
+		Texture="Button_Diplomacy_TakeControlOfAllied_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_TeamCommander_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_TeamCommander.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_TeamCommander"
+		Texture="Button_Diplomacy_TeamCommander_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_ToggleMergeAllyWithOwnTeam_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_ToggleMergeAllyWithOwnTeam.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_ToggleMergeAllyWithOwnTeam"
+		Texture="Button_Diplomacy_ToggleMergeAllyWithOwnTeam_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_ToggleMergeOwnTeamWithAlly_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_ToggleMergeOwnTeamWithAlly.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_ToggleMergeOwnTeamWithAlly"
+		Texture="Button_Diplomacy_ToggleMergeOwnTeamWithAlly_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+	
+	<Texture
+		id="Button_Diplomacy_ToggleSwitchTeams_Texture"
+		File="ART:Buttons/Diplomacy/Button_Diplomacy_ToggleSwitchTeams.dds"
+		OutputFormat="A8R8G8B8"
+		GenerateMipMaps="false" />	
+	
+	<PackedTextureImage
+		id="Button_Diplomacy_ToggleSwitchTeams"
+		Texture="Button_Diplomacy_ToggleSwitchTeams_Texture"
+		Rotated="false">
+		<Dimensions x="128" y="128"/>
+		<Coords x="0" y="0"/>
+		<TextureDimensions x="128" y="128"/>
+	</PackedTextureImage>
+
+</AssetDeclaration>

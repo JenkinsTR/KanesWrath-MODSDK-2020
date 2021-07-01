@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AISpecialPowerHeuristic">
+		<Entry>MOVEMENT</Entry>
+		<Entry>CAPTURE</Entry>
+		<Entry>UNPACK</Entry>
+		<Entry>PACK</Entry>
+		<Entry>AOE_ATTACK</Entry>
+		<Entry>TOGGLE</Entry>
+		<Entry>TIME_WARP</Entry>
+		<Entry>DOMINATE</Entry>
+		<Entry>DISGUISE</Entry>
+		<Entry>JUMP</Entry>
+		<Entry>DEPLOY</Entry>
+		<Entry>SPEED_BOOST</Entry>
+		<Entry>DUMB_FIRE</Entry>
+		<Entry>UPGRADE</Entry>
+		<Entry>INSTAKILL</Entry>
+		<Entry>INVULNERABILITY</Entry>
+		<Entry>ATTACHED_BOMB</Entry>
+		<Entry>RUSH_ATTACK</Entry>
+		<Entry>DISCHARGE</Entry>
+		<Entry>PLAYER_AOE_ATTACK</Entry>
+		<Entry>PLAYER_AOE_DEBUFF</Entry>
+		<Entry>PLAYER_AOE_BUFF</Entry>
+		<Entry>PLAYER_AOE_SHROUD_CLEAR</Entry>
+		<Entry>PLAYER_POSITION_SWAP</Entry>
+		<Entry>PLAYER_POWER_MAGNETIC_SATELLITE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ToggleStatusAiHint">
+		<Entry>TOGGLE_DEFAULT</Entry>
+		<Entry>TOGGLE_ALWAYS</Entry>
+		<Entry>TOGGLE_ONE_PER_TARGET</Entry>
+		<Entry>TOGGLE_DEFENSE_PROTECT_OTHERS</Entry>
+		<Entry>TOGGLE_DEFENSE_SELF_ONLY</Entry>
+		<Entry>TOGGLE_WEAPON</Entry>
+		<Entry>TOGGLE_TRANSFORM</Entry>
+		<Entry>TOGGLE_SHORT_RANGE_WEAPON</Entry>
+		<Entry>TOGGLE_IMMOBILIZE</Entry>
+		<Entry>TOGGLE_LOCKDOWN</Entry>
+		<Entry>TOGGLE_NO_HINT</Entry>
+		<Entry>TOGGLE_AOE_ATTACK</Entry>
+		<Entry>TOGGLE_LEECH_HEALTH_AND_WEAPON</Entry>
+		<Entry>TOGGLE_STEALTH_OTHERS</Entry>
+		<Entry>TOGGLE_SHIELD</Entry>
+		<Entry>TOGGLE_HARPOON</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AISpecialPowerManager">
+		<Entry>SKIRMISH_AI</Entry>
+		<Entry>TACTIC</Entry>
+		<Entry>MICRO_MANAGER</Entry>
+		<Entry>BUILDER</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AIAoeAttackPowerLocationPreference">
+		<Entry>PREFER_NEAREST</Entry>
+		<Entry>PREFER_CENTER_OF_ENEMIES</Entry>
+		<Entry>PREFER_MAXIMUM_DAMAGE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AIAoeAttackPowerEmanationLocation">
+		<Entry>EMANATE_FROM_SELF</Entry>
+		<Entry>EMANATE_FROM_TARGET</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AISpecialPowerWeaponData">
+		<EntryReference
+			id="Weapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TotalValueGreaterThan"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AoeAttackPowerLocationPreference"
+			AssetType="AIAoeAttackPowerLocationPreference"
+			IsAttribute="true"
+			Default="PREFER_NEAREST" />
+		<Entry
+			id="AoeAttackPowerBlockAreaAfterActivationTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="AoeAttackEmanationLocation"
+			AssetType="AIAoeAttackPowerEmanationLocation"
+			IsAttribute="true"
+			Default="EMANATE_FROM_SELF" />
+		<Entry
+			id="ToggleRangeHysteresis"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="IsDisablingAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectsFriendlies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectsSelf"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ToggleShortRangeTargetForcesTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="AIToggleSpecialPowerInfo">
+		<Entry
+			id="ToggleHint"
+			AssetType="ToggleStatusAiHint"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="UseOnlyWhenPowerAdvantageIsAbove"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="UseOnlyWhenPowerAdvantageIsBelow"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="UseOnlyWhenCostAdvantageIsAbove"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="UseOnlyWhenCostAdvantageIsBelow"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NeverUseWhenFurtherThanNUnitsFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NeverUseWhenCloserThanNUnitsFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NeverUseWhenHealthIsBelow"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="MaxZDifferenceFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="NeverUseInState"
+			AssetType="MicroManagerStateList"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="NeverUseDuringTask"
+			AssetType="MicroManagerUnitTaskList"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="SelfDefenseDamageLookAheadTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SelfDefenseDamageLookBehindTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SelfDefenseDamageFraction"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="NumOtherAttackersOnTarget"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryReference
+			id="LeechWeaponUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="LeechWeaponTargetHealthFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.1" />
+		<EntryPoid
+			id="LeechWeaponSOLModuleId"
+			IsAttribute="true" />
+		<Entry
+			id="LeechHealthActivatePowerAdvantage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.7" />
+		<Entry
+			id="LeechHealthDeactivatePowerAdvantage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.2" />
+		<EntryPoid
+			id="StealthOthersInvisibilityModuleId"
+			IsAttribute="true" />
+		<Entry
+			id="ShieldMinCostProtected"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ShieldMinEnemyDPS"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<Entry
+			id="ShieldCostAdjustPastDistanceFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="ShieldCostAdjustMultiplierAtEdge"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="NeverUseWhenTargetIsAnyKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Location"
+			AssetType="AITargetLocationBitFlags"
+			IsAttribute="true"
+			Default="Wate" />
+		<EntryRelocation
+			id="StateWeapon"
+			AssetType="AISpecialPowerWeaponData" />
+		<Entry
+			id="OnlyUseWhenHaveTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NeverUseWhenClear"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DontUseIfInRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EnemyMustBeInVisionRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="AISpecialPowerInfo">
+		<Entry
+			id="Heuristic"
+			AssetType="AISpecialPowerHeuristic"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Manager"
+			AssetType="AISpecialPowerManager"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Distance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="HealthFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TargetObjectInclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="TargetObjectExclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="UseOnlyWhenPowerAdvantageIsAbove"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="InvulnerabilityDamageLookAheadTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="InvulnerabilityDamageLookBehindTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="InvulnerabilityDamageFractionWhenOutOfRangeOfTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default=".3" />
+		<Entry
+			id="InvulnerabilityDamageFractionWhenInRangeOfTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default=".6" />
+		<Entry
+			id="InvulnerabilityAvoidUseIfAngleToNextPathNodeIsMoreThan"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="360d" />
+		<Entry
+			id="MaxTargetSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="99999.0" />
+		<Entry
+			id="MinKillValue"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinTargetsHit"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MinEnemiesNearby"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="NextLogicCommand"
+			AssetType="LogicCommandRef"
+			IsAttribute="true" />
+		<Entry
+			id="UseInMicroManagerState"
+			AssetType="MicroManagerStateList"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="UpdateObject"
+			AssetType="GameObjectRef"
+			IsAttribute="true" />
+		<Entry
+			id="SearchRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="150.0" />
+		<Entry
+			id="Location"
+			AssetType="AITargetLocationBitFlags"
+			IsAttribute="true"
+			Default="Wate" />
+		<EntryRelocation
+			id="MaxUpdatables"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="SpecialPowerWeapon"
+			AssetType="AISpecialPowerWeaponData" />
+		<Entry
+			id="NeverUseWhileRetreating"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="NeverUseWhilePullingBack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequireKillTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseNearTacticalTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseWhenOutOfAmmo"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<EntryRelocation
+			id="UseToCounterGarrison"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Modding the Shell and In-Game UI</h3>
+<h4>Basic Explanation</h4>
+<p>MODding the shell is a little tricky.&nbsp; You need 
+to know the name of the screen you are MODding so you can replace it properly.&nbsp; 
+The Sample MOD has an example of updating the Main Menu.
+</p>
+<h4>Modding the Main Menu</h4>
+<p>
+	In the MOD SDK we have provided a default Main Menu 
+screen located in the Default UI Screens\MainMenu folder.&nbsp; This contains all the 
+files you will need to update the Main Menu screen.&nbsp; The Sample MOD simply 
+updates the art files to reskin the MainMenu.
+</p>
+<h5>Data Structure</h5>
+<p>
+In your 
+MODs data folder you will need a folder 
+named AptUI.&nbsp; In this folder you can copy over the MainMenu files from the 
+Default UI Screens folder.&nbsp; There should be a sub folder named MainMenu with all 
+the Menu files in it.&nbsp; In the AptUI folder you will need an XML file that 
+includes the MainMenu.xml.&nbsp; This is a bit redundant, but is necessary to get the 
+proper directory structure in the big file that will be generated when you build 
+your MOD.
+</p>
+<p class="code">
+	&lt;Include type=&quot;all&quot; 
+source=&quot;DATA:SampleMod/Data/AptUI/MainMenu/MainMenu.xml&quot; /&gt;
+</p>
+<p>You will also need to include your MainMenu.xml in your Mod.xml file.  The Include entry should look like this:</p>
+<p class="code">
+	&lt;Include type=&quot;reference&quot; 
+source=&quot;DATA:SampleMod/Data/AptUI/MainMenu.xml&quot; /&gt;
+</p>	
+<p>
+	This xml file will then include 
+the MainMenu.xml that is located in the MainMenu folder on the disk.&nbsp; The 
+directory structure for this is very important any errors in structure will 
+cause the MOD to not function.&nbsp; You can now just replace whatever textures you 
+wish as long as they have the same name as the file you are replacing.
+</p>
+</body>
+</html>

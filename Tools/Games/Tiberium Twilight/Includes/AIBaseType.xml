@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIBaseType">
+		<Entry>MAIN_BASE</Entry>
+		<Entry>EXPANSION</Entry>
+		<Entry>CAPTURED</Entry>
+		<Entry>PRIMARY_TYPE_MAX</Entry>
+		<Entry>POINT_CENTERED</Entry>
+		<Entry>LAND_CENTERED</Entry>
+		<Entry>UNDER_ATTACK</Entry>
+		<Entry>ENEMIES_IN_BASE</Entry>
+		<Entry>OLDEST_OF_TYPE</Entry>
+		<Entry>MOST_RECENT_OF_TYPE</Entry>
+		<Entry>NO_BUILD_RADIUS</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AIBaseTypeBitFlags"
+		BaseEnum="AIBaseType" />
+
+</AssetDefinition>

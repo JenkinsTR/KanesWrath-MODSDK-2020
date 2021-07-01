@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalTelestrator"
+		TypeHash="916455758">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="DrawCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

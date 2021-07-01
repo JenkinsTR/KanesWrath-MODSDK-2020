@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DynamicsBoneVolumeType">
+		<EntryInheritance
+			id="base"
+			AssetType="DynamicsVolumeType" />
+		<Entry
+			id="BoneName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="DynamicsBoneVolumeSetType">
+		<EntryList
+			id="BoneVolume"
+			AssetType="DynamicsBoneVolumeType"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="W3DDynamicsDrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="W3DScriptedModelDrawModuleData" />
+		<Entry
+			id="Collision"
+			AssetType="DynamicsCollisionType"
+			IsAttribute="true" />
+		<Entry
+			id="IntuitiveCollision"
+			AssetType="IntuitiveCollisionType"
+			IsAttribute="true"
+			Default="COLLIDES_WITH_GROUND_ONLY" />
+		<Entry
+			id="DrawPriority"
+			AssetType="DynamicsDrawPriority"
+			IsAttribute="true"
+			Default="MUST_BE_DRAWN" />
+		<Entry
+			id="LODPriority"
+			AssetType="EffectsLODType"
+			IsAttribute="true"
+			Default="VERY_LOW" />
+		<Entry
+			id="Explodiness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FlingPerturbation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="BoneVolumes"
+			AssetType="DynamicsBoneVolumeSetType" />
+		<EntryRelocation
+			id="Lifetime"
+			AssetType="DynamicsLifetime" />
+		<Entry
+			id="InitiallyActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

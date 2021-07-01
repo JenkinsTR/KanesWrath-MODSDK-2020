@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleBaseModule" />
+
+	<Asset
+		id="RandCoord3D">
+		<Entry
+			id="x"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="y"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="z"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<EnumAsset
+		id="FXParticleSystem_Type">
+		<Entry>INVALID_TYPE</Entry>
+		<Entry>PARTICLE</Entry>
+		<Entry>DRAWABLE</Entry>
+		<Entry>STREAK</Entry>
+		<Entry>VOLUME_PARTICLE</Entry>
+		<Entry>GPU_PARTICLE</Entry>
+		<Entry>GPU_TERRAINFIRE</Entry>
+		<Entry>SWARM</Entry>
+		<Entry>TRAIL</Entry>
+		<Entry>WAVE_PARTICLE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_Priority">
+		<Entry>INVALID_PRIORITY</Entry>
+		<Entry>ULTRA_HIGH_ONLY</Entry>
+		<Entry>HIGH_OR_ABOVE</Entry>
+		<Entry>MEDIUM_OR_ABOVE</Entry>
+		<Entry>LOW_OR_ABOVE</Entry>
+		<Entry>VERY_LOW_OR_ABOVE</Entry>
+		<Entry>ALWAYS_RENDER</Entry>
+		<Entry>ULTRA_HIGH_OR_BELOW</Entry>
+		<Entry>HIGH_OR_BELOW</Entry>
+		<Entry>MEDIUM_OR_BELOW</Entry>
+		<Entry>LOW_OR_BELOW</Entry>
+		<Entry>VERY_LOW_ONLY</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_WindMotion">
+		<Entry>INVALID</Entry>
+		<Entry>NOT_USED</Entry>
+		<Entry>PING_PONG</Entry>
+		<Entry>CIRCULAR</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_GeometryType">
+		<Entry>INVALID</Entry>
+		<Entry>SIMPLE_QUAD</Entry>
+		<Entry>CENTERED_QUAD</Entry>
+		<Entry>TWO_CONCENTRIC_QUADS</Entry>
+		<Entry>TWO_QUADS</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_ShaderType">
+		<Entry>INVALID_SHADER</Entry>
+		<Entry>ADDITIVE</Entry>
+		<Entry>ADDITIVE_ALPHA_TEST</Entry>
+		<Entry>ALPHA</Entry>
+		<Entry>ALPHA_TEST</Entry>
+		<Entry>MULTIPLY</Entry>
+		<Entry>ADDITIVE_NO_DEPTH_TEST</Entry>
+		<Entry>ALPHA_NO_DEPTH_TEST</Entry>
+		<Entry>W3D_ALPHA</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_RotationType">
+		<Entry>INVALID_ROTATION</Entry>
+		<Entry>ROTATION_OFF</Entry>
+		<Entry>ROTATE_AROUND_VELOCITY</Entry>
+		<Entry>ROTATE_IN_WORLD_SPACE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXParticleSystem_WavefrontShape">
+		<Entry>INVALID</Entry>
+		<Entry>CIRCLE</Entry>
+		<Entry>LINE</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

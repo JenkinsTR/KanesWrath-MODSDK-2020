@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TriggerType">
+		<Entry>SELF_POSITION</Entry>
+		<Entry>TARGET_POSITION</Entry>
+		<Entry>TARGET_OBJECT</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="SpecialPowerModuleInfo">
+		<EntryPoid
+			id="ModuleId"
+			IsAttribute="true" />
+		<Entry
+			id="TriggerType"
+			AssetType="TriggerType"
+			IsAttribute="true"
+			Default="TARGET_POSITION" />
+		<Entry
+			id="TriggerAtTargetPosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ActivateModuleSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryList
+			id="SpecialPowerModules"
+			AssetType="SpecialPowerModuleInfo"
+			MinLength="0"
+			MaxLength="4"/>
+	</Asset>
+
+</AssetDefinition>

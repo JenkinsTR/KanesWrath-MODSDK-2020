@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AITarget">
+		<Entry
+			id="TacticalAITarget"
+			AssetType="AITargetType"
+			IsAttribute="true" />
+		<Entry
+			id="MaxTeamsPerTarget"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="UpdateTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+	</Asset>
+
+	<Asset
+		id="AIStrategicState">
+		<EntryReference
+			id="State"
+			AssetType="AIStrategicStateDefinition"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIBudgetState">
+		<EntryReference
+			id="State"
+			AssetType="AIBudgetStateDefinition"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIBuildDelay">
+		<Entry
+			id="Delay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIResourceMultiplierCheat">
+		<Entry
+			id="Percentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIBuildDelayRange">
+		<Entry
+			id="MinDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MinTTKRatio"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxTTKRatio"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<EnumAsset
+		id="AIUnitBuilderUnitChoiceShape">
+		<Entry>BEST</Entry>
+		<Entry>MIDDLE</Entry>
+		<Entry>WORST</Entry>
+		<Entry>FLAT</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="AIUnitBuilderUnitChoiceStrategy">
+		<Entry
+			id="Shape"
+			AssetType="AIUnitBuilderUnitChoiceShape"
+			IsAttribute="true"
+			Default="FLAT" />
+		<Entry
+			id="StandardDeviation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIUnitBuilderUnitChoiceStrategyAdaptive">
+		<Entry
+			id="MinEffectiveness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MaxEffectiveness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MinStandardDeviation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MaxStandardDeviation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="MinEfficiency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxEfficiency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AIUnitBuilderEvaluationDelayRange">
+		<Entry
+			id="MinDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MinEfficiency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1"/>
+		<Entry
+			id="MaxEfficiency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+		<Entry
+			id="UseAllAvailableQueues"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AIPersonalityDefMap">
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Personality"
+			AssetType="AIPersonalityDefinition"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AIWeightedOpeningMove">
+		<EntryReference
+			id="Name"
+			AssetType="SkirmishOpeningMove"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Weight"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Difficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+	</Asset>
+
+	<Asset
+		id="AISpecificUnitCap">
+		<EntryWeakReference
+			id="Unit"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Cap"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<GameAsset
+		id="AIPersonalityDefinition"
+		TypeHash="3277895259">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="PersonalityType"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="PersonalityUIName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="SecondsTillTargetsCanExpire"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="15.0" />
+		<Entry
+			id="ChanceForTargetToExpire"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ChanceForUnitsToUpgrade"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="MaxBuildingsToBeDefensiveTarget_Small"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxBuildingsToBeDefensiveTarget_Med"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="4" />
+		<Entry
+			id="ChanceToUseAllUnitsForDefenseTarget_Small"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="10%" />
+		<Entry
+			id="ChanceToUseAllUnitsForDefenseTarget_Med"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="25%" />
+		<Entry
+			id="ChanceToUseAllUnitsForDefenseTarget_Large"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="75%" />
+		<Entry
+			id="DesiredExcessPowerBuffer"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BaseCompactness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="DefaultThreatFindRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="300.0" />
+		<Entry
+			id="UnitBuilderCostEffectivenessWeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="UnitBuilderMoneyVersusTimePreference"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="UnitBuilderOverallOffensivePreference"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="UnitBuilderOverallDefensivePreference"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="UnitBuilderEnemyTowerWeight"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="Expansion_TiberiumSearchRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="500.0" />
+		<Entry
+			id="Expansion_MaxTiberiumRemaining"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3000" />
+		<Entry
+			id="ReactiveDefenseRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1200.0" />
+		<Entry
+			id="RepairBuildingsAtDifficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="EASY MEDIUM HARD BRUTAL" />
+		<Entry
+			id="EmergencyManagerHandleNoPowerAtDifficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="EmergencyManagerHandleNoIncomeAtDifficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="EmergencyManagerHandleNoConyardAtDifficulty"
+			AssetType="AIDifficultyBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="StructureSaveChanceEasy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="StructureSaveChanceMedium"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="StructureSaveChanceHard"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinHarvesters"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TimeToBeConsideredIdle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<EntryList
+			id="Side"
+			AssetType="String"
+			MinLength="1"
+			MaxLength="0" />
+		<EntryList
+			id="PersonalityMap"
+			AssetType="AIPersonalityDefMap"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BuildDelay"
+			AssetType="AIBuildDelay"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BuildDelayRange"
+			AssetType="AIBuildDelayRange"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UnitBuilderUnitChoiceStrategy"
+			AssetType="AIUnitBuilderUnitChoiceStrategy"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UnitBuilderUnitChoiceStrategyAdaptive"
+			AssetType="AIUnitBuilderUnitChoiceStrategyAdaptive"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UnitBuilderEvaluationDelayRange"
+			AssetType="AIUnitBuilderEvaluationDelayRange"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ResourceMultiplierCheat"
+			AssetType="AIResourceMultiplierCheat"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="TacticalTarget"
+			AssetType="AITarget"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="SpecificUnitCap"
+			AssetType="AISpecificUnitCap"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="OpeningMoves"
+			AssetType="OpeningMovesTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="OpeningMove"
+			AssetType="AIWeightedOpeningMove"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="States"
+			AssetType="AIStrategicState"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BudgetStates"
+			AssetType="AIBudgetState"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="UnitOverride"
+			AssetType="AIStateUnitOverride"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="SkirmishPersonality"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

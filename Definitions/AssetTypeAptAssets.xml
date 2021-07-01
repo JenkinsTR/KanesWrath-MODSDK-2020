@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset id="AptAptData" TypeHash="914776178">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		<Runtime>
+			<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		</Runtime>
+	</GameAsset>
+	
+	<GameAsset id="AptConstData" TypeHash="485025173">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<EntryFile id="File" IsAttribute="true" IsRequired="true" />
+		<Runtime>
+			<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		</Runtime>
+	</GameAsset>
+	
+	<GameAsset id="AptDatData" TypeHash="1006108345">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		<Runtime>
+			<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		</Runtime>
+	</GameAsset>
+	
+	<GameAsset id="AptGeometryData" TypeHash="1982570919">
+		<EntryInheritance id="base" AssetType="BaseAssetType" />
+		<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+		<Entry id="AptID" AssetType="SageInt" IsRequired="true" IsAttribute="true"/>
+		<Runtime>
+			<EntryFile id="File" IsRequired="true" IsAttribute="true"/>
+			<Entry id="AptID" AssetType="SageInt" IsRequired="true" IsAttribute="true"/>
+		</Runtime>
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Completing the MOD</title>
+<style>
+<!--
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	text-underline:single;
+	color:teal}
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="4">Completing the MOD</font></b></p>
+<p class="MsoNormal"><b><span style="font-family: Arial; color: black">Building 
+Your MOD:</span></b></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">The MOD SDK 
+installer creates a .bat file in the root of your install directory.&nbsp; To build 
+your MOD simply run this from a command prompt and pass it one parameter which 
+is the name of your MOD.&nbsp; You can test this on the Sample MOD by running BuildMOD.bat 
+SampleMOD from the command line:</span></p>
+<p class="MsoNormal"><span style="font-family: Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Installation Folder:\&gt; BuildMOD.bat SampleMOD</span><span style="font-family: Arial; color: black">&nbsp; 
+<br>
+<br>
+<p class="MsoNormal"><span style="font-family: Arial; color: red; font-weight: bold;">Windows Vista Only:&nbsp;</span><br />
+<span style="font-family: Arial">The Buildmod.bat file must be run from an elevated (one with Administrator privileges) command prompt, which can be done by using Run as Administrator when starting cmd.</span></p>
+This will create and generate a 
+.big file for you.&nbsp; Once you’ve successfully built your MOD the big file for 
+your MOD will be located in the BuiltMods\MODs folder.&nbsp; In the case of the 
+Sample MOD this will be sampleMOD.big.&nbsp; The .bat file will also automatically 
+copy this file to the My Documents\Command &amp; Conquer 3 Tiberium Wars\mods\&lt;mod 
+name&gt; folder.&nbsp; This is where your completed MODs should be placed to be run in 
+the game.&nbsp; The only step left to getting your MOD to appear in the game is the 
+creation of a Skudef file which is covered in the next section of this document.</span></p>
+<p class="MsoNormal"><b><span style="font-family: Arial; color: black">
+<font color="#000000">
+<span style="text-decoration: none">Building a Custom Map:</span></font></span></span></b></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">
+<font color="#000000">
+<span style="text-decoration: none">If you have created a map that uses assets from your new 
+MOD you will need to 
+build this map before you build the MOD so that it is properly packed into your 
+new big file.&nbsp; We have supplied a batch file to do this for you.&nbsp; Simply run the BuildMap.bat from the root of the 
+MOD SDK install directory passing it two 
+parameters, the name of your MOD and the name of your map.&nbsp; For example:</span></font></span></span></p>
+<p class="MsoNormal" style="margin-left: .5in">
+<span style="font-family: Arial; color: black">
+<font color="#000000"><span style="text-decoration: none">BuildMap.bat SampleMOD 
+SampleMap</span></font></span></span></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: red; font-weight: bold;">Windows Vista Only:&nbsp;</span><br />
+<span style="font-family: Arial">The Buildmap.bat file must be run from an elevated (one with Administrator privileges) command prompt, which can be done by using Run as Administrator when starting cmd.</span></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">
+<font color="#000000">
+<span style="text-decoration: none">This file will copy your map file from the default save location to your 
+MODs 
+folder than process it with the Binary Asset Builder which will place the 
+compiled files into your BuiltMODs directory.&nbsp; After doing this step you can 
+build your MOD using BuildMOD.bat as indicated in the section above.</span></font></span></span></p>
+<p class="MsoNormal"><b><span style="font-family: Arial; color: black">Creating 
+a SkuDef File:</span></b></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">The creation 
+of the SkuDef file is the final step in getting your MOD to appear in the game.&nbsp; 
+The name of the SkuDef file is very important.&nbsp; It should follow this format:</span></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">&lt;modname&gt;_&lt;modversion&gt;.SkuDef</span></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">The 
+SampleMOD SkuDef is named: SampleMOD_1.0.SkuDef.</span></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">The SkuDef 
+is just a text file that tells the game about your big file.&nbsp; Here is what 
+the Sample MOD SkuDef file looks like on the inside:</span></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Arial">
+<span style="font-family: Consolas; color: black">mod-game 1.7<br>
+add-big samplemod.big</span></font></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">The first 
+line tells the game what version of the game this MOD runs with.&nbsp; The second 
+line just tells the game about your big file.&nbsp; The SkuDef file should be located 
+in the same directory as your .big file in the My Documents folder listed in the 
+previous section.</span></p>
+<p class="MsoNormal"><b><font face="Arial" color="black" size="3">
+<span style="font-weight: bold; color: #FF0000; font-family: Arial">Please note 
+that the maximum length your mod name can be is 15 characters.</span></font></b></p>
+<p class="MsoNormal"><b><span style="font-family: Arial; color: black">Launching 
+Your MOD in Game:</span></b></p>
+<p class="MsoNormal"><span style="font-family: Arial; color: black">Launch the 
+Command &amp; Conquer 3 Tiberium Wars™ Control Center from the Start Menu, then 
+click on the Game Launcher button.&nbsp; You will now be presented with a screen with 
+two tabs Replays and MODs.&nbsp; Select the MODs folder if it has not already been 
+selected.&nbsp; Find your MOD in the list, and click on the launch button.&nbsp; That’s 
+it!&nbsp; You should now be checking out your MOD in-game.</span></p>
+<p align="left">&nbsp;</p>
+
+</body>
+
+</html>

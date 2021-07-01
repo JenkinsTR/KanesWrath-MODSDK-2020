@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<!--Base: UpdateModuleData in xsd-->
+	<Asset
+		id="FoundationAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AIUpdateModuleData" />
+		<Entry
+			id="RepairHealthPercentPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BuildVariation"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

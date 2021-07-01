@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ReceiverDistanceType">
+		<Entry>CIRCULAR</Entry>
+		<Entry>RECTANGULAR</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TechUpgradeReceiverModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="RadiusY"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DistanceType"
+			AssetType="ReceiverDistanceType"
+			IsAttribute="true"
+			Default="CIRCULAR" />
+		<Entry
+			id="FXLineBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryPoid
+			id="RadarDrawModule"
+			IsAttribute="true" />
+		<Entry
+			id="RadarRotateSpeed"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0.1r" />
+		<Entry
+			id="RadarRotateOffset"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0r" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+</AssetDefinition>

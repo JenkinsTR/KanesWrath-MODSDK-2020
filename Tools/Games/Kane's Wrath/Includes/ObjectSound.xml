@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AudioVoiceEntry">
+		<EntryInheritance
+			id="base"
+			AssetType="SoundOrEvaEvent" />
+		<Entry
+			id="AudioType"
+			AssetType="ThingTemplateVoiceType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AudioObjectSpecificVoiceEntry">
+		<EntryInheritance
+			id="base"
+			AssetType="SoundOrEvaEvent" />
+		<Entry
+			id="AudioType"
+			AssetType="ThingTemplateObjectSpecificVoiceType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="TargetObject"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AudioVoiceReferentialEntry">
+		<EntryInheritance
+			id="base"
+			AssetType="SoundOrEvaEvent" />
+		<EntryPoid
+			id="Name"
+			IsAttribute="true"
+			IsRequired="true"
+			IsUpperCase="true" />
+	</Asset>
+
+	<Asset
+		id="AudioSoundEntry">
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AudioType"
+			AssetType="ThingTemplateSoundType"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AudioArrayVoice">
+		<EntryList
+			id="AudioEntry"
+			AssetType="AudioVoiceEntry"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ObjectSpecificEntry"
+			AssetType="AudioObjectSpecificVoiceEntry"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="NamedEntry"
+			AssetType="AudioVoiceReferentialEntry"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="AudioArraySound">
+		<EntryList
+			id="AudioEntry"
+			AssetType="AudioSoundEntry"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

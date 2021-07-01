@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="PurchasePlayerTechButtonTemplate"
+		TypeHash="2999033148">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="PlayerTech"
+			AssetType="PlayerTechRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="StateData"
+			AssetType="ButtonSingleStateDataRef"
+			IsAttribute="true"
+			IsRequired="true" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechMedicalBay">
+		<Object>MetaTechMedicalBay</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechBarracks">
+		<Object>MetaTechBarracks</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechReclamatorHub">
+		<Object>MetaTechReclamatorHub</Object>
+	</LogicCommand>
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechCrane">
+		<Object>MetaTechCrane</Object>
+	</LogicCommand>
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechHangar">
+		<Object>MetaTechHangar</Object>
+	</LogicCommand>
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechTechCenter">
+		<Object>MetaTechTechCenter</Object>
+	</LogicCommand>
+
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechWarFactory">
+		<Object>MetaTechWarFactory</Object>
+	</LogicCommand>	
+	
+	<LogicCommand
+		Type="CONSTRUCTION_YARD_CONSTRUCT"
+		id="Command_ConstructMetaTechCommandPost">
+		<Object>MetaTechCommandPost</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaTechSuperAvatar">
+		<Object>MetaTechSuperAvatar</Object>
+	</LogicCommand>
+	
+	<LogicCommand
+		Type="UNIT_BUILD"
+		id="Command_ConstructMetaTechMCV">
+		<Object>MetaTechMCV</Object>
+	</LogicCommand>
+		
+	<LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_PackMetaTechMCV">
+		<SpecialPower>SpecialPower_GrantPackUpgrade</SpecialPower>
+	</LogicCommand>
+	
+</AssetDeclaration>

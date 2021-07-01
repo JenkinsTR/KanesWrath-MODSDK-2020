@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="BaseAssetType">
+		<!--Entry
+			id="id"
+			AssetType="InstanceId"
+			IsAttribute="true"
+			Default="UnnamedAsset"/>
+		<EntryRelocation
+			id="typeHashCode"
+			AssetType="HashCode"
+			IsAttribute="true"
+			Default="00000000" />
+		<Entry
+			id="buildRule"
+			AssetType="BuildRule"
+			IsAttribute="true" /-->
+	</GameAsset>
+		
+	<!--EnumAsset
+		id="InheritString">
+		<EntryPattern>([0-9a-zA-Z_.-]*:)?[0-9a-zA-Z_.-]*</EntryPattern>
+	</EnumAsset-->
+	
+	<Asset
+		id="BaseInheritableAsset">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<!--Entry
+			id="inheritFrom"
+			AssetType="String"
+			IsAttribute="true"/-->
+	</Asset>
+	
+	<!--EnumAsset
+		id="HashCode">
+		<EntryPattern>[0-9a-fA-F]{8}</EntryPattern>
+	</EnumAsset>
+	
+	<EnumAsset
+		id="InstanceId">
+		<EntryPattern>[0-9a-zA-Z_.-]+</EntryPattern>
+	</EnumAsset-->
+	
+	<EnumAsset
+		id="IncludeType">
+		<Entry>reference</Entry>
+		<Entry>instance</Entry>
+		<Entry>all</Entry>
+	</EnumAsset>
+	
+	<Asset id="DataBlob">
+		<EntryFile
+			id="File" />
+		<Runtime>
+			<CData>
+				<EntryFile
+					id="File" />
+			</CData>
+		</Runtime>
+	</Asset>
+	
+	<Asset
+		id="Tag">
+		<Entry
+			id="name"
+			AssetType="String"
+			IsRequired="true"
+			IsAttribute="true" />
+		<Entry
+			id="tag"
+			AssetType="String"
+			IsRequired="true"
+			IsAttribute="true" />
+	</Asset>
+	
+	<Asset
+		id="Define">
+		<Entry
+			id="name"
+			AssetType="String"
+			IsRequired="true"
+			IsAttribute="true" />
+		<Entry
+			id="value"
+			AssetType="String"
+			IsRequired="true"
+			IsAttribute="true" />
+		<Entry
+			id="override"
+			AssetType="SageBool"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

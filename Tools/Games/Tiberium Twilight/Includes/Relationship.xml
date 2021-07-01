@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="RelationshipType">
+		<Entry>ENEMIES</Entry>
+		<Entry>NEUTRAL</Entry>
+		<Entry>ALLIES</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="RelationshipBitFlags"
+		BaseEnum="RelationshipType" />
+
+</AssetDefinition>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Texture id="HC_NUSabtr_UGCL" File="HC_NUSabtr_UGCL.dds" OutputFormat="DXT5"/>
+</AssetDeclaration>

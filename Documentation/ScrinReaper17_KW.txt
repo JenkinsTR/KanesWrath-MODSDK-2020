@@ -1,0 +1,85 @@
+Reaper-17
+	Units
+		Infantry
+		
+			Buzzer
+			Disintegrator
+			Assimilator
+			Shock Trooper
+			Ravager
+		
+		Vehicles
+		
+			Shard Walker
+			Seeker
+			Devourer Tank
+			Mechapede
+			Corrupter
+			Explorer
+			Shielded Harvester
+			Reaper Tripod
+			Eradicator Hexapod
+			
+		Aircraft
+		
+			Stormrider
+			Drone Ship
+			Mothership
+	
+	Structures
+		Production
+		
+			Drone Platform
+			Portal
+			Warp sphere
+			Gravity Stabilizer
+			Foundry
+			Warp Chasm (Kane's Wrath only)
+			
+		Support
+		
+			Reactor
+			Extractor
+			Nerve Center
+			Stasis Chamber
+			Technology Assembler
+			Signal Transmitter
+			Growth Stimulator
+			Outpost
+		
+		Defenses
+		
+			Buzzer Hive
+			Photon Cannon
+			Plasma Missile Battery
+			Storm Column
+			Rift Generator
+			Tiberium Hive (Kane's Wrath only)
+			Lightning Spike
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Reconstruction Drones
+			Lightning Spike
+			The Swarm
+			Tiberium Vibration Scan
+			Stasis Shield
+			Phase Field
+			Rift
+			Mothership
+			Ichor Seed
+			Infestation
+			Overlord's Wrath
+			Shock Pods
+			
+		Upgrades
+		
+			Blink Packs
+			Forcefield Generators
+			Fusion Core
+			Plasma Disc Launchers
+			Shard Launchers (Kane's Wrath only)
+			Attenuated Forcefields (Kane's Wrath only)
+			Blue Shards
+			Conversion Reserves

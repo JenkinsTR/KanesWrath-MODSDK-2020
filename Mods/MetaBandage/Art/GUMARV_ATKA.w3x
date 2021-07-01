@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:gumarv_skl.w3x"/>
+	</Includes>
+	<W3DAnimation id="GUMARV_ATKA" Hierarchy="GUMARV_SKL" NumFrames="20" FrameRate="30">
+		<Channels>
+			<ChannelQuaternion Pivot="161" Type="Orientation" FirstFrame="0">
+				<Frame X="0.000000" Y="0.000000" Z="0.000000" W="1.000000" />
+				<Frame X="0.046539" Y="0.000000" Z="0.000000" W="0.998916" />
+				<Frame X="0.095295" Y="0.000000" Z="0.000000" W="0.995449" />
+				<Frame X="0.146057" Y="0.000000" Z="0.000000" W="0.989276" />
+				<Frame X="0.198527" Y="0.000000" Z="0.000000" W="0.980095" />
+				<Frame X="0.252319" Y="0.000000" Z="0.000000" W="0.967644" />
+				<Frame X="0.306962" Y="0.000000" Z="0.000000" W="0.951722" />
+				<Frame X="0.361914" Y="0.000000" Z="0.000000" W="0.932211" />
+				<Frame X="0.416584" Y="0.000000" Z="0.000000" W="0.909097" />
+				<Frame X="0.470353" Y="0.000000" Z="0.000000" W="0.882479" />
+				<Frame X="0.522614" Y="0.000000" Z="0.000000" W="0.852569" />
+				<Frame X="0.572802" Y="0.000000" Z="0.000000" W="0.819693" />
+				<Frame X="0.620425" Y="0.000000" Z="0.000000" W="0.784266" />
+				<Frame X="0.665084" Y="0.000000" Z="0.000000" W="0.746769" />
+				<Frame X="0.706492" Y="0.000000" Z="0.000000" W="0.707721" />
+				<Frame X="0.744476" Y="0.000000" Z="0.000000" W="0.667649" />
+				<Frame X="0.778971" Y="0.000000" Z="0.000000" W="0.627060" />
+				<Frame X="0.810008" Y="0.000000" Z="0.000000" W="0.586420" />
+				<Frame X="0.837695" Y="0.000000" Z="0.000000" W="0.546138" />
+				<Frame X="0.862204" Y="-0.000000" Z="-0.000000" W="0.506561" />
+			</ChannelQuaternion>
+		</Channels>
+	</W3DAnimation>
+</AssetDeclaration>

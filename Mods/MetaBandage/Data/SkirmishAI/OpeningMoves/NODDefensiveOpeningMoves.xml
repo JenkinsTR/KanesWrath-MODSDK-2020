@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="NODSuperweaponRush"
+    Side="NOD"> <!--Power: +10-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Time="75s" Account="PRODUCTION" Deposit="4000" />
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODOperationsCenter" /> <!--Time: 15 Power: -10-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODTechAssemblyPlant" /> <!--Time: 40 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODTempleOfNOD" /> <!--Time: 50 Power: -20-->
+    <Order Time="195s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+     id="NODDualBarracks"
+     Side="NOD">
+    <Order Time="0s" Account="PRODUCTION" Deposit="2000" />
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Build="NODRefinery" />  <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODHandOfNOD" /> <!--Time: 5 Power: -5-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Time="115s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

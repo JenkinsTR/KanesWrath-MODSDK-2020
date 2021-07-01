@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AICannotAttackTargetReaction">
+		<Entry>TreatLikeSuccess</Entry>
+		<Entry>Disband</Entry>
+		<Entry>ReturnHomeAndDisband</Entry>
+		<Entry>Ignore</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

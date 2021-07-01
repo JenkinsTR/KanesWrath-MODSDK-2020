@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="thundermods.net" />
+	<meta name="copyright" content="thundermods.net" />
+	<meta name="description" content="Documentation - WrathEd" />
+
+	<link rel="stylesheet" href="Documentation.css" />
+	<title>Documentation - WrathEd - XML Assets</title>
+</head>
+<body>
+<div align="center">
+	<div class="content">
+		<div class="navigation">
+			<div class="navigationhead">WrathEd</div>
+			<div class="navigationlink">• <a href="index.htm" class="navigation">Index</a></div>
+			<div class="navigationhead">Mod Creation</div>
+			<div class="navigationlink">• <a href="DirectoryStructure.htm" class="navigation">Directory Structure</a></div>
+			<div class="navigationlink">• XML Assets</div>
+			<div class="navigationlink">• <a href="CustomMaps.htm" class="navigation">Custom Maps</a></div>
+			<div class="navigationlink">• <a href="BuildingAMod.htm" class="navigation">Building a Mod</a></div>
+			<div class="navigationlink">• <a href="LaunchingAMod.htm" class="navigation">Launching a Mod</a></div>
+		</div>
+		<div class="main">
+Almost all of the data in newer SAGE games is stored in xml files as part of Asset Declarations. There are a wide variety of types of assets which define everything from a command button to a unit.<br />
+<br />
+<span class="title">Basic Structure</span><br />
+Every XML Asset in SAGE games is part of  Asset Declaration. This is the root level of the xml tree, and is something that will need to be in every single xml file you create. An example of a blank xml file:
+<pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;AssetDeclaration xmlns="uri:ea.com:eala:asset"&gt;
+&lt;/AssetDeclaration&gt;</pre>
+<br />
+<span class="title">Includes</span><br />
+There are two types of includes: "reference" and "all". If you are referencing an asset of another stream (an asset stored in another manifest file) you have to include a reference of it. For example:
+<pre>&lt;Include type="reference" source="global.xml" /&gt;</pre>
+This would include the global stream where almost all audio assets are stored.<br />
+<br />
+If you want to just include another xml file you use:
+<pre>&lt;Include type="all" source"myFile.xml /&gt;</pre>
+The source attribute of "all" includes may either contain:<br />
+- an absolute path<br />
+- a relative path<br />
+- a path starting with a macro<br />
+<br />
+<span class="title">Macros</span><br />
+There are 3 different macros for WrathEd: (. is denoting the directory of the entry file)<br />
+<b>DATA:</b> with this macro will go through ".", ".\Mods", ".\CnC3Xml", ".\SageXml" and check if that file exists.<br />
+<b>ART:</b> with this macro will go through "..\Art", ".\Art" and check if that file exists.<br />
+<b>AUDIO:</b> with this macro will go through "..\Audio", ".\Audio" and check if that file exists.<br />
+<br />
+<span class="title">Defines</span><br />
+<span class="important">Defines are not yet supported!</span><br />
+<br />
+<span class="title">XInclude</span><br />
+<span class="important">XInclude is not yet supported!</span><br />
+<br />
+<span class="title">inheritFrom</span><br />
+<span class="important">The inheritFrom attribute like in the SDKs by EA is not yet supported!</span><br />
+<br />
+<span class="title">Game Definition Files</span><br />
+To understand what options are available for use within an AssetDeclaration, or a particular type of object, you can refer to the Game Definitions. They are used by WrathEd to allow it to understand how to process the data.<br />
+The Game Definition files can be found in:
+<pre>Tools\Games\[name of the game]</pre>
+All elements called GameAsset can be placed at the root level within an Asset Declaration.<br />
+<br />
+<span class="title"><span class="important">Asset References</span></span><br />
+<span class="important">Asset references like audio and art references reference a base type. To reference the right asset in the compiled files you have to add the type name in front of the asset name. For example:</span>
+<pre>W3DContainer:ABBHive</pre>
+instead of
+<pre>ABBHive</pre>
+<span class="title">Extracting Original Assets</span><br />
+WrathEd has the ability to extract assets directly from the game files. To do so you just start WrathEd.exe without any parameters. Now use "Load SkuDef..." and load your CNC3EP1_[language]_1.2.SkuDef file. Then you just have to find the asset you are looking for, click on it and copy/paste the xml element that appears on the right into your file.<br />
+<br />
+<span class="title"><span class="important">Pipeline Object IDs</span></span><br />
+<span class="important">There are some attributes called Pipeline Object IDs (EntryPoid in the Game Definition) which refer to hashed string values. These values are not reverted to strings so you might have to revert them by yourself. For Example:</span><br />
+If you extract AlienAnnihilatorTripod in the AudioArrayVoice element you will get this element:
+<pre>			&lt;NamedEntry
+				Sound="ALI_Buzzers_SoundSplit"
+				Name="04FEE848" /&gt;</pre>
+You will have to replace the value of the Name attribute with UncombineWithUnit (and as said before add the type for the Sound attribute). So you get:
+<pre>			&lt;NamedEntry
+				Sound="AudioEvent:ALI_Buzzers_SoundSplit"
+				Name="UncombineWithUnit" /&gt;</pre>
+You can open the asset in the stringhashes stream with Big View to search for hashed strings.
+		</div>
+	</div>
+</div>
+</body>
+</html>

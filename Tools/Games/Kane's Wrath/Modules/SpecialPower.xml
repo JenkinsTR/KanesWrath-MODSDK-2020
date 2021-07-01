@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AntiCategory"
+			AssetType="AttributeModifierCategoryBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="AntiFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="AttributeModifierRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="AttributeModifierFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="WeatherDuration"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="RequirementsFilterMPSkirmish"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryReference
+			id="InitiateFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="TriggerFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="SetModelCondition"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="SetModelConditionTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="GiveLevels"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ChangeWeather"
+			AssetType="WeatherType"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="OnTriggerRechargeSpecialPower"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="BurnDecayModifier"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxDistanceFromCommandCenter"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AttributeModifierAffects"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="RequirementsFilterMP"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="RequirementsFilterStrategic"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="InitiateSound"
+			AssetType="SoundOrEvaEvent" />
+		<Entry
+			id="UpdateModuleStartsAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartsPaused"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ReEnableAntiCategory"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AttributeModifierAffectsSelf"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AttributeModifierWeatherBased"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="TargetEnemy"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="TargetAllSides"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DisableDuringAnimDuration"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IdleWhenStartingPower"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectGood"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectEvil"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AffectAllies"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AvailableAtStart"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="AdjustVictim"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseDistanceFromCommandCenter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="ChildModuleHandlesFX"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

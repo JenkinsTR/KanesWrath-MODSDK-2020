@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="TelefragType">
+		<Entry>NONE</Entry>
+		<Entry>HEALTH_SUBTRACTION</Entry>
+		<Entry>INSTANT_DEATH_TELEPORTER_ONLY</Entry>
+		<Entry>SWAP</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TeleportStoredObjectsUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="TriggerFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="TargetFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="FadeInTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="InitialDelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ScaleFadeInTimeByDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Telefrag"
+			AssetType="TelefragType"
+			IsAttribute="true"
+			Default="NONE" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Shader"
+			AssetType="ShaderOverrideRefRef"
+			IsAttribute="true" />
+		<Entry
+			id="DisabledTypesToProcess"
+			AssetType="DisabledBitFlags"
+			IsAttribute="true"
+			Default="HELD" />
+		<EntryRelocation
+			id="InstaKillObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="CollidesWithOnTeleport"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="GetObjectsCurrentlyAtStorePosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

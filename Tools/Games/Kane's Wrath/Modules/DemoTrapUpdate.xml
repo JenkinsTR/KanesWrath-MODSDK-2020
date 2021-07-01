@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DemoTrapUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="DetonationWeaponTemplate"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="IgnoreKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ManualModeWeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="DetonationWeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="ProximityModeWeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="TriggerDetonationRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScanFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="DefaultsToProximityMode"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="FriendlyDetonation"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="DetonateWhenKilled"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

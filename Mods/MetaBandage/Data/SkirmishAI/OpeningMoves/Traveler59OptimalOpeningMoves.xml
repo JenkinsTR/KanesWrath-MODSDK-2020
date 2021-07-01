@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="Traveler59_EASY"
+    Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" />
+    <Order Build="Traveler59Foundry" />
+    <Order Build="Traveler59Portal" />
+    <Order Build="Traveler59Portal" />
+    <Order Build="Traveler59PowerProjector" />
+    <Order Build="Traveler59TiberiumTower" />
+    <Order Build="Traveler59Gateway" />
+    <Order Build="Traveler59PowerProjector" />
+
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+
+    <Order Time="180s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Traveler59Standard"
+    Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59Buzzers" />
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="104s" Account="PRODUCTION" Deposit="1000" />
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Traveler59Standard2"
+    Side="Traveler59"> <!--Power: +10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Time="62s" Account="PRODUCTION" Deposit="4500" />
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Time="170s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Traveler59StandardCrane"
+    Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+    <!--Order Time="149s" Account="PRODUCTION" Deposit="1000" /-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="185s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Traveler59Opening"
+    Side="Traveler59"> <!--Power: +10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59ControlCenter" /> <!--Time: 15 Power: -8-->
+    <Order Build="Traveler59Reactor" /> <!--Time: 40 Power: -10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59WarpBeacon" /> <!--Time: 10 Power: -7-->
+    <Order Build="Traveler59WarpBeacon" /> <!--Time: 10 Power: -7-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59SignalTransmitter" /> <!--Time: 30 Power: -10-->
+
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59PlanetaryAssaultCarrier" />
+    <Order Build="Traveler59PlanetaryAssaultCarrier" />
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59DevastatorWarship" /> 
+    <Order Build="Traveler59PlanetaryAssaultCarrier" />
+    <Order Build="Traveler59PlanetaryAssaultCarrier" />
+    <Order Time="408s" />
+  </SkirmishOpeningMove>
+  
+  <SkirmishOpeningMove
+    id="Traveler59BrutalCrane"
+    Side="Traveler59"> <!--Power: +10-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59Foundry" /> <!--Time: 15 Power: -10-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Time="119s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Traveler59Gateway" /> <!--Time: 20 Power: -6-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Traveler59PowerProjector" /> <!--Time: 6 Power: +20-->
+	<Order Build="Traveler59Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Traveler59TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="247s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

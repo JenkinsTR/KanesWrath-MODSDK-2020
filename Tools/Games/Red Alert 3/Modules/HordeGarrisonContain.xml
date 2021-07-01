@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HordeGarrisonContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="GarrisonContainModuleData" />
+		<Entry
+			id="ExitDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="EntryOffset"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="EntryPosition"
+			AssetType="Vector3" />
+		<EntryRelocation
+			id="ExitOffset"
+			AssetType="Vector3" />
+	</Asset>
+
+</AssetDefinition>

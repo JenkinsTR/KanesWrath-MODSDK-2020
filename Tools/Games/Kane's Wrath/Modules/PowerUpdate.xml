@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="PowerUpdateType">
+		<Entry>BACKUP_GENERATOR</Entry>
+		<Entry>INVALID</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="PowerUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="UpdatePeriod"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="ReloadTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Type"
+			AssetType="PowerUpdateType"
+			IsAttribute="true"
+			Default="INVALID" />
+	</Asset>
+
+</AssetDefinition>

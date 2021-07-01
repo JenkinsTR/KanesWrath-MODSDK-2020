@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseTacticalCommandMisc">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="CombineCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ChargeDefensesCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="ConversionBeamCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

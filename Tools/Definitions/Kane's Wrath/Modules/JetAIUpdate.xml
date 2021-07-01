@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LockonInfo">
+		<Entry
+			id="LockonTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LockonCursor"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LockonInitialDist"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="LockonFreq"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="LockonAngleSpin"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="720d" />
+		<Entry
+			id="LockonBlinky"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="JetAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AIUpdateModuleData" />
+		<Entry
+			id="OutOfAmmoDamagePerSecond"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="OutOfAmmoDamageDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="TakeoffSpeedForMaxLift"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="TakeoffPause"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MinHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ParkingOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SneakyOffsetWhenAttacking"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="AttackLocomotorType"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+		<Entry
+			id="AttackLocomotorPersistTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AttackersMissPersistTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ReturnForAmmoLocomotorType"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+		<Entry
+			id="ReturnToBaseIdleTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="UseForOutOfAmmoCheck"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="OutOfAmmoEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LockonInfo"
+			AssetType="LockonInfo" />
+		<Entry
+			id="NeedsRunway"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ReturnToBaseWhenVictimDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="KeepsParkingSpaceWhenAirborne"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CirclesForAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

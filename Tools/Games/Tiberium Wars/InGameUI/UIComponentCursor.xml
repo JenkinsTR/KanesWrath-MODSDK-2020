@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentCursor">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AptEventCursorChanged"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="DecalCloud"
+			AssetType="InGameUIDecalCloudSettings" />
+	</Asset>
+
+</AssetDefinition>

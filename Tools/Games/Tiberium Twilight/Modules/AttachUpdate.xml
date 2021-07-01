@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AttachUpdateFlagsType">
+		<Entry>FIND_BEST_PARENT</Entry>
+		<Entry>UNCONTAINED_ONLY</Entry>
+		<Entry>SAME_PLAYER_ONLY</Entry>
+		<Entry>ONE_ATTACH_PER_PARENT</Entry>
+		<Entry>STICK_TO_PARENT</Entry>
+		<Entry>TELEPORT</Entry>
+		<Entry>USE_GEOMETRY</Entry>
+		<Entry>USE_PARENT_POSITION_ELEVATION</Entry>
+		<Entry>DETACH_WHEN_PARENT_HEALED</Entry>
+		<Entry>DETACH_WHEN_PARENT_OUT_OF_SLAVE_RANGE</Entry>
+		<Entry>PARENT_MUST_BE_FULL_HEALTH_TO_DETACH</Entry>
+		<Entry>SCAN_FOR_NEW_PARENT_WHEN_DETACHED</Entry>
+		<Entry>CAN_ATTACH_TO_HORDE_MEMBERS</Entry>
+		<Entry>DIE_WHEN_DETACH_ALWAYS</Entry>
+		<Entry>DIE_WHEN_DETACH_FROM_PARENT_HEAL</Entry>
+		<Entry>DIE_WHEN_PARENT_DIES_FROM_NOT_ME</Entry>
+		<Entry>LEECH_DAMAGE_FROM_PARENT</Entry>
+		<Entry>MOVE_ORDER_FORCES_DETACH</Entry>
+		<Entry>TELEPORT_AND_ALIGN_WITH_PARENT</Entry>
+		<Entry>INSTANT_TELEPORT_ON_PARENT_TELEPORT</Entry>
+		<Entry>ADD_BOUNCE_TO_PARENT</Entry>
+		<Entry>TRANSFER_ON_REPLACE_SELF</Entry>
+		<Entry>ABSORB_ALL_DAMAGE</Entry>
+		<Entry>DIE_WHEN_PARENT_HAS_FORBIDDEN_STATUS</Entry>
+		<Entry>DEFECT_WHEN_PARENT_DEFECTS</Entry>
+		<Entry>DETACH_WHEN_IDLE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AttachUpdateFlagsBitFlags"
+		BaseEnum="AttachUpdateFlagsType" />
+
+	<Asset
+		id="AttachUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ParentStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ParentStatusAttached"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AttachedObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AttachedModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenParentStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="IgnoreForbiddenParentStatusStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ParentStatusToCopy"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ParentStatusToPrefer"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Range"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CloseEnoughRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<EntryReference
+			id="ParentOwnerAttachmentEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ParentAllyAttachmentEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ParentEnemyAttachmentEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="AttachFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DetachFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ParentOwnerDiedEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ParentAllyDiedEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ParentEnemyDiedEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="InitialAttachDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="IdleScanDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.35s" />
+		<Entry
+			id="Flags"
+			AssetType="AttachUpdateFlagsBitFlags"
+			IsAttribute="true"
+			Default="STICK_TO_PAREN" />
+		<Entry
+			id="ParentDeathTypeToListenFor"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="ALL" />
+		<Entry
+			id="NoDieIfStatusActive"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ParentPositionElevation"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="BounceAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="BounceTimeout"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.33s" />
+		<EntryRelocation
+			id="DamageTypesToNotLeech"
+			AssetType="DamageBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="DeathTypesToNotLeech"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenParentStatusDieDeathType"
+			AssetType="DeathType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<EntryRelocation
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="ModifierToLeechFromParent"
+			AssetType="AttributeModifierRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

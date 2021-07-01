@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UIStateProposition">
+		<Entry>Invalid</Entry>
+		<Entry>CommandBarIsOpen</Entry>
+		<Entry>StanceCommandBarIsOpen</Entry>
+		<Entry>InRadarMode</Entry>
+		<Entry>PlayerTechStoreIsOpen</Entry>
+		<Entry>AdvancedCommandPanelIsOpen</Entry>
+		<Entry>PlacingAStructure</Entry>
+		<Entry>MainStructureBuildPageIsOpen</Entry>
+		<Entry>OtherStructureBuildPageIsOpen</Entry>
+		<Entry>InfantryBuildPageIsOpen</Entry>
+		<Entry>VehicleBuildPageIsOpen</Entry>
+		<Entry>AircraftBuildPageIsOpen</Entry>
+		<Entry>WatercraftBuildPageIsOpen</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,17 @@
+<MapMetaData BorderSize="20" CRC="0" Description="Map:MAP_MP_4_RAO/Desc" DisplayName="MAP_MP_4_RAO" FileName="Data\maps\official\MAP_MP_4_RAO\MAP_MP_4_RAO.map" Height="340" IsMultiplayer="true" IsOfficial="true" NumPlayers="4" Width="340" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="2450" y="550" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="2400" y="2400" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="600" y="2400" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="600" y="550" z="0" />
+  </StartPosition>
+</MapMetaData>

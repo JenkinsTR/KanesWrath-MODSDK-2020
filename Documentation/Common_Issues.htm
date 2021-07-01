@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+			a {
+			font-weight: bold;
+			}
+		</style>
+	</head>
+<body>
+	<h3>Common Issues</h3>
+<h4>BuildMod.bat crashes when running</h4>
+<p>You likely do not have all of the <a href="required_apps.htm">Required Applications</a> installed.  
+Make sure you have all of them installed, and then try running it again.</p>
+<h4>The Sample Mod won't build</h4>
+<p>The Sample Mod requires ANTLR and MVP to be installed.  See the <a href="required_apps.htm">Required Applications</a> page for information
+	on where to find them and install them.
+</p>
+<h4>My Mod doesn't show up in the Mod Launcher</h4>
+<p>Make sure you have created the <a href="buildmod.htm">SKUDef File</a> as described in the <a href="buildmod.htm">Building a Mod</a> section.
+</p>
+<h4>My Mod crashes while the game is loading</h4>
+<p>If your mod name is longer than 15 characters the game will crash on startup.  If your mod name is too long, rename it to something shorter.
+</p>
+<h4>My Mod doesn't appear to be working</h4>
+<p>If you don't see any effect from activating your mod, be sure that there weren't any critical errors during the build process.  Due to the way the 
+	pipeline works, a critical error in Binary Asset Builder will not stop the BuildMod.bat from finishing and building a Big file.  A critical error
+	will have the prefix Critical: in front of it in the build output.
+</p>
+<h4>When overriding an existing unit, Binary Asset Builder shows a large number of errors about missing files</h4>
+<p>This is normal, and is not in fact a problem.  Binary Asset Builder cannot find the source files for the art, but they are not needed.  Your unit
+	should work fine in the game.
+</p>
+<h4>Binary Asset Builder crashes with a critical error with information about an XML Validation error</h4>
+<p>You have likely specified an invalid tag, attribute, or otherwise have malformed your XML.  Check the file and area that it suggests in the area
+	and look for issues.  Check the schema files for the module or Asset, and make sure that you are using valid attributes.  In addition, make sure that
+	your closing tags properly match, and  any tags which do not require a separate closing tag end in /&gt;
+</p>
+<h4>3DSMax Crashes when I attempt to export my model</h4>
+<p>If you are using shaders with multiple textures, make sure that you have supplied a valid texture for all of them.  It is likely that not having
+	one specified will cause 3DSMax to crash.
+</p>
+<h4>Custom objects don't show up on my map created using a mod</h4>
+<p>The mod you used to create the map is not running.  Objects which are missing will not cause the game to crash, but they simply will not appear.  Exit
+	the game and make sure that you launch it with your mod, and then try running the map again.
+</p>
+<h4>My texture doesn't show up in W3X Viewer or the game but it does in 3DSMax</h4>
+<p>Make sure that you have created the Texture Asset Declarations as described in the <a href="Art_Textures.htm">Textures section</a>.  If you have
+	properly applied the map in 3DS Max and exported properly, and you get either an invisible, or bright colored object, you are likely missing the XML file
+	for the texture.
+</p>
+<h4>I wrote a custom shader but when I use it the object is invisible</h4>
+<p>Make sure that you have followed the instructions for putting the shader in the correct locations as stated in the <a href="Art_Shaders.htm">Shader documentation</a>.
+	Creating new shaders is complex, and may require a fair amount of experimentation to get working correctly.  The SDK however does properly include shaders for use
+	in the game.
+</p>
+<h4>I can't use existing Civilian buildings, or override them in my mod</h4>
+<p>This is a known issue with this version of the Mod SDK.  Due to the way that the map specific assets (civilian structures, props, etc)
+	are loaded, they are not able to be referenced by the Mod SDK, and therefore cannot be used.
+</p>
+<h4>BuildMap.bat causes civilian structures and roads to become invisible, or otherwise not display properly</h4>
+<p>This is a known issue, and related to the above issue.  Note that you only need to build a custom map if you have used the override.xml file to modify objects for use in the map.</p>
+<h4>I can't find the DirectX Shader Option to apply materials in 3DS Max</h4>
+<p>Ensure that 3DS Max is in DirectX display mode.  You can change the display mode via the Change Graphics Mode shortcut in the 3DS Max folder in the Start Menu.  Set it to DirectX 9.</p>
+<h4>I can't navigate to the SDK Path in Command Prompt</h4>
+<p>Use &quot;&quot; to enclose paths with spaces and ampersands (&amp;) to navigate to the SDK directory.  See the <a href="buildmod.htm">Building a Mod</a> page for more details</p>
+<h4>Makebig.exe causes an error when running buildmod.bat</h4>
+<p>Ensure that you have specified a mod to build when running the buildmod.bat script.  See the <a href="buildmod.htm">Building a Mod</a> page for more details</p>
+<h4>I've edited a UI texture and recompiled my mod, and it doesn't seem to have changed</h4>
+<p>It is possible that the edited texture was not compiled into your mod.  To fix this, you will need to clean the cached built files for your mod.  You do so by
+	opening the BuiltMods\mods folder, and deleting the folder within it with the same name as your mod.  So, to clean the SampleMod, you would delete the SampleMod folder,
+	found at BuiltMods\mods\SampleMod in your SDK Installation directory.  Do not delete the cnc3xml folder in BuiltMods\ directory, as this will cause the SDK to not function
+	properly
+</p>
+<h4>I've edited a faction building or unit, and it is now invisible</h4>
+<p>It is possible that the manifest files for the existing units and structures were overwritten or deleted.  Check the BuiltMods\cnc3xml folder, and ensure that
+	static.manifest and global.manifest are located there.  In addition, make sure that the structure or unit is contained within those two manifests.
+	The easiest way to do so is search through the files that include the file it is declared in, and see if either static.xml or global.xml contains a reference.
+	If it is referenced from either of those files, it should be possible to use the art from that object.  If it is not, it is likely in the worldbuilder.manifest,
+	and due to SDK limitations, not usable (see the Civilian buildings issue above).
+</p>
+
+</body>
+</html>

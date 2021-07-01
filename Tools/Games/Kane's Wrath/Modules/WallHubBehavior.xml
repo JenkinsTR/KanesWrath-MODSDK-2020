@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WallHubBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryWeakReference
+			id="HubCapTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="DefaultSegmentTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="CliffCapTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ShoreCapTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="BorderCapTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ElevatedSegmentTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="BuilderRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxBuildoutDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Options"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="StaggeredBuildFactor"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="SegmentPattern"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

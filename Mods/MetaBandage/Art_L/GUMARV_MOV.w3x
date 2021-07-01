@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:gumarv_skl.w3x"/>
+	</Includes>
+	<W3DAnimation id="GUMARV_MOV" Hierarchy="GUMARV_SKL" NumFrames="101" FrameRate="30">
+		<Channels></Channels>
+	</W3DAnimation>
+</AssetDeclaration>

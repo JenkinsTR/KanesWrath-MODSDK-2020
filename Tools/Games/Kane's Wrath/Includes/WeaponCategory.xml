@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WeaponCategory"
+		IsStartingNegative="true">
+		<Entry>NONE</Entry>
+		<Entry>GUN</Entry>
+		<Entry>BLAST</Entry>
+		<Entry>CANNON</Entry>
+		<Entry>MISSILE</Entry>
+		<Entry>LIGHTNING</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

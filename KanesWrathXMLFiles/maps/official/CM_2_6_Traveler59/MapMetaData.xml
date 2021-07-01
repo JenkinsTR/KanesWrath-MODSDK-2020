@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="60" CRC="0" Description="Map:CM_2_6_Traveler59/Desc" DisplayName="CM_2_6_Traveler59" FileName="Data\maps\official\CM_2_6_Traveler59\CM_2_6_Traveler59.map" Height="520" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="520" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="655.426" y="587.637" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

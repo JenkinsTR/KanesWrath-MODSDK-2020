@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DoCommandUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="GetUpgradeCommandName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="RemoveUpgradeCommandName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

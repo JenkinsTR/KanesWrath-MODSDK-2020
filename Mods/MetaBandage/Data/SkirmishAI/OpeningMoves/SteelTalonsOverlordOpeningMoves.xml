@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <!--Removed Behemoth Build Plan-->
+  <SkirmishOpeningMove
+    id="SteelTalonsRush"
+    Side="SteelTalons"> <!--Power: +10-->
+    <Order Build="SteelTalonsPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="SteelTalonsRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="SteelTalonsRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="SteelTalonsPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="SteelTalonsRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="SteelTalonsPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="SteelTalonsWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="SteelTalonsHeavyHarvester" /> 
+    <Order Build="SteelTalonsHeavyHarvester" /> 
+    <Order Build="SteelTalonsRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="SteelTalonsPowerPlant" /> <!--Time: 7 Power: +20-->
+    <Order Build="SteelTalonsWarfactory" /> <!--Time: 20 Power: -7-->
+    <Order Build="SteelTalonsWarfactory" /> <!--Time: 20 Power: -7-->
+
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsTitan" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Build="SteelTalonsWolverine" />
+    <Order Time="300s" /> 
+
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="SteelTalonsMegaUnitRush"
+    Side="SteelTalons">
+	
+    <Order Build="SteelTalonsPowerPlant" />   
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsCrane" />
+	<Order Build="SteelTalonsPowerPlant" />   
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />   
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsCommandPost" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsArmory" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="MG_SteelTalons_ReclamatorHub" />
+    <Order Build="SteelTalonsMARV" />
+    <Order Time="275s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="SteelTalonsBrutalInfantryRush"
+    Side="SteelTalons">
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsBarracks" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsBarracks" />
+    <Order Time="205s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="SteelTalonsBrutalMixedRush"
+    Side="SteelTalons">
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsWarfactory" />
+    <Order Build="SteelTalonsHeavyHarvester" />
+    <Order Build="SteelTalonsHeavyHarvester" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsBarracks" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsWarfactory" />
+    <Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsRefinery" />
+    <Order Build="SteelTalonsBarracks" />
+	<Order Build="SteelTalonsPowerPlant" />
+    <Order Build="SteelTalonsWarfactory" />
+    <Order Time="225s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

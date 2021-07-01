@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="ResourceSettings"
+		TypeHash="1560001831">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="SharedMoneyTransactionCategories"
+			AssetType="MoneyTransactionCategoryBitMask"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

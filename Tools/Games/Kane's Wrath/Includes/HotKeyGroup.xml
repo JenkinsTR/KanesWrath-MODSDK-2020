@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HotKeyGroupingDef">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="HotKeyGrouping">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="IgnoreConflict"
+			AssetType="HotKeyGroupingDef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Group"
+			AssetType="HotKeyGroupingDef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Slot"
+			AssetType="HotKeyGroupingDef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="HotKeyGroupingList">
+		<EntryList
+			id="HotKeyGroup"
+			AssetType="HotKeyGrouping"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

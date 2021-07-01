@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!-- Main Mod File for Global Data Overrides -->
+	<!-- Do not include this file into your static.xml! -->
+	<Includes>
+		<Include type="all" source="MapMetaData_GlobalOverrides/Music.xml" />
+	</Includes>
+</AssetDeclaration>

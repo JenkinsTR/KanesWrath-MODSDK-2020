@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMessageDisplay"
+		TypeHash="3604410282">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Delay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="5s" />
+		<Entry
+			id="Color1"
+			AssetType="Color3" />
+		<Entry
+			id="Color2"
+			AssetType="Color3" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+	</GameAsset>
+
+</AssetDefinition>

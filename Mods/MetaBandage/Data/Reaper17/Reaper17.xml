@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>		
+		<!--Units-->
+		<Include type="all" source="Units/Reaper17AnnihilatorTripod.xml" />
+		<Include type="all" source="Units/Reaper17AnnihilatorTripodHusk.xml" />
+		<Include type="all" source="Units/Reaper17Assimilator.xml" />
+		<Include type="all" source="Units/Reaper17Buzzers.xml" />
+		<Include type="all" source="Units/Reaper17CustomizableVehicle.xml" />	
+		<Include type="all" source="Units/Reaper17Corrupter.xml" />	
+		<Include type="all" source="Units/Reaper17DevourerTank.xml" />	
+		<Include type="all" source="Units/Reaper17EradicatorHexapod.xml" />	
+		<Include type="all" source="Units/Reaper17Explorer.xml" />	
+		<Include type="all" source="Units/Reaper17Harvester.xml" />	
+		<Include type="all" source="Units/Reaper17MCV.xml" />
+		<Include type="all" source="Units/Reaper17MillipedeBody.xml" />	
+		<Include type="all" source="Units/Reaper17MillipedeHead.xml" />	
+		<Include type="all" source="Units/Reaper17Mothership.xml" />	
+		<Include type="all" source="Units/Reaper17RazorDrones.xml" />
+		<Include type="all" source="Units/Reaper17RazorDroneSquad.xml" />
+		<Include type="all" source="Units/Reaper17SeekerTank.xml" />
+		<Include type="all" source="Units/Reaper17ShardWalker.xml" />
+		<Include type="all" source="Units/Reaper17ShockTrooper.xml" />
+		<Include type="all" source="Units/Reaper17ShockTrooperSquad_Veteran.xml" />
+		<Include type="all" source="Units/Reaper17Stalker.xml" />
+		<Include type="all" source="Units/Reaper17StalkerSquad.xml" />
+		<Include type="all" source="Units/Reaper17Stormrider.xml" />	
+		
+		<!--Structures-->
+		<Include type="all" source="structures/Reaper17BuzzerHive.xml" />
+		<Include type="all" source="structures/Reaper17ControlCenter.xml" /> <!-- Nerve Center -->
+		<Include type="all" source="structures/Reaper17DronePlatform.xml" />
+		<Include type="all" source="structures/Reaper17Foundry.xml" />
+		<Include type="all" source="structures/Reaper17Gateway.xml" /> <!-- Assembler -->
+		<Include type="all" source="structures/Reaper17GrowthStimulator.xml" />
+		<Include type="all" source="structures/Reaper17PlasmaMissileBattery.xml" />
+		<Include type="all" source="structures/Reaper17Portal.xml" />
+		<Include type="all" source="structures/Reaper17PowerProjector.xml" /> <!-- Power Plant -->
+		<Include type="all" source="structures/Reaper17Reactor.xml" /> <!-- Technology Plant -->
+		<Include type="all" source="structures/Reaper17RiftGenerator.xml" />
+		<Include type="all" source="structures/Reaper17SignalTransmitter.xml" /> <!-- Transmission Tower -->
+		<Include type="all" source="structures/Reaper17StasisChamber.xml" />
+		<Include type="all" source="structures/Reaper17StormColumn.xml" />
+		<Include type="all" source="structures/Reaper17TiberiumTower.xml" /> <!-- Extractor (Refinery) -->
+		<Include type="all" source="structures/Reaper17WarpBeacon.xml" />
+		<Include type="all" source="structures/Reaper17MiniMCVOutpost.xml" />
+		<Include type="all" source="structures/Reaper17PhotonCannon.xml"/>
+		<Include type="all" source="structures/MG_Reaper17_Hive.xml"/>		
+	</Includes>
+</AssetDeclaration>

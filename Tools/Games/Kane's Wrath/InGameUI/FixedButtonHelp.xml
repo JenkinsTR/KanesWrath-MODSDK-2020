@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIFixedButtonHelp">
+		<EntryRelocation
+			id="AggressiveStance"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="AircraftTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="AircraftTypeTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="AttackMove"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="ForceAttack"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="ForceMove"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="GuardStance"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="HoldGroundStance"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="HoldFireStance"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="InfantryTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="InfantryTypeTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="IntelligenceDatabase"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MainStructureTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MainStructureTypeTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="Messenger"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="Objectives"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="OtherStructureTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="OtherStructureTypeTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="PlanningMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="PlayerStatus"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="ReverseMove"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="SelectionRefinementTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="SellMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="Stop"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="TogglePowerMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="ToggleRepairMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="VehicleTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="VehicleTypeTab"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="VoiceChatMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="VoiceChatTalk"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="WaypointMode"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MgMove"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MgPatrol"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MgIntercept"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MgAirlift"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="MgNavalMove"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="PrevBase"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="PrevStrikeForce"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="NextStrikeForce"
+			AssetType="InGameUISimpleHelpTemplate" />
+		<EntryRelocation
+			id="NextBase"
+			AssetType="InGameUISimpleHelpTemplate" />
+	</Asset>
+
+</AssetDefinition>

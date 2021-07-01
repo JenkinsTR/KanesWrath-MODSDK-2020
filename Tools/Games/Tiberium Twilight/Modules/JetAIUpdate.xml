@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="JetAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="AIUpdateModuleData" />
+		<Entry
+			id="OutOfAmmoDamagePerSecond"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="OutOfAmmoDamageDelay"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="ParkingOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="UseForOutOfAmmoCheck"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="OutOfAmmoEvaEvent"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="NeedsRunway"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ReturnToBaseWhenVictimDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="KeepsParkingSpaceWhenAirborne"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CirclesForAttack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="50" CRC="0" Description="Map:MAP_MP_2_BLACK11/Desc" DisplayName="MAP_MP_2_BLACK11" FileName="Data\maps\official\MAP_MP_2_BLACK11\MAP_MP_2_BLACK11.map" Height="422" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="420" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="403.597" y="2835.88" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="2726.15" y="499.046" z="0" />
+  </StartPosition>
+</MapMetaData>

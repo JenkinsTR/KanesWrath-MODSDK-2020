@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UpgradeMap">
+		<Entry
+			id="OwnershipAmount"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="ProvidedUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="CaptureAndGiveUpgradeBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UnifiedControlBehaviorModuleData" />
+		<EntryList
+			id="UpgradeMap"
+			AssetType="UpgradeMap"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

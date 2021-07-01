@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+  <!-- KWBANDAGE ORIGINAL -->
+  <!-- <GameObject -->
+		<!-- id="PlayerSpellBook" -->
+		<!-- Side="Neutral" -->
+		<!-- EditorSorting="SYSTEM" -->
+		<!-- KindOf="SPELL_BOOK IMMOBILE IGNORES_SELECT_ALL INERT" -->
+		<!-- RadarPriority="NOT_ON_RADAR" -->
+		<!-- CommandSet="PlayerSpellBookCommandSet"  -->
+		<!-- EditorName="PlayerSpellBook"> -->
+		
+		<GameObject
+		id="PlayerSpellBook"
+		KindOf="IMMOBILE IGNORES_SELECT_ALL SPELL_BOOK UNATTACKABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR UNSELECTABLE INERT"  
+		RadarPriority="NOT_ON_RADAR"
+		BuildCompletion="INVALID"
+		FenceWidth="0"
+		FenceXOffset="0"
+		RemoveTerrainRadius="0"
+		EmotionRange="0"
+		PlacementViewAngle="0d"
+		BuildFadeInOnCreateTimeSeconds="0s"
+		FactoryExitWidth="0"
+		FactoryExtraBibWidth="0"
+		Side="Neutral"
+		EditorName="PlayerSpellBook"
+		EditorSorting="SYSTEM"
+		BountyValue="0"
+		BuildTime="0"
+		BuildFadeInOnCreateTime="0"
+		EnergyProduction="0"
+		EnergyBonus="0"
+		CommandSet="PlayerSpellBookCommandSet"
+		SelectPortrait=""
+		ButtonImage=""
+		VoicePriority="0"
+		MinZIncreaseForVoiceMoveToHigherGround="-1"
+		CrowdResponse=""
+		CampnessValue="0"
+		CampnessValueRadius="600"
+		Scale="1"
+		HealthBoxScale="1.5"
+		HealthBoxHeightOffset="10"
+		OcclusionDelay="0"
+		LiveCameraPitch="0"
+		FormationWidth="1"
+		FormationDepth="1"
+		InstanceScaleFuzziness="0"
+		ThreatRadius="-1"
+		RamPower="0"
+		RamZMult="1"
+		ShockwaveResistance="0"
+		CommandPoints="0"
+		CommandPointBonus="0"
+		VoiceAttackChargeTimeout="0"
+		MaxDistanceForEngaged="0"
+		EngagedStateTimeout="0"
+		ThreatLevel="1"
+		SlopeLimitIndex="0"
+		PathfindDiameter="-1"
+		SupplyOverride="0"
+		DisplayMeleeDamage="-1"
+		DisplayRangedDamage="-1"
+		HeroSortOrder="2147483647"
+		FiringArc="360"
+		CamouflageDetectionMultiplier="1"
+		SelectionPriority="2147483647"
+		ProductionQueueType="INVALID"
+		BuildPlacementTypeFlag="INVALID"
+		BuildOnRequiredObjectKindOf=""
+		UnitCategory="NONE"
+		WeaponCategory="NONE"
+		HasFiredRecentlyTime="2s"
+		UnitTypeIcon=""
+		ReinvisibilityDelay="4s"
+		CaptureTime="0s"
+		BuildCost="0"
+		RefundValue="0"
+		ThreatValue="0"
+		MaxSimultaneousOfType="0"
+		TransportSlotCount="0"
+		IsTrainable="True"
+		IsForbidden="False"
+		IsPrerequisite="False"
+		IsGrabbable="False"
+		IsHarvestable="False"
+		StructureRubbleHeight="0"
+		ForceLuaRegistration="True"
+		ShowHealthInSelectionDecal="False"
+		KeepSelectableWhenDead="False"
+		IsAutoBuilt="False"
+		CanPathThroughGates="True"
+		ShouldClearShotsOnIdle="False"
+		BuildInProximityToSamePlayerStucture="True">
+    <!-- KWBANDAGE ORIGINAL -->
+    <!-- <ArmorSet -->
+			<!-- Armor="NoArmor" /> -->
+		<ArmorSet
+			Armor="InvulnerableArmor"
+			DamageFX=""
+			Conditions="" />
+    <Draws>
+      <ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+				<Model
+						Name="" />
+        </ModelConditionState>
+      </ScriptedModelDraw>
+	  <!-- FROM METAMOD -->
+	  <ScriptedModelDraw
+				id="50DF2C46"
+				RecoilDamping="0.4"
+				MaxRecoilDistance="3"
+				InitialRecoilSpeed="2"
+				RecoilSettleSpeed="0.065"
+				MinLODRequired="LOW"
+				ProjectileBoneFeedbackEnabledSlots=""
+				TrackMarks=""
+				DependencySharedModelFlags=""
+				HighDetailLODThreshold="0"
+				LowDetailLODThreshold="0"
+				WadingParticleSys=""
+				AlphaCameraFadeOuterRadius="0"
+				AlphaCameraFadeInnerRadius="0"
+				AlphaCameraAtInnerRadius="100%"
+				StaticSortLevelWhileFading="-1"
+				BirthFadeTime="0"
+				OkToChangeModelColor="True"
+				AnimationsRequirePower="True"
+				UseYAxisForTurretRotation="False"
+				TrackMarksOnlyWhenCorneringQuickly="False"
+				UseProducerTexture="False"
+				NoRotate="False"
+				UseFiringArcRotation="False"
+				Selectable="True"
+				RandomTextureFixedRandomIndex="False"
+				ParticlesAttachedToAnimatedBones="False"
+				ParticleBonesCheckDrawable="False"
+				ShadowForceDisable="False"
+				SwitchModelLODMode="False"
+				StaticModelLODMode="False"
+				ShowShadowWhileContained="False"
+				UseStandardModelNames="False"
+				UseDefaultAnimation="False"
+				BirthFadeAdditive="False"
+				ZWriteDisableOverride="False"
+				MultiPlayerOnly="False"
+				AffectedByStealth="True"
+				InvertStealthOpacity="False"
+				HighDetailOnly="False"
+				SetAnimsToLastFrameOnConstructionComplete="True">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+				</ModelConditionState>
+	  </ScriptedModelDraw>
+    </Draws>
+    <Behaviors>
+
+
+      <!-- Neutral powers -->
+      <!-- Neutral powers -->
+      <!-- Neutral powers -->
+      <!-- Neutral powers -->
+
+      <!-- EMP COntrol Center -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_EMPControlCenter"
+				SpecialPowerTemplate="SpecialPowerEMPControlCenter"
+			/>
+
+
+      <!-- GDI powers -->
+      <!-- GDI powers -->
+      <!-- GDI powers -->
+      <!-- GDI powers -->
+
+      <!-- GDI Call Support Airborne -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportGDIAirborne"
+				SpecialPowerTemplate="SpecialPowerCallSupportGDIAirborne" 
+			/>
+
+      <!-- GDI Call Support Bloodhound -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportGDIBloodhound"
+				SpecialPowerTemplate="SpecialPowerCallSupportBloodhound" 
+			/>
+
+      <!-- GDI Call Support HunterKiller  -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportGDIHunterKiller"
+				SpecialPowerTemplate="SpecialPowerCallSupportHunterKillerTeam" 
+			/>
+
+      <!-- Drop Pods -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_DropPods"
+				SpecialPowerTemplate="SpecialPowerGDI_SpaceCommandDropPods" 
+			/>
+
+      <!-- Shockwave Artillery -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_ShockwaveArtillery"
+				SpecialPowerTemplate="SpecialPowerGDI_SpaceCommandShockwaveArtillery" 
+			/>
+
+      <!-- Radar Scan -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_RadarScan"
+				SpecialPowerTemplate="SpecialPowerRadarScan" 
+			/>
+
+      <!-- Bombing Run -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_BombingRun"
+				SpecialPowerTemplate="SpecialPowerBombingRun" 
+			/>
+
+      <!-- Ion Cannon -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_IonCannon"
+				SpecialPowerTemplate="SpecialPowerIonCannonControlIonCannon" 
+			/>
+
+
+
+      <!-- NOD powers -->
+      <!-- NOD powers -->
+      <!-- NOD powers -->
+      <!-- NOD powers -->
+
+
+      <!-- Nuclear Missile -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_NuclearMissile"
+				SpecialPowerTemplate="SpecialPowerNuclearMissile"
+			/>
+
+      <!-- Decoy Army (store obj)-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_DecoyArmyStore"
+				SpecialPowerTemplate="SpecialPowerCloneObjectSelect"
+			/>
+
+
+      <!-- Decoy Army (spawn obj) -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_DecoyArmySpawn"
+				SpecialPowerTemplate="SpecialPowerCloneObjectSpawn"
+			/>
+
+
+      <!-- Radar Jamming Misile -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_RadarJammingMissile"
+				SpecialPowerTemplate="SpecialPowerDispatchRadarJammingMissile"
+			/>
+
+      <!-- Catalyst Missile -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CatalystMissile"
+				SpecialPowerTemplate="SpecialPowerLaunchCatalystMissile"
+			/>
+
+      <!--Burrow Mines-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_BurrowMines"
+				SpecialPowerTemplate="SpecialPower_BurrowMines"
+			/>
+
+      <!-- Seed Tib -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_SeedTiberium"
+				SpecialPowerTemplate="SpecialPowerSeedTiberium"
+			/>
+
+      <!-- Air Dispersion -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_AirDispersion"
+				SpecialPowerTemplate="SpecialPowerAirDispersion"
+			/>
+
+      <!-- Red Shadow Strike Team -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_ShadowStrikeTeam"
+				SpecialPowerTemplate="SpecialPowerRedShadowStrikeTeam" 
+			/>
+
+      <!-- Cloaking Field -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CloakingField"
+				SpecialPowerTemplate="SpecialPower_CloakingField" 
+			/>
+
+      <!-- Marked Of Kane Cloaking Field -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MarkedOfKaneCloakingField"
+				SpecialPowerTemplate="SpecialPower_MarkedOfKaneCloakingField" 
+			/>
+
+      <!-- Tiberium Vein Detonation -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_TibVeinDetonation"
+				SpecialPowerTemplate="SpecialPowerTibVeinDetonation"
+			/>
+
+      <!-- Alien powers -->
+      <!-- Alien powers -->
+      <!-- Alien powers -->
+      <!-- Alien powers -->
+
+      <!-- Repair Drones-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_RepairDrones"
+				SpecialPowerTemplate="SpecialPowerAlienRepairDrones"
+			/>
+
+      <!-- Tiberium Vibration Scan-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_TiberiumVibrationScan"
+				SpecialPowerTemplate="SpecialPower_TiberiumVibrationScan"
+			/>
+
+
+      <!-- Lightning Spike -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_LightningSpike"
+				SpecialPowerTemplate="SpecialPower_LightningSpike"
+			/>
+
+      <!-- Mothership -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Mothership"
+				SpecialPowerTemplate="SpecialPower_SummonMothership"
+			/>
+
+      <!-- Rift Generator -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_RiftGenerator"
+				SpecialPowerTemplate="SpecialPower_RiftGeneratorWeapon"
+			/>
+
+      <!-- Crystal Shield -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CrystalShield"
+				SpecialPowerTemplate="SpecialPower_CrystalShield"
+			/>
+
+
+      <!-- Wormhole -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_WormHole"
+				SpecialPowerTemplate="SpecialPower_WormHole"
+			/>
+
+
+      <!-- XPACK POWERS -->
+      <!-- XPACK POWERS -->
+      <!-- XPACK POWERS -->
+
+
+      <!-- Traveler59 Wormhole -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Traveler59WormHole"
+				SpecialPowerTemplate="SpecialPower_Traveler59WormHole"
+			/>
+      <!-- Swarm -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Swarm"
+				SpecialPowerTemplate="SpecialPower_Swarm"
+			/>
+			
+      <!-- Reaper17 Swarm -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Reaper17Swarm"
+				SpecialPowerTemplate="SpecialPower_Reaper17Swarm"
+			/>
+			
+      <!-- Traveler59 Swarm -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Traveler59Swarm"
+				SpecialPowerTemplate="SpecialPower_Traveler59Swarm"
+			/>
+
+      <!-- Phase Shield -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_PhaseShield"
+				SpecialPowerTemplate="SpecialPower_PhaseField"
+			/>
+
+      <!-- Battleship Bombard -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_BattleshipBombard"
+				SpecialPowerTemplate="SpecialPower_BattleshipSpotTargetBombard"
+			/>
+
+      <!-- Shock Trooper Drop Pods -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_ShockPods"
+				SpecialPowerTemplate="SpecialPower_AlienShockPods" 
+			/>
+      <!-- Alien Seed Tiberium -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_AlienSeedTiberium"
+				SpecialPowerTemplate="SpecialPower_AlienSeedTiberium" 
+			/>
+      <!-- Alien Summon Tiberium Hive -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_AlienSummonTibHive"
+				SpecialPowerTemplate="SpecialPower_SummonTibHive" 
+			/>
+      <!-- Traveler Temporal Wormhole -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_TemporalWormhole"
+				SpecialPowerTemplate="SpecialPower_TemporalWormhole" 
+			/>
+
+      <!-- Free Reaper Tiberium Vibration Scan-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Reaper17TiberiumVibrationScan"
+				SpecialPowerTemplate="SpecialPower_Reaper17TiberiumVibrationScan"
+			/>
+
+      <!-- Overlords Wrath-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_OverlordsWrath"
+				SpecialPowerTemplate="SpecialPower_OverlordsWrath"
+			/>
+
+      <!-- Railgun Accelerator -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_RailgunAccelerator"
+				SpecialPowerTemplate="SpecialPower_RailgunAccelerator"
+			/>
+
+      <!-- MJOLNIR -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MjolnirStrike"
+				SpecialPowerTemplate="SpecialPower_MjolnirStrike"
+			/>
+
+      <!-- SUPERSONIC AIR ATTACK -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_SupersonicAirAttack"
+				SpecialPowerTemplate="SpecialPower_SupersonicAirAttack"
+			/>
+
+      <!-- Laser Fencing -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_LaserFencing"
+				SpecialPowerTemplate="SpecialPower_LaserFencing"
+			/>
+
+      <!-- Sonic Repulsion Field -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_SonicRepulsionField"
+				SpecialPowerTemplate="SpecialPower_SonicRepulsionField"
+			/>
+
+      <!-- Power Signature Scan-->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_PowerSignatureScan"
+				SpecialPowerTemplate="SpecialPower_PowerSignatureScan"
+			/>
+
+      <!-- ZOCOM Powers -->
+      <!-- ZOCOM Powers -->
+      <!-- ZOCOM Powers -->
+
+
+      <!-- ZOCOM Drop Pods -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_ZOCOMRaiderPods"
+				SpecialPowerTemplate="SpecialPowerZOCOM_SpaceCommandRaiderPods" 
+			/>
+
+      <!-- ZOCOM Call Support Airborne -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportZOCOMAirborne"
+				SpecialPowerTemplate="SpecialPowerCallSupportZOCOMAirborne" 
+			/>
+
+      <!-- ZOCOM Call Support Bloodhound -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportZOCOMBloodhound"
+				SpecialPowerTemplate="SpecialPowerCallSupportZOCOMBloodhound" 
+			/>
+			
+      <!-- ZOCOM Call Support HunterKiller  -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportZOCOMHunterKiller"
+				SpecialPowerTemplate="SpecialPowerCallSupportZOCOMHunterKillerTeam" 
+			/>
+
+       <!-- STEEL TALON Call Support Bloodhound -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_CallSupportSTBloodhound"
+				SpecialPowerTemplate="SpecialPowerCallSupportSTBloodhound" 
+			/>
+
+      <!-- Bombing Run -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_ZOCOMBombingRun"
+				SpecialPowerTemplate="SpecialPowerZOCOMBombingRun" 
+			/>
+
+      <!-- Magnetic Mines -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MagneticMines"
+				SpecialPowerTemplate="SpecialPower_MagneticMines"
+			/>
+			
+      <!-- Marked Of Kane Red Shadow Strike Team -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MarkedOfKaneShadowStrikeTeam"
+				SpecialPowerTemplate="SpecialPowerMarkedOfKaneRedShadowStrikeTeam" 
+			/>			
+			
+      <!-- Decoy Temple -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_DecoyTemple"
+				SpecialPowerTemplate="SpecialPower_DecoyTemple"
+			/>
+      <!-- Fake Timer for Decoy Temple -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_DecoyTemplePublicTimer"
+				SpecialPowerTemplate="SpecialPowerDecoyNuclearMissileTimer"
+			/>
+
+      <!-- MetaGame Powers -->
+      <!-- Rise Insurection -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_Rise_Insurection"
+        SpecialPowerTemplate="MetaGameOp_NOD_Rise_Insurection"
+			/>
+
+      <!-- Friends Of Nod -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_FriendsOfNod"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Friends_Of_Nod"
+			/>
+
+      <!-- Meta Nuclear Missile -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MetaNuclearMissile"
+				SpecialPowerTemplate="MetaGameOp_NodPowerNuclearMissile"
+			/>
+
+			<!-- Tiberium Production Surge -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_TiberiumProductionSurge"
+				SpecialPowerTemplate="MetaGameOp_NodPowerTiberiumProductionSurge"
+			/>
+
+			<!-- Traitor -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_NodTraitor"
+        SpecialPowerTemplate="MetaGameOp_NODPowerTraitor"
+        />
+
+      <!-- Sabotage -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_NodSabotage"
+        SpecialPowerTemplate="MetaGameOp_NOD_Sabotage"
+        />
+      <!-- Redemption -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Redemption"
+				SpecialPowerTemplate="SpecialPower_Redemption" 
+			/>
+
+      <!-- Black Hand -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_BlackHand"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Black_Hand"
+			/>
+
+      <!-- Marked Of Kane -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MarkedOfKane"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Marked_Of_Kane"
+			/>
+
+      <!-- Kane Lives -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_KaneLives"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Kane_Lives"
+			/>		
+			
+      <!-- Stealth Field -->
+			<PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_StealthField"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Stealth_Field"
+			/>
+
+      <!-- Fury Of Nod -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_FuryOfNod"
+				SpecialPowerTemplate="MetaGameOp_NOD_Fury_Of_Nod"
+			/>
+      
+      <!-- Vertigo Strike -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Vertigo_Strike"
+				SpecialPowerTemplate="MetaGameOp_NOD_Vertigo_Strike"
+			/>
+      <!-- GDI METAGAME POWERS -->
+
+      <PlayerPowerManager
+      id="ModuleTag_PlayerPowerManager_MetaIonBlast"
+      SpecialPowerTemplate="MetaGameOp_GDIPowerIonBlast"
+			/>
+			<!-- Meta Ion Blast -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MetaRiftGenerator"
+				SpecialPowerTemplate="MetaGameOp_SCRINPowerRiftGenerator"
+			/>
+
+      <!-- FIREHAWK RAID -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Firehawk_Raid"
+				SpecialPowerTemplate="MetaGameOp_GDI_FireHawk_Raid"
+			/>
+
+      <!-- State of Emergency -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_StateOfEmergency"
+				SpecialPowerTemplate="MetaGameOp_GDIPowerStateOfEmergency"
+			/>
+
+      <!-- Refugee Aid -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Refugee_Aid"
+				SpecialPowerTemplate="MetaGameOp_GDI_Refugee_Aid"
+			/>
+      <!-- Sonic Agitation -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_SonicAgitation"
+        SpecialPowerTemplate="MetaGameOp_GDISonicAgitation"
+			/>
+      <!-- Zocom Infiltration -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_ZocomInfiltration"
+        SpecialPowerTemplate="MetaGameOp_GDIZocomInfiltration"
+			/>
+
+      <!-- Media Blitz -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_MediaBlitz"
+        SpecialPowerTemplate="MetaGameOp_GDIMediaBlitz"
+			/>
+
+      <!-- Media Blitz -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_SkySentry"
+        SpecialPowerTemplate="MetaGameOp_GDISkySentry"
+			/>
+
+      <!-- Alien Plague -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_AlienPlague"
+        SpecialPowerTemplate="MetaGameOp_AlienPlague"
+			/>
+
+      <!-- Special Forces -->
+      <PlayerPowerManager
+		id="ModuleTag_PlayerPowerManager_SpecialForces"
+		SpecialPowerTemplate="MetaGameOp_GDI_Power_SpecialForces"
+			/>
+
+      <!-- Phase Field -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_GDICommandoStrike"
+				SpecialPowerTemplate="MetaGameOp_GDICommandoStrike"
+			/>
+      
+      <!-- Scrin Meta-Power -->
+      <!-- Scrin Meta-Power -->
+      <!-- Scrin Meta-Power -->
+
+      <!-- Alien Dropship -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_AlienDropship"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Alien_Dropship"
+			/>		
+			
+      <!-- Meta Wormhole -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_MetaWormHole"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Wormhole"
+			/>
+
+      <!-- Meta Build Tower -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_BuildTower"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_BuildTower"
+			/>
+      
+      <!-- Phase Field -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_PhaseField"
+				SpecialPowerTemplate="MetaGameOp_AlienPhaseField"
+			/>
+
+      <!-- Eradicate -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Eradicate"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Eradicate"
+			/>
+
+      <!-- Ichor Injection -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Ichor_Injection"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Ichor_Injection"
+			/>
+
+
+      <!-- Planetary Bombardment -->
+      <PlayerPowerManager
+        id="ModuleTag_PlayerPowerManager_PlanetaryBombardment"
+        SpecialPowerTemplate="MetaGameOp_AlienPowerPlanetaryBombardment"/>
+
+      <!-- Ion Superstorm -->
+      <PlayerPowerManager
+				id="ModuleTag_PlayerPowerManager_Ion_Superstorm"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Ion_Superstorm"/>
+
+      <!-- FROM METAMOD -->
+      <!-- FROM METAMOD -->
+      <!-- FROM METAMOD -->
+
+			<PlayerPowerManager
+				id="ModuleTag_MetaControlSpecialPowerFirstAndThirdPersonModeButtonProvider"
+				SpecialPowerTemplate="SpecialPowerFirstAndThirdPersonMode" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_MetaControlDummyCameraSetupButtonProvider"
+				SpecialPowerTemplate="SpecialPowerCameraSetup" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_MetaControlDummyMainTabMenuSelector"
+				SpecialPowerTemplate="SpecialPower_MetaControlDummyMainTabMenuSelector" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPowerChoosePosition"
+				SpecialPowerTemplate="SpecialPowerChoosePosition" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPowerDiplomacy_Accept"
+				SpecialPowerTemplate="SpecialPowerDiplomacy_Accept" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPowerDiplomacy_Deny"
+				SpecialPowerTemplate="SpecialPowerDiplomacy_Deny" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPowerMetaCreditShopMenu"
+				SpecialPowerTemplate="SpecialPowerMetaCreditShopMenu" 
+			/>
+
+			<PlayerPowerManager
+				id="ModuleTag_ToggleAICoControl"
+				SpecialPowerTemplate="SpecialPower_ToggleAICoControl" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_ExternalLuaScript"
+				SpecialPowerTemplate="SpecialPower_ExternalLuaScript" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPower_NAOD_NextWave"
+				SpecialPowerTemplate="SpecialPower_NAOD_NextWave" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SpecialPower_DiplomacyMenu"
+				SpecialPowerTemplate="SpecialPower_DiplomacyMenuSelect" 
+			/>
+
+			<PlayerPowerManager
+				id="ModuleTag_AIBoostToggle"
+				SpecialPowerTemplate="SpecialPower_AIBoostToggle" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_SendMoney"
+				SpecialPowerTemplate="SpecialPower_SendMoney" 
+			/>
+
+			<PlayerPowerManager
+				id="ModuleTag_MetaControlGlobalDeactivate1"
+				SpecialPowerTemplate="SpecialPower_MetaControlGlobalDeactivate" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_MetaControlGlobalDeactivate2"
+				SpecialPowerTemplate="SpecialPower_MetaControlGlobalDeactivate" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_ActivateMetaControl"
+				SpecialPowerTemplate="SpecialPower_ActivateMetaControl" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_DeActivateMetaControl"
+				SpecialPowerTemplate="SpecialPower_DeActivateMetaControl" 
+			/>		
+			
+			<PlayerPowerManager
+				id="ModuleTag_Money5k"
+				SpecialPowerTemplate="SpecialPower_Money5k" 
+			/>
+
+			<PlayerPowerManager
+				id="ModuleTag_RiftGen"
+				SpecialPowerTemplate="SpecialPower_RiftGen" 
+			/>			
+						
+			<PlayerPowerManager
+				id="ModuleTag_MapRevealerToggle"
+				SpecialPowerTemplate="SpecialPower_MapRevealerToggle" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_EveryAIOFF"
+				SpecialPowerTemplate="SpecialPower_EveryAIOFF" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_EnemyAIOFF"
+				SpecialPowerTemplate="SpecialPower_EnemyAIOFF" 
+			/>
+			
+			<PlayerPowerManager
+				id="ModuleTag_GuardShield"
+				SpecialPowerTemplate="SpecialPower_GuardShield" 
+			/>
+			
+			<PlayerPowerManager
+				id="D586E5B0"
+				SpecialPowerTemplate="SpecialPowerEMPControlCenter" />
+			<PlayerPowerManager
+				id="7CA79715"
+				SpecialPowerTemplate="SpecialPowerCallSupportGDIAirborne" />
+			<PlayerPowerManager
+				id="85C5D528"
+				SpecialPowerTemplate="SpecialPowerCallSupportBloodhound" />
+			<PlayerPowerManager
+				id="13082C65"
+				SpecialPowerTemplate="SpecialPowerCallSupportHunterKillerTeam" />
+			<PlayerPowerManager
+				id="4C84AA8F"
+				SpecialPowerTemplate="SpecialPowerGDI_SpaceCommandDropPods" />
+			<PlayerPowerManager
+				id="6142DEB1"
+				SpecialPowerTemplate="SpecialPowerGDI_SpaceCommandShockwaveArtillery" />
+			<PlayerPowerManager
+				id="17BABEB9"
+				SpecialPowerTemplate="SpecialPowerRadarScan" />
+			<PlayerPowerManager
+				id="FC1B318E"
+				SpecialPowerTemplate="SpecialPowerBombingRun" />
+			<PlayerPowerManager
+				id="A6809740"
+				SpecialPowerTemplate="SpecialPowerIonCannonControlIonCannon" />
+			<PlayerPowerManager
+				id="86FFE70A"
+				SpecialPowerTemplate="SpecialPowerNuclearMissile" />
+			<PlayerPowerManager
+				id="E59DAA48"
+				SpecialPowerTemplate="SpecialPowerCloneObjectSelect" />
+			<PlayerPowerManager
+				id="AE9EDE42"
+				SpecialPowerTemplate="SpecialPowerCloneObjectSpawn" />
+			<PlayerPowerManager
+				id="67848943"
+				SpecialPowerTemplate="SpecialPowerDispatchRadarJammingMissile" />
+			<PlayerPowerManager
+				id="2B48313D"
+				SpecialPowerTemplate="SpecialPowerLaunchCatalystMissile" />
+			<PlayerPowerManager
+				id="D3C96EA7"
+				SpecialPowerTemplate="SpecialPower_BurrowMines" />
+			<PlayerPowerManager
+				id="27F05251"
+				SpecialPowerTemplate="SpecialPowerSeedTiberium" />
+			<PlayerPowerManager
+				id="03AF1DF6"
+				SpecialPowerTemplate="SpecialPowerAirDispersion" />
+			<PlayerPowerManager
+				id="A0A4570B"
+				SpecialPowerTemplate="SpecialPowerRedShadowStrikeTeam" />
+			<PlayerPowerManager
+				id="D0B2737C"
+				SpecialPowerTemplate="SpecialPower_CloakingField" />
+			<PlayerPowerManager
+				id="9B2A801D"
+				SpecialPowerTemplate="SpecialPower_MarkedOfKaneCloakingField" />
+			<PlayerPowerManager
+				id="ACE73CC6"
+				SpecialPowerTemplate="SpecialPowerTibVeinDetonation" />
+			<PlayerPowerManager
+				id="4FB725ED"
+				SpecialPowerTemplate="SpecialPowerAlienRepairDrones" />
+			<PlayerPowerManager
+				id="13D6F5E7"
+				SpecialPowerTemplate="SpecialPower_TiberiumVibrationScan" />
+			<PlayerPowerManager
+				id="14AFB35E"
+				SpecialPowerTemplate="SpecialPower_LightningSpike" />
+			<PlayerPowerManager
+				id="8A7B79FC"
+				SpecialPowerTemplate="SpecialPower_SummonMothership" />
+			<PlayerPowerManager
+				id="F7A39447"
+				SpecialPowerTemplate="SpecialPower_RiftGeneratorWeapon" />
+			<PlayerPowerManager
+				id="144229D3"
+				SpecialPowerTemplate="SpecialPower_CrystalShield" />
+			<PlayerPowerManager
+				id="88F52C97"
+				SpecialPowerTemplate="SpecialPower_WormHole" />
+			<PlayerPowerManager
+				id="56528BC1"
+				SpecialPowerTemplate="SpecialPower_Traveler59WormHole" />
+			<PlayerPowerManager
+				id="296C41CC"
+				SpecialPowerTemplate="SpecialPower_Swarm" />
+			<PlayerPowerManager
+				id="C6559DF6"
+				SpecialPowerTemplate="SpecialPower_PhaseField" />
+			<PlayerPowerManager
+				id="A5E3614C"
+				SpecialPowerTemplate="SpecialPower_BattleshipSpotTargetBombard" />
+			<PlayerPowerManager
+				id="34680889"
+				SpecialPowerTemplate="SpecialPower_AlienShockPods" />
+			<PlayerPowerManager
+				id="7062062C"
+				SpecialPowerTemplate="SpecialPower_AlienSeedTiberium" />
+			<PlayerPowerManager
+				id="CD159661"
+				SpecialPowerTemplate="SpecialPower_SummonTibHive" />
+			<PlayerPowerManager
+				id="953883B2"
+				SpecialPowerTemplate="SpecialPower_TemporalWormhole" />
+			<PlayerPowerManager
+				id="1B61FBB4"
+				SpecialPowerTemplate="SpecialPower_Reaper17TiberiumVibrationScan" />
+			<PlayerPowerManager
+				id="952A1F92"
+				SpecialPowerTemplate="SpecialPower_OverlordsWrath" />
+			<PlayerPowerManager
+				id="3EE60312"
+				SpecialPowerTemplate="SpecialPower_RailgunAccelerator" />
+			<PlayerPowerManager
+				id="BA7ADC1E"
+				SpecialPowerTemplate="SpecialPower_MjolnirStrike" />
+			<PlayerPowerManager
+				id="0C280A57"
+				SpecialPowerTemplate="SpecialPower_SupersonicAirAttack" />
+			<PlayerPowerManager
+				id="4129D442"
+				SpecialPowerTemplate="SpecialPower_LaserFencing" />
+			<PlayerPowerManager
+				id="07DDC2BB"
+				SpecialPowerTemplate="SpecialPower_SonicRepulsionField" />
+			<PlayerPowerManager
+				id="893D43A7"
+				SpecialPowerTemplate="SpecialPower_PowerSignatureScan" />
+			<PlayerPowerManager
+				id="FC688F43"
+				SpecialPowerTemplate="SpecialPowerZOCOM_SpaceCommandRaiderPods" />
+			<PlayerPowerManager
+				id="440374F6"
+				SpecialPowerTemplate="SpecialPowerCallSupportZOCOMAirborne" />
+			<PlayerPowerManager
+				id="5988D69C"
+				SpecialPowerTemplate="SpecialPowerCallSupportZOCOMBloodhound" />
+			<PlayerPowerManager
+				id="763AC667"
+				SpecialPowerTemplate="SpecialPowerCallSupportSTBloodhound" />
+			<PlayerPowerManager
+				id="050EB07D"
+				SpecialPowerTemplate="SpecialPowerZOCOMBombingRun" />
+			<PlayerPowerManager
+				id="DB994DA2"
+				SpecialPowerTemplate="SpecialPower_MagneticMines" />
+			<PlayerPowerManager
+				id="9E0CF036"
+				SpecialPowerTemplate="SpecialPower_DecoyTemple" />
+			<PlayerPowerManager
+				id="88C22CD3"
+				SpecialPowerTemplate="SpecialPowerDecoyNuclearMissileTimer" />
+			<PlayerPowerManager
+				id="BCEC3DCA"
+				SpecialPowerTemplate="MetaGameOp_NOD_Rise_Insurection" />
+			<PlayerPowerManager
+				id="8D715E45"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Friends_Of_Nod" />
+			<PlayerPowerManager
+				id="C35EFA9B"
+				SpecialPowerTemplate="MetaGameOp_NodPowerNuclearMissile" />
+			<PlayerPowerManager
+				id="4869DA86"
+				SpecialPowerTemplate="MetaGameOp_NodPowerTiberiumProductionSurge" />
+			<PlayerPowerManager
+				id="CCC66299"
+				SpecialPowerTemplate="MetaGameOp_NODPowerTraitor" />
+			<PlayerPowerManager
+				id="79BF550F"
+				SpecialPowerTemplate="MetaGameOp_NOD_Sabotage" />
+			<PlayerPowerManager
+				id="383C564C"
+				SpecialPowerTemplate="SpecialPower_Redemption" />
+			<PlayerPowerManager
+				id="39D19AE3"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Black_Hand" />
+			<PlayerPowerManager
+				id="59137572"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Marked_Of_Kane" />
+			<PlayerPowerManager
+				id="F8FAE851"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Kane_Lives" />
+			<PlayerPowerManager
+				id="5011537D"
+				SpecialPowerTemplate="MetaGameOp_Nod_Power_Stealth_Field" />
+			<PlayerPowerManager
+				id="0A2B2A98"
+				SpecialPowerTemplate="MetaGameOp_NOD_Fury_Of_Nod" />
+			<PlayerPowerManager
+				id="A9072511"
+				SpecialPowerTemplate="MetaGameOp_NOD_Vertigo_Strike" />
+			<PlayerPowerManager
+				id="43B513D2"
+				SpecialPowerTemplate="MetaGameOp_GDIPowerIonBlast" />
+			<PlayerPowerManager
+				id="C1A1F7FA"
+				SpecialPowerTemplate="MetaGameOp_SCRINPowerRiftGenerator" />
+			<PlayerPowerManager
+				id="13B17AA6"
+				SpecialPowerTemplate="MetaGameOp_GDI_FireHawk_Raid" />
+			<PlayerPowerManager
+				id="6FA62A0B"
+				SpecialPowerTemplate="MetaGameOp_GDIPowerStateOfEmergency" />
+			<PlayerPowerManager
+				id="7547D79D"
+				SpecialPowerTemplate="MetaGameOp_GDI_Refugee_Aid" />
+			<PlayerPowerManager
+				id="8466E0F8"
+				SpecialPowerTemplate="MetaGameOp_GDISonicAgitation" />
+			<PlayerPowerManager
+				id="F9E41826"
+				SpecialPowerTemplate="MetaGameOp_GDIZocomInfiltration" />
+			<PlayerPowerManager
+				id="0970A323"
+				SpecialPowerTemplate="MetaGameOp_GDIMediaBlitz" />
+			<PlayerPowerManager
+				id="F0AA7CD6"
+				SpecialPowerTemplate="MetaGameOp_GDISkySentry" />
+			<PlayerPowerManager
+				id="6F5E2844"
+				SpecialPowerTemplate="MetaGameOp_AlienPlague" />
+			<PlayerPowerManager
+				id="31C94C23"
+				SpecialPowerTemplate="MetaGameOp_GDI_Power_SpecialForces" />
+			<PlayerPowerManager
+				id="93251E64"
+				SpecialPowerTemplate="MetaGameOp_GDICommandoStrike" />
+			<PlayerPowerManager
+				id="DFCFEECC"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Alien_Dropship" />
+			<PlayerPowerManager
+				id="C66C79E6"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Wormhole" />
+			<PlayerPowerManager
+				id="541B70FC"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_BuildTower" />
+			<PlayerPowerManager
+				id="8F382759"
+				SpecialPowerTemplate="MetaGameOp_AlienPhaseField" />
+			<PlayerPowerManager
+				id="59EB71DD"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Eradicate" />
+			<PlayerPowerManager
+				id="2B80AA70"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Ichor_Injection" />
+			<PlayerPowerManager
+				id="49A6C02F"
+				SpecialPowerTemplate="MetaGameOp_AlienPowerPlanetaryBombardment" />
+			<PlayerPowerManager
+				id="89B92C86"
+				SpecialPowerTemplate="MetaGameOp_SCRIN_Ion_Superstorm" />
+<!-- 			<CreateObjectDie
+				id="ModuleTag_OCL_MiscObjectProvider"
+				CreationList="OCL_MiscObjectProvider"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie> -->
+
+    </Behaviors>
+
+    <AI>
+      <!-- KWBANDAGE ORIGINAL -->
+      <!-- <AIUpdate -->
+				<!-- id="ModuleTag_AI" -->
+				<!-- AutoAcquireEnemiesWhenIdle="NO"> -->
+      <!-- </AIUpdate> -->
+      <AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				StopChaseDistance="500"
+				HoldGroundCloseRangeDistance="0"
+				AILuaEventsList="PlayerSpellBookMetaModInjectionEvent"
+				MinCowerTime="0s"
+				MaxCowerTime="0s"
+				RampageTime="0s"
+				BurningDeathTime="0s"
+				TimeToEjectPassengersOnRampage="0"
+				ComboLocomotorSet="NORMAL"
+				ComboLocoAttackDistance="80"
+				IdleTargetTime="0s"
+				MaxCombineChildren="1"
+				SpawnOffsetRadius="0"
+				StandGround="False"
+				CanAttackWhileContained="False"
+				RampageRequiresAflame="False"
+				FadeOnPortals="False">
+      </AIUpdate>
+	  
+	  <!-- FROM METAMOD -->
+      <!-- <AIUpdate -->
+				<!-- id="12FA48BA" -->
+				<!-- AutoAcquireEnemiesWhenIdle="NO"    -->
+				<!-- StopChaseDistance="500" -->
+				<!-- HoldGroundCloseRangeDistance="0" -->
+				<!-- AILuaEventsList="PlayerSpellBookMetaModInjectionEvent" -->
+				<!-- MinCowerTime="0s" -->
+				<!-- MaxCowerTime="0s" -->
+				<!-- RampageTime="0s" -->
+				<!-- BurningDeathTime="0s" -->
+				<!-- TimeToEjectPassengersOnRampage="0" -->
+				<!-- ComboLocomotorSet="NORMAL" -->
+				<!-- ComboLocoAttackDistance="80" -->
+				<!-- IdleTargetTime="0s" -->
+				<!-- MaxCombineChildren="1" -->
+				<!-- SpawnOffsetRadius="0" -->
+				<!-- StandGround="False" -->
+				<!-- CanAttackWhileContained="False" -->
+				<!-- RampageRequiresAflame="False" -->
+				<!-- FadeOnPortals="False"> -->
+      <!-- </AIUpdate> -->
+    </AI>
+
+    <Body>
+      <!-- KWBANDAGE ORIGINAL -->
+      <!-- <HighlanderBody -->
+				<!-- id="ModuleTag_Body" -->
+				<!-- MaxHealth="1.0" -->
+				<!-- InitialHealth="1.0" /> -->
+				
+      <HighlanderBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0"
+				InitialHealth="1.0"
+				MaxHealthDamaged="0"
+				MaxHealthReallyDamaged="0"
+				RecoveryTime="0"
+				DodgePercent="0"
+				EnteringDamagedTransitionTime="0s"
+				EnteringReallyDamagedTransitionTime="0s"
+				GrabFX=""
+				GrabDamage="200"
+				HealingBuffFX=""
+				DamagedAttributeModifier=""
+				ReallyDamagedAttributeModifier=""
+				CheerRadius="200"
+				BurningDeathFX=""
+				SecondChanceUpgrade=""
+				SecondChanceHeal="0"
+				UseDefaultDamageSettings="True"
+				RemoveUpgradesOnDeath="False"
+				BurningDeathBehavior="False" />
+				
+	  <!-- FROM METAMOD -->
+      <!-- <HighlanderBody -->
+				<!-- id="B313F576" -->
+				<!-- MaxHealth="1" -->
+				<!-- MaxHealthDamaged="0" -->
+				<!-- MaxHealthReallyDamaged="0" -->
+				<!-- InitialHealth="1" -->
+				<!-- RecoveryTime="0" -->
+				<!-- DodgePercent="0" -->
+				<!-- EnteringDamagedTransitionTime="0s" -->
+				<!-- EnteringReallyDamagedTransitionTime="0s" -->
+				<!-- GrabFX="" -->
+				<!-- GrabDamage="200" -->
+				<!-- HealingBuffFX="" -->
+				<!-- DamagedAttributeModifier="" -->
+				<!-- ReallyDamagedAttributeModifier="" -->
+				<!-- CheerRadius="200" -->
+				<!-- BurningDeathFX="" -->
+				<!-- SecondChanceUpgrade="" -->
+				<!-- SecondChanceHeal="0" -->
+				<!-- UseDefaultDamageSettings="True" -->
+				<!-- RemoveUpgradesOnDeath="False" -->
+				<!-- BurningDeathBehavior="False" /> -->
+    </Body>
+
+    <Geometry
+			IsSmall="true">
+			
+      <!-- KWBANDAGE ORIGINAL -->
+      <!-- <Shape -->
+				<!-- Type="CYLINDER" -->
+				<!-- MajorRadius="1.0" -->
+				<!-- Height="1.0"> -->
+      <!-- </Shape> -->
+	  
+	  <!-- FROM METAMOD -->
+      <Shape
+				Type="CYLINDER"
+				ContactPointGeneration="NONE"
+				MajorRadius="1.0"
+				MinorRadius="1.0"
+				Height="1.0"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
+      </Shape>
+    </Geometry>
+  </GameObject>
+</AssetDeclaration>

@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<ObjectCreationList
+		id="OCL_MetaControlPREActivation">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyGameSetupMaker</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlTeamRelationsInitializator</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyForceLuaScriptActivatorDelayer</CreateObject>
+		</CreateObject>
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMoneyTransmitterDelayer</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostTogglerByForceDelayer</CreateObject>
+		</CreateObject>
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyActivatorDelayer</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyUnlimitedCameraHackDelayer</CreateObject>
+		</CreateObject>
+<!-- 		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyTiberiumKillerSpawner</CreateObject>
+		</CreateObject> -->
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyPermanentMapRevealerDelayer</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummySuperweaponOFFDelayer</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMainTabMenuDelayer</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostMoneyDelayer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyPeriodicMasterChecker">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyPeriodicMasterChecker</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_NAOD_NextWave">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyNAODNextWaveEnabler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_DiplomacyMenuSelector">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyDiplomacyTabMenuSelector</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_NewTiberiumCrystalGreenInfinite">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>TiberiumCrystalInfinite</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_NewTiberiumCrystalBlueInfinite">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>TiberiumCrystalBlueInfinite</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_AICoControlToggler">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyAICoControlToggler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TimerCounterChecker">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>TimerCounterChecker</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_ScriptTimer">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>ScriptTimer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_ScriptTimerFast">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>ScriptTimerFast</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_PerHumanPlayerPeriodicChecker">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>PerHumanPlayerPeriodicChecker</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_LuaScriptActivatorByForce">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyForceLuaScriptActivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_AIBoost">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostActivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+
+	<ObjectCreationList
+		id="OCL_AIBoostMoney">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostMoney</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_AIBoostPreMoney">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostMoneyEnabler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_AIBoostTogglerByForce">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyAIBoostTogglerByForce</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_PermanentMapRevealer">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyPermanentMapRevealer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummySuperweaponOFF">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummySuperweaponOFF</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMainTabMenuDelayer">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMainTabMenu</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MoneyTransmitterSpawn">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMoneyTransmitter</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+
+	<ObjectCreationList
+		id="OCL_MetaControlDummyActivator">		
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyActivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_UnlimitedCameraHackSpawn">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyUnlimitedCameraHack</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_UnlimitedCameraHackSpawn2">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyUnlimitedCameraHack2</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TiberiumKillerSpawn">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>TiberiumKillerCrateDummy</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_DeactivateMetaControl">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyDeActivator</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyActivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_ActivateMetaControl">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyDeactivateActivator</CreateObject>
+		</CreateObject>		
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyMain</CreateObject>
+		</CreateObject>						
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_LuaScriptRunner">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+			<CreateObject>MetaControlDummyLuaScriptRunner</CreateObject>
+		</CreateObject>
+<!-- 		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1">
+		    <CreateObject>MetaControlDummyAIControlOff</CreateObject>
+	    </CreateObject>  -->
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_SendMoney">
+		   <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1"
+			>
+			<CreateObject>MetaControlDummyMoneyCrate</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_GlobalDeactivator">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1"
+			>
+			<CreateObject>MetaControlDummyGlobalDeactivator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_Money5k">
+		<CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS"
+			Count="1"
+			>
+			<CreateObject>MetaControlDummyMoney5k</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEveryAIOFFToggler">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEveryAIOFFToggler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEveryAIOFF">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEveryAIOFF</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEveryAIOFFKiller">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEveryAIOFFKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEnemyAIOFFToggler">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEnemyAIOFFToggler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEnemyAIOFF">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEnemyAIOFF</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyEnemyAIOFFKiller">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyEnemyAIOFFKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMapRevealerToggler">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMapRevealerToggler</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMapRevealer">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMapRevealer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMapRevealerKiller">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMapRevealerKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMainTabMenuSelector">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMainTabMenuSelector</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMainTabMenuPlayerPower">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMainTabMenuPlayerPower</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<ObjectCreationList
+		id="OCL_MetaControlDummyMainTabMenuPlayerPowerKiller">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyMainTabMenuPlayerPowerKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_Diplomacy_Accept">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>Diplomacy_Choose_Accept</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_Diplomacy_Deny">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>Diplomacy_Choose_Deny</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaCreditShopSelectTabMenu">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaCreditShopSelectTabMenu</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_MetaMenuPositionObject">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaMenuPositionObject</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="TiberiumCrystalInfiniteOCL">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystal</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TiberiumCrystalReplacer">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystalReplacer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TiberiumCrystalProhibitor">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystalReplacerProhibitor</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="TiberiumCrystalBlueInfiniteOCL">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystalBlue</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TiberiumCrystalBlueReplacer">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystalBlueReplacer</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_TiberiumCrystalBlueProhibitor">
+		<CreateObject 
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES"
+			Count="1">
+			<CreateObject>TiberiumCrystalBlueReplacerProhibitor</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_CameraSetup">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyCameraSetup</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_FirstAndThirdPersonMode">		
+	    <CreateObject
+			Disposition="LIKE_EXISTING USE_WATER_SURFACE USE_CLIFF"
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Count="1">
+			<CreateObject>MetaControlDummyViewChanger</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+		
+</AssetDeclaration>

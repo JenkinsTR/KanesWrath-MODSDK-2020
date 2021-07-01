@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BaseUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryWeakReference
+			id="BuildingTemplateId"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="PlacementPrefixBoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="PlacementIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+</AssetDefinition>

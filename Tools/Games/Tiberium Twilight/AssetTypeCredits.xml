@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="StyleName">
+		<Entry>TitleFont</Entry>
+		<Entry>MinorTitleFont</Entry>
+		<Entry>NormalFont</Entry>
+		<Entry>ColumnFont</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ScrollInfo">
+		<Entry
+			id="Rate"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="RateEveryFrame"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ScrollDown"
+			AssetType="SageBool"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="CreditStyle">
+		<Entry
+			id="Name"
+			AssetType="StyleName"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Color"
+			AssetType="Color3" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+	</Asset>
+
+	<Asset
+		id="CreditElement">
+		<Entry
+			id="Style"
+			AssetType="StyleName"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Text"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="Credits">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Scroll"
+			AssetType="ScrollInfo" />
+		<EntryList
+			id="Style"
+			AssetType="CreditStyle"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="CreditItem"
+			AssetType="CreditElement"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

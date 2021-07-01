@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>UI Modification</h3>
+<h4>Limitations of UI Modification</h4>
+<p>Due to limitations of the tools included in the SDK, modification of the UI beyond texture replacement is not possible.  However, for the main menu, new &quot;cleaned&quot; UI files are available
+	at <a href="http://www.commandandconquer.com/community/mods/">commandandconquer.com</a>.  These remove the majority of the non-editable UI elements from the main menu for modding convenience.
+</p>
+<h4>Directory Organization</h4>
+<p>Within the data directory for your mod, you need to create an AptUI folder.  This folder will contain the modified UI screens.  You can simply copy the directory for the UI screen you wish to modify into the AptUI folder
+	of your mod.  You also will need to create an XML file for the UI screen.  An example is provided below:
+</p>
+<p class="code">
+&lt;?xml version='1.0' encoding='utf-8'?&gt;<br />
+&lt;AssetDeclaration xmlns=&quot;uri:ea.com:eala:asset&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br />
+	&lt;Tags&gt;&lt;/Tags&gt;<br />
+	&lt;Includes&gt;<br />
+		&lt;Include type=&quot;all&quot; source=&quot;DATA:SampleMod\Data\AptUI\MainMenu\MainMenu.xml&quot; /&gt;<br />
+	&lt;/Includes&gt;<br />
+&lt;/AssetDeclaration&gt;<br />
+</p>
+<p>Be sure to change the SampleMod reference to your mod name.  In addition to the XML file for the UI folder, you will need to add a reference to your mod.xml file
+	to include the modified UI screen.  An example of how the reference would look is below:
+</p>
+<p class="code">
+	&lt;Include type=&quot;reference&quot; source=&quot;DATA:SampleMod/Data/AptUI/MainMenu.xml&quot; /&gt;
+</p>
+<h4>Repeated UI Modification</h4>
+<p>When repeatedly editing a texture for a UI screen, it can happen that the changes will not propagate into the game.  It is possible that the edited texture was not
+	 compiled into your mod.  To fix this, you will need to clean the cached built files for your mod.  You do so by
+	opening the BuiltMods\mods folder, and deleting the folder within it with the same name as your mod.  So, to clean the SampleMod, you would delete the SampleMod folder,
+	found at BuiltMods\mods\SampleMod in your SDK Installation directory.  Do not delete the cnc3xml folder in BuiltMods\ directory, as this will cause the SDK to not function
+	properly
+</p>
+</body>
+</html>

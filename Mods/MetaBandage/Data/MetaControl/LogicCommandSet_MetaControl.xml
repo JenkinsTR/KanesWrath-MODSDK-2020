@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LogicCommandSet
+		id="MetaCreditShopCommandSet">
+		<Cmd>Command_SpecialPowerMetaCreditShopSelectTabMenu</Cmd>		
+<!-- 		<Cmd>Command_ConstructMetaCreditShopRevealMap</Cmd>	 -->	
+		<Cmd>Command_ConstructMetaCreditShopIonCannon</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopNuke</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopRiftGenerator</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopEMP</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopIndestructible</Cmd>	
+		<Cmd>Command_ConstructMetaCreditInfiniteEnergy</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopInfiniteProductionSpeed</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopBuildAnywhere</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopSlowDownEnemy</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopBoostSelectedUnit</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopRandomAntiGroundDefenseBlock</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopRandomAntiAirDefenseBlock</Cmd>	
+		<Cmd>Command_ConstructMetaCreditShopAntiVehicleDefStartPoint</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopAntiVehicleDefEndPoint</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopRandomSquareDefense</Cmd>	
+		<Cmd>Command_ConstructMetaCreditShopRandomCircleDefense</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopRandomSpiralDefense</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopSpawnRandomUnitForce7</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopSuperAvatar</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopGuardShieldEmitter</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopConvertMCtoDollar</Cmd>		
+<!-- 		<Cmd>Command_ConstructMetaCreditShopConvertMoney</Cmd> -->
+		<Cmd>Command_ConstructMetaCreditShopBet</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopGetStatistics</Cmd>		
+		<Cmd>Command_ConstructMetaCreditShopBaseTemplate</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopTimetravelFixpoint</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopTimetravel</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="MetaControlDummyActivatorCommandSet">
+		<Cmd>Command_SpecialPower_MetaControlGlobalDeactivate</Cmd>
+		<Cmd>Command_SpecialPower_ActivateMetaControl</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyMainCommandSet">
+		<Cmd>Command_SpecialPower_MetaControlGlobalDeactivate</Cmd>
+		<Cmd>Command_SpecialPower_DeActivateMetaControl</Cmd>
+		<Cmd>Command_SpecialPower_ExternalLuaScript</Cmd>
+        <Cmd>Command_SpecialPower_Money5k</Cmd>
+        <Cmd>Command_SpecialPower_RiftGen</Cmd>
+		<Cmd>Command_SpecialPower_EnemyAIOFF</Cmd>
+		<Cmd>Command_SpecialPower_EveryAIOFF</Cmd>
+		<Cmd>Command_SpecialPower_MapRevealerToggle</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyMoneyTransmitterCommandSet">
+		<Cmd>Command_SpecialPower_SendMoney</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyForceLuaScript">
+		<Cmd>Command_SpecialPower_ExternalLuaScript</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyMainTabMenuCommandSet">
+		<Cmd>Command_MetaControlTabNextCS</Cmd>		
+		<Cmd>Command_SpecialPower_MainTabMenuSelector</Cmd>
+		<Cmd>Command_ConstructMetaMenuExecute</Cmd>	
+		<Cmd>Command_ConstructMetaMenuSelectionUp</Cmd>	
+		<Cmd>Command_ConstructMetaControlMetaMenuHide</Cmd>	
+		<Cmd>Command_ConstructMetaMenuSelectionLeft</Cmd>		
+		<Cmd>Command_ConstructMetaMenuSelectionDown</Cmd>
+		<Cmd>Command_ConstructMetaMenuSelectionRight</Cmd>
+ 		<Cmd>Command_ConstructDiplomacyMenuToggle</Cmd>
+		<Cmd>Command_ConstructMetaCreditShopMenuToggle</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyMainTabMenuPlayerPowerToggler</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyEnemyAIOFFToggler</Cmd>		
+		<Cmd>Command_ConstructMetaControlDummyEveryAIOFFToggler</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyMoneyImmediate</Cmd>			
+		<Cmd>Command_ConstructMetaControlDummyAIBoostActivator</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyAIBoostAlliesActivator</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyMapRevealerToggler</Cmd>
+ 		<Cmd>Command_ConstructMetaControlDummyUnitSpawner</Cmd>	
+ 		<Cmd>Command_ConstructMetaControlDummyMakePlayerIndestructible</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyUnlimitedCameraHack2</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyViewChanger</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyAICoControlToggler</Cmd>	
+ 		<Cmd>Command_ConstructMetaControlGuardShieldEmitterFree</Cmd>		
+		<Cmd>Command_ConstructMetaControlDummyLuaScriptRunner</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyGlobalDeactivator</Cmd>		
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyMainTabMenuCommandSetAdvanced">
+		<Cmd>Command_MetaControlTabPrevCS</Cmd>			
+		<Cmd>Command_SpecialPower_MainTabMenuSelector</Cmd>
+		<Cmd>Command_ConstructMetaMenuExecute</Cmd>	
+		<Cmd>Command_ConstructMetaMenuSelectionUp</Cmd>	
+		<Cmd>Command_ConstructMetaMenuSelectionDown</Cmd>
+<!--         <Cmd>Command_SpecialPower_RiftGen</Cmd> -->
+		<Cmd>Command_ConstructMetaControlDummyGlobalDeactivator</Cmd>
+<!-- 		<Cmd>Command_ConstructMetaControlDummyActivator</Cmd> -->
+		<Cmd>Command_ConstructMetaControlDummyMainTabMenuPlayerPowerToggler</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyMoneyImmediate</Cmd>		
+		<Cmd>Command_ConstructMetaControlDummyEveryAIOFFToggler</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyEnemyAIOFFToggler</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyMapRevealerToggler</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyAIBoostActivator</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyAIBoostAlliesActivator</Cmd>	
+		<Cmd>Command_ConstructMetaControlDummyAICoControlToggler</Cmd>			
+		<Cmd>Command_ConstructMetaControlDummyUnlimitedCameraHack2</Cmd>	
+ 		<Cmd>Command_ConstructMetaControlDummyCamZoomLockToggler</Cmd>
+		<Cmd>Command_ConstructMetaControlDummyLuaScriptRunner</Cmd>	
+ 		<Cmd>Command_ConstructMetaControlDummyUnitSpawner</Cmd>
+ 		<Cmd>Command_ConstructMetaControlInfoAboutUnit</Cmd>
+ 		<Cmd>Command_ConstructMetaControlDummyMakePlayerIndestructible</Cmd>
+ 		<Cmd>Command_ConstructMetaControlDummyMergeTeams</Cmd>
+		<Cmd>Command_ConstructMetaControlGuardShieldEmitterFree</Cmd>	
+<!--  		<Cmd>Command_ConstructMetaControlDummyLuaEventTrigger</Cmd> -->
+<!--  		<Cmd>Command_ConstructMetaControlDummyReloadAutostartConfig</Cmd> -->
+		<Cmd>Command_ConstructDiplomacy_PrevPlayer</Cmd>		
+		<Cmd>Command_ConstructDiplomacy_NextPlayer</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_ShowAllRelations</Cmd>			
+		<Cmd>Command_ConstructDiplomacy_RequestAlliance</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_BreakAlliance</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_RequestAlliedHelp</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_TakeControlOfAllied</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_TemporaryMergeAlliedTeam</Cmd>
+		<Cmd>Command_ConstructDiplomacy_TemporaryMergeOwnTeam</Cmd>
+		<Cmd>Command_ConstructDiplomacy_SwitchTeams</Cmd>
+<!--  		<Cmd>Command_ConstructMetaControlDummyLuaEventTrigger</Cmd> -->
+<!--  		<Cmd>Command_ConstructMetaControlDummyReloadAutostartConfig</Cmd> -->
+<!--  		<Cmd>Command_SpecialPowerToggleEvoUnitAI</Cmd> -->
+		<!-- <Cmd>Command_ConstructMetaControlDummyMainTabMenuSwitcher</Cmd>	 -->
+<!-- 		<Cmd>Command_ConstructTestCommand</Cmd>		 -->	
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyAIBoostTogglerCommandSet">
+		<Cmd>Command_SpecialPower_AIBoostToggleMetaControl</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyNAODRoundBasedHelperCommandSet">
+		<Cmd>Command_SpecialPower_NAOD_NextWave</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyDiplomacyTabMenuCommandSet">
+		<Cmd>Command_SpecialPower_DiplomacyMenuSelect</Cmd>
+		<Cmd>Command_ConstructDiplomacy_PrevPlayer</Cmd>		
+		<Cmd>Command_ConstructDiplomacy_NextPlayer</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_ShowAllRelations</Cmd>			
+		<Cmd>Command_ConstructDiplomacy_RequestAlliance</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_BreakAlliance</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_SendMoney</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_ApplyForTeamCommander</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_RequestAlliedHelp</Cmd>			
+		<Cmd>Command_ConstructDiplomacy_MoveAttackCommand</Cmd>	
+		<Cmd>Command_ConstructDiplomacy_TemporaryMergeAlliedTeam</Cmd>
+		<Cmd>Command_ConstructDiplomacy_TemporaryMergeOwnTeam</Cmd>
+		<Cmd>Command_ConstructDiplomacy_SwitchTeams</Cmd>
+		<Cmd>Command_ConstructDiplomacy_TakeControlOfAllied</Cmd>
+ 		<Cmd>Command_ConstructMetaControlDummyMergeTeams</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="AICoControlTogglerByPlayerPowerCommandSet">
+		<Cmd>Command_ToggleAICoControl</Cmd>
+	</LogicCommandSet>
+	
+
+	<LogicCommandSet
+		id="MetaControlEdgeCoordinateAnchorDownLeftCommandSet">
+		<Cmd>Command_SpecialPowerEdgeCoordinateAnchorUpperRight</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlEdgeCoordinateAnchorDownRightSpawnerCommandSet">
+		<Cmd>Command_SpecialPowerEdgeCoordinateAnchorDownRight</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlEdgeCoordinateAnchorDownRightCommandSet">
+		<Cmd>Command_SpecialPowerEdgeCoordinateAnchorUpperLeft</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="Diplomacy_Choose_AcceptDeny_CommandSet">
+		<Cmd>Command_SpecialPowerDiplomacy_Accept</Cmd>
+		<Cmd>Command_SpecialPowerDiplomacy_Deny</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaMenuChoosePositionCommandSet">
+		<Cmd>Command_SpecialPowerChoosePosition</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyCameraSetupButtonProviderCommandSet">
+		<Cmd>Command_SpecialPowerCameraSetup</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="MetaControlDummyViewChangerButtonProviderCommandSet">
+		<Cmd>Command_FirstAndThirdPersonMode</Cmd>
+	</LogicCommandSet>
+		
+</AssetDeclaration>

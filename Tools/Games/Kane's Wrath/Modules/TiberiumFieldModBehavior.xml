@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TiberiumFieldModBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

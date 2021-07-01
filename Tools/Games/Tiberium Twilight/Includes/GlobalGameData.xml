@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WeatherType">
+		<Entry>NORMAL</Entry>
+		<Entry>CLOUDY</Entry>
+		<Entry>RAINY</Entry>
+		<Entry>CLOUDYRAINY</Entry>
+		<Entry>SUNNY</Entry>
+		<Entry>SNOWY</Entry>
+		<Entry>INVALID</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<P align="center"><FONT face="Arial" size="4"><STRONG>3DSMax W3D Skin Modifier</STRONG></FONT></P>
+		<P><FONT face="Arial"></FONT>&nbsp;</P>
+		<P><FONT face="Arial">The 2nd part of the W3D plugin for max is the WWSkin. Although it 
+				is located under Space Warps in max, Its not a space warp in the traditional 
+				sense, but more-less put into the "Space Warps" section in max for because of 
+				the way this part of the plugin works. The WWSkin is used create a binding 
+				between the bones (used for animation in your scene) and the vertices of your 
+				geometry. Without this part you are unable to export any animations, 
+				transforms, or bones into W3D.</FONT></P>
+		<P><FONT face="Arial">You Can find the "WWSkin" Plugin in the create panel of 3D Max 
+				under:<BR>
+				<B>&gt; Space Warps &gt; Westwood Space Warps &gt;WWSkin</B></FONT></P>
+		<P><FONT face="Arial">If you don't see it there, check your plugin installation.</FONT></P>
+		<P><FONT face="Arial"><IMG height="64" src="images/note.jpg" width="94"> The skinning 
+				modifier that (nowadays) ships with Max is superior for&nbsp;many tasks than 
+				our own. There are MaxScripts that convert back and forth between the 
+				modifiers. Just make sure when you export the file to have&nbsp;a WWSkin 
+				modifier.</FONT></P>
+		<P>&nbsp;</P>
+		<P><FONT face="Arial"><B>To Create a WWSkin:</B><BR>
+				Select the button labeled "WWSkin" in the Object type rollout, now click and 
+				drag in the viewport to create it. It may look very small at first, you can use 
+				the scale tool to enlarge it. The WWSkin is represented as a set of crossbones.</FONT></P>
+		<P><FONT face="Arial"><B>To Bind A WWSkin to your geometry:</B><BR>
+				This Plugin works on a bones system. So you must have bones in your 
+				scene.&nbsp; Although it can work with Biped, Dummy objects are used for most 
+				purposes. Select the WWSkin Icon and go to the Modify panel in max. Click the 
+				"Add Bones" button and select the bones that will be used to control the 
+				geometry you wish to export then Click "OK". With the Icon Still Selected, 
+				Click the "Bind to spacewarp" button, located on the main toolbar in max. 
+				Starting from the Bone, Click and Drag until your over the geometry you wish to 
+				bind to, then release. You've now bound the spacewarp to the geometry.</FONT></P>
+		<P><FONT face="Arial"><B>To Attach the vertices to a bone:</B><BR>
+				Your geometry will now be showing its vertices.&nbsp; Select the regular 
+				Selection tool from the main toolbar in max and draw a selection set around the 
+				vertices you wish to link to a particular bone.&nbsp; With the vertices 
+				selected, click the "link to bone" button, then click on the dummy object or 
+				(bone) you wish to link them to. To link more vertices to more bones, just do 
+				the same process from the selecting the vertices part. The WWSkin works on a 
+				single mesh and you can use multiple bones with it.<BR>
+				<BR>
+				<IMG height="64" src="images/note.jpg" width="94"> The bones wont influence 
+				your geometry until you have moved from frame 0 and turned on the Animate 
+				button in max.</FONT></P>
+		<P><FONT face="Arial"><B>To Animate:</B><BR>
+				With the frame on anything other than "0" and the animate button on, Select the 
+				bones and animate them as you would normally</FONT></P>
+		<P><FONT face="Arial">Heres a look at the WWSkin interface in max:</FONT></P>
+		<TABLE id="Table1" borderColor="#cccccc" cellPadding="5" width="100%" bgColor="#cccccc"
+			border="0">
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT face="Arial" color="#ffffff" size="2">Object 
+								Type:</FONT></B></FONT></TD>
+				<TD><FONT face="Arial">&nbsp;</FONT></TD>
+				<TD rowSpan="15"><FONT face="Arial"><IMG height="612" src="images/wwskin.gif" width="183" align="textTop"></FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">WWSkin</FONT></B></TD>
+				<TD width="383"><FONT face="Arial">Click this and drag in your viewport to create the 
+						WWSkin space warp. </FONT>
+				</TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD vAlign="top" width="113" bgColor="#cccccc"><B><FONT face="Arial">AutoGrid</FONT></B></TD>
+				<TD width="383"><FONT face="Arial" color="#ff0000">A Max implemented option:<FONT color="#000000">
+							lets you automatically create objects on the surface of other objects by 
+							generating and activating a temporary construction plane based on normals of 
+							the face that you click. This serves as a more efficient way of stacking 
+							objects as you create them, rather than building objects and then aligning 
+							them. </FONT>
+						<BR>
+					</FONT>
+				</TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT face="Arial" color="#ffffff" size="2">Name 
+								and Color:</FONT></B></FONT></TD>
+				<TD width="383"><FONT face="Arial"><FONT color="#ff0000">A Max implemented option:</FONT>
+						Name and <FONT color="#ff0000"></FONT><FONT color="#ff0000"></FONT>color your 
+						WWSkin </FONT>
+				</TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT face="Arial" color="#ffffff" size="2">Supports 
+								Objects of Type:</FONT></B></FONT></TD>
+				<TD width="383"><FONT face="Arial">All Geometric Objects</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT face="Arial" color="#ffffff" size="2">Skeleton 
+								Parameters</FONT></B></FONT></TD>
+				<TD width="383"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Base Pose</FONT></B></TD>
+				<TD width="383"><FONT face="Arial" color="#000000">Usually the default of 0 works fine 
+						for this, however, if in the instance your skeleton's base pose (T-pose) is not 
+						at frame "0" then adjust this spinner to the frame that your base pose is 
+						located on.</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Add Bones</FONT></B></TD>
+				<TD width="383">
+					<P><FONT face="Arial">Select your bones with the selection tool and Click the "Add 
+							Bones" button to add the bones you intend to use with the WWSkin space warp. </FONT>
+					</P>
+				</TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#cccccc"><B><FONT face="Arial">Remove Bones</FONT></B></TD>
+				<TD width="383"><FONT face="Arial">Select and remove previously added bones you do not 
+						wish to use with the WWSkin space warp.</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD width="113" bgColor="#666666"><FONT color="#006600" size="3"><B><FONT face="Arial" color="#ffffff" size="2">Bones</FONT></B></FONT></TD>
+				<TD width="383"><FONT face="Arial">Displays the bones you have selected to be used with 
+						the space warp.</FONT></TD>
+			</TR>
+			<TR bgColor="#ffffff">
+				<TD colSpan="2" height="22"><FONT face="Arial">&nbsp;</FONT></TD>
+			</TR>
+		</TABLE>
+		<BR>
+		<FONT face="Arial"><IMG src="images/note.jpg"> For a simple walkthrough of this 
+			exporting process, see the tutorial: (</FONT><A href="tutorial_w3d_exporting.htm"><FONT face="Arial">Exporting 
+				from Max</FONT></A><FONT face="Arial">).<BR>
+		</FONT>
+		<DIV align="center">
+			<P><STRONG><FONT face="Arial"></FONT></STRONG>&nbsp;</P>
+			<P>&nbsp;</P>
+		</DIV>
+	</body>
+</html>

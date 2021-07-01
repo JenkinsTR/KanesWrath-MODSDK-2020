@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CameraSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="DefaultMinHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultMaxHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultPitchAngle"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultYawAngle"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultScrollSpeedScalar"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultHeightMapSmoothnessScalar"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollAmountCutoff"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ScrollPitchMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CameraAdjustSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeSubtleIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeNormalIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeStrongIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeSevereIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeCineExtremeIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ShakeCineInsaneIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxShakeIntensity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxShakeRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CameraLockHeightDelta"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CameraTerrainSampleRadiusForHeight"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="CameraEaseFactor"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

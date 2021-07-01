@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WeaponSlotType">
+		<Entry>PRIMARY_WEAPON</Entry>
+		<Entry>SECONDARY_WEAPON</Entry>
+		<Entry>TERTIARY_WEAPON</Entry>
+		<Entry>QUATERNARY_WEAPON</Entry>
+		<Entry>QUINARY_WEAPON</Entry>
+		<Entry>NO_WEAPON</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="WeaponSlotBitFlags"
+		BaseEnum="WeaponSlotType" />
+
+	<EnumAsset
+		id="TimeOfDayType"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>MORNING</Entry>
+		<Entry>AFTERNOON</Entry>
+		<Entry>EVENING</Entry>
+		<Entry>NIGHT</Entry>
+		<Entry>INTERPOLATE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WaypointPortalType">
+		<Entry>NORMAL</Entry>
+		<Entry>PORTAL</Entry>
+		<Entry>WALK_PORTAL</Entry>
+		<Entry>CLIMB_PORTAL</Entry>
+		<Entry>PRE_CLIMB_PORTAL</Entry>
+		<Entry>BEACON</Entry>
+		<Entry>SPLINE_CATMULL_ROM</Entry>
+		<Entry>FAKE_PATHFIND_PORTAL</Entry>
+		<Entry>MINESHAFT_PORTAL</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="LocomotorSetType"
+		IsStartingNegative="true">
+		<Entry>INVALID</Entry>
+		<Entry>NORMAL</Entry>
+		<Entry>NORMAL_UPGRADED</Entry>
+		<Entry>FREEFALL</Entry>
+		<Entry>WANDER</Entry>
+		<Entry>PANIC</Entry>
+		<Entry>TAXIING</Entry>
+		<Entry>SUPERSONIC</Entry>
+		<Entry>MOUNTED</Entry>
+		<Entry>ENRAGED</Entry>
+		<Entry>SCARED</Entry>
+		<Entry>CONTAINED</Entry>
+		<Entry>COMBO</Entry>
+		<Entry>ATTACKING</Entry>
+		<Entry>MOVING_TO_TRANSPORT</Entry>
+		<Entry>WALL_SCALING</Entry>
+		<Entry>CHANGING_FIRINGARC</Entry>
+		<Entry>BURNINGDEATH</Entry>
+		<Entry>EXITING_PRODUCTION_STRUCTURE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ModelLODType">
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="AnimationLODType">
+		<Entry>VERY_LOW</Entry>
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="EffectsLODType">
+		<Entry>VERY_LOW</Entry>
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="DecalLODType">
+		<Entry>OFF</Entry>
+		<Entry>LOW</Entry>
+		<Entry>HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WaterLODType">
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ShadowLODType">
+		<Entry>OFF</Entry>
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TerrainLODType">
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+		<Entry>ULTRA_HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TextureQualityLODType">
+		<Entry>LOW</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HIGH</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="WeatherType">
+		<Entry>NORMAL</Entry>
+		<Entry>CLOUDY</Entry>
+		<Entry>RAINY</Entry>
+		<Entry>CLOUDYRAINY</Entry>
+		<Entry>SUNNY</Entry>
+		<Entry>SNOWY</Entry>
+		<Entry>INVALID</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="DisabledType">
+		<Entry>DEFAULT</Entry>
+		<Entry>USER_PARALYZED</Entry>
+		<Entry>EMP</Entry>
+		<Entry>HELD</Entry>
+		<Entry>PARALYZED</Entry>
+		<Entry>UNMANNED</Entry>
+		<Entry>UNDERPOWERED</Entry>
+		<Entry>FREEFALL</Entry>
+		<Entry>TEMPORARILY_BUSY</Entry>
+		<Entry>SCRIPT_DISABLED</Entry>
+		<Entry>SCRIPT_UNDERPOWERED</Entry>
+		<Entry>INFILTRATED</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="DisabledBitFlags"
+		BaseEnum="DisabledType" />
+
+	<EnumAsset
+		id="UpgradeIdType">
+		<Entry>01</Entry>
+		<Entry>02</Entry>
+		<Entry>03</Entry>
+		<Entry>04</Entry>
+		<Entry>05</Entry>
+		<Entry>06</Entry>
+		<Entry>07</Entry>
+		<Entry>08</Entry>
+		<Entry>09</Entry>
+		<Entry>10</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="TerrainScorchType"
+		IsStartingNegative="true">
+		<Entry>RANDOM</Entry>
+		<Entry>SCORCH_1</Entry>
+		<Entry>SCORCH_2</Entry>
+		<Entry>SCORCH_3</Entry>
+		<Entry>SCORCH_4</Entry>
+		<Entry>SCORCH_5</Entry>
+		<Entry>SCORCH_6</Entry>
+		<Entry>SCORCH_7</Entry>
+		<Entry>SCORCH_8</Entry>
+		<Entry>SCORCH_9</Entry>
+		<Entry>SCORCH_10</Entry>
+		<Entry>SCORCH_11</Entry>
+		<Entry>SCORCH_12</Entry>
+		<Entry>SCORCH_13</Entry>
+		<Entry>SCORCH_14</Entry>
+		<Entry>SCORCH_15</Entry>
+		<Entry>SCORCH_16</Entry>
+		<Entry>TERRAIN_MAPPED</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

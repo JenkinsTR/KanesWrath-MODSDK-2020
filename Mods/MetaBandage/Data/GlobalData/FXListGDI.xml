@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- GDI Sagitarious AATank Tungston Fire & Explosion -->
+
+	<FXList id="FX_GDIBatteryFireTungstenHeroic">
+		<NuggetList>
+			<ParticleSystem
+				Particle="GDIShellBatteryTungsten"
+				OrientToObject="true">
+				<Offset x="-15.0" y="0.0" z="0.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIBatteryMuzzleGlowTungstenHeroic"
+				OrientToObject="true">
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIBatteryMuzzleDustHeroic"
+				OrientToObject="true">
+				<Offset x="-5.0" y="0.0" z="0.0" />
+			</ParticleSystem>
+			<ParticleSystem
+				Particle="GDIBatteryFireDistort"
+				OrientToObject="true">
+			</ParticleSystem>
+		</NuggetList>
+	</FXList>
+	
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+	
+	<FXList id="FX_MidAirFlakExplosionHeroic">
+		<NuggetList>
+			<ParticleSystem
+				Particle="GDIMidAir_Add"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_Distortion"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_Explosions"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_FlakHeroic"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_FlashHeroic"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_Smoke"
+				Ricochet="true" />
+			<ParticleSystem
+				Particle="GDIMidAir_SparkHeroic"
+				Ricochet="true" />
+			<Sound Value="AudioEvent:Impact_Bullet" />
+		</NuggetList>
+	</FXList>
+	
+</AssetDeclaration>

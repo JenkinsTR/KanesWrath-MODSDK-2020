@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="WallBuilderBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="MaxNumSegments"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="SecondaryModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="WALL_SEGMENT" />
+		<Entry
+			id="SecondaryObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="WALL_SEGMENT" />
+		<Entry
+			id="ConnectingObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="StartInSecondaryModel"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BeamSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="DamagePerSecond"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="TargetAttributeModifierAdd"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<EntryReference
+			id="SweepFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="ReflectorExtendDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PreferredTargetBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="JoinWithOtherBeams"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DissapateWhenTargetDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="LineType"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="TargetSamePlayerOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

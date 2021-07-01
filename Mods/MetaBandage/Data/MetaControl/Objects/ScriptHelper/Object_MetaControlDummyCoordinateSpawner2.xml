@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	
+	<GameObject
+		id="CoordAnchor1"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+			<CreateObjectDie
+				id="ModuleTag_CoordAnchor2"
+				CreationList="OCL_CoordAnchor2"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie>
+			<DelayedLuaEventUpdate
+				id="ModuleTag_LuaEventUpdate"
+			/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="CoordAnchor2"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+			<DelayedLuaEventUpdate
+				id="ModuleTag_LuaEventUpdate"
+			/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="CoordSpawnEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+
+	<GameObject
+		id="FinalCoordAnchor1"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+			<CreateObjectDie
+				id="ModuleTag_FinalCoordAnchor2"
+				CreationList="OCL_FinalCoordAnchor2"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie>
+			<DelayedLuaEventUpdate
+				id="ModuleTag_LuaEventUpdate"
+			/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>	
+
+	<GameObject
+		id="FinalCoordAnchor2"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+			<DelayedLuaEventUpdate
+				id="ModuleTag_LuaEventUpdate"
+			/>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="FinalCoordAnchorEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>		
+	
+	<ObjectCreationList
+		id="OCL_FinalCoordAnchor1FadeTest">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS FADE_OUT"
+			FadeTime="0s" 
+			MaxLifetime="0s"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+		 <CreateObject>FinalCoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_FinalCoordAnchor1">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+		 <CreateObject>FinalCoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	<ObjectCreationList
+		id="OCL_FinalCoordAnchor2">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+		 <CreateObject>FinalCoordAnchor2</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	<ObjectCreationList
+		id="OCL_CoordAnchor2">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+		 <CreateObject>CoordAnchor2</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd1X">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="1"
+				y="0"
+				z="0" />
+		 <CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd10X">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="10"
+				y="0"
+				z="0" />
+		 <CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd100X">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="100"
+				y="0"
+				z="0" />
+		 <CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd1000X">
+		 <CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="1000"
+				y="0"
+				z="0" />
+		 <CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd1Y">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="1"
+				z="0" />
+			<CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	<ObjectCreationList
+		id="OCL_CoordAdd10Y">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="10"
+				z="0" />
+			<CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	<ObjectCreationList
+		id="OCL_CoordAdd100Y">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="100"
+				z="0" />
+			<CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	<ObjectCreationList
+		id="OCL_CoordAdd1000Y">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING ABSOLUTE_ANGLE"
+			Count="1">
+			<Offset
+				x="0"
+				y="1000"
+				z="0" />
+			<CreateObject>CoordAnchor1</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+	<WeaponTemplate
+		id="OCLWeaponY1"
+		Name="OCLWeaponY1" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd1Y" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponY10"
+		Name="OCLWeaponY10" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd10Y" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponY100"
+		Name="OCLWeaponY100" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd100Y" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponY1000"
+		Name="OCLWeaponY1000" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd1000Y" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponX1"
+		Name="OCLWeaponX1" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd1X" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponX10"
+		Name="OCLWeaponX10" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd10X" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponX100"
+		Name="OCLWeaponX100" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd100X" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponX1000"
+		Name="OCLWeaponX1000" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_CoordAdd1000X" />
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="OCLWeaponFinalCoordAnchor"
+		Name="OCLWeaponFinalCoordAnchor" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_FinalCoordAnchor1" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+</AssetDeclaration>

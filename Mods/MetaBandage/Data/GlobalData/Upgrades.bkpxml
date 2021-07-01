@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+	<UpgradeTemplate id="Upgrade_GiveMetaControlDummyPREActivation"
+		Type="PLAYER"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_TiberiumCrystalInfinite"
+		Type="OBJECT"
+	/>
+	
+	<UpgradeTemplate
+		id="Upgrade_NoSpawnUponDestructionTiberium"
+		Type="PLAYER">
+	</UpgradeTemplate>		
+		
+</AssetDeclaration>

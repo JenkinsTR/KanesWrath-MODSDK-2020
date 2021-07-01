@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AnimationSoundInfo">
+		<EntryReference
+			id="Sound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="RequiredMC"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="ExcludedMC"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="Animation"
+			AssetType="W3DAnimation"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="Frame"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="AnimationSoundClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientBehaviorModuleData" />
+		<Entry
+			id="MaxUpdateRangeCap"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryList
+			id="Sound"
+			AssetType="AnimationSoundInfo"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

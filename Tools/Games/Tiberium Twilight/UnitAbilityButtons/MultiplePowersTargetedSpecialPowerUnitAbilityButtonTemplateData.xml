@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MultiplePowersTargetedSpecialPowerUnitAbilityButtonTemplateData">
+		<EntryInheritance
+			id="base"
+			AssetType="TargetedSpecialPowerUnitAbilityButtonTemplateData" />
+		<EntryList
+			id="AdditionalSpecialPowerTemplate"
+			AssetType="SpecialPowerRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AdditionalRadiusCursor"
+			AssetType="RadiusCursorRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AdditionalValidTargetCursor"
+			AssetType="MouseCursorRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

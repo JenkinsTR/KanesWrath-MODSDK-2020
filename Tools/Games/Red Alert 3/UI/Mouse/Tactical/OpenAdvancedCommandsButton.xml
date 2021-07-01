@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalOpenAdvancedCommandsButton"
+		TypeHash="2375239281">
+		<EntryInheritance
+			id="base"
+			AssetType="UIMouseSimpleFixedButton" />
+	</GameAsset>
+
+</AssetDefinition>

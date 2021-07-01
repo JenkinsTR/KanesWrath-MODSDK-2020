@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HordeNotifyTargetsOfImminentProbableCrushingUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Notify"
+			AssetType="NotifyTargetsOfImminentProbableCrushingMuxDataType" />
+	</Asset>
+
+</AssetDefinition>

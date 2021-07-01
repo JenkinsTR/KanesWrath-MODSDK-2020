@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TurretAIData">
+		<Entry
+			id="TurretTurnRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TurretPitchRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinimumPitch"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="PitchHeight"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="ControlledWeaponSlots"
+			AssetType="WeaponSlotBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="MinIdleScanTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="MaxIdleScanTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<Entry
+			id="MinIdleScanAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxIdleScanAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxDeflectionClockwise"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="180d" />
+		<Entry
+			id="MaxDeflectionAntiClockwise"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="180d" />
+		<Entry
+			id="NaturalTurretAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<EntryRelocation
+			id="TurretAITargetChooserData"
+			AssetType="TurretAITargetChooserData" />
+		<Entry
+			id="AllowsPitch"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RecenterWhenOutOfTurnRange"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

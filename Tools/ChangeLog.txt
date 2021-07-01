@@ -1,0 +1,22 @@
+1.08
+- empty assets of the base stream are now hidden in BigView
+- hashes are passed through now instead of being compiled again
+- most attributes with standard values are now hidden in BigView
+- fixed compiling of asset type StringHash
+- added schemas for AptUI
+- fixed an error with imports in ProductionUpdate
+
+1.07
+- fixed a bug with output paths containing a dot
+- changed directory structure
+- made some changes to the batch files
+- added schema for MiscAudio
+- implemented compiling mp3 to EALayer3 (for music)
+- added automatic calculation of the dimensions of TerrainTextureAtlas
+- changed output of compiling mods and maps
+
+1.06
+- fixed some terrain textures
+- added schema for AudioFile
+- implemented compiling wav files to uncompressed audio assets
+- logs are now saved in Documents\WrathEd\Logs

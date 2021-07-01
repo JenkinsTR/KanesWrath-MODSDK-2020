@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StringHashTable">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="StringHashBin"
+			AssetType="StringHashBin"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="StringAndHash"
+			MinLength="0"
+			MaxLength="0"
+			AssetType="StringAndHashType" />
+	</Asset>
+
+	<Asset
+		id="StringAndHashType">
+		<Entry
+			id="Hash"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="Text"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

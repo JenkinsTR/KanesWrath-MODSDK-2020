@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="SpecialPowerTemplateFlag">
+		<Entry>NEEDS_TARGET</Entry>
+		<Entry>NEEDS_OBJECT_FILTER</Entry>
+		<Entry>NO_FORBIDDEN_OBJECTS</Entry>
+		<Entry>NO_FORBIDDEN_MODEL_STATES</Entry>
+		<Entry>WATER_OK</Entry>
+		<Entry>LIMIT_DISTANCE</Entry>
+		<Entry>RESPECT_RECHARGE_TIME_DISCOUNT</Entry>
+		<Entry>PATHABLE_ONLY</Entry>
+		<Entry>IS_TAINTABLE</Entry>
+		<Entry>NOT_CLIFF_CELL</Entry>
+		<Entry>FOGGED_SHROUDED_CELLS_OK</Entry>
+		<Entry>KILL_SPECIAL_OBJECTS</Entry>
+		<Entry>TARGET_NEEDS_OBJECT_STATUS</Entry>
+		<Entry>SHARED_SYNC</Entry>
+		<Entry>HAS_PUBLIC_TIMER</Entry>
+		<Entry>IS_PLAYER_POWER</Entry>
+		<Entry>FIND_REACHABLE_TARGETS</Entry>
+		<Entry>IGNORE_MAP_EXTENTS</Entry>
+		<Entry>IGNORE_SELF_IN_NEEDED_OBJECT_FILTER</Entry>
+		<Entry>NOT_ON_BRIDGE</Entry>
+		<Entry>NOT_BENEATH_BRIDGE</Entry>
+		<Entry>NOT_WHILE_BENEATH_BRIDGE</Entry>
+		<Entry>DISABLE_FOR_MULTIPLE_SELECTION</Entry>
+		<Entry>CHECK_SPECIALPOWERSTORE_CANUSE</Entry>
+		<Entry>USE_CASTER_RANGE</Entry>
+		<Entry>CAN_PATH_TO</Entry>
+		<Entry>RECHARGE_ALL_OBJECT_POWERS_ON_USE</Entry>
+		<Entry>SCALE_AOI_RADIUS</Entry>
+		<Entry>SPECIAL_TRAVEL_POWER</Entry>
+		<Entry>USE_CHAINED_COMMAND_MONEY</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="SpecialPowerTemplateBitFlag"
+		BaseEnum="SpecialPowerTemplateFlag" />
+
+	<EnumAsset
+		id="SpecialPowerTemplateTargetType">
+		<Entry>LOCATION</Entry>
+		<Entry>OBJECT</Entry>
+		<Entry>OBJECT_OR_LOCATION</Entry>
+		<Entry>NONE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="SpecialPowerRestrictionType">
+		<Entry>UNRESTRICTED</Entry>
+		<Entry>1</Entry>
+		<Entry>2</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="MetagamePhaseEnum">
+		<Entry>OPERATIONS</Entry>
+		<Entry>RESOLVE_POWERS</Entry>
+		<Entry>MOVEMENT</Entry>
+		<Entry>BATTLE</Entry>
+		<Entry>UPKEEP</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="MetaGamePhaseBitflags"
+		BaseEnum="MetagamePhaseEnum" />
+
+	<GameAsset
+		id="SpecialPowerTemplate"
+		TypeHash="3302797146">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TargetType"
+			AssetType="SpecialPowerTemplateTargetType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Flags"
+			AssetType="SpecialPowerTemplateBitFlag"
+			IsAttribute="true" />
+		<Entry
+			id="ReloadTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<EntryReference
+			id="InitiateSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="InitiateAtLocationSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="ViewObjectDuration"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="ViewObjectRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="RadiusCursorRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PreventConditions"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredConditions"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DisallowedTargetModelStates"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredTargetObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DisallowedTargetObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="MaxCastRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000000" />
+		<Entry
+			id="MinCastRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ForbiddenObjectRange"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventToPlayOnSuccess"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventToPlayWhenSelectingTarget"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventToPlayOnInitiateOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventToPlayOnInitiateAlly"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEventToPlayOnInitiateEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsInitiateIntendToDoVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsInitiateIntendToDoAfterMoveVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsInitiateIntendToDoWhileUnderAttackVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsInitiateIntendToDoAfterMoveWhileUnderAttackVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsEnterStateInitiateIntendToDoVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsEnterStateInitiateIntendToDoAfterMoveVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsEnterStateInitiateIntendToDoWhileUnderAttackVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceNameToUseAsEnterStateInitiateIntendToDoAfterMoveWhileUnderAttackVoice"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<Entry
+			id="RestrictionType"
+			AssetType="SpecialPowerRestrictionType"
+			IsAttribute="true"
+			Default="UNRESTRICTED" />
+		<Entry
+			id="Money"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="TimerImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<Entry
+			id="ReachableTargetsCircleDisplayRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MetaGameOperation"
+			AssetType="MetagameOperationsEnums"
+			IsAttribute="true"
+			Default="INVALID" />
+		<Entry
+			id="ActiveMetaGamePhases"
+			AssetType="MetaGamePhaseBitflags"
+			IsAttribute="true" />
+		<Entry
+			id="StrikeForceRejectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="ForbiddenObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="GameDependency"
+			AssetType="GameDependencyType" />
+		<EntryRelocation
+			id="MetaGameDependencies"
+			AssetType="MetaGameDependenciesType" />
+		<EntryRelocation
+			id="MetaUpgradeToGrant"
+			AssetType="UpgradeTemplateWeakRef" />
+		<Entry
+			id="WaypointModeTerminal"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="StrikeForceRejectMatchAll"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

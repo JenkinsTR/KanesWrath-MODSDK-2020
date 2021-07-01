@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+		<!--
+			mod.xml is the central include for mod setup data.		
+		-->
+		<!-- <Include type="reference" source="DATA:static.xml" /> -->
+		<Include type="reference" source="DATA:global.xml" />    
+    
+		<!--Additional map meta-->
+		<Include type="reference" source="MapMetaData.xml" />
+
+	</Includes>
+
+</AssetDeclaration>
+

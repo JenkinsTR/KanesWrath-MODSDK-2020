@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+   id="BlackHandFastRush"
+   Side="BlackHand"> <!--Power: +10-->
+
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandRaiderTank" />
+    <Order Build="BlackHandScorpionBuggy" />
+    <Order Time="133s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="BlackHandDualFactoryRush"
+    Side="BlackHand"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandHarvester" />
+    <Order Build="BlackHandHarvester" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Time="235s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="BlackHandTriFactoryRush"
+    Side="BlackHand"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandHarvester" />
+    <Order Build="BlackHandHarvester" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Time="355s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="BlackHandBrutalTankRush"
+    Side="BlackHand"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="999999" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandHarvester" />
+    <Order Build="BlackHandHarvester" />
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandHandOfNOD" /> <!--Time: 5 Power: -5-->
+    <Order Time="255s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="BlackHandAvatarRush"
+    Side="BlackHand"> <!--Power: +10-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="BlackHandHarvester" />
+    <Order Build="BlackHandHarvester" />
+    <Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandOperationsCenter" /> <!--Time: 15 Power: -10-->
+    <Order Build="BlackHandDropZone" /> <!--Time: 20 Power: -5-->
+	<Order Build="BlackHandPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="BlackHandTechAssemblyPlant" /> <!--Time: 40 Power: -15-->
+
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Build="BlackHandCustomWarmech" />
+    <Order Time="275s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

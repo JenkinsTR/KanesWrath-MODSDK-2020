@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseDragSelectionFeedback"
+		TypeHash="549522065">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="BoxEdgeWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="LassoWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2" />
+		<Entry
+			id="BoxColor"
+			AssetType="Color4" />
+		<Entry
+			id="LassoColor"
+			AssetType="Color4" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	
+	<GameObject
+		id="MetaControlDummyTiberiumKillerSpawner"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNSELECTABLE NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		SelectPortrait="Portrait_GreenTiberium"
+		ButtonImage="Portrait_GreenTiberium"
+		ProductionQueueType="AIRCRAFT"
+		BuildTime="0"
+		BuildCost="0"
+		Description="DESC:DummyMoneyImmediate"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>		
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<SlowDeath
+				id="ModuleTag_Death"
+				DestructionDelay="0s">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="1.2s"
+				MaxLifetime="1.2s" />
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+			<CreateObjectDie
+				id="ModuleTag_TiberiumKillerSpawn"
+				CreationList="OCL_TiberiumKillerSpawn"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="TiberiumKillerSpawnerEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="999999.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="1.0"
+				Height="1.0"/>
+		</Geometry>
+		<VisionInfo
+			VisionRange="0"
+			ShroudClearingRange="0" />
+	</GameObject>	
+	
+</AssetDeclaration>

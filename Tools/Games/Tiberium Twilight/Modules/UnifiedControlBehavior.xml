@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="UnifiedControlType">
+		<Entry>SAME_PLAYER</Entry>
+		<Entry>ALLIED_PLAYERS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="UnifiedControlBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CaptureBehaviorModuleData" />
+		<Entry
+			id="UnificationType"
+			AssetType="UnifiedControlType"
+			IsAttribute="true"
+			Default="SAME_PLAYER" />
+	</Asset>
+
+</AssetDefinition>

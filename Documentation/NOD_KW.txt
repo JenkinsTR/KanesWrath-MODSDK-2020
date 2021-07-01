@@ -1,0 +1,105 @@
+NOD
+	Units
+		Infantry
+		
+			Militant squad
+			Militant rocket squad
+			Fanatics
+			Shadow Team
+			Saboteur
+			Black Hand
+			Commando
+			Confessor (Confessor upgrade only)
+			Awakened (Redemption only)
+		
+		Vehicles
+		
+			Attack bike
+			Raider buggy
+			Reckoner
+			Scorpion tank
+			MCV
+			Emissary
+			Harvester
+			Flame tank
+			Specter
+			Beam cannon
+			Stealth tank
+			Avatar
+			Redeemer
+			Liquid Tiberium Transport Truck (campaign only)
+			
+		Aircraft
+		
+			Venom
+			Vertigo
+			Carryall
+			Armageddon
+			
+		Vessels
+		
+			Battleship
+			Hovercraft
+	
+	Structures
+		Production
+		
+			Construction yard
+			Hand of Nod
+			War factory
+			Air tower
+			Crane
+			Redeemer Engineering Facility (KW only)
+			
+		Support
+		
+			Power Plant
+			Tiberium Refinery
+			Operations center
+			Secret shrine
+			Tech lab
+			Tiberium chemical plant
+			Air support tower (KW only)
+			Temple of Nod
+			Outpost
+		
+		Defenses
+		
+			Shredder turret
+			Laser turret
+			SAM turret
+			Obelisk of Light
+			Disruption tower
+			Voice of Kane (KW only)
+			Ion Disruption Field Generators
+			
+	Support Powers & Upgrades
+		Support Powers
+		
+			Radar Jamming Missile
+			Decoy Army
+			Cloaking Field
+			Shadow Strike Team
+			Mine Drop
+			Tiberium Vapor Bomb
+			Seed Tiberium
+			Catalyst Missile
+			Master Computer Countermeasures
+			Nuclear Missile Strike
+			Laser Fencing (KW only)
+			Redemption (KW only)
+			Tiberium Vein Detonation (KW only)
+			Liquid Tiberium Bomb (campaign only)
+			
+		Upgrades
+		
+			Tiberium Infusion
+			Confessor Upgrade
+			EMP Coils
+			Dozer Blades
+			Spitfire Laser Capacitors
+			Signature Generator
+			Liquid Tiberium Core
+			Quad Turrets (KW only)
+			Disruption Pods (KW only)
+			Tiberium Core Missiles (KW only)

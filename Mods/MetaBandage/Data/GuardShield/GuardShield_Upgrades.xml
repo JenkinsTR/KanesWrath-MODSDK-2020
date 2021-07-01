@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<UpgradeTemplate id="Upgrade_GuardShieldONOLD"
+		Type="OBJECT"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_GuardShieldON"
+		Type="PLAYER"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_GuardShieldAIModusON2"
+		Type="PLAYER"
+	/>
+	
+	<UpgradeTemplate id="Upgrade_GuardShieldAIModusOFF2"
+		Type="PLAYER"
+	/>
+	
+ 	<UpgradeTemplate
+		id="Upgrade_GuardShieldAIModusON"
+		Type="PLAYER"
+		BuildTime="0s"
+		BuildCost="0"
+		ResearchSound=""
+		ResearchCompleteEvaEvent="None"
+		UnitSpecificSound=""
+		UpgradeFX=""
+		LocalPlayerProductionStartedEvaEvent="None"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		UseObjectTemplateForCostDiscount=""
+		GroupOrder="0"
+		SkirmishAIHeuristic="INVALID"
+		Options="DO_NOT_TRANSFER"
+		WaypointQueueable="False">
+		<GameDependency>
+			<!-- <RequiredObject>GuardShieldEmitter</RequiredObject> -->
+		</GameDependency>
+	</UpgradeTemplate>
+	
+ 	<UpgradeTemplate
+		id="Upgrade_GuardShieldAIModusOFF"
+		Type="PLAYER"
+		BuildTime="0s"
+		BuildCost="0"
+		ResearchSound=""
+		ResearchCompleteEvaEvent="None"
+		UnitSpecificSound=""
+		UpgradeFX=""
+		LocalPlayerProductionStartedEvaEvent="None"
+		LocalPlayerBuildOnHoldEvaEvent="BuildOnHold"
+		LocalPlayerBuildCancelledEvaEvent="BuildCancelled"
+		UseObjectTemplateForCostDiscount=""
+		GroupOrder="0"
+		SkirmishAIHeuristic="INVALID"
+		Options="DO_NOT_TRANSFER"
+		WaypointQueueable="False">
+		<GameDependency>
+			<!-- <RequiredObject>GuardShieldEmitter</RequiredObject> -->
+		</GameDependency>
+	</UpgradeTemplate>  
+	
+	<UpgradeTemplate id="Upgrade_GuardShieldControllbarRefreshDummy"
+		Type="PLAYER"
+	/>
+	
+
+	
+</AssetDeclaration>

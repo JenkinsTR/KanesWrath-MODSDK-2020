@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Audio Assets</h3>
+	<h4>Audio Asset Types</h4>
+<p>There are a variety of types of audio assets that you will likely use within your mod.  A non-exhaustive set of them include music, voices, and sound effects such as weapon
+firing and detonation sounds.  These require different types of audio files, and are added to your mod differently.  Each one will be explained separately in this document.</p>
+<h4>Directory Structure</h4>
+<p>Audio assets use the AUDIO: include, which points to the Audio folder in the root of your SDK install directory.  You should place new audio files that you want to add
+into the game in that directory.
+</p>
+<h4>Music</h4>
+<p>Music files should be MP3 files.  The game has the ability to directly load MP3 files, which you will use to add new audio tracks.  There are several parts to the creation of new
+	music tracks.  The first step is adding in a base track for your other tracks to inherit from.  An example of this is included below (it is taken from the SampleMod, located in SoundMod.xml):
+</p>
+<p class="code">
+	&lt;!-- Defaults for MusicTracks. Derive all other MusicTracks from this one --&gt;<br />
+		&lt;MP3MusicTrack id=&quot;BaseMP3MusicTrack&quot;<br />
+			Volume=&quot;55.0&quot; <br />
+			ReverbEffectLevel = &quot;0&quot;<br />
+			DryLevel = &quot;100&quot; <br />
+			SubmixSlider = &quot;MUSIC&quot;<br />
+			Control = &quot;ALLOW_KILL_MID_FILE&quot;<br />
+			Priority = &quot;CRITICAL&quot; &gt;<br />
+		&lt;/MP3MusicTrack&gt;<br />
+</p>
+<p>The next step in adding a new Music (or any MP3 track, see the SoundMod.xml in the SampleMod for other possible uses of MP3 files) is to import the file that you would like to use.
+	This is accomplished using a AudioFileMP3Passthrough tag.  This imports the actual MP3 file into the game, and allows you to create MP3MusicTracks or other MP3 file usages.  An
+	example of the AudioFileMP3Passthrough is below:
+</p>
+<p class="code">
+	&lt;AudioFileMP3Passthrough id=&quot;MOHMainScreen&quot; File=&quot;AUDIO:MedalofHonor.mp3&quot; /&gt;
+</p>
+<p>Note that this does not create an actual MP3 Track for use, it simply creates an ID for the file which you can then reference.  The next step in adding your new track to the game is creating the
+	MP3MusicTrack.  An example is provided in the SampleMod, in SoundMod.xml, and included below for reference.  There are also other MP3 track usages that can be found in the same file.
+</p>
+<p class="code">
+	&lt;MP3MusicTrack id=&quot;ShellLowLODMP3&quot; inheritFrom=&quot;MP3MusicTrack:BaseMP3MusicTrack&quot; Volume=&quot;60&quot;&gt;		<br />
+			&lt;VolumeSliderMultiplier Slider=&quot;NONE&quot; Multiplier=&quot;1.0&quot; /&gt;<br />
+			&lt;!-- This is a fake to prevent the volume sample from being quieted by the movie playing on the main menu --&gt;<br />
+			&lt;Filename&gt;MOHMainScreen&lt;/Filename&gt;			<br />
+		&lt;/MP3MusicTrack&gt;<br />
+</p>
+<p>The key takeaway is to note that you have to declare a use for the file, as well as declaring the file itself.  You will note a very similar structure in all of the types of audio assets.
+</p>
+<h4>Other Audio Assets</h4>
+<p>In addition to MP3 assets, the SDK allows you to use WAV files, which are used for other audio effects, such as units firing.  A fair amount of base objects for the XML must be included in your
+	mod to use them.  The relevant entries are below:
+</p>
+<p class="code">
+	<br />&lt;!-- Defaults for AudioEvents in mod. Derive all other AudioEvents from this one --&gt;<br />
+		&lt;!-- Copied straight from BaseSoundEffect; can't inherbit directly from XML objects in another stream  --&gt;<br />
+		&lt;AudioEvent id=&quot;BaseSoundEffect_Mod&quot;<br />
+			Volume=&quot;100&quot; <br />
+			MinVolume=&quot;0&quot;<br />
+			Priority=&quot;NORMAL&quot;<br />
+			Limit=&quot;3&quot;<br />
+			MinRange=&quot;200&quot;<br />
+			MaxRange=&quot;800&quot;<br />
+			PlayPercent=&quot;100&quot;<br />
+			Type=&quot;UI PLAYER&quot;<br />
+			DryLevel=&quot;100&quot;<br />
+			ReverbEffectLevel=&quot;100&quot;<br />
+			ZoomedInOffscreenVolumePercent = &quot;50&quot;<br />
+			ZoomedInOffscreenMinVolumePercent = &quot;100&quot; <br />
+			ZoomedInOffscreenOcclusionPercent = &quot;20&quot;  &gt;<br />
+			&lt;!-- You might think the following was a good idea:<br />
+				SubmixSlider =&quot;SOUNDFX&quot;<br />
+				IT'S NOT. Doing this in the default sound will mess up the special 'use the speech slider if the<br />
+				voice flag is present and no SubmixSlider entry was seen' code.		--&gt;<br />
+		&lt;/AudioEvent&gt;<br />
+<br />
+&lt;!-- Defaults for unit responses in mod. Derive unit responses responses from this one --&gt;<br />
+		&lt;!-- Copied straight from BaseUnitResponse; can't inherbit directly from XML objects in another stream  --&gt;<br />
+		&lt;AudioEvent id=&quot;BaseUnitResponse_Mod&quot; inheritFrom=&quot;AudioEvent:BaseSoundEffect_Mod&quot;<br />
+			Volume=&quot;100&quot; <br />
+			MinVolume=&quot;90&quot;<br />
+			Priority=&quot;HIGHEST&quot;<br />
+			Limit=&quot;3&quot;<br />
+			Type=&quot;UI PLAYER VOICE&quot;<br />
+			SubmixSlider=&quot;VOICE&quot; &gt;<br />
+		&lt;/AudioEvent&gt;<br />
+<br />
+		&lt;MP3AmbientStream id=&quot;BaseAmbientStream_Mod&quot;<br />
+			Volume = &quot;85.0&quot;<br />
+			Control = &quot;RANDOMSTART ALLOW_KILL_MID_FILE&quot;<br />
+			Priority = &quot;CRITICAL&quot;<br />
+			Type = &quot;EVERYONE&quot;<br />
+			MinRange = &quot;3400.000&quot;<br />
+			MaxRange = &quot;4400.000&quot;<br />
+			DryLevel = &quot;100&quot;<br />
+			ReverbEffectLevel = &quot;0&quot;<br />
+			SubmixSlider = &quot;AMBIENT&quot;&gt;<br />
+		&lt;/MP3AmbientStream&gt;<br />
+<br />
+		&lt;MP3DialogEvent id=&quot;BaseMissionDialogue_Mod&quot; <br />
+			Volume=&quot;110&quot; <br />
+			MinVolume=&quot;100&quot;<br />
+			Limit=&quot;1&quot;<br />
+			Type=&quot;WORLD PLAYER&quot;<br />
+			Priority=&quot;CRITICAL&quot; <br />
+			SubmixSlider=&quot;VOICE&quot;<br />
+			Control=&quot;FADE_ON_KILL&quot; &gt;<br />
+			&lt;VolumeSliderMultiplier Slider=&quot;VOICE&quot; Multiplier=&quot;0.4&quot; /&gt;<br />
+			&lt;VolumeSliderMultiplier Slider=&quot;SOUNDFX&quot; Multiplier=&quot;0.7&quot; /&gt;<br />
+			&lt;VolumeSliderMultiplier Slider=&quot;MUSIC&quot; Multiplier=&quot;0.7&quot; /&gt;<br />
+			&lt;VolumeSliderMultiplier Slider=&quot;AMBIENT&quot; Multiplier=&quot;0.7&quot; /&gt;<br />
+		&lt;/MP3DialogEvent&gt;<br />
+</p>
+<p>As you can see, this creates a variety of base objects, which define properties for various types of sound effects.  Since MP3 based effects were covered earlier
+	 (and more examples are available in the soundmod.xml in the samplemod), WAV based effects will be covered here instead.
+</p>
+<p>Below is an entry for importing a WAV file into the SDK for use in an audio entry.  You need to follow the same two step approach
+	as the MP3 file example, first importing the file, then referencing it.  The reference entry will be explained further below.
+</p>
+<p class="code">
+	&lt;AudioFile id=&quot;EUElLan_VoiCreateb&quot; File=&quot;AUDIO:sounds\GUElLan_voxChea.wav&quot; GUIPreset=&quot;Default&quot; /&gt;		
+</p>
+<p>This creates an audio asset with the ID EUElLan_VoiCreateb, from the file GUElLan_voxChea.wav, located in the audio\sounds directory of
+	the SDK installation directory.  Now that the file is imported, the next step is referencing it, and creating an Audio Event to use.
+	An example audio event is below:
+</p>
+<p class="code">
+	&lt;AudioEvent id=&quot;GDI_ElvenWarrior_VoiceCreate&quot; inheritFrom=&quot;AudioEvent:BaseUnitResponse_Mod&quot;<br />
+			Volume = &quot;110&quot;<br />
+			MinVolume = &quot;105&quot;<br />
+			Priority = &quot;HIGH&quot;<br />
+			Type = &quot;WORLD PLAYER VOICE&quot;<br />
+			SubmixSlider = &quot;VOICE&quot; &gt;<br />
+			&lt;PitchShift Low=&quot;-1&quot; High=&quot;1&quot; /&gt;<br />
+			&lt;Sound&gt;EUElLan_VoiCreateb&lt;/Sound&gt;			<br />
+		&lt;/AudioEvent&gt;
+	</p>
+	<p>There are a few things to note.  Different types of Audio Events use different volume settings, which are best found by exploring the existing
+		audio effects in the cnc3xml\sounds folder in your SDK installation directory.  Another note is that you may have more than one
+		&lt;Sound&gt;&lt;/Sound&gt; set in a particular Audio Event (there is no maximum number of times this tag set may occur).  The meaning of this
+		is that one of the sounds from the list will be randomly selected when that event is played.  This allows you to have multiple unit responses
+		which will play randomly, rather than a single repeated sound.
+	</p>
+</body>
+</html>

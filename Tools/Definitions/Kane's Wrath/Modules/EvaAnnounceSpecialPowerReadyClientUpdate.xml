@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EvaAnnounceSpecialPowerReadyClientUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientUpdateModuleData" />
+		<EntryRelocation
+			id="AnnouncementEventEnemy"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AnnouncementEventAlly"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="AnnouncementEventOwner"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="SpecialPowerTemplate"
+			AssetType="SpecialPowerTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="JustMonitorPercentReady"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

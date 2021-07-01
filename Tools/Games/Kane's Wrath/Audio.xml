@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="AudioFile"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+	</GameAsset>
+
+	<GameAsset
+		id="BaseAudioEventInfo"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+	</GameAsset>
+
+	<GameAsset
+		id="BaseSingleSound"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAudioEventInfo" />
+	</GameAsset>
+
+	<GameAsset
+		id="AudioEvent"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="MusicTrack"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="DialogEvent"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="AmbientStream"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingleSound" />
+	</GameAsset>
+
+	<GameAsset
+		id="Multisound"
+		TypeHash="0">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAudioEventInfo" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIObjectivePresentationSettings">
+		<EntryReference
+			id="StartObjectiveSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="SatelliteViewFinishSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="SatelliteViewAmbientLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="DefaultTimePerTarget"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="5s" />
+		<Entry
+			id="DefaultCameraStartAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="DefaultCameraEndAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="180d" />
+		<Entry
+			id="DefaultCameraFieldOfView"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="25d" />
+		<Entry
+			id="DefaultCameraFieldOfViewVariance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Zoom"
+			AssetType="ZoomType" />
+		<Entry
+			id="Move"
+			AssetType="MoveType" />
+	</Asset>
+
+	<Asset
+		id="MoveType">
+		<Entry
+			id="Acceleration"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="150.0" />
+		<Entry
+			id="MaxSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="500.0" />
+		<Entry
+			id="JitterXY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="3.0" />
+		<Entry
+			id="JitterZ"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="MinHardCutDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="500.0" />
+		<EntryReference
+			id="HardCutSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="MoveSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+	</Asset>
+	<Asset
+		id="ZoomType">
+		<Entry
+			id="InitialChangePerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.8" />
+		<Entry
+			id="Overshoot"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="15%" />
+		<Entry
+			id="ChangePerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.4" />
+		<Entry
+			id="InitialFOV"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MidPointFOV"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="70%" />
+		<Entry
+			id="MinimumFOV"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50%" />
+		<Entry
+			id="MidPointOfs"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="5%" />
+		<Entry
+			id="ZoomCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="DurationMin"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="DurationMax"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="3s" />
+		<EntryReference
+			id="ZoomOutSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="ZoomInSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="MinFOVChangeForZoomOutSound"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="110%" />
+		<Entry
+			id="MaxFOVChangeForZoomInSound"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="90%" />
+	</Asset>
+
+</AssetDefinition>

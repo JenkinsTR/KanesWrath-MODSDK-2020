@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DContainer
+		id="AUANTIVEHICLEVEHICLETECH3_COL"
+		Hierarchy="AUANTIVEHICLEVEHICLETECH3_COL">
+		<SubObject
+			SubObjectID="OBBOX01"
+			BoneIndex="0">
+			<RenderObject>
+				<CollisionBox>AUANTIVEHICLEVEHICLETECH3_COL.OBBOX01</CollisionBox>
+			</RenderObject>
+		</SubObject>
+		<SubObject
+			SubObjectID="NEWSKIN_TREADS"
+			BoneIndex="0">
+			<RenderObject>
+				<Mesh>AUANTIVEHICLEVEHICLETECH3_COL.NEWSKIN_TREADS</Mesh>
+			</RenderObject>
+		</SubObject>
+		<SubObject
+			SubObjectID="NEWSKIN"
+			BoneIndex="0">
+			<RenderObject>
+				<Mesh>AUANTIVEHICLEVEHICLETECH3_COL.NEWSKIN</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

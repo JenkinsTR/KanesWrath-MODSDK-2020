@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PercentOfBuildCostToRebuildInfoType">
+		<Entry
+			id="Pristine"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Damaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="ReallyDamaged"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="Rubble"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="50" />
+	</Asset>
+
+	<Asset
+		id="SelfAudioType">
+		<EntryReference
+			id="SelfRepairFromDamageLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SelfRepairFromRubbleLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="RepairUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="RepopThreshold"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="HealAmountPerSecond"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="90" />
+		<Entry
+			id="PercentOfBuildCostToRebuildInfo"
+			AssetType="PercentOfBuildCostToRebuildInfoType" />
+		<Entry
+			id="SelfAudio"
+			AssetType="SelfAudioType" />
+		<Entry
+			id="Toggleable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="RepairableWhenDead"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration
+	xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags/>
+	<Includes>
+		<Include
+			source="DATA:static.xml"
+			type="reference"/>
+		<Include
+			source="DATA:global.xml"
+			type="reference"/>
+		<Include
+			source="DATA:civilian/brazil_br/buildings/brboil01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/brazil_br/buildings/brboil02.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/eeurope_ee/buildings/eebfrm01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/eeurope_ee/buildings/eebfrm02.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/egypt_eg/buildings/egboat01.xml"
+			type="all"/>
+		<Include
+			source="DATA:civilian/washington_dc_dc/buildings/dcbdock07.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/captureflag.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/controlpoint.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/electromagneticpulsecontrolcenter.xml"
+			type="all"/>
+		<Include
+			source="DATA:neutral/structures/tiberiumspike.xml"
+			type="all"/>
+		<Include
+			source="overrides.xml"
+			type="all"/>
+	</Includes>
+</AssetDeclaration>

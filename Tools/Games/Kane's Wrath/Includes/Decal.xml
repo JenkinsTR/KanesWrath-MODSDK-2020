@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ShadowType">
+		<Entry>NONE</Entry>
+		<Entry>DECAL</Entry>
+		<Entry>VOLUME</Entry>
+		<Entry>ALPHA_DECAL</Entry>
+		<Entry>ADDITIVE_DECAL</Entry>
+		<Entry>ALPHA_DECAL_DYNAMIC</Entry>
+		<Entry>ADDITIVE_DECAL_DYNAMIC</Entry>
+		<Entry>MERGE_DECAL</Entry>
+		<Entry>VOLUME_OR_DECAL</Entry>
+		<Entry>TIBERIUM_ROOT</Entry>
+		<Entry>TIBERIUM_ROOT_METAGAME</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ShadowInfo">
+		<Entry
+			id="Type"
+			AssetType="ShadowType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="AdditionalTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="SizeX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SizeY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OffsetX"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OffsetY"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OpacityStart"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OpacityFadeInTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="OpacityPeak"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OpacityFadeOutTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="OpacityEnd"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20.0" />
+		<Entry
+			id="SunAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="OverrideLODVisibility"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseHouseColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsRotatingWithObject"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="LocalPlayerOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+	<Asset
+		id="RadiusDecalTemplate">
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<EntryReference
+			id="Texture2"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="Style"
+			AssetType="ShadowType"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityMin"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OpacityMax"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="OpacityThrobTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1000.0" />
+		<Entry
+			id="RotationsPerMinute"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MinRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxSelectedUnits"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="SpiralAcceleration"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Color"
+			AssetType="Color4" />
+		<Entry
+			id="OnlyVisibleToOwningPlayer"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

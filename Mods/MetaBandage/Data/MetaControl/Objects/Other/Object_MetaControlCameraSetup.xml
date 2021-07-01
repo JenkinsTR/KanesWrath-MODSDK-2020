@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+
+	<GameObject
+		id="MetaControlDummyCameraSetupButtonProvider"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="MetaControlDummyCameraSetupButtonProviderCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_CameraSetup"
+				SpecialPowerTemplate="SpecialPowerCameraSetup"
+				OCL="OCL_CameraSetup"
+				CreateLocation="CREATE_AT_LOCATION" 
+			/>	
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="1s"
+				Options="STARTS_ACTIVE">
+			</InvisibilityUpdate>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO">
+			</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="MetaControlDummyCameraSetup"
+		Side="Neutral"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="UNATTACKABLE IGNORES_SELECT_ALL NO_COLLIDE IGNORE_FOR_VICTORY CANNOT_BE_DETECTED RESIST_EMP NOT_ON_RADAR"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner"
+		ForceLuaRegistration="True">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.00s"
+				MaxLifetime="0.00s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="MetaControlDummyCameraSetupEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+</AssetDeclaration>

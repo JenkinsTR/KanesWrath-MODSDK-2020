@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WeaponChoiceCriteria">
+		<Entry>PREFER_MOST_DAMAGE</Entry>
+		<Entry>PREFER_LONGEST_RANGE</Entry>
+		<Entry>PREFER_GRAB_OVER_DAMAGE</Entry>
+		<Entry>PREFER_LEAST_MOVEMENT</Entry>
+		<Entry>SELECT_AT_RANDOM</Entry>
+		<Entry>USE_WEAPONSET_DEFAULT_CRITERIA</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="WeaponSlot_WeaponData">
+		<Entry
+			id="Ordering"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<EntryReference
+			id="Template"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ForbiddenObjectStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="IsPlayerUpgradePermanent"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ConquerMetricsAlwaysCount"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<EnumAsset
+		id="WeaponSlotInterleavedStyleType">
+		<Entry>INTERLEAVE_FIRST_AVAILABLE</Entry>
+		<Entry>INTERLEAVE_RANDOM</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="WeaponSlot_Hardpoint">
+		<Entry
+			id="ID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="InterleavedStyle"
+			AssetType="WeaponSlotInterleavedStyleType"
+			IsAttribute="true"
+			Default="INTERLEAVE_RANDOM" />
+		<Entry
+			id="WeaponChoiceCriteria"
+			AssetType="WeaponChoiceCriteria"
+			IsAttribute="true"
+			Default="PREFER_MOST_DAMAGE" />
+		<EntryList
+			id="Weapon"
+			AssetType="WeaponSlot_WeaponData"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="AllowInterleavedFiring"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AutoChooseWeapon"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="WeaponSlot_Turret">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponSlot_Hardpoint" />
+		<Entry
+			id="TurretSettings"
+			AssetType="TurretAIData" />
+	</Asset>
+
+	<Asset
+		id="WeaponSlot_HierarchicalTurret">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponSlot_Turret" />
+		<Entry
+			id="ParentID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="WeaponSlot_Contained">
+		<EntryInheritance
+			id="base"
+			AssetType="WeaponSlot_Hardpoint" />
+	</Asset>
+
+	<Asset
+		id="WeaponSetUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryList
+			id="WeaponSlotHardpoint"
+			AssetType="WeaponSlot_Hardpoint"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponSlotTurret"
+			AssetType="WeaponSlot_Turret"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponSlotHierarchicalTurret"
+			AssetType="WeaponSlot_HierarchicalTurret"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponSlotContained"
+			AssetType="WeaponSlot_Contained"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

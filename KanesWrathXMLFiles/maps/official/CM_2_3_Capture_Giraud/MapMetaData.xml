@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="48" CRC="0" Description="Map:CM_2_3_Capture_Giraud/Desc" DisplayName="CM_2_3_Capture_Giraud" FileName="Data\maps\official\CM_2_3_Capture_Giraud\CM_2_3_Capture_Giraud.map" Height="646" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="496" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="3637.78" y="399.701" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

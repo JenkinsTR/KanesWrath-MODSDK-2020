@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<ObjectCreationList
+		id="MirageTank_Die_OCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING INHERIT_VELOCITY"
+			Count="1"
+			VelocityScale="20.0"
+			MinForceMagnitude="1.0"
+			MaxForceMagnitude="2.0"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<CreateObject>MirageTank_Collapse</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="0.97"
+				y="17.64"
+				z="34.8"></Offset>
+			<CreateObject>GDIJuggDebris_01</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="-13.89"
+				y="10.06"
+				z="10.24"></Offset>
+			<CreateObject>GDIJuggDebris_02</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="27.38"
+				y="7.69"
+				z="37.57"></Offset>
+			<CreateObject>GDIJuggDebris_03</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="-10.86"
+				y="-6.94"
+				z="38.09"></Offset>
+			<CreateObject>GDIJuggDebris_04</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+</AssetDeclaration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InGameUIMessageSettings">
+		<Entry
+			id="Delay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="5s" />
+		<Entry
+			id="Color1"
+			AssetType="RGBColor" />
+		<Entry
+			id="Color2"
+			AssetType="RGBColor" />
+		<Entry
+			id="Font"
+			AssetType="FontDesc" />
+	</Asset>
+
+</AssetDefinition>

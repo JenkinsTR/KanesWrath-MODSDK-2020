@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StrikeForceElementTemplateType">
+		<EntryWeakReference
+			id="Object"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Cost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Tier"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="Maximum"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="50" />
+		<Entry
+			id="PopCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="missing display name" />
+		<Entry
+			id="Description"
+			AssetType="String"
+			IsAttribute="true"
+			Default="missing description name" />
+		<Entry
+			id="TypeDescription"
+			AssetType="String"
+			IsAttribute="true"
+			Default="missing type description name" />
+		<Entry
+			id="ButtonImage"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="StrikeForceElementTemplateListType">
+		<EntryList
+			id="StrikeForceElementTemplate"
+			AssetType="StrikeForceElementTemplateType"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<GameAsset
+		id="StrikeForceBuildTemplate"
+		TypeHash="739547660">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Side"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="UltraLightCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2500" />
+		<Entry
+			id="LightCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="7500" />
+		<Entry
+			id="MediumCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="12500" />
+		<Entry
+			id="HeavyCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="20000" />
+		<Entry
+			id="UltraHeavyCost"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="25000" />
+		<EntryWeakReference
+			id="UltraLightMapRep"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="LightMapRep"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="MediumMapRep"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="HeavyMapRep"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="UltraHeavyMapRep"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="MaxPop"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="50"/>
+		<EntryRelocation
+			id="Support"
+			AssetType="StrikeForceElementTemplateListType" />
+		<EntryRelocation
+			id="Infantry"
+			AssetType="StrikeForceElementTemplateListType" />
+		<EntryRelocation
+			id="Vehicles"
+			AssetType="StrikeForceElementTemplateListType" />
+		<EntryRelocation
+			id="Aircraft"
+			AssetType="StrikeForceElementTemplateListType" />
+	</GameAsset>
+
+</AssetDefinition>

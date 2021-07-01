@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BridgeBuilderModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryReference
+			id="EndCap"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="EndCap2"
+			AssetType="GameObjectRef"
+			IsAttribute="true" />
+		<Entry
+			id="EndCapLen"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="CenterPiece"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="CenterPieceLen"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="CenterPieceB"
+			AssetType="GameObjectRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="CenterPieceBLen"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="Width"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="GateHouse"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="GateHouse2"
+			AssetType="GameObjectRef"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

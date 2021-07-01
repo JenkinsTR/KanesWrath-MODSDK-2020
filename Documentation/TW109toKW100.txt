@@ -1,0 +1,178 @@
+==================================================================
+Command & Conquer 3: Kane's Wrath
+Version 1.00 Patch Notes - March, 2008
+==================================================================
+
+<Bug fixes>
+
+· Fixed an error where the Signature Generator ability required 
+an active Tech Lab to be used after upgrade. Also added Signature 
+Generator upgrade icon to the Unit Portrait UI.
+
+· Fixed an error that allowed Raider Buggies to EMP Drone Ships 
+that are taking off.
+
+· Added ground impact effects for Railgun, Lightning and Shock 
+Trooper weapons.
+
+· Fixed an error that prevented Devourer Tanks to fire charged 
+weapon while moving.
+
+· Fixed Firehawk Stratofighter thruster effects.
+
+
+<Balance Changes>
+
+
+ /General Balance Changes/
+
+· All Structures repair rate reduced by 40%.
+
+· Tiberium Silos: No longer creates units when sold or destroyed.
+
+· Engineers will take 3 seconds to capture a building, giving 
+players extra time to react and counter.
+
+· Harvesters: Resistance to CANNON damage increased by 15%, 
+Resistance to MISSILE damage reduced by 20%.
+
+· Power Production Structures: Now requires Tier 2 Structure to 
+upgrade instead of Tier 3.
+
+· Veterancy: Bonus has been increased for all levels. Level 1 
+Attack Bonus increased by 5%, Health Bonus increased by 10%. 
+Level 2 Health Bonus increased by 10%. Level 3 Attack Bonus 
+increased by 5%.
+
+
+ /GDI Balance Changes/
+
+· Missile Squad: Resistance to GUN damage reduced by 50%.
+
+· Grenadier Squad: Grenade speed increased by 20%. Weapon no 
+longer damage allied units.
+
+· Sniper Team: Rate of Fire increased by 25%. Attack Power 
+reduced by 20%. Range increased by 4%.
+
+· Zone Trooper: Range increased by 4%.
+
+· Harvester: Health reduced by 47%.
+
+· Rig: Speed increased by 44%. Adjusted locomotion for more 
+responsiveness, increasing acceleration and deceleration rates 
+and faster turns.
+
+· Orca: Health reduced by 20%.
+
+· Firehawk: Weapons no longer damage allied units.
+
+· Guardian Cannon: Rate of fire increased by 85%. Attack Power 
+reduced by 50%. Health increased by 25%.
+
+· Composite Armor: Units with composite armor no longer take 
+extra damage from SNIPER type weapons and does not grant extra 
+protection.
+
+· Orca Strike: Support Power cooldown time reduced by 70%.
+
+
+ /Brotherhood of Nod Balance Changes/
+
+· Militant Rocket Squad: Resistance to GUN damage reduced by 50%.
+
+· Black Hand: Weapon no longer damage allied units.
+
+· Fanatic: Attack power reduced by 50%. Explosion radius reduced 
+by 20%. Weapon no longer damage allied units.
+
+· Attack Bike: Speed increased by 14%. Resistance to ROCKET 
+damage reduced by 10%, Resistance to GUN damage increased by 25%. 
+Rockets are now fired in burst instead of simultaneously.
+
+· Raider Buggy: Cost/Build time increased by 25% to 500/5s. 
+Health increased by 6%. Resistance to GUN damage increased by 25%. 
+Rate of Fire without Laser Capacitor upgrade increased by 40%. 
+Attack Power without Laser Capacitor upgrade increased by 20%
+
+· Harvester: Health reduced by 20%, normalizing its health with 
+GDI and Scrin Harvesters.
+
+· Flame Tank: Weapon no longer damage allied units.
+
+· Stealth Tank: Cost/Build time increased by 20% to 1800/18s. 
+Attack Power reduced by 10%.
+
+· Avatar. Health reduced by 12%. Main weapon's attack power 
+reduced by 32%. Flame weapon no longer damage allied units.
+
+· Beam Cannon: Now requires Operation Center instead of Tech Lab.
+
+· Tiberium Chemical Plant: Now will be considered to Tiberium 
+Based. Therefore it will take extra damage from Catalyst Missile 
+and will be revealed to a Tiberium Vibration Scan.
+
+· Confessor: Unit attack power increased by 100%, Range of main 
+weapon increased by 30% so it can fire at max range of Militant 
+Rocket Squads. Range of Hallucinogenic grenade increased by 25%, 
+grenades take 66% less time to throw. Now Grants Armor bonus of 
+25% and Rate of Fire bonus of 50% to affected infantry squads. 
+Affected infantry will now be tinted red.
+
+· Tiberium Vapor Bomb: Attack power reduced by 25%.
+
+
+ /Scrin Balance Changes/
+
+· Shock Trooper: Added slight pre-attack delay for firing Plasma 
+Disc Launchers.
+
+· Gunwalker: Rate of fire increased by 100%. Clip size increased 
+by 1.
+
+· Harvester: Health reduced by 47%.
+
+· Devourer Tank: Cost/Build time increased by 14% to 1600/16s.
+
+· Corrupter: Health increased by 20%. Weapon can damage Neutral 
+objects. No longer creates Visceroid from dead infantry.
+
+· Stormrider: Health reduced by 30%.
+
+· Devastator Warship: Range decreased by 18%. Damage type changed 
+from GRENADE to CANNON.
+
+· Growth Accelerator: Health reduced by 66%. Resistance to 
+CANNON and GUN damage reduced by 25%, Resistance to ROCKET damage 
+reduced by 50%.
+
+
+<Other Changes> 
+
+· Added ambient sound effects for dead infantry collapsing.
+
+· Added ambient sound effects for Grenadiers and Confessors 
+throwing grenades.
+
+· Added ambient sound effects for Commando and Zone Trooper 
+Jetpack.
+
+· Changed effect for Devourer Tank Conversion Beam Laser impact.
+
+· Added ambient sound effects for Rig packing and unpacking.
+
+· Added new visual effects for Avatar when sustained heavy damage.
+
+· Added ambient sound effects for Orcas, Firehawks, Venoms and 
+Vertigos Landing or Taking off.
+
+· Added ambient sound effects for Firehawk swapping weapons and 
+dropping bombs.
+
+· Added ambient sound effects for Doors opening and closing 
+from Barracks, GDI and NOD Warfactory. 
+
+· Added ambient sound effects for Airfield Doors opening and 
+closing and when Damaged.
+
+· Added new unique sound effects for each upgrade.

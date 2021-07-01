@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RGBColor">
+		<Entry
+			id="R"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="G"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="B"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="RGBAColor">
+		<EntryInheritance
+			id="base"
+			AssetType="RGBColor" />
+		<Entry
+			id="A"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Color3f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Color4f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="a"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Coord2D">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ICoord2D">
+		<Entry
+			id="x"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="y"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Coord3D">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="z"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Color3">
+		<Entry
+			id="B"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="G"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="R"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true"
+			Default="255" />
+	</Asset>
+
+	<Asset
+		id="Color4">
+		<Entry
+			id="B"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="G"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="R"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="A"
+			AssetType="Byte"
+			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="DistributionType">
+		<Entry>CONSTANT</Entry>
+		<Entry>UNIFORM</Entry>
+		<Entry>GAUSSIAN</Entry>
+		<Entry>TRIANGULAR</Entry>
+		<Entry>LOW_BIAS</Entry>
+		<Entry>HIGH_BIAS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="RandomVariable">
+		<Entry
+			id="Type"
+			AssetType="DistributionType"
+			IsAttribute="true"
+			Default="UNIFORM" />
+		<Entry
+			id="Low"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="High"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="LogicRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
+	</Asset>
+
+	<Asset
+		id="ClientRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
+	</Asset>
+
+	<Asset
+		id="SoundOrEvaEvent">
+		<EntryRelocation
+			id="Sound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="EvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="StringList">
+		<EntryList
+			id="Item"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ReplaceTexture">
+		<EntryReference
+			id="Original"
+			AssetType="Texture"
+			IsAttribute="true"/>
+		<EntryReference
+			id="New"
+			AssetType="Texture"
+			IsAttribute="true"/>
+	</Asset>
+
+	<Asset
+		id="StringHash">
+		<EntryPoid
+			id="StringHash"
+			IsUpperCase="true" />
+	</Asset>
+
+</AssetDefinition>

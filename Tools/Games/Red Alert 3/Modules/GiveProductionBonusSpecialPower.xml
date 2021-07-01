@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GiveProductionBonusSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="BuildCostBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildCostBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildTimeBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="BuildTimeBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="HarvesterBonus"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+		<Entry
+			id="HarvesterBonusAllies"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0%" />
+	</Asset>
+
+</AssetDefinition>

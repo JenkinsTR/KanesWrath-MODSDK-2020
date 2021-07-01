@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="AIDifficulty">
+		<Entry>EASY</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HARD</Entry>
+		<Entry>BRUTAL</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="AIDifficultyBitFlags"
+		BaseEnum="AIDifficulty" />
+
+</AssetDefinition>

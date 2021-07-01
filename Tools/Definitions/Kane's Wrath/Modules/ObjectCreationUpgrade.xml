@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ObjectCreationUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryReference
+			id="UpgradeObject"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="Delay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="RemoveUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="GrantUpgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ThingToSpawn"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Angle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="FadeInTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Coord3D" />
+		<Entry
+			id="DestroyWhenSold"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UseBuildingProduction"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

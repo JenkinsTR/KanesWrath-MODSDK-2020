@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="EffectInfoFlagType">
+		<Entry>DIE_ON_ENTER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="EffectInfoBitFlags"
+		BaseEnum="EffectInfoFlagType" />
+
+	<Asset
+		id="EffectInfoType">
+		<Entry
+			id="Fraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="AttributeModifier"
+			AssetType="AttributeModifier"
+			IsAttribute="true" />
+		<Entry
+			id="Options"
+			AssetType="EffectInfoBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="OnEnterDisable"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnEnterCancelSpecialAbilities"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SetUpgradedArmor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="SecondaryDamageTrackerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="UpdateDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="DissipateAmount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxDamageClampScaler"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="125%" />
+		<Entry
+			id="Color"
+			AssetType="RGBColor" />
+		<EntryList
+			id="EffectInfo"
+			AssetType="EffectInfoType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+	</Asset>
+
+</AssetDefinition>

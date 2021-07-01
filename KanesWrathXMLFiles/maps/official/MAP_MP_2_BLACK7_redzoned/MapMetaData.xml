@@ -1,0 +1,11 @@
+<MapMetaData BorderSize="50" CRC="0" Description="Map:MAP_MP_2_BLACK7_redzoned/Desc" DisplayName="MAP_MP_2_BLACK7_redzoned" FileName="Data\maps\official\MAP_MP_2_BLACK7_redzoned\MAP_MP_2_BLACK7_redzoned.map" Height="350" IsMultiplayer="true" IsOfficial="true" NumPlayers="2" Width="500" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="613.724" y="2002.5" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="3364.95" y="502.944" z="0" />
+  </StartPosition>
+</MapMetaData>

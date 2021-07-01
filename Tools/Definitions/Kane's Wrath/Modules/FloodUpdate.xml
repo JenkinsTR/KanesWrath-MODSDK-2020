@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FloodMemberData">
+		<EntryWeakReference
+			id="UnitType"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Speed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="ControlPointOffsetOne"
+			AssetType="Coord3D" />
+		<Entry
+			id="ControlPointOffsetTwo"
+			AssetType="Coord3D" />
+		<Entry
+			id="ControlPointOffsetThree"
+			AssetType="Coord3D" />
+		<Entry
+			id="ControlPointOffsetFour"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="FloodUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<EntryList
+			id="DataList"
+			AssetType="FloodMemberData"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="AngleOfFlow"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="IsDirectionRelative"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

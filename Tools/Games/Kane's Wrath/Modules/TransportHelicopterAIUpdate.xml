@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="FlyOffMapType">
+		<Entry>CONTINUE_STRAIGHT</Entry>
+		<Entry>REVERSE_DIRECTION</Entry>
+		<Entry>CLOSEST_MAP_EDGE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="TransportHelicopterAIUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SupplyTruckAIUpdateModuleData" />
+		<Entry
+			id="FlyOffMap"
+			AssetType="FlyOffMapType"
+			IsAttribute="true"
+			Default="REVERSE_DIRECTION" />
+		<Entry
+			id="DelayAFterLoadingOrUnloading"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="FlyOffMapOnUnload"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

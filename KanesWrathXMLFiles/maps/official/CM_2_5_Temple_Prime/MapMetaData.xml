@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="48" CRC="0" Description="Map:CM_2_5_Temple_Prime/Desc" DisplayName="CM_2_5_Temple_Prime" FileName="Data\maps\official\CM_2_5_Temple_Prime\CM_2_5_Temple_Prime.map" Height="480" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="608" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="3422.3" y="3422.69" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

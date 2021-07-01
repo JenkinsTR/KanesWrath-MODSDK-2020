@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TeleportStoredObjectsSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<Entry
+			id="StoreObjectsLinkID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="OCL"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="GetObjectsCurrentlyAtStorePosition"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

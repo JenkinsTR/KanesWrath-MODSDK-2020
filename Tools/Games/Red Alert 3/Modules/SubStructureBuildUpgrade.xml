@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OffsetInfo">
+		<Entry
+			id="ModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Offset"
+			AssetType="Vector3" />
+	</Asset>
+
+	<Asset
+		id="AvailableSubStructure">
+		<Entry
+			id="UpgradeTrigger"
+			AssetType="UpgradeTemplateWeakRef" />
+		<Entry
+			id="ObjectTemplate"
+			AssetType="GameObjectWeakRef" />
+	</Asset>
+
+	<Asset
+		id="SubStructureBuildUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryList
+			id="AvailableSubStructure"
+			AssetType="AvailableSubStructure"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="StructureOffset"
+			AssetType="OffsetInfo"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

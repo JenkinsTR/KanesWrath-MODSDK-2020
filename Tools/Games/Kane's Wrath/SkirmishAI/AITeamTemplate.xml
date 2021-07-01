@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CreateUnitInfo">
+		<Entry
+			id="MinUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="MaxUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryWeakReference
+			id="UnitName"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ExperienceLevel"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+	</Asset>
+
+	<Asset
+		id="AITeamTemplate">
+		<Entry
+			id="MinUnits"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryRelocation
+			id="MaxUnits"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="IncludeKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="ExcludeKindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="CreateUnits"
+			AssetType="CreateUnitInfo"
+			MinLength="0"
+			MaxLength="7" />
+		<Entry
+			id="AlwaysRecruit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AlwaysRelease"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="AutoReinforce"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

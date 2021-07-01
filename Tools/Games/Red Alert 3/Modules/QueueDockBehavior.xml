@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="QueueDockModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CreateModuleData" />
+		<Entry
+			id="DockStartBoneName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="DockActionBoneName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="DockEndBoneName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="QueueBonePrefix"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="TurnTableBoneName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="DockingAnimation"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

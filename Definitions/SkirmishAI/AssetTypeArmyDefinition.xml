@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset id="ArmyDefinition" TypeHash="1008442497">
+	<EntryInheritance id="base" AssetType="BaseAssetType" />
+	<Entry id="Side" AssetType="String" IsAttribute="true" />
+	<Entry id="StructureRebuildPriorityModifier" AssetType="Percentage" Default="50%" IsAttribute="true"/>
+	<Entry id="DefaultUnitPriority" AssetType="SageReal" Default="100.0" IsAttribute="true"/>
+	<Entry id="FortressRebuildPriority" AssetType="SageReal" Default="1950.0" IsAttribute="true"/>
+	<Entry id="LowUnitPriorityModifier" AssetType="SageReal" Default="100.0" IsAttribute="true"/>
+	<Entry id="EconomyBuilderMinFarmsOwned" AssetType="SageInt" Default="5" IsAttribute="true"/>
+	<Entry id="EconomyBuilderMinMoney" AssetType="SageInt" Default="150" IsAttribute="true"/>
+	<Entry id="EconomyBuilderPerFarmValue" AssetType="SageInt" Default="70" IsAttribute="true"/>
+	<Entry id="EconomyBuilderPerSecPriorityIncreaseBase" AssetType="SageReal" Default="5.0" IsAttribute="true"/>
+	<Entry id="EconomyBuilderMinTimeBetweenFarms_Rush" AssetType="SageInt" Default="10" IsAttribute="true"/>
+	<Entry id="UpgradeSciencePriorityNormalLow" AssetType="SageReal" Default="100.0" IsAttribute="true"/>
+	<Entry id="UpgradeSciencePriorityNormalHigh" AssetType="SageReal" Default="200.0" IsAttribute="true"/>
+	<Entry id="UpgradeSciencePriorityImportantLow" AssetType="SageReal" Default="250.0" IsAttribute="true"/>
+	<Entry id="UpgradeSciencePriorityImportantHigh" AssetType="SageReal" Default="350.0" IsAttribute="true"/>
+	<Entry id="UnitUpgradePriorityLow" AssetType="SageReal" Default="100.0" IsAttribute="true"/>
+	<Entry id="UnitUpgradePriorityHigh" AssetType="SageReal" Default="200.0" IsAttribute="true"/>
+	<Entry id="MaxThreatForOpportunityTargets" AssetType="SageReal" Default="10.0" IsAttribute="true"/>
+	<Entry id="ValueToSetForMaxOnDefenseTeam" AssetType="SageInt" Default="10" IsAttribute="true"/>
+	<Entry id="CombatChainSearchDepthForTeamRecruits_AttackTeams" AssetType="SageInt" Default="2" IsAttribute="true"/>
+	<Entry id="CombatChainSearchDepthForTeamRecruits_DefenseTeams" AssetType="SageInt" Default="7" IsAttribute="true"/>
+	<Entry id="CombatChainSearchDepthForTeamRecruits_ExploreTeams" AssetType="SageInt" Default="7" IsAttribute="true"/>
+	<EntryWeakReference id="UnboundedProductionEconomyStructure" AssetType="GameObject" IsAttribute="true" />
+	<EntryWeakReference id="LimitedProductionEconomyStructure" AssetType="GameObject" IsAttribute="true" />
+	<EntryWeakReference id="WorkerGathererTemplate" AssetType="GameObject" Default="0" IsAttribute="true"/>
+	<EntryWeakReference id="MCVTemplate" AssetType="GameObject" Default="0" IsAttribute="true"/>
+		<EntryList id="TechStructure" AssetType="GameObjectWeakRef" MinLength="0" MaxLength="0" />
+	<Entry id="NeedsDozerToFunction" AssetType="SageBool" IsAttribute="true" Default="false" />
+	<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</GameAsset>
+
+</AssetDefinition>

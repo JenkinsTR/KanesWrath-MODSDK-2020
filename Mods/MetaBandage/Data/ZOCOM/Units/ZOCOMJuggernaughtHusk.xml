@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="ZOCOMJuggernaughtHusk"
+		inheritFrom="BaseVehicle"
+		SelectPortrait="Portrait_GDIJuggernautHusk"
+		ButtonImage="Portrait_GDIJuggernautHusk"
+		Side="ZOCOM"
+		EditorSorting="UNIT"
+		CommandSet="EmptyCommandSet"
+		KindOf="PRELOAD SELECTABLE CAN_CAST_REFLECTIONS NOT_AUTOACQUIRABLE IMMOBILE HUSK VALID_TARGET_FOR_C4"
+		RadarPriority="UNIT"
+		EditorName="ZOCOMJuggernaughtHusk"
+		Description="Desc:JuggernautHusk"
+		ShockwaveResistance="100"
+		ReinvisibilityDelay="7s">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">Name:JuggernautHusk</DisplayName>
+		<ArmorSet
+			Armor="NoArmor"
+			DamageFX="NormalDamageFX" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="GUJugg_SKNH" />
+					<ParticleSysBone
+						BoneName="B_SHELL01"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_6">
+					<Model
+						Name="GUJugg_SKNH" />
+					<Texture
+						Original="GUJugg_D"
+						New="GUJuggD_K" />						
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="START_FRAME_LAST"
+					StateName="STATE_Default">
+					<Animation
+						AnimationName="GUJugg_DIEA"
+						AnimationMode="MANUAL"
+						AnimationBlendTime="0" />					
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="USER_2">
+					<Animation
+						AnimationName="GUJugg_DIEA"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+			<Physics
+				id="ModuleTag_07" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3s"
+				SinkRate="2.4"
+				DestructionDelay="8s">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_GDIJuggernaughtHuskDebris</OCL>
+				</OCL>					
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplodeNoScorch" />
+			</FXListBehavior>			
+			<ModelConditionUpgrade
+				id="ModuleTag_AllFactionUpgrade"
+				AddConditionFlags="USER_6">
+				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
+			</ModelConditionUpgrade>
+			<EngineerContain
+				id="ModuleTag_EngineerContain"
+				NameOfVoiceToUseForFriendlyEnter="VoiceCaptureHusk"
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureHusk"
+				EvaEventForReplace="HuskRepaired"
+				EvaEventForCaptureAndReplace="HuskRepaired"
+				FXForReplace="FX_Husk_Repaired" 
+				FXForCapture="FX_Husk_Captured"
+				FXForCaptureAndReplace="FX_Husk_Captured" 
+				ReplaceWith="ZOCOMJuggernaughtHuskReplace">
+				<CanEnterFilter
+					Rule="NONE">
+					<IncludeThing>GDIEngineer</IncludeThing>
+					<IncludeThing>NODSaboteur</IncludeThing>
+					<IncludeThing>BlackHandSaboteur</IncludeThing>
+					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
+					<IncludeThing>AlienAssimilator</IncludeThing>
+					<IncludeThing>Reaper17Assimilator</IncludeThing>
+					<IncludeThing>Traveler59Assimilator</IncludeThing>					
+					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
+					<IncludeThing>ZOCOMEngineer</IncludeThing>
+				</CanEnterFilter>
+			</EngineerContain>			
+			<LifetimeUpdate xmlns="uri:ea.com:eala:asset"
+				id="ModuleTag_HuskLifetime"
+				MinLifetime="300s"
+				MaxLifetime="300s" />
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AILuaEventsList="GDIJuggernaughtFunctions" />
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_03"
+				MaxHealth="2000" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "13.3097"
+				MinorRadius = "21.4112"
+				Height = "20.8325" >
+				<Offset
+					x = "10.468"
+					y = "14.1743"
+					z = "0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos x= "0.931331" y = "15.8128" z = "1.29834" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "20.9746" y = "15.8128" z = "19.0627" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "20.9746" y = "35.8561" z = "1.29834" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "0.931331" y = "35.8561" z = "19.0627" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "0.931331" y = "15.8128" z = "19.0627" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "20.9746" y = "15.8128" z = "1.29834" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "20.9746" y = "35.8561" z = "19.0627" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos x= "0.931331" y = "35.8561" z = "1.29834" />
+			</ContactPoint>			
+		</Geometry>
+		<EvaEvents
+			EvaEventDieOwner="UnitLost"
+			EvaEventProductionStarted="UnitConstructionStarted" 
+			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
+			EvaEventAmbushed="UnitAmbushed" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"    
+			EvaEventSecondDamageFarFromFirstTimeoutMS="155" 
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventPromotedOwner="UnitPromoted" />
+			<!-- EvaEventSecondDamageFarFromFirstOwner="UnitUnderAttackAgain"  -->
+		<ShadowInfo
+			Type="DECAL"
+			SizeX="14"
+			SizeY="14"
+			Texture="ShadowI" />
+		<VisionInfo
+			VisionRange="25"
+			ShroudClearingRange="50" />
+		<CrusherInfo
+			CrusherLevel="0" 
+			CrushEqualLevelProps="true"
+			CrushableLevel="0" />
+	</GameObject>
+</AssetDeclaration>

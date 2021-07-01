@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="JoypadCommandBarTemplateButtonSlot">
+		<Entry
+			id="Ordinal"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="Button"
+			AssetType="JoypadCommandBarButtonTemplateRef"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="JoypadCommandBarTemplate"
+		TypeHash="1959031257">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="HomeButton"
+			AssetType="JoypadCommandBarButtonTemplateRef"
+			IsAttribute="true" />
+		<EntryList
+			id="Slot"
+			AssetType="JoypadCommandBarTemplateButtonSlot"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="GeneralButton"
+			AssetType="JoypadCommandBarButtonTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

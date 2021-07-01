@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="LivingWorldSoundFlags">
+		<Entry>ZOOMED_IN</Entry>
+		<Entry>ZOOMED_OUT</Entry>
+		<Entry>ZOOMING_IN</Entry>
+		<Entry>VISIBLE</Entry>
+		<Entry>ONCE</Entry>
+		<Entry>NO_KILL</Entry>
+		<Entry>FADE_IN</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="LivingWorldTurnPhase">
+		<Entry>Invalid</Entry>
+		<Entry>Planning</Entry>
+		<Entry>MoveArmies</Entry>
+		<Entry>ResolveBattles</Entry>
+		<Entry>FakePhaseOne</Entry>
+		<Entry>PlanRetreats</Entry>
+		<Entry>RetreatArmies</Entry>
+		<Entry>Complete</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

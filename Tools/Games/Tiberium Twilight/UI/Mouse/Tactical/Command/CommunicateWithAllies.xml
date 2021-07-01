@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalCommandCommunicateWithAllies"
+		TypeHash="2342677506">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="PlaceUnattachedBeaconCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="PlaceAttachedBeaconCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="PingRadarCursor"
+			AssetType="MouseCursorRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryRelocation
+			id="BeaconAttachableObjectFilter"
+			AssetType="ObjectFilter" />
+	</GameAsset>
+
+</AssetDefinition>

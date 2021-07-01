@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>XML Assets</h3>
+<h4>Basic Explanation</h4>
+<p>Almost all of the data in C&amp;C 3 is stored in XML files as part of Asset Declarations.  There are a wide variety of types of assets
+	which define everything from a command button, to a unit.  This file will provide a basic explanation of the types of assets, how to declare a 
+	few of the more commonly used assets, and explain ways to learn more about the allowable tags and attributes you can use within a particular type of asset.
+</p>
+<h4>Basic Structure</h4>
+<p>Every XML Asset in C&amp;C 3 is part of an Asset Declaration.  This is the root level of the XML tree, and is something that will need to be in every single
+	XML file you create for use in your mod.  An example of a blank XML file which is ready for other data to be included is below:
+	<p class="code">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br />
+&lt;AssetDeclaration xmlns=&quot;uri:ea.com:eala:asset&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xi=&quot;http://www.w3.org/2001/XInclude&quot;&gt;<br />
+
+&lt;/AssetDeclaration&gt;
+</p>
+<p>There are a variety of attributes of the AssetDeclaration tag which are required, but are beyond the scope of this document to explain.  The above should
+	be sufficient for use as a template for creating a file.
+</p>
+<h4>Creating New Assets</h4>
+<p>Although it is possible to create new assets from scratch, it is easiest to take an existing asset that is similar to the one you are creating, and copy it.
+	As an example, if you were attempting to create a basic tank, the easiest way to build one would be to copy the Predator tank, and edit it to suit your needs.
+	The XML of any individual object is quite complex, and it is beyond the scope of this tutorial to attempt to explain everything.
+</p>
+<h4>Using Art Assets</h4>
+<p>Art assets are generally included in the XML of an individual unit or structure.  They reside in the Includes section near the top of the unit.  You can see an example
+	of an art include in the Elven Warrior in the sample mod, which is copied below:
+</p>
+	<p class="code">
+		&lt;Include type=&quot;all&quot; source=&quot;ART:EULorWar_SKN.w3x&quot; /&gt;
+	</p>
+<p>As you can see, no path is listed for the ART: include.  Instead, the art include searches for a given file by looking for a folder with the first two letters
+	of the file you are including contained within the art folder.  So, for the EULorWar_SKN.w3x, it looks in the folder Art\EU\ where it finds it.  A screenshot
+	of the directory structure of the art assets is below:
+</p>
+<img src="images/mod_art_DirStruct.png" alt="Art Directory Structure" />
+<p>Full details of the art directory structure, and more information on the various types of art assets can be found in the <a href="Art_Assets.htm">Art Assets Section</a>.
+<h4>XML Schema Documents (XSD Files)</h4>
+<p>To understand what options are available for use within an AssetDeclaration, or a particular type of object, you can refer to the XML Schema Documents included
+	in the Mod SDK.  These are used by Binary Asset Builder to validate your XML file, and to allow it to understand how to process the data.  The Schema documents can
+	be found in the Schemas\XSD folder of your Mod SDK installation.  In the root of the folder, with the prefix AssetType are all of the elements which can be placed
+	at the root level within an Asset Declaration.  These are things like GameObjects, which is the type of all of the units and structures in the game, or ArmorTemplates
+	which are used to define the vulnerability of a unit to different types of weapon damage.  The Schema files list all of the valid attributes and tags which can be applied
+	to a particular type of object.  Note that due to inheritance, you may need to explore parent types to find all of the possible valid options.  Also, to find which modules 
+	can be applied to a game object, check the Modules folder.  
+</p>
+</body>
+</html>

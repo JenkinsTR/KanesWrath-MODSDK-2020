@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<ButtonSingleStateData
+		id="ButtonStatePlayerPowerZOCOMHunterKillerTeam" >
+		<State
+			Image="Button_PlayerPowerHunterKillerTeam"
+			Title="NAME:PlayerPowerHunterKillerTeam"
+			TypeDescription="TYPE:PlayerPowerHunterKillerTeam"
+			Description="DESC:PlayerPowerHunterKillerTeam" />
+	</ButtonSingleStateData>
+	
+	<!-- Changed for ZOCOM unique icon -->
+	<ButtonSingleStateData
+		id="ButtonStateZOCOM_SpaceCommandRaiderPods">
+		<State
+			Image="Button_PlayerPower_RaiderPods"
+			Title="NAME:PlayerPowerZOCOMRaiderPods"
+			TypeDescription="TYPE:PlayerPowerZOCOMRaiderPods"
+			Description="DESC:PlayerPowerZOCOMRaiderPods"  />
+	</ButtonSingleStateData>
+	
+	<!-- Changed to use unique icon rather than using the icon used in for unit display -->
+	<ButtonSingleStateData
+		id="ButtonStateDecoyTemple">
+		<State
+			Image="Button_PlayerPower_DecoyTemple"
+			Title="NAME:PlayerPowerDecoyTemple"
+			TypeDescription="TYPE:PlayerPowerDecoyTemple"
+			Description="DESC:PlayerPowerDecoyTemple"  />
+	</ButtonSingleStateData>
+	
+	<ButtonSingleStateData
+		id="ButtonStatePlayerPowerMarkedOfKaneShadowStrikeTeam">
+		<State
+			Image="Button_PlayerPowerShadowStrikeTeam"
+			Title="NAME:PlayerPowerShadowStrikeTeam"
+			Description="DESC:PlayerPowerShadowStrikeTeam"
+			TypeDescription="TYPE:PlayerPowerShadowStrikeTeam" />
+	</ButtonSingleStateData>
+	
+	<ButtonSingleStateData
+		id="ButtonStateUpgradeReaper17MinorForcefieldGenerator">
+		<State
+			Image="Button_Upgrade_AttForcefields"
+			Title="NAME:UpgradeMinorForcefieldGenerator"
+			Description="DESC:UpgradeReaper17MinorForcefieldGenerator" />
+	</ButtonSingleStateData>
+	
+	<ButtonSingleStateData
+		id="ButtonStatePlayerPowerReaper17Swarm" >
+		<State
+			Image="Button_PlayerPowerSwarm"
+			Title="NAME:PlayerPowerSwarm"
+			TypeDescription="TYPE:PlayerPowerSwarm"
+			Description="DESC:PlayerPowerSwarm" />
+	</ButtonSingleStateData>
+	<ButtonSingleStateData
+		id="ButtonStatePlayerPowerTraveler59Swarm" >
+		<State
+			Image="Button_PlayerPowerSwarm"
+			Title="NAME:PlayerPowerSwarm"
+			TypeDescription="TYPE:PlayerPowerSwarm"
+			Description="DESC:PlayerPowerSwarm" />
+	</ButtonSingleStateData>
+</AssetDeclaration>

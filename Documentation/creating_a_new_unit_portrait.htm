@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Creating a New Unit Portrait</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Arial" size="4">Creating a New Unit Portrait</font></b></p>
+<span style="font-family: Arial; color: black">The Sample MOD includes a new 
+Unit Portrait for the Elven Warrior.&nbsp; If you look at the Sample MOD MOD.xml file 
+you will see the following include:</span><p><font face="Arial"><span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Include 
+type=&quot;all&quot; source=&quot;ART:Images/SampleUpdatedPackedImages.xml&quot; /&gt;</span></font></p>
+<span style="font-family: Arial; color: black">This file should be located in 
+the Art/Images folder of the MOD SDK.&nbsp; If you open it up you will see the 
+following:</span><p><font face="Arial"><span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- Packed 
+Texture: PackedImages_219.tga --&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Texture 
+id=&quot;PackedImages_220&quot; File=&quot;PackedImages_220.tga&quot; OutputFormat=&quot;A8R8G8B8&quot; 
+GenerateMipMaps=&quot;false&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AllowAutomaticResize=&quot;false&quot;/&gt;</span></font></p>
+<font face="Arial"><span style="font-family: Consolas; color: black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;PackedTextureImage 
+id=&quot;Portrait_GDIElfWarrior&quot; Texture=&quot;PackedImages_220&quot; Rotated=&quot;false&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Dimensions 
+x=&quot;128&quot; y=&quot;128&quot;/&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;Coords 
+x=&quot;0&quot; y=&quot;0&quot;/&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;TextureDimensions 
+x=&quot;128&quot; y=&quot;128&quot;/&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;/PackedTextureImage&gt;</span><span style="font-family: Consolas; color: aqua">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font>
+<p><span style="font-family: Arial; color: black">The first tag references the 
+actual image file, and lets the game know where that image is located.&nbsp; It is 
+then referenced by its ID in the PackedTextureImage tag.&nbsp; The id of the 
+PackedTextureImage is then used in the GDIElfWarrior.xml file under the 
+GameObject tag:</span></p>
+<font face="Arial"><span style="font-family: Consolas; color: black">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SelectPortrait=&quot;Portrait_GDIElfWarrior&quot; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ButtonImage=&quot;Portrait_GDIElfWarrior&quot;</span></font><p>
+<span style="font-family: Arial; color: black">The trick is to make sure the xml 
+file you are using to create these is located in the same folder as the art you 
+are referencing.</span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="MissionObjectiveCategory">
+		<Entry>Invalid</Entry>
+		<Entry>Attack</Entry>
+		<Entry>Protect</Entry>
+		<Entry>Capture</Entry>
+		<Entry>Build</Entry>
+		<Entry>Move</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

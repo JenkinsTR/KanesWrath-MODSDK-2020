@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SpawnOffsetType">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="SpawnMemberEntryType">
+		<EntryWeakReference
+			id="Object"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Count"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryWeakReference
+			id="GrantUpgradeOnSpawn"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="SpawnFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SpawnOffset"
+			AssetType="SpawnOffsetType" />
+		<Entry
+			id="SpawnAtNextAvailableSpot"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="SpawnHordeMemberSpecialPowerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialPowerModuleData" />
+		<EntryList
+			id="SpawnMemberEntry"
+			AssetType="SpawnMemberEntryType"
+			MinLength="1"
+			MaxLength="0" />
+		<Entry
+			id="AllowBackwardsReformMovement"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

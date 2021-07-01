@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="FormationType">
+		<Entry>MAIN</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="HordeMeleeType">
+		<Entry>AMOEBA</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="HordeMeleeBehaviorData">
+		<Entry
+			id="Type"
+			AssetType="HordeMeleeType"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="PositionAndLeaderType">
+		<Entry
+			id="X"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="LeaderRank"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="LeaderIndex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="RankInfoType">
+		<Entry
+			id="RankID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryWeakReference
+			id="UnitType"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryList
+			id="Position"
+			AssetType="PositionAndLeaderType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="WeaponConditionSet"
+			AssetType="WeaponSetBitFlags" />
+		<EntryRelocation
+			id="WeaponConditionClear"
+			AssetType="WeaponSetBitFlags" />
+	</Asset>
+
+	<Asset
+		id="BannerCarrierPosType">
+		<Entry
+			id="UnitType"
+			AssetType="GameObjectWeakRef" />
+		<Entry
+			id="Pos"
+			AssetType="Coord2D" />
+	</Asset>
+
+	<Asset
+		id="OnDeathBehaviorType">
+		<Entry
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="OCL"
+			AssetType="ObjectCreationListRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="WiggleBehaviorType">
+		<Entry
+			id="WiggleAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="WiggleFrequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="WiggleIdleAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="WiggleIdleFrequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="HordeContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="TransportContainModuleData" />
+		<Entry
+			id="Formation"
+			AssetType="FormationType"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="AlternateFormation"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="ForcedLocomotorSet"
+			AssetType="LocomotorSetType"
+			IsAttribute="true" />
+		<Entry
+			id="MeleeAttackLeashDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="60.0" />
+		<Entry
+			id="GeometryFrontAngleRadians"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="EvaEventLastMemberDeath"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FrontAngle"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="6.283" />
+		<Entry
+			id="FlankedDelaySeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FlankedDurationSeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="5.0" />
+		<Entry
+			id="MinimumHordeSize"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BackupMinDelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="BackupMaxDelayTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="BackupMinDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BackupMaxDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BackupPercentage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RadiusCowerOverride"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="VisionOverrideRear"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="VisionOverrideSide"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="ForbiddenCoverStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="MeleeBehavior"
+			AssetType="HordeMeleeBehaviorData" />
+		<EntryRelocation
+			id="RandomOffset"
+			AssetType="Coord2D" />
+		<EntryList
+			id="RankInfo"
+			AssetType="RankInfoType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RankThatStopsAdvance"
+			AssetType="SageInt"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RankToReleaseWhenAttacking"
+			AssetType="SageInt"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="LeaderPosition"
+			AssetType="Coord2D" />
+		<EntryList
+			id="BannerCarrierPosition"
+			AssetType="BannerCarrierPosType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="BannerCarriersAllowed"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="LeadersAllowed"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="AttributeModifier"
+			AssetType="AttributeModifierRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="OnDeathBehavior"
+			AssetType="OnDeathBehaviorType"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="WiggleBehavior"
+			AssetType="WiggleBehaviorType" />
+		<Entry
+			id="UseSlowHordeMovement"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="SpawnBannerCarrierImmediately"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BannerCarrierByUpgradeOnly"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DestroyHordeOnBannerDeath"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ExitBannerCarrierWithHorde"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FollowTheLeader"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

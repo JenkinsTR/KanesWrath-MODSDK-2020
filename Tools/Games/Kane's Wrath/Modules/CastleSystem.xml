@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="PreBuiltInfo">
+		<EntryWeakReference
+			id="PreBuiltBuilding"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="FoundationSlot"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="DecalInfo">
+		<Entry
+			id="FactionId"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DecalName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DecalSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="CastleTemplateInfoStruct">
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Cost"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CommandPoints"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="FactionCastleMap">
+		<Entry
+			id="CastleTemplate"
+			AssetType="CastleTemplateInfoStruct" />
+	</Asset>
+
+	<Asset
+		id="CastleBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="FoundationAIUpdateModuleData" />
+		<Entry
+			id="PreBuiltPlyr"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DecalName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DecalSize"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="FadeTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="UnpackDelay"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="BuildTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ScanDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="MaxCastleRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CrewPrepareTime"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CrewPrepareInterval"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrewPrepareFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="CrewReleaseFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="EvaEnemyCastleSightedEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FilterValidOwnedEntries"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="CrewFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="PreBuiltInformation"
+			AssetType="PreBuiltInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="DecalInformation"
+			AssetType="DecalInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="FactionCastleTemplateInfoMap"
+			AssetType="FactionCastleMap"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="InstantUnpack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="KeepDeathKillsEverything"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="Summoned"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="DisableStructureRotation"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="TransferFoundationHealthToCastleUponUnpack"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="CastleMemberBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="CampDestroyedOwnerEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="CampDestroyedAllyEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="CampDestroyedAttackerEvaEvent"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="BeingBuiltSound"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="StoreUpgradePrice"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="CountsForEvaCastleBreached"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

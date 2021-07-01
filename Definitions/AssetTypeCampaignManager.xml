@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="CampaignFlagType">
+		<Entry>Use_Alternate_Ending</Entry>
+		<Entry>Use_Alternate_Campaign_Finale</Entry>
+		<Entry>LUNCH_AT_IHOP</Entry>
+		<Entry>GDI_1_2_CampaignFlag_Snipers_Rescued</Entry>
+		<Entry>GDI_1_3_CampaignFlag_Mission_Complete</Entry>
+		<Entry>GDI_4_2_CampaignFlag_PlayedFirst</Entry>
+		<Entry>GDI_4_2_SnipersRescued</Entry>
+		<Entry>GDI_4_2_ZoneTroopersRescued</Entry>
+		<Entry>GDI_4_2_CommandoWin</Entry>
+		<Entry>GDI_4_3_CampaignFlag_PlayedFirst</Entry>
+		<Entry>GDI_4_3_Reinforcements</Entry>
+		<Entry>NOD_1_1_CampaignFlag_LessGroundForces</Entry>
+		<Entry>NOD_1_1_CampaignFlag_Attack_Bike_IDB</Entry>
+		<Entry>NOD_1_2_CampaignFlag_NoOrcas</Entry>
+		<Entry>NOD_4_2_CampaignFlag_IonCannonDestroyed</Entry>
+		<Entry>NOD_5_2_CampaignFlag_Stasis_Chamber_Destroyed</Entry>
+		<Entry>NOD_5_2_CampaignFlag_GravityStabilizer_Destroyed</Entry>
+		<Entry>Alien_1_2_CampaignFlag_Mastermind_Survived</Entry>
+		<Entry>MM_1_DestroyLab_Activated</Entry>
+		<Entry>MM_1_DestroyLab_Completed</Entry>
+		<Entry>MM_1_DestroyLab_Failed</Entry>
+		<Entry>MM_2_DefendLab_Activated</Entry>
+		<Entry>MM_2_DefendLab_Completed</Entry>
+		<Entry>MM_2_DefendLab_Failed</Entry>
+		<Entry>MM_3_CaptureLab_Activated</Entry>
+		<Entry>MM_3_CaptureLab_Completed</Entry>
+		<Entry>MM_3_CaptureLab_Failed</Entry>
+		<Entry>MM_4_DefendConvoy_Activated</Entry>
+		<Entry>MM_4_DefendConvoy_Completed</Entry>
+		<Entry>MM_4_DefendConvoy_Failed</Entry>
+		<Entry>MM_5_DestroyConvoy_Activated</Entry>
+		<Entry>MM_5_DestroyConvoy_Completed</Entry>
+		<Entry>MM_5_DestroyConvoy_Failed</Entry>
+		<Entry>MM_6_PowerDown_Activated</Entry>
+		<Entry>MM_6_PowerDown_Completed</Entry>
+		<Entry>MM_6_PowerDown_Failed</Entry>
+		<Entry>MM_7_8_9_BuildLoc_Activated</Entry>
+		<Entry>MM_7_8_9_BuildLoc_Completed</Entry>
+		<Entry>MM_7_8_9_BuildLoc_Failed</Entry>
+		<Entry>MM_10_11_12_MechCapture_Activated</Entry>
+		<Entry>MM_10_11_12_MechCapture_Completed</Entry>
+		<Entry>MM_10_11_12_MechCapture_Failed</Entry>
+		<Entry>MM_13_14_15_ConyardCapture_Activated</Entry>
+		<Entry>MM_13_14_15_ConyardCapture_Completed</Entry>
+		<Entry>MM_13_14_15_ConyardCapture_Failed</Entry>
+		<Entry>MM_16_17_18_RefineryCapture_Activated</Entry>
+		<Entry>MM_16_17_18_RefineryCapture_Completed</Entry>
+		<Entry>MM_16_17_18_RefineryCapture_Failed</Entry>
+		<Entry>MM_19_TibSpikeCapture_Activated</Entry>
+		<Entry>MM_19_TibSpikeCapture_Completed</Entry>
+		<Entry>MM_19_TibSpikeCapture_Failed</Entry>
+		<Entry>MM_20_Tiberium_Activated</Entry>
+		<Entry>MM_20_Tiberium_Completed</Entry>
+		<Entry>MM_20_Tiberium_Failed</Entry>
+		<Entry>MM_21_CaptureAndHold_Activated</Entry>
+		<Entry>MM_21_CaptureAndHold_Completed</Entry>
+		<Entry>MM_21_CaptureAndHold_Failed</Entry>
+		<Entry>MM_22_23_24_NoAir_Activated</Entry>
+		<Entry>MM_22_23_24_NoAir_Completed</Entry>
+		<Entry>MM_22_23_24_NoAir_Failed</Entry>
+		<Entry>MM_25_26_27_NoArmor_Activated</Entry>
+		<Entry>MM_25_26_27_NoArmor_Completed</Entry>
+		<Entry>MM_25_26_27_NoArmor_Failed</Entry>
+		<Entry>MM_28_29_30_NoInfantry_Activated</Entry>
+		<Entry>MM_28_29_30_NoInfantry_Completed</Entry>
+		<Entry>MM_28_29_30_NoInfantry_Failed</Entry>
+		<Entry>MM_31_SuperWeaponRace_Activated</Entry>
+		<Entry>MM_31_SuperWeaponRace_Completed</Entry>
+		<Entry>MM_31_SuperWeaponRace_Failed</Entry>
+		<Entry>CM_StealthTech_Activated</Entry>
+		<Entry>CM_StealthTech_Completed</Entry>
+		<Entry>CM_StealthTech_Failed</Entry>
+		<Entry>CM_BlackHand_Activated</Entry>
+		<Entry>CM_BlackHand_Completed</Entry>
+		<Entry>CM_BlackHand_Failed</Entry>
+		<Entry>CM_TibResearch_Activated</Entry>
+		<Entry>CM_TibResearch_Completed</Entry>
+		<Entry>CM_TibResearch_Failed</Entry>
+		<Entry>CM_Treasury_Activated</Entry>
+		<Entry>CM_Treasury_Completed</Entry>
+		<Entry>CM_Treasury_Failed</Entry>
+		<Entry>CM_MARV_Activated</Entry>
+		<Entry>CM_MARV_Completed</Entry>
+		<Entry>CM_MARV_Failed</Entry>
+		<Entry>CM_Giraud_Activated</Entry>
+		<Entry>CM_Giraud_Completed</Entry>
+		<Entry>CM_Giraud_Failed</Entry>
+		<Entry>CM_Munich_Activated</Entry>
+		<Entry>CM_Munich_Completed</Entry>
+		<Entry>CM_Munich_Failed</Entry>
+		<Entry>CM_TacitusA_Activated</Entry>
+		<Entry>CM_TacitusA_Completed</Entry>
+		<Entry>CM_TacitusA_Failed</Entry>
+		<Entry>CM_TacitusB_Activated</Entry>
+		<Entry>CM_TacitusB_Completed</Entry>
+		<Entry>CM_TacitusB_Failed</Entry>
+		<Entry>MM_General_Activate</Entry>
+		<Entry>MM_General_PreTacticalCheck</Entry>
+		<Entry>MM_General_PostTacticalCheck</Entry>
+		<Entry>MM_MetagameActive</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="CampaignFlagBitFlags"
+		BaseEnum="CampaignFlagType" />
+
+	<GameAsset
+		id="MissionTemplate"
+		TypeHash="220738197">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="IntroMovieName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Title"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BriefingText"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="BriefingMovie"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LoadScreenImage"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="LoadScreenText"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LoadScreenMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="LoadScreenVoice"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<Entry
+			id="MapName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="VictoryMovieName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="DefeatMovieName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Prerequisite"
+			AssetType="SageInt"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Objective"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="5" />
+		<EntryList
+			id="BonusObjective"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="5" />
+		<Entry
+			id="BriefingMovieFullScreen"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RequiredToCompleteTheaterOfWar"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</GameAsset>
+
+	<GameAsset
+		id="TheaterOfWarTemplate"
+		TypeHash="3859584804">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AptTow"
+			AssetType="String"
+			IsAttribute="true"
+			Default="Temp" />
+		<Entry
+			id="AutoStartMission"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<EntryRelocation
+			id="SummaryScreenMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SelectionScreenMusic"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+		<EntryList
+			id="Mission"
+			AssetType="MissionTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<GameAsset
+		id="CampaignTemplate"
+		TypeHash="2892018992">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="DisplayName"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FinalMovie"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="AlternateFinalMovie"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ConsoleAutosaveFilename"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="TheaterOfWar"
+			AssetType="TheaterOfWarTemplateRef"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

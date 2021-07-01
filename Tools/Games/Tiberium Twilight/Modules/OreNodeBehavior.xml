@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OreNodeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<Entry
+			id="MaximumGatheredValue"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="20000" />
+		<Entry
+			id="DeliveryAmount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="DeliveryAmountWhenEmpty"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CashMultiplier"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%" />
+		<Entry
+			id="MoveToExtractTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="ExtractTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="MoveToDeliverTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="DeliveryTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="ExtractAnimation"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="DeliveryAnimation"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="ReturnAnimation"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="MoveBackAnimation"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="LowNotificationPercentage"
+			AssetType="Percentage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="LowNotificationEvaEventRef"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="DepletedNotificationEvaEventRef"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryReference
+			id="DepletedNotificationAudioEventInfoRef"
+			AssetType="AudioEventInfo"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

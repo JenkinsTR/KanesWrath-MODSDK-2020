@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="OutlineDrawType">
+		<Entry>UNKNOWN</Entry>
+		<Entry>NONE</Entry>
+		<Entry>SELECTED</Entry>
+		<Entry>HOVER_SELECT</Entry>
+		<Entry>HOVER_ATTACK</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

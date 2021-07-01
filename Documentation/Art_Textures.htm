@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Textures</h3>
+	<h4>Basic Information</h4>
+	<p>Textures in C&amp;C 3 are stored in the TGA format, using either 24 bit or 32 bit, depending on whether or not an alpha channel is used.  There can be up to 4
+		textures per object.  There is a diffuse (color) texture for all objects, and optionally a normal map, specular map, and house color map.  Each of these textures
+		is created in a particular way, and applied to the W3X mesh.  Each texture however must be declared as an asset to be used by Binary Asset Builder.
+	</p>
+<h4>Texture Asset Declaration</h4>
+<p>Each texture that you use in C&amp;C 3 requires a Texture Asset Declaration. This enables Binary Asset Builder to find the texture, include it, and compile
+	it to the necessary format.  A Texture Asset Declaration is quite simple.  For the purposes of example, we will use the Elven warrior included in the Sample mod.
+	You can find the files for this in the Art\EU and Art\HC folders of your C&amp;C 3 Mod SDK install directory.
+</p>
+<p class="code">
+	&lt;?xml version='1.0' encoding='UTF-8'?&gt;<br />
+&lt;AssetDeclaration xmlns=&quot;uri:ea.com:eala:asset&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;<br />
+  &lt;Texture id=&quot;EUlorienwarrior&quot; File=&quot;EUlorienwarrior.tga&quot; /&gt;<br />
+&lt;/AssetDeclaration&gt;
+</p>
+<p>
+	The above Texture Asset Declaration is for the texture used on the Elven Warrior.  As you can see, the Texture Asset is quite simple.  You simply need to ensure that 
+	the id is the same as the texture name, without the extension, and the File is the full name of the file.  The filename of the XML file you create should be the
+	same as the name of the texture, but with an XML extension rather than tga.
+</p>
+<h4>Diffuse (Color) Textures</h4>
+<p>Diffuse Textures are what is commonly referred to as the skin for a unit.  It is generally a 24 bit RGB texture, which is used to give the unit its base color.  
+	There is nothing special about the way Diffuse Textures are rendered in C&amp;C 3, so nothing special needs to be done in creating them.
+</p>
+<h4>Normal Map</h4>
+<p>Units and Structures in C&amp;C 3 support having a normal map applied.  A normal map is a rendering trick which can be used to simulate depth in flat surfaces.
+	Normal maps in C&C 3 are generally created using the NVidia Normal Map filter.  A greyscale heightmap should be created of the unit, and then the filter run.  One
+	useful trick to allow the simulation of multiple depths is to run the filter multiple times on the same heightmap with various settings, and then composite the various
+	maps together to get multiple levels of depth on the normal map.  
+</p>
+
+
+<h5>Using DX9 Shaders to preview your normal map</h5>
+		<P>Use the DX9 
+				DiffuseBump.fx shader in max to preview your normal maps on the objects in 
+				3dsmax7 in REALTIME. For more information about using DX9 shaders in 3dsmax7 
+				please read the users manual.
+		</P>
+		<h5>Normal Maps</h5>
+				The normal map 
+				should be created from a height field texture, by applying the NVidia normal 
+				map filter to it. Once this filter 
+				is applied the texture it should not be edited. Instead the height field should be change and the filter should be 
+				re-applied to create the normal map again.
+		<P>The height field 
+				texture is simply a black and white image where the raised parts of the color 
+				map/model are represented by white and the lower portions are darker or black. 
+				A height field can also be referred to as a Bump Map or Displacement Map.
+				</P>
+		<P>Below is an 
+				image of the normal map filter settings we used on C&amp;C3.
+				</P>
+		<IMG src="images/Normal_Mapping_Settings.jpg">
+		<h5>Scale</h5>
+		<P>The size of the 
+				object on the screen is very important in creating a good normal map. 
+				Because C&amp;C3 is an RTS, the camera in C&amp;C3 is very far from 
+				the object. So it is better to have less detail in the normal map than would be 
+				necessary in a First Person Shooter. Below are a couple of images that show how 
+				too much detail in the normal map will get lost because the camera is so far 
+				away from the buildings.
+		<P>In the image 
+				below the building is using a normal map that was made by just using the NVidia 
+				photoshop filter on the color map. This creates too much detail and some of the 
+				normals are inverted because the color map doesn’t accurately represent the 
+				height from the surface of the objects that are painted in it. 
+				This is why a separate height map needs to be created.
+		</P>
+		<IMG src="images/Normal_Mapping_01.jpg">
+		<P>These are the 
+				color map, height map, and normal maps that were used in the image above. 
+				Notice the height map is the virtually same as the color map.
+		</P>
+		<IMG src="images/Normal_Mapping_02.jpg">
+		<P>Below is an 
+				image where a height map was created. 
+				The detail in the height map was also simplified so that only the major surface 
+				features were represented in it. Also 
+				notice that the raised metal surfaces now look correct and 
+		smooth like a metallic surface should.</p>
+				<IMG src="images/Normal_Mapping_03.jpg">
+		<p>These are the 
+				color map, height map, and normal maps that were used in the image above. 
+				Notice that the height map doesn’t look the same as the color map and how much 
+				clearer and sharper it is than just using the color map as a height field.
+			</p>
+		<IMG src="images/Normal_Mapping_04.jpg">
+		<p>C&amp;C3 is a very 
+		futuristic genre in RTS where many of our objects have metallic surfaces. In order to give 
+		you a reference for other surfaces, we've included textures from a game 
+		previously made by the Sage Engine, LOTR:BFME.
+		<h6>Wood</h6>
+		<P>Wood is the most 
+				forgiving of all the materials that will need to be normal mapped because it is 
+				mostly noisy. Just increasing the 
+				contrast of the color map to bring out the gaps between the boards and 
+				simplifying the noise in the grain of the wood should be enough to create a 
+				good normal map from a wood color map.</P>
+		<IMG src="images/Normal_Mapping_05.jpg"><br />
+		<IMG src="images/Normal_Mapping_06.jpg"><br />
+		<h6>Brick</h6>
+		<P>The brick is a 
+				little more difficult than wood to make a normal map for. The height map should have a nearly black color for the mortar 
+				in-between the bricks. Also, the 
+				noise in the color of the bricks should be reduces drastically. This will create a more simplified version of the brick with only the 
+				cracks and the mortar showing up in the normal map. Be careful because some of the mortar between the bricks is white and it 
+				should always be black in the height field.</P>
+		<IMG src="images/Normal_Mapping_07.jpg"><br />
+		<IMG src="images/Normal_Mapping_08.jpg"><br />
+		<h6>Accents</h6>
+		<P>The accent 
+				pieces of the buildings are probably the most difficult and time consuming part of 
+				creating a normal map. The height 
+				field basically needs to be repainted as a gray scale image where white 
+				represents the highest part of the texture and black is the lowest. The next two images show how the black metal of the gate door needs to 
+				be painted white because it is raised above the wood.</P>
+		<IMG src="images/Normal_Mapping_09.jpg"><br />
+		<IMG src="images/Normal_Mapping_10.jpg"><br />
+		<P>The final two images shows how areas need to painted 
+		completely black or gray for optimal smoothness.</P>
+		<IMG src="images/Normal_Mapping_11.jpg"><br />
+		<IMG src="images/Normal_Mapping_12.jpg"><br />
+
+
+<h4>Specular Map</h4>
+<p>The specular map in C&amp;C 3 is one of the most complex textures, due to the way that it uses the different channels in the texture to create effects.  To save
+	memory, the red channel of the texture is the specular map, the green channel of the texture is the environment map, and the blue channel is used for house color.
+	One easy way to start creating the specular map is to take the color map, and remove the green and blue channels in Photoshop.  This will leave you with an all red
+	image.  From there you will want to work to increase the contrast in the specular map, until you have an image which is mostly black, and bright red.  Due to the 
+	sensitivity of the engine, this is the best way to have the red channel appear.  Test in the game to see if the effect you want is being created.
+</p>
+<p>The green channel is used for the environment map.  In general, you will want to mask and fill reflective areas in the green channel which should reflect with
+	50% grey.  Areas that should be reflective (such as glass) should appear yellow on the specular map.  An example of a good and bad specular map will be provided below.
+</p>
+<p>The blue channel is used for housecolors.  It will create a glowing effect, although its appearance depends on shaders.  The Nod units use an animated texture which
+	is overlaid on the house color to create a pulsating effect on the glowing lights.  GDI units do not have this pulsating effect.  In general, the blue channel should
+	also be filled with a 50% grey.
+</p>
+<p>An example of a good and bad GDI specular map are provided below:</p>
+<img src="images/04.jpg" alt="GDI Specular Map Comparison" />
+<p>For GDI and Nod specular maps, you should see red, yellow, and blue.  Testing ingame will allow you to ensure that you have the look that you want.</p>
+<p class="important">The above information applies mostly to GDI and Nod.  The Scrin specular maps are more complicated, but follow the same basic rules.</p>
+<p>When creating a Scrin specular map, you should see mostly red and yellow and green.  The interaction of their specular map with the color map is more complex
+	so a large amount of testing is the only easy way to determine if you are getting the correct effect.  An example of a Scrin Specular map is below:
+</p>
+<img src="images/z04.jpg" alt="Scrin Specular Map" />
+
+<h4>Housecolor Map</h4>
+<P>The house color in the game is how the players know which units 
+				are on which team when they are in a multi-player game.</P>
+		<IMG src="images/House_Color1.jpg"><br />
+		<P>The object will need a special house color texture map that 
+				should be an RGBA .tga file.&nbsp; Although the image should be Black and 
+				White. The color channels of the image are used for the luminance value for the 
+				house color that is added on top of the diffuse color and the alpha channel is 
+				used to determine the transparency level of the house color.</P>
+		<p>Below is the Diffuse texture for the GDI engineer:</p>
+		<IMG src="images/GUEngineer.jpg" />
+		<p>Below is the House color texture for the GDI engineer, separated to show RGB (left) and Alpha (right):</p>
+		<IMG src="images/HC_GUEngineer.jpg" width="256" height="256"><IMG src="images/HC_GUEngineer_A.jpg" width="256" height="256">
+		<P>Make sure to assign your House color texture in the 3DS Max Shader for your object to use it properly.</P>
+</body>
+</html>

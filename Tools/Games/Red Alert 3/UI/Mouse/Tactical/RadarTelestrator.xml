@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalRadarTelestrator"
+		TypeHash="2875609897">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="StrokeSustainDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="StrokeFadeDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+	</GameAsset>
+
+</AssetDefinition>

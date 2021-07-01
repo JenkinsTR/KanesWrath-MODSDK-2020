@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentObjectAction">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="AttackMoveColor"
+			AssetType="Color3f" />
+		<Entry
+			id="MoveColor"
+			AssetType="Color3f" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="GateOpenAndCloseBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ResetFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="PercentOpenForPathing"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ProxyUnitsName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoundOpeningGateLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoundFinishedOpeningGate"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoundClosingGateLoop"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoundFinishedClosingGate"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="TimeBeforePlayingOpenSound"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TimeBeforePlayingClosedSound"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryList
+			id="GeometriesForOpen"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="GeometriesForClosed"
+			AssetType="String"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="OpenByDefault"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="RepelCollidingUnits"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

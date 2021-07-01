@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<Includes>
+	
+<VideoEventList
+	id="METAMODINTRO">
+	<EventList>
+		<Movie
+			MovieName="METAMODINTRO" />
+	</EventList>
+</VideoEventList>
+
+<VideoEventList
+	id="NAODGAMEMODE">
+	<EventList>
+		<Movie
+			MovieName="NAODGAMEMODE" />
+	</EventList>
+</VideoEventList>
+
+<VideoEventList
+	id="HEROGENERALGAMEMODE">
+	<EventList>
+		<Movie
+			MovieName="HEROGENERALGAMEMODE" />
+	</EventList>
+</VideoEventList>
+
+<VideoEventList
+	id="RANDOMARMYGAMEMODE">
+	<EventList>
+		<Movie
+			MovieName="RANDOMARMYGAMEMODE" />
+	</EventList>
+</VideoEventList>
+
+<VideoEventList
+	id="UNITVSUNITGAMEMODE">
+	<EventList>
+		<Movie
+			MovieName="UNITVSUNITGAMEMODE" />
+	</EventList>
+</VideoEventList>
+
+<VideoEventList
+	id="TIMETRAVEL">
+	<EventList>
+		<Movie
+			MovieName="TIMETRAVEL" />
+	</EventList>
+</VideoEventList>
+	
+</Includes>
+</AssetDeclaration>

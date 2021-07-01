@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FadeAndDieOrnamentUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="AttachToBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="OpacityEnvelopeModuleData"
+			AssetType="SimpleEnvelopeType" />
+	</Asset>
+
+</AssetDefinition>

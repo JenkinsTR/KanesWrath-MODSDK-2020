@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="SubObjectsUpgradeModuleData">
+		<EntryInheritance id="base" AssetType="UpgradeModuleData" />
+		<EntryList id="ShowSubObjects" AssetType="String" MinLength="0" MaxLength="0" IsAttribute="true"/>
+		<EntryList id="HideSubObjects" AssetType="String" MinLength="0" MaxLength="0" IsAttribute="true"/>
+		<Entry id="FadeTimeInSeconds" AssetType="SageReal" Default="0.5" IsAttribute="true"/>
+		<Entry id="WaitBeforeFadeInSeconds" AssetType="SageReal" Default="0.0" IsAttribute="true"/>
+		<EntryList id="ExcludeSubobjects" AssetType="String" MinLength="0" MaxLength="0" IsAttribute="true"/>
+			<EntryList id="UpgradeTexture" AssetType="ReplaceTexture" MinLength="0" MaxLength="0" />
+		<Entry id="RecolorHouse" AssetType="SageBool" Default="false" IsAttribute="true"/>
+		<Entry id="SkipFadeOnCreate" AssetType="SageBool" Default="false" IsAttribute="true"/>
+		<Entry id="HideSubObjectsOnRemove" AssetType="SageBool" Default="false" IsAttribute="true"/>
+		<Entry id="UnHideSubObjectsOnRemove" AssetType="SageBool" Default="false" IsAttribute="true"/>
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- Added Status Upgrade DOES_CONTAIN_TIBERIUM for missing factions -->
+<!-- Fixed structure randomly play the Growth Accelerator select sound effects instead of it's own -->
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	<GameObject
+		id="Reaper17GrowthStimulator"
+		inheritFrom="AlienSporePod"
+		SelectPortrait="Portrait_GrowthStimulator"
+		ButtonImage="Portrait_GrowthStimulator"
+		Side="Reaper17"
+		EditorSorting="STRUCTURE"
+		BuildCost="1500"
+		BuildTime="15"
+		PlacementViewAngle="270d"
+		CommandSet="AlienSporePodCommandSet"
+		KindOf="STRUCTURE SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS FS_CASH_PRODUCER TIBERIUM_BASED AUTO_ACQUIRABLE_BY_AI NOT_AUTOACQUIRABLE COVER IGNORE_FOR_VICTORY"
+		RadarPriority="STRUCTURE"
+		ProductionQueueType="OTHER_STRUCTURE"
+		BuildPlacementTypeFlag="TIBERIUM_FIELD"
+		BuildInProximityToSamePlayerStucture="false"
+		BuildOnRequiredObjectKindOf="TIBERIUM_FIELD HARVESTABLE"
+		EditorName="Reaper17GrowthStimulator"
+		Description="Desc:Reaper17GrowthStimulator"
+		TypeDescription="Type:Reaper17GrowthStimulator"
+		EnergyProduction="-5"
+		CampnessValue="2000"
+		CampnessValueRadius="300"
+		UnitCategory="STRUCTURE">
+		<DisplayName
+			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:Reaper17GrowthStimulator</DisplayName>
+		<GameDependency>
+			<RequiredObject>Reaper17TiberiumTower</RequiredObject>
+		</GameDependency>
+		<ArmorSet
+			Armor="AlienSporePodArmor"
+			DamageFX="FactionStructureDamageFX" />
+		<SkirmishAIInformation
+			BaseBuildingLocation="SIDE" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_Draw"
+				OkToChangeModelColor="true">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="ABGrowthStim_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Model
+						Name="ABGrowthStimBld_SKN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="ABGrowthStim_D3SN" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED">
+					<Model
+						Name="ABGrowthStim_D2SN" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone02"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFireGlow02"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED">
+					<Model
+						Name="ABGrowthStim_SKN" />
+					<Texture
+						Original="ABGrowthStim"
+						New="ABGrowthStimD" />
+					<ParticleSysBone
+						BoneName="FXBone01"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="FXBone03"
+						FXParticleSystemTemplate="AlienDamageFire01"
+						FollowBone="true" />
+				</ModelConditionState>
+				<AnimationState
+					ParseCondStateType="PARSE_DEFAULT"
+					Flags="RESTART_ANIM_WHEN_COMPLETE DO_NOT_PLAY_WHEN_UNPOWERED">
+					<Animation
+						AnimationName="ABGrowthStim_IDLA"
+						AnimationMode="ONCE"
+						AnimationPriority="30" 
+						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="STRUCTURE_UNPACKING">
+					<Animation
+						AnimationName="ABGrowthStimBld_AAN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABGrowthStim_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="REALLYDAMAGED"
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABGrowthStim_D2AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_IntoReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoReallyDamaged")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoReallyDamaged">
+					<Animation
+						AnimationName="ABGrowthStim_D2AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABGrowthStim_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystBuildingDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="100" />
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onTransitionToDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToReallyDamaged"
+					FX="FX_AlienBuildingDamagedS" />
+				<Event
+					Index="onTransitionToRubble"
+					FX="FX_AlienBuildingRubbleS" />
+			</FXListBehavior>
+			<SlowDeath
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				<DieMuxData
+					DeathTypes="ALL" />
+			</SlowDeath>
+			<TiberiumGrowthModBehavior
+				id="ModuleTag_TiberiumGrowth"
+				GreenTiberiumMultiplier="1.50"
+				BlueTiberiumMultiplier="1.50">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</TiberiumGrowthModBehavior>
+			<StatusBitsUpgrade
+				id="ModuleTag_BlackHandStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_GDIStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_NODStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_NODFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_AlienStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_AlienFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_SteelTalonsStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_Reaper17StatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_Reaper17Faction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_ZOCOMStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_MarkedOfKaneStatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_MarkedOfKaneFaction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StatusBitsUpgrade
+				id="ModuleTag_Traveler59StatusForTibAgitation"
+				StatusToSet="DOES_CONTAIN_TIBERIUM">
+				<TriggeredBy>Upgrade_Traveler59Faction</TriggeredBy>
+			</StatusBitsUpgrade>
+			<StructureUnpackUpdate
+				UnpackTime="1.5s" />
+			<RepairUpdate 
+				id="ModuleTag_RepairUpdate">
+				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
+				<SelfAudio></SelfAudio>
+			</RepairUpdate>
+			<!--
+			<xi:include
+				href="../../Includes/GenericEngineerContain.xml" />
+			-->
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedDie"
+				CreationList="OCL_GenericReaper17BuildingDestruction" >
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="DETONATED SUICIDED" />
+				<UpgradeForbidden>Upgrade_NoSpawnUponDestruction</UpgradeForbidden>
+			</CreateObjectDie>
+			<CreateObjectDie
+				id="ModuleTag_CreateOccupiedSuicide"
+				CreationList="OCL_GenericReaper17BuildingSuicide" >
+				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
+			<AutoDepositUpdate
+		      	id="ModuleTag_IncomeTick"
+				DepositInterval="5s"
+				DepositAmount="15"
+				GiveNoXP="true" />
+		</Behaviors>
+   		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="BuildingPowerFunctions">
+				</AIUpdate>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1000.0" />
+		</Body>
+		<Geometry
+			IsSmall="false">
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="12.1114"
+				MinorRadius="12.1114"
+				Height="52.6624">
+				<Offset
+					x="0.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			<Shape
+				Type="CYLINDER"
+				MajorRadius="23.2912"
+				MinorRadius="23.2912"
+				Height="26.3312">
+				<Offset
+					x="0.0"
+					y="-9.53674e-007"
+					z="0.0" />
+			</Shape>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="-15.975"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="14.825"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-5.02617"
+					y="-6.02351"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="15.8223"
+					y="-15.975"
+					z="0.0" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="5.87087"
+					y="4.87353"
+					z="48.8448" />
+			</ContactPoint>
+			<ContactPoint>
+				<Pos
+					x="-14.9777"
+					y="14.825"
+					z="0.0" />
+			</ContactPoint>
+		</Geometry>
+		<AudioArrayVoice>
+			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
+			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
+			<AudioEntry
+				Sound="Multisound:ALI_SuperGrowthAccelerator_SelectMS"
+				AudioType="voiceSelect" />
+		</AudioArrayVoice>
+		<AudioArraySound>
+			<AudioEntry Sound="AudioEvent:GDI_BuildingPlaced" AudioType="soundUnderConstruction" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_LightDamage" AudioType="soundOnDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
+			<AudioEntry Sound="AudioEvent:ALI_Building_Placed" AudioType="soundUnderConstruction" />
+		</AudioArraySound>
+		<EvaEvents
+			EvaEventProductionStarted="BuildingConstructionStarted" 
+			EvaEventProductionComplete="BuildingConstructionComplete" 
+			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventSoldOwner="StructureSold"
+			EvaEventRepairingOwner="StructureRepairing"
+			EvaEnemyObjectSightedEvent="EnemyCampSighted"
+			EvaEventAvailableForProduction="NewConstructionOptions"
+			EvaEventPlacementFailed="StructurePlacementFailed" 
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventBuildOnHold="BuildOnHold"
+			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
+			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
+		<ShadowInfo
+			Type="VOLUME" />
+		<VisionInfo
+			VisionRange="200"
+			ShroudClearingRange="400" />
+		<ProjectedBuildabilityInfo
+			Radius="10.0"
+			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
+	</GameObject>
+</AssetDeclaration>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIRadarObjectsLayerSpecialIcon">
+		<EntryReference
+			id="Image"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ImageOffset"
+			AssetType="Vector2" />
+		<Entry
+			id="ObjectFilter"
+			AssetType="ObjectFilter" />
+	</Asset>
+
+	<GameAsset
+		id="UIRadarObjectsLayer"
+		TypeHash="2176451698">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="MinUnitDotSize"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="MinStructureDotSize"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="5" />
+		<Entry
+			id="NeutralColor"
+			AssetType="Color4" />
+		<EntryList
+			id="SpecialIcon"
+			AssetType="UIRadarObjectsLayerSpecialIcon"
+			MinLength="0"
+			MaxLength="0" />
+	</GameAsset>
+
+</AssetDefinition>

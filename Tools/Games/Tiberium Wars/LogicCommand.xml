@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="LogicCommandType">
+		<Entry>NONE</Entry>
+		<Entry>SPECIAL_POWER</Entry>
+		<Entry>STOP</Entry>
+		<Entry>OBJECT_UPGRADE</Entry>
+		<Entry>PLAYER_UPGRADE</Entry>
+		<Entry>DOZER_CONSTRUCT</Entry>
+		<Entry>UNIT_BUILD</Entry>
+		<Entry>EVACUATE</Entry>
+		<Entry>EXIT_CONTAINER</Entry>
+		<Entry>SET_STANCE</Entry>
+		<Entry>ATTACK_MOVE</Entry>
+		<Entry>SELL</Entry>
+		<Entry>CANCEL_UNIT_BUILD</Entry>
+		<Entry>CANCEL_UPGRADE</Entry>
+		<Entry>CONSTRUCTION_YARD_CONSTRUCT</Entry>
+		<Entry>HORDE_TOGGLE_FORMATION</Entry>
+		<Entry>GARRISON_BUILDING</Entry>
+		<Entry>DRILL_DOWN</Entry>
+		<Entry>DRILL_UP</Entry>
+		<Entry>TOGGLE_POWER</Entry>
+		<Entry>SELF_REPAIR</Entry>
+		<Entry>DEFAULT_BUILDING</Entry>
+		<Entry>RALLY</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="LogicCommandOptions">
+		<Entry>NEED_TARGET_ENEMY_OBJECT</Entry>
+		<Entry>NEED_TARGET_NEUTRAL_OBJECT</Entry>
+		<Entry>NEED_TARGET_ALLY_OBJECT</Entry>
+		<Entry>FIRED_BY_SCRIPT</Entry>
+		<Entry>OPTION_ONE</Entry>
+		<Entry>OPTION_TWO</Entry>
+		<Entry>OPTION_THREE</Entry>
+		<Entry>AUTO_ABILITY_TRIGGERED</Entry>
+		<Entry>NEED_TARGET_POS</Entry>
+		<Entry>OK_FOR_MULTI_EXECUTE</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="LogicCommandOptionsBitFlags"
+		BaseEnum="LogicCommandOptions" />
+
+	<GameAsset
+		id="LogicCommand"
+		TypeHash="2547033198">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Type"
+			AssetType="LogicCommandType"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="Options"
+			AssetType="LogicCommandOptionsBitFlags"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="SpecialPower"
+			AssetType="SpecialPowerTemplateRef" />
+		<EntryRelocation
+			id="UpgradeTemplate"
+			AssetType="UpgradeTemplateRef" />
+		<EntryRelocation
+			id="GameObject"
+			AssetType="GameObjectRef" />
+	</GameAsset>
+
+</AssetDefinition>

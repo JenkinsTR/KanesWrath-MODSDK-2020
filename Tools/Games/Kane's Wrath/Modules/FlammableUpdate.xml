@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXCreationList">
+		<Entry
+			id="Bone"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="FX"
+			AssetType="FXList"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FlammableUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="BurnedDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="AflameDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="AflameDamageAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="AflameDamageDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="BurningSoundName"
+			AssetType="AudioEventInfo"
+			IsAttribute="true" />
+		<Entry
+			id="FlameDamageLimit"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="20" />
+		<Entry
+			id="FlameDamageExpiration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="RunToWaterDepth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RunToWaterSearchRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="RunToWaterSearchIncrement"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="60.0" />
+		<Entry
+			id="DamageType"
+			AssetType="DamageType"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FireFXList"
+			AssetType="FXCreationList" />
+		<EntryRelocation
+			id="CustomAnimAndDuration"
+			AssetType="AnimAndDuration" />
+		<Entry
+			id="SetBurnedStatus"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="SwapModelWhenAflame"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SwapModelWhenQuenched"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SwapTextureWhenAflame"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SwapTextureWhenQuenched"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="BurnContained"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="RunToWater"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="PanicLocomotorWhileAflame"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+	</Asset>
+
+</AssetDefinition>

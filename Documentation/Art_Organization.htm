@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Art Organization</h3>
+<h4>Directory Structure</h4>
+<p>The directory structure for Art assets is somewhat different than normal assets.  They use a single shared art location 
+	(although you could change the BinaryAssetBuilder configuration, but that is beyond the scope of this document)
+	and organize everything using subfolders to prevent too many files from being in a given directory.  Each art asset, whether it is a mesh or texture,
+	is placed in a subfolder of the Art directory which is named using the first two letters of the name.  If you create a W3X file called Box.w3x, you would
+	create a subfolder in the Art folder named Bo and then place the W3X file there.  For the sample mod, the directory structure is shown below:
+</p>
+<img src="images/mod_art_DirStruct.png" alt="Art Directory Structure" />
+<p>As you can see there, are directories EU, HC, Terrain, Images, and W3.  The Terrain and W3 folders should not concern you, although you can look through them
+	if you are interested.  The Terrain folder is there for building maps, which is covered in the <a href="custommaps.htm">Custom Maps</a> section.  The W3 folder
+	is for the W3X viewer and these files should not be changed or deleted.
+</p>
+<p>The Images folder is slightly different.  It is used for packed images, which are used for unit cameos.  In the Images folder you will find the texture and
+	XML File used to create the command buttons used in the Sample mod.  When creating your mod, you will create a similar set of files and include them in your Mod.XML,
+	if you plan to create new command buttons.
+</p>
+<h4>Naming Convention</h4>
+<p>While not strictly required, it is recommended that you use a naming convention when creating and exporting your Art assets.  Note that due to limitations of the W3X
+	format, <span class="important">your mesh file names can be no longer than 15 characters</span>.  As such, it is important to choose a naming convention that does not 
+	require long file names.
+	For C&amp;C 3, the naming conventions are explained in the image below:
+</p>
+<IMG src="images/Naming_Conventions.jpg">
+</body>
+</html>

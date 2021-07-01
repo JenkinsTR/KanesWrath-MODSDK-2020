@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="DamageType"
+		IsUsingAll="true">
+		<Entry>FORCE</Entry>
+		<Entry>CRUSH</Entry>
+		<Entry>SLASH</Entry>
+		<Entry>PIERCE</Entry>
+		<Entry>SIEGE</Entry>
+		<Entry>STRUCTURAL</Entry>
+		<Entry>FLAME</Entry>
+		<Entry>HEALING</Entry>
+		<Entry>UNRESISTABLE</Entry>
+		<Entry>WATER</Entry>
+		<Entry>PENALTY</Entry>
+		<Entry>FALLING</Entry>
+		<Entry>BLAST</Entry>
+		<Entry>REFLECTED</Entry>
+		<Entry>PASSANGER</Entry>
+		<Entry>MAGIC</Entry>
+		<Entry>CHOP</Entry>
+		<Entry>HERO</Entry>
+		<Entry>SPECIALIST</Entry>
+		<Entry>FLY_INTO</Entry>
+		<Entry>UNDEFINED</Entry>
+		<Entry>LOGICAL_FIRE</Entry>
+		<Entry>POISON</Entry>
+		<Entry>LASER</Entry>
+		<Entry>PLASMA</Entry>
+		<Entry>FIRE</Entry>
+		<Entry>ROCKET</Entry>
+		<Entry>GUN</Entry>
+		<Entry>CANNON</Entry>
+		<Entry>GRENADE</Entry>
+		<Entry>SNIPER</Entry>
+		<Entry>MINE</Entry>
+		<Entry>TIBERIUM</Entry>
+		<Entry>STORM_SHIELD</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UIMouseTacticalPlayerTechStoreButton"
+		TypeHash="1373916399">
+		<EntryInheritance
+			id="base"
+			AssetType="UIMouseSimpleFixedButton" />
+		<EntryRelocation
+			id="TechPointAwardedSound"
+			AssetType="AudioEventInfoRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

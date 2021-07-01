@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+
+	<SpecialPowerTemplate
+		id="SpecialPower_GuardShield"
+		ReloadTime="0s"
+		TargetType="NONE"
+		Flags="IS_PLAYER_POWER WATER_OK"
+		InitiateAtLocationSound="ALI_StasisShield_Start"
+		EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+		RadiusCursorRadius="150">
+	</SpecialPowerTemplate>	
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_GuardShieldAIModusActivator"
+		TargetType="NONE">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_GuardShieldAIModusDeactivator"
+		TargetType="NONE">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_GuardShieldControllbarRefreshDummy"
+		TargetType="NONE">
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_ForceFieldDistractionWeapon"
+		TargetType="NONE">
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_ForceFieldAttractionWeapon"
+		TargetType="NONE">
+	</SpecialPowerTemplate>
+
+
+</AssetDeclaration>

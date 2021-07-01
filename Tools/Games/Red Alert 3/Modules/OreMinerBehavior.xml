@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OreMinerModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CreateModuleData" />
+		<Entry
+			id="DeliveryCapacity"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1000" />
+		<Entry
+			id="DeliveryTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<EntryRelocation
+			id="ObjectStatusValidation"
+			AssetType="ObjectStatusValidationDataType" />
+	</Asset>
+
+</AssetDefinition>

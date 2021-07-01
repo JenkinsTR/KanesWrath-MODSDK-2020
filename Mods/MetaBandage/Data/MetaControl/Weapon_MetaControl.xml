@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<WeaponTemplate
+		id="EnemyAIOFFWeapon"
+		Name="EnemyAIOFFWeapon"
+		RadiusDamageAffects="ENEMIES NEUTRALS"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>
+			<ParalyzeNugget
+				Radius="500000"
+				DurationSeconds="0.5s"
+				ParalyzeType="USER_PARALYZE">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT MINE">
+					<IncludeThing>IonStorm</IncludeThing>
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+			<AttributeModifierNugget
+				Radius="500000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_EnemyAIOFFWeapon">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT TIBERIUM MINE">
+					<IncludeThing>IonStorm</IncludeThing>
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="EveryAIOFFWeapon"
+		Name="EveryAIOFFWeapon"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>
+			<ParalyzeNugget
+				Radius="500000"
+				DurationSeconds="0.5s"
+				ForbiddenTargetObjectStatus="CAN_ATTACK" 
+				ParalyzeType="USER_PARALYZE">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT MINE"
+                    Exclude="UNATTACKABLE">
+					<IncludeThing>IonStorm</IncludeThing>
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>				
+					<ExcludeThing>MetaControlDummyPREActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenu</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuSelector</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGameSetupMaker</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMain</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGlobalDeactivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeactivateActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoney</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostUnitSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForce</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForceDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyEnabler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyCrate</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoney5k</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack2</ExcludeThing>
+					<ExcludeThing>MetaControlDummyLuaScriptRunner</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyTiberiumKillerSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyTransmitter</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyMoneyTransmitterDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivator</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyPermanentMapRevealer</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyPermanentMapRevealerDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyImmediate</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyAIControlOff</ExcludeThing>
+					<ExcludeThing>MetaControlDummySuperweaponOFF</ExcludeThing>	
+					<ExcludeThing>MetaControlDummySuperweaponOFFDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlGuardShieldEmitterFree</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyLuaEventTrigger</ExcludeThing>	
+					<ExcludeThing>ShieldRemoveHelper</ExcludeThing>
+					<ExcludeThing>GuardShield</ExcludeThing>
+					<ExcludeThing>ShieldRemover</ExcludeThing>						
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+			<AttributeModifierNugget
+				Radius="500000"
+				PartitionFilterTestType="SPHERE"
+				ForbiddenTargetObjectStatus="CAN_ATTACK" 
+				AttributeModifierName="AttributeModifier_EnemyAIOFFWeapon">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT TIBERIUM MINE"
+                    Exclude="UNATTACKABLE">
+					<IncludeThing>IonStorm</IncludeThing>
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>				
+					<ExcludeThing>MetaControlDummyPREActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenu</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuSelector</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGameSetupMaker</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMain</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGlobalDeactivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeactivateActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoney</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostUnitSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForce</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForceDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyEnabler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyCrate</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoney5k</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack2</ExcludeThing>
+					<ExcludeThing>MetaControlDummyLuaScriptRunner</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyTiberiumKillerSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyTransmitter</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyMoneyTransmitterDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivator</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyPermanentMapRevealer</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyPermanentMapRevealerDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyImmediate</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyAIControlOff</ExcludeThing>
+					<ExcludeThing>MetaControlDummySuperweaponOFF</ExcludeThing>	
+					<ExcludeThing>MetaControlDummySuperweaponOFFDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlGuardShieldEmitterFree</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyLuaEventTrigger</ExcludeThing>	
+					<ExcludeThing>ShieldRemoveHelper</ExcludeThing>
+					<ExcludeThing>GuardShield</ExcludeThing>
+					<ExcludeThing>ShieldRemover</ExcludeThing>						
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>		
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="EveryAIOFFSelfProtectorWeapon"
+		Name="EveryAIOFFSelfProtectorWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="500000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_EveryAIOFFWeaponProtector">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT">
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>				
+					<ExcludeThing>MetaControlDummyPREActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenu</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuSelector</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGameSetupMaker</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMain</ExcludeThing>
+					<ExcludeThing>MetaControlDummyGlobalDeactivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyDeactivateActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEnemyAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFF</ExcludeThing>
+					<ExcludeThing>MetaControlDummyEveryAIOFFKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerToggler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMapRevealerKiller</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoney</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostUnitSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForce</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostTogglerByForceDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostMoneyEnabler</ExcludeThing>
+					<ExcludeThing>MetaControlDummyAIBoostActivator</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyCrate</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoney5k</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack</ExcludeThing>
+					<ExcludeThing>MetaControlDummyUnlimitedCameraHack2</ExcludeThing>
+					<ExcludeThing>MetaControlDummyLuaScriptRunner</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyTiberiumKillerSpawner</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyTransmitter</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyMoneyTransmitterDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivator</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyForceLuaScriptActivatorDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyPermanentMapRevealer</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyPermanentMapRevealerDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMoneyImmediate</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyAIControlOff</ExcludeThing>
+					<ExcludeThing>MetaControlDummySuperweaponOFF</ExcludeThing>	
+					<ExcludeThing>MetaControlDummySuperweaponOFFDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlGuardShieldEmitterFree</ExcludeThing>	
+					<ExcludeThing>MetaControlDummyLuaEventTrigger</ExcludeThing>	
+					<ExcludeThing>ShieldRemoveHelper</ExcludeThing>
+					<ExcludeThing>GuardShield</ExcludeThing>
+					<ExcludeThing>ShieldRemover</ExcludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>		
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<AttributeModifier
+		id="AttributeModifier_EnemyAIOFFWeapon"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK UNATTACKABLE CANNOT_BE_SOLD IN_STASIS IGNORE_AI_COMMAND"
+		ModelConditionsSet="INVULNERABLE UNCONTROLLABLE"
+		Duration="1s">
+		<Modifier Type="INVULNERABLE" Value="100%"/>
+		<Modifier Type="DAMAGE_MULT" Value="0%"/>
+		<Modifier Type="SPEED" Value="0%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+	</AttributeModifier>
+	
+	<AttributeModifier
+		id="AttributeModifier_EveryAIOFFWeaponProtector"
+		Category="NONE"
+		ObjectStatusToSet="CAN_ATTACK"
+		Duration="1.21s">
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="MetaControlDeActivatorWeapon"
+		Name="MetaControlDeActivatorWeapon"
+		RadiusDamageAffects="SELF ALLIES"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>			
+			<DamageNugget
+				Damage="999999.0"
+				Radius="9999.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyMain</IncludeThing>				
+				    <IncludeThing>MetaControlDummyEnemyAIOFF</IncludeThing>							
+					<IncludeThing>MetaControlDummyMapRevealer</IncludeThing>					
+				    <IncludeThing>MetaControlDummyEveryAIOFF</IncludeThing>
+				    <IncludeThing>MetaControlDummyMoney5k</IncludeThing>					
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MetaControlsDeactivateActivatorWeapon"
+		Name="MetaControlsDeactivateActivatorWeapon"
+		RadiusDamageAffects="SELF ALLIES"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>			
+			<DamageNugget
+				Damage="999999.0"
+				Radius="9999.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+				    <IncludeThing>MetaControlDummyActivator</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MetaControlGlobalDeactivatorWeapon"
+		Name="MetaControlGlobalDeactivatorWeapon"
+		RadiusDamageAffects="SELF ALLIES ENEMIES NEUTRAL"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter 
+				    Rule="NONE">
+					<IncludeThing>MetaControlDummyMain</IncludeThing>				
+				    <IncludeThing>MetaControlDummyEnemyAIOFF</IncludeThing>				
+				    <IncludeThing>MetaControlDummyEveryAIOFF</IncludeThing>
+				    <IncludeThing>MetaControlDummyMoney5k</IncludeThing>						
+					<IncludeThing>MetaControlDummyActivator</IncludeThing>	
+					<IncludeThing>MetaControlDummyMapRevealer</IncludeThing>	
+					<IncludeThing>MetaControlDummyMainTabMenu</IncludeThing>						
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<WeaponTemplate
+		id="AIUnitControlOffWeapon"
+		Name="AIUnitControlOffWeapon"
+		RadiusDamageAffects="ENEMIES" 
+		AttackRange="500000.0">
+		<Nuggets>
+			<LuaEventNugget 
+				EventName="OnSlaughtered"
+				Radius="50000"
+				SendToEnemies="true"
+				SendToAllies="false"
+				SendToNeutral="true">	
+            </LuaEventNugget>				
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<WeaponTemplate
+		id="LuaEventNuggetWeapon"
+		Name="LuaEventNuggetWeapon"
+		RadiusDamageAffects="ENEMIES" 
+		AttackRange="500000.0">
+		<Nuggets>
+			<LuaEventNugget 
+				EventName="ExampleGuardMe"
+				Radius="50000"
+				SendToEnemies="true"
+				SendToAllies="false"
+				SendToNeutral="false">	
+            </LuaEventNugget>				
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<AttributeModifier
+		id="AttributeModifier_AIUnitControlOff"
+		Category="NONE"
+		ObjectStatusToSet="RIDER3"
+		ModelConditionsSet="USER_4"
+		Duration="1.0s">
+	</AttributeModifier>
+	
+	<WeaponTemplate
+		id="MetaControlDummyAIBoostActivatorWeapon"
+		Name="MetaControlDummyAIBoostActivatorWeapon"
+		RadiusDamageAffects="ENEMIES"
+		AttackRange="50000.0" 
+		>
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="9999.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="ENEMIES">
+				    <IncludeThing>MetaControlDummyAIBoostMoneyEnabler</IncludeThing>
+				    <IncludeThing>MetaControlDummyAIBoostMoney</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MetaControlDummyAIBoostAlliesActivatorWeapon"
+		Name="MetaControlDummyAIBoostAlliesActivatorWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="50000.0" 
+		>
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="9999.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="ALLIES">
+				    <IncludeThing>MetaControlDummyAIBoostMoneyEnabler</IncludeThing>
+				    <IncludeThing>MetaControlDummyAIBoostMoney</IncludeThing>
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AIOFFTogglerWeapon"
+		Name="AIOFFTogglerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="EXTRA_7"
+				OnlyKillOwnerWhenTriggered="false"
+				ProjectileSelf="false">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyEveryAIOFF</IncludeThing>	
+					<IncludeThing>MetaControlDummyEnemyAIOFF</IncludeThing>	
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AIOFFKillerWeapon"
+		Name="AIOFFKillerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyEveryAIOFF</IncludeThing>		
+					<IncludeThing>MetaControlDummyEnemyAIOFF</IncludeThing>						
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MapRevealerTogglerWeapon"
+		Name="MapRevealerTogglerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="EXTRA_7"
+				OnlyKillOwnerWhenTriggered="false"
+				ProjectileSelf="false">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyMapRevealer</IncludeThing>	
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MapRevealerKillerWeapon"
+		Name="MapRevealerKillerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyMapRevealer</IncludeThing>						
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MainTabMenuSelectorWeapon"
+		Name="MainTabMenuSelectorWeapon"
+		RadiusDamageAffects="ALLIES SELF" 
+		AttackRange="500000.0">
+		<Nuggets>
+			<LuaEventNugget 
+				EventName="ExampleGuardMe" 
+				Radius="50000"
+				SendToEnemies="false"
+				SendToAllies="true"
+				SendToNeutral="false">	
+            </LuaEventNugget>				
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="AIControlOFFWeapon"
+		Name="AIControlOFFWeapon"
+		RadiusDamageAffects="ENEMIES"
+		AttackRange="500000.0" 
+		>
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="500000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_AIControlOFFWeapon">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT">
+					<IncludeThing>IonStorm</IncludeThing>
+					<ExcludeThing>TiberiumFieldSeeded</ExcludeThing>
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+
+	<AttributeModifier
+		id="AttributeModifier_AIControlOFFWeapon"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK INAUDIBLE TEMPORARILY_DEFECTED PENDING_CONSTRUCTION DO_NOT_PICK_ME USER_POWERED_DOWN IS_LEAVING_FACTORY NO_ATTACK_FROM_AI IGNORE_AI_COMMAND"
+		ModelConditionsSet="UNCONTROLLABLE"
+		Duration="1s">
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="MainTabMenuPlayerPowerTogglerWeapon"
+		Name="MainTabMenuPlayerPowerTogglerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="EXTRA_7"
+				OnlyKillOwnerWhenTriggered="false"
+				ProjectileSelf="false">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyMainTabMenuPlayerPower</IncludeThing>	
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="MainTabMenuPlayerPowerKillerWeapon"
+		Name="MainTabMenuPlayerPowerKillerWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0" 
+		WeaponSpeed="9999">
+		<Nuggets>			
+			<DamageNugget
+				Damage="9999999.0"
+				Radius="15000.0"
+				DelayTimeSeconds="0s"
+				DamageType="CANNON"
+				DeathType="NORMAL">
+                <SpecialObjectFilter Rule="NONE" Relationship="SAME_PLAYER">
+					<IncludeThing>MetaControlDummyMainTabMenuPlayerPower</IncludeThing>						
+				</SpecialObjectFilter>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="TeamRelationsInitializatorWeapon"
+		Name="TeamRelationsInitializatorWeapon"
+		RadiusDamageAffects="Enemies" 
+		AttackRange="500000.0">
+		<Nuggets>
+			<LuaEventNugget 
+				EventName="ExampleGuardMe" 
+				Radius="50000"
+				SendToEnemies="true"
+				SendToAllies="false"
+				SendToNeutral="false">	
+            </LuaEventNugget>				
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="HeroGeneralWeapon"
+		Name="HeroGeneralWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="500000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="500000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_HeroGeneral">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_HeroGeneral"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="250%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="130%"/>
+		<Modifier Type="ARMOR" Value="110%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="130%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="150%"/>
+		<Modifier Type="RECHARGE_TIME" Value="90%"/>		
+		<Modifier Type="SPEED" Value="120%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="110%"/>
+		<Modifier Type="VISION" Value="120%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="120%"/>
+	</AttributeModifier>
+	
+	<WeaponTemplate 
+		id="TakeMoneyWeapon"
+		Name="TakeMoneyWeapon" 
+		AttackRange="50000.0" 
+		WeaponSpeed="999999.0" 
+		RadiusDamageAffects="ALLIES">
+		<FiringDuration
+			MinSeconds="5.0s"
+			MaxSeconds="5.0s" />
+		<Nuggets>
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5000"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="OCLWeaponScriptExtenderWeapon"
+		Name="OCLWeaponScriptExtenderWeapon" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_OCLWeaponScriptExtender" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="FreezeGameFWeapon"
+		Name="FreezeGameFWeapon"
+		RadiusDamageAffects="ENEMIES ALLIES NEUTRALS"
+		AttackRange="13000.0" 
+		>
+		<Nuggets>
+			<ParalyzeNugget
+				Radius="13000"
+				DurationSeconds="0.5s"
+				ParalyzeType="USER_PARALYZE">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT MINE"
+                    Exclude="UNATTACKABLE">
+					<ExcludeThing>MetaControlDummyMainTabMenu</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuSelector</ExcludeThing>
+					<ExcludeThing>MetaControlDummyLuaScriptRunner</ExcludeThing>						
+				</SpecialObjectFilter>
+			</ParalyzeNugget>
+			<AttributeModifierNugget
+				Radius="13000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_FreezeGameWeapon">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE HUGE_VEHICLE INFANTRY STRUCTURE AIRCRAFT TIBERIUM MINE"
+                    Exclude="UNATTACKABLE">
+					<ExcludeThing>MetaControlDummyMainTabMenu</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuDelayer</ExcludeThing>
+					<ExcludeThing>MetaControlDummyMainTabMenuSelector</ExcludeThing>
+					<ExcludeThing>MetaControlDummyLuaScriptRunner</ExcludeThing>						
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>		
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<AttributeModifier
+		id="AttributeModifier_FreezeGameWeapon"
+		Category="NONE"
+		ObjectStatusToSet="NO_ATTACK UNATTACKABLE CANNOT_BE_SOLD IN_STASIS IGNORE_AI_COMMAND"
+		ModelConditionsSet="INVULNERABLE UNCONTROLLABLE UNSELECTABLE"
+		Duration="1s">
+		<Modifier Type="INVULNERABLE" Value="100%"/>
+		<Modifier Type="DAMAGE_MULT" Value="0%"/>
+		<Modifier Type="SPEED" Value="0%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+	</AttributeModifier>
+	
+	<WeaponTemplate
+		id="InfiniteProductionSpeedWeapon"
+		Name="InfiniteProductionSpeedWeapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="13000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="13000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_InfiniteProductionSpeed">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Relationship="SAME_PLAYER"
+					Include="FS_FACTORY CRANE CONSTRUCTION_YARD">
+				</SpecialObjectFilter>
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_InfiniteProductionSpeed"
+		Category="STRUCTURE"
+		StackingLimit="1"
+		Duration="1s">
+		<Modifier Type="PRODUCTION" Value="10000%"/>
+	</AttributeModifier>	
+	
+	<AttributeModifier
+		id="AttributeModifier_SlowDown"
+		Category="NONE"
+		StackingLimit="1"
+		Duration="2s">
+		<Modifier Type="PRODUCTION" Value="20%"/>
+		<Modifier Type="SPEED" Value="20%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="20%"/>
+	</AttributeModifier>
+	
+	<WeaponTemplate
+		id="AttributeBoost1Weapon"
+		Name="AttributeBoost1Weapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_AttributeBoost1">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_AttributeBoost1"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="130%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="100%"/>
+		<Modifier Type="ARMOR" Value="130%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="100%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>		
+		<Modifier Type="SPEED" Value="100%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="100%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="100%"/>
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="AttributeBoost2Weapon"
+		Name="AttributeBoost2Weapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_AttributeBoost2">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_AttributeBoost2"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="180%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="100%"/>
+		<Modifier Type="ARMOR" Value="180%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="100%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>		
+		<Modifier Type="SPEED" Value="100%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="100%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="100%"/>
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="AttributeBoost3Weapon"
+		Name="AttributeBoost3Weapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_AttributeBoost3">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_AttributeBoost3"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="250%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="100%"/>
+		<Modifier Type="ARMOR" Value="250%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="100%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>		
+		<Modifier Type="SPEED" Value="100%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="100%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="100%"/>
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="AttributeBoost4Weapon"
+		Name="AttributeBoost4Weapon"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_AttributeBoost4">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_AttributeBoost4"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="350%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="100%"/>
+		<Modifier Type="ARMOR" Value="350%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="100%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>		
+		<Modifier Type="SPEED" Value="100%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="100%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="100%"/>
+	</AttributeModifier>
+	
+	<WeaponTemplate
+		id="EndbossBoostWeapon1"
+		Name="EndbossBoostWeapon1"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_EndbossBoostWeapon1">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_EndbossBoostWeapon1"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+<!-- 		<Modifier Type="HEALTH" Value="1000%"/> -->
+ 		<Modifier Type="HEALTH_MULT" Value="2500%"/>	 	
+		<Modifier Type="AUTO_HEAL" Value="100%"/>
+		<Modifier Type="ARMOR" Value="1000%"/>		
+		<Modifier Type="DAMAGE_MULT" Value="100%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="100%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>		
+		<Modifier Type="SPEED" Value="100%"/>
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="SUPPRESSABILITY" Value="100%"/>
+		<Modifier Type="RANGE" Value="100%"/>
+		<Modifier Type="VISION" Value="100%"/>
+		<Modifier Type="SHROUD_CLEARING" Value="100%"/>
+	</AttributeModifier>
+
+	<WeaponTemplate
+		id="SpeedBoostWeapon1"
+		Name="SpeedBoostWeapon1"
+		RadiusDamageAffects="ALLIES"
+		AttackRange="15000.0">
+		<Nuggets>
+			<AttributeModifierNugget
+				Radius="15000"
+				PartitionFilterTestType="SPHERE"
+				AttributeModifierName="AttributeModifier_SpeedBoostWeapon1">
+                <SpecialObjectFilter 
+				  Rule="ANY" 
+				  Relationship="SAME_PLAYER"
+				  Include="VEHICLE HUGE_VEHICLE INFANTRY AIRCRAFT"
+				  Exclude="STRUCTURE">					
+				</SpecialObjectFilter> 
+			</AttributeModifierNugget>			
+		</Nuggets>
+	</WeaponTemplate>	
+	
+	<AttributeModifier
+		id="AttributeModifier_SpeedBoostWeapon1"
+		Category="NONE"
+		StackingLimit="1"
+		ObjectStatusToSet="">
+		<Modifier Type="SPEED" Value="200%"/>
+		<Modifier Type="RATE_OF_FIRE" Value="120%"/>
+		<Modifier Type="RECHARGE_TIME" Value="95%"/>
+	</AttributeModifier>	
+	
+	<WeaponTemplate
+		id="TriggerDevourerConversionAbilityWeapon"
+		Name="TriggerDevourerConversionAbilityWeapon"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS NOT_SIMILAR" >
+		<PreAttackDelay
+			MinSeconds="1.0s"
+			MaxSeconds="2.5s"
+		/>
+		<FiringDuration
+			MinSeconds="0s"
+			MaxSeconds="0s"
+		/>
+		<Nuggets>
+			<DamageNugget
+				Damage="15.0"
+				Radius="20.0"
+				DamageType="TIBERIUM"
+				DeathType="BURNED"
+				ForbiddenTargetObjectStatus="HAS_TIBERIUM_AMMO">
+                <SpecialObjectFilter Rule="NONE" Relationship="ENEMIES NEUTRAL">
+					<IncludeThing>AlienDevourerTank</IncludeThing>							
+					<IncludeThing>Reaper17DevourerTank</IncludeThing>	
+				</SpecialObjectFilter>
+			</DamageNugget>			
+		</Nuggets>
+	</WeaponTemplate>
+		
+</AssetDeclaration>

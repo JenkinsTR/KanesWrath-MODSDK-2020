@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="VehicleSize">
+		<Entry>LIGHT</Entry>
+		<Entry>MEDIUM</Entry>
+		<Entry>HEAVY</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="DestructibleEnvironmentUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Size"
+			AssetType="VehicleSize"
+			IsAttribute="true"
+			Default="LIGHT" />
+		<Entry
+			id="LeftOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="RightOffset"
+			AssetType="Vector3" />
+		<Entry
+			id="Enabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

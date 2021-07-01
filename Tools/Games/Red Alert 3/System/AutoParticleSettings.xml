@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AutoParticleSettings">
+		<Entry
+			id="ParticlePrefix"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="ParticleSystemId"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ParticleMax"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="AutoParticleSystemSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="ParticleScale"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxParticleCount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="2500" />
+		<Entry
+			id="FireSmall"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="FireMedium"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="FireLarge"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="SmokeSmall"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="SmokeMedium"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="SmokeLarge"
+			AssetType="AutoParticleSettings" />
+		<Entry
+			id="Aflame"
+			AssetType="AutoParticleSettings" />
+	</Asset>
+
+</AssetDefinition>

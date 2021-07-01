@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="DamageFXSettings"
+		TypeHash="2052546860">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<EntryRelocation
+			id="GroundDamageFX"
+			AssetType="DamageFXRef"
+			IsAttribute="true" />
+	</GameAsset>
+
+</AssetDefinition>

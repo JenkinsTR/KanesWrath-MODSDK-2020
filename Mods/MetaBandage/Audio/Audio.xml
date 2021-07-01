@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<AudioFile id="TIMETRAVEL_Sound"
+		PCCompression="XAS"
+		File="AUDIO:Sounds/timetravel.wav"
+		GUIPreset="Default" />
+		
+	<AudioEvent
+		id="TIMETRAVEL"
+		Volume="50"
+		VolumeShift="-5"
+		Limit="3"
+		Type="WORLD SHROUDED EVERYONE"
+		SubmixSlider="SOUNDFX"
+		MinVolume="0"
+		Priority="NORMAL"
+		MinRange="0"
+		MaxRange="13000"
+		PlayPercent="100"
+		DryLevel="100"
+		ReverbEffectLevel="100"
+		ZoomedInOffscreenVolumePercent="50"
+		ZoomedInOffscreenMinVolumePercent="100" 
+		ZoomedInOffscreenOcclusionPercent="20">
+		<PitchShift
+			Low="-5"
+			High="5" />
+		<Delay
+			Low="0"
+			High="150" />
+		<Sound>TIMETRAVEL_Sound</Sound>
+	</AudioEvent>
+	
+	<MusicTrack id="5_1_STARTSCREEN_MUSIC_360" inheritFrom="MusicTrack:BaseMusicTrack" 
+	   Volume="60">
+		<VolumeSliderMultiplier Slider="NONE" Multiplier="1.0" /> <!-- This is a fake to prevent the volume sample from being quieted by the movie playing on the main menu -->
+		<Filename>5_1_TOW_MissionSelectScreen_Nod1</Filename>
+<!-- 		<Filename>SJ_CNC3_AC_ANY_03_v1_5point1</Filename> -->
+<!-- 		<Filename>JC_CNC3EP1_ShellRemix5.1</Filename> -->
+<!--		<Filename>SJ_CNC3_MM_v2_01-27-07_5point1</Filename> -->
+		<!-- EP1 -->
+	</MusicTrack>
+	
+	<!-- FROM KWBANDAGE -->
+	<AudioFile id="Test" PCCompression="XAS" File="AUDIO:AUMirag_movStartA.wav" GUIPreset="Default"></AudioFile>
+	<!-- END FROM KWBANDAGE -->
+</AssetDeclaration>

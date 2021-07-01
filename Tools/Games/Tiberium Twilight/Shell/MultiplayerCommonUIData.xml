@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="GameplayType">
+		<Entry>VERSUS</Entry>
+		<Entry>KOTH</Entry>
+		<Entry>CAH</Entry>
+		<Entry>CTF</Entry>
+		<Entry>SIEGE</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="GameplayTypeSetting">
+		<Entry
+			id="Label"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Value"
+			AssetType="GameplayType"
+			IsAttribute="true" />
+		<Entry
+			id="AvailableWithAI"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

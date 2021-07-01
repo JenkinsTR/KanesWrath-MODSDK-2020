@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Creating Shaders</title>
+</head>
+
+<body>
+
+<font SIZE="4" face="Arial"><b>
+<p align="center">Creating Shaders</p>
+</b></font><font FACE="Arial" SIZE="3">
+<p>To create a custom shader, have a look at the ShaderWritingExample.fx file in 
+the 3dsmax shader directory of the MOD SDK. A custom shader needs to exist in 
+multiple locations to work with the various programs involved:</p>
+<ul>
+	<li>3DSMax first looks at the absolute path to a shader that might be stored 
+	in a .max file. After that it searches for shader files according to its 
+	External Files preference. It is suggested to have the maps/fx/cnc3 
+	directory in this search path.</li>
+	<li>W3XView has a subdirectory called “Shaders”, where it searches for 
+	shaders. Put a copy of custom shaders in there</li>
+	<li>For the game, place any shaders you create in the MOD SDK\Shaders 
+	directory. The BuildMod.bat file will automatically copy this to the correct 
+	location to be built and compressed into the mod big file created by the 
+	build process.</li>
+</ul>
+<p>Note: The shaders that shipped with CnC3 are already in big files. The MOD 
+SDK provides versions of these that are compiled for 3DSMax in the maps/fx/cnc3 
+directory and versions compiled for W3XView in its directory. Do not copy the 
+files from one into the other, or use these shaders in the game/your MOD’s big 
+file, as they have slight differences (to enable UI and previewing) compared to 
+the shaders the game uses.</p>
+</font>
+
+</body>
+
+</html>

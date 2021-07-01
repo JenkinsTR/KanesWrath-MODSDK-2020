@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BuildingDestructionItem">
+		<Entry
+			id="BonePrefix"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="FX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="CreationObject"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="FlingVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+	</Asset>
+
+	<Asset
+		id="BuildingDestructionModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DieModuleData" />
+		<EntryPoid
+			id="AssociatedModule"
+			IsAttribute="true" />
+		<Entry
+			id="MaxDebrisCloudsPerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="2.0" />
+		<EntryPoid
+			id="FillerMesh"
+			IsAttribute="true"
+			Default="NEWSKIN_FILL" />
+		<EntryList
+			id="Item"
+			AssetType="BuildingDestructionItem"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="SubObjectsUpgradeNugget">
+		<Entry
+			id="ShowSubObjects"
+			AssetType="AssetIdList"
+			IsAttribute="true" />
+		<Entry
+			id="HideSubObjects"
+			AssetType="AssetIdList"
+			IsAttribute="true" />
+		<Entry
+			id="FadeTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.5s" />
+		<Entry
+			id="WaitBeforeFadeTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0.0s" />
+		<EntryWeakReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryList
+			id="UpgradeTexture"
+			AssetType="ReplaceTexture"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="CustomAnimAndDuration"
+			AssetType="AnimAndDuration" />
+		<Entry
+			id="SkipFadeOnCreate"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="HideSubObjectsOnRemove"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="UnHideSubObjectsOnRemove"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="SubObjectsUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<EntryList
+			id="Nugget"
+			AssetType="SubObjectsUpgradeNugget"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

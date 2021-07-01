@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="ScriptedModelDrawTexture">
+		<EntryReference id="Texture" AssetType="Texture" IsAttribute="true" />
+		<Entry id="Object" AssetType="String" IsAttribute="true" />
+		<Entry id="TimeOfDay" AssetType="TimeOfDayType" IsAttribute="true" />
+		<Entry id="TexturePass" AssetType="SageInt" IsAttribute="true" />
+	</Asset>
+
+	<Asset id="Animation">
+		<Entry id="Flags" AssetType="String" IsAttribute="true" />
+		<EntryReference id="AnimationName" AssetType="W3DAnimation" IsAttribute="true" />
+		<Entry id="AnimationMode" AssetType="String" IsAttribute="true" />
+		<Entry id="AnimNickName" AssetType="String" IsAttribute="true" />
+		<Entry id="Distance" AssetType="SageReal" Default="0.0" IsAttribute="true" />
+		<Entry id="AnimationBlendTime" AssetType="SageReal" Default="5.0" IsAttribute="true" />
+		<Entry id="AnimationSpeedFactorMin" AssetType="SageReal" Default="1.0" IsAttribute="true" />
+		<Entry id="AnimationSpeedFactorMax" AssetType="SageReal" Default="1.0" IsAttribute="true" />
+		<Entry id="WeaponTimingOrdering" AssetType="WeaponSlotType" IsAttribute="true" />
+		<Entry id="WeaponTimingSlotID" AssetType="SageInt" Default="1" IsAttribute="true" />
+		<Entry id="AnimationPriority" AssetType="SageInt" Default="1" IsAttribute="true" />
+		<Entry id="FadeBeginFrame" AssetType="SageReal" Default="-1.0" IsAttribute="true" />
+		<Entry id="FadeEndFrame" AssetType="SageReal" Default="-1.0" IsAttribute="true" />
+		<Entry id="AnimationMustCompleteBlend" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="UseWeaponTiming" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="FadingIn" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</Asset>
+
+	<Asset id="AnimationState">
+		<Entry id="ParseCondStateType" AssetType="ParseCondStateType" IsRequired="true" IsAttribute="true" />
+		<Entry id="AnimNickName" AssetType="String" IsAttribute="true" />
+		<Entry id="ConditionsYes" AssetType="String" IsAttribute="true" />
+		<Entry id="Name" AssetType="String" IsAttribute="true" />
+		<Entry id="StateName" AssetType="String" IsAttribute="true" />
+		<Entry id="Flags" AssetType="String" IsAttribute="true" />
+		<EntryReference id="EnteringStateFX" AssetType="FXList" IsAttribute="true" />
+		<Entry id="FrameForPristineBonePositions" AssetType="SageInt" Default="0" IsAttribute="true" />
+			<EntryList id="Animation" AssetType="Animation" MinLength="0" MaxLength="0" />
+			<EntryRelocation id="Script" AssetType="String" />
+			<EntryList id="FXEvent" AssetType="FXEvent" MinLength="0" MaxLength="0" />
+			<EntryList id="LuaEvent" AssetType="LuaEvent" MinLength="0" MaxLength="0" />
+			<EntryList id="ParticleSysBone" AssetType="ParticleSysBone" MinLength="0" MaxLength="0" />
+		<Entry id="ShareAnimation" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="AllowRepeatInRandomPick" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="SimilarRestart" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="fill" AssetType="Byte" IsVoid="true" />
+	</Asset>
+
+	<Asset id="W3DScriptedModelDrawModuleData">
+		<EntryInheritance id="base" AssetType="DrawModuleData" />
+		<Entry id="Name" AssetType="String" IsAttribute="true" />
+		<Entry id="InitialRecoilSpeed" AssetType="Velocity" Default="2.0" IsAttribute="true" />
+		<Entry id="MaxRecoilDistance" AssetType="SageReal" Default="3.0" IsAttribute="true" />
+		<Entry id="RecoilDamping" AssetType="SageReal" Default="0.4" IsAttribute="true" />
+		<Entry id="RecoilSettleSpeed" AssetType="Velocity" Default="0.065" IsAttribute="true" />
+		<Entry id="MinLODRequired" AssetType="ModelLODType" IsAttribute="true" />
+		<Entry id="ProjectileBoneFeedbackEnabledSlots" AssetType="WeaponSlotBitFlags" IsAttribute="true" />
+		<EntryReference id="TrackMarks" AssetType="Texture" IsAttribute="true" />
+		<EntryList id="ExtraPublicBone" AssetType="String" MinLength="0" MaxLength="0" IsAttribute="true" />
+		<Entry id="AttachToBoneInAnotherModule" AssetType="String" IsAttribute="true" />
+		<Entry id="DependencySharedModelFlags" AssetType="ModelConditionBitFlags" IsAttribute="true" />
+		<Entry id="TrackMarksLeftBone" AssetType="String" IsAttribute="true" />
+		<Entry id="TrackMarksRightBone" AssetType="String" IsAttribute="true" />
+		<Entry id="RampMesh1" AssetType="String" IsAttribute="true" />
+		<Entry id="RampMesh2" AssetType="String" IsAttribute="true" />
+		<Entry id="WallBoundsMesh" AssetType="String" IsAttribute="true" />
+		<Entry id="RaisedWallMesh" AssetType="String" IsAttribute="true" />
+		<Entry id="HighDetailLODThreshold" AssetType="SageReal" Default="0.0" IsAttribute="true" />
+		<Entry id="LowDetailLODThreshold" AssetType="SageReal" Default="0.0" IsAttribute="true" />
+		<EntryReference id="WadingParticleSys" AssetType="FXParticleSystemTemplate" IsAttribute="true" />
+		<Entry id="AlphaCameraFadeOuterRadius" AssetType="SageReal" Default="0.0" IsAttribute="true" />
+		<Entry id="AlphaCameraFadeInnerRadius" AssetType="SageReal" Default="0.0" IsAttribute="true" />
+		<Entry id="AlphaCameraAtInnerRadius" AssetType="Percentage" Default="100" IsAttribute="true" />
+		<Entry id="StaticSortLevelWhileFading" AssetType="SageInt" Default="-1" IsAttribute="true" />
+		<Entry id="BirthFadeTime" AssetType="SageInt" Default="0" IsAttribute="true" />
+			<EntryList id="ModelConditionState" AssetType="ModelConditionState" MinLength="0" MaxLength="0" />
+			<EntryList id="AnimationState" AssetType="AnimationState" MinLength="0" MaxLength="0" />
+			<EntryList id="TimeOfDayTexture" AssetType="ScriptedModelDrawTexture" MinLength="0" MaxLength="0" />
+			<EntryList id="RandomTexture" AssetType="ScriptedModelDrawTexture" MinLength="0" MaxLength="0" />
+			<EntryRelocation id="BurntTexture" AssetType="ScriptedModelDrawTexture" />
+			<EntryList id="AttachModel" AssetType="ScriptedModelDrawAttachModel" MinLength="0" MaxLength="0" />
+			<EntryList id="EmbedPortal" AssetType="ScriptedModelDrawEmbedPortal" MinLength="0" MaxLength="0" />
+		<Entry id="OkToChangeModelColor" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="AnimationsRequirePower" AssetType="SageBool" Default="true" IsAttribute="true" />
+		<Entry id="UseYAxisForTurretRotation" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="TrackMarksOnlyWhenCorneringQuickly" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="UseProducerTexture" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="NoRotate" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="UseFiringArcRotation" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="Selectable" AssetType="SageBool" Default="true" IsAttribute="true" />
+		<Entry id="RandomTextureFixedRandomIndex" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="ParticlesAttachedToAnimatedBones" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="ParticleBonesCheckDrawable" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="ShadowForceDisable" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="SwitchModelLODMode" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="StaticModelLODMode" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="ShowShadowWhileContained" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="UseStandardModelNames" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="UseDefaultAnimation" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="BirthFadeAdditive" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="ZWriteDisableOverride" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="MultiPlayerOnly" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="AffectedByStealth" AssetType="SageBool" Default="true" IsAttribute="true" />
+		<Entry id="InvertStealthOpacity" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="HighDetailOnly" AssetType="SageBool" Default="false" IsAttribute="true" />
+		<Entry id="SetAnimsToLastFrameOnConstructionComplete" AssetType="SageBool" Default="true" IsAttribute="true" />
+	</Asset>
+	
+</AssetDefinition>

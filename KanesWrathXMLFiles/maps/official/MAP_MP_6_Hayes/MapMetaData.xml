@@ -1,0 +1,23 @@
+<MapMetaData BorderSize="50" CRC="0" Description="Map:MAP_MP_6_Hayes/Desc" DisplayName="MAP_MP_6_Hayes" FileName="Data\maps\official\MAP_MP_6_Hayes\MAP_MP_6_Hayes.map" Height="700" IsMultiplayer="true" IsOfficial="true" NumPlayers="6" Width="700" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="1009.55" y="999.873" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_2_Start">
+    <Position x="1000" y="5000" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_3_Start">
+    <Position x="4975.76" y="4997.86" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_4_Start">
+    <Position x="4994.63" y="990.588" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_5_Start">
+    <Position x="3126.22" y="5641.26" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_6_Start">
+    <Position x="3007.79" y="349.702" z="0" />
+  </StartPosition>
+</MapMetaData>

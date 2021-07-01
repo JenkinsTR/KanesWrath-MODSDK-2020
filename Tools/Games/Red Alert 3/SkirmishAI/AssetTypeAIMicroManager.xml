@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="TargetBiasInfo">
+		<EntryWeakReference
+			id="UnitName"
+			AssetType="GameObject"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="HealthMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="DamageMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="HealthOverride"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="DamageOverride"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+	</Asset>
+
+	<Asset
+		id="SpecificSpecialPowerDelayInfo">
+		<Entry
+			id="PowerType"
+			AssetType="AISpecialPowerHeuristic"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TogglePowerSubType"
+			AssetType="ToggleStatusAiHint"
+			IsAttribute="true"
+			Default="TOGGLE_NO_HINT" />
+		<Entry
+			id="MinimumDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaximumDelay"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+	</Asset>
+
+	<GameAsset
+		id="AIMicroManagerData"
+		TypeHash="1392447443">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="UpdateTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="MaxTeamIdleTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="30s" />
+		<Entry
+			id="MaxTeamIdleDistanceChange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="MaxUnitIdleTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="MaxUnitIdleDistanceChange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="50.0" />
+		<Entry
+			id="PassiveTargetSearchDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="400.0" />
+		<Entry
+			id="EnemySearchDistanceVisionMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.25" />
+		<Entry
+			id="MinTimeToKeepTempVisionRangeBonus"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="10s" />
+		<Entry
+			id="TimeToKeepTargetMin"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="TimeToKeepTargetMax"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="RandomTargetScoreModifier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="CleanupPowerAdvantage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="4.0" />
+		<Entry
+			id="GatherTempVisionRangeBonus"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="RetreatPowerAdvantage"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.25" />
+		<Entry
+			id="RetreatMinDistanceFromBase"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="900.0" />
+		<Entry
+			id="RetreatMinDistanceToFallback"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="500.0" />
+		<Entry
+			id="RetreatSpeedBuffer"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.75" />
+		<Entry
+			id="RetreatTempVisionRangeBonus"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.5" />
+		<Entry
+			id="MaxDistanceFromTeamToIncludeInArmy"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="600.0" />
+		<Entry
+			id="AlphaStrikeTargetHealthPct"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="AlphaStrikeTargetTimeToKill"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="4.0" />
+		<Entry
+			id="AlphaStrikeEngineerDistanceFromStructure"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="200.0" />
+		<Entry
+			id="SiegeWeaponBuffer"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.15" />
+		<Entry
+			id="CrushPreference"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="EnterGarrisonableStructureDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="150.0" />
+		<Entry
+			id="PullbackInjuredHealthPct"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.2" />
+		<Entry
+			id="DodgeThreatsReactionTimeMin"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="DodgeThreatsReactionTimeMax"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SpecialPowerDelayMinimum"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="SpecialPowerDelayMaximum"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MinDistanceFromBaseToIgnoreTargets"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MaxSecondaryDamageFraction"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.25" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+		<EntryList
+			id="TargetBias"
+			AssetType="TargetBiasInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="SpecificSpecialPowerDelay"
+			AssetType="SpecificSpecialPowerDelayInfo"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="RetreatBaseCriteria"
+			AssetType="AIBaseSelectionCriteria" />
+		<EntryRelocation
+			id="IgnoreTargets"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="EngageHostileTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EngagePassiveTargets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EngageTacticalTarget"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseGatherState"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanUseSiegeState"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="Crush"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EnterGarrisons"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ClearGarrisons"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="PullbackInjured"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ReverseMove"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="DodgeThreats"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="UseSpecialPowers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EnterBaseDefenses"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="EnterBaseDefensesWhenIdle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IsHarvesterManager"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="CanCollectCratesWhenIdle"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+	</GameAsset>
+
+</AssetDefinition>

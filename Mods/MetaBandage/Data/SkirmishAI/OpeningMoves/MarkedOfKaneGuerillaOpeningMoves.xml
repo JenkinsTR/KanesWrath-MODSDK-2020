@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="MarkedOfKaneVenomRush"
+    Side="MarkedOfKane"> <!--Power: +10-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKaneOperationsCenter" /> <!--Time: 15 Power: -10-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneHangar" /> <!--Time: 10 Power: -5-->
+    <Order Build="MarkedOfKaneHangar" /> <!--Time: 10 Power: -5-->
+
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Build="MarkedOfKaneVenom" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+  <!--SkirmishOpeningMove
+    id="MarkedOfKaneReckonerRush"
+    Side="MarkedOfKane">
+
+    <Order Build="MarkedOfKaneRefinery" />
+    <Order Build="MarkedOfKanePowerPlant" />
+    <Order Build="MarkedOfKaneRefinery" />
+    <Order Build="MarkedOfKaneRefinery" />
+    <Order Build="MarkedOfKanePowerPlant" />
+    <Order Build="MarkedOfKaneDropZone" />
+    <Order Build="MarkedOfKaneDropZone" />
+    <Order Build="MarkedOfKanePowerPlant" />
+    <Order Build="MarkedOfKaneOperationsCenter" />
+    <Order Build="MarkedOfKaneHandOfNOD" /> 
+
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Build="MarkedOfKaneCarryallVehicle" />
+    <Order Build="MarkedOfKaneBlackHandSquad" />
+    <Order Time="175s" />
+  </SkirmishOpeningMove-->
+
+  <SkirmishOpeningMove
+    id="MarkedOfKaneSpecterRush"
+    Side="MarkedOfKane"> <!--Power: +10-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="MarkedOfKaneDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="MarkedOfKanePowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="MarkedOfKaneOperationsCenter" /> <!--Time: 15 Power: -10-->
+
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Build="MarkedOfKaneMobileArtillery" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

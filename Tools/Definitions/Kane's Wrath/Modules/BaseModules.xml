@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AnimAndDuration">
+		<Entry
+			id="AnimState"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="Frames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Trigger"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<EnumAsset
+		id="ParseCondStateType">
+		<Entry>PARSE_NORMAL</Entry>
+		<Entry>PARSE_DEFAULT</Entry>
+		<Entry>PARSE_TRANSITION</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ModuleData">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ModuleData" />
+	</Asset>
+
+	<Asset
+		id="DrawModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ModuleData" />
+	</Asset>
+
+	<Asset
+		id="BehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ModuleData" />
+	</Asset>
+
+	<Asset
+		id="ContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+	</Asset>
+
+	<Asset
+		id="ClientUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+	</Asset>
+
+	<Asset
+		id="UpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ContainModuleData" />
+	</Asset>
+
+	<Asset
+		id="ModelConditionStateTurret">
+		<Entry
+			id="TurretNameKey"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TurretArtAngle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="TurretPitch"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="TurretArtPitch"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="TurretID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+	</Asset>
+
+	<Asset
+		id="FXEvent">
+		<Entry
+			id="Frame"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="FrameStep"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="FrameStop"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<EntryReference
+			id="Effect"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="Bone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FireWhenSkipped"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="LuaEvent">
+		<Entry
+			id="Frame"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="Data"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Turret"
+			AssetType="ModelConditionStateTurret"/>
+		<Entry
+			id="OnStateEnter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnStateLeave"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ParticleSysBone">
+		<Entry
+			id="BoneName"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="FXParticleSystemTemplate"
+			AssetType="FXParticleSystemTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="FXTrigger"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Persist"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="PersistID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="id"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="FollowBone"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnlyIfOnWater"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OnlyIfOnLand"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="ScriptedModelDrawModel">
+		<EntryReference
+			id="Name"
+			AssetType="BaseRenderAssetType"
+			IsAttribute="true" />
+		<Entry
+			id="ExtraMesh"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="BoneAttachPoint">
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="WeaponSlotType"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+		<Entry
+			id="BoneName"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ModelConditionState">
+		<Entry
+			id="ParseCondStateType"
+			AssetType="ParseCondStateType"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ConditionsYes"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Skeleton"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ModelAnimationPrefix"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryReference
+			id="PortraitImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryReference
+			id="ButtonImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<Entry
+			id="OverrideTooltip"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="id"
+			AssetType="String"
+			IsAttribute="true" />
+		<EntryList
+			id="Model"
+			AssetType="ScriptedModelDrawModel"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="Texture"
+			AssetType="ReplaceTexture"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponFireFXBone"
+			AssetType="BoneAttachPoint"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponRecoilBone"
+			AssetType="BoneAttachPoint"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponMuzzleFlash"
+			AssetType="BoneAttachPoint"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="WeaponLaunchBone"
+			AssetType="BoneAttachPoint"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ParticleSysBone"
+			AssetType="ParticleSysBone"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="FXEvent"
+			AssetType="FXEvent"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryRelocation
+			id="ShadowInfo"
+			AssetType="ShadowInfo" />
+		<EntryList
+			id="Turret"
+			AssetType="ModelConditionStateTurret"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="RetainSubObjects"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="AttachModelStruct">
+		<Entry
+			id="Object"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Probability"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+	</Asset>
+
+	<Asset
+		id="ScriptedModelDrawAttachModel">
+		<Entry
+			id="FlagMask"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Bone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Model"
+			AssetType="AttachModelStruct" />
+		<Entry
+			id="Offset"
+			AssetType="Coord3D" />
+	</Asset>
+
+	<Asset
+		id="ScriptedModelDrawEmbedPortal">
+		<Entry
+			id="PortalType"
+			AssetType="WaypointPortalType"
+			IsAttribute="true" />
+		<Entry
+			id="BonePrefix"
+			AssetType="String"
+			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="FXActionType">
+		<Entry>NONE</Entry>
+		<Entry>HOLD</Entry>
+		<Entry>KILL</Entry>
+		<Entry>SPAWN</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="FXTriggerType">
+		<Entry>NONE</Entry>
+		<Entry>CATAPULT_ROCK</Entry>
+		<Entry>TREBUCHET_ROCK</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="BodyDamageType">
+		<Entry>PRISTINE</Entry>
+		<Entry>DAMAGED</Entry>
+		<Entry>REALLY_DAMAGED</Entry>
+		<Entry>RUBBLE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="MaxHealthChangeType">
+		<Entry>SAME_CURRENTHEALTH</Entry>
+		<Entry>PRESERVE_RATIO</Entry>
+		<Entry>ADD_CURRENT_HEALTH_TOO</Entry>
+		<Entry>RESTORE_HEALTH_TO_MAX</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="BodySideDestroyedType">
+		<Entry>NONE</Entry>
+		<Entry>FRONT_DESTROYED</Entry>
+		<Entry>RIGHT_DESTROYED</Entry>
+		<Entry>BACK_DESTROYED</Entry>
+		<Entry>LEFT_DESTROYED</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="WeatherTexture">
+		<Entry
+			id="Weather"
+			AssetType="WeatherType"
+			IsAttribute="true"
+			Default="NORMAL" />
+		<EntryReference
+			id="Texture"
+			AssetType="Texture"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="InvisibilityNuggetType">
+		<Entry
+			id="ForbiddenConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A USING_WEAPON_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B USING_WEAPON_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_C" />
+		<Entry
+			id="ForbiddenConditionExceptions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ForbiddenWeaponSets"
+			AssetType="WeaponSetBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ForbiddenStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="IS_FIRING_WEAPON IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING USING_ABILITY" />
+		<Entry
+			id="CamouflageLevel"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="InvisibilityType"
+			AssetType="InvisibilityType"
+			IsAttribute="true"
+			Default="STEALTH" />
+		<Entry
+			id="Options"
+			AssetType="InvisibilityNuggetOptionsBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="EnteringStealthFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="LeavingStealthFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="HintDetectableStates"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="IS_ATTACKING" />
+		<Entry
+			id="NoStealthForAttackWindow"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryList
+			id="IgnoreTreeCheckUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="DieMuxDataType">
+		<EntryList
+			id="VeterancyLevels"
+			AssetType="String"
+			IsAttribute="true"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ExemptStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DamageAmountRequired"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="MinKillerAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="1d" />
+		<Entry
+			id="MaxKillerAngle"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="-1d" />
+		<Entry
+			id="DeathTypes"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="DeathTypesForbidden"
+			AssetType="DeathBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="ObjectStatusValidationDataType">
+		<Entry
+			id="ForbiddenStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RequiredStatus"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

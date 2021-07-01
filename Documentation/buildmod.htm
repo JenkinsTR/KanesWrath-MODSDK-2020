@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Building a Mod</h3>
+<h4>Basic Explanation</h4>
+<p>The final step in completing a mod is to build the data for the game.  Before you can use a mod, you will need to build the data.  Your
+	tool for doing this is buildmod.bat.  Buildmod.bat is a batch file that will gather all of the proper files, run the Binary Asset Builder,
+	and create the .big file of your mod, and install it in the proper location.  
+</p>
+<h4>Using BuildMod.bat</h4>
+<p>To use BuildMod.bat, you will need to open a command prompt window and navigate to your C&amp;C 3 Mod SDK installation directory.
+	You can most easily start command prompt by using the Run option on the Start menu.  Type in cmd, and hit enter.  From there, use the cd
+(change directory) tool to get to your mod directory.  Once you are there, type in the following command line:</p>
+<p class="code">Installation Folder:\&gt; BuildMOD.bat SampleMOD</span></p>
+<p>An example session using command prompt is below.  Notice that you can use &quot;&quot; to enclose paths containing spaces and ampersands (&amp;).
+	An additional hint is that if you type the first few letters of the path (for example Ele for Electronic Arts) and hit the tab key,
+command prompt will automatically fill in the correct path, including placing it in quotation marks if it is needed.</p>
+<img src="images/cmdexample.png" alt="Command Prompt Example" />
+<p>This will build the SampleMod.  If you want to build your own mod, replace SampleMod in the above with the name of your mod (the name of the
+	folder it is located in within the Mods folder).  Once you have built your mod, you are almost ready to run it.  Before you can run it, you will need to create a SKUDef file.
+</p>
+<h4>SKUDef File</h4>
+<p>The SKUDef file tells the game how to launch the mod which you have built.  To set up the SKUDef file, navigate to your My Documents folder, choose the
+	Command &amp; Conquer 3 Tiberium Wars Folder, then the mods folder, and then the folder of the mod you just built.  Create a new file, and name it as follows:
+	<span class="code">YourMod_1.0.skudef</span>
+Inside the Skudef file, you will put the following text:</p>
+<p class="code">mod-game 1.9<br />
+add-big YourMod.big</p>
+<p>This tells the game to launch the patch 1.09 version of the game, and to add the data from Your Mod into the game.</p>
+<h4>Launching the Mod</h4>
+<p>There are two ways to launch the game.  The easiest is to use the Mod Launcher which was included in Patch 1.07.  Start the Command &amp; Conquer 3
+Control Center, and select the Game Launcher Button.  Navigate to the Mod Launcher Tab, select your mod, and hit Launch Game. </p>
+<p class="important">Advanced Method</p>
+<p>The second option, which is useful for creating a shortcut, is to use a command line option.  To do so, create a shortcut to CNC3.exe, and add the following
+	into the target:
+</p>
+<p class="code">-modConfig &quot;C:\Documents and Settings\Username\My Documents\Command & Conquer 3 Tiberium Wars\mods\YourMod\YourMod_1.0.skudef&quot;</p>
+	The modConfig command line option takes the full path to the skudef file for your mod.
+</p>
+</body>
+</html>

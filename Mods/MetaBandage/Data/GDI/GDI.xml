@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		
+		<!--Units-->
+		<Include type="all" source="Units/GDIAAScout.xml" />
+		<Include type="all" source="Units/GDIAPC.xml" />
+		<Include type="all" source="Units/GDIAPC_Veteran.xml" />
+		<Include type="all" source="Units/GDIFirehawk.xml" />
+		<Include type="all" source="Units/GDIGrenadeSoldier.xml" />
+		<Include type="all" source="Units/GDIGrenadeSoldierSquad.xml" />
+		<Include type="all" source="Units/GDIHammerhead.xml" />
+		<Include type="all" source="Units/GDIHarvester.xml" />
+		<Include type="all" source="Units/GDIJuggernaughtHusk.xml" />
+		<Include type="all" source="Units/GDIMammoth.xml" />
+		<Include type="all" source="Units/GDIMARV.xml" />
+		<Include type="all" source="Units/GDIMCV.xml" />
+		<Include type="all" source="Units/GDIOrca.xml" />
+		<Include type="all" source="Units/GDIPredator.xml" />
+		<Include type="all" source="Units/GDIRifleSoldier.xml" />
+		<Include type="all" source="Units/GDIRig.xml" />
+		<Include type="all" source="Units/GDISniper.xml" />	
+		<Include type="all" source="Units/GDISonicTank.xml" />	
+		<Include type="all" source="Units/GDISpotter.xml" />	
+		<Include type="all" source="Units/GDISuperSonicAirAttack.xml" />	
+		<Include type="all" source="Units/GDIV35Ox.xml" />
+		<Include type="all" source="Units/GDIV35Ox_CallSupportHunterKillerTeam.xml" />
+		<Include type="all" source="Units/GDIV35Ox_CallSupportAirborne.xml" />
+		<Include type="all" source="Units/GDIV35Ox_CallSupportAirborneRockets.xml" />
+		<Include type="all" source="Units/GDIV35Ox_CallSupportBloodhound.xml" />
+		<Include type="all" source="Units/GDIV35Ox_CallSupportBloodhound_APC.xml" />
+		<Include type="all" source="Units/GDIV35Ox_Summoned.xml" />
+		<Include type="all" source="Units/GDIV35Ox_SummonedForVehicle.xml" />
+		<Include type="all" source="Units/GDIZoneTrooper.xml" />
+		<Include type="all" source="Units/ZOCOMAPCRepairDrone.xml" />
+		
+		<!--Structures-->
+		<Include type="all" source="structures/GDIAABattery.xml" />
+		<Include type="all" source="structures/GDIAirTower.xml" />
+		<Include type="all" source="structures/GDIArmory.xml" />
+		<Include type="all" source="structures/GDIBarracks.xml" />
+		<Include type="all" source="structures/GDIBattleBase.xml" />
+		<Include type="all" source="structures/GDICommandPost.xml" />
+		<Include type="all" source="structures/GDIConstructionYard.xml" />
+		<Include type="all" source="structures/GDICrane.xml" />
+		<Include type="all" source="structures/GDIDigInBuilding.xml" />
+		<Include type="all" source="structures/GDIGolumCannon.xml" />
+		<Include type="all" source="structures/GDIIonCannonControl.xml" />
+		<Include type="all" source="structures/GDIMedicalBay.xml" />
+		<Include type="all" source="structures/GDIPowerPlant.xml" />
+		<Include type="all" source="structures/GDIRefinery.xml" />
+		<Include type="all" source="structures/GDISpaceCommandUplink.xml" />
+		<Include type="all" source="structures/GDITerraformingStation.xml" />
+		<Include type="all" source="structures/GDITiberiumSilo.xml" />
+		<Include type="all" source="structures/GDIWarFactory.xml" />
+		<Include type="all" source="structures/GDIWatchTower.xml" />
+		<Include type="all" source="structures/GDIMiniMCVOutpost.xml" />
+		<Include type="all" source="structures/GDIAirSupport.xml" />
+		
+		<!-- MetaGame Strategic Buildings -->
+		<Include type="all" source="structures/MG_GDI_ASATDefense.xml" />
+		<Include type="all" source="structures/MG_GDI_IntelCenter.xml" />
+		<Include type="all" source="structures/MG_GDI_ReclamatorHub.xml" />
+		<Include type="all" source="structures/MG_GDI_TiberiumProcessingPlant.xml" />
+		
+		<!-- Props -->
+		<Include type="all" source="Props/GDIMammothRocketPodMissileProjectile.xml" />
+		<Include type="all" source="Props/GDIOrcaSensorPod.xml" />
+		
+	</Includes>
+</AssetDeclaration>

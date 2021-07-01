@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ArmorSetType">
+		<Entry>VETERAN</Entry>
+		<Entry>ELITE</Entry>
+		<Entry>HERO</Entry>
+		<Entry>PLAYER_UPGRADE</Entry>
+		<Entry>WEAK_VERSUS_BASEDEFENSES</Entry>
+		<Entry>ALTERNATE_FORMATION</Entry>
+		<Entry>MOUNTED</Entry>
+		<Entry>PLAYER_UPGRADE_2</Entry>
+		<Entry>PLAYER_UPGRADE_3</Entry>
+		<Entry>UNBESIEGEABLE</Entry>
+		<Entry>AS_TOWER</Entry>
+		<Entry>UNUSED_01</Entry>
+		<Entry>UNUSED_02</Entry>
+		<Entry>UNUSED_03</Entry>
+		<Entry>UNUSED_04</Entry>
+		<Entry>UNUSED_05</Entry>
+		<Entry>UNUSED_06</Entry>
+		<Entry>UNUSED_07</Entry>
+		<Entry>UNUSED_08</Entry>
+		<Entry>UNUSED_09</Entry>
+		<Entry>UNUSED_10</Entry>
+		<Entry>SHIELDBODY_ENABLED</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ArmorSetBitFlags"
+		BaseEnum="ArmorSetType" />
+
+	<Asset
+		id="ArmorListType">
+		<Entry
+			id="Damage"
+			AssetType="DamageType"
+			IsAttribute="true" />
+		<Entry
+			id="Percent"
+			AssetType="Percentage"
+			IsAttribute="true" />
+	</Asset>
+
+	<GameAsset
+		id="ArmorTemplate"
+		TypeHash="1834599433">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="Default"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"
+			Description="The percentage used if no other damage type is defined." />
+		<Entry
+			id="DamageScalar"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"
+			Description="The applied damage scalar." />
+		<Entry
+			id="SideDamageScalar"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"
+			Description="If a unit takes damage from the side this scalar is applied to the incoming damage in addition to the regular DamageScalar." />
+		<Entry
+			id="RearDamageScalar"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"
+			Description="If a unit takes damage from the rear this scalar is applied to the incoming damage in addition to the regular DamageScalar." />
+		<Entry
+			id="FlankedPenalty"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="100%"
+			Description="The penalty when getting flanked." />
+		<EntryList
+			id="Armor"
+			AssetType="ArmorListType"
+			MinLength="0"
+			MaxLength="0"
+			Description="Armor entries for different weapon types." />
+	</GameAsset>
+
+</AssetDefinition>

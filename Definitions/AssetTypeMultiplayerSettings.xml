@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="GameStatsMode">
+		<Entry>CAMPAIGN_GAME</Entry>
+		<Entry>SKIRMISH_GAME</Entry>
+		<Entry>LAN_GAME</Entry>
+		<Entry>ONLINE_UNRANKED_GAME</Entry>
+		<Entry>ONLINE_RANKED_1V1_GAME</Entry>
+		<Entry>ONLINE_RANKED_2V2_GAME</Entry>
+		<Entry>ONLINE_CLAN_1V1_GAME</Entry>
+		<Entry>ONLINE_CLAN_2V2_GAME</Entry>
+		<Entry>ONLINE_ALL_GAME</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="GameStatsModeData">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="void"
+			AssetType="SageInt"
+			IsVoid="true" />
+		<Entry
+			id="GameStatsMode"
+			AssetType="GameStatsMode"
+			IsAttribute="true" />
+		<EntryList
+			id="AvailableMapName"
+			AssetType="String"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+	
+	<GameAsset
+		id="MultiplayerSettings"
+		TypeHash="2149366734">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="InitialCreditsVeryLow"
+			AssetType="SageInt" />
+		<Entry
+			id="InitialCreditsLow"
+			AssetType="SageInt" />
+		<Entry
+			id="InitialCreditsMedium"
+			AssetType="SageInt" />
+		<Entry
+			id="InitialCreditsHigh"
+			AssetType="SageInt" />
+		<Entry
+			id="InitialCreditsVeryHigh"
+			AssetType="SageInt" />
+		<Entry
+			id="StartCountdownTimer"
+			AssetType="SageInt" />
+		<Entry
+			id="MaxBeaconsPerPlayer"
+			AssetType="SageInt" />
+		<EntryList
+			id="GameStatsModeData"
+			AssetType="GameStatsModeData"
+			MinLength="0"
+			MaxLength="8" />
+		<Entry
+			id="UseShroud"
+			AssetType="SageBool" />
+		<Entry
+			id="ShowRandomPlayerTemplate"
+			AssetType="SageBool" />
+		<Entry
+			id="ShowRandomStartPos"
+			AssetType="SageBool" />
+		<Entry
+			id="ShowRandomColor"
+			AssetType="SageBool" />
+	</GameAsset>
+
+</AssetDefinition>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIComponentCommandBar">
+		<EntryInheritance
+			id="base"
+			AssetType="UIBaseComponent" />
+		<Entry
+			id="StackLevels"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="CommandBarImageBaseName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="CbarImage" />
+		<Entry
+			id="RenderClockName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameBookmarks"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNamePowers"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameGroundUnits"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameVehicles"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameAirUnits"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameStructures"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="TabNameBaseDefenses"
+			AssetType="StringHash"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ClockScale"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="ClockImage"
+			AssetType="PackedTextureImage"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="DrillUpButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="StanceDrillDownButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="TogglePowerButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="SelfRepairButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="SellButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<EntryWeakReference
+			id="SetDefaultBuildingButtonId"
+			AssetType="LogicCommand"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapFlashSeconds"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapFinalWarningAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapInitialWarningAmount"
+			AssetType="SageInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapNoMoreCP"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="UnitCapAlmostNoMoreCP"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ClockColor"
+			AssetType="Color4" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="LW_AutoResolveUnitType">
+		<Entry>Soldier</Entry>
+		<Entry>Archer</Entry>
+		<Entry>Pikemen</Entry>
+		<Entry>Cavalry</Entry>
+		<Entry>Monster</Entry>
+		<Entry>Hero</Entry>
+		<Entry>Fortress</Entry>
+		<Entry>INVALID</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

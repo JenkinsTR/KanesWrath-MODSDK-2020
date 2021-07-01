@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ShroudClearOptionsType">
+		<Entry>REQUIRES_FUNCTIONING_RADAR</Entry>
+		<Entry>REQUIRES_MULTIPLAYER</Entry>
+		<Entry>REVEAL_FOR_ALLIES</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ShroudClearOptionsBitFlags"
+		BaseEnum="ShroudClearOptionsType" />
+
+	<Asset
+		id="ShroudClearBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="ShroudClearOptions"
+			AssetType="ShroudClearOptionsBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

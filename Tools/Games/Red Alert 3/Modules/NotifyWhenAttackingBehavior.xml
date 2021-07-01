@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="NotifyWhenAttackingBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="NotifyRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryPoid
+			id="AssistResponseModuleId"
+			IsAttribute="true" />
+		<Entry
+			id="SleepTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxFriendsToNotify"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="100" />
+		<Entry
+			id="WeaponSlotID"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="WeaponSlotType"
+			AssetType="WeaponSlotType"
+			IsAttribute="true"
+			Default="PRIMARY_WEAPON" />
+		<EntryRelocation
+			id="AcceptableFriends"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="HasMobileFriends"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="IgnoreDisabledStatus"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

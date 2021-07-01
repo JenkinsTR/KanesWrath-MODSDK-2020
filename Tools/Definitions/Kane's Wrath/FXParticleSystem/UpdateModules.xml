@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleUpdateBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule" />
+	</Asset>
+
+	<Asset
+		id="FXParticleUpdateDefault">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleUpdateBase" />
+		<Entry
+			id="Rotation"
+			AssetType="FXParticleSystem_RotationType"
+			IsAttribute="true"
+			Default="ROTATION_OFF" />
+		<Entry
+			id="SizeRate"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="SizeRateDamping"
+			AssetType="ClientRandomVariable"
+			Default="UNIFORM,1.0,1.0" />
+		<Entry
+			id="AngleZ"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularRateZ"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularDamping"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngleXY"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularRateXY"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularDampingXY"
+			AssetType="ClientRandomVariable"
+			Default="UNIFORM,1.0,1.0" />
+	</Asset>
+
+	<Asset
+		id="FXParticleUpdateRenderObject">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleUpdateBase" />
+		<Entry
+			id="Rotation"
+			AssetType="FXParticleSystem_RotationType"
+			IsAttribute="true"
+			Default="ROTATION_OFF" />
+		<Entry
+			id="AngleZ"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularRateZ"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="AngularDamping"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="StartSize"
+			AssetType="RandCoord3D" />
+		<Entry
+			id="SizeRate"
+			AssetType="RandCoord3D" />
+		<Entry
+			id="SizeDamping"
+			AssetType="RandCoord3D" />
+	</Asset>
+
+	<Asset
+		id="FXParticleUpdateModule">
+		<EntryChoice
+			id="FXParticleUpdateModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="Default"
+				AssetType="FXParticleUpdateDefault" />
+			<Entry
+				id="RenderObject"
+				AssetType="FXParticleUpdateRenderObject" />
+		</EntryChoice>
+	</Asset>
+
+</AssetDefinition>

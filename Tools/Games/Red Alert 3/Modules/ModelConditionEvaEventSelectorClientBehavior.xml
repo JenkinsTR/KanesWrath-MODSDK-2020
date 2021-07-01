@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ModelConditionEvaEventSelectorOverrideBlock">
+		<Entry
+			id="RequiredFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="ExcludedFlags"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="EvaEventArray"
+			AssetType="EvaEventArray" />
+	</Asset>
+
+	<Asset
+		id="ModelConditionEvaEventSelectorClientBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ClientBehaviorModuleData" />
+		<EntryList
+			id="Override"
+			AssetType="ModelConditionEvaEventSelectorOverrideBlock"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

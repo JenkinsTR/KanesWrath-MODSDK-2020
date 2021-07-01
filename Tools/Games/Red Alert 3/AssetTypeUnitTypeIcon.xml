@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UnitTypeIcon"
+		TypeHash="4192635734">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<EntryReference
+			id="Image"
+			AssetType="PackedTextureImage"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="Offset"
+			AssetType="Vector2" />
+	</GameAsset>
+
+</AssetDefinition>

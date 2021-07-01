@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="NotifyTargetsOfImminentProbableCrushingMuxDataType">
+		<Entry
+			id="TimeBetweenUpdatesMS"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="66" />
+		<Entry
+			id="ScanAheadTimeMS"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="66" />
+		<Entry
+			id="ScanHeight"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="ScanWidth"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="-1" />
+	</Asset>
+
+	<Asset
+		id="NotifyTargetsOfImminentProbableCrushingUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="Notify"
+			AssetType="NotifyTargetsOfImminentProbableCrushingMuxDataType" />
+	</Asset>
+
+</AssetDefinition>

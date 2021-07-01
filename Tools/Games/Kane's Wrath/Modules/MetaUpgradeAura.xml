@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="AuraObjectDataType">
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="StatusToSet"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StatusToClear"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Filter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="Upgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="MetaUpgradeAuraBehaviorModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="BehaviorModuleData" />
+		<EntryList
+			id="AuraObject"
+			AssetType="AuraObjectDataType"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  
+    <Include type="all" source="DATA:civilian/props/RedZoneOverpass01.xml" />
+    <Include type="all" source="DATA:civilian/props/TiberiumCollapsableTower.xml" />
+    <Include type="all" source="DATA:civilian/props/TiberiumShaft01.xml" />
+    <Include type="all" source="DATA:civilian/props/TiberiumShaft02.xml" />
+    <Include type="all" source="DATA:civilian/props/TiberiumShaft03.xml" />
+    
+  </Includes>
+
+</AssetDeclaration>

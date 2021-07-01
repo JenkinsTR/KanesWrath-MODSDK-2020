@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<Include type="all" source="Units/MarkedOfKaneAttackBike.xml" />
+		<Include type="all" source="Units/MarkedOfKaneAvatar.xml" />
+		<Include type="all" source="Units/MarkedOfKaneAvatarHusk.xml" />
+		<Include type="all" source="Units/MarkedOfKaneBunkerTruck.xml" />
+		<Include type="all" source="Units/MarkedOfKaneFanatic.xml" />
+		<Include type="all" source="Units/MarkedOfKaneMCV.xml" />
+		<Include type="all" source="Units/MarkedOfKaneMetaUnit.xml" />
+		<Include type="all" source="Units/MarkedOfKaneMilitantRocket.xml" />
+		<Include type="all" source="Units/MarkedOfKaneMilitantRocketSquad.xml" />
+		<Include type="all" source="Units/MarkedOfKaneMobileArtillery.xml" />
+		<Include type="all" source="Units/MarkedOfKaneImprovedCyborgInfantry.xml" />
+		<Include type="all" source="Units/MarkedOfKaneImprovedCyborgInfantrySquad.xml" />
+		<Include type="all" source="Units/MarkedOfKaneRaiderTank.xml" />
+		<Include type="all" source="Units/MarkedOfKaneSaboteur.xml" />
+		<Include type="all" source="Units/MarkedOfKaneScorpionBuggy.xml" />
+		<Include type="all" source="Units/MarkedOfKaneShadow.xml" />
+		<Include type="all" source="Units/MarkedOfKaneShadowSquad_Veteran.xml" />
+		<Include type="all" source="Units/MarkedOfKaneStealthTank.xml" />
+		<Include type="all" source="Units/MarkedOfKaneTiberiumTrooper.xml" />
+		<Include type="all" source="Units/MarkedOfKaneTiberiumTrooperSquad.xml" />
+		<Include type="all" source="Units/MarkedOfKaneVenom.xml" />
+		<Include type="all" source="Units/MarkedOfKaneVertigo.xml" />
+		<Include type="all" source="Units/MOKCyborgInfantry.xml" />	
+		<Include type="all" source="Units/MOKCyborgInfantrySquad.xml" />	
+		
+		<Include type="all" source="structures/MarkedOfKaneConstructionYard.xml" />
+		<Include type="all" source="structures/MarkedOfKaneCrane.xml" />
+		<Include type="all" source="structures/MarkedOfKaneOperationsCenter.xml" />
+		<Include type="all" source="structures/MarkedOfKanePowerPlant.xml" />
+		<Include type="all" source="structures/MarkedOfKaneHangar.xml" />
+		<Include type="all" source="structures/MarkedOfKaneSecretShrine.xml" />
+		<Include type="all" source="structures/MarkedOfKaneTechAssemblyPlant.xml" />
+		<Include type="all" source="structures/MarkedOfKaneTiberiumSilo.xml" />
+		<Include type="all" source="structures/MarkedOfKaneHandOfNod.xml" />
+		<Include type="all" source="structures/MarkedOfKaneRefinery.xml" />
+		<Include type="all" source="structures/MarkedOfKaneDropZone.xml" />
+		<Include type="all" source="structures/MarkedOfKaneTiberiumLiquidationFacility.xml" />
+		<Include type="all" source="structures/MarkedOfKaneMiniMCVOutpost.xml" />
+		<Include type="all" source="structures/MarkedOfKaneDisruptionTower.xml" />
+		<Include type="all" source="structures/MarkedOfKaneLaserCannon.xml" />
+		<Include type="all" source="structures/MarkedOfKaneLaserCannonSpawn.xml" />
+		<Include type="all" source="structures/MarkedOfKaneObelisk.xml" />
+		<Include type="all" source="structures/MarkedOfKaneRocketBunker.xml" />
+		<Include type="all" source="structures/MarkedOfKaneRocketBunkerSpawn.xml" />
+		<Include type="all" source="structures/MarkedOfKaneShredderTurret.xml" />
+		<Include type="all" source="structures/MarkedOfKaneShredderTurretHub.xml" />
+		<Include type="all" source="structures/MarkedOfKaneTempleOfNOD.xml" />
+		<Include type="all" source="structures/MarkedOfKaneAirSupport.xml" />	
+		<Include type="all" source="structures/MarkedOfKanePropagandaTower.xml" />	
+		<Include type="all" source="structures/MG_MarkedOfKane_WarmechFacility.xml" />
+
+	</Includes>
+</AssetDeclaration>

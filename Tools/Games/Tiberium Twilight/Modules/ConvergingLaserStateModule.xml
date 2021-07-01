@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ConvergingLaserStateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="LaserStateModuleData" />
+		<Entry
+			id="ConvergingAngle"
+			AssetType="Angle"
+			IsAttribute="true" />
+		<Entry
+			id="AngleRotation"
+			AssetType="Angle"
+			IsAttribute="true"
+			Default="0d" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<EntryReference
+			id="SweepFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="VeteranSweepFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="SweepFXTimeout"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<EntryReference
+			id="SweepWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ModelConditions"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Lifetime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+	</Asset>
+
+</AssetDefinition>

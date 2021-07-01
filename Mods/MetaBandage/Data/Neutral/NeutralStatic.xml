@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Tags></Tags>
+	<Includes>
+	
+	<!-- Neutral Units -->
+		<Include type="all" source="DATA:Neutral/Units/MutantMarauder.xml" />
+	
+		<Include type="all" source="DATA:Neutral/Units/IonStorm.xml" />
+		<Include type="all" source="DATA:Neutral/Units/IonStormTemporary.xml" />
+		<Include type="all" source="DATA:Neutral/Units/PlanetaryAssaultCarrierIonStorm.xml" />
+		
+	<!-- Props Units -->
+		<Include type="all" source="Props/DamageAlliesDummyProjectile.xml"/>
+	
+    <!-- Debris -->
+
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_05.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_06.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_07.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_08.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_09.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/ALIENEradicatorDebris_10.xml" />
+		
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/GDIZOCOMHarvesterDebris_05.xml" />
+		
+		<Include type="all" source="DATA:Neutral/Debris/SteelTalonsTitanDebris_01.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/SteelTalonsTitanDebris_02.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/SteelTalonsTitanDebris_03.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/SteelTalonsTitanDebris_04.xml" />
+		<Include type="all" source="DATA:Neutral/Debris/SteelTalonsTitanDebris_05.xml" />
+
+	</Includes>
+
+</AssetDeclaration>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ShaderOverrideRule">
+		<EntryPoid
+			id="IfOriginalShaderIs"
+			IsAttribute="true" />
+		<EntryPoid
+			id="ReplaceShaderName"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="ReplaceTechniqueName"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<GameAsset
+		id="ShaderOverride"
+		TypeHash="1029381398">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Priority"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="1" />
+		<EntryList
+			id="Rule"
+			AssetType="ShaderOverrideRule"
+			MinLength="1"
+			MaxLength="0" />
+	</GameAsset>
+
+	<Asset
+		id="ShaderOverrideRef">
+		<EntryReference
+			id="ShaderOverride"
+			AssetType="ShaderOverride" />
+	</Asset>
+
+</AssetDefinition>

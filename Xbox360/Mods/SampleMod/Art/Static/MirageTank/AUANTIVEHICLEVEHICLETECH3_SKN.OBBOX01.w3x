@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<W3DCollisionBox
+		id="AUANTIVEHICLEVEHICLETECH3_SKN.OBBOX01"
+		JoypadPickingOnly="false">
+		<Center
+			X="0.000000"
+			Y="0.000000"
+			Z="7.614808" />
+		<Extent
+			X="21.684807"
+			Y="13.992693"
+			Z="7.614808" />
+	</W3DCollisionBox>
+</AssetDeclaration>

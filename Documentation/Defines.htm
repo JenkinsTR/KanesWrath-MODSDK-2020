@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style type="text/css">
+		</style>
+	</head>
+<body>
+	<h3>Defines</h3>
+<h4>Basic Explanation</h4>
+<p>One feature of the C&amp;C 3 Mod SDK which can be a powerful asset is the use of Defines.  Defines allow you to create constants, which can
+	be referenced from other files, simply by using their name.  They also support basic math operations, allowing you to easily apply formulas to
+	values.  They are computed when you build your mod, meaning that there is no real overhead at runtime from using them.
+</p>
+<h4>Basic Structure</h4>
+<p>
+	Any file in which Asset Declarations are made can be host to defines.  The &lt;Defines&gt; section is an optional section
+	which is placed after the &lt;Includes&gt; section in a file.  Within the Defines section, you can create individual constant defintions.
+	An example is below:
+</p>
+	<p class="code">
+		&lt;Define name=&quot;GDI_UNITRESPONSE_VOLUME&quot; value=&quot;110&quot; /&gt;
+	</p>
+<p>
+	This creates a define with the name GDI_UNITRESPONSE_VOLUME, with the value of 110.  Defines can be any type of data, as long
+	as when they are used they match the type expected.  Check the Schema for the particular module or object to see the expected type.
+</p>
+<h4>Referencing Defines</h4>
+<p>The use of defines in an attribute or property is similar to the use of formulas in Microsoft Excel.  To indicate that the value of a 
+	property uses a define, you must prefix it with an = sign.  The name of the define to be used also requires a prefix.  A $ is used to
+	indicate the use of a named define.  You can also perform basic math computations within define references.  An example define reference
+	which includes the use of a mathematical expression is below:
+</p>
+<p class="code">
+	Volume = &quot;=$GDI_UNITRESPONSE_VOLUME + 0&quot;
+</p>
+<p>The full context for this reference can be found in SoundMod.xml in the SampleMOD.  Essentially, this is taking the value of the GDI_UNITRESPONSE_VOLUME
+	(defined above to be 110) and adding zero to it.  Although this is an obvious trivial case, you can make other non-trivial uses of this property.  
+</p>
+<h4>Advanced Usages</h4>
+<p>
+	One example might be using define values for unit costs, and adding a special constant for debugging purposes, perhaps to decrease the cost to speed testing.
+	An example of what this might look like is below:
+</p>
+<p class="code">
+	&lt;!-- Debug multipliers, set to 1 for release! --&gt;<br />
+		&lt;Define name=&quot;GDIDEBUG_BUILDCOST_MULTIPLIER&quot; value=&quot;.25&quot; /&gt;<br />
+		&lt;Define name=&quot;GDI_WARFACTORY_BUILDCOST&quot; value=&quot;=2000*$GDIDEBUG_BUILDCOST_MULTIPLIER&quot; /&gt;<br />
+</p>
+<p>
+	Although this example only works for a single building (and would also require changing the the BuildCost property of the GDI War Factory Object to 
+	reference the constant defined for it, you can see the use of both the mathematical capabilities, and even referencing
+	defines from within defines.  In this case, the debugging cost of the war factory would be 500.  The real advantage
+	comes when debugging needs to be disabled.  By changing the multiplier to 1 and rebuilding the mod, all of the build
+	costs will be reset to their intended values.  For a single structure it doesn't make much sense, but for a large number of 
+	structures, it can make a big difference.  It also centralizes all of your costs, making balance changes easier to implement.
+</p>
+</body>
+</html>

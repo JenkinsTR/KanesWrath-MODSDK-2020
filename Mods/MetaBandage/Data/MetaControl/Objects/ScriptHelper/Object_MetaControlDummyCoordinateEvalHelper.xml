@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+	</Includes>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorDownLeft"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="MetaControlSpecialPowerEdgeCoordinateAnchorDownLeftCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_EdgeCoordinateAnchorSpawn"
+				SpecialPowerTemplate="SpecialPowerEdgeCoordinateAnchorUpperRight"
+				UpdateModuleStartsAttack="true"
+				OCL="OCL_EdgeCoordinateAnchorUpperRight"
+				CreateLocation="CREATE_AT_EDGE_FARTHEST_FROM_TARGET" >
+			</OCLSpecialPower>			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorDownLeftEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorUpperRight"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="MetaControlEdgeCoordinateAnchorUpperRightSpawnerCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_EdgeCoordinateAnchorDownRightSpawnerSpawn"
+				SpecialPowerTemplate="SpecialPowerEdgeCoordinateAnchorDownRightSpawner"
+				UpdateModuleStartsAttack="true"
+				OCL="OCL_EdgeCoordinateAnchorDownRightSpawner"
+				CreateLocation="CREATE_AT_LOCATION" >
+			</OCLSpecialPower>		
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorUpperRightEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>	
+	
+	<GameObject
+		id="EdgeCoordinateAnchorDownRightSpawner"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="MetaControlEdgeCoordinateAnchorDownRightSpawnerCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_EdgeCoordinateAnchorSpawn"
+				SpecialPowerTemplate="SpecialPowerEdgeCoordinateAnchorDownRight"
+				UpdateModuleStartsAttack="true"
+				OCL="OCL_EdgeCoordinateAnchorDownRight"
+				CreateLocation="CREATE_AT_EDGE_FARTHEST_FROM_TARGET" >
+			</OCLSpecialPower>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="7.00s"
+				MaxLifetime="7.00s" /> 			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorDownRightSpawnerEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorDownRight"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="MetaControlEdgeCoordinateAnchorDownRightCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+			<OCLSpecialPower
+				id="ModuleTag_EdgeCoordinateAnchorUpperLeftSpawn"
+				SpecialPowerTemplate="SpecialPowerEdgeCoordinateAnchorUpperLeft"
+				UpdateModuleStartsAttack="true"
+				OCL="OCL_EdgeCoordinateAnchorUpperLeft"
+				CreateLocation="CREATE_AT_EDGE_FARTHEST_FROM_TARGET" >
+			</OCLSpecialPower>			
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorDownRightEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorDownRightInAir"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>				
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorDownRightInAirEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorUpperLeft"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>				
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorUpperLeftEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorDelayer"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+			<CreateObjectDie
+				id="ModuleTag_EdgeCoordinateAnchorExecutor"
+				CreationList="OCL_EdgeCoordinateAnchorExecutor"
+				UpgradeForbidden="">
+				<DieMuxData
+					DeathTypes="FADED"/>
+			</CreateObjectDie>
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<GameObject
+		id="EdgeCoordinateAnchorExecutor"
+		Side="Neutral"
+		EditorSorting="SYSTEM"
+		CommandSet="EmptyCommandSet"
+		KindOf="NO_COLLIDE"
+		RadarPriority="NOT_ON_RADAR"
+		EditorName="GenericCrateSpawner">
+		<DisplayName>GenericCrateSpawner</DisplayName>
+		<ArmorSet
+			Armor="InvulnerableArmor" />
+		<Draws>
+		</Draws>
+		<Behaviors>	
+ 			<LifetimeUpdate
+				id="ModuleTag_Lifetime"
+				DeathType="FADED"
+				MinLifetime="0.1s"
+				MaxLifetime="0.1s" /> 
+		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AI"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="EdgeCoordinateAnchorExecutorEvent"/>
+		</AI>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_Body"
+				MaxHealth="1.0" />
+		</Body>
+	</GameObject>
+	
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorUpperRight">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="-300" />
+			<CreateObject>EdgeCoordinateAnchorUpperRight</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorExecutor">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+			<CreateObject>EdgeCoordinateAnchorExecutor</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorDownLeft">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+			<CreateObject>EdgeCoordinateAnchorDownLeft</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+		
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorUpperLeft">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="-300" />
+			<CreateObject>EdgeCoordinateAnchorUpperLeft</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorDownRightSpawner">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="-8300"
+				y="8300"
+				z="0" />
+			<CreateObject>EdgeCoordinateAnchorDownRightSpawner</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EdgeCoordinateAnchorDownRight">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="-300" />
+			<CreateObject>EdgeCoordinateAnchorDownRight</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="LIKE_EXISTING"
+			Count="1">
+			<Offset
+				x="0"
+				y="0"
+				z="0" />
+			<CreateObject>EdgeCoordinateAnchorDownRightInAir</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>	
+	
+</AssetDeclaration>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="FactionType"
+		IsStartingNegative="true">
+		<Entry>RANDOM</Entry>
+		<Entry>ALLIES</Entry>
+		<Entry>SOVIET</Entry>
+		<Entry>JAPAN</Entry>
+		<Entry>GDI</Entry>
+		<Entry>NOD</Entry>
+		<Entry>ALIEN</Entry>
+		<Entry>NEUTRAL</Entry>
+	</EnumAsset>
+
+</AssetDefinition>

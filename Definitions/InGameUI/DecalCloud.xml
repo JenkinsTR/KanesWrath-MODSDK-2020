@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset id="InGameUIDecalCloudSettings">
+		<EntryReference id="BuildTexture" AssetType="Texture" IsRequired="true" IsAttribute="true"/>
+		<EntryReference id="DefenseTexture" AssetType="Texture" IsRequired="true" IsAttribute="true"/>
+		<EntryReference id="SpecialPowerRestrictionTexture" AssetType="Texture" IsRequired="true" IsAttribute="true"/>
+		<EntryReference id="AreaOfInfluenceTexture" AssetType="Texture" IsRequired="true" IsAttribute="true"/>
+	</Asset>
+
+</AssetDefinition>

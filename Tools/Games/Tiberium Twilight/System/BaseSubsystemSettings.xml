@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="BaseSubsystemSettings">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<EntryReference
+			id="LoadAfter"
+			AssetType="SubsystemSettingsRef"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

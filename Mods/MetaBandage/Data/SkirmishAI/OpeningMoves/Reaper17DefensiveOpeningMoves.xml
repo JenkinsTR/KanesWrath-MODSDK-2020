@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="Reaper17SuperweaponRush"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Time="78s" Account="PRODUCTION" Deposit="4000" />
+    <Order Build="Reaper17ControlCenter" /> <!--Time: 15 Power: -8-->
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Reactor" /> <!--Time: 40 Power: -10-->
+    <Order Build="Reaper17RiftGenerator" /> <!--Time: 50 Power: -15-->
+    <Order Time="189s" />
+  </SkirmishOpeningMove>
+
+  <SkirmishOpeningMove
+    id="Reaper17DualBarracks"
+    Side="Reaper17"> <!--Power: +10-->
+    <Order Time="0s" Account="PRODUCTION" Deposit="2000" />
+    <Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Build="Reaper17Portal" /> <!--Time: 6 Power: -5-->
+	<Order Build="Reaper17PowerProjector" /> <!--Time: 6 Power: +20-->
+    <Order Build="Reaper17TiberiumTower" /> <!--Time: 30 Power: -15-->
+    <Order Time="120s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

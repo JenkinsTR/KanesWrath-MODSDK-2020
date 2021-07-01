@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="ReplaceObjectNugget">
+		<EntryRelocation
+			id="TargetObjectFilter"
+			AssetType="ObjectFilter" />
+		<EntryList
+			id="ReplacementObject"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="ReplaceObjectUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="ReplaceRadius"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="ReplaceFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryList
+			id="ReplaceObjectNugget"
+			AssetType="ReplaceObjectNugget"
+			MinLength="0"
+			MaxLength="128" />
+		<Entry
+			id="Scatter"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

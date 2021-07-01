@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="FXParticleDrawBase">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleBaseModule" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawGpu">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="Shader"
+			AssetType="String"
+			IsAttribute="true"
+			Default="GPUParticle.fx" />
+		<Entry
+			id="FramesPerRow"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="TotalFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="1" />
+		<Entry
+			id="SingleRow"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="RandTex"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="DetailTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+		<Entry
+			id="SpeedMultiplier"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="GeometryType"
+			AssetType="FXParticleSystem_GeometryType"
+			IsAttribute="true"
+			Default="SIMPLE_QUAD" />
+		<Entry
+			id="MiscValue1"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MiscValue2"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MiscValue3"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="MiscValue4"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="SortParticles"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="EnableSoftParticles"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawLightSource">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="MiscValue4"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="RandomSetType">
+		<Entry
+			id="StartAmplitude"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="EndAmplitudeChange"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="StartFrequency"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="EndFrequencyChange"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="StartPhase"
+			AssetType="ClientRandomVariable" />
+		<Entry
+			id="EndPhaseChange"
+			AssetType="ClientRandomVariable" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawLightning">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="StartPoint"
+			AssetType="Vector3" />
+		<Entry
+			id="EndPoint"
+			AssetType="Vector3" />
+		<EntryList
+			id="RandomSet"
+			AssetType="RandomSetType"
+			MinLength="2"
+			MaxLength="2" />
+	</Asset>
+
+	<Asset
+		id="ObjectSetType">
+		<Entry
+			id="RenderGroup"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="NumObjects"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Percent"
+			AssetType="Percentage"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawRenderObject">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="SinkRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryList
+			id="ObjectSet"
+			AssetType="ObjectSetType"
+			MinLength="3"
+			MaxLength="3" />
+		<Entry
+			id="MultiRenderObjects"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="SinkOnTerrainCollision"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawStreak">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawSwarm">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="OpaqueSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="TransparentSpeed"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="100.0" />
+		<Entry
+			id="SpeedStretchAmount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="AttractStrength"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="EnvironmentTexture"
+			AssetType="Texture"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawTrail">
+		<EntryInheritance
+			id="base"
+			AssetType="FXParticleDrawBase" />
+		<Entry
+			id="TrailLife"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="30" />
+		<Entry
+			id="UTile"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="VTile"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="UScrollRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="VScrollRate"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="FXParticleDrawModule">
+		<EntryChoice
+			id="FXParticleDrawModule"
+			MinLength="0"
+			MaxLength="1">
+			<Entry
+				id="Default"
+				AssetType="FXParticleDrawBase" />
+			<Entry
+				id="Gpu"
+				AssetType="FXParticleDrawGpu" />
+			<Entry
+				id="LightSource"
+				AssetType="FXParticleDrawLightSource" />
+			<Entry
+				id="Lightning"
+				AssetType="FXParticleDrawLightning" />
+			<Entry
+				id="RenderObject"
+				AssetType="FXParticleDrawRenderObject" />
+			<Entry
+				id="Streak"
+				AssetType="FXParticleDrawStreak" />
+			<Entry
+				id="Swarm"
+				AssetType="FXParticleDrawSwarm" />
+			<Entry
+				id="Trail"
+				AssetType="FXParticleDrawTrail" />
+		</EntryChoice>
+	</Asset>
+
+</AssetDefinition>

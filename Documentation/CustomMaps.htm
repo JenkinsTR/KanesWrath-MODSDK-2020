@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="thundermods.net" />
+	<meta name="copyright" content="thundermods.net" />
+	<meta name="description" content="Documentation - WrathEd" />
+
+	<link rel="stylesheet" href="Documentation.css" />
+	<title>Documentation - WrathEd - Custom Maps</title>
+</head>
+<body>
+<div align="center">
+	<div class="content">
+		<div class="navigation">
+			<div class="navigationhead">WrathEd</div>
+			<div class="navigationlink">• <a href="index.htm" class="navigation">Index</a></div>
+			<div class="navigationhead">Mod Creation</div>
+			<div class="navigationlink">• <a href="DirectoryStructure.htm" class="navigation">Directory Structure</a></div>
+			<div class="navigationlink">• <a href="XMLAssets.htm" class="navigation">XML Assets</a></div>
+			<div class="navigationlink">• Custom Maps</div>
+			<div class="navigationlink">• <a href="BuildingAMod.htm" class="navigation">Building a Mod</a></div>
+			<div class="navigationlink">• <a href="LaunchingAMod.htm" class="navigation">Launching a Mod</a></div>
+		</div>
+		<div class="main">
+To use assets added with your mod you need to edit the configuration file for Worldbuilder to load your mod. After the mod is created, there is nothing else to do, simply launch your mod and play on your new map.<br />
+<br />
+<span class="title">Configuring Worldbuilder</span><br />
+To launch Worldbuilder with a mod you have to edit the [CNC3/RA3/CNC4]_wb_1.0.cfg, located commonly in the root of your C&C3/KW directory or the Data folder of your RA3/C&C4 directory. You will need to add a line similar to the following to the top of the file:
+<pre>try-add-config C:\Users\[Username]\Documents\[Game]\Mods\SampleMod\SampleMod_1.00.SkuDef</pre>
+This will tell Worldbuilder to attempt to load your mod, and allows you to create maps using the new assets added in your mod.<br />
+<br />
+<span class="title">Custom Maps and Overrides</span><br />
+If you have created a map that uses an override (for example a mission map) you will need to build this map. <span class="important">For Kane's Wrath you need to move your map folder to C:\Users\[Username]\Documents\[Game]\Maps</span>.<br />
+Building a map works just like building a mod. Just use the BuildMap.bat instead of the BuildMod.bat and leave out the version. To be able to play a compiled map you need to start the game with the WrathEd Mod Launcher.
+		</div>
+	</div>
+</div>
+</body>
+</html>

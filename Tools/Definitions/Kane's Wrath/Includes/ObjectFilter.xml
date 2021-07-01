@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ObjectFilterRule">
+		<Entry>UNPARSED</Entry>
+		<Entry>ALL</Entry>
+		<Entry>ANY</Entry>
+		<Entry>NONE</Entry>
+	</EnumAsset>
+
+	<EnumAsset
+		id="ObjectFilterRelationship">
+		<Entry>ALLIES</Entry>
+		<Entry>ENEMIES</Entry>
+		<Entry>NEUTRAL</Entry>
+		<Entry>SAME_PLAYER</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ObjectFilterRelationshipBitMask"
+		BaseEnum="ObjectFilterRelationship" />
+
+	<EnumAsset
+		id="ObjectFilterAlignment">
+		<Entry>NONE</Entry>
+		<Entry>EVIL</Entry>
+		<Entry>GOOD</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="ObjectFilter">
+		<EntryPoid
+			id="id"
+			IsAttribute="true" />
+		<Entry
+			id="Rule"
+			AssetType="ObjectFilterRule"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="Relationship"
+			AssetType="ObjectFilterRelationshipBitMask"
+			IsAttribute="true"
+			Default="" />
+		<Entry
+			id="Alignment"
+			AssetType="ObjectFilterAlignment"
+			IsAttribute="true"
+			Default="NONE" />
+		<Entry
+			id="Include"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="Exclude"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StatusBitFlags"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RejectStatusBitFlags"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AcceptModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="RejectModelCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+		<EntryList
+			id="IncludeThing"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ExcludeThing"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

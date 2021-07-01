@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<!--Spawns Marked Of Kane Husk instead Nod Husk-->
+	<ObjectCreationList
+		id="MarkedOfKaneAvatarDieOCL">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES PRESERVE_LAYER"
+			Disposition="LIKE_EXISTING"
+			TempModelCondition="USER_2"
+			TempModelConditionTime="4.0s"
+			InvulnerableTime="4s" 
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>MarkedOfKaneAvatarHusk</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Spawns Reaper17 or Traveller59 Buzzers-->
+	<ObjectCreationList
+		id="OCL_Reaper17Buzzers">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="5" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="51d"
+			DispositionIntensity="80">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_Traveler59Buzzers">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="5" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="51d"
+			DispositionIntensity="80">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!-- Reduce Confessor Cabal Squad size to 4 when selling structures to prevent getting a full squad at a discount with certain structures (Mainly Shredder Turrets) -->
+	<ObjectCreationList
+		id="OCL_GenericBlackHandBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="20%"
+			MaxHordeDensity="67%">
+			<CreateObject>BlackHandConfessorSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericBlackHandBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHordeDensity="67%"
+			MaxHordeDensity="68%">
+			<CreateObject>BlackHandConfessorSquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ConyardBlackHandBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHordeDensity="67%"
+			MaxHordeDensity="68%">
+			<CreateObject>BlackHandConfessorSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>BlackHandSaboteur</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Reaper17Buzzer-->
+	<!--Replace AlienAssimilator with Reaper17Assimilator-->
+	<ObjectCreationList
+		id="OCL_ConyardReaper17BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Reaper17Assimilator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>		
+	
+	<!--Replace AlienBuzzer with Traveler59Buzzer-->
+	<ObjectCreationList
+		id="OCL_ConyardTraveler59BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Assimilator</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--MinHealth Normalised to other factions-->
+	<ObjectCreationList
+		id="OCL_GenericMarkedOfKaneBuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75"
+			MinHordeDensity="34%"
+			MaxHordeDensity="35%">
+			<CreateObject>MOKCyborgInfantrySquad</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Reaper17Buzzer-->
+	<ObjectCreationList
+		id="OCL_GenericReaper17BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericReaper17BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Reaper17Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Replace AlienBuzzer with Traveler59Buzzer-->
+	<ObjectCreationList
+		id="OCL_GenericTraveler59BuildingDestruction">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS REQUIRES_LIVE_PLAYER"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="0.3"
+			MaxHealth="0.75">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_GenericTraveler59BuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>Traveler59Buzzers</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!--Spawns Marked Of Kane Shadow Teams-->
+	<ObjectCreationList
+		id="OCL_SpecialPowerMarkedOfKaneRedShadowStrikeTeam">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="LIKE_EXISTING"
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="0"
+				y="0"
+				z="100"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER ISSUE_MOVE_AFTER_CREATION IGNORE_COMMANDPOINT_LIMIT"
+			Disposition="LIKE_EXISTING"
+			UseUpgradedLocomotor="true">
+			<Offset
+				x="-20"
+				y="50"
+				z="100"></Offset>
+			<CreateObject>MarkedOfKaneShadowSquad_Veteran</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!--Behemoth Animation Quick Fix-->
+	<!--ObjectCreationList
+		id="SteelTalonsBehemothHuskReplace">
+		<CreateObject
+			Options="CLEAR_REMOVEABLES USE_CREATORS_HEALTH_AS_BASE PRESERVE_LAYER"
+			Disposition="LIKE_EXISTING"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="4s"
+			StartingBusyTime="3.0s"
+			DisabledWhileBusy="true"
+			MinHealth="0.5"
+			MaxHealth="0.5">
+			<CreateObject>SteelTalonsBehemoth</CreateObject>
+		</CreateObject>
+	</ObjectCreationList-->
+	
+	<!--Create New Reaper17 ShockTrooper instead of Alien-->
+	<ObjectCreationList
+		id="OCL_AlienShockPods">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS IGNORE_COMMANDPOINT_LIMIT"
+			Count="3" 
+			Disposition="SPAWN_AROUND"
+			DispositionAngle="120d"
+			DispositionIntensity="80">
+			<CreateObject>Reaper17ShockTrooperSquad_Veteran</CreateObject>
+		</CreateObject>	
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_SummonMothership">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS DONT_SET_PRODUCER IGNORE_COMMANDPOINT_LIMIT"
+			StartingBusyTime="8s"
+			DisabledWhileBusy="true"
+			TempModelCondition="USER_5"
+			TempModelConditionTime="8s"
+			Disposition="LIKE_EXISTING">
+			<Offset
+				x="0"
+				y="0"
+				z="130"></Offset>
+			<CreateObject>AlienMothership</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<ObjectCreationList
+		id="OCL_NODVeinDetonationTrigger">
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS"
+			CreateFX="FX_NOD_TiberiumVeinDetonation">
+			<Offset x="0" y="0" z="0"/>
+			<CreateObject>NODVeinDetonationTrigger</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_NODVeinDetonation">
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+			<Offset x="0" y="0" z="0"/>
+			<CreateObject>NODVeinDetonation</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- New Rocket Harvester Debris -->
+	<ObjectCreationList
+		id="OCL_GDIZOCOMHarvesterDebris">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="23.47"
+				y="-10.29"
+				z="8.06"></Offset>
+			<CreateObject>GDIZOCOMHarvesterDebris_01</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="23.47"
+				y="10.39"
+				z="8.06"></Offset>
+			<CreateObject>GDIZOCOMHarvesterDebris_02</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="-19.26"
+				y="-4.58"
+				z="8.88"></Offset>
+			<CreateObject>GDIZOCOMHarvesterDebris_03</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="14.8"
+				y="-0.01"
+				z="10.72"></Offset>
+			<CreateObject>GDIZOCOMHarvesterDebris_04</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="16.2"
+				y="-0.01"
+				z="14.35"></Offset>
+			<CreateObject>GDIZOCOMHarvesterDebris_05</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+	
+	<!-- New Titan Debris -->
+	<ObjectCreationList
+		id="OCL_SteelTalonsTitanDebris">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="5.0"
+			DispositionIntensity="3.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.0s"
+			MinForcePitch="15d"
+			MaxForcePitch="45d">
+			<Offset
+				x="-4.04"
+				y="-14.99"
+				z="22.89" />
+			<CreateObject>SteelTalonsTitanDebris_01</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="5.0"
+			MaxForceMagnitude="7.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="90d"
+			MaxForcePitch="75d">
+			<Offset
+				x="-18.44"
+				y="-6.32"
+				z="31.46" />
+			<CreateObject>SteelTalonsTitanDebris_02</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="5.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="15d"
+			MaxForcePitch="45d">
+			<Offset
+				x="6.82"
+				y="8.1"
+				z="25.92" />
+			<CreateObject>SteelTalonsTitanDebris_03</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="3.0"
+			MaxForceMagnitude="5.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="15d"
+			MaxForcePitch="45d">
+			<Offset
+				x="5.6"
+				y="-8.88"
+				z="1.45" />
+			<CreateObject>SteelTalonsTitanDebris_04</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="RANDOM_FORCE RELATIVE_ANGLE"
+			MinForceMagnitude="2.0"
+			MaxForceMagnitude="5.0"
+			DispositionIntensity="5.0"
+			MinLifetime="1.0s"
+			MaxLifetime="3.s"
+			MinForcePitch="45d"
+			MaxForcePitch="75d">
+			<Offset
+				x="-3.8"
+				y="13.77"
+				z="29.03" />
+			<CreateObject>SteelTalonsTitanDebris_05</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+</AssetDeclaration>

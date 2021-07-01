@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="MappableKey"
+		TypeHash="3758466664">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseInheritableAsset" />
+		<Entry
+			id="KeyDef"
+			AssetType="String"
+			IsAttribute="true"
+			IsRequired="true" />
+	</GameAsset>
+
+</AssetDefinition>

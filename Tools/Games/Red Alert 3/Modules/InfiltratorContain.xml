@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InfiltratorContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ContainModuleData" />
+		<Entry
+			id="BlockedDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="2s" />
+		<Entry
+			id="InfiltratedStatusFilter"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="DESTROYED UNDER_CONSTRUCTION SOLD UNPACKING" />
+		<EntryReference
+			id="CanEnterFilter"
+			AssetType="ObjectFilterAssetRef"
+			IsAttribute="true"
+			Default="InfiltrationCanEnterObjectFilter" />
+		<EntryReference
+			id="ReplaceWith"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<Entry
+			id="NameOfVoiceToUseForHostileEnter"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="VoiceInfiltrate" />
+		<Entry
+			id="NameOfVoiceToUseForInfiltrationDeath"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="VoiceInfiltrateDeath" />
+		<EntryReference
+			id="EvaEventForInfiltratingPlayer"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="EnemyBuildingInfiltrated" />
+		<EntryReference
+			id="EvaEventForInfiltratedPlayer"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="OurBuildingInfiltrated" />
+		<EntryReference
+			id="FXForInfiltrate"
+			AssetType="FXList"
+			IsAttribute="true"
+			Default="FX_Building_Infiltrated_Generic" />
+		<Entry
+			id="Duration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="UnitDuration"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Amount"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="Effect"
+			AssetType="InfiltratorEffectType"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ObjectRef"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="UnitFilter"
+			AssetType="ObjectFilterAssetRefRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="StructureFilter"
+			AssetType="ObjectFilterAssetRefRef"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectStatusToSet"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="NO_REFUND" />
+		<Entry
+			id="ImmediatelyEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="OilSpillUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="FireWeaponUpdateModuleData" />
+		<EntryWeakReference
+			id="BreadCrumb"
+			AssetType="GameObject"
+			IsAttribute="true"/>
+		<EntryReference
+			id="IgnitionWeaponName"
+			AssetType="WeaponTemplate"
+			IsAttribute="true"/>
+		<Entry
+			id="IgnitionWeaponSpacing"
+			AssetType="SageReal"
+			IsAttribute="true"/>
+		<EntryReference
+			id="OilSpillFX"
+			AssetType="FXList"
+			IsAttribute="true"/>
+	</Asset>
+
+</AssetDefinition>

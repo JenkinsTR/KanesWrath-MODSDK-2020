@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CallHelpOnDamageModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="DamageModuleData" />
+		<Entry
+			id="DamageTypes"
+			AssetType="DamageBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="CallRadius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="CallDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryRelocation
+			id="ValidObjs"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="MoveToAttacker"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

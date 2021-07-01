@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="RGBColor">
+		<Entry
+			id="R"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="G"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="B"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="RGBAColor">
+		<Entry
+			id="R"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="G"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="B"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="A"
+			AssetType="SageReal"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+	<Asset
+		id="Color3f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Color4f">
+		<Entry
+			id="r"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="g"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="b"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="a"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="Vector2">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="Vector3">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="Vector4">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="w"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="Quaternion">
+		<Entry
+			id="x"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="y"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="z"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="w"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+	</Asset>
+
+	<Asset
+		id="Color3">
+		<Entry
+			id="B"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="G"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="R"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true"
+			Default="255" />
+	</Asset>
+
+	<Asset
+		id="Color4">
+		<Entry
+			id="B"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="G"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="R"
+			AssetType="Byte"
+			IsAttribute="true" />
+		<Entry
+			id="A"
+			AssetType="Byte"
+			IsAttribute="true" />
+	</Asset>
+
+	<EnumAsset
+		id="DistributionType">
+		<Entry>CONSTANT</Entry>
+		<Entry>UNIFORM</Entry>
+		<Entry>GAUSSIAN</Entry>
+		<Entry>TRIANGULAR</Entry>
+		<Entry>LOW_BIAS</Entry>
+		<Entry>HIGH_BIAS</Entry>
+	</EnumAsset>
+
+	<Asset
+		id="RandomVariable">
+		<Entry
+			id="Type"
+			AssetType="DistributionType"
+			IsAttribute="true"
+			Default="UNIFORM" />
+		<Entry
+			id="Low"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="High"
+			AssetType="SageReal"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="LogicRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
+	</Asset>
+
+	<Asset
+		id="ClientRandomVariable">
+		<EntryInheritance
+			id="base"
+			AssetType="RandomVariable" />
+	</Asset>
+
+	<Asset
+		id="MoneyTransaction">
+		<Entry
+			id="Account"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="Amount"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			IsRequired="true" />
+	</Asset>
+
+</AssetDefinition>

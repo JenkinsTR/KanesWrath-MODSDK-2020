@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<LocomotorTemplate
+		id="MetaControlDummyLocomotor2"
+		Name="MetaControlDummyLocomotor"
+		Surfaces="AIR" 
+		TurnTimeSeconds="0s" 
+		TurnTimeDamagedSeconds="0s" 
+		AccelerationSeconds="0s"
+		Lift="120%"
+		LiftDamaged="80%"
+		BrakingSeconds="1.0s"
+		MinTurnSpeed="0%"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="50.0" 
+		PreferredHeight="600"
+		AllowMotiveForceWhileAirborne="true"
+		BehaviorZ="SURFACE_RELATIVE_HEIGHT"	
+		Appearance="HOVER" 
+		
+		PitchStiffness="0.5"
+		RollStiffness="0.1"
+		PitchDamping="0.9"
+		RollDamping="0.9"
+		ForwardVelocityPitchFactor="-0.2"
+		LateralVelocityRollFactor="0.1"
+		Apply2DFrictionWhenAirborne="true"
+		AirborneTargetingHeight="600"
+		LocomotorWorksWhenDead="true"
+			
+		TakeOffAndLandingSpeed="6.0"
+		TakeOffAndLandingSlowDownDelta="25.0"
+		TakeOffAndLandingSlowDownTime="1.0s"
+
+		RudderCorrectionDegree="0"
+		RudderCorrectionRate="0"
+		ElevatorCorrectionDegree="0"
+		ElevatorCorrectionRate="0"
+		CanMoveBackward="true"		
+		/>
+		
+	<LocomotorTemplate
+		id="MetaControlDummyLocomotor"
+		Name="MetaControlDummyLocomotor"
+		Surfaces="AIR" 
+		TurnTimeSeconds="0s" 
+		TurnTimeDamagedSeconds="0s" 
+		AccelerationSeconds="0s"
+		BrakingSeconds="0s"
+		Lift="10%"
+		LiftDamaged="80%"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="0.0" 		
+		MinTurnSpeed="0%"
+		PreferredHeight="600"
+		AllowMotiveForceWhileAirborne="true"
+		BehaviorZ="SURFACE_RELATIVE_HEIGHT"	
+		Appearance="HOVER"
+		Apply2DFrictionWhenAirborne="true"
+		AirborneTargetingHeight="1000"
+		LocomotorWorksWhenDead="false"
+		/>
+	
+</AssetDeclaration>

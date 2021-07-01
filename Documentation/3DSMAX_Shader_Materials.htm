@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<H2><FONT face="Arial">Using FX Shaders As Materials</FONT></H2>
+		<P><FONT face="Arial">Instead of W3D materials you can now use standard "DirectX 9 
+				Shader" materials in Max, using the .fx&nbsp;shaders specifically written for 
+				the game.</FONT></P>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">Start Max, create a mesh as usual. </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">Create a new material for your mesh. As material select "DirectX 
+					9 Shader" (see left image below): </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial"><IMG height="720" alt="FX shader setup in 3DS Max" src="images/3dsMaxFX.png"
+					width="750"> </FONT>
+		</P>
+		<P><FONT face="Arial">Setup the material (right image): </FONT>
+		</P>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">Select the FX file to use in the "DirectX 9 Shader" section. FX 
+					files to be used with the&nbsp;game have been put into the folder 
+					"3dsmax7\maps\fx\CnC3". </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">Select one of the rendering techniques from the drop down box 
+					"Technique" at the bottom of the dialog. (Ignore "Software Render Style" 
+					completely) </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">Depending on the shader, the "Parameters" section in the center 
+					will be generated. </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">A parameter can be: </FONT>
+			</LI>
+			<OL>
+				<LI>
+					<FONT face="Arial">Light Source - The available light sources in the Max scene will 
+						be offered, or "Default Light". Note: Having one light source assigned to 
+						multiple parameters, will result in it having twice or more times the light 
+						contribution than the light actually has. For best previewing results, 
+						(directional!) light sources should be setup similar to the lights in 
+						WorldBuilder/in-game. </FONT>
+				</LI>
+				<LI>
+					<FONT face="Arial">Texture - The same rules as for other textures in the game apply 
+						to these textures, ie. they need to lie in the "Art/Textures" folder, can be 
+						TGA or DDS format etc... </FONT>
+				</LI>
+				<LI>
+					<FONT face="Arial">Color - A standard max color selection dialog, with decimal 
+						color values (0.0 to 1.0) is offered </FONT>
+				</LI>
+				<LI>
+					<FONT face="Arial">Decimal or Integer numbers - These edit fiels allow entering 
+						numbers. Sometimes vectors of numbers are needed by a shader. Then a row of 
+						four edit boxes will show up. Max can only display 1 or 4 boxes, however 
+						sometimes vectors have 2 or 3 components. We use the text next to the edit 
+						boxes to say "xy" or "xyz" then. </FONT>
+				</LI>
+			</OL>
+		</UL>
+		<P><FONT face="Arial"></FONT></P>
+		<UL>
+			<LI>
+				<FONT face="Arial">After setting up the material, export the mesh as usual to a W3X 
+					file. </FONT>
+			</LI>
+		</UL>
+		<P><FONT face="Arial">Note: Some FX shaders are animated, and can use the current time 
+				value for whatever purpose (color shift, texture coordinate animation etc). To 
+				preview a material animation use the timing bar and play/stop functionality in 
+				Max. </FONT>
+		</P>
+		<P><FONT face="Arial"><FONT color="#ff0000">If you are having problems with Max finding the 
+					FX shaders/textures in files that you open, make sure to add the "Art/Textures" 
+					and "3dsmax7\maps\fx\CnC3" directory to the "External Paths" in the 3DSMax 
+					"Customize/Configure Paths" dialog.</FONT> </FONT>
+		</P>
+	</body>
+</html>

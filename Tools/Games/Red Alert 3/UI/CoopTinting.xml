@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<GameAsset
+		id="UICoopTinting"
+		TypeHash="89086670">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseSingletonSettings" />
+		<Entry
+			id="FadeInFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="FadeOutFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="3" />
+		<Entry
+			id="SustainFrames"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="10" />
+		<Entry
+			id="TintFrequency"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TintAmplitude"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="TintColor"
+			AssetType="Color3" />
+	</GameAsset>
+
+</AssetDefinition>

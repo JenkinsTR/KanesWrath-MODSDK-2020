@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<UpgradeTemplate id="Upgrade_MetaTechFaction"
+		DisplayName="UPGRADE:SteelTalonsFaction"
+		Type="PLAYER"
+		Options="DO_NOT_TRANSFER"
+	/>
+	
+</AssetDeclaration>

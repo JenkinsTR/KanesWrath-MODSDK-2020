@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ReplaceSelfOptions">
+		<Entry>COPY_TARGET_OBJECT</Entry>
+		<Entry>IGNORE_TERRAIN_RESTRICTIONS</Entry>
+		<Entry>COPY_UPGRADES</Entry>
+		<Entry>DISABLE_DURING_REPLACE</Entry>
+		<Entry>CHECK_BUILD_ASSISTANT</Entry>
+		<Entry>DISABLE_NEW_OBJECT_DURING_UNPACK</Entry>
+		<Entry>CLEAR_LOCATION</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ReplaceSelfOptionsBitFlags"
+		BaseEnum="ReplaceSelfOptions" />
+
+	<Asset
+		id="ReplaceSelfSpecialAbilityModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<Entry
+			id="NewObjectUnpackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="ReplaceOptions"
+			AssetType="ReplaceSelfOptionsBitFlags"
+			IsAttribute="true"
+			Default="DISABLE_DURING_REPLACE" />
+		<Entry
+			id="ClearTriggerDistance"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="120.0" />
+		<EntryList
+			id="ReplacementTemplate"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

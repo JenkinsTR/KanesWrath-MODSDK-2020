@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="CrateCollideModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="CollideModuleData" />
+		<Entry
+			id="KindOf"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="KindOfNot"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="PickupScience"
+			AssetType="ScienceType"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExecuteFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="ExecutionAnimationTemplate"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="ExecuteAnimationDisplayTimeInSeconds"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ExecuteAnimationZRisePerSecond"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="IsForbidOwnerPlayer"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="IsBuildingPickup"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="IsHumanOnlyPickup"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="IsHumanOnlyPickupInSinglePlayerCampaign"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ExecuteAnimationFades"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="False" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

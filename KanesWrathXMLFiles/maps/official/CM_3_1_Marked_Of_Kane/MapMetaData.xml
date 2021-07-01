@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:CM_3_1_Marked_Of_Kane/Desc" DisplayName="CM_3_1_Marked_Of_Kane" FileName="Data\maps\official\CM_3_1_Marked_Of_Kane\CM_3_1_Marked_Of_Kane.map" Height="520" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="520" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="-31313.1" y="-31313.1" z="-31313.1" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

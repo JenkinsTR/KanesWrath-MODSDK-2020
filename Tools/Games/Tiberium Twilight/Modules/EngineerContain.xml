@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="EngineerContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="ContainModuleData" />
+		<EntryReference
+			id="ReplaceWith"
+			AssetType="ObjectCreationList"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceToUseForFriendlyEnter"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="NameOfVoiceToUseForHostileEnter"
+			AssetType="StringHash"
+			IsAttribute="true" />
+		<Entry
+			id="ObjectStatusToSet"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true"
+			Default="NO_REFUND" />
+		<EntryRelocation
+			id="FXForRepair"
+			AssetType="FXListRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FXForCapture"
+			AssetType="FXListRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FXForReplace"
+			AssetType="FXListRef"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="FXForCaptureAndReplace"
+			AssetType="FXListRef"
+			IsAttribute="true" />
+		<EntryReference
+			id="EvaEventForRepair"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="EvaEventForCapture"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="EvaEventForReplace"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryReference
+			id="EvaEventForCaptureAndReplace"
+			AssetType="EvaEventRef"
+			IsAttribute="true"
+			Default="" />
+		<EntryRelocation
+			id="CanEnterFilter"
+			AssetType="ObjectFilter" />
+		<Entry
+			id="ImmediatelyEnabled"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

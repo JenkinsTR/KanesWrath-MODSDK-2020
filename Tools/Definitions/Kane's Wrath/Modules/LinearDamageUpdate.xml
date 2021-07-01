@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LinearDamageUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="StartDistanceOffset"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="Radius"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="10.0" />
+		<Entry
+			id="Length"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<EntryReference
+			id="SweepFXList"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="SweepWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="Speed"
+			AssetType="Velocity"
+			IsAttribute="true"
+			Default="1.0" />
+	</Asset>
+
+</AssetDefinition>

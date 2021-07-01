@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<PlayerPowerButtonTemplate
+		id="ButtonZOCOMHunterKillerTeam"
+		SpecialPower="SpecialPowerCallSupportZOCOMHunterKillerTeam">
+		<Data>
+			<TargetedPower
+				RadiusCursor="TargetingDecalHunterKillerTeam"
+				StateData="ButtonStatePlayerPowerZOCOMHunterKillerTeam"/>
+		</Data>
+	</PlayerPowerButtonTemplate>
+
+	<PlayerPowerButtonTemplate
+		id="ButtonMarkedOfKaneShadowStrikeTeam"
+		SpecialPower="SpecialPowerMarkedOfKaneRedShadowStrikeTeam">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStatePlayerPowerMarkedOfKaneShadowStrikeTeam"
+				RadiusCursor="TargetingDecalShadowStrikeTeam" />
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<!-- Using Ichor Seed Radius Cursor instead of NOD Seed Tiberium -->
+	<PlayerPowerButtonTemplate
+		id="ButtonAlienSeedTiberium"
+		SpecialPower="SpecialPower_AlienSeedTiberium">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateAlienSeedTiberium"
+				RadiusCursor="TargetingDecalIchorSeed" />
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<!-- Using Shock Pod Radius Cursor instead of Buzzer Swarm -->
+	<PlayerPowerButtonTemplate
+		id="ButtonAlienShockPods"
+		SpecialPower="SpecialPower_AlienShockPods">
+		<Data>
+			<TargetedPower
+				StateData="ButtonStateAlienShockPods"
+				RadiusCursor="TargetingDecalShockPods" />
+		</Data>
+	</PlayerPowerButtonTemplate>
+	
+	<PlayerPowerButtonTemplate
+		id="ButtonReaper17Swarm"
+		SpecialPower="SpecialPower_Reaper17Swarm">
+		<Data>
+			<TargetedPower
+				RadiusCursor="TargetingDecalTheSwarm"
+				StateData="ButtonStatePlayerPowerReaper17Swarm"/>
+		</Data>
+	</PlayerPowerButtonTemplate>
+	<PlayerPowerButtonTemplate
+		id="ButtonTraveler59Swarm"
+		SpecialPower="SpecialPower_Traveler59Swarm">
+		<Data>
+			<TargetedPower
+				RadiusCursor="TargetingDecalTheSwarm"
+				StateData="ButtonStatePlayerPowerTraveler59Swarm"/>
+		</Data>
+	</PlayerPowerButtonTemplate>
+</AssetDeclaration>

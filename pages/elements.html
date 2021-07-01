@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Elements | Kane's Wrath MOD SDK</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="KanesWrath-MODSDK-2020" href="https://github.com/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Kane's Wrath MOD SDK</span></a> -->
+            <a class="navbar-brand" href="index.html"><img src="images/KWSDK_logo_32.png" alt="Kane's Wrath MOD SDK"></img><span class="projectTitle"> Kane's Wrath MOD SDK</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/JenkinsTR/KanesWrath-MODSDK-2020/" target="_blank" rel="noopener">GitHub</a></li>
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="Home.html">Getting Started</a></li>
+                        
+                        
+                        
+                        <li><a href="Tools.html">Tools</a></li>
+                        
+                        
+                        
+                        <li><a href="Mapping.html">Mapping</a></li>
+                        
+                        
+                        
+                        <li><a href="CodeRef.html">Code Reference</a></li>
+                        
+                        
+                        
+                        <li><a href="MusicSounds.html">Music & Sounds</a></li>
+                        
+                        
+                        
+                        <li><a href="Scripting.html">Scripting</a></li>
+                        
+                        
+                        
+                        <li><a href="UpdatesPatches.html">Updates & Patches</a></li>
+                        
+                        
+                        
+                        <li><a href="FAQs.html">FAQs</a></li>
+                        
+                        
+                        
+                        <li><a href="Bugs.html">Bugs</a></li>
+                        
+                        
+                        
+                        <li><a href="Credits.html">Credits</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">External<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="https://store.steampowered.com/app/24810/Command__Conquer_3_Kanes_Wrath/" target="_blank" rel="noopener">Kane's Wrath on Steam</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.moddb.com/games/cc-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on Mod DB</a></li>
+                        
+                        
+                        
+                        <li><a href="https://en.wikipedia.org/wiki/Command_%26_Conquer_3:_Kane%27s_Wrath" target="_blank" rel="noopener">Kane's Wrath on Wikipedia</a></li>
+                        
+                        
+                        
+                        <li><a href="https://www.ea.com/games/command-and-conquer/command-and-conquer-3-kanes-wrath" target="_blank" rel="noopener">Kane's Wrath on EA.com</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Elements">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Kane's Wrath MOD SDK v0.2</li>
+  
+  
+  
+  <li>
+      <a title="Getting Started" href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a title="Overview" href="Home_Overview.html">Overview</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Setting up the SDK" href="Home_Setting_up_the_SDK.html">Setting up the SDK</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Creating a Mod" href="Home_Creating_a_Mod.html">Creating a Mod</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Art Pipeline" href="Home_Art_Pipeline.html">Art Pipeline</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Tools" href="#">Tools</a>
+      <ul>
+          
+          
+          
+          <li><a title="WrathEd" href="Tools_WrathEd.html">WrathEd</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="4GB Patch" href="Tools_4GB_Patch.html">4GB Patch</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="BIG Editors" href="Tools_BIG_Editors.html">BIG Editors</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Jonwil's Tools" href="Tools_Jonwil_Tools.html">Jonwil's Tools</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="VP6 Converter" href="Tools_VP6_Converter.html">VP6 Converter</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="EALayer3" href="Tools_EALayer3.html">EALayer3</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Mapping" href="#">Mapping</a>
+      <ul>
+          
+          
+          
+          <li><a title="WorldBuilder" href="Mapping_WorldBuilder.html">WorldBuilder</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Scripting" href="Mapping_Map_Scripting.html">Map Scripting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Map Reference" href="Mapping_Map_Reference.html">Map Reference</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Code Reference" href="#">Code Reference</a>
+      <ul>
+          
+          
+          
+          <li><a title="Structures" href="CodeRef_Structures.html">Structures</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Units" href="CodeRef_Units.html">Units</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AptUI" href="CodeRef_AptUI.html">AptUI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Powers & Upgrades" href="CodeRef_Powers_Upgrades.html">Powers & Upgrades</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Gameplay" href="CodeRef_Gameplay.html">Gameplay</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="AI" href="CodeRef_AI.html">AI</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Other" href="CodeRef_Other.html">Other</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Music & Sounds" href="#">Music & Sounds</a>
+      <ul>
+          
+          
+          
+          <li><a title="Extracting Audio" href="MusicSounds_Extracting_Audio.html">Extracting Audio</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Converting Sounds" href="MusicSounds_Extracting_Audio.html">Converting Sounds</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Scripting" href="#">Scripting</a>
+      <ul>
+          
+          
+          
+          <li><a title="LUA" href="Scripting_LUA.html">LUA</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Updates & Patches" href="#">Updates & Patches</a>
+      <ul>
+          
+          
+          
+          <li><a title="Game Updates" href="UpdatesPatches_Game_Updates.html">Game Updates</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="KWBandage" href="UpdatesPatches_KWBandage.html">KWBandage</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Other Info" href="#">Other Info</a>
+      <ul>
+          
+          
+          
+          <li><a title="FAQs" href="FAQs.html">FAQs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Bugs" href="Bugs.html">Bugs</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Credits" href="Credits.html">Credits</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Elements</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+   <h1 id="heading-1">Heading 1</h1>
+
+<h2 id="heading-2">Heading 2</h2>
+
+<h3 id="heading-3">Heading 3</h3>
+
+<h4 id="heading-4">Heading 4</h4>
+
+<h5 id="heading-5">Heading 5</h5>
+
+<h6 id="heading-6">Heading 6</h6>
+
+<p><small>A small element</small></p>
+
+<p><a href="https://david.darn.es" title="A link">A link</a></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adip* isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<p>Duis aute irure dolor in <a href="https://david.darn.es" title="A link">A link</a> reprehenderit in voluptate velit esse cillum <strong>bold text</strong> dolore eu fugiat nulla pariatur. Excepteur span element sint occaecat cupidatat non proident, sunt <em>italicised text</em> in culpa qui officia deserunt mollit anim id <code class="language-plaintext highlighter-rouge">some code</code> est laborum.</p>
+
+<ul>
+  <li>An item</li>
+  <li>An item</li>
+  <li>An item</li>
+  <li>An item</li>
+  <li>An item</li>
+</ul>
+
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+  <li>Item five</li>
+</ol>
+
+<blockquote>
+  <p>A simple blockquote</p>
+</blockquote>
+
+<p>Some HTML…</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;blockquote</span> <span class="na">cite=</span><span class="s">"http://www.imdb.com/title/tt0284978/quotes/qt1375101"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>You planning a vacation, Mr. Sullivan?<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"http://www.imdb.com/title/tt0284978/quotes/qt1375101"</span><span class="nt">&gt;</span>Sunways Security Guard<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre></div></div>
+
+<p>…CSS…</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">blockquote</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">blockquote</span> <span class="nt">footer</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">.8rem</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>…and JavaScript</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">blockquote</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">"</span><span class="s2">blockquote</span><span class="dl">"</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">bolden</span> <span class="o">=</span> <span class="p">(</span><span class="nx">keyString</span><span class="p">,</span> <span class="nx">string</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="nx">keyString</span><span class="p">,</span> <span class="dl">'</span><span class="s1">g</span><span class="dl">'</span><span class="p">),</span> <span class="dl">'</span><span class="s1">&lt;strong&gt;</span><span class="dl">'</span><span class="o">+</span><span class="nx">keyString</span><span class="o">+</span><span class="dl">'</span><span class="s1">&lt;/strong&gt;</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="nx">blockquote</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">bolden</span><span class="p">(</span><span class="dl">"</span><span class="s2">Mr. Sullivan</span><span class="dl">"</span><span class="p">,</span> <span class="nx">blockquote</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Single line of code</code></p>
+
+<h2 id="html-includes">HTML Includes</h2>
+
+<h3 id="contact-form">Contact form</h3>
+
+<form class="form  form--contact" method="post" name="Contact" action="/thanks/">
+  <fieldset class="fieldset  form__fieldset">
+    <legend class="legend form__legend">Contact</legend>
+    <label class="label" for="name--contact">Name: <span class="required">*</span></label>
+    <input class="input" id="name--contact" type="text" name="name" value="" placeholder="Your Name" required="required" />
+
+    <label class="label" for="email--contact">Email Address: <span class="required">*</span></label>
+    <input class="input" id="email--contact" type="email" name="email" value="" placeholder="email@website.com" required="required" />
+
+    <label class="label" for="message--contact">Message: <span class="required">*</span></label>
+    <textarea class="textarea" id="message--contact" name="message" placeholder="Your message..." required="required"></textarea>
+
+    <input class="button" type="submit" value="Send message" />
+    <br />
+    <small class="small"><span class="required">*</span> indicates a required field</small>
+
+    
+      <input type="text" name="_gotcha" style="display:none" />
+      <input type="hidden" name="_subject" value="KanesWrath-MODSDK-2020 submission from Contact" />
+      <input type="hidden" name="_next" value="/thanks/" />
+    
+  </fieldset>
+</form>
+
+<script>
+    var email = "";
+    var unraveledEmail = email.split("").reverse().join("");
+    var form = document.querySelector(".form--contact");
+      form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
+  </script>
+
+<noscript>Please enable JavaScript to use the form.</noscript>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include site-form.html %}
+</code></pre></div></div>
+
+<h3 id="demo-map-embed">Demo map embed</h3>
+
+<div class="map"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1UT-2Z-Vg_MG_TrS5X2p8SthsJhc" title="Coffee shop map"></iframe></div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include map.html id="XXXXXX" title="Coffee shop map" %}
+</code></pre></div></div>
+
+<h3 id="button-include">Button include</h3>
+
+<p><a class="button" href="https://david.darn.es">A button</a></p>
+
+<p><a class="button" href="https://twitter.com/daviddarnes">A button with icon  <svg width="16" height="16" class="icon  icon--twitter" role="img" alt="twitter"><title>twitter</title><use xlink:href="#twitter" fill="CurrentColor"></use></svg>
+</a></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include button.html text="A button" link="https://david.darn.es" %}
+{% include button.html text="A button with icon" link="https://twitter.com/daviddarnes" icon="twitter" %}
+</code></pre></div></div>
+
+<h3 id="icon-include">Icon include</h3>
+
+<svg width="16" height="16" class="icon  icon--twitter" role="img" alt="twitter"><title>twitter</title><use xlink:href="#twitter" fill="CurrentColor"></use></svg>
+<p><a href="https://www.linkedin.com/in/daviddarnes"><svg width="16" height="16" class="icon  icon--linkedin" role="img" alt="twitter"><title>twitter</title><use xlink:href="#linkedin" fill="CurrentColor"></use></svg>
+</a></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include icon.html id="twitter" title="twitter" %}
+[{% include icon.html id="linkedin" title="twitter" %}](https://www.linkedin.com/in/daviddarnes)
+</code></pre></div></div>
+
+<h3 id="video-include">Video include</h3>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/zrkcGL5H3MU" frameborder="0" allowfullscreen="" title="Siteleaf tutorial video"></iframe>
+</div>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include video.html id="zrkcGL5H3MU" title="Siteleaf tutorial video" %}
+</code></pre></div></div>
+
+<h3 id="image-includes">Image includes</h3>
+
+<figure class="figure  figure--center">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Image with caption" width="300" height="800" />
+  <figcaption class="caption">Image with caption</figcaption>
+</figure>
+
+<figure class="figure  figure--right">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Right aligned image" width="300" height="800" />
+  <figcaption class="caption">Right aligned image</figcaption>
+</figure>
+
+<figure class="figure  figure--left">
+  <img class="image" src="https://picsum.photos/600/800?image=894" alt="Left aligned image" width="300" height="800" />
+  <figcaption class="caption">Left aligned image</figcaption>
+</figure>
+
+<figure class="figure  figure--center">
+  <img class="image" src="https://picsum.photos/1600/800?image=894" alt="Image with just alt text" width="" height="" />
+  
+</figure>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Image with caption" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Right aligned image" position="right" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/600/800?image=894" caption="Left aligned image" position="left" width="300" height="800" %}
+
+{% include figure.html image="https://picsum.photos/1600/800?image=894" alt="Image with just alt text" %}
+</code></pre></div></div>
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2021 Kane's Wrath MOD SDK. All rights reserved. <br />
+ Site last generated: Jul 1, 2021 <br />
+<p><img src="images/KWSDK_logo_130.png" alt="Kane's Wrath MOD SDK"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

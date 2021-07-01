@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="MetaGameMapZoneEntry">
+		<Entry
+			id="MapName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="" />
+	</Asset>
+
+	<Asset
+		id="MetaGameMapZoneGreen">
+		<EntryList
+			id="MapEntry"
+			AssetType="MetaGameMapZoneEntry"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="MetaGameMapZoneYellow">
+		<EntryList
+			id="MapEntry"
+			AssetType="MetaGameMapZoneEntry"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="MetaGameMapZoneRed">
+		<EntryList
+			id="MapEntry"
+			AssetType="MetaGameMapZoneEntry"
+			MinLength="1"
+			MaxLength="0" />
+	</Asset>
+
+	<Asset
+		id="MetaGameMapZonePlayerSet">
+		<Entry
+			id="GreenGroup"
+			AssetType="MetaGameMapZoneGreen" />
+		<Entry
+			id="YellowGroup"
+			AssetType="MetaGameMapZoneYellow" />
+		<Entry
+			id="RedGroup"
+			AssetType="MetaGameMapZoneRed" />
+	</Asset>
+
+	<GameAsset
+		id="MetaGameMapZoneData"
+		TypeHash="3025474728">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="Name"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="Group2Player"
+			AssetType="MetaGameMapZonePlayerSet" />
+		<Entry
+			id="Group3Player"
+			AssetType="MetaGameMapZonePlayerSet" />
+		<Entry
+			id="Group4Player"
+			AssetType="MetaGameMapZonePlayerSet" />
+	</GameAsset>
+
+</AssetDefinition>

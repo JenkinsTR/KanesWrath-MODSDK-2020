@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Texture id="apt_MainMenu_2" File="ART:MainMenu/apt_MainMenu_2.dds" OutputFormat="A8R8G8B8" GenerateMipMaps="false" />	
+	<Texture id="apt_MainMenu_1" File="ART:MainMenu/apt_MainMenu_1.dds" OutputFormat="A8R8G8B8" GenerateMipMaps="false"/>
+	<Texture id="apt_MainMenu_3" File="ART:MainMenu/apt_MainMenu_3.dds" OutputFormat="A8R8G8B8" GenerateMipMaps="false"/>
+	<Texture id="apt_MainMenu_4" File="ART:MainMenu/apt_MainMenu_4.dds" OutputFormat="A8R8G8B8" GenerateMipMaps="false"/>
+</AssetDeclaration>

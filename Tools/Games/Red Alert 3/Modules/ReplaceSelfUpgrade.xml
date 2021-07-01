@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="ReplaceSelfUpgradeOptions">
+		<Entry>COPY_TARGET_OBJECT</Entry>
+		<Entry>IGNORE_TERRAIN_RESTRICTIONS</Entry>
+		<Entry>COPY_UPGRADES</Entry>
+		<Entry>DISABLE_DURING_UNPACK</Entry>
+		<Entry>CHECK_BUILD_ASSISTANT</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="ReplaceSelfUpgradeOptionsBitFlags"
+		BaseEnum="ReplaceSelfUpgradeOptions" />
+
+	<Asset
+		id="ReplaceSelfUpgradeModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="NewObjectUnpackTime"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="Options"
+			AssetType="ReplaceSelfUpgradeOptionsBitFlags"
+			IsAttribute="true"
+			Default="DISABLE_DURING_UNPACK" />
+		<EntryList
+			id="ReplacementTemplate"
+			AssetType="GameObjectWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+	</Asset>
+
+</AssetDefinition>

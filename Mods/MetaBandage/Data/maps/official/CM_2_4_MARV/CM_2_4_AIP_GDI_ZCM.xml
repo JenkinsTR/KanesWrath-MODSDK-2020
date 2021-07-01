@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+    <Include type="instance" source="DATA:SkirmishAI/Personalities/ZOCOMOptimal.xml" />
+  </Includes>
+ 
+	<AIPersonalityDefinition
+		id="CM_2_4_MARV_GDI_ZCM"
+		PersonalityType="CM_2_4_MARV_GDI_ZCM"
+		SkirmishPersonality="false" 
+		SecondsTillTargetsCanExpire="15.0"
+		ChanceForTargetToExpire="100"
+		MaxBuildingsToBeDefensiveTarget_Small="0"
+		MaxBuildingsToBeDefensiveTarget_Med="0"
+		ChanceForUnitsToUpgrade="100"
+		ChanceToUseAllUnitsForDefenseTarget_Small="0"
+		ChanceToUseAllUnitsForDefenseTarget_Med="0"
+		ChanceToUseAllUnitsForDefenseTarget_Large="0"
+		DesiredExcessPowerBuffer="20"
+		BaseCompactness="0.75"
+    DefaultThreatFindRadius="0"
+    UnitBuilderCostEffectivenessWeight="1.0"
+    UnitBuilderMoneyVersusTimePreference="0.5"
+    UnitBuilderOverallOffensivePreference="100%"
+    UnitBuilderOverallDefensivePreference="100%"
+    Expansion_TiberiumSearchRadius="1000"
+    Expansion_MaxTiberiumRemaining="22000"
+    ReactiveDefenseRadius="2000"
+    RepairBuildingsAtDifficulty="MEDIUM HARD BRUTAL"
+    EmergencyManagerHandleNoPowerAtDifficulty=""
+    EmergencyManagerHandleNoIncomeAtDifficulty=""
+    EmergencyManagerHandleNoConyardAtDifficulty=""
+    StructureSaveChanceEasy="0.0"
+    StructureSaveChanceMedium="0.0"
+    StructureSaveChanceHard="0.0"
+		>
+
+    <Side>ZOCOM</Side>
+
+    <BuildDelayRange id="BuildDelayEasy" MinDelay="30s" MaxDelay="60s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="EASY" />
+    <BuildDelayRange id="BuildDelayMedium" MinDelay="20s" MaxDelay="45s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="MEDIUM" />
+	<BuildDelayRange id="BuildDelayHard" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="HARD" />
+	<BuildDelayRange id="BuildDelayBrutal" MinDelay="1s" MaxDelay="5s" MinTTKRatio="0.5" MaxTTKRatio="1.5" Difficulty="BRUTAL" />
+	
+	<UnitBuilderUnitChoiceStrategy Shape="WORST" StandardDeviation="0.25" Difficulty="EASY" />
+	<UnitBuilderUnitChoiceStrategy Shape="MIDDLE" StandardDeviation="2" Difficulty="MEDIUM" />
+    <UnitBuilderUnitChoiceStrategy Shape="BEST" StandardDeviation="0.25" Difficulty="HARD BRUTAL" />
+
+    <ResourceMultiplierCheat Percentage="50%" Difficulty="EASY"/>
+    <ResourceMultiplierCheat Percentage="80%" Difficulty="MEDIUM"/>
+    <ResourceMultiplierCheat Percentage="100%" Difficulty="HARD"/>
+    <ResourceMultiplierCheat Percentage="150%" Difficulty="BRUTAL"/>
+
+    <TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+    <TacticalTarget TacticalAITarget="Structure" MaxTeamsPerTarget="1"/>
+	<TacticalTarget TacticalAITarget="AssaultAirstrike" MaxTeamsPerTarget="1"/>
+
+	<SpecificUnitCap Unit="ZOCOMZoneRaiderSquad" Cap="2"/>
+	
+	<States State="CM_2_4_ZOCOMOptimal_EASY" Difficulty="EASY"/>
+    <States State="CM_2_4_ZOCOMDirectAttack" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+    <States State="CM_2_4_ZOCOMDirectAttack_Focused" Difficulty="MEDIUM HARD BRUTAL"/>
+	<States State="CM_2_4_ZOCOMAirHarassment" Difficulty="EASY MEDIUM HARD BRUTAL"/>    
+	<States State="CM_2_4_ZOCOMUnitCap_Easy" Difficulty="EASY"/>
+	<States State="CM_2_4_ZOCOMUnitCap_Medium" Difficulty="MEDIUM"/>
+	<States State="CM_2_4_ZOCOMUnitCap_Hard" Difficulty="HARD BRUTAL"/>
+    <!--States State="ZOCOMUnitPreferences" Difficulty="MEDIUM HARD BRUTAL"/-->
+
+    <BudgetStates State="CM_2_4_FullProductionBudget" Difficulty="EASY MEDIUM HARD BRUTAL"/>
+
+  </AIPersonalityDefinition>
+</AssetDeclaration>

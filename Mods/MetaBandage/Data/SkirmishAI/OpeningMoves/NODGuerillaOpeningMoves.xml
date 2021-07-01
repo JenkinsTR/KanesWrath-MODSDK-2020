@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tags></Tags>
+  <Includes>
+  </Includes>
+
+  <SkirmishOpeningMove
+    id="NODVenomRush"
+    Side="NOD"> <!--Power: +10-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODOperationsCenter" /> <!--Time: 15 Power: -10-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODHangar" /> <!--Time: 10 Power: -5-->
+    <Order Build="NODHangar" /> <!--Time: 10 Power: -5-->
+
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Build="NODVenom" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+  <!--SkirmishOpeningMove
+    id="NODReckonerRush"
+    Side="NOD">
+
+    <Order Build="NODRefinery" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODRefinery" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODDropZone" />
+    <Order Build="NODPowerPlant" />
+    <Order Build="NODOperationsCenter" />
+    <Order Build="NODHandOfNOD" /> 
+
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Build="NODCarryallVehicle" />
+    <Order Build="NODBlackHandSquad" />
+    <Order Time="175s" />
+  </SkirmishOpeningMove-->
+
+  <SkirmishOpeningMove
+    id="NODSpecterRush"
+    Side="NOD"> <!--Power: +10-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+	<Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODRefinery" /> <!--Time: 30 Power: -15-->
+    <Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="NODDropZone" /> <!--Time: 20 Power: -5-->
+    <Order Build="NODPowerPlant" /> <!--Time: 5 Power: +15-->
+    <Order Build="NODOperationsCenter" /> <!--Time: 15 Power: -10-->
+
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Build="NODMobileArtillery" />
+    <Order Time="210s" />
+  </SkirmishOpeningMove>
+
+</AssetDeclaration>

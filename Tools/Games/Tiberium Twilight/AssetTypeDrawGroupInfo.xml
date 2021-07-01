@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="DrawGroupInfo">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="FontName"
+			AssetType="String"
+			IsAttribute="true"
+			Default="Arial" />
+		<Entry
+			id="FontSize"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="12" />
+		<Entry
+			id="DropShadowOffsetX"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="DropShadowOffsetY"
+			AssetType="SageInt"
+			IsAttribute="true"
+			Default="-1" />
+		<Entry
+			id="PixelOffetXInteger"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="PixelOffetYInteger"
+			AssetType="SageInt"
+			IsAttribute="true" />
+		<Entry
+			id="PixelOffetXReal"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="PixelOffetYReal"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TextColor"
+			AssetType="Color4" />
+		<Entry
+			id="TextDropShadowColor"
+			AssetType="Color4" />
+		<Entry
+			id="IsBold"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="UsePlayerColor"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="PixelOffsetAsPercentage"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

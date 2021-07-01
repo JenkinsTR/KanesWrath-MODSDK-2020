@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="InitialPayload">
+		<EntryWeakReference
+			id="Name"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Count"
+			AssetType="SageInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="UpgradeCreation">
+		<EntryWeakReference
+			id="Upgrade"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true" />
+		<EntryWeakReference
+			id="Template"
+			AssetType="GameObject"
+			IsAttribute="true" />
+		<Entry
+			id="Num"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="TransportContainUpgradeOverrideData">
+		<EntryWeakReference
+			id="UpgradeTriggeredBy"
+			AssetType="UpgradeTemplate"
+			IsAttribute="true"
+			IsRequired="true" />
+		<Entry
+			id="AdditionalSlots"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+	</Asset>
+
+	<Asset
+		id="TransportContainModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="OpenContainModuleData" />
+		<Entry
+			id="Slots"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ExitBone"
+			AssetType="String"
+			IsAttribute="true" />
+		<Entry
+			id="ExitPitchRate"
+			AssetType="Velocity"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HealthRegenPercentPerSec"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ExitDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="TypeOneForWeaponSet"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="TypeTwoForWeaponSet"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="TypeOneForWeaponState"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="TypeTwoForWeaponState"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="TypeThreeForWeaponState"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<EntryReference
+			id="GrabWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="ConditionForEntry"
+			AssetType="ModelConditionFlagType"
+			IsAttribute="true" />
+		<Entry
+			id="ThrowOutPassengersDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="ThrowOutPassengersLandingWarhead"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="EnterFadeTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ExitFadeTime"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="ReleaseSnappyness"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.7" />
+		<EntryList
+			id="InitialPayload"
+			AssetType="InitialPayload"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryRelocation
+			id="ThrowOutPassengersVelocity"
+			AssetType="Coord3D" />
+		<EntryList
+			id="UpgradeCreationTrigger"
+			AssetType="UpgradeCreation"
+			MinLength="0"
+			MaxLength="4" />
+		<EntryRelocation
+			id="FadeFilter"
+			AssetType="ObjectFilter" />
+		<EntryRelocation
+			id="TransportContainUpgradeOverride"
+			AssetType="TransportContainUpgradeOverrideData" />
+		<Entry
+			id="ScatterNearbyOnExit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="OrientLikeContainerOnExit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="DestroyRidersWhoAreNotFreeToExit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ForceOrientationContainer"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="CanGrabStructure"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FireGrabWeaponOnVictim"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="ShouldThrowOutPassengers"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FadePassengerOnEnter"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FadePassengerOnExit"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="FadeReverse"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ExtendedExitContainerChecks"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

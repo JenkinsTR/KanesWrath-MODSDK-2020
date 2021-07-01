@@ -1,0 +1,8 @@
+<MapMetaData BorderSize="30" CRC="0" Description="Map:CM_2_4_MARV/Desc" DisplayName="CM_2_4_MARV" FileName="Data\maps\official\CM_2_4_MARV\CM_2_4_MARV.map" Height="610" IsMultiplayer="false" IsOfficial="true" NumPlayers="1" Width="610" xmlns="uri:ea.com:eala:asset">
+  <StartPosition Name="InitialCameraPosition">
+    <Position x="2858.58" y="980.678" z="0" />
+  </StartPosition>
+  <StartPosition Name="Player_1_Start">
+    <Position x="0" y="0" z="0" />
+  </StartPosition>
+</MapMetaData>

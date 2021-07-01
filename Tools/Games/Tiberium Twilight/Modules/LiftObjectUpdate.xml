@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="LiftObjectUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpdateModuleData" />
+		<Entry
+			id="LiftVelocity"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="MaxElevationFromGround"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="TimeIncrement"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="0s" />
+		<Entry
+			id="MaxTimeLifted"
+			AssetType="Time"
+			IsAttribute="true"
+			Default="1s" />
+		<Entry
+			id="MaxStructureShakeVelocity"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0" />
+		<EntryReference
+			id="AirplaneCrashWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<EntryReference
+			id="SoftLandingWeapon"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="CrusherModifiesVelocity"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

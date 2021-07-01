@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="UIMouseSimpleFixedButton">
+		<EntryInheritance
+			id="base"
+			AssetType="BaseAssetType" />
+		<Entry
+			id="MouseOverHelp"
+			AssetType="InGameUISimpleHelpTemplate" />
+	</Asset>
+
+</AssetDefinition>

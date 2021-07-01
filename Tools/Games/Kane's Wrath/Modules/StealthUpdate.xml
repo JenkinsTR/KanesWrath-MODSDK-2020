@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="StealthUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="UpgradeModuleData" />
+		<Entry
+			id="StealthDelay"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="StealthLevel"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true"
+			Default="0" />
+		<Entry
+			id="HintDetectableStates"
+			AssetType="ObjectStatusBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="StealthSpeed"
+			AssetType="SageReal"
+			IsAttribute="true" />
+		<Entry
+			id="FriendlyOpacityMin"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.5" />
+		<Entry
+			id="FriendlyOpacityMax"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="1.0" />
+		<Entry
+			id="PulseTime"
+			AssetType="Time"
+			IsAttribute="true" />
+		<Entry
+			id="RevealDistanceFromTarget"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<EntryReference
+			id="DisguiseRevealFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="DisguiseFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="BecomeStealthedFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExitStealthFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="BecomeStealthedOneRingFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryReference
+			id="ExitStealthOneRingFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<Entry
+			id="DisguiseTransitionFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DisguiseRevealTransitionFrames"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="DetectedByAnyoneRange"
+			AssetType="SageReal"
+			IsAttribute="true"
+			Default="0.0" />
+		<Entry
+			id="RevealWeaponSets"
+			AssetType="WeaponSetBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="OneRingDelayOn"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="OneRingDelayOff"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="RingAnimTimeOn"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="RingAnimTimeOff"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<Entry
+			id="RingDelayAfterRemoving"
+			AssetType="SageUnsignedInt"
+			IsAttribute="true" />
+		<EntryRelocation
+			id="VoiceMoveToStealthyArea"
+			AssetType="SoundOrEvaEvent" />
+		<EntryRelocation
+			id="VoiceEnterStateMoveToStealthyArea"
+			AssetType="SoundOrEvaEvent" />
+		<EntryList
+			id="RequiredUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="ForbiddenUpgrade"
+			AssetType="UpgradeTemplateWeakRef"
+			MinLength="0"
+			MaxLength="0" />
+		<EntryList
+			id="RestrictionCancellingUpgrade"
+			AssetType="UpgradeTemplateRef"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="TeamDisguised"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="OrderIdleEnemiesToAttackMeUponReveal"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="StartsActive"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="InnateStealth"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="true" />
+		<Entry
+			id="DetectedByFriendliesOnly"
+			AssetType="SageBool"
+			IsAttribute="true" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<Asset
+		id="HighlightReachableTargetsSpecialAbilityUpdateModuleData">
+		<EntryInheritance
+			id="base"
+			AssetType="SpecialAbilityUpdateModuleData" />
+		<EntryReference
+			id="HighlightFX"
+			AssetType="FXList"
+			IsAttribute="true" />
+		<EntryPoid
+			id="ModuleId"
+			IsAttribute="true" />
+	</Asset>
+
+</AssetDefinition>

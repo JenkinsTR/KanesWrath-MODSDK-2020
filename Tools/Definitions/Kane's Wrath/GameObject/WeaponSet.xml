@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AssetDefinition xmlns="uri:thundermods.net:SAGE:WrathEdXML:AssetDefinition">
+
+	<EnumAsset
+		id="WeaponChoiceCriteria">
+		<Entry>PREFER_MOST_DAMAGE</Entry>
+		<Entry>PREFER_LONGEST_RANGE</Entry>
+		<Entry>PREFER_GRAB_OVER_DAMAGE</Entry>
+		<Entry>PREFER_LEAST_MOVEMENT</Entry>
+		<Entry>SELECT_AT_RANDOM</Entry>
+		<Entry>USE_WEAPONSET_DEFAULT_CRITERIA</Entry>
+	</EnumAsset>
+
+	<FlagsAsset
+		id="CommandSourceBitFlags"
+		BaseEnum="CommandSourceType" />
+
+	<Asset
+		id="SlotType">
+		<Entry
+			id="WeaponSlot"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<EntryReference
+			id="WeaponTemplate"
+			AssetType="WeaponTemplate"
+			IsAttribute="true" />
+		<Entry
+			id="PreferredAgainst"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="OnlyAgainst"
+			AssetType="KindOfBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="AutoChooseMask"
+			AssetType="CommandSourceBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="OnlyInCondition"
+			AssetType="ModelConditionBitFlags"
+			IsAttribute="true" />
+	</Asset>
+
+	<Asset
+		id="WeaponTemplateSet">
+		<Entry
+			id="Conditions"
+			AssetType="WeaponSetBitFlags"
+			IsAttribute="true" />
+		<Entry
+			id="OnlyAgainst"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="OnlyInCondition"
+			AssetType="WeaponSlotType"
+			IsAttribute="true" />
+		<Entry
+			id="DefaultWeaponChoiceCritera"
+			AssetType="WeaponChoiceCriteria"
+			IsAttribute="true" />
+		<EntryList
+			id="Slot"
+			AssetType="SlotType"
+			MinLength="0"
+			MaxLength="0" />
+		<Entry
+			id="ShareWeaponReloadTime"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="WeaponLockSharedAcrossSets"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="ReadyStatusSharedWithinSet"
+			AssetType="SageBool"
+			IsAttribute="true"
+			Default="false" />
+		<Entry
+			id="fill"
+			AssetType="Byte"
+			IsVoid="true" />
+	</Asset>
+
+</AssetDefinition>
